@@ -1,0 +1,25 @@
+Memory:
+[{
+	Name: "Aal",
+	Sound: "A.mp3"
+}, {
+	Name: "Igel"
+	Sound: "I.mp3"
+}]
+
+// or
+
+Memory:
+[{
+	Id: 1,
+	Name: "Aal",
+	Sound: null"
+}, {
+	Id: 1,
+	Name: null,
+	Sound: "A.mp3"
+}, {
+	Id: 2,
+	Name: "Esel",
+	Sound: null
+}]

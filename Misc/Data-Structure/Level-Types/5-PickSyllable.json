@@ -1,0 +1,14 @@
+PickSyllable:
+{
+	// Can be omitted because we can build it from the SyllableParts.
+	// Lesson 1.2.7 shows a lesson without the built syllable. If this is no mistake, we do need it!
+	// SyllableToLearn: "MA" 	
+	SyllableParts: ["M", "A"]
+	Options: [{
+		Sound: "Ma.mp3",
+		Correct: true,
+	}, {
+		Sound: "Mo.mp3",
+		Correct: false
+	}]
+}

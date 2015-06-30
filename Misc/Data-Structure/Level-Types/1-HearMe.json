@@ -1,0 +1,12 @@
+HearMe:
+[{
+	LetterToLearn: "A",
+	Name: "Aal"
+	Element: {
+		Image: "Aal.png",
+		Sound: "Aal.mp3"
+	}	
+}, 
+{ 
+	//...
+}]

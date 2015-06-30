@@ -1,0 +1,38 @@
+// For lesson 1.1.4
+FindMissingLetter:
+{
+	LetterToLearn: ["A", "E", "I", "", "U"],
+	Options: [{
+		Letter: "A",
+		IsShort: false,
+		IsLong: false
+		CorrectPos: -1,
+	},{
+		Letter: "O",
+		IsShort: false,
+		IsLong: false
+		CorrectPos: 3, // real. Pos 4
+	}
+}
+
+// For lesson 1.6.4
+FindMissingLetter:
+{
+	LetterToLearn: ["H", "", "s", ""],
+	Options: [{
+		Letter: "a",
+		IsShort: false,
+		IsLong: true
+		CorrectPos: 1, // real. Pos 2
+	},{
+		Letter: "u",
+		IsShort: true,
+		IsLong: false
+		CorrectPos: -1,
+	},{
+		Letter: "e",
+		IsShort: true,
+		IsLong: false
+		CorrectPos: 3, // real. Pos 4
+	}
+}

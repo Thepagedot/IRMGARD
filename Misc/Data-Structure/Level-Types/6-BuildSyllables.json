@@ -1,0 +1,11 @@
+BuildSyllables:
+{
+	Syllables: [{
+		SyllableParts: ["L", "a"],
+		Sound: "La.mp3"
+	}, {
+		SyllableParts: ["m", "a"],
+		Sound: "Ma.mp3"
+	}],
+	Options: ["L", "o", "a", "m"]
+}

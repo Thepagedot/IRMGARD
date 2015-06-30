@@ -1,0 +1,5 @@
+LetterDrop:
+{
+	LettersToLearn: ["A", "E", "I", "O", "U"],
+	Options: ["a", "o", "e", "f", ... ]
+}

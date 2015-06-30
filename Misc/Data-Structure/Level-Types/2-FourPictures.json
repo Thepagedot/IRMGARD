@@ -1,0 +1,14 @@
+FourPictures:
+[{
+	LetterToLearn: "A"
+	Options: [{
+		Element: {
+			Image: "Aal.png",
+			Sound: "Aal.mp3"
+		}
+		Correct: true,
+	}, 
+	{
+		// ...
+	}]
+}]

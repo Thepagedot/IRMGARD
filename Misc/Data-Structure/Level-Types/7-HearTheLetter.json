@@ -1,0 +1,10 @@
+HearTheLetter:
+{
+	LetterToLearn: "D",
+	Element: {
+		Image: "Dackel.png",
+		Sound: "Dackel.mp3"
+	}
+	NumberOfOptions: 3,
+	Correct: 1
+}

@@ -1,0 +1,14 @@
+HearMeAbc:
+[{
+	LetterToLearn: "J",
+	Preped:	null,
+	Append: "ott",
+	// Not needed. If Preped AND Append are null, the letter is a vocal
+	// IsVocal: false,
+	Sound: "J.mp3"	
+}, {
+	LetterToLearn: "L",
+	Prepend:	"e",
+	Append: null,
+	Sound: "L.mp3"	
+}]

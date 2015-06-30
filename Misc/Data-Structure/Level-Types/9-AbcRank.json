@@ -1,0 +1,29 @@
+// For lesson 1.6.2
+AbcRank:
+{	
+	LettersToLearn: [{
+		Name: "A",
+		Element: null
+	}, {
+		Name: "D",
+		Element: null
+	}]	
+}
+
+// For lesson 1.6.3
+AbcRank:
+{	
+	LettersToLearn: [{
+		Name: "Aal",
+		Element: {
+			Image: "Aal.png",
+			Sound: "Aal.mp3"
+		}
+	}, {
+		Name: "Mond",
+		Element: {
+			Image: "Mond.png",
+			Sound: "Mond.mp3"
+		}
+	}]	
+}
