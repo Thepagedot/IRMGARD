@@ -12,24 +12,27 @@ namespace IRMGARD
 	[Activity (Label = "IRMGARD", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
-		int count = 1;
-
 		protected override void OnCreate (Bundle bundle)
 		{
+			// Initialize DataHolder if needed
+			if (DataHolder.Current == null)
+				DataHolder.Current = new DataHolder ();
+			
 			base.OnCreate (bundle);
-
-			// Set our view from the "main" layout resource
 			SetContentView (Resource.Layout.Main);
 
-			// Get our button from the layout resource,
-			// and attach an event to it
-			Button button = FindViewById<Button> (Resource.Id.myButton);
-			
-			button.Click += delegate {
-				button.Text = string.Format ("{0} clicks!", count++);
-			};
+			ActionBar.SetLogo (Resource.Drawable.Icon);
+			ActionBar.SetDisplayUseLogoEnabled (true);
+			ActionBar.SetDisplayShowHomeEnabled(true);
+
+			var startButton = FindViewById<ImageButton> (Resource.Id.btnStart);
+			startButton.Click += StartButton_Click;
+		}
+
+		void StartButton_Click (object sender, EventArgs e)
+		{
+			var intent = new Intent (this, typeof(LevelSelectActivity));
+			StartActivity (intent);
 		}
 	}
 }
-
-
