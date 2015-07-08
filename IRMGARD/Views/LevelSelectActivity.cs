@@ -29,12 +29,12 @@ namespace IRMGARD
 			var levelListView = FindViewById<ListView> (Resource.Id.lvLevels);
 			levelListView.ItemClick += LevelListView_ItemClick;
 			levelListView.Adapter = new LevelAdapter (this, DataHolder.Current.Levels.ToArray());
-
 		}
 
 		void LevelListView_ItemClick (object sender, AdapterView.ItemClickEventArgs e)
 		{
-			
+			var intent = new Intent(this, typeof(LessonFameActivity));
+			StartActivity (intent);
 		}
 	}
 }

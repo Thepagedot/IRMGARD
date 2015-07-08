@@ -2,4 +2,6 @@
 <resources>
 	<string name="hello">Hello World, Click Me!</string>
 	<string name="app_name">IRMGARD</string>
+	<string name="hint">Hinweis</string>
+	<string name="playVoiceInstruction">Anleitung</string>	
 </resources>

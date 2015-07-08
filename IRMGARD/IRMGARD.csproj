@@ -50,6 +50,7 @@
     <Compile Include="Views\LevelSelectActivity.cs" />
     <Compile Include="DataHolder.cs" />
     <Compile Include="Adapter\LevelAdapter.cs" />
+    <Compile Include="Views\LessonFrameActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -65,10 +66,27 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
     <AndroidResource Include="Resources\layout\LevelSelect.axml" />
+    <AndroidResource Include="Resources\layout\LessonFrame.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_help_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_help_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_help_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_help_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_help_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_volume_up_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_volume_up_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_volume_up_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_volume_up_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_volume_up_black_24dp.png" />
+    <AndroidResource Include="Resources\menu\levelFrame_menu.xml" />
+    <AndroidResource Include="Resources\drawable\irmgard_picture.jpg" />
+    <AndroidResource Include="Resources\values\Dimens.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Adapter\" />
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\menu\" />
+    <Folder Include="Resources\drawable\" />
   </ItemGroup>
 </Project>
