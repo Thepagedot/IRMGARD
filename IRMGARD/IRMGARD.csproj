@@ -51,6 +51,24 @@
     <Compile Include="DataHolder.cs" />
     <Compile Include="Adapter\LevelAdapter.cs" />
     <Compile Include="Views\LessonFrameActivity.cs" />
+    <Compile Include="Models\Levels\LevelTypes\AbcRank.cs" />
+    <Compile Include="Models\Levels\LevelTypes\BuildSyllable.cs" />
+    <Compile Include="Models\Levels\LevelTypes\FindMissingLetter.cs" />
+    <Compile Include="Models\Levels\LevelTypes\FourPattern.cs" />
+    <Compile Include="Models\Levels\LevelTypes\HearMe.cs" />
+    <Compile Include="Models\Levels\LevelTypes\HearMeAbc.cs" />
+    <Compile Include="Models\Levels\LevelTypes\HearTheLetter.cs" />
+    <Compile Include="Models\Levels\LevelTypes\LetterDrop.cs" />
+    <Compile Include="Models\Levels\LevelTypes\Memory.cs" />
+    <Compile Include="Models\Levels\LevelTypes\PickSyllable.cs" />
+    <Compile Include="Models\Levels\LevelElement.cs" />
+    <Compile Include="Models\Levels\LevelOption.cs" />
+    <Compile Include="Models\Levels\Syllables.cs" />
+    <Compile Include="Models\Lesson.cs" />
+    <Compile Include="Models\Level.cs" />
+    <Compile Include="Models\Module.cs" />
+    <Compile Include="Enums\LevelType.cs" />
+    <Compile Include="Models\Levels\LessonData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -88,5 +106,8 @@
     <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Resources\menu\" />
     <Folder Include="Resources\drawable\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\Levels\" />
+    <Folder Include="Enums\" />
   </ItemGroup>
 </Project>
