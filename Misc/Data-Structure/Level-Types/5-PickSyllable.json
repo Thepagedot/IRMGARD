@@ -5,10 +5,15 @@ PickSyllable:
 	// SyllableToLearn: "MA" 	
 	SyllableParts: ["M", "A"]
 	Options: [{
-		Sound: "Ma.mp3",
+		Element: [{
+			Sound: "Ma.mp3"
+		}],
 		Correct: true,
 	}, {
-		Sound: "Mo.mp3",
+		[{
+		Element: [{
+			Sound: "Mo.mp3"
+		}],
 		Correct: false
 	}]
 }
