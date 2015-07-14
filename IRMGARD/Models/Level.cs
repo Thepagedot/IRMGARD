@@ -1,24 +1,18 @@
 ﻿using System;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace IRMGARD.Models
 {
 	public class Level
 	{
-		public ObservableCollection<Module> ModulesList;
-		public void setModulesList(ObservableCollection<Module> modulesList){
-			this.ModulesList = modulesList;
-		}
-		public ObservableCollection<Module> getModulesList(){
-			return this.ModulesList;
-		}
+		public List<Module> ModulesList { get; set; }
 
-		public Level (){}
+		public Level () {}
 
-		public Level (ObservableCollection<Module> modulesList)
+		public Level (List<Module> modulesList)
 		{
-			this.setModulesList(modulesList);
+			this.ModulesList = modulesList;
 		}
 	}
 }

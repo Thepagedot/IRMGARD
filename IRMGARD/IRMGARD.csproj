@@ -57,7 +57,6 @@
     <Compile Include="Models\Levels\LevelTypes\AbcRank.cs" />
     <Compile Include="Models\Levels\LevelTypes\BuildSyllable.cs" />
     <Compile Include="Models\Levels\LevelTypes\FindMissingLetter.cs" />
-    <Compile Include="Models\Levels\LevelTypes\FourPattern.cs" />
     <Compile Include="Models\Levels\LevelTypes\HearMe.cs" />
     <Compile Include="Models\Levels\LevelTypes\HearMeAbc.cs" />
     <Compile Include="Models\Levels\LevelTypes\HearTheLetter.cs" />
@@ -65,14 +64,12 @@
     <Compile Include="Models\Levels\LevelTypes\Memory.cs" />
     <Compile Include="Models\Levels\LevelTypes\PickSyllable.cs" />
     <Compile Include="Models\Levels\LevelElement.cs" />
-    <Compile Include="Models\Levels\LevelOption.cs" />
-    <Compile Include="Models\Levels\Syllables.cs" />
     <Compile Include="Models\Lesson.cs" />
     <Compile Include="Models\Level.cs" />
     <Compile Include="Models\Module.cs" />
     <Compile Include="Enums\LevelType.cs" />
-    <Compile Include="Models\Levels\LessonData.cs" />
     <Compile Include="Utilities\DataManager.cs" />
+    <Compile Include="Models\Levels\LevelTypes\FourPictures.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -119,6 +116,7 @@
     <Folder Include="Resources\raw\level\" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\one_test.json" />
     <AndroidAsset Include="Assets\one.json" />
   </ItemGroup>
 </Project>

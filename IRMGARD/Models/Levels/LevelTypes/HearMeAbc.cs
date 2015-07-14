@@ -2,38 +2,23 @@
 
 namespace IRMGARD.Models
 {
-	public class HearMeAbc : LessonData
+	public class HearMeAbc : Lesson
 	{
-		private string prepend;
-		public string Prepend
-		{
-			get { return prepend; }
-			set { Prepend = prepend; }
-		}
+		public string LetterToLearn { get; set; }
+		public string Prepend { get; set;}
+		public string Append { get; set; }
+		public LevelElement LevelElements { get; set; }
 
-		private string append;
-		public string Append
-		{
-			get { return append; }
-			set { Append = append; }
-		}
 
-		private LevelElement levelElements;
-		public LevelElement LevelElements
-		{
-			get { return levelElements; }
-			set { LevelElements = levelElements; }
-		}
+		public HearMeAbc () {}
 
-		public HearMeAbc (){}
-
-		public HearMeAbc (string letterToLearn, string prepend, string append, LevelElement levelElements)
+		public HearMeAbc (string title, string soundPath, string hint, LevelType typeOfLevel, string letterToLearn, string prepend, string append, LevelElement levelElements) 
+			: base (title, soundPath, hint, typeOfLevel)
 		{
-			LetterToLearn = letterToLearn;
-			Prepend = prepend;
-			Append = append;
-			LevelElements = levelElements;
+			this.LetterToLearn = letterToLearn;
+			this.Prepend = prepend;
+			this.Append = append;
+			this.LevelElements = levelElements;
 		}
 	}
 }
-

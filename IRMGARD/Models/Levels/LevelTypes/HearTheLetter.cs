@@ -2,38 +2,23 @@
 
 namespace IRMGARD.Models
 {
-	public class HearTheLetter : LessonData
+	public class HearTheLetter : Lesson
 	{
-		private LevelElement levelElements;
-		public LevelElement LevelElements
-		{
-			get { return levelElements; }
-			set { LevelElements = levelElements; }
-		}
+		public string LetterToLearn { get; set; }
+		public LevelElement LevelElements { get; set; }
+		public int NumberOfOptions { get; set; }
+		public int CorrectOption { get; set; }
 
-		private int numberOfOptions;
-		public int NumberOfOptions
-		{
-			get { return numberOfOptions; }
-			set { NumberOfOptions = numberOfOptions; }
-		}
 
-		private int correctOption;
-		public int CorrectOption
-		{
-			get { return correctOption; }
-			set { CorrectOption = correctOption; }
-		}
+		public HearTheLetter () {}
 
-		public HearTheLetter(){}
-
-		public HearTheLetter(string letterToLearn, LevelElement levelElements, int numberOfOptions, int correctOption)
+		public HearTheLetter (string title, string soundPath, string hint, LevelType typeOfLevel, string letterToLearn, LevelElement levelElements, int numberOfOptions, int correctOption) 
+			: base (title, soundPath, hint, typeOfLevel)
 		{
-			LetterToLearn = letterToLearn;
-			LevelElements = levelElements;
-			NumberOfOptions = numberOfOptions;
-			CorrectOption = correctOption;
+			this.LetterToLearn = letterToLearn;
+			this.LevelElements = levelElements;
+			this.NumberOfOptions = numberOfOptions;
+			this.CorrectOption = correctOption;
 		}
 	}
 }
-

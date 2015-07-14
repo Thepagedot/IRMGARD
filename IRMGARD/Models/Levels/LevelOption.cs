@@ -29,12 +29,12 @@ namespace IRMGARD.Models
 			return Name;
 		}
 
-		public bool IsCorret;
+		public bool IsCorrect;
 		public void setIsCorrect(bool isCorrect){
-			this.IsCorret = isCorrect;
+			this.IsCorrect = isCorrect;
 		}
 		public bool getIsCorrect(){
-			return IsCorret;
+			return IsCorrect;
 		}
 
 		public bool IsShort;
@@ -68,6 +68,8 @@ namespace IRMGARD.Models
 		public int getId(){
 			return Id;
 		}
+
+		public LevelOption(){}
 
 		// needed for FourPictures
 		public LevelOption(LevelElement element, bool isCorrect)

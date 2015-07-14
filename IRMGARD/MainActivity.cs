@@ -7,6 +7,8 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using IRMGARD.Models;
+using System.Collections.Generic;
+using Newtonsoft.Json;
 
 namespace IRMGARD
 {

@@ -1,30 +1,21 @@
 ﻿using System;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 
 namespace IRMGARD.Models
 {
-	public class LetterDrop : LessonData
+	public class LetterDrop : Lesson
 	{
-		private ObservableCollection<string> lettersToLearn;
-		public ObservableCollection<string> LettersToLearn
-		{
-			get { return lettersToLearn; }
-			set { LettersToLearn = lettersToLearn; }
-		}
+		public List<string> LettersToLearn { get; set; }
+		public List<string> Options { get; set; }
 
-		private ObservableCollection<string> options;
-		public ObservableCollection<string> Options
-		{
-			get { return options; }
-			set { Options = options; }
-		}
 
-		public LetterDrop(){}
+		public LetterDrop () {}
 
-		public LetterDrop(ObservableCollection<string> lettersToLearn, ObservableCollection<string> options)
+		public LetterDrop (string title, string soundPath, string hint, LevelType typeOfLevel, List<string> lettersToLearn, List<string> options) 
+			: base(title, soundPath, hint, typeOfLevel)
 		{
-			LettersToLearn = lettersToLearn;
-			Options = options;
+			this.LettersToLearn = lettersToLearn;
+			this.Options = options;
 		}
 	}
 }

@@ -1,22 +1,34 @@
 ﻿using System;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 
 namespace IRMGARD.Models
 {
-	public class Memory : LessonData
+	public class Memory : Lesson
 	{
-		private ObservableCollection<LevelOption> levelOptionsList;
-		public ObservableCollection<LevelOption> LevelOptionsList
-		{
-			get { return levelOptionsList; }
-			set { LevelOptionsList = levelOptionsList; }
-		}
-		
-		public Memory (){}
+		public List<MemoryOption> LevelOptionsList { get; set; }
 
-		public Memory (ObservableCollection<LevelOption> levelOptionsList)
+
+		public Memory () {}
+
+		public Memory (string title, string soundPath, string hint, LevelType typeOfLevel, List<MemoryOption> levelOptionsList)
+			: base (title, soundPath, hint, typeOfLevel)
 		{
-			LevelOptionsList = levelOptionsList;
+			this.LevelOptionsList = levelOptionsList;
+		}
+	}
+
+	public class MemoryOption
+	{
+		public string Name { get; set; }
+		public string SoundPath { get; set; }
+
+
+		public MemoryOption () {}
+
+		public MemoryOption (string name, string soundPath) 
+		{
+			this.Name = name;
+			this.SoundPath = soundPath;
 		}
 	}
 }

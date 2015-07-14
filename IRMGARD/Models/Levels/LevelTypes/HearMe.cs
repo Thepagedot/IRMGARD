@@ -2,22 +2,22 @@
 
 namespace IRMGARD.Models
 {
-	public class HearMe : LessonData
+	[Serializable]
+	public class HearMe : Lesson
 	{
-		private LevelOption levelOptions;
-		public LevelOption LevelOptions
-		{
-			get { return levelOptions; }
-			set { LevelOptions = levelOptions; }
-		}
+		public string LetterToLearn;
+		public string Name;
+		public LevelElement Element;
 
-		public HearMe(){}
 
-		public HearMe(string letterToLearn, LevelOption levelOptions)
+		public HearMe () {}
+
+		public HearMe (string title, string soundPath, string hint, LevelType typeOfLevel, string letterToLearn, string name, LevelElement element) 
+			: base (title, soundPath, hint, typeOfLevel)
 		{
-			LetterToLearn = letterToLearn;
-			LevelOptions = levelOptions;
+			this.LetterToLearn = letterToLearn;
+			this.Name = name;
+			this.Element = element;
 		}
 	}
 }
-

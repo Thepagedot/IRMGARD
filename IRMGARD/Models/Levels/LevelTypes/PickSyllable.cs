@@ -1,39 +1,39 @@
 ﻿using System;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 
 namespace IRMGARD.Models
 {
-	public class PickSyllable : LessonData
+	[Serializable]
+	public class PickSyllable : Lesson
 	{
-		private string syllableToLearn;
-		public string SyllableToLearn
+		public string SyllableToLearn { get; set; }
+		public List<string> SyllableParts { get; set; }
+		public List<PickSyllableOption> Options { get; set; }
+
+
+		public PickSyllable () {}
+
+		public PickSyllable (string title, string soundPath, string hint, LevelType typeOfLevel, string syllableToLearn, List<string> syllableParts, List<PickSyllableOption> options) 
+			: base (title, soundPath, hint, typeOfLevel)
 		{
-			get { return syllableToLearn; }
-			set { SyllableToLearn = syllableToLearn; }
+			this.SyllableToLearn = syllableToLearn;
+			this.SyllableParts = syllableParts;
+			this.Options = options;
 		}
+	}
 
-		private ObservableCollection<string> syllableParts;
-		public ObservableCollection<string> SyllableParts
+	public class PickSyllableOption
+	{
+		public bool IsCorrect { get; set; }
+		public LevelElement Element  { get; set; }
+
+
+		public PickSyllableOption () {}
+
+		public PickSyllableOption (bool isCorrect, LevelElement element)
 		{
-			get { return syllableParts; }
-			set { SyllableParts = syllableParts; }
-		}
-
-		private ObservableCollection<LevelOption> levelOptionsList;
-		public ObservableCollection<LevelOption> LevelOptionsList
-		{
-			get { return levelOptionsList; }
-			set { LevelOptionsList = levelOptionsList; }
-		}
-
-		public PickSyllable(){}
-
-		public PickSyllable(string syllableToLearn, ObservableCollection<string> syllableParts, ObservableCollection<LevelOption> levelOptionsList)
-		{
-			SyllableToLearn = syllableToLearn;
-			SyllableParts = syllableParts;
-			LevelOptionsList = levelOptionsList;
+			this.IsCorrect = isCorrect;
+			this.Element = element;
 		}
 	}
 }
-

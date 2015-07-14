@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 using System.IO;
-using System.Collections.ObjectModel;
+using System.Collections.Generic;
 using IRMGARD.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -15,6 +15,7 @@ namespace IRMGARD
 	{
 		public static Level GetLevel (int level)
 		{
+			//demoFunctionForSerialization ();
 			string content = string.Empty;
 			using (StreamReader sr = new StreamReader (Application.Context.Assets.Open (getNumberAsString(level) + ".json")))
 			{
@@ -23,7 +24,10 @@ namespace IRMGARD
 				{
 					
 					JObject json = JObject.Parse(content);
-					return JsonConvert.DeserializeObject<Level> (json.ToString());;
+					return JsonConvert.DeserializeObject<Level> (json.ToString(), new JsonSerializerSettings
+						{
+							TypeNameHandling = TypeNameHandling.Objects
+						});
 
 				} catch (Exception ex) 
 				{
@@ -55,9 +59,30 @@ namespace IRMGARD
 		}
 
 		private static void demoFunctionForSerialization(){
-			Lesson l = new Lesson("Lesson 1", "Lesson1.mp3", string.Empty, LevelType.HearMe, new LessonData());
+
+
+
+			var test = new List<Lesson> ();
+			test.Add(new HearMe("test", "soundpath1.mp3", "", LevelType.HearMe, "A", "Aal", new LevelElement("Lesson1.png", "Lesson1.mp3")));
+			test.Add(new HearMe("test", "soundpath2.mp3", "", LevelType.HearMe, "E", "Esel", new LevelElement("Lesson2.png", "Lesson2.mp3")));
+			test.Add (new PickSyllable ("syllable", "soundpath3,mp3", "", LevelType.PickSyllable, "S", new List<String> (), new List<PickSyllableOption> ()));
+
+
+			var module = new Module (test, 3, 0);
+			var moduleList = new List<Module> ();
+			moduleList.Add (module);
+			var level = new Level (moduleList);
+
+			var json = JsonConvert.SerializeObject (level);
+
+			string name = "TEST";
+
+			/*Lesson l = new Lesson("Lesson 1", "Lesson1.mp3", string.Empty, LevelType.HearMe, new LessonData());
 			Lesson l1 = new Lesson("Lesson 2", "Lesson2.mp3", "", LevelType.FourPictures, new LessonData());
 			Lesson l2 = new Lesson("Lesson 3", "Lesson3.mp3", "", LevelType.AbcRank, new LessonData());
+
+			//LessonData data = new LessonData ("A", new LevelOption("Aal", new LevelElement("", "")));
+			//l.Data = data;
 
 			ObservableCollection<Lesson> cl = new ObservableCollection<Lesson>();
 			cl.Add(l);
@@ -77,7 +102,7 @@ namespace IRMGARD
 
 			var t = JsonConvert.SerializeObject (levelOne);
 
-			var mno = JsonConvert.DeserializeObject<Level>(t);
+			var mno = JsonConvert.DeserializeObject<Level>(t);*/
 		}
 	}
 }

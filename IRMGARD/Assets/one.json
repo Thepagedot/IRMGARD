@@ -7,21 +7,63 @@
           "SoundPath": "soundpathModule1Lesson1.mp3",
           "Hint": "",
           "TypeOfLevel":"HearMe",
-          "Data": {"LetterToLearn":null}
+          "Data": {
+					"LetterToLearn": "A",
+					"Option": {
+							"Name": "Aal",
+							"Element": {
+								"ImagePath": "Aal.png",
+								"SoundPath": "Aal.mp3"
+							}
+					}
+				  }
           },
           {
           "Title": "AEIOU",
           "SoundPath": "soundpathModule1Lesson2.mp3",
           "Hint": "",
           "TypeOfLevel":"FourPictures",
-          "Data": {"LetterToLearn":null}
+          "Data": {
+					"LetterToLearn": "A",
+					"OptionList": [{
+						"IsCorrect": true,
+						"Element": {
+							"ImagePath": "Aal.png",
+							"SoundPath": "Aal.mp3"
+						}
+					},
+					{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Ameise.png",
+							"SoundPath": "Ameise.mp3"
+						}
+					},
+					{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Affe.png",
+							"SoundPath": "Affe.mp3"
+						}
+					},
+					{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Ahorn.png",
+							"SoundPath": "Ahorn.mp3"
+						}
+					}]
+				}
           },
           {
           "Title": "A oder a?",
           "SoundPath": "soundpathModule1Lesson3.mp3",
           "Hint": "",
           "TypeOfLevel":"LetterDrop",
-          "Data": {"LetterToLearn":null}
+          "Data": {
+					"LettersToLearn": ["A", "E", "I", "O", "U"],
+					"Options": ["a", "o", "e", "f", "g", "h"]
+				  }
           },
           {
           "Title": "A?IOU",
