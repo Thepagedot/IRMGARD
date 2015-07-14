@@ -5,50 +5,55 @@ namespace IRMGARD.Models
 {
 	public class Lesson
 	{
-		private string title;
-		public string Title
-		{
-			get { return title; }
-			set { Title = title; }
+		public String Title;
+		public void setTitle(String title){
+			this.Title=title;
+		}
+		public String getTitle(){
+			return this.Title;
 		}
 
-		private string soundPath;
-		public string SoundPath
-		{
-			get { return soundPath; }
-			set { SoundPath = soundPath; }
+		public String SoundPath;
+		public void setSoundPath(String soundPath){
+			this.SoundPath=soundPath;
+		}
+		public String getSoundPath(){
+			return this.SoundPath;
 		}
 
-		private string hint;
-		public string Hint
-		{
-			get { return hint; }
-			set { Hint = hint; }
+		public String Hint;
+		public void setHint(String hint){
+			this.Hint=hint;
+		}
+		public String getHint(){
+			return this.Hint;
 		}
 
-		private LevelType typeOfLevel;
-		public LevelType TypeOfLevel
-		{
-			get { return typeOfLevel; }
-			set { TypeOfLevel = typeOfLevel; }
+		public LevelType TypeOfLevel;
+		public void setTypeOfLevel(LevelType levelType){
+			this.TypeOfLevel = levelType;
+		}
+		public LevelType getTypeOfLevel(){
+			return this.TypeOfLevel;
 		}
 
-		private LessonData data;
-		public LessonData Data
-		{
-			get { return data; }
-			set { Data = data; }
+		public LessonData Data;
+		public void setData(LessonData data){
+			this.Data = data;
+		}
+		public LessonData getData(){
+			return this.Data;
 		}
 
 		public Lesson (){}
 
 		public Lesson (string title, string soundPath, string hint, LevelType typeOfLevel, LessonData data)
 		{
-			Title = title;
-			SoundPath = soundPath;
-			Hint = hint;
-			TypeOfLevel = typeOfLevel;
-			Data = data;
+			this.setTitle(title);
+			this.setSoundPath(soundPath);
+			this.setHint(hint);
+			this.setTypeOfLevel(typeOfLevel);
+			this.setData(data);
 		}
 	}
 }

@@ -4,31 +4,35 @@ namespace IRMGARD.Models
 {
 	public class LevelElement
 	{
-		private string imagePath;
-		public string ImagePath
-		{
-			get { return imagePath; }
-			set { ImagePath = imagePath; }
+		public String ImagePath;
+		public void setImagePath(String imagePath){
+			this.ImagePath = imagePath;
+		}
+		public String getImagePath(){
+			return this.ImagePath;
 		}
 
-		private string soundPath;
-		public string SoundPath
-		{
-			get { return soundPath; }
-			set { SoundPath = soundPath; }
+		public String SoundPath;
+		public void setSoundPath(String soundPath){
+			this.SoundPath = soundPath;
 		}
+		public String getSoundPath(){
+			return this.SoundPath;
+		}
+
+		public LevelElement(){}
 
 		// needed for PickSyllable, HearMeAbc, Memory
 		public LevelElement(string soundPath)
 		{
-			SoundPath = soundPath;
+			this.setSoundPath(soundPath);
 		}
 
 		// needed for HearMe, FourPictures, AbcRank
 		public LevelElement(string imagePath, string soundPath)
 		{
-			ImagePath = imagePath;
-			SoundPath = soundPath;
+			this.setImagePath(imagePath);
+			this.setSoundPath(soundPath);
 		}
 	}
 }

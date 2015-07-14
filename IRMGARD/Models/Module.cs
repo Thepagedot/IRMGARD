@@ -1,29 +1,33 @@
 ﻿using System;
 using System.Collections.ObjectModel;
+using Newtonsoft.Json;
 
 namespace IRMGARD.Models
 {
 	public class Module
 	{
-		private ObservableCollection<Lesson> lessonsList;
-		public ObservableCollection<Lesson> LessonsList
-		{
-			get { return lessonsList; }
-			set { LessonsList = lessonsList; }
+		public ObservableCollection<Lesson> LessonsList;
+		public void setLessonsList(ObservableCollection<Lesson> lessonsList){
+			this.LessonsList = lessonsList;
+		}
+		public ObservableCollection<Lesson> getLessonsList(){
+			return this.LessonsList;
 		}
 
-		private int numberOfLessons;
-		public int NumberOfLessons
-		{
-			get { return numberOfLessons; }
-			set { NumberOfLessons = numberOfLessons; }
+		public int NumberOfLessons;
+		public void setNumberOfLessons(int numberOfLessons){
+			this.NumberOfLessons = numberOfLessons;
+		}
+		public int getNumberOfLessons(){
+			return this.NumberOfLessons;
 		}
 
-		private int numberOfLessonsDone;
-		public int NumberOfLessonsDone
-		{
-			get { return numberOfLessonsDone; }
-			set { NumberOfLessonsDone = numberOfLessonsDone; }
+		public int NumberOfLessonsDone;
+		public void setNumberOfLessonsDone(int numberOfLessonsDone){
+			this.NumberOfLessonsDone = numberOfLessonsDone;
+		}
+		public int getNumberOfLessonsDone(){
+			return this.NumberOfLessonsDone;
 		}
 
 
@@ -31,9 +35,9 @@ namespace IRMGARD.Models
 
 		public Module (ObservableCollection<Lesson> lessonsList, int numberOfLessons, int numberOfLessonsDone)
 		{
-			LessonsList = lessonsList;
-			NumberOfLessons = numberOfLessons;
-			NumberOfLessonsDone = numberOfLessonsDone;
+			this.setLessonsList(lessonsList);
+			this.setNumberOfLessons(numberOfLessons);
+			this.setNumberOfLessonsDone(numberOfLessonsDone);
 		}
 	}
 }

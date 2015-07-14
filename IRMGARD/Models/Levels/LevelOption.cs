@@ -5,91 +5,99 @@ namespace IRMGARD.Models
 {
 	public class LevelOption
 	{
-		private LevelElement element;
-		public LevelElement Element
-		{
-			get { return element; }
-			set { Element = element; }
+		public LevelElement Element;
+		public void setLevelElement(LevelElement element){
+			this.Element = element;
+		}
+		public LevelElement getLevelElement(){
+			return this.Element;
 		}
 
-		private string letter;
-		public string Letter
-		{
-			get { return letter; }
-			set { Letter = letter; }
+		public String Letter;
+		public void setLetter(String letter){
+			this.Letter = letter;
+		}
+		public String getLetter(){
+			return Letter;
 		}
 
-		private string name;
-		public string Name
-		{
-			get { return name; }
-			set { Name = name; }
+		public String Name;
+		public void setName(String name){
+			this.Name = name;
+		}
+		public String getName(){
+			return Name;
 		}
 
-		private bool isCorret;
-		public bool IsCorret
-		{
-			get { return isCorret; }
-			set { IsCorret = isCorret; }
+		public bool IsCorret;
+		public void setIsCorrect(bool isCorrect){
+			this.IsCorret = isCorrect;
+		}
+		public bool getIsCorrect(){
+			return IsCorret;
 		}
 
-		private bool isShort;
-		public bool IsShort
-		{
-			get { return isShort; }
-			set { IsShort = isShort; }
+		public bool IsShort;
+		public void setIsShort(bool isShort){
+			this.IsShort = isShort;
+		}
+		public bool getIsShort(){
+			return IsShort;
 		}
 
-		private bool isLong;
-		public bool IsLong
-		{
-			get { return isLong; }
-			set { IsLong = isLong; }
+		public bool IsLong;
+		public void setIsLong(bool isLong){
+			this.IsLong = isLong;
+		}
+		public bool getIsLong(){
+			return IsLong;
 		}
 
-		private int correctPos;
-		public int CorrectPos
-		{
-			get { return correctPos; }
-			set { CorrectPos = correctPos; }
+		public int CorrectPos;
+		public void setCorrectPos(int correctPos){
+			this.CorrectPos = correctPos;
+		}
+		public int getCorrectPos(){
+			return CorrectPos;
 		}
 
-		private int id;
-		public int Id
-		{
-			get { return id; }
-			set { Id = id; }
+		public int Id;
+		public void setId(int id){
+			this.Id = id;
+		}
+		public int getId(){
+			return Id;
 		}
 
 		// needed for FourPictures
 		public LevelOption(LevelElement element, bool isCorrect)
 		{
-			Element = element;
-			IsCorret = isCorret;
+			this.setLevelElement(element);
+			this.setIsCorrect(isCorrect);
 		}
 
 		// needed for FindMissingLetter
 		public LevelOption(string letter, bool isShort, bool isLong, int correctPos)
 		{
-			Letter = letter;
-			IsShort = isShort;
-			IsLong = isLong;
-			CorrectPos = correctPos;
+			this.setLetter(letter);
+			this.setIsShort(isShort);
+			this.setIsLong(isLong);
+			this.setCorrectPos(correctPos);
 		}
 
 		// needed for HearMe, AbcRank
 		public LevelOption(string name, LevelElement element)
 		{
-			Name = name;
-			Element = element;
+			this.setName(name);
+			this.setLevelElement(element);
 		}
 
 		// needed for Memory
 		public LevelOption(int id, string name, LevelElement element)
 		{
-			Id = id;
-			Name = name;
-			Element = element;
+			this.setId(id);
+			this.setName(name);
+			this.setLevelElement(element);
 		}
 	}
 }

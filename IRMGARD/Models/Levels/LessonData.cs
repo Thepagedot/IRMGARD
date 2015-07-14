@@ -4,17 +4,18 @@ namespace IRMGARD
 {
 	public class LessonData
 	{
-		private string letterToLearn;
-		public string LetterToLearn
-		{
-			get { return letterToLearn; }
-			set { LetterToLearn = letterToLearn; }
+		public String LetterToLearn;
+		public void setLetterToLearn(String letterToLearn){
+			this.LetterToLearn = letterToLearn;
+		}
+		public String getLetterToLearn(){
+			return this.LetterToLearn;
 		}
 
 		public LessonData (){}
-		public LessonData (string letterToLearn)
+		public LessonData (String letterToLearn)
 		{
-			LetterToLearn = letterToLearn;
+			setLetterToLearn (letterToLearn);
 		}
 	}
 }

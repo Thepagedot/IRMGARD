@@ -5,26 +5,29 @@ namespace IRMGARD
 {
 	public class Syllables
 	{
-		private ObservableCollection<string> syllableParts;
-		public ObservableCollection<string> SyllableParts
-		{
-			get { return syllableParts; }
-			set { SyllableParts = syllableParts; }
+		public ObservableCollection<String> SyllableParts;
+		public void setSyllableParts(ObservableCollection<String> syllableParts){
+			this.SyllableParts = syllableParts;
+		}
+		public ObservableCollection<String> getSyllableParts(){
+			return SyllableParts;
 		}
 
-		private string soundPath;
-		public string SoundPath
-		{
-			get { return soundPath; }
-			set { SoundPath = soundPath; }
+		public String SoundPath;
+		public void setSoundPath(String soundPath){
+			this.SoundPath = soundPath;
+		}
+		public String getSoundPath(){
+			return SoundPath;
 		}
 
+		public Syllables(){}
 
 		// needed for BuildSyllables
 		public Syllables (ObservableCollection<string> syllableParts, string soundPath)
 		{
-			SyllableParts = syllableParts;
-			SoundPath = soundPath;
+			this.setSyllableParts(syllableParts);
+			this.setSoundPath(soundPath);
 		}
 	}
 }

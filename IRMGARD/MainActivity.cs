@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using IRMGARD.Models;
 
 namespace IRMGARD
 {
@@ -14,6 +15,7 @@ namespace IRMGARD
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
+			var i = DataManager.GetLevel (1);
 			// Initialize DataHolder if needed
 			if (DataHolder.Current == null)
 				DataHolder.Current = new DataHolder ();
@@ -32,6 +34,7 @@ namespace IRMGARD
 		void StartButton_Click (object sender, EventArgs e)
 		{
 			var intent = new Intent (this, typeof(LevelSelectActivity));
+			Level l = DataManager.GetLevel (1);
 			StartActivity (intent);
 		}
 	}

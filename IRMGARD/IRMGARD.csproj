@@ -42,6 +42,9 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Mono.Android" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -69,11 +72,13 @@
     <Compile Include="Models\Module.cs" />
     <Compile Include="Enums\LevelType.cs" />
     <Compile Include="Models\Levels\LessonData.cs" />
+    <Compile Include="Utilities\DataManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -109,5 +114,11 @@
     <Folder Include="Models\" />
     <Folder Include="Models\Levels\" />
     <Folder Include="Enums\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="Resources\raw\" />
+    <Folder Include="Resources\raw\level\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\one.json" />
   </ItemGroup>
 </Project>
