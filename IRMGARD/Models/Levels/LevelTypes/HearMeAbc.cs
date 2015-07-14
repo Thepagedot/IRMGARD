@@ -9,7 +9,6 @@ namespace IRMGARD.Models
 		public string Append { get; set; }
 		public LevelElement LevelElements { get; set; }
 
-
 		public HearMeAbc () {}
 
 		public HearMeAbc (string title, string soundPath, string hint, LevelType typeOfLevel, string letterToLearn, string prepend, string append, LevelElement levelElements) 

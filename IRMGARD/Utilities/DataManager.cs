@@ -13,50 +13,33 @@ namespace IRMGARD
 {
 	public class DataManager
 	{
-		public static Level GetLevel (int level)
-		{
-			//demoFunctionForSerialization ();
-			string content = string.Empty;
-			using (StreamReader sr = new StreamReader (Application.Context.Assets.Open (getNumberAsString(level) + ".json")))
-			{
-				content = sr.ReadToEnd();
-				try
-				{
-					
-					JObject json = JObject.Parse(content);
-					return JsonConvert.DeserializeObject<Level> (json.ToString(), new JsonSerializerSettings
-						{
-							TypeNameHandling = TypeNameHandling.Objects
-						});
-
-				} catch (Exception ex) 
-				{
-					Console.WriteLine ("JSON reader Exception on reading level {0}", level);
-					Console.WriteLine ("Message: {0}", ex.Message);
-				}
-			}
-			return new Level ();
-		}
-
-		private static string getNumberAsString(int level)
-		{
-			switch (level) 
-			{
-			case 1:
-				return "one";
-			case 2:
-				return "two";
-			case 3:
-				return "three";
-			case 4:
-				return "four";
-			case 5:
-				return "five";
-			case 6:
-				return "six";
-			}
-			return string.Empty;
-		}
+		// Copied to DataHolder
+//		public static Level GetLevel (int level)
+//		{
+//			//demoFunctionForSerialization ();
+//			string content = string.Empty;
+//			using (StreamReader sr = new StreamReader (Application.Context.Assets.Open (getNumberAsString(level) + ".json")))
+//			{
+//				content = sr.ReadToEnd();
+//				try
+//				{
+//					
+//					JObject json = JObject.Parse(content);
+//					return JsonConvert.DeserializeObject<Level> (json.ToString(), new JsonSerializerSettings
+//						{
+//							TypeNameHandling = TypeNameHandling.Objects
+//						});
+//
+//				} 
+//				catch (Exception ex) 
+//				{
+//					Console.WriteLine ("JSON reader Exception on reading level {0}", level);
+//					Console.WriteLine ("Message: {0}", ex.Message);
+//				}
+//			}
+//			return new Level ();
+//		}
+			
 
 		private static void demoFunctionForSerialization(){
 
@@ -71,7 +54,7 @@ namespace IRMGARD
 			var module = new Module (test, 3, 0);
 			var moduleList = new List<Module> ();
 			moduleList.Add (module);
-			var level = new Level (moduleList);
+			var level = new Level ("1", moduleList);
 
 			var json = JsonConvert.SerializeObject (level);
 

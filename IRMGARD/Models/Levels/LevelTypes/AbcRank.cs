@@ -7,7 +7,6 @@ namespace IRMGARD.Models
 	{
 		public List<AbcRankOption> LettersToLearn { get; set; }
 
-
 		public AbcRank () : base () {}
 
 		public AbcRank (string title, string soundPath, string hint, LevelType typeOfLevel, List<AbcRankOption> lettersToLearn) 

@@ -10,7 +10,6 @@ namespace IRMGARD.Models
 		public int NumberOfLessons;
 		public int NumberOfLessonsDone;
 
-
 		public Module () {}
 
 		public Module (List<Lesson> lessonsList, int numberOfLessons, int numberOfLessonsDone)

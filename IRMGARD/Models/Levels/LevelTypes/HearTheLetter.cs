@@ -9,7 +9,6 @@ namespace IRMGARD.Models
 		public int NumberOfOptions { get; set; }
 		public int CorrectOption { get; set; }
 
-
 		public HearTheLetter () {}
 
 		public HearTheLetter (string title, string soundPath, string hint, LevelType typeOfLevel, string letterToLearn, LevelElement levelElements, int numberOfOptions, int correctOption) 

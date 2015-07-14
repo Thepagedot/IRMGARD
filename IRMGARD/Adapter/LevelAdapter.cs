@@ -2,15 +2,16 @@
 using Android.Widget;
 using Android.App;
 using Android.Views;
+using IRMGARD.Models;
 
 namespace IRMGARD
 {
 	public class LevelAdapter : BaseAdapter
 	{
 		Activity context;
-		string[] items;
+		Level[] items;
 
-		public LevelAdapter (Activity context, string[] items) : base()
+		public LevelAdapter (Activity context, Level[] items) : base()
 		{
 			this.context = context;
 			this.items = items;
@@ -32,9 +33,10 @@ namespace IRMGARD
 		{
 			View view = convertView;
 			if (view == null)
-				view = context.LayoutInflater.Inflate (Android.Resource.Layout.SimpleListItem1, null);
+				view = context.LayoutInflater.Inflate (Android.Resource.Layout.SimpleListItem2, null);
 
-			view.FindViewById<TextView> (Android.Resource.Id.Text1).Text = items [position];
+			view.FindViewById<TextView> (Android.Resource.Id.Text1).Text = items[position].Name;
+			view.FindViewById<TextView> (Android.Resource.Id.Text2).Text = "Number of modules:" + items[position].ModulesList.Count;
 
 			return view;
 		}

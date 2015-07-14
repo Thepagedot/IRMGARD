@@ -25,7 +25,6 @@ namespace IRMGARD.Models
 		public bool IsLong { get; set; }
 		public int CorrectPos { get; set; }
 
-
 		public FindMissingLetterOption () {}
 
 		public FindMissingLetterOption (string letter, bool isShort, bool isLong, int correctPos)

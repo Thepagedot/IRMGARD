@@ -1,5 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using IRMGARD.Models;
+using System.IO;
+using Android.App;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using System.Threading.Tasks;
 
 namespace IRMGARD
 {
@@ -7,12 +13,31 @@ namespace IRMGARD
 	{
 		public static DataHolder Current;
 
-		public List<string> Levels { get; set; }
+		public List<Level> Levels { get; set; }
 
 		public DataHolder()
 		{
-			Levels = new List<string> { "Level  1", "Level 2", "Level 3", "Level 4", "Level 5", "Level 6", "Level 7", "Level 8", };
+			Levels = new List<Level>();
 			Current = this;
+		}
+
+		public async Task LoadLevelAsync(int levelNumber)
+		{
+			using (var reader = new StreamReader(Application.Context.Assets.Open("level" + levelNumber + ".json")))
+			{				
+				try
+				{
+					var jsonContent = await reader.ReadToEndAsync();
+					var json = JObject.Parse(jsonContent);
+					var level = JsonConvert.DeserializeObject<Level> (json.ToString(), new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Objects });
+					Levels.Add(level);
+				} 
+				catch (Exception ex) 
+				{
+					Console.WriteLine("JSON reader Exception on reading level {0}", levelNumber);
+					Console.WriteLine("Message: {0}", ex.Message);
+				}
+			}
 		}
 	}
 }

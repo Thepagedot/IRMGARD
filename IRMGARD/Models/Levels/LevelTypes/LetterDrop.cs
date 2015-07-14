@@ -8,7 +8,6 @@ namespace IRMGARD.Models
 		public List<string> LettersToLearn { get; set; }
 		public List<string> Options { get; set; }
 
-
 		public LetterDrop () {}
 
 		public LetterDrop (string title, string soundPath, string hint, LevelType typeOfLevel, List<string> lettersToLearn, List<string> options) 

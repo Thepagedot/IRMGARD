@@ -68,8 +68,8 @@
     <Compile Include="Models\Level.cs" />
     <Compile Include="Models\Module.cs" />
     <Compile Include="Enums\LevelType.cs" />
-    <Compile Include="Utilities\DataManager.cs" />
     <Compile Include="Models\Levels\LevelTypes\FourPictures.cs" />
+    <Compile Include="Utilities\DataManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -111,12 +111,12 @@
     <Folder Include="Models\" />
     <Folder Include="Models\Levels\" />
     <Folder Include="Enums\" />
-    <Folder Include="Utilities\" />
     <Folder Include="Resources\raw\" />
     <Folder Include="Resources\raw\level\" />
+    <Folder Include="Utilities\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\one_test.json" />
-    <AndroidAsset Include="Assets\one.json" />
+    <AndroidAsset Include="Assets\level1.json" />
   </ItemGroup>
 </Project>

@@ -7,7 +7,6 @@ namespace IRMGARD.Models
 		public string ImagePath;
 		public string SoundPath;
 
-
 		public LevelElement () {}
 
 		public LevelElement (string imagePath, string soundPath)

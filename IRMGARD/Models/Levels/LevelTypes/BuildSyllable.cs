@@ -6,8 +6,7 @@ namespace IRMGARD.Models
 	public class BuildSyllable : Lesson
 	{
 		public List<BuildSyllableOption> SyllableOptions { get; set; }
-		public List<string> Options { get; set; } 
-
+		public List<string> Options { get; set; }
 
 		public BuildSyllable () : base () {}
 

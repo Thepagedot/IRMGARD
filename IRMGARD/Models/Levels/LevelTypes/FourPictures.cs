@@ -8,7 +8,6 @@ namespace IRMGARD.Models
 		public string LetterToLearn { get; set; }
 		public List<FourPicturesOption> Options { get; set; }
 
-
 		public FourPictures(){}
 
 		public FourPictures(string title, string soundPath, string hint, LevelType typeOfLevel, string letterToLearn, List<FourPicturesOption> options) 
@@ -23,7 +22,6 @@ namespace IRMGARD.Models
 	{
 		public bool IsCorrect { get; set; }
 		public LevelElement Element  { get; set; }
-
 
 		public FourPicturesOption () {}
 

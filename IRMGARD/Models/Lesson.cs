@@ -11,7 +11,6 @@ namespace IRMGARD.Models
 		public LevelType TypeOfLevel { get; set; }
 		// ToDo: Liste für rot markierte Buchstaben
 
-
 		public Lesson () {}
 
 		public Lesson (string title, string soundPath, string hint, LevelType typeOfLevel)

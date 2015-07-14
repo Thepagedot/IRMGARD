@@ -9,7 +9,6 @@ namespace IRMGARD.Models
 		public string Name;
 		public LevelElement Element;
 
-
 		public HearMe () {}
 
 		public HearMe (string title, string soundPath, string hint, LevelType typeOfLevel, string letterToLearn, string name, LevelElement element) 

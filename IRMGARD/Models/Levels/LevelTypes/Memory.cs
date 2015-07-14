@@ -7,7 +7,6 @@ namespace IRMGARD.Models
 	{
 		public List<MemoryOption> LevelOptionsList { get; set; }
 
-
 		public Memory () {}
 
 		public Memory (string title, string soundPath, string hint, LevelType typeOfLevel, List<MemoryOption> levelOptionsList)
