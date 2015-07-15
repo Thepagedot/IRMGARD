@@ -22,13 +22,27 @@ namespace IRMGARD
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.LessonFrame);
 
-//			ActionBar.SetLogo (Resource.Drawable.Icon);
-//			ActionBar.SetDisplayUseLogoEnabled (true);
-//			ActionBar.SetDisplayShowHomeEnabled(true);
+
+			ActionBar.SetLogo (Resource.Drawable.Icon);
+			ActionBar.SetDisplayUseLogoEnabled (true);
+			ActionBar.SetDisplayShowHomeEnabled(true);
 			ActionBar.SetDisplayHomeAsUpEnabled (true);
 
 			InitLession();
 		}
+
+		/// <summary>
+		/// Initiates the view with the current lession.
+		/// </summary>
+		private void InitLession()
+		{
+			var lesson = DataHolder.Current.CurrentLesson;
+
+			// Set the name of the current lesson as page title
+			Title = lesson.Title;
+		}
+
+		#region UI Operations
 
 		public override bool OnCreateOptionsMenu (IMenu menu)
 		{
@@ -63,12 +77,6 @@ namespace IRMGARD
 			return base.OnOptionsItemSelected (item);
 		}
 
-		private void InitLession()
-		{
-			var lesson = DataHolder.Current.CurrentLesson;
-
-			// Set the name of the current lesson as page title
-			Title = lesson.Title;
-		}
+		#endregion
 	}
 }
