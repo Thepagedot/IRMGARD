@@ -3,7 +3,7 @@ using System.Collections.ObjectModel;
 
 namespace IRMGARD.Models
 {
-	public class Lesson
+	public abstract class Lesson
 	{
 		public string Title { get; set; }
 		public string SoundPath { get; set; }

@@ -69,8 +69,12 @@
     <Compile Include="Models\Module.cs" />
     <Compile Include="Enums\LevelType.cs" />
     <Compile Include="Models\Levels\LevelTypes\FourPictures.cs" />
+<<<<<<< Upstream, based on origin/master
     <Compile Include="Utilities\DataManager.cs" />
     <Compile Include="Utilities\SoundPlayer.cs" />
+=======
+    <Compile Include="Models\ILesson.cs" />
+>>>>>>> 2e23853 now lessons can be serialized as there original type
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -119,6 +123,7 @@
     <Folder Include="Assets\Sounds\Level-1\" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< Upstream, based on origin/master
     <AndroidAsset Include="Assets\one_test.json" />
     <AndroidAsset Include="Assets\level1.json" />
     <AndroidAsset Include="Assets\Sounds\Ameise.mp3" />
@@ -129,5 +134,9 @@
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 4.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 5.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 6.mp3" />
+=======
+    <AndroidAsset Include="Assets\one_original.json" />
+    <AndroidAsset Include="Assets\one.json" />
+>>>>>>> 2e23853 now lessons can be serialized as there original type
   </ItemGroup>
 </Project>

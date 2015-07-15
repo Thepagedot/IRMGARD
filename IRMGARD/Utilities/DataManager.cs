@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Threading.Tasks;
 using System.IO;
 using System.Collections.Generic;
@@ -7,12 +7,15 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Android.App;
 using Android.Runtime;
+using System.Linq;
+using System.Runtime.Serialization.Formatters;
 
 
 namespace IRMGARD
 {
 	public class DataManager
 	{
+<<<<<<< Upstream, based on origin/master
 		// Copied to DataHolder
 //		public static Level GetLevel (int level)
 //		{
@@ -40,12 +43,54 @@ namespace IRMGARD
 //			return new Level ();
 //		}
 			
+=======
+		public static Level GetLevel (int level)
+		{
+			//demoFunctionForSerialization ();
+			string content = string.Empty;
+			using (StreamReader sr = new StreamReader (Application.Context.Assets.Open (getNumberAsString(level) + ".json")))
+			{
+				content = sr.ReadToEnd();
+				try
+				{
+					JObject json = JObject.Parse(content);
+					return JsonConvert.DeserializeObject<Level> (json.ToString());
+
+				} catch (Exception ex) 
+				{
+					Console.WriteLine ("JSON reader Exception on reading level {0}", level);
+					Console.WriteLine ("Message: {0}", ex.Message);
+				}
+			}
+			return new Level ();
+		}
+
+		private static string getNumberAsString(int level)
+		{
+			switch (level) 
+			{
+			case 1:
+				return "one";
+			case 2:
+				return "two";
+			case 3:
+				return "three";
+			case 4:
+				return "four";
+			case 5:
+				return "five";
+			case 6:
+				return "six";
+			}
+			return string.Empty;
+		}
+>>>>>>> 2e23853 now lessons can be serialized as there original type
 
 		private static void demoFunctionForSerialization(){
 
 
 
-			var test = new List<Lesson> ();
+			/*var test = new List<Lesson> ();
 			test.Add(new HearMe("test", "soundpath1.mp3", "", LevelType.HearMe, "A", "Aal", new LevelElement("Lesson1.png", "Lesson1.mp3")));
 			test.Add(new HearMe("test", "soundpath2.mp3", "", LevelType.HearMe, "E", "Esel", new LevelElement("Lesson2.png", "Lesson2.mp3")));
 			test.Add (new PickSyllable ("syllable", "soundpath3,mp3", "", LevelType.PickSyllable, "S", new List<String> (), new List<PickSyllableOption> ()));
@@ -58,7 +103,7 @@ namespace IRMGARD
 
 			var json = JsonConvert.SerializeObject (level);
 
-			string name = "TEST";
+			string name = "TEST";*/
 
 			/*Lesson l = new Lesson("Lesson 1", "Lesson1.mp3", string.Empty, LevelType.HearMe, new LessonData());
 			Lesson l1 = new Lesson("Lesson 2", "Lesson2.mp3", "", LevelType.FourPictures, new LessonData());

@@ -3,15 +3,18 @@ using System.Collections.Generic;
 
 namespace IRMGARD.Models
 {
-	public class BuildSyllable : Lesson
+	public class BuildSyllable : ILesson
 	{
+		public string Title { get; set; }
+		public string SoundPath { get; set; }
+		public string Hint { get; set; }
+		public LevelType TypeOfLevel { get; set; }
 		public List<BuildSyllableOption> SyllableOptions { get; set; }
 		public List<string> Options { get; set; }
 
-		public BuildSyllable () : base () {}
+		public BuildSyllable () {}
 
 		public BuildSyllable (string title, string soundPath, string hint, LevelType typeOfLevel, List<string> options, List<BuildSyllableOption> syllableOptions) 
-			: base (title, soundPath, hint, typeOfLevel)
 		{
 			this.SyllableOptions = syllableOptions;
 			this.Options = options;

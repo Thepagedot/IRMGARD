@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using System.Linq;
@@ -7,12 +7,22 @@ namespace IRMGARD.Models
 {
 	public class Module
 	{
+<<<<<<< Upstream, based on origin/master
 		public List<Lesson> LessonsList;
+=======
+		[JsonProperty(ItemTypeNameHandling = TypeNameHandling.Auto)]
+		public List<ILesson> LessonsList;
+		public int NumberOfLessons;
+>>>>>>> 2e23853 now lessons can be serialized as there original type
 		public int NumberOfLessonsDone;
 
 		public Module () {}
 
+<<<<<<< Upstream, based on origin/master
 		public Module (List<Lesson> lessonsList, int numberOfLessonsDone)
+=======
+		public Module (List<ILesson> lessonsList, int numberOfLessons, int numberOfLessonsDone)
+>>>>>>> 2e23853 now lessons can be serialized as there original type
 		{
 			this.LessonsList = lessonsList;
 			this.NumberOfLessonsDone = numberOfLessonsDone;

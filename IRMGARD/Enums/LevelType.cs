@@ -9,7 +9,7 @@ namespace IRMGARD
 		LetterDrop,
 		FindMissingLetter,
 		PickSyllable,
-		BuildSyllables,
+		BuildSyllable,
 		HearTheLetter,
 		HearMeAbc,
 		AbcRank,

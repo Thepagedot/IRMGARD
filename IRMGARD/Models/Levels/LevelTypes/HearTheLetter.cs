@@ -2,8 +2,12 @@
 
 namespace IRMGARD.Models
 {
-	public class HearTheLetter : Lesson
+	public class HearTheLetter : ILesson
 	{
+		public string Title { get; set; }
+		public string SoundPath { get; set; }
+		public string Hint { get; set; }
+		public LevelType TypeOfLevel { get; set; }
 		public string LetterToLearn { get; set; }
 		public LevelElement LevelElements { get; set; }
 		public int NumberOfOptions { get; set; }
@@ -12,7 +16,6 @@ namespace IRMGARD.Models
 		public HearTheLetter () {}
 
 		public HearTheLetter (string title, string soundPath, string hint, LevelType typeOfLevel, string letterToLearn, LevelElement levelElements, int numberOfOptions, int correctOption) 
-			: base (title, soundPath, hint, typeOfLevel)
 		{
 			this.LetterToLearn = letterToLearn;
 			this.LevelElements = levelElements;
