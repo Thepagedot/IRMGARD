@@ -12,10 +12,15 @@ namespace IRMGARD
 		/// </summary>
 		/// <param name="context">Context.</param>
 		/// <param name="fileName">File name.</param>
-		public static void PlaySound(Context context, string fileName)
+		/// <param name = "folderName">Folder Name. Takes "Sounds" if nothing else is set</param>
+		public static void PlaySound(Context context, string fileName, string folderName = null)
 		{
+			// Set default folder "Sounds" if nothing else is set
+			if (folderName == null)
+				folderName = "Sounds";
+
 			// Describe sound file from Assets properly
-			var descriptor = context.Assets.OpenFd(fileName);
+			var descriptor = context.Assets.OpenFd(folderName + "/" +  fileName);
 
 			// Play sound file
 			var player = new MediaPlayer();
@@ -29,10 +34,15 @@ namespace IRMGARD
 		/// </summary>
 		/// <param name="context">Context.</param>
 		/// <param name="fileName">File name.</param>
-		public static async Task PlaySoundAsync(Context context, string fileName)
+		/// <param name = "folderName">Folder Name. Takes "Sounds" if nothing else is set</param>
+		public static async Task PlaySoundAsync(Context context, string fileName, string folderName = null)
 		{
+			// Set default folder "Sounds" if nothing else is set
+			if (folderName == null)
+				folderName = "Sounds";
+
 			// Describe sound file from Assets properly
-			var descriptor = context.Assets.OpenFd(fileName);
+			var descriptor = context.Assets.OpenFd(folderName + "/" +  fileName);
 
 			// Play sound file
 			var player = new MediaPlayer();

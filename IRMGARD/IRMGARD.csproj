@@ -116,11 +116,13 @@
     <Folder Include="Resources\raw\level\" />
     <Folder Include="Utilities\" />
     <Folder Include="Assets\Sounds\" />
+    <Folder Include="Assets\Sounds\Level-1\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\one_test.json" />
     <AndroidAsset Include="Assets\level1.json" />
-    <AndroidAsset Include="Assets\Affe.mp3" />
     <AndroidAsset Include="Assets\Sounds\Ameise.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Affe.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 1.mp3" />
   </ItemGroup>
 </Project>

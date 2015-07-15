@@ -42,15 +42,30 @@ namespace IRMGARD
 			switch (item.ItemId) 
 			{
 				case Resource.Id.btnVoiceInstruction:
-					Toast.MakeText(this, "Voice button clicked!", ToastLength.Short).Show();
-					SoundPlayer.PlaySound(this, "Sounds/Ameise.mp3");
+					SoundPlayer.PlaySound(this, DataHolder.Current.CurrentLesson.SoundPath);
 					break;
 				case Resource.Id.btnHint:
 					Toast.MakeText (this, DataHolder.Current.CurrentLesson.Hint, ToastLength.Long).Show();
 					break;
+				case Resource.Id.btnNextLesson:
+					NextLesson();
+					break;
+				case Resource.Id.btnPreviousLesson:
+					PreviousLesson();
+					break;
 			}
 
 			return base.OnOptionsItemSelected (item);
+		}
+
+		private void NextLesson()
+		{
+			var index = DataHolder.Current.CurrentModule.LessonsList.IndexOf(DataHolder.Current.CurrentLesson);
+			if (DataHolder.Current.CurrentModule.LessonsList.Count - 1 < index)
+			{
+				// Next lesson is available
+				DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.LessonsList.ElementAt(index + 1);
+			}
 		}
 	}
 }
