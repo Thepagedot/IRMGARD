@@ -27,8 +27,7 @@ namespace IRMGARD
 //			ActionBar.SetDisplayShowHomeEnabled(true);
 			ActionBar.SetDisplayHomeAsUpEnabled (true);
 
-			// Set the name of the current lesson as page title
-			Title = DataHolder.Current.CurrentLesson.Title;
+			InitLession();
 		}
 
 		public override bool OnCreateOptionsMenu (IMenu menu)
@@ -48,24 +47,28 @@ namespace IRMGARD
 					Toast.MakeText (this, DataHolder.Current.CurrentLesson.Hint, ToastLength.Long).Show();
 					break;
 				case Resource.Id.btnNextLesson:
-					NextLesson();
+					var nextLesson = DataHolder.Current.CurrentModule.GetNextLesson(DataHolder.Current.CurrentLesson);
+					if (nextLesson != null)
+						DataHolder.Current.CurrentLesson = nextLesson;
+					InitLession();
 					break;
 				case Resource.Id.btnPreviousLesson:
-					PreviousLesson();
+					var previousLesson = DataHolder.Current.CurrentModule.GetPrevioustLesson(DataHolder.Current.CurrentLesson);
+					if (previousLesson != null)
+						DataHolder.Current.CurrentLesson = previousLesson;
+					InitLession();
 					break;
 			}
 
 			return base.OnOptionsItemSelected (item);
 		}
 
-		private void NextLesson()
+		private void InitLession()
 		{
-			var index = DataHolder.Current.CurrentModule.LessonsList.IndexOf(DataHolder.Current.CurrentLesson);
-			if (DataHolder.Current.CurrentModule.LessonsList.Count - 1 < index)
-			{
-				// Next lesson is available
-				DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.LessonsList.ElementAt(index + 1);
-			}
+			var lesson = DataHolder.Current.CurrentLesson;
+
+			// Set the name of the current lesson as page title
+			Title = lesson.Title;
 		}
 	}
 }
