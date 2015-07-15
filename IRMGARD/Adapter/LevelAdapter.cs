@@ -36,7 +36,7 @@ namespace IRMGARD
 				view = context.LayoutInflater.Inflate (Android.Resource.Layout.SimpleListItem2, null);
 
 			view.FindViewById<TextView> (Android.Resource.Id.Text1).Text = items[position].Name;
-			view.FindViewById<TextView> (Android.Resource.Id.Text2).Text = "Number of modules:" + items[position].ModulesList.Count;
+			view.FindViewById<TextView> (Android.Resource.Id.Text2).Text = "This level has " + items[position].ModulesList.Count + " modules";
 
 			return view;
 		}

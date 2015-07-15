@@ -2,6 +2,8 @@
 using Android.Content;
 using Android.Media;
 using System.Threading.Tasks;
+using Android.Widget;
+using Java.IO;
 
 namespace IRMGARD
 {
@@ -18,15 +20,23 @@ namespace IRMGARD
 			// Set default folder "Sounds" if nothing else is set
 			if (folderName == null)
 				folderName = "Sounds";
-
-			// Describe sound file from Assets properly
-			var descriptor = context.Assets.OpenFd(folderName + "/" +  fileName);
-
-			// Play sound file
-			var player = new MediaPlayer();
-			player.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
-			player.Prepare();
-			player.Start();
+			
+			try 
+			{
+				// Describe sound file from Assets properly
+				var descriptor = context.Assets.OpenFd(folderName + "/" +  fileName);
+						
+				// Play sound file
+				var player = new MediaPlayer();
+				player.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
+				player.Prepare();
+				player.Start();
+			} 
+			catch (FileNotFoundException)
+			{
+				Toast.MakeText(context, context.GetString(Resource.String.error_soundfileNotFound), ToastLength.Short);
+				System.Console.WriteLine("Error: Soundfile '" + fileName + "' could not be found.");
+			}
 		}
 
 		/// <summary>
@@ -40,15 +50,23 @@ namespace IRMGARD
 			// Set default folder "Sounds" if nothing else is set
 			if (folderName == null)
 				folderName = "Sounds";
+			
+			try
+			{
+				// Describe sound file from Assets properly
+				var descriptor = context.Assets.OpenFd(folderName + "/" +  fileName);
 
-			// Describe sound file from Assets properly
-			var descriptor = context.Assets.OpenFd(folderName + "/" +  fileName);
-
-			// Play sound file
-			var player = new MediaPlayer();
-			await player.SetDataSourceAsync(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
-			player.Prepare();
-			player.Start();
+				// Play sound file
+				var player = new MediaPlayer();
+				await player.SetDataSourceAsync(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
+				player.Prepare();
+				player.Start();
+			} 
+			catch (FileNotFoundException)
+			{
+				Toast.MakeText(context, context.GetString(Resource.String.error_soundfileNotFound), ToastLength.Short);
+				System.Console.WriteLine("Error: Soundfile '" + fileName + "' could not be found.");
+			}
 		}
 	}
 }

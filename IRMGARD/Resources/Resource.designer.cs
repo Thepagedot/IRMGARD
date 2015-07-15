@@ -175,6 +175,9 @@ namespace IRMGARD
 			// aapt resource value: 0x7f050001
 			public const int app_name = 2131034113;
 			
+			// aapt resource value: 0x7f050004
+			public const int error_soundfileNotFound = 2131034116;
+			
 			// aapt resource value: 0x7f050000
 			public const int hello = 2131034112;
 			

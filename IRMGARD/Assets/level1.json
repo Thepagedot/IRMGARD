@@ -1,14 +1,14 @@
 {
 	"Name": "Level 1",
     "ModulesList": [
-      	{
+    	{
 		"NumberOfLessonsDone": 0,
         "LessonsList": [
         	{
           		"Title": "AEIOU",
           		"SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 1.mp3",
-          		"Hint": "Blablabla",
-          		"TypeOfLevel":"HearMe",
+          		"Hint": null,
+          		"TypeOfLevel": "HearMe",
           		"Data": {
 					"LetterToLearn": "A",
 					"Option": {
@@ -22,7 +22,7 @@
           	},
           	{
 	           	"Title": "AEIOU2",
-	           	"SoundPath": "soundpathModule1Lesson2.mp3",
+	           	"SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 2.mp3",
 	           	"Hint": "Lorem ipsum",
 	           	"TypeOfLevel":"FourPictures",
 				"Data": {
