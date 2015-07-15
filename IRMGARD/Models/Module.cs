@@ -7,22 +7,14 @@ namespace IRMGARD.Models
 {
 	public class Module
 	{
-<<<<<<< Upstream, based on origin/master
-		public List<Lesson> LessonsList;
-=======
 		[JsonProperty(ItemTypeNameHandling = TypeNameHandling.Auto)]
 		public List<ILesson> LessonsList;
 		public int NumberOfLessons;
->>>>>>> 2e23853 now lessons can be serialized as there original type
 		public int NumberOfLessonsDone;
 
 		public Module () {}
 
-<<<<<<< Upstream, based on origin/master
-		public Module (List<Lesson> lessonsList, int numberOfLessonsDone)
-=======
-		public Module (List<ILesson> lessonsList, int numberOfLessons, int numberOfLessonsDone)
->>>>>>> 2e23853 now lessons can be serialized as there original type
+		public Module (List<ILesson> lessonsList, int numberOfLessonsDone)
 		{
 			this.LessonsList = lessonsList;
 			this.NumberOfLessonsDone = numberOfLessonsDone;
@@ -33,7 +25,7 @@ namespace IRMGARD.Models
 		/// </summary>
 		/// <returns><c>true</c> if this module has a next lesson; otherwise, <c>false</c>.</returns>
 		/// <param name="currentLesson">Current lesson.</param>
-		public bool HasNextLesson(Lesson currentLesson)
+		public bool HasNextLesson(ILesson currentLesson)
 		{
 			var index = LessonsList.IndexOf(currentLesson);
 			return LessonsList.Count - 1 > index;
@@ -44,7 +36,7 @@ namespace IRMGARD.Models
 		/// </summary>
 		/// <returns>The next lesson.</returns>
 		/// <param name="currentLesson">Current lesson.</param>
-		public Lesson GetNextLesson(Lesson currentLesson)
+		public ILesson GetNextLesson(ILesson currentLesson)
 		{
 			if (HasNextLesson(currentLesson))
 			{
@@ -60,7 +52,7 @@ namespace IRMGARD.Models
 		/// </summary>
 		/// <returns><c>true</c> if this module has a previous lesson; otherwise, <c>false</c>.</returns>
 		/// <param name="currentLesson">Current lesson.</param>
-		public bool HasPreviousLesson(Lesson currentLesson)
+		public bool HasPreviousLesson(ILesson currentLesson)
 		{
 			var index = LessonsList.IndexOf(currentLesson);
 			return index > 0;
@@ -71,7 +63,7 @@ namespace IRMGARD.Models
 		/// </summary>
 		/// <returns>The previoust lesson.</returns>
 		/// <param name="currentLesson">Current lesson.</param>
-		public Lesson GetPrevioustLesson(Lesson currentLesson)
+		public ILesson GetPrevioustLesson(ILesson currentLesson)
 		{
 			if (HasPreviousLesson(currentLesson))
 			{

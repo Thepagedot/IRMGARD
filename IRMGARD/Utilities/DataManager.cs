@@ -15,7 +15,6 @@ namespace IRMGARD
 {
 	public class DataManager
 	{
-<<<<<<< Upstream, based on origin/master
 		// Copied to DataHolder
 //		public static Level GetLevel (int level)
 //		{
@@ -43,7 +42,6 @@ namespace IRMGARD
 //			return new Level ();
 //		}
 			
-=======
 		public static Level GetLevel (int level)
 		{
 			//demoFunctionForSerialization ();
@@ -84,7 +82,6 @@ namespace IRMGARD
 			}
 			return string.Empty;
 		}
->>>>>>> 2e23853 now lessons can be serialized as there original type
 
 		private static void demoFunctionForSerialization(){
 

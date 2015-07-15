@@ -13,12 +13,8 @@ namespace IRMGARD.Models
 		public List<string> SyllableParts { get; set; }
 		public List<PickSyllableOption> Options { get; set; }
 
-<<<<<<< Upstream, based on origin/master
-		public PickSyllable () {}
-=======
 
-		public PickSyllable (){}
->>>>>>> 2e23853 now lessons can be serialized as there original type
+		public PickSyllable () {}
 
 		public PickSyllable (string title, string soundPath, string hint, LevelType typeOfLevel, string syllableToLearn, List<string> syllableParts, List<PickSyllableOption> options) 
 		{

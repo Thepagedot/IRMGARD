@@ -1,84 +1,92 @@
 {
-	"Name": "Level 1",
     "ModulesList": [
-    	{
-		"NumberOfLessonsDone": 0,
+      {
         "LessonsList": [
-        	{
-          		"Title": "AEIOU",
-          		"SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 1.mp3",
-          		"Hint": null,
-          		"TypeOfLevel": "HearMe",
-          		"Data": {
-					"LetterToLearn": "A",
-					"Option": {
-							"Name": "Aal",
-							"Element": {
-								"ImagePath": "Aal.png",
-								"SoundPath": "Aal.mp3"
-							}
-					}
-				 }
-          	},
-          	{
-	           	"Title": "AEIOU2",
-	           	"SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 2.mp3",
-	           	"Hint": "Lorem ipsum",
-	           	"TypeOfLevel":"FourPictures",
-				"Data": {
-					"LetterToLearn": "A",
-					"OptionList": [{
-						"IsCorrect": true,
-						"Element": {
-							"ImagePath": "Aal.png",
-							"SoundPath": "Aal.mp3"
-						}
-					},
-					{
-						"IsCorrect": false,
-						"Element": {
-							"ImagePath": "Ameise.png",
-							"SoundPath": "Ameise.mp3"
-						}
-					},
-					{
-						"IsCorrect": false,
-						"Element": {
-							"ImagePath": "Affe.png",
-							"SoundPath": "Affe.mp3"
-						}
-					},
-					{
-						"IsCorrect": false,
-						"Element": {
-							"ImagePath": "Ahorn.png",
-							"SoundPath": "Ahorn.mp3"
-						}
-					}]
+          {
+		  "$type": "IRMGARD.Models.HearMe, IRMGARD",
+          "Title": "AEIOU",
+          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe1.mp3",
+          "Hint": "",
+          "TypeOfLevel":"HearMe",
+			"LetterToLearn": "A",
+			"Name": "Aal",
+			"Element": {
+				"ImagePath": "Aal.png",
+				"SoundPath": "Aal.mp3"
+			}
+          },
+          {
+		  "$type": "IRMGARD.Models.FourPictures, IRMGARD",
+          "Title": "AEIOU",
+          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe2.mp3",
+          "Hint": "",
+          "TypeOfLevel":"FourPictures",
+			"LetterToLearn": "A",
+			"Options": [{
+				"IsCorrect": true,
+				"Element": {
+					"ImagePath": "Aal.png",
+					"SoundPath": "Aal.mp3"
 				}
-          	},
-    	    {
-				"Title": "A oder a?",
-				"SoundPath": "soundpathModule1Lesson3.mp3",
-				"Hint": "",
-				"TypeOfLevel":"LetterDrop",
-				"Data": {
-					"LettersToLearn": ["A", "E", "I", "O", "U"],
-					"Options": ["a", "o", "e", "f", "g", "h"]
-				  }
-          	},
-          	{
-				"Title": "A?IOU",
-				"SoundPath": "soundpathModule1Lesson4.mp3",
-				"Hint": "",
-				"TypeOfLevel":"FindMissingLetter",
-				"Data": {"LetterToLearn":null}
-          	}
-        ],        
+				},
+				{
+					"IsCorrect": false,
+					"Element": {
+						"ImagePath": "Ameise.png",
+						"SoundPath": "Ameise.mp3"
+					}
+				},
+				{
+					"IsCorrect": false,
+					"Element": {
+						"ImagePath": "Affe.png",
+						"SoundPath": "Affe.mp3"
+					}
+				},
+				{
+					"IsCorrect": false,
+					"Element": {
+						"ImagePath": "Ahorn.png",
+						"SoundPath": "Ahorn.mp3"
+					}
+				}]
+          },
+          {
+		  "$type": "IRMGARD.Models.LetterDrop, IRMGARD",
+          "Title": "A oder a?",
+          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe3.mp3",
+          "Hint": "",
+          "TypeOfLevel":"LetterDrop",
+		"LettersToLearn": ["A", "E", "I", "O", "U"],
+		"Options": ["a", "o", "e", "f", "g", "h"]
+          },
+          {
+		  "$type": "IRMGARD.Models.FindMissingLetter, IRMGARD",
+          "Title": "A?IOU",
+          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe4.mp3",
+          "Hint": "",
+          "TypeOfLevel":"FindMissingLetter",
+		  "LettersToLearn": ["A", "E", "I", "", "U"],
+			  "Options": [{
+					"Letter": "A",
+					"IsShort": false,
+					"IsLong": false,
+					"CorrectPos": "-1"
+				},{
+					"Letter": "O",
+					"IsShort": false,
+					"IsLong": false,
+					"CorrectPos": "3"
+				}]
+          }
+        ],
+        "NumberOfLessons": 4,
+        "NumberOfLessonsDone": 0
       },
 	  {
         "LessonsList": [
           {
+		  "$type": "IRMGARD.Models.HearMe, IRMGARD",
           "Title": "LMNRS",
           "SoundPath": "soundpathModule2Lesson1.mp3",
           "Hint": "",
@@ -86,6 +94,7 @@
           "Data": {"LetterToLearn":null}
           },
           {
+		  "$type": "IRMGARD.Models.LetterDrop, IRMGARD",
           "Title": "M oder m?",
           "SoundPath": "soundpathModule2Lesson2.mp3",
           "Hint": "",
@@ -93,6 +102,7 @@
           "Data": {"LetterToLearn":null}
           },
           {
+		  "$type": "IRMGARD.Models.FourPictures, IRMGARD",
           "Title": "LMNRS",
           "SoundPath": "soundpathModule2Lesson3.mp3",
           "Hint": "",
@@ -100,6 +110,7 @@
           "Data": {"LetterToLearn":null}
           },
           {
+		  "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
           "Title": "Silben lesen und schreiben",
           "SoundPath": "soundpathModule2Lesson6.mp3",
           "Hint": "",
@@ -107,6 +118,7 @@
           "Data": {"LetterToLearn":null}
           },
           {
+		  "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
           "Title": "Silben lesen und schreiben",
           "SoundPath": "soundpathModule2Lesson7.mp3",
           "Hint": "",
@@ -114,17 +126,19 @@
           "Data": {"LetterToLearn":null}
           },
           {
+		  "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",
           "Title": "Silben lesen und schreiben",
           "SoundPath": "soundpathModule2Lesson8.mp3",
           "Hint": "",
-          "TypeOfLevel":"BuildSyllables",
+          "TypeOfLevel":"BuildSyllable",
           "Data": {"LetterToLearn":null}
           },
           {
+		  "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",
           "Title": "Silben lesen und schreiben",
           "SoundPath": "soundpathModule2Lesson9.mp3",
           "Hint": "",
-          "TypeOfLevel":"BuildSyllables",
+          "TypeOfLevel":"BuildSyllable",
           "Data": {"LetterToLearn":null}
           }
         ],
@@ -134,6 +148,7 @@
 	  {
         "LessonsList": [
           {
+		  "$type": "IRMGARD.Models.HearMe, IRMGARD",
           "Title": "FHJWZ",
           "SoundPath": "soundpathModule3Lesson1.mp3",
           "Hint": "",
@@ -141,6 +156,7 @@
           "Data": {"LetterToLearn":null}
           },
           {
+		  "$type": "IRMGARD.Models.LetterDrop, IRMGARD",
           "Title": "F oder f?",
           "SoundPath": "soundpathModule3Lesson2.mp3",
           "Hint": "",
@@ -148,6 +164,7 @@
           "Data": {"LetterToLearn":null}
           },
           {
+		  "$type": "IRMGARD.Models.FourPictures, IRMGARD",
           "Title": "ABC",
           "SoundPath": "soundpathModule3Lesson3.mp3",
           "Hint": "",
@@ -155,6 +172,7 @@
           "Data": {"LetterToLearn":null}
           },
           {
+		  "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
           "Title": "Silben lesen und schreiben",
           "SoundPath": "soundpathModule3Lesson6.mp3",
           "Hint": "",
@@ -162,6 +180,7 @@
           "Data": {"LetterToLearn":null}
           },
           {
+		  "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
           "Title": "Silben lesen und schreiben",
           "SoundPath": "soundpathModule3Lesson7.mp3",
           "Hint": "",
@@ -169,17 +188,19 @@
           "Data": {"LetterToLearn":null}
           },
           {
+		  "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",
           "Title": "Silben lesen und schreiben",
           "SoundPath": "soundpathModule3Lesson8.mp3",
           "Hint": "",
-          "TypeOfLevel":"BuildSyllables",
+          "TypeOfLevel":"BuildSyllable",
           "Data": {"LetterToLearn":null}
           },
           {
+		  "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",
           "Title": "Silben lesen und schreiben",
           "SoundPath": "soundpathModule3Lesson9.mp3",
           "Hint": "",
-          "TypeOfLevel":"BuildSyllables",
+          "TypeOfLevel":"BuildSyllable",
           "Data": {"LetterToLearn":null}
           }
         ],
@@ -189,6 +210,7 @@
 	  {
         "LessonsList": [
             {
+		    "$type": "IRMGARD.Models.HearMe, IRMGARD",
             "Title": "BPGKDT",
             "SoundPath": "soundpathModule4Lesson1.mp3",
             "Hint": "",
@@ -196,6 +218,7 @@
             "Data": {"LetterToLearn":null}
             },
             {
+		    "$type": "IRMGARD.Models.LetterDrop, IRMGARD",
             "Title": "B oder b?",
             "SoundPath": "soundpathModule4Lesson2.mp3",
             "Hint": "",
@@ -203,6 +226,7 @@
             "Data": {"LetterToLearn":null}
             },
             {
+		    "$type": "IRMGARD.Models.FourPictures, IRMGARD",
             "Title": "ABC",
             "SoundPath": "soundpathModule4Lesson3.mp3",
             "Hint": "",
@@ -210,6 +234,7 @@
             "Data": {"LetterToLearn":null}
             },
             {
+		    "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
             "Title": "Silben lesen und schreiben",
             "SoundPath": "soundpathModule4Lesson6.mp3",
             "Hint": "",
@@ -217,6 +242,7 @@
             "Data": {"LetterToLearn":null}
             },
             {
+		    "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
             "Title": "Silben lesen und schreiben",
             "SoundPath": "soundpathModule4Lesson7.mp3",
             "Hint": "",
@@ -224,17 +250,19 @@
             "Data": {"LetterToLearn":null}
             },
             {
+		    "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",
             "Title": "Silben lesen und schreiben",
             "SoundPath": "soundpathModule4Lesson8.mp3",
             "Hint": "",
-            "TypeOfLevel":"BuildSyllables",
+            "TypeOfLevel":"BuildSyllable",
             "Data": {"LetterToLearn":null}
             },
             {
+		    "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",
             "Title": "Silben lesen und schreiben",
             "SoundPath": "soundpathModule4Lesson9.mp3",
             "Hint": "",
-            "TypeOfLevel":"BuildSyllables",
+            "TypeOfLevel":"BuildSyllable",
             "Data": {"LetterToLearn":null}
             }
           ],
@@ -244,6 +272,7 @@
 	  {
         "LessonsList": [
             {
+		    "$type": "IRMGARD.Models.HearMe, IRMGARD",
             "Title": "CQVXY",
             "SoundPath": "soundpathModule5Lesson1.mp3",
             "Hint": "",
@@ -251,6 +280,7 @@
             "Data": {"LetterToLearn":null}
             },
             {
+		    "$type": "IRMGARD.Models.LetterDrop, IRMGARD",
             "Title": "X oder x?",
             "SoundPath": "soundpathModule5Lesson2.mp3",
             "Hint": "",
@@ -258,6 +288,7 @@
             "Data": {"LetterToLearn":null}
             },
             {
+		    "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
             "Title": "Vorne, Mitte oder hinten?",
             "SoundPath": "soundpathModule5Lesson5.mp3",
             "Hint": "",
@@ -271,6 +302,7 @@
 	  {
         "LessonsList": [
             {
+		    "$type": "IRMGARD.Models.HearMeAbc, IRMGARD",
             "Title": "B oder Be?",
             "SoundPath": "soundpathModule6Lesson1.mp3",
             "Hint": "",
@@ -278,6 +310,7 @@
             "Data": {"LetterToLearn":null}
             },
             {
+		    "$type": "IRMGARD.Models.AbcRank, IRMGARD",
             "Title": "BAD?",
             "SoundPath": "soundpathModule6Lesson2.mp3",
             "Hint": "",
@@ -285,6 +318,7 @@
             "Data": {"LetterToLearn":null}
             },
             {
+		    "$type": "IRMGARD.Models.AbcRank, IRMGARD",
             "Title": "",
             "SoundPath": "soundpathModule6Lesson3.mp3",
             "Hint": "",
@@ -292,6 +326,7 @@
             "Data": {"LetterToLearn":null}
             },
             {
+		    "$type": "IRMGARD.Models.FindMissingLetter, IRMGARD",
             "Title": "Wer fehlt?",
             "SoundPath": "soundpathModule6Lesson4.mp3",
             "Hint": "",
@@ -299,6 +334,7 @@
             "Data": {"LetterToLearn":null}
             },
             {
+		    "$type": "IRMGARD.Models.Memory, IRMGARD",
             "Title": "Silben lesen und schreiben",
             "SoundPath": "soundpathModule6Lesson5.mp3",
             "Hint": "",

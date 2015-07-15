@@ -11,12 +11,8 @@ namespace IRMGARD.Models
 		public LevelType TypeOfLevel { get; set; }
 		public List<AbcRankOption> LettersToLearn { get; set; }
 
-<<<<<<< Upstream, based on origin/master
-		public AbcRank () : base () {}
-=======
 
 		public AbcRank () {}
->>>>>>> 2e23853 now lessons can be serialized as there original type
 
 		public AbcRank (string title, string soundPath, string hint, LevelType typeOfLevel, List<AbcRankOption> lettersToLearn) 
 		{
