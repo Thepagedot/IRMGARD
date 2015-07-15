@@ -1,14 +1,15 @@
 {
-	"Name": "1",
+	"Name": "Level 1",
     "ModulesList": [
-      {
+      	{
+		"NumberOfLessonsDone": 0,
         "LessonsList": [
-          {
-          "Title": "AEIOU",
-          "SoundPath": "soundpathModule1Lesson1.mp3",
-          "Hint": "",
-          "TypeOfLevel":"HearMe",
-          "Data": {
+        	{
+          		"Title": "AEIOU",
+          		"SoundPath": "soundpathModule1Lesson1.mp3",
+          		"Hint": "Blablabla",
+          		"TypeOfLevel":"HearMe",
+          		"Data": {
 					"LetterToLearn": "A",
 					"Option": {
 							"Name": "Aal",
@@ -17,14 +18,14 @@
 								"SoundPath": "Aal.mp3"
 							}
 					}
-				  }
-          },
-          {
-          "Title": "AEIOU",
-          "SoundPath": "soundpathModule1Lesson2.mp3",
-          "Hint": "",
-          "TypeOfLevel":"FourPictures",
-          "Data": {
+				 }
+          	},
+          	{
+	           	"Title": "AEIOU",
+	           	"SoundPath": "soundpathModule1Lesson2.mp3",
+	           	"Hint": "Lorem ipsum",
+	           	"TypeOfLevel":"FourPictures",
+				"Data": {
 					"LetterToLearn": "A",
 					"OptionList": [{
 						"IsCorrect": true,
@@ -55,27 +56,25 @@
 						}
 					}]
 				}
-          },
-          {
-          "Title": "A oder a?",
-          "SoundPath": "soundpathModule1Lesson3.mp3",
-          "Hint": "",
-          "TypeOfLevel":"LetterDrop",
-          "Data": {
+          	},
+    	    {
+				"Title": "A oder a?",
+				"SoundPath": "soundpathModule1Lesson3.mp3",
+				"Hint": "",
+				"TypeOfLevel":"LetterDrop",
+				"Data": {
 					"LettersToLearn": ["A", "E", "I", "O", "U"],
 					"Options": ["a", "o", "e", "f", "g", "h"]
 				  }
-          },
-          {
-          "Title": "A?IOU",
-          "SoundPath": "soundpathModule1Lesson4.mp3",
-          "Hint": "",
-          "TypeOfLevel":"FindMissingLetter",
-          "Data": {"LetterToLearn":null}
-          }
-        ],
-        "NumberOfLessons": 4,
-        "NumberOfLessonsDone": 0
+          	},
+          	{
+				"Title": "A?IOU",
+				"SoundPath": "soundpathModule1Lesson4.mp3",
+				"Hint": "",
+				"TypeOfLevel":"FindMissingLetter",
+				"Data": {"LetterToLearn":null}
+          	}
+        ],        
       },
 	  {
         "LessonsList": [

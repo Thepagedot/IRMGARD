@@ -91,6 +91,12 @@ namespace IRMGARD
 			// aapt resource value: 0x7f070008
 			public const int btnHint = 2131165192;
 			
+			// aapt resource value: 0x7f070009
+			public const int btnNextLesson = 2131165193;
+			
+			// aapt resource value: 0x7f07000a
+			public const int btnPreviousLesson = 2131165194;
+			
 			// aapt resource value: 0x7f070006
 			public const int btnStart = 2131165190;
 			

@@ -51,7 +51,7 @@ namespace IRMGARD
 			test.Add (new PickSyllable ("syllable", "soundpath3,mp3", "", LevelType.PickSyllable, "S", new List<String> (), new List<PickSyllableOption> ()));
 
 
-			var module = new Module (test, 3, 0);
+			var module = new Module (test, 0);
 			var moduleList = new List<Module> ();
 			moduleList.Add (module);
 			var level = new Level ("1", moduleList);

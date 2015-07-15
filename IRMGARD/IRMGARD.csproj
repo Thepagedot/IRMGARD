@@ -70,6 +70,7 @@
     <Compile Include="Enums\LevelType.cs" />
     <Compile Include="Models\Levels\LevelTypes\FourPictures.cs" />
     <Compile Include="Utilities\DataManager.cs" />
+    <Compile Include="Utilities\SoundPlayer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -114,9 +115,12 @@
     <Folder Include="Resources\raw\" />
     <Folder Include="Resources\raw\level\" />
     <Folder Include="Utilities\" />
+    <Folder Include="Assets\Sounds\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\one_test.json" />
     <AndroidAsset Include="Assets\level1.json" />
+    <AndroidAsset Include="Assets\Affe.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Ameise.mp3" />
   </ItemGroup>
 </Project>

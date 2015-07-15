@@ -10,6 +10,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using System.Threading.Tasks;
 
 namespace IRMGARD
 {
@@ -21,10 +22,13 @@ namespace IRMGARD
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.LessonFrame);
 
-			ActionBar.SetLogo (Resource.Drawable.Icon);
-			ActionBar.SetDisplayUseLogoEnabled (true);
-			ActionBar.SetDisplayShowHomeEnabled(true);
+//			ActionBar.SetLogo (Resource.Drawable.Icon);
+//			ActionBar.SetDisplayUseLogoEnabled (true);
+//			ActionBar.SetDisplayShowHomeEnabled(true);
 			ActionBar.SetDisplayHomeAsUpEnabled (true);
+
+			// Set the name of the current lesson as page title
+			Title = DataHolder.Current.CurrentLesson.Title;
 		}
 
 		public override bool OnCreateOptionsMenu (IMenu menu)
@@ -38,10 +42,11 @@ namespace IRMGARD
 			switch (item.ItemId) 
 			{
 				case Resource.Id.btnVoiceInstruction:
-					Toast.MakeText (this, "Voice button clicked!", ToastLength.Short).Show();
+					Toast.MakeText(this, "Voice button clicked!", ToastLength.Short).Show();
+					SoundPlayer.PlaySound(this, "Sounds/Ameise.mp3");
 					break;
 				case Resource.Id.btnHint:
-					Toast.MakeText (this, "Hint button clicked!", ToastLength.Short).Show();
+					Toast.MakeText (this, DataHolder.Current.CurrentLesson.Hint, ToastLength.Long).Show();
 					break;
 			}
 

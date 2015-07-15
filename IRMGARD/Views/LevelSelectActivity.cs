@@ -21,9 +21,9 @@ namespace IRMGARD
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.LevelSelect);
 
-			ActionBar.SetLogo (Resource.Drawable.Icon);
-			ActionBar.SetDisplayUseLogoEnabled (true);
-			ActionBar.SetDisplayShowHomeEnabled(true);
+//			ActionBar.SetLogo (Resource.Drawable.Icon);
+//			ActionBar.SetDisplayUseLogoEnabled (true);
+//			ActionBar.SetDisplayShowHomeEnabled(true);
 			ActionBar.SetDisplayHomeAsUpEnabled (true);
 
 			var levelListView = FindViewById<ListView> (Resource.Id.lvLevels);
@@ -33,9 +33,14 @@ namespace IRMGARD
 
 		void LevelListView_ItemClick (object sender, AdapterView.ItemClickEventArgs e)
 		{
+			// Set selected level as current
+			DataHolder.Current.CurrentLevel = DataHolder.Current.Levels.ElementAt(e.Position);
+			DataHolder.Current.CurrentModule = DataHolder.Current.CurrentLevel.ModulesList.First();
+			DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.LessonsList.First();
+
+			// Navigate to lesson view
 			var intent = new Intent(this, typeof(LessonFameActivity));
 			StartActivity (intent);
 		}
 	}
 }
-

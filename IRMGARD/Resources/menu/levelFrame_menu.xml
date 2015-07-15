@@ -9,4 +9,14 @@
 		  android:icon="@drawable/ic_help_black_24dp"
 		  android:title="@string/hint"
 		  android:showAsAction="ifRoom" />
+
+	<item android:id="@+id/btnNextLesson"
+		  android:icon="@drawable/ic_help_black_24dp"
+		  android:title="Next"
+		  android:showAsAction="never" />
+
+	<item android:id="@+id/btnPreviousLesson"
+		  android:icon="@drawable/ic_help_black_24dp"
+		  android:title="Previous"
+		  android:showAsAction="never" />
 </menu>
