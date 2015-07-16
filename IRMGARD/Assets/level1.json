@@ -6,7 +6,7 @@
           {
 		  "$type": "IRMGARD.Models.HearMe, IRMGARD",
           "Title": "AEIOU",
-          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe1.mp3",
+          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 1.mp3",
           "Hint": "Lesson 1 Hint",
   		  "TypeOfLevel":"HearMe",
 				"Iterations": [{
@@ -53,7 +53,7 @@
           {
 		  "$type": "IRMGARD.Models.FourPictures, IRMGARD",
           "Title": "AEIOU",
-          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe2.mp3",
+          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 2.mp3",
           "Hint": "Lesson 2 Hint",
           "TypeOfLevel":"FourPictures",
 			"Iterations": [{
@@ -215,7 +215,7 @@
           {
 		  "$type": "IRMGARD.Models.LetterDrop, IRMGARD",
           "Title": "A oder a?",
-          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe3.mp3",
+          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 3.mp3",
           "Hint": "",
           "TypeOfLevel":"LetterDrop",
 		"LettersToLearn": ["A", "E", "I", "O", "U"],
@@ -224,7 +224,7 @@
           {
 		  "$type": "IRMGARD.Models.FindMissingLetter, IRMGARD",
           "Title": "A?IOU",
-          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe4.mp3",
+          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 4.mp3",
           "Hint": "",
           "TypeOfLevel":"FindMissingLetter",
 		  "LettersToLearn": ["A", "E", "I", "", "U"],
