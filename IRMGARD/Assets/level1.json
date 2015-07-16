@@ -1,4 +1,5 @@
 {
+	"Name": "Level 1",
     "ModulesList": [
       {
         "LessonsList": [
@@ -6,49 +7,209 @@
 		  "$type": "IRMGARD.Models.HearMe, IRMGARD",
           "Title": "AEIOU",
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe1.mp3",
-          "Hint": "",
-          "TypeOfLevel":"HearMe",
-			"LetterToLearn": "A",
-			"Name": "Aal",
-			"Element": {
-				"ImagePath": "Aal.png",
-				"SoundPath": "Aal.mp3"
-			}
+          "Hint": "Lesson 1 Hint",
+  		  "TypeOfLevel":"HearMe",
+				"Iterations": [{
+					"LetterToLearn": "A",
+					"Name": "Aal",
+					"Element": {
+						"ImagePath": "Aal.png",
+						"SoundPath": "Aal.mp3"
+					}
+				}, 
+				{
+					"LetterToLearn": "E",
+					"Name": "Elefant",
+					"Element": {
+						"ImagePath": "Elefant.png",
+						"SoundPath": "Elefant.mp3"
+					}
+				}, 
+				{
+					"LetterToLearn": "I",
+					"Name": "Igel",
+					"Element": {
+						"ImagePath": "Igel.png",
+						"SoundPath": "Igel.mp3"
+					}
+				}, 
+				{
+					"LetterToLearn": "O",
+					"Name": "Offen",
+					"Element": {
+						"ImagePath": "Offen.png",
+						"SoundPath": "Offen.mp3"
+					}
+				}, 
+				{
+					"LetterToLearn": "U",
+					"Name": "Uhu",
+					"Element": {
+						"ImagePath": "Uhu.png",
+						"SoundPath": "Uhu.mp3"
+					}
+				}]
           },
           {
 		  "$type": "IRMGARD.Models.FourPictures, IRMGARD",
           "Title": "AEIOU",
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe2.mp3",
-          "Hint": "",
+          "Hint": "Lesson 2 Hint",
           "TypeOfLevel":"FourPictures",
-			"LetterToLearn": "A",
-			"Options": [{
-				"IsCorrect": true,
-				"Element": {
-					"ImagePath": "Aal.png",
-					"SoundPath": "Aal.mp3"
-				}
+			"Iterations": [{
+				"LetterToLearn": "A",
+				"Options": [{
+						"IsCorrect": true,
+						"Element": {
+							"ImagePath": "Aal.png",
+							"SoundPath": "Aal.mp3"
+					}
+					},
+					{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Ameise.png",
+							"SoundPath": "Ameise.mp3"
+						}
+					},
+					{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Affe.png",
+							"SoundPath": "Affe.mp3"
+						}
+					},
+					{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Ahorn.png",
+							"SoundPath": "Ahorn.mp3"
+						}
+					}]
 				},
 				{
-					"IsCorrect": false,
-					"Element": {
-						"ImagePath": "Ameise.png",
-						"SoundPath": "Ameise.mp3"
+				"LetterToLearn": "E",
+				"Options": [{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Aal.png",
+							"SoundPath": "Aal.mp3"
 					}
+					},
+					{
+						"IsCorrect": true,
+						"Element": {
+							"ImagePath": "Ameise.png",
+							"SoundPath": "Ameise.mp3"
+						}
+					},
+					{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Affe.png",
+							"SoundPath": "Affe.mp3"
+						}
+					},
+					{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Ahorn.png",
+							"SoundPath": "Ahorn.mp3"
+						}
+					}]
 				},
 				{
-					"IsCorrect": false,
-					"Element": {
-						"ImagePath": "Affe.png",
-						"SoundPath": "Affe.mp3"
+				"LetterToLearn": "I",
+				"Options": [{
+						"IsCorrect": true,
+						"Element": {
+							"ImagePath": "Aal.png",
+							"SoundPath": "Aal.mp3"
 					}
+					},
+					{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Ameise.png",
+							"SoundPath": "Ameise.mp3"
+						}
+					},
+					{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Affe.png",
+							"SoundPath": "Affe.mp3"
+						}
+					},
+					{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Ahorn.png",
+							"SoundPath": "Ahorn.mp3"
+						}
+					}]
 				},
 				{
-					"IsCorrect": false,
-					"Element": {
-						"ImagePath": "Ahorn.png",
-						"SoundPath": "Ahorn.mp3"
+				"LetterToLearn": "O",
+				"Options": [{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Aal.png",
+							"SoundPath": "Aal.mp3"
 					}
+					},
+					{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Ameise.png",
+							"SoundPath": "Ameise.mp3"
+						}
+					},
+					{
+						"IsCorrect": true,
+						"Element": {
+							"ImagePath": "Affe.png",
+							"SoundPath": "Affe.mp3"
+						}
+					},
+					{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Ahorn.png",
+							"SoundPath": "Ahorn.mp3"
+						}
+					}]
+				},
+				{
+				"LetterToLearn": "U",
+				"Options": [{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Aal.png",
+							"SoundPath": "Aal.mp3"
+					}
+					},
+					{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Ameise.png",
+							"SoundPath": "Ameise.mp3"
+						}
+					},
+					{
+						"IsCorrect": false,
+						"Element": {
+							"ImagePath": "Affe.png",
+							"SoundPath": "Affe.mp3"
+						}
+					},
+					{
+						"IsCorrect": true,
+						"Element": {
+							"ImagePath": "Ahorn.png",
+							"SoundPath": "Ahorn.mp3"
+						}
+					}]
 				}]
           },
           {
