@@ -15,9 +15,8 @@ namespace IRMGARD
 	[Activity (Label = "IRMGARD", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
-		protected override void OnCreate (Bundle bundle)
+		protected override async void OnCreate (Bundle bundle)
 		{
-			var i = DataManager.GetLevel (1);
 			// Initialize DataHolder if needed
 			if (DataHolder.Current == null)
 				DataHolder.Current = new DataHolder ();
@@ -31,12 +30,14 @@ namespace IRMGARD
 
 			var startButton = FindViewById<ImageButton> (Resource.Id.btnStart);
 			startButton.Click += StartButton_Click;
+
+			// Load first level from JSON
+			await DataHolder.Current.LoadLevelAsync(1);
 		}
 
 		void StartButton_Click (object sender, EventArgs e)
 		{
 			var intent = new Intent (this, typeof(LevelSelectActivity));
-			Level l = DataManager.GetLevel (1);
 			StartActivity (intent);
 		}
 	}

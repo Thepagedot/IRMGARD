@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
+using IRMGARD.Models;
 
 namespace IRMGARD
 {
@@ -19,6 +20,10 @@ namespace IRMGARD
 	public class LessonFameActivity : Activity
 	{
 		IMenuItem hintButton;
+		TextView ModuleNumberText;
+		TextView LessonNumberText;
+		TextView CapitalAlphabetText;
+		TextView LowerAlphabetText;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -34,6 +39,11 @@ namespace IRMGARD
 			}
 
 			ActionBar.SetDisplayHomeAsUpEnabled (true);
+
+			ModuleNumberText = FindViewById<TextView>(Resource.Id.txtModuleNumber);
+			LessonNumberText = FindViewById<TextView>(Resource.Id.txtLessonNumber);
+			CapitalAlphabetText = FindViewById<TextView>(Resource.Id.txtCapitalAlphabet);
+			LowerAlphabetText = FindViewById<TextView>(Resource.Id.txtLowerAlphabet);
 		}
 
 		protected override void OnStart()
@@ -56,6 +66,15 @@ namespace IRMGARD
 			if (hintButton != null)
 				hintButton.SetVisible(!string.IsNullOrEmpty(lesson.Hint));
 
+			// Mark letters in alphabet
+			CapitalAlphabetText.TextFormatted = Alphabet.GetLettersMarked(new List<string> { "A" }, true);
+			LowerAlphabetText.TextFormatted = Alphabet.GetLettersMarked(new List<string> { "A" }, false);
+
+			var moduleNumber = DataHolder.Current.CurrentLevel.ModulesList.IndexOf(DataHolder.Current.CurrentModule) + 1;
+			ModuleNumberText.Text = "Module: " + moduleNumber;
+
+			var lessonNumber = DataHolder.Current.CurrentModule.LessonsList.IndexOf(lesson) + 1;
+			LessonNumberText.Text = "Lesson: " + lessonNumber;
 		}
 
 		#region UI Operations

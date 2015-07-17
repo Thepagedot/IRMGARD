@@ -11,7 +11,6 @@ namespace IRMGARD.Models
 		public LevelType TypeOfLevel { get; set; }
 		public List<AbcRankOption> LettersToLearn { get; set; }
 
-
 		public AbcRank () {}
 
 		public AbcRank (string title, string soundPath, string hint, LevelType typeOfLevel, List<AbcRankOption> lettersToLearn) 
@@ -23,15 +22,14 @@ namespace IRMGARD.Models
 	public class AbcRankOption
 	{
 		public string Name { get; set; }
-		public LevelElement Element { get; set; }
-
+		public Media Media { get; set; }
 
 		public AbcRankOption () {}
 
-		public AbcRankOption (string name, LevelElement element)
+		public AbcRankOption (string name, Media media)
 		{
 			this.Name = name;
-			this.Element = element;
+			this.Media = media;
 		}
 	}
 }

@@ -18,22 +18,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageView1" />
-        <CheckBox
+        <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/checkBox1"
-            android:checked="true" />
-        <CheckBox
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/checkBox2"
-            android:checked="true" />
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+            <TextView
+                android:text="Module 1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtModuleNumber" />
+            <TextView
+                android:text="Lesson 1"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtLessonNumber" />
+        </LinearLayout>
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_marginTop="@dimen/activity_vertical_margin">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_weight="1">
         <FrameLayout
             android:minWidth="25px"
             android:minHeight="25px"
@@ -42,4 +52,16 @@
             android:background="@android:color/darker_gray"
             android:id="@+id/frameLayout1" />
     </LinearLayout>
+    <TextView
+        android:id="@+id/txtCapitalAlphabet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/txtLowerAlphabet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="abcdefghijklmnopqrstuvwxyz"
+        android:gravity="center" />
 </LinearLayout>

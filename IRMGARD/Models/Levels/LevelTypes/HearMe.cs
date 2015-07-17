@@ -10,12 +10,12 @@ namespace IRMGARD.Models
 		public LevelType TypeOfLevel { get; set; }
 		public string LetterToLearn;
 		public string Name;
-		public LevelElement Element;
+		public Media Media;
 
 
 		public HearMe () {}
 
-		public HearMe (string title, string soundPath, string hint, LevelType typeOfLevel, string letterToLearn, string name, LevelElement element) 
+		public HearMe (string title, string soundPath, string hint, LevelType typeOfLevel, string letterToLearn, string name, Media media) 
 		{
 			this.Title = title;
 			this.SoundPath = soundPath;
@@ -23,7 +23,7 @@ namespace IRMGARD.Models
 			this.TypeOfLevel = typeOfLevel;
 			this.LetterToLearn = letterToLearn;
 			this.Name = name;
-			this.Element = element;
+			this.Media = media;
 		}
 	}
 }

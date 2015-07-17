@@ -88,8 +88,8 @@ namespace IRMGARD
 
 
 			/*var test = new List<Lesson> ();
-			test.Add(new HearMe("test", "soundpath1.mp3", "", LevelType.HearMe, "A", "Aal", new LevelElement("Lesson1.png", "Lesson1.mp3")));
-			test.Add(new HearMe("test", "soundpath2.mp3", "", LevelType.HearMe, "E", "Esel", new LevelElement("Lesson2.png", "Lesson2.mp3")));
+			test.Add(new HearMe("test", "soundpath1.mp3", "", LevelType.HearMe, "A", "Aal", new Media("Lesson1.png", "Lesson1.mp3")));
+			test.Add(new HearMe("test", "soundpath2.mp3", "", LevelType.HearMe, "E", "Esel", new Media("Lesson2.png", "Lesson2.mp3")));
 			test.Add (new PickSyllable ("syllable", "soundpath3,mp3", "", LevelType.PickSyllable, "S", new List<String> (), new List<PickSyllableOption> ()));
 
 
@@ -106,7 +106,7 @@ namespace IRMGARD
 			Lesson l1 = new Lesson("Lesson 2", "Lesson2.mp3", "", LevelType.FourPictures, new LessonData());
 			Lesson l2 = new Lesson("Lesson 3", "Lesson3.mp3", "", LevelType.AbcRank, new LessonData());
 
-			//LessonData data = new LessonData ("A", new LevelOption("Aal", new LevelElement("", "")));
+			//LessonData data = new LessonData ("A", new LevelOption("Aal", new Media("", "")));
 			//l.Data = data;
 
 			ObservableCollection<Lesson> cl = new ObservableCollection<Lesson>();

@@ -2,14 +2,14 @@
 
 namespace IRMGARD.Models
 {
-	public class LevelElement
+	public class Media
 	{
 		public string ImagePath;
 		public string SoundPath;
 
-		public LevelElement () {}
+		public Media () {}
 
-		public LevelElement (string imagePath, string soundPath)
+		public Media (string imagePath, string soundPath)
 		{
 			this.ImagePath = imagePath;
 			this.SoundPath = soundPath;

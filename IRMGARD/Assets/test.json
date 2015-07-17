@@ -1,0 +1,29 @@
+﻿{
+	"$type": "IRMGARD.Models.HearMe, IRMGARD",
+	"Title": "AEIOU",
+	"SoundPath": "Level-1/Level 1 Modul 1 Aufgabe1.mp3",
+	"Hint": "",
+	"TypeOfLevel":"HearMe",
+	"LessonElements": 
+	[
+		{
+			"LetterToLearn": "A",
+			"Name": "Aal",
+			"Element": {
+				"ImagePath": "Aal.png",
+				"SoundPath": "Aal.mp3"
+			}
+		},
+		{
+			"LetterToLearn": "E",
+			"Name": "Elefant",
+			"Element": {
+				"ImagePath": "Elefant.png",
+				"SoundPath": "Elefant.mp3"
+			}
+		},
+		{
+			// ...
+		}
+	] 
+}

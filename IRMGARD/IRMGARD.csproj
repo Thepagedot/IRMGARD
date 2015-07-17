@@ -51,7 +51,6 @@
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Views\LevelSelectActivity.cs" />
-    <Compile Include="DataHolder.cs" />
     <Compile Include="Adapter\LevelAdapter.cs" />
     <Compile Include="Views\LessonFrameActivity.cs" />
     <Compile Include="Models\Levels\LevelTypes\AbcRank.cs" />
@@ -63,20 +62,20 @@
     <Compile Include="Models\Levels\LevelTypes\LetterDrop.cs" />
     <Compile Include="Models\Levels\LevelTypes\Memory.cs" />
     <Compile Include="Models\Levels\LevelTypes\PickSyllable.cs" />
-    <Compile Include="Models\Levels\LevelElement.cs" />
     <Compile Include="Models\Lesson.cs" />
     <Compile Include="Models\Level.cs" />
     <Compile Include="Models\Module.cs" />
     <Compile Include="Enums\LevelType.cs" />
     <Compile Include="Models\Levels\LevelTypes\FourPictures.cs" />
-    <Compile Include="Utilities\DataManager.cs" />
     <Compile Include="Utilities\SoundPlayer.cs" />
     <Compile Include="Models\ILesson.cs" />
+    <Compile Include="Models\Levels\Media.cs" />
+    <Compile Include="Utilities\DataHolder.cs" />
+    <Compile Include="Utilities\Alphabet.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Properties\AndroidManifest.xml" />
-    <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -120,7 +119,6 @@
     <Folder Include="Assets\Sounds\Level-1\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\level1.json" />
     <AndroidAsset Include="Assets\Sounds\Ameise.mp3" />
     <AndroidAsset Include="Assets\Sounds\Affe.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 1.mp3" />
@@ -129,7 +127,8 @@
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 4.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 5.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 6.mp3" />
-    <AndroidAsset Include="Assets\one_original.json" />
-    <AndroidAsset Include="Assets\one.json" />
+    <AndroidAsset Include="Assets\test.json" />
+    <AndroidAsset Include="Assets\sandbox.json" />
+    <AndroidAsset Include="Assets\level1.json" />
   </ItemGroup>
 </Project>

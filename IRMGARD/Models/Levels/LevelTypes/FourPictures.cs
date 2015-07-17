@@ -24,14 +24,14 @@ namespace IRMGARD.Models
 	public class FourPicturesOption
 	{
 		public bool IsCorrect { get; set; }
-		public LevelElement Element  { get; set; }
+		public Media Media  { get; set; }
 
 		public FourPicturesOption () {}
 
-		public FourPicturesOption (bool isCorrect, LevelElement element)
+		public FourPicturesOption (bool isCorrect, Media media)
 		{
 			this.IsCorrect = isCorrect;
-			this.Element = element;
+			this.Media = media;
 		}
 	}
 }

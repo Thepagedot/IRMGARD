@@ -34,7 +34,7 @@ namespace IRMGARD
 				{
 					var jsonContent = await reader.ReadToEndAsync();
 					var json = JObject.Parse(jsonContent);
-					var level = JsonConvert.DeserializeObject<Level> (json.ToString(), new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.Objects });
+					var level = JsonConvert.DeserializeObject<Level> (json.ToString());
 					Levels.Add(level);
 				} 
 				catch (Exception ex) 

@@ -31,14 +31,14 @@ namespace IRMGARD.Models
 	public class PickSyllableOption
 	{
 		public bool IsCorrect { get; set; }
-		public LevelElement Element  { get; set; }
+		public Media Media  { get; set; }
 
 		public PickSyllableOption () {}
 
-		public PickSyllableOption (bool isCorrect, LevelElement element)
+		public PickSyllableOption (bool isCorrect, Media media)
 		{
 			this.IsCorrect = isCorrect;
-			this.Element = element;
+			this.Media = media;
 		}
 	}
 }
