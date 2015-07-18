@@ -28,12 +28,12 @@ namespace IRMGARD.Models
 	{
 		public string LetterToLearn;
 		public string Name;
-		public LevelElement Element;
+		public Media Media;
 
 
 		public HearMeIteration () {}
 
-		public HearMeIteration (string letterToLearn, string name, LevelElement element)
+		public HearMeIteration (string letterToLearn, string name, Media media)
 		{
 			this.LetterToLearn = letterToLearn;
 			this.Name = name;

@@ -16,7 +16,7 @@
 						{
 							"LetterToLearn": "A",
 							"Name": "Aal",
-							"Element": 
+							"Media": 
 							{
 								"ImagePath": "Aal.png",
 								"SoundPath": "Aal.mp3"
@@ -25,7 +25,7 @@
 						{
 							"LetterToLearn": "E",
 							"Name": "Elefant",
-							"Element":
+							"Media":
 							{
 								"ImagePath": "Elefant.png",
 								"SoundPath": "Elefant.mp3"
@@ -34,7 +34,7 @@
 						{
 							"LetterToLearn": "I",
 							"Name": "Igel",
-							"Element":
+							"Media":
 							{
 								"ImagePath": "Igel.png",
 								"SoundPath": "Igel.mp3"
@@ -43,7 +43,7 @@
 						{
 							"LetterToLearn": "O",
 							"Name": "Offen",
-							"Element":
+							"Media":
 							{
 								"ImagePath": "Offen.png",
 								"SoundPath": "Offen.mp3"
@@ -52,7 +52,7 @@
 						{
 							"LetterToLearn": "U",
 							"Name": "Uhu",
-							"Element":
+							"Media":
 							{
 								"ImagePath": "Uhu.png",
 								"SoundPath": "Uhu.mp3"
@@ -74,7 +74,7 @@
 							[
 								{
 									"IsCorrect": true,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Aal.png",
 										"SoundPath": "Aal.mp3"
@@ -82,7 +82,7 @@
 								},
 								{
 									"IsCorrect": false,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Ameise.png",
 										"SoundPath": "Ameise.mp3"
@@ -90,7 +90,7 @@
 								},
 								{
 									"IsCorrect": false,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Affe.png",
 										"SoundPath": "Affe.mp3"
@@ -98,7 +98,7 @@
 								},
 								{
 									"IsCorrect": false,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Ahorn.png",
 										"SoundPath": "Ahorn.mp3"
@@ -112,7 +112,7 @@
 							[
 								{
 									"IsCorrect": false,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Aal.png",
 										"SoundPath": "Aal.mp3"
@@ -120,7 +120,7 @@
 								},
 								{
 									"IsCorrect": true,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Ameise.png",
 										"SoundPath": "Ameise.mp3"
@@ -128,7 +128,7 @@
 								},
 								{
 									"IsCorrect": false,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Affe.png",
 										"SoundPath": "Affe.mp3"
@@ -136,7 +136,7 @@
 								},
 								{
 									"IsCorrect": false,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Ahorn.png",
 										"SoundPath": "Ahorn.mp3"
@@ -150,7 +150,7 @@
 							[
 								{
 									"IsCorrect": true,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Aal.png",
 										"SoundPath": "Aal.mp3"
@@ -158,7 +158,7 @@
 								},
 								{
 									"IsCorrect": false,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Ameise.png",
 										"SoundPath": "Ameise.mp3"
@@ -166,7 +166,7 @@
 								},
 								{
 									"IsCorrect": false,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Affe.png",
 										"SoundPath": "Affe.mp3"
@@ -174,7 +174,7 @@
 								},
 								{
 									"IsCorrect": false,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Ahorn.png",
 										"SoundPath": "Ahorn.mp3"
@@ -188,7 +188,7 @@
 							[
 								{
 									"IsCorrect": false,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Aal.png",
 										"SoundPath": "Aal.mp3"
@@ -196,7 +196,7 @@
 								},
 								{
 									"IsCorrect": false,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Ameise.png",
 										"SoundPath": "Ameise.mp3"
@@ -204,7 +204,7 @@
 								},
 								{
 									"IsCorrect": true,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Affe.png",
 										"SoundPath": "Affe.mp3"
@@ -212,7 +212,7 @@
 								},
 								{
 									"IsCorrect": false,
-									"Element": 
+									"Media": 
 									{
 										"ImagePath": "Ahorn.png",
 										"SoundPath": "Ahorn.mp3"
@@ -226,7 +226,7 @@
 							[
 								{
 									"IsCorrect": false,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Aal.png",
 										"SoundPath": "Aal.mp3"
@@ -234,7 +234,7 @@
 								},
 								{
 									"IsCorrect": false,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Ameise.png",
 										"SoundPath": "Ameise.mp3"
@@ -242,7 +242,7 @@
 								},
 								{
 									"IsCorrect": false,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Affe.png",
 										"SoundPath": "Affe.mp3"
@@ -250,7 +250,7 @@
 								},
 								{
 									"IsCorrect": true,
-									"Element":
+									"Media":
 									{
 										"ImagePath": "Ahorn.png",
 										"SoundPath": "Ahorn.mp3"
