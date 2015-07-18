@@ -1,249 +1,266 @@
 {
-    "ModulesList": [
-      {
-			"NumberOfLessonsDone": 0,
-        	"LessonsList":
+    "Name": "Level 1",
+    "ModulesList": 
+	[
+    	{
+        	"LessonsList": 
 			[
-          {
-		  "$type": "IRMGARD.Models.HearMe, IRMGARD",
-          "Title": "AEIOU",
-          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe1.mp3",
-          "Hint": "",
-          "TypeOfLevel":"HearMe",
-			"LetterToLearn": "A",
-			"Name": "Aal",
-					"Media": {
-				"ImagePath": "Aal.png",
-				"SoundPath": "Aal.mp3"
-			}
-          },
-          {
-					"LetterToLearn": "E",
-					"Name": "Elefant",
-					"Element": {
-						"ImagePath": "Elefant.png",
-						"SoundPath": "Elefant.mp3"
-					}
-				}, 
-				{
-					"LetterToLearn": "I",
-					"Name": "Igel",
-					"Element": {
-						"ImagePath": "Igel.png",
-						"SoundPath": "Igel.mp3"
-					}
-				}, 
-				{
-					"LetterToLearn": "O",
-					"Name": "Offen",
-					"Element": {
-						"ImagePath": "Offen.png",
-						"SoundPath": "Offen.mp3"
-					}
-				}, 
-				{
-					"LetterToLearn": "U",
-					"Name": "Uhu",
-					"Element": {
-						"ImagePath": "Uhu.png",
-						"SoundPath": "Uhu.mp3"
-					}
-				}]
-          },
-          {
-		  "$type": "IRMGARD.Models.FourPictures, IRMGARD",
-          "Title": "AEIOU",
-          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe2.mp3",
-          "Hint": "",
-          "TypeOfLevel":"FourPictures",
-			"LetterToLearn": "A",
-					"Options": 
+          		{
+					"$type": "IRMGARD.Models.HearMe, IRMGARD",
+					"Title": "AEIOU",
+					"SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 1.mp3",
+					"Hint": "Lesson 1 Hint",
+					"TypeOfLevel":"HearMe",
+					"Iterations": 
 					[
 						{
-				"IsCorrect": true,
-							"Media": {
-					"ImagePath": "Aal.png",
-					"SoundPath": "Aal.mp3"
-				}
-					},
-					{
-						"IsCorrect": false,
-						"Element": {
-							"ImagePath": "Ameise.png",
-							"SoundPath": "Ameise.mp3"
-						}
-					},
-					{
-						"IsCorrect": false,
-						"Element": {
-							"ImagePath": "Affe.png",
-							"SoundPath": "Affe.mp3"
-						}
-					},
-					{
-						"IsCorrect": false,
-						"Element": {
-							"ImagePath": "Ahorn.png",
-							"SoundPath": "Ahorn.mp3"
-						}
-					}]
-				},
-				{
-				"LetterToLearn": "E",
-				"Options": [{
-					"IsCorrect": false,
-					"Element": {
-						"ImagePath": "Ameise.png",
-						"SoundPath": "Ameise.mp3"
-					}
-				},
-				{
-					"IsCorrect": false,
-							"Media": {
-						"ImagePath": "Affe.png",
-						"SoundPath": "Affe.mp3"
-					}
-				},
-				{
-					"IsCorrect": false,
-							"Media": {
-						"ImagePath": "Ahorn.png",
-						"SoundPath": "Ahorn.mp3"
-					}
+							"LetterToLearn": "A",
+							"Name": "Aal",
+							"Element": 
+							{
+								"ImagePath": "Aal.png",
+								"SoundPath": "Aal.mp3"
+							}
+						}, 
+						{
+							"LetterToLearn": "E",
+							"Name": "Elefant",
+							"Element":
+							{
+								"ImagePath": "Elefant.png",
+								"SoundPath": "Elefant.mp3"
+							}
+						}, 
+						{
+							"LetterToLearn": "I",
+							"Name": "Igel",
+							"Element":
+							{
+								"ImagePath": "Igel.png",
+								"SoundPath": "Igel.mp3"
+							}
+						}, 
+						{
+							"LetterToLearn": "O",
+							"Name": "Offen",
+							"Element":
+							{
+								"ImagePath": "Offen.png",
+								"SoundPath": "Offen.mp3"
+							}
+						}, 
+						{
+							"LetterToLearn": "U",
+							"Name": "Uhu",
+							"Element":
+							{
+								"ImagePath": "Uhu.png",
+								"SoundPath": "Uhu.mp3"
+							}
 						}
 					]
-          },
-          {
-				"LetterToLearn": "I",
-				"Options": [{
-						"IsCorrect": true,
-						"Element": {
-							"ImagePath": "Aal.png",
-							"SoundPath": "Aal.mp3"
-					}
-					},
-					{
-						"IsCorrect": false,
-						"Element": {
-							"ImagePath": "Ameise.png",
-							"SoundPath": "Ameise.mp3"
-						}
-					},
-					{
-						"IsCorrect": false,
-						"Element": {
-							"ImagePath": "Affe.png",
-							"SoundPath": "Affe.mp3"
-						}
-					},
-					{
-						"IsCorrect": false,
-						"Element": {
-							"ImagePath": "Ahorn.png",
-							"SoundPath": "Ahorn.mp3"
-						}
-					}]
-				},
-				{
-				"LetterToLearn": "O",
-				"Options": [{
-						"IsCorrect": false,
-						"Element": {
-							"ImagePath": "Aal.png",
-							"SoundPath": "Aal.mp3"
-					}
-					},
-					{
-						"IsCorrect": false,
-						"Element": {
-							"ImagePath": "Ameise.png",
-							"SoundPath": "Ameise.mp3"
-						}
-					},
-					{
-						"IsCorrect": true,
-						"Element": {
-							"ImagePath": "Affe.png",
-							"SoundPath": "Affe.mp3"
-						}
-					},
-					{
-						"IsCorrect": false,
-						"Element": {
-							"ImagePath": "Ahorn.png",
-							"SoundPath": "Ahorn.mp3"
-						}
-					}]
-				},
-				{
-				"LetterToLearn": "U",
-				"Options": [{
-						"IsCorrect": false,
-						"Element": {
-							"ImagePath": "Aal.png",
-							"SoundPath": "Aal.mp3"
-					}
-					},
-					{
-						"IsCorrect": false,
-						"Element": {
-							"ImagePath": "Ameise.png",
-							"SoundPath": "Ameise.mp3"
-						}
-					},
-					{
-						"IsCorrect": false,
-						"Element": {
-							"ImagePath": "Affe.png",
-							"SoundPath": "Affe.mp3"
-						}
-					},
-					{
-						"IsCorrect": true,
-						"Element": {
-							"ImagePath": "Ahorn.png",
-							"SoundPath": "Ahorn.mp3"
-						}
-					}]
-				}]
-          },
-          {
-		  "$type": "IRMGARD.Models.LetterDrop, IRMGARD",
-          "Title": "A oder a?",
-          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe3.mp3",
-          "Hint": "",
-          "TypeOfLevel":"LetterDrop",
-					"SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 3.mp3",
-					"Hint": "",          
-		"LettersToLearn": ["A", "E", "I", "O", "U"],
-		"Options": ["a", "o", "e", "f", "g", "h"]
-          },
-          {
-		  "$type": "IRMGARD.Models.FindMissingLetter, IRMGARD",
-          "Title": "A?IOU",
-          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe4.mp3",
-          "Hint": "",
-          "TypeOfLevel":"FindMissingLetter",
-          			"SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 4.mp3",
-          			"Hint": "",
-		  "LettersToLearn": ["A", "E", "I", "", "U"],
-			  		"Options": 
+          		},
+          		{
+		  			"$type": "IRMGARD.Models.FourPictures, IRMGARD",
+          			"Title": "AEIOU",
+          			"SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 2.mp3",
+          			"Hint": "Lesson 2 Hint",
+          			"TypeOfLevel":"FourPictures",
+					"Iterations": 
 					[
 						{
-					"Letter": "A",
-					"IsShort": false,
-					"IsLong": false,
-					"CorrectPos": "-1"
+							"LetterToLearn": "A",
+							"Options":
+							[
+								{
+									"IsCorrect": true,
+									"Element":
+									{
+										"ImagePath": "Aal.png",
+										"SoundPath": "Aal.mp3"
+									}
+								},
+								{
+									"IsCorrect": false,
+									"Element":
+									{
+										"ImagePath": "Ameise.png",
+										"SoundPath": "Ameise.mp3"
+									}
+								},
+								{
+									"IsCorrect": false,
+									"Element":
+									{
+										"ImagePath": "Affe.png",
+										"SoundPath": "Affe.mp3"
+									}
+								},
+								{
+									"IsCorrect": false,
+									"Element":
+									{
+										"ImagePath": "Ahorn.png",
+										"SoundPath": "Ahorn.mp3"
+									}
+								}
+							]
 						},
 						{
-					"Letter": "O",
-					"IsShort": false,
-					"IsLong": false,
-					"CorrectPos": "3"
-          }
+							"LetterToLearn": "E",
+							"Options": 
+							[
+								{
+									"IsCorrect": false,
+									"Element":
+									{
+										"ImagePath": "Aal.png",
+										"SoundPath": "Aal.mp3"
+									}
+								},
+								{
+									"IsCorrect": true,
+									"Element":
+									{
+										"ImagePath": "Ameise.png",
+										"SoundPath": "Ameise.mp3"
+									}
+								},
+								{
+									"IsCorrect": false,
+									"Element":
+									{
+										"ImagePath": "Affe.png",
+										"SoundPath": "Affe.mp3"
+									}
+								},
+								{
+									"IsCorrect": false,
+									"Element":
+									{
+										"ImagePath": "Ahorn.png",
+										"SoundPath": "Ahorn.mp3"
+									}
+								}
+							]
+						},
+						{
+							"LetterToLearn": "I",
+							"Options": 
+							[
+								{
+									"IsCorrect": true,
+									"Element":
+									{
+										"ImagePath": "Aal.png",
+										"SoundPath": "Aal.mp3"
+									}
+								},
+								{
+									"IsCorrect": false,
+									"Element":
+									{
+										"ImagePath": "Ameise.png",
+										"SoundPath": "Ameise.mp3"
+									}
+								},
+								{
+									"IsCorrect": false,
+									"Element":
+									{
+										"ImagePath": "Affe.png",
+										"SoundPath": "Affe.mp3"
+									}
+								},
+								{
+									"IsCorrect": false,
+									"Element":
+									{
+										"ImagePath": "Ahorn.png",
+										"SoundPath": "Ahorn.mp3"
+									}
+								}
+							]
+						},
+						{
+							"LetterToLearn": "O",
+							"Options": 
+							[
+								{
+									"IsCorrect": false,
+									"Element":
+									{
+										"ImagePath": "Aal.png",
+										"SoundPath": "Aal.mp3"
+									}
+								},
+								{
+									"IsCorrect": false,
+									"Element":
+									{
+										"ImagePath": "Ameise.png",
+										"SoundPath": "Ameise.mp3"
+									}
+								},
+								{
+									"IsCorrect": true,
+									"Element":
+									{
+										"ImagePath": "Affe.png",
+										"SoundPath": "Affe.mp3"
+									}
+								},
+								{
+									"IsCorrect": false,
+									"Element": 
+									{
+										"ImagePath": "Ahorn.png",
+										"SoundPath": "Ahorn.mp3"
+									}
+								}
+							]
+						},
+						{
+							"LetterToLearn": "U",
+							"Options":
+							[
+								{
+									"IsCorrect": false,
+									"Element":
+									{
+										"ImagePath": "Aal.png",
+										"SoundPath": "Aal.mp3"
+									}
+								},
+								{
+									"IsCorrect": false,
+									"Element":
+									{
+										"ImagePath": "Ameise.png",
+										"SoundPath": "Ameise.mp3"
+									}
+								},
+								{
+									"IsCorrect": false,
+									"Element":
+									{
+										"ImagePath": "Affe.png",
+										"SoundPath": "Affe.mp3"
+									}
+								},
+								{
+									"IsCorrect": true,
+									"Element":
+									{
+										"ImagePath": "Ahorn.png",
+										"SoundPath": "Ahorn.mp3"
+									}
+								}
+							]
+						}
 					]
-          }
-        	]            
-      }
-    ]
+          		}
+			]
+		}
+	]
 }
