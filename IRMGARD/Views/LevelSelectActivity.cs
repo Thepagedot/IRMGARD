@@ -35,8 +35,8 @@ namespace IRMGARD
 		{
 			// Set selected level as current
 			DataHolder.Current.CurrentLevel = DataHolder.Current.Levels.ElementAt(e.Position);
-			DataHolder.Current.CurrentModule = DataHolder.Current.CurrentLevel.ModulesList.First();
-			DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.LessonsList.First();
+			DataHolder.Current.CurrentModule = DataHolder.Current.CurrentLevel.Modules.First();
+			DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.Lessons.First();
 
 			// Navigate to lesson view
 			var intent = new Intent(this, typeof(LessonFameActivity));

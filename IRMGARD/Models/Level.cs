@@ -7,14 +7,14 @@ namespace IRMGARD.Models
 	public class Level
 	{
 		public string Name { get; set; }
-		public List<Module> ModulesList { get; set; }
+		public List<Module> Modules { get; set; }
 
 		public Level () {}
 
-		public Level (string name, List<Module> modulesList)
+		public Level (string name, List<Module> modules)
 		{
 			this.Name = name;
-			this.ModulesList = modulesList;
+			this.Modules = modules;
 		}
 	}
 }

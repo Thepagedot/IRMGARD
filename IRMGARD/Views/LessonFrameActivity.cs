@@ -67,14 +67,14 @@ namespace IRMGARD
 				hintButton.SetVisible(!string.IsNullOrEmpty(lesson.Hint));
 
 			// Mark letters in alphabet
-			CapitalAlphabetText.TextFormatted = Alphabet.GetLettersMarked(new List<string> { "A" }, true);
-			LowerAlphabetText.TextFormatted = Alphabet.GetLettersMarked(new List<string> { "A" }, false);
+			CapitalAlphabetText.TextFormatted = Alphabet.GetLettersMarked(new List<string> { "B" }, true);
+			LowerAlphabetText.TextFormatted = Alphabet.GetLettersMarked(new List<string> { "B" }, false);
 
-			var moduleNumber = DataHolder.Current.CurrentLevel.ModulesList.IndexOf(DataHolder.Current.CurrentModule) + 1;
-			ModuleNumberText.Text = "Module: " + moduleNumber;
+			var moduleNumber = DataHolder.Current.CurrentLevel.Modules.IndexOf(DataHolder.Current.CurrentModule) + 1;
+			ModuleNumberText.Text = "Module: " + moduleNumber + " of " + DataHolder.Current.CurrentLevel.Modules.Count;
 
-			var lessonNumber = DataHolder.Current.CurrentModule.LessonsList.IndexOf(lesson) + 1;
-			LessonNumberText.Text = "Lesson: " + lessonNumber;
+			var lessonNumber = DataHolder.Current.CurrentModule.Lessons.IndexOf(lesson) + 1;
+			LessonNumberText.Text = "Lesson: " + lessonNumber + " of " + DataHolder.Current.CurrentModule.Lessons.Count;
 		}
 
 		#region UI Operations

@@ -10,4 +10,3 @@ namespace IRMGARD.Models
 		LevelType TypeOfLevel { get; set; }
 	}
 }
-

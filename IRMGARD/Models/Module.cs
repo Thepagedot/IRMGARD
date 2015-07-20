@@ -8,14 +8,14 @@ namespace IRMGARD.Models
 	public class Module
 	{
 		[JsonProperty(ItemTypeNameHandling = TypeNameHandling.Auto)]
-		public List<ILesson> LessonsList;
+		public List<ILesson> Lessons;
 		public int NumberOfLessonsDone;
 
 		public Module () {}
 
-		public Module (List<ILesson> lessonsList, int numberOfLessonsDone)
+		public Module (List<ILesson> lessons, int numberOfLessonsDone)
 		{
-			this.LessonsList = lessonsList;
+			this.Lessons = lessons;
 			this.NumberOfLessonsDone = numberOfLessonsDone;
 		}
 
@@ -26,8 +26,8 @@ namespace IRMGARD.Models
 		/// <param name="currentLesson">Current lesson.</param>
 		public bool HasNextLesson(ILesson currentLesson)
 		{
-			var index = LessonsList.IndexOf(currentLesson);
-			return LessonsList.Count - 1 > index;
+			var index = Lessons.IndexOf(currentLesson);
+			return Lessons.Count - 1 > index;
 		}
 
 		/// <summary>
@@ -39,8 +39,8 @@ namespace IRMGARD.Models
 		{
 			if (HasNextLesson(currentLesson))
 			{
-				var index = LessonsList.IndexOf(currentLesson) + 1;
-				return LessonsList.ElementAt(index); 
+				var index = Lessons.IndexOf(currentLesson) + 1;
+				return Lessons.ElementAt(index); 
 			}
 
 			return null;
@@ -53,7 +53,7 @@ namespace IRMGARD.Models
 		/// <param name="currentLesson">Current lesson.</param>
 		public bool HasPreviousLesson(ILesson currentLesson)
 		{
-			var index = LessonsList.IndexOf(currentLesson);
+			var index = Lessons.IndexOf(currentLesson);
 			return index > 0;
 		}
 
@@ -66,8 +66,8 @@ namespace IRMGARD.Models
 		{
 			if (HasPreviousLesson(currentLesson))
 			{
-				var index = LessonsList.IndexOf(currentLesson) - 1;
-				return LessonsList.ElementAt(index);
+				var index = Lessons.IndexOf(currentLesson) - 1;
+				return Lessons.ElementAt(index);
 			}
 
 			return null;
