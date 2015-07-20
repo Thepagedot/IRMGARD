@@ -2,12 +2,8 @@
 
 namespace IRMGARD.Models
 {
-	public class HearMeAbc : ILesson
+	public class HearMeAbc : Lesson
 	{
-		public string Title { get; set; }
-		public string SoundPath { get; set; }
-		public string Hint { get; set; }
-		public LevelType TypeOfLevel { get; set; }
 		public string LetterToLearn { get; set; }
 		public string Prepend { get; set;}
 		public string Append { get; set; }
@@ -15,7 +11,8 @@ namespace IRMGARD.Models
 
 		public HearMeAbc () {}
 
-		public HearMeAbc (string title, string soundPath, string hint, LevelType typeOfLevel, string letterToLearn, string prepend, string append, Media media) 
+		public HearMeAbc (string title, string soundPath, string hint, LevelType typeOfLevel, string letterToLearn, string prepend, string append, Media media)  
+			: base (title, soundPath, hint, typeOfLevel)
 		{
 			this.LetterToLearn = letterToLearn;
 			this.Prepend = prepend;

@@ -5,21 +5,14 @@ namespace IRMGARD.Models
 {
 	public class HearMe : Lesson
 	{
-//		public string Title { get; set; }
-//		public string SoundPath { get; set; }
-//		public string Hint { get; set; }
-//		public LevelType TypeOfLevel { get; set; }
 		public List<HearMeIteration> Iterations { get; set; }
 
 
 		public HearMe () {}
 
-		public HearMe (string title, string soundPath, string hint, LevelType typeOfLevel, List<HearMeIteration> iterations) : base (title, soundPath, hint, typeOfLevel)
+		public HearMe (string title, string soundPath, string hint, LevelType typeOfLevel, List<HearMeIteration> iterations) 
+			: base (title, soundPath, hint, typeOfLevel)
 		{
-//			this.Title = title;
-//			this.SoundPath = soundPath;
-//			this.Hint = hint;
-//			this.TypeOfLevel = typeOfLevel;
 			this.Iterations = iterations;
 		}
 	}

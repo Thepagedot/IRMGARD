@@ -3,22 +3,15 @@ using System.Collections.Generic;
 
 namespace IRMGARD.Models
 {
-	public class FourPictures : ILesson
+	public class FourPictures : Lesson
 	{
-		public string Title { get; set; }
-		public string SoundPath { get; set; }
-		public string Hint { get; set; }
-		public LevelType TypeOfLevel { get; set; }
 		public List<FourPicturesIterations> Iterations { get; set; }
 
 		public FourPictures(){}
 
-		public FourPictures(string title, string soundPath, string hint, LevelType typeOfLevel, List<FourPicturesIterations> iterations) 
+		public FourPictures(string title, string soundPath, string hint, LevelType typeOfLevel, List<FourPicturesIterations> iterations)  
+			: base (title, soundPath, hint, typeOfLevel)
 		{
-			this.Title = title;
-			this.SoundPath = soundPath;
-			this.Hint = hint;
-			this.TypeOfLevel = typeOfLevel;
 			this.Iterations = iterations;
 		}
 	}
