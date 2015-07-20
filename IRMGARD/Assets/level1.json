@@ -1,74 +1,74 @@
 {
-  "Name": "Level 1",
-  "Modules": [
-    {
-      "NumberOfLessonsDone": 0,
-      "Lessons": [
+    "Name": "Level 1",
+    "Modules": [
         {
-          "$type": "IRMGARD.Models.HearMe, IRMGARD",
-          "Title": "AEIOU",
-          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 1.mp3",
-          "Hint": "Lesson 1 Hint",
-          "TypeOfLevel": "HearMe",
-          "Iterations": [
-            {
-              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
-              "LettersToLearn": [
-                "A"
-              ],
-              "Name": "Aal",
-              "Media": {
-                "ImagePath": "Aal.png",
-                "SoundPath": "Aal.mp3"
-              }
-            },
-            {
-              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
-              "LettersToLearn": [
-                "E"
-              ],
-              "Name": "Elefant",
-              "Media": {
-                "ImagePath": "Elefant.png",
-                "SoundPath": "Elefant.mp3"
-              }
-            },
-            {
-              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
-              "LettersToLearn": [
-                "I"
-              ],
-              "Name": "Igel",
-              "Media": {
-                "ImagePath": "Igel.png",
-                "SoundPath": "Igel.mp3"
-              }
-            },
-            {
-              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
-              "LettersToLearn": [
-                "O"
-              ],
-              "Name": "Offen",
-              "Media": {
-                "ImagePath": "Offen.png",
-                "SoundPath": "Offen.mp3"
-              }
-            },
-            {
-              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
-              "LettersToLearn": [
-                "U"
-              ],
-              "Name": "Uhu",
-              "Media": {
-                "ImagePath": "Uhu.png",
-                "SoundPath": "Uhu.mp3"
-              }
-            }
-          ]
+            "NumberOfLessonsDone": 0,
+            "Lessons": [
+                {
+                    "$type": "IRMGARD.Models.HearMe, IRMGARD",
+                    "Title": "AEIOU",
+                    "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 1.mp3",
+                    "Hint": "Lesson 1 Hint",
+                    "TypeOfLevel": "HearMe",
+                    "Iterations": [
+                        {
+                            "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+                            "LettersToLearn": [
+                                "A"
+                            ],
+                            "Name": "Aal",
+                            "Media": {
+                                "ImagePath": "Aal.png",
+                                "SoundPath": "Aal.mp3"
+                            }
+                        },
+                        {
+                            "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+                            "LettersToLearn": [
+                                "E"
+                            ],
+                            "Name": "Elefant",
+                            "Media": {
+                                "ImagePath": "Elefant.png",
+                                "SoundPath": "Elefant.mp3"
+                            }
+                        },
+                        {
+                            "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+                            "LettersToLearn": [
+                                "I"
+                            ],
+                            "Name": "Igel",
+                            "Media": {
+                                "ImagePath": "Igel.png",
+                                "SoundPath": "Igel.mp3"
+                            }
+                        },
+                        {
+                            "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+                            "LettersToLearn": [
+                                "O"
+                            ],
+                            "Name": "Offen",
+                            "Media": {
+                                "ImagePath": "Offen.png",
+                                "SoundPath": "Offen.mp3"
+                            }
+                        },
+                        {
+                            "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+                            "LettersToLearn": [
+                                "U"
+                            ],
+                            "Name": "Uhu",
+                            "Media": {
+                                "ImagePath": "Uhu.png",
+                                "SoundPath": "Uhu.mp3"
+                            }
+                        }
+                    ]
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
