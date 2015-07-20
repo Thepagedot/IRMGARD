@@ -2,7 +2,7 @@
   "Name": "Level 1",
   "Modules": [
     {
-	  "NumberOfLessonsDone": 0,
+      "NumberOfLessonsDone": 0,
       "Lessons": [
         {
           "$type": "IRMGARD.Models.HearMe, IRMGARD",
@@ -12,8 +12,10 @@
           "TypeOfLevel": "HearMe",
           "Iterations": [
             {
-			  "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
-              "LettersToLearn": ["A"],
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "A"
+              ],
               "Name": "Aal",
               "Media": {
                 "ImagePath": "Aal.png",
@@ -22,7 +24,9 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
-              "LettersToLearn": ["E"],
+              "LettersToLearn": [
+                "E"
+              ],
               "Name": "Elefant",
               "Media": {
                 "ImagePath": "Elefant.png",
@@ -30,8 +34,10 @@
               }
             },
             {
-			  "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
-              "LettersToLearn": ["I"],
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "I"
+              ],
               "Name": "Igel",
               "Media": {
                 "ImagePath": "Igel.png",
@@ -39,8 +45,10 @@
               }
             },
             {
-			  "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
-              "LettersToLearn": ["O"],
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "O"
+              ],
               "Name": "Offen",
               "Media": {
                 "ImagePath": "Offen.png",
@@ -48,8 +56,10 @@
               }
             },
             {
-  			  "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
-              "LettersToLearn": ["U"],
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "U"
+              ],
               "Name": "Uhu",
               "Media": {
                 "ImagePath": "Uhu.png",
@@ -57,8 +67,8 @@
               }
             }
           ]
-        },
-      ]      
+        }
+      ]
     }
   ]
 }
