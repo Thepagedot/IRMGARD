@@ -4,17 +4,23 @@ using System.Collections.Generic;
 namespace IRMGARD.Models
 {
 	public class Memory : Lesson
-	{
-		public List<MemoryOption> LevelOptionsList { get; set; }
-
+	{		
 		public Memory () {}
 
-		public Memory (string title, string soundPath, string hint, LevelType typeOfLevel, List<MemoryOption> levelOptionsList)
-			: base (title, soundPath, hint, typeOfLevel)
+		public Memory (string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (title, soundPath, hint, typeOfLevel, iterations)
 		{
-			this.LevelOptionsList = levelOptionsList;
 		}
 	}
+
+    public class MemoryIteration : Iteration
+    {
+        public List<MemoryOption> LevelOptionsList { get; set; }
+
+        public MemoryIteration(List<string> lettersToLearn, List<MemoryOption> levelOptionsList) : base (lettersToLearn)
+        {
+            LevelOptionsList = levelOptionsList;
+        }
+    }
 
 	public class MemoryOption
 	{

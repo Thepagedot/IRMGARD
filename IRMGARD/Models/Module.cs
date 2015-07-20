@@ -7,7 +7,6 @@ namespace IRMGARD.Models
 {
 	public class Module
 	{
-		[JsonProperty(ItemTypeNameHandling = TypeNameHandling.Auto)]
 		public List<Lesson> Lessons;
 		public int NumberOfLessonsDone;
 

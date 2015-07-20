@@ -4,30 +4,35 @@ using System.Collections.Generic;
 namespace IRMGARD.Models
 {
 	public class BuildSyllable : Lesson
-	{
-		public List<BuildSyllableOption> SyllableOptions { get; set; }
-		public List<string> Options { get; set; }
-
+	{		
 		public BuildSyllable () {}
 
-		public BuildSyllable (string title, string soundPath, string hint, LevelType typeOfLevel, List<string> options, List<BuildSyllableOption> syllableOptions)  
-			: base (title, soundPath, hint, typeOfLevel)
+		public BuildSyllable (string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (title, soundPath, hint, typeOfLevel, iterations)
 		{
-			this.SyllableOptions = syllableOptions;
-			this.Options = options;
 		}
 	}
 
-	public class BuildSyllableOption
+	public class BuildSyllableIteration : Iteration
+	{
+		public List<Syllable> Syllables { get; set; }
+		public List<string> Options { get; set; }
+
+	    public BuildSyllableIteration(List<string> lettersToLearn, List<Syllable> syllables, List<string> options) : base (lettersToLearn)
+	    {
+	        this.Syllables = syllables;
+	        this.Options = options;
+	    }
+	}
+
+
+	public class Syllable
 	{
 		public List<string> SyllableParts { get; set; }
 		public string SoundPath { get; set; }
 
+		public Syllable () {}
 
-		public BuildSyllableOption () {}
-
-		// needed for BuildSyllables
-		public BuildSyllableOption (List<string> syllableParts, string soundPath)
+		public Syllable (List<string> syllableParts, string soundPath)
 		{
 			this.SyllableParts = syllableParts;
 			this.SoundPath = soundPath;

@@ -4,18 +4,22 @@ using System.Collections.Generic;
 namespace IRMGARD.Models
 {
 	public class LetterDrop : Lesson
-	{
-		public List<string> LettersToLearn { get; set; }
-		public List<string> Options { get; set; }
-
+	{		
 		public LetterDrop () {}
 
-		public LetterDrop (string title, string soundPath, string hint, LevelType typeOfLevel, List<string> lettersToLearn, List<string> options) 
-			: base (title, soundPath, hint, typeOfLevel)
+		public LetterDrop (string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (title, soundPath, hint, typeOfLevel, iterations)
 		{
-			this.LettersToLearn = lettersToLearn;
-			this.Options = options;
 		}
+
+        public class LetterDropIteration : Iteration
+        {
+            public List<string> Options { get; set; }
+
+            public LetterDropIteration(List<string> lettersToLearn, List<string> options) : base (lettersToLearn)
+            {
+                this.Options = options;
+            }
+        }
 	}
 }
 

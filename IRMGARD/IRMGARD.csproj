@@ -71,6 +71,7 @@
     <Compile Include="Models\Levels\Media.cs" />
     <Compile Include="Utilities\DataHolder.cs" />
     <Compile Include="Utilities\Alphabet.cs" />
+    <Compile Include="Models\Iteration.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

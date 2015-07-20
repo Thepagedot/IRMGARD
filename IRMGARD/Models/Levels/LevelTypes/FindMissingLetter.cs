@@ -5,18 +5,25 @@ namespace IRMGARD.Models
 {
 	public class FindMissingLetter : Lesson
 	{
-		public List<string> LettersToLearn { get; set; }
-		public List<FindMissingLetterOption> Options { get; set; }
-
 		public FindMissingLetter () {}
 
-		public FindMissingLetter (string title, string soundPath, string hint, LevelType typeOfLevel, List<string> lettersToLearn, List<FindMissingLetterOption> options)  
-			: base (title, soundPath, hint, typeOfLevel)
+		public FindMissingLetter (string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations)  : base (title, soundPath, hint, typeOfLevel, iterations)
 		{
-			this.LettersToLearn = lettersToLearn;
-			this.Options = options;
 		}
 	}
+
+    public class FindMissingLetterIteration : Iteration
+    {
+        public List<string> TaskLetters { get; set; }
+        public List<FindMissingLetterOption> Options { get; set; }
+
+        public FindMissingLetterIteration(List<string> lettersToLearn, List<string> taskLetters, List<FindMissingLetterOption> options): base(lettersToLearn)
+        {
+            this.TaskLetters = taskLetters;
+            this.Options = options;
+        }
+
+    }
 
 	public class FindMissingLetterOption
 	{

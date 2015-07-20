@@ -4,15 +4,21 @@ using System.Collections.Generic;
 namespace IRMGARD.Models
 {
 	public class AbcRank : Lesson
-	{
-		public List<AbcRankOption> LettersToLearn { get; set; }
-
+	{		
 		public AbcRank () {}
 
-		public AbcRank (string title, string soundPath, string hint, LevelType typeOfLevel, List<AbcRankOption> lettersToLearn)  
-			: base (title, soundPath, hint, typeOfLevel)
+		public AbcRank (string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (title, soundPath, hint, typeOfLevel, iterations)
+		{			
+		}
+	}
+
+	public class AbcRankIteration : Iteration
+	{
+		public List<AbcRankOption> Options { get; set; }
+
+		public AbcRankIteration (List<string> lettersToLearn, List<AbcRankOption> options) : base (lettersToLearn)
 		{
-			this.LettersToLearn = lettersToLearn;
+			this.Options = options;
 		}
 	}
 
