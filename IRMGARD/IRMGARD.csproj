@@ -68,7 +68,6 @@
     <Compile Include="Enums\LevelType.cs" />
     <Compile Include="Models\Levels\LevelTypes\FourPictures.cs" />
     <Compile Include="Utilities\SoundPlayer.cs" />
-    <Compile Include="Models\ILesson.cs" />
     <Compile Include="Models\Levels\Media.cs" />
     <Compile Include="Utilities\DataHolder.cs" />
     <Compile Include="Utilities\Alphabet.cs" />

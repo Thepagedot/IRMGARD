@@ -12,11 +12,11 @@
 
 	<item android:id="@+id/btnNextLesson"
 		  android:icon="@drawable/ic_help_black_24dp"
-		  android:title="Next"
+		  android:title="DEV: Next"
 		  android:showAsAction="never" />
 
 	<item android:id="@+id/btnPreviousLesson"
 		  android:icon="@drawable/ic_help_black_24dp"
-		  android:title="Previous"
+		  android:title="DEV: Previous"
 		  android:showAsAction="never" />
 </menu>

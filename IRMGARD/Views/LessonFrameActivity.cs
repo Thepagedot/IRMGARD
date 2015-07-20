@@ -48,14 +48,14 @@ namespace IRMGARD
 
 		protected override void OnStart()
 		{
-			InitLession();
+			InitLesson();
 			base.OnStart();
 		}
 
 		/// <summary>
 		/// Initiates the view with the current lession.
 		/// </summary>
-		private void InitLession()
+		private void InitLesson()
 		{
 			var lesson = DataHolder.Current.CurrentLesson;
 
@@ -104,13 +104,13 @@ namespace IRMGARD
 					var nextLesson = DataHolder.Current.CurrentModule.GetNextLesson(DataHolder.Current.CurrentLesson);
 					if (nextLesson != null)
 						DataHolder.Current.CurrentLesson = nextLesson;
-					InitLession();
+					InitLesson();
 					break;
 				case Resource.Id.btnPreviousLesson:
 					var previousLesson = DataHolder.Current.CurrentModule.GetPrevioustLesson(DataHolder.Current.CurrentLesson);
 					if (previousLesson != null)
 						DataHolder.Current.CurrentLesson = previousLesson;
-					InitLession();
+					InitLesson();
 					break;
 			}
 
