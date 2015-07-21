@@ -119,6 +119,26 @@ namespace IRMGARD
 						InitLesson ();
 					}
 					break;
+				case Resource.Id.btnNextModule:
+					var nextModule = DataHolder.Current.CurrentLevel.GetNextModule (DataHolder.Current.CurrentModule);
+					if (nextModule != null)
+					{					
+						DataHolder.Current.CurrentModule = nextModule;
+						DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.Lessons.First ();
+						DataHolder.Current.CurrentIteration = DataHolder.Current.CurrentLesson.Iterations.First();
+						InitLesson ();
+					}
+					break;
+				case Resource.Id.btnPreviousModule:
+					var previousModule = DataHolder.Current.CurrentLevel.GetPreviousModule(DataHolder.Current.CurrentModule);
+					if (previousModule != null)
+					{					
+						DataHolder.Current.CurrentModule = previousModule;
+						DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.Lessons.First ();
+						DataHolder.Current.CurrentIteration = DataHolder.Current.CurrentLesson.Iterations.First();
+						InitLesson ();
+					}
+				break;
 			}
 
 			return base.OnOptionsItemSelected (item);
