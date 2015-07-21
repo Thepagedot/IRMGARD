@@ -6,6 +6,7 @@
             "Lessons": [
                 {
                     "$type": "IRMGARD.Models.HearMe, IRMGARD",
+					"Id": 1,
                     "Title": "AEIOU",
                     "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 1.mp3",
                     "Hint": "Lesson 1 Hint",
@@ -70,6 +71,7 @@
                 },
 				{
 					"$type": "IRMGARD.Models.FourPictures, IRMGARD",
+					"Id": 2,
           			"Title": "AEIOU",
           			"SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 2.mp3",
           			"Hint": "Lesson 2 Hint",
@@ -259,6 +261,7 @@
             	},
 				{
 					"$type": "IRMGARD.Models.LetterDrop, IRMGARD",
+					"Id": 3,
           			"Title": "A oder a?",
           			"SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 3.mp3",
           			"Hint": "Lesson 3 Hint",
@@ -273,6 +276,7 @@
 				},
 				{
 					"$type": "IRMGARD.Models.FindMissingLetter, IRMGARD",
+					"Id": 4,
 					"Title": "A?IOU",
 					"SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 4.mp3",
 					"Hint": "Lesson 4 Hint",

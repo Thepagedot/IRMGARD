@@ -7,7 +7,7 @@ namespace IRMGARD.Models
 	{
 		public FindMissingLetter () {}
 
-		public FindMissingLetter (string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations)  : base (title, soundPath, hint, typeOfLevel, iterations)
+		public FindMissingLetter (int id, string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations)  : base (id, title, soundPath, hint, typeOfLevel, iterations)
 		{
 		}
 	}

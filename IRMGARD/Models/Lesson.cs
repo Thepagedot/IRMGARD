@@ -6,6 +6,7 @@ namespace IRMGARD.Models
 {
 	public abstract class Lesson
 	{
+		public int Id { get; set; }
 		public string Title { get; set; }
 		public string SoundPath { get; set; }
 		public string Hint { get; set; }
@@ -14,8 +15,9 @@ namespace IRMGARD.Models
 
 	    protected Lesson () {}
 
-	    protected Lesson (string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations)
+	    protected Lesson (int id, string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations)
 		{
+			this.Id = id;
 			this.Title = title;
 			this.SoundPath = soundPath;
 			this.Hint = hint;

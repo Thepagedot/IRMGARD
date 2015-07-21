@@ -7,7 +7,7 @@ namespace IRMGARD.Models
 	{		
 		public BuildSyllable () {}
 
-		public BuildSyllable (string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (title, soundPath, hint, typeOfLevel, iterations)
+		public BuildSyllable (int id, string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (id, title, soundPath, hint, typeOfLevel, iterations)
 		{
 		}
 	}

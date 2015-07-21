@@ -7,7 +7,7 @@ namespace IRMGARD.Models
 	{		
 		public Memory () {}
 
-		public Memory (string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (title, soundPath, hint, typeOfLevel, iterations)
+		public Memory (int id, string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (id, title, soundPath, hint, typeOfLevel, iterations)
 		{
 		}
 	}

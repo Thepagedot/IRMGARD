@@ -7,7 +7,7 @@ namespace IRMGARD.Models
 	{
 		public HearMe () : base () {}
 
-		public HearMe (string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (title, soundPath, hint, typeOfLevel, iterations)
+		public HearMe (int id, string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (id, title, soundPath, hint, typeOfLevel, iterations)
 		{
 		}
 	}

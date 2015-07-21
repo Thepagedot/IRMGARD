@@ -7,7 +7,7 @@ namespace IRMGARD.Models
 	{
 		public HearTheLetter () {}
 
-		public HearTheLetter (string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (title, soundPath, hint, typeOfLevel, iterations)
+		public HearTheLetter(int id, string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (id, title, soundPath, hint, typeOfLevel, iterations)
 		{
 		}
 
