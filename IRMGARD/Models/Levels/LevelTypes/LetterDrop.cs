@@ -9,17 +9,18 @@ namespace IRMGARD.Models
 
 		public LetterDrop (string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (title, soundPath, hint, typeOfLevel, iterations)
 		{
-		}
-
-        public class LetterDropIteration : Iteration
-        {
-            public List<string> Options { get; set; }
-
-            public LetterDropIteration(List<string> lettersToLearn, List<string> options) : base (lettersToLearn)
-            {
-                this.Options = options;
-            }
-        }
+		}			       
 	}
-}
 
+	public class LetterDropIteration : Iteration
+	{
+		public List<string> Options { get; set; }
+
+		public LetterDropIteration () {}
+
+		public LetterDropIteration(List<string> lettersToLearn, List<string> options) : base (lettersToLearn)
+		{
+			this.Options = options;
+		}
+	}
+}	

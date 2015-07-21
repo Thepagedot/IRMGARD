@@ -256,7 +256,107 @@
               				]            
                 		}
               		]
-            	}        
+            	},
+				{
+					"$type": "IRMGARD.Models.LetterDrop, IRMGARD",
+          			"Title": "A oder a?",
+          			"SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 3.mp3",
+          			"Hint": "Lesson 3 Hint",
+          			"TypeOfLevel": "LetterDrop",
+          			"Iterations": [
+						{
+							"$type": "IRMGARD.Models.LetterDropIteration, IRMGARD",
+              				"LettersToLearn": ["A", "E", "I", "O", "U"],
+							"Options": ["a", "o", "d", "f", "j", "i", "u", "s", "p", "e"]
+						}
+					]
+				},
+				{
+					"$type": "IRMGARD.Models.FindMissingLetter, IRMGARD",
+					"Title": "A?IOU",
+					"SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 4.mp3",
+					"Hint": "Lesson 4 Hint",
+					"TypeOfLevel": "FindMissingLetter",
+					"Iterations": [
+						{
+							"$type": "IRMGARD.Models.FindMissingLetterIteration, IRMGARD",
+              				"LettersToLearn": ["A", "E", "I", "O", "U"],
+							"TaskLetters": ["A", "E", "I", "", "U"],
+							"Options": [
+								{
+									"$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+									"Letter": "A",
+									"IsShort": false,
+									"IsLong": false,
+									"CorrectPos": -1																																				
+								},
+								{
+									"$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+									"Letter": "F",
+									"IsShort": false,
+									"IsLong": false,
+									"CorrectPos": -1																																				
+								},
+								{
+									"$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+									"Letter": "G",
+									"IsShort": false,
+									"IsLong": false,
+									"CorrectPos": -1																																				
+								},
+								{
+									"$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+									"Letter": "B",
+									"IsShort": false,
+									"IsLong": false,
+									"CorrectPos": -1																																				
+								},
+								{
+									"$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+									"Letter": "C",
+									"IsShort": false,
+									"IsLong": false,
+									"CorrectPos": -1																																				
+								},
+								{
+									"$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+									"Letter": "O",
+									"IsShort": false,
+									"IsLong": false,
+									"CorrectPos": 3																																				
+								},
+								{
+									"$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+									"Letter": "I",
+									"IsShort": false,
+									"IsLong": false,
+									"CorrectPos": -1																																				
+								},
+								{
+									"$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+									"Letter": "J",
+									"IsShort": false,
+									"IsLong": false,
+									"CorrectPos": -1																																				
+								},
+								{
+									"$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+									"Letter": "D",
+									"IsShort": false,
+									"IsLong": false,
+									"CorrectPos": -1																																				
+								},
+								{
+									"$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+									"Letter": "E",
+									"IsShort": false,
+									"IsLong": false,
+									"CorrectPos": -1																																				
+								}
+							]
+						}
+					]
+				}
             ]
         }
     ]
