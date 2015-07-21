@@ -17,6 +17,7 @@ namespace IRMGARD
 		public Level CurrentLevel { get; set; }
 		public Module CurrentModule { get; set; }
 		public Lesson CurrentLesson { get; set; }
+		public Iteration CurrentIteration { get; set; }
 
 		public List<Level> Levels { get; set; }
 

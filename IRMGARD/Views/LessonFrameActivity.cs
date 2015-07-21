@@ -58,6 +58,7 @@ namespace IRMGARD
 		private void InitLesson()
 		{
 			var lesson = DataHolder.Current.CurrentLesson;
+			var iteration = DataHolder.Current.CurrentIteration;
 
 			// Set the name of the current lesson as page title
 			Title = lesson.Title;
@@ -67,14 +68,14 @@ namespace IRMGARD
 				hintButton.SetVisible(!string.IsNullOrEmpty(lesson.Hint));
 
 			// Mark letters in alphabet
-			CapitalAlphabetText.TextFormatted = Alphabet.GetLettersMarked(new List<string> { "B" }, true);
-			LowerAlphabetText.TextFormatted = Alphabet.GetLettersMarked(new List<string> { "B" }, false);
+			CapitalAlphabetText.TextFormatted = Alphabet.GetLettersMarked(iteration.LettersToLearn, true);
+			LowerAlphabetText.TextFormatted = Alphabet.GetLettersMarked(iteration.LettersToLearn, false);
 
 			var moduleNumber = DataHolder.Current.CurrentLevel.Modules.IndexOf(DataHolder.Current.CurrentModule) + 1;
-			ModuleNumberText.Text = "Module: " + moduleNumber + " of " + DataHolder.Current.CurrentLevel.Modules.Count;
+			ModuleNumberText.Text = "Module: " + moduleNumber + "/" + DataHolder.Current.CurrentLevel.Modules.Count;
 
 			var lessonNumber = DataHolder.Current.CurrentModule.Lessons.IndexOf(lesson) + 1;
-			LessonNumberText.Text = "Lesson: " + lessonNumber + " of " + DataHolder.Current.CurrentModule.Lessons.Count;
+			LessonNumberText.Text = "Lesson: " + lessonNumber + "/" + DataHolder.Current.CurrentModule.Lessons.Count;
 		}
 
 		#region UI Operations
@@ -101,16 +102,22 @@ namespace IRMGARD
 					Toast.MakeText (this, DataHolder.Current.CurrentLesson.Hint, ToastLength.Long).Show();
 					break;
 				case Resource.Id.btnNextLesson:
-					var nextLesson = DataHolder.Current.CurrentModule.GetNextLesson(DataHolder.Current.CurrentLesson);
-					if (nextLesson != null)
+					var nextLesson = DataHolder.Current.CurrentModule.GetNextLesson (DataHolder.Current.CurrentLesson);
+					if (nextLesson != null) 
+					{
 						DataHolder.Current.CurrentLesson = nextLesson;
-					InitLesson();
+						DataHolder.Current.CurrentIteration = nextLesson.Iterations.First();
+						InitLesson();
+					}					
 					break;
 				case Resource.Id.btnPreviousLesson:
-					var previousLesson = DataHolder.Current.CurrentModule.GetPrevioustLesson(DataHolder.Current.CurrentLesson);
+					var previousLesson = DataHolder.Current.CurrentModule.GetPrevioustLesson (DataHolder.Current.CurrentLesson);
 					if (previousLesson != null)
+					{					
 						DataHolder.Current.CurrentLesson = previousLesson;
-					InitLesson();
+						DataHolder.Current.CurrentIteration = previousLesson.Iterations.First();
+						InitLesson ();
+					}
 					break;
 			}
 
