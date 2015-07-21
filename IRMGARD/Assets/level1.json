@@ -67,7 +67,196 @@
                             }
                         }
                     ]
-                }
+                },
+				{
+					"$type": "IRMGARD.Models.FourPictures, IRMGARD",
+          			"Title": "AEIOU",
+          			"SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 2.mp3",
+          			"Hint": "Lesson 2 Hint",
+          			"TypeOfLevel": "FourPictures",
+          			"Iterations": [
+            			{
+							"$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              				"LettersToLearn": [
+								"A"
+							],
+              				"Options": [
+                				{
+                  					"IsCorrect": true,
+                  					"Media": {
+                    					"ImagePath": "Aal.png",
+                    					"SoundPath": "Aal.mp3"
+                  					}
+                				},			
+                				{
+                  					"IsCorrect": false,
+                  					"Media": {
+                    					"ImagePath": "Ameise.png",
+                    					"SoundPath": "Ameise.mp3"
+                  					}
+                				},
+                				{
+                  					"IsCorrect": false,
+                  					"Media": {
+                    					"ImagePath": "Affe.png",
+                    					"SoundPath": "Affe.mp3"
+                  					}
+                				},
+                				{
+                  					"IsCorrect": false,
+                  					"Media": {
+                    					"ImagePath": "Ahorn.png",
+                						"SoundPath": "Ahorn.mp3"
+                  					}
+                				}
+              				]            
+                		},
+						{
+							"$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              				"LettersToLearn": [
+								"E"
+							],
+              				"Options": [
+                				{
+                  					"IsCorrect": true,
+                  					"Media": {
+                    					"ImagePath": "Elefant.png",
+                    					"SoundPath": "Elefant.mp3"
+                  					}
+                				},			
+                				{
+                  					"IsCorrect": false,
+                  					"Media": {
+                    					"ImagePath": "Esel.png",
+                    					"SoundPath": "Esel.mp3"
+                  					}
+                				},
+                				{
+                  					"IsCorrect": false,
+                  					"Media": {
+                    					"ImagePath": "Eber.png",
+                    					"SoundPath": "Eber.mp3"
+                  					}
+                				},
+                				{
+                  					"IsCorrect": false,
+                  					"Media": {
+                    					"ImagePath": "Efeu.png",
+                						"SoundPath": "Efeu.mp3"
+                  					}
+                				}
+              				]            
+                		},
+						{
+							"$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              				"LettersToLearn": [
+								"I"
+							],
+              				"Options": [
+                				{
+                  					"IsCorrect": true,
+                  					"Media": {
+                    					"ImagePath": "Igel.png",
+                    					"SoundPath": "Igel.mp3"
+                  					}
+                				},			
+                				{
+                  					"IsCorrect": false,
+                  					"Media": {
+                    					"ImagePath": "Insel.png",
+                    					"SoundPath": "Insel.mp3"
+                  					}
+                				},
+                				{
+                  					"IsCorrect": false,
+                  					"Media": {
+                    					"ImagePath": "Iltis.png",
+                    					"SoundPath": "Iltis.mp3"
+                  					}
+                				},
+                				{
+                  					"IsCorrect": false,
+                  					"Media": {
+                    					"ImagePath": "Ina.png",
+                						"SoundPath": "Ina.mp3"
+                  					}
+                				}
+              				]            
+                		},
+						{
+							"$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              				"LettersToLearn": [
+								"O"
+							],
+              				"Options": [
+                				{
+                  					"IsCorrect": true,
+                  					"Media": {
+                    					"ImagePath": "Ofen.png",
+                    					"SoundPath": "Ofen.mp3"
+                  					}
+                				},			
+                				{
+                  					"IsCorrect": false,
+                  					"Media": {
+                    					"ImagePath": "Oma.png",
+                    					"SoundPath": "Oma.mp3"
+                  					}
+                				},
+                				{
+                  					"IsCorrect": false,
+                  					"Media": {
+                    					"ImagePath": "Opa.png",
+                    					"SoundPath": "Opa.mp3"
+                  					}
+                				},
+                				{
+                  					"IsCorrect": false,
+                  					"Media": {
+                    					"ImagePath": "Ohren.png",
+                						"SoundPath": "Ohren.mp3"
+                  					}
+                				}
+              				]            
+                		},
+						{
+							"$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              				"LettersToLearn": [
+								"U"
+							],
+              				"Options": [
+                				{
+                  					"IsCorrect": true,
+                  					"Media": {
+                    					"ImagePath": "U-Boot.png",
+                    					"SoundPath": "U-Boot.mp3"
+                  					}
+                				},			
+                				{
+                  					"IsCorrect": false,
+                  					"Media": {
+                    					"ImagePath": "Uhu.png",
+                    					"SoundPath": "Uhu.mp3"
+                  					}
+                				},
+                				{
+                  					"IsCorrect": false,
+                  					"Media": {
+                    					"ImagePath": "Uhren.png",
+                    					"SoundPath": "Uhren.mp3"
+                  					}
+                				},
+                				{
+                  					"IsCorrect": false,
+                  					"Media": {
+                    					"ImagePath": "Ufo.png",
+                						"SoundPath": "Ufo.mp3"
+                  					}
+                				}
+              				]            
+                		}
+              		]
+            	}        
             ]
         }
     ]
