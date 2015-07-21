@@ -16,13 +16,17 @@ namespace IRMGARD
 	public class MainActivity : Activity
 	{
 		protected override async void OnCreate (Bundle bundle)
-		{
-			// Initialize DataHolder if needed
-			if (DataHolder.Current == null)
-				DataHolder.Current = new DataHolder ();
-			
+		{			
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.Main);
+
+			// Initialize DataHolder if needed
+			if (DataHolder.Current == null) {
+				DataHolder.Current = new DataHolder ();
+
+				// Load first level from JSON
+				await DataHolder.Current.LoadLevelAsync (1);
+			}
 
 			ActionBar.SetLogo (Resource.Drawable.Icon);
 			ActionBar.SetDisplayUseLogoEnabled (true);
@@ -30,9 +34,6 @@ namespace IRMGARD
 
 			var startButton = FindViewById<ImageButton> (Resource.Id.btnStart);
 			startButton.Click += StartButton_Click;
-
-			// Load first level from JSON
-			await DataHolder.Current.LoadLevelAsync(1);
 		}
 
 		void StartButton_Click (object sender, EventArgs e)
