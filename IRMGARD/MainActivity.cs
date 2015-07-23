@@ -20,6 +20,11 @@ namespace IRMGARD
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.Main);
 
+			// Init action bar
+			ActionBar.SetLogo (Resource.Drawable.Icon);
+			ActionBar.SetDisplayUseLogoEnabled (true);
+			ActionBar.SetDisplayShowHomeEnabled(true);
+
 			// Initialize DataHolder if needed
 			if (DataHolder.Current == null) {
 				DataHolder.Current = new DataHolder ();
@@ -27,10 +32,6 @@ namespace IRMGARD
 				// Load first level from JSON
 				await DataHolder.Current.LoadLevelAsync (1);
 			}
-
-			ActionBar.SetLogo (Resource.Drawable.Icon);
-			ActionBar.SetDisplayUseLogoEnabled (true);
-			ActionBar.SetDisplayShowHomeEnabled(true);
 
 			var startButton = FindViewById<ImageButton> (Resource.Id.btnStart);
 			startButton.Click += StartButton_Click;

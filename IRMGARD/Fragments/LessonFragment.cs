@@ -19,11 +19,10 @@ namespace IRMGARD
 		public delegate void FinishedEventHandler(object sender, EventArgs e);
 		public event FinishedEventHandler Finished;
 
-		protected void FireFinished(EventArgs e)
+		protected void LessonFinished()
 		{
 			if (Finished != null)
-				Finished (this, e);
+				Finished (this, null);
 		}
 	}
-}
-
+}	

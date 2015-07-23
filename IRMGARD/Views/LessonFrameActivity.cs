@@ -81,15 +81,11 @@ namespace IRMGARD
 			LessonNumberText.Text = "Lesson: " + lessonNumber + "/" + DataHolder.Current.CurrentModule.Lessons.Count;
 
 			// Load lesson fragment
-			ReplaceFragment();
-		}
-
-		private void ReplaceFragment()
-		{
 			// Create an instance of the fragment according to the current type of level
 			var fragment = CreateFragmentForLesson(DataHolder.Current.CurrentLesson);
 			if (fragment != null) 
 			{
+				// Handle finished event
 				fragment.Finished += LessonFragment_Finished;
 
 				// Add the fragment to the container
@@ -98,13 +94,23 @@ namespace IRMGARD
 				transaction.Commit ();
 			}
 		}
-
+			
+		/// <summary>
+		/// Handles the lesson's fragment's finished event
+		/// </summary>
+		/// <param name="sender">sender.</param>
+		/// <param name="e">event args.</param>
 		void LessonFragment_Finished(object sender, EventArgs e)
 		{
 			Toast.MakeText (this, "Lesson finished!", ToastLength.Short).Show();
 			NextLesson();
 		}
 
+		/// <summary>
+		/// Returns a new instance of the fragment type according to the type of lesson
+		/// </summary>
+		/// <returns>The fragment for the lesson.</returns>
+		/// <param name="lesson">current lesson.</param>
 		private LessonFragment CreateFragmentForLesson(Lesson lesson)
 		{
 			if (lesson is HearMe)		
@@ -171,6 +177,9 @@ namespace IRMGARD
 
 		#endregion
 
+		/// <summary>
+		/// Switches to the next lesson if available
+		/// </summary>
 		private void NextLesson()
 		{
 			var nextLesson = DataHolder.Current.CurrentModule.GetNextLesson (DataHolder.Current.CurrentLesson);
@@ -182,6 +191,9 @@ namespace IRMGARD
 			}	
 		}
 
+		/// <summary>
+		/// Swtiches to the previous lesson if available.
+		/// </summary>
 		private void PreviousLesson()
 		{
 			var previousLesson = DataHolder.Current.CurrentModule.GetPrevioustLesson (DataHolder.Current.CurrentLesson);

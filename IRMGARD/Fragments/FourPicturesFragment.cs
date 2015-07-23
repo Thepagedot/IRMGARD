@@ -31,7 +31,7 @@ namespace IRMGARD
 
 		void FinishButton_Click (object sender, EventArgs e)
 		{
-			FireFinished(e);
+			LessonFinished();
 		}
 	}
 }

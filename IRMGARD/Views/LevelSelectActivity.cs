@@ -21,9 +21,14 @@ namespace IRMGARD
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.LevelSelect);
 
-//			ActionBar.SetLogo (Resource.Drawable.Icon);
-//			ActionBar.SetDisplayUseLogoEnabled (true);
-//			ActionBar.SetDisplayShowHomeEnabled(true);
+			// Hide image on Lollypop
+			if (Build.VERSION.SdkInt <= BuildVersionCodes.Kitkat)
+			{
+				ActionBar.SetLogo (Resource.Drawable.Icon);
+				ActionBar.SetDisplayUseLogoEnabled (true);
+				ActionBar.SetDisplayShowHomeEnabled(true);
+			}
+
 			ActionBar.SetDisplayHomeAsUpEnabled (true);
 
 			var levelListView = FindViewById<ListView> (Resource.Id.lvLevels);
