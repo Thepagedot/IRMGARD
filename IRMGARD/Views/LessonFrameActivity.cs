@@ -24,6 +24,7 @@ namespace IRMGARD
 		TextView LessonNumberText;
 		TextView CapitalAlphabetText;
 		TextView LowerAlphabetText;
+		FrameLayout FragmentContainer;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -44,6 +45,7 @@ namespace IRMGARD
 			LessonNumberText = FindViewById<TextView>(Resource.Id.txtLessonNumber);
 			CapitalAlphabetText = FindViewById<TextView>(Resource.Id.txtCapitalAlphabet);
 			LowerAlphabetText = FindViewById<TextView>(Resource.Id.txtLowerAlphabet);
+			FragmentContainer = FindViewById<FrameLayout> (Resource.Id.fragmentContainer);
 		}
 
 		protected override void OnStart()
@@ -71,11 +73,46 @@ namespace IRMGARD
 			CapitalAlphabetText.TextFormatted = Alphabet.GetLettersMarked(iteration.LettersToLearn, true);
 			LowerAlphabetText.TextFormatted = Alphabet.GetLettersMarked(iteration.LettersToLearn, false);
 
+			// Prepare module progress overview
 			var moduleNumber = DataHolder.Current.CurrentLevel.Modules.IndexOf(DataHolder.Current.CurrentModule) + 1;
 			ModuleNumberText.Text = "Module: " + moduleNumber + "/" + DataHolder.Current.CurrentLevel.Modules.Count;
 
 			var lessonNumber = DataHolder.Current.CurrentModule.Lessons.IndexOf(lesson) + 1;
 			LessonNumberText.Text = "Lesson: " + lessonNumber + "/" + DataHolder.Current.CurrentModule.Lessons.Count;
+
+			// Load lesson fragment
+			ReplaceFragment();
+		}
+
+		private void ReplaceFragment()
+		{
+			// Create an instance of the fragment according to the current type of level
+			var fragment = CreateFragmentForLesson(DataHolder.Current.CurrentLesson);
+			if (fragment != null) 
+			{
+				fragment.Finished += LessonFragment_Finished;
+
+				// Add the fragment to the container
+				FragmentTransaction transaction = FragmentManager.BeginTransaction ();
+				transaction.Add (Resource.Id.fragmentContainer, fragment);
+				transaction.Commit ();
+			}
+		}
+
+		void LessonFragment_Finished(object sender, EventArgs e)
+		{
+			Toast.MakeText (this, "Lesson finished!", ToastLength.Short).Show();
+			NextLesson();
+		}
+
+		private LessonFragment CreateFragmentForLesson(Lesson lesson)
+		{
+			if (lesson is HearMe)		
+				return new HearMeFragment();
+			if (lesson is FourPictures)	
+				return new FourPicturesFragment();
+			else 						
+				return null;
 		}
 
 		#region UI Operations
@@ -102,22 +139,10 @@ namespace IRMGARD
 					Toast.MakeText (this, DataHolder.Current.CurrentLesson.Hint, ToastLength.Long).Show();
 					break;
 				case Resource.Id.btnNextLesson:
-					var nextLesson = DataHolder.Current.CurrentModule.GetNextLesson (DataHolder.Current.CurrentLesson);
-					if (nextLesson != null) 
-					{
-						DataHolder.Current.CurrentLesson = nextLesson;
-						DataHolder.Current.CurrentIteration = nextLesson.Iterations.First();
-						InitLesson();
-					}					
+					NextLesson();
 					break;
 				case Resource.Id.btnPreviousLesson:
-					var previousLesson = DataHolder.Current.CurrentModule.GetPrevioustLesson (DataHolder.Current.CurrentLesson);
-					if (previousLesson != null)
-					{					
-						DataHolder.Current.CurrentLesson = previousLesson;
-						DataHolder.Current.CurrentIteration = previousLesson.Iterations.First();
-						InitLesson ();
-					}
+					PreviousLesson();
 					break;
 			}
 
@@ -125,5 +150,27 @@ namespace IRMGARD
 		}
 
 		#endregion
+
+		private void NextLesson()
+		{
+			var nextLesson = DataHolder.Current.CurrentModule.GetNextLesson (DataHolder.Current.CurrentLesson);
+			if (nextLesson != null) 
+			{
+				DataHolder.Current.CurrentLesson = nextLesson;
+				DataHolder.Current.CurrentIteration = nextLesson.Iterations.First();
+				InitLesson();
+			}	
+		}
+
+		private void PreviousLesson()
+		{
+			var previousLesson = DataHolder.Current.CurrentModule.GetPrevioustLesson (DataHolder.Current.CurrentLesson);
+			if (previousLesson != null)
+			{					
+				DataHolder.Current.CurrentLesson = previousLesson;
+				DataHolder.Current.CurrentIteration = previousLesson.Iterations.First();
+				InitLesson ();
+			}	
+		}
 	}
 }

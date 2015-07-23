@@ -72,6 +72,9 @@
     <Compile Include="Utilities\DataHolder.cs" />
     <Compile Include="Utilities\Alphabet.cs" />
     <Compile Include="Models\Iteration.cs" />
+    <Compile Include="Fragments\HearMeFragment.cs" />
+    <Compile Include="Fragments\FourPicturesFragment.cs" />
+    <Compile Include="Fragments\LessonFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -101,6 +104,8 @@
     <AndroidResource Include="Resources\menu\levelFrame_menu.xml" />
     <AndroidResource Include="Resources\drawable\irmgard_picture.jpg" />
     <AndroidResource Include="Resources\values\Dimens.xml" />
+    <AndroidResource Include="Resources\layout\HearMe.axml" />
+    <AndroidResource Include="Resources\layout\FourPictures.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -117,6 +122,7 @@
     <Folder Include="Utilities\" />
     <Folder Include="Assets\Sounds\" />
     <Folder Include="Assets\Sounds\Level-1\" />
+    <Folder Include="Fragments\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\Ameise.mp3" />

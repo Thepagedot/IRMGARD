@@ -50,7 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/darker_gray"
-            android:id="@+id/frameLayout1" />
+            android:id="@+id/fragmentContainer" />
     </LinearLayout>
     <TextView
         android:id="@+id/txtCapitalAlphabet"
