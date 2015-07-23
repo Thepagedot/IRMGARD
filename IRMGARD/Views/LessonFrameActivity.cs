@@ -19,6 +19,8 @@ namespace IRMGARD
 	[Activity (Label = "Lesson", ParentActivity = typeof(LevelSelectActivity))]			
 	public class LessonFameActivity : Activity
 	{
+		private const string lessonFragmentTag = "current-lesson-fragment";
+
 		IMenuItem hintButton;
 		TextView ModuleNumberText;
 		TextView LessonNumberText;
@@ -82,16 +84,26 @@ namespace IRMGARD
 
 			// Load lesson fragment
 			// Create an instance of the fragment according to the current type of level
+			FragmentTransaction transaction = FragmentManager.BeginTransaction();
 			var fragment = CreateFragmentForLesson(DataHolder.Current.CurrentLesson);
-			if (fragment != null) 
+			if (fragment != null)
 			{
 				// Handle finished event
 				fragment.Finished += LessonFragment_Finished;
 
 				// Add the fragment to the container
-				FragmentTransaction transaction = FragmentManager.BeginTransaction ();
-				transaction.Add (Resource.Id.fragmentContainer, fragment);
-				transaction.Commit ();
+				transaction.Replace(Resource.Id.fragmentContainer, fragment, lessonFragmentTag);
+				transaction.Commit();
+			} 
+			else 
+			{
+				// Fragment for this type of lesson could not be loaded. Remove old fragment
+				var oldFragment = FragmentManager.FindFragmentByTag(lessonFragmentTag);
+				if (oldFragment != null) 
+				{
+					transaction.Remove(oldFragment);
+					transaction.Commit();
+				}
 			}
 		}
 			
