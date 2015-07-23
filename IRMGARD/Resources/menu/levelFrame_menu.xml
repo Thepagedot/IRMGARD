@@ -19,4 +19,14 @@
 		  android:icon="@drawable/ic_help_black_24dp"
 		  android:title="DEV: Previous"
 		  android:showAsAction="never" />
+
+	<item android:id="@+id/btnNextModule"
+		  android:icon="@drawable/ic_help_black_24dp"
+		  android:title="DEV: Next Module"
+		  android:showAsAction="never" />
+
+	<item android:id="@+id/btnPreviousModule"
+		  android:icon="@drawable/ic_help_black_24dp"
+		  android:title="DEV: Previous Module"
+		  android:showAsAction="never" />
 </menu>
