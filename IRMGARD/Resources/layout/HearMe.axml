@@ -4,8 +4,7 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:minWidth="25px"
-    android:minHeight="25px"
-    android:background="#ffff1515">
+    android:minHeight="25px">
     <TextView
         android:text="Hear Me Fragment Demo"
         android:textAppearance="?android:attr/textAppearanceLarge"

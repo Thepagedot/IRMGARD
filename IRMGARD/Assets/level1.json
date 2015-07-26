@@ -1,7 +1,9 @@
 {
     "Name": "Level 1",
+	"Color": "#DEB80C",
     "Modules": [
         {
+			"Color": "#DDD6BF",
             "NumberOfLessonsDone": 0,
             "Lessons": [
                 {

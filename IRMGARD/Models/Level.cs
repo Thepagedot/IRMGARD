@@ -8,13 +8,15 @@ namespace IRMGARD.Models
 	public class Level
 	{
 		public string Name { get; set; }
+		public string Color { get; set; }
 		public List<Module> Modules { get; set; }
 
 		public Level () {}
 
-		public Level (string name, List<Module> modules)
+		public Level (string name, string color, List<Module> modules)
 		{
 			this.Name = name;
+			this.Color = color;
 			this.Modules = modules;
 		}
 

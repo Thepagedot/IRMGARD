@@ -61,8 +61,24 @@ namespace IRMGARD
 		/// </summary>
 		private void InitLesson()
 		{
+			var module = DataHolder.Current.CurrentModule;
 			var lesson = DataHolder.Current.CurrentLesson;
 			var iteration = DataHolder.Current.CurrentIteration;
+
+			// ----------------------------------------------------------------------
+			// Module specifics
+			// ----------------------------------------------------------------------
+
+			// Set playground background color
+			FragmentContainer.SetBackgroundColor(Android.Graphics.Color.ParseColor(module.Color));
+
+			// Prepare module progress overview
+			var moduleNumber = DataHolder.Current.CurrentLevel.Modules.IndexOf(DataHolder.Current.CurrentModule) + 1;
+			ModuleNumberText.Text = "Module: " + moduleNumber + "/" + DataHolder.Current.CurrentLevel.Modules.Count;
+
+			// ----------------------------------------------------------------------
+			// Lesson specifics
+			// ----------------------------------------------------------------------
 
 			// Set the name of the current lesson as page title
 			Title = lesson.Title;
@@ -75,14 +91,14 @@ namespace IRMGARD
 			CapitalAlphabetText.TextFormatted = Alphabet.GetLettersMarked(iteration.LettersToLearn, true);
 			LowerAlphabetText.TextFormatted = Alphabet.GetLettersMarked(iteration.LettersToLearn, false);
 
-			// Prepare module progress overview
-			var moduleNumber = DataHolder.Current.CurrentLevel.Modules.IndexOf(DataHolder.Current.CurrentModule) + 1;
-			ModuleNumberText.Text = "Module: " + moduleNumber + "/" + DataHolder.Current.CurrentLevel.Modules.Count;
-
+			// Prepare lesson progress overview
 			var lessonNumber = DataHolder.Current.CurrentModule.Lessons.IndexOf(lesson) + 1;
 			LessonNumberText.Text = "Lesson: " + lessonNumber + "/" + DataHolder.Current.CurrentModule.Lessons.Count;
 
+			// ----------------------------------------------------------------------
 			// Load lesson fragment
+			// ----------------------------------------------------------------------
+
 			// Create an instance of the fragment according to the current type of level
 			FragmentTransaction transaction = FragmentManager.BeginTransaction();
 			var fragment = CreateFragmentForLesson(DataHolder.Current.CurrentLesson);
