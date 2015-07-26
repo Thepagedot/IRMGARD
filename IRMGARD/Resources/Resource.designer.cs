@@ -91,26 +91,26 @@ namespace IRMGARD
 			// aapt resource value: 0x7f070001
 			public const int btnFinish = 2131165185;
 			
-			// aapt resource value: 0x7f07000c
-			public const int btnHint = 2131165196;
-			
 			// aapt resource value: 0x7f07000d
-			public const int btnNextLesson = 2131165197;
-			
-			// aapt resource value: 0x7f07000f
-			public const int btnNextModule = 2131165199;
+			public const int btnHint = 2131165197;
 			
 			// aapt resource value: 0x7f07000e
-			public const int btnPreviousLesson = 2131165198;
+			public const int btnNextLesson = 2131165198;
 			
 			// aapt resource value: 0x7f070010
-			public const int btnPreviousModule = 2131165200;
+			public const int btnNextModule = 2131165200;
+			
+			// aapt resource value: 0x7f07000f
+			public const int btnPreviousLesson = 2131165199;
+			
+			// aapt resource value: 0x7f070011
+			public const int btnPreviousModule = 2131165201;
 			
 			// aapt resource value: 0x7f07000a
 			public const int btnStart = 2131165194;
 			
-			// aapt resource value: 0x7f07000b
-			public const int btnVoiceInstruction = 2131165195;
+			// aapt resource value: 0x7f07000c
+			public const int btnVoiceInstruction = 2131165196;
 			
 			// aapt resource value: 0x7f070005
 			public const int fragmentContainer = 2131165189;
@@ -123,6 +123,9 @@ namespace IRMGARD
 			
 			// aapt resource value: 0x7f070008
 			public const int lvLevels = 2131165192;
+			
+			// aapt resource value: 0x7f07000b
+			public const int lvModules = 2131165195;
 			
 			// aapt resource value: 0x7f070000
 			public const int textView1 = 2131165184;
@@ -166,6 +169,9 @@ namespace IRMGARD
 			
 			// aapt resource value: 0x7f030004
 			public const int Main = 2130903044;
+			
+			// aapt resource value: 0x7f030005
+			public const int ModuleSelect = 2130903045;
 			
 			static Layout()
 			{

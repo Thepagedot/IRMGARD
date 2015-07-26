@@ -75,6 +75,8 @@
     <Compile Include="Fragments\HearMeFragment.cs" />
     <Compile Include="Fragments\FourPicturesFragment.cs" />
     <Compile Include="Fragments\LessonFragment.cs" />
+    <Compile Include="Views\ModuleSelectActivity.cs" />
+    <Compile Include="Adapter\ModuleAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -106,6 +108,7 @@
     <AndroidResource Include="Resources\values\Dimens.xml" />
     <AndroidResource Include="Resources\layout\HearMe.axml" />
     <AndroidResource Include="Resources\layout\FourPictures.axml" />
+    <AndroidResource Include="Resources\layout\ModuleSelect.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

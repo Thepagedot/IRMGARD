@@ -7,14 +7,16 @@ namespace IRMGARD.Models
 {
 	public class Module
 	{
+		public string Name { get; set; }
 		public string Color { get; set; }
 		public List<Lesson> Lessons;
 		public int NumberOfLessonsDone;
 
 		public Module () {}
 
-		public Module (string color, List<Lesson> lessons, int numberOfLessonsDone)
+		public Module (string name, string color, List<Lesson> lessons, int numberOfLessonsDone)
 		{
+			this.Name = name;
 			this.Color = color;
 			this.Lessons = lessons;
 			this.NumberOfLessonsDone = numberOfLessonsDone;

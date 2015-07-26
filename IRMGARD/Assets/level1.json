@@ -3,6 +3,7 @@
 	"Color": "#DEB80C",
     "Modules": [
         {
+			"Name": "Module 1",
 			"Color": "#DDD6BF",
             "NumberOfLessonsDone": 0,
             "Lessons": [
