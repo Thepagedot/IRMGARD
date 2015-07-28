@@ -38,7 +38,7 @@ namespace IRMGARD
 			view.FindViewById<TextView> (Android.Resource.Id.Text1).Text = items[position].Name;
 			view.FindViewById<TextView> (Android.Resource.Id.Text2).Text = "This level has " + items[position].Modules.Count + " modules";
 			view.SetBackgroundColor(Android.Graphics.Color.ParseColor (items [position].Color));
-			return view;
+			return view;		
 		}
 
 		public override int Count {

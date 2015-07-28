@@ -88,59 +88,65 @@ namespace IRMGARD
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f070001
-			public const int btnFinish = 2131165185;
-			
-			// aapt resource value: 0x7f07000d
-			public const int btnHint = 2131165197;
-			
-			// aapt resource value: 0x7f07000e
-			public const int btnNextLesson = 2131165198;
-			
-			// aapt resource value: 0x7f070010
-			public const int btnNextModule = 2131165200;
+			// aapt resource value: 0x7f070002
+			public const int btnFinish = 2131165186;
 			
 			// aapt resource value: 0x7f07000f
-			public const int btnPreviousLesson = 2131165199;
+			public const int btnHint = 2131165199;
+			
+			// aapt resource value: 0x7f070010
+			public const int btnNextLesson = 2131165200;
+			
+			// aapt resource value: 0x7f070012
+			public const int btnNextModule = 2131165202;
 			
 			// aapt resource value: 0x7f070011
-			public const int btnPreviousModule = 2131165201;
+			public const int btnPreviousLesson = 2131165201;
 			
-			// aapt resource value: 0x7f07000a
-			public const int btnStart = 2131165194;
-			
-			// aapt resource value: 0x7f07000c
-			public const int btnVoiceInstruction = 2131165196;
-			
-			// aapt resource value: 0x7f070005
-			public const int fragmentContainer = 2131165189;
-			
-			// aapt resource value: 0x7f070002
-			public const int imageView1 = 2131165186;
-			
-			// aapt resource value: 0x7f070009
-			public const int linearLayout1 = 2131165193;
-			
-			// aapt resource value: 0x7f070008
-			public const int lvLevels = 2131165192;
+			// aapt resource value: 0x7f070013
+			public const int btnPreviousModule = 2131165203;
 			
 			// aapt resource value: 0x7f07000b
-			public const int lvModules = 2131165195;
+			public const int btnStart = 2131165195;
 			
-			// aapt resource value: 0x7f070000
-			public const int textView1 = 2131165184;
+			// aapt resource value: 0x7f07000e
+			public const int btnVoiceInstruction = 2131165198;
 			
 			// aapt resource value: 0x7f070006
-			public const int txtCapitalAlphabet = 2131165190;
+			public const int fragmentContainer = 2131165190;
 			
-			// aapt resource value: 0x7f070004
-			public const int txtLessonNumber = 2131165188;
-			
-			// aapt resource value: 0x7f070007
-			public const int txtLowerAlphabet = 2131165191;
+			// aapt resource value: 0x7f070000
+			public const int gvFourPictures = 2131165184;
 			
 			// aapt resource value: 0x7f070003
-			public const int txtModuleNumber = 2131165187;
+			public const int imageView1 = 2131165187;
+			
+			// aapt resource value: 0x7f07000c
+			public const int ivMeidaElementImage = 2131165196;
+			
+			// aapt resource value: 0x7f07000a
+			public const int linearLayout1 = 2131165194;
+			
+			// aapt resource value: 0x7f070009
+			public const int lvLevels = 2131165193;
+			
+			// aapt resource value: 0x7f07000d
+			public const int lvModules = 2131165197;
+			
+			// aapt resource value: 0x7f070001
+			public const int textView1 = 2131165185;
+			
+			// aapt resource value: 0x7f070007
+			public const int txtCapitalAlphabet = 2131165191;
+			
+			// aapt resource value: 0x7f070005
+			public const int txtLessonNumber = 2131165189;
+			
+			// aapt resource value: 0x7f070008
+			public const int txtLowerAlphabet = 2131165192;
+			
+			// aapt resource value: 0x7f070004
+			public const int txtModuleNumber = 2131165188;
 			
 			static Id()
 			{
@@ -171,7 +177,10 @@ namespace IRMGARD
 			public const int Main = 2130903044;
 			
 			// aapt resource value: 0x7f030005
-			public const int ModuleSelect = 2130903045;
+			public const int MediaElement = 2130903045;
+			
+			// aapt resource value: 0x7f030006
+			public const int ModuleSelect = 2130903046;
 			
 			static Layout()
 			{

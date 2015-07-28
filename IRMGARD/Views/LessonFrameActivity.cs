@@ -16,7 +16,7 @@ using IRMGARD.Models;
 
 namespace IRMGARD
 {
-	[Activity (Label = "Lesson", ParentActivity = typeof(LevelSelectActivity))]			
+	[Activity (Label = "Lesson", ParentActivity = typeof(ModuleSelectActivity))]			
 	public class LessonFameActivity : Activity
 	{
 		private const string lessonFragmentTag = "current-lesson-fragment";
@@ -142,9 +142,9 @@ namespace IRMGARD
 		private LessonFragment CreateFragmentForLesson(Lesson lesson)
 		{
 			if (lesson is HearMe)		
-				return new HearMeFragment();
+				return new HearMeFragment(lesson);
 			if (lesson is FourPictures)	
-				return new FourPicturesFragment();
+				return new FourPicturesFragment(lesson);
 			else 						
 				return null;
 		}

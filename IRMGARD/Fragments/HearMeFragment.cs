@@ -11,11 +11,21 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using IRMGARD.Models;
 
 namespace IRMGARD
 {
 	public class HearMeFragment : LessonFragment
 	{
+		private HearMe Lesson;
+
+		public HearMeFragment (Lesson lesson)
+		{
+			this.Lesson = lesson as HearMe;
+			if (Lesson == null)
+				throw new NotSupportedException("Wrong lesson type.");
+		}
+
 		public override void OnCreate (Bundle savedInstanceState)
 		{
 			base.OnCreate (savedInstanceState);
