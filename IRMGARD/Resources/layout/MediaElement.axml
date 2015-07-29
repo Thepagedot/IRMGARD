@@ -9,6 +9,10 @@
         android:id="@+id/ivMeidaElementImage"
         android:layout_width="fill_parent"
         android:layout_height="100dip"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
         android:src="@drawable/irmgard_picture" />
 <!--    <ImageButton
     	android:id="@+id/btnMeidaElementSound"
