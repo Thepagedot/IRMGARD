@@ -78,6 +78,8 @@
     <Compile Include="Views\ModuleSelectActivity.cs" />
     <Compile Include="Adapter\ModuleAdapter.cs" />
     <Compile Include="Adapter\FourPicturesAdapter.cs" />
+    <Compile Include="Utilities\RandomHelper.cs" />
+    <Compile Include="Utilities\AssetHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -111,6 +113,8 @@
     <AndroidResource Include="Resources\layout\FourPictures.axml" />
     <AndroidResource Include="Resources\layout\ModuleSelect.axml" />
     <AndroidResource Include="Resources\layout\MediaElement.axml" />
+    <AndroidResource Include="Resources\drawable\list_selector.xml" />
+    <AndroidResource Include="Resources\values\Colors.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -128,6 +132,7 @@
     <Folder Include="Assets\Sounds\" />
     <Folder Include="Assets\Sounds\Level-1\" />
     <Folder Include="Fragments\" />
+    <Folder Include="Assets\Images\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\Ameise.mp3" />
@@ -141,5 +146,25 @@
     <AndroidAsset Include="Assets\test.json" />
     <AndroidAsset Include="Assets\sandbox.json" />
     <AndroidAsset Include="Assets\level1.json" />
+    <AndroidAsset Include="Assets\Images\Aal.png" />
+    <AndroidAsset Include="Assets\Images\Affe.png" />
+    <AndroidAsset Include="Assets\Images\Ahorn.png" />
+    <AndroidAsset Include="Assets\Images\Ameise.png" />
+    <AndroidAsset Include="Assets\Images\Eber.png" />
+    <AndroidAsset Include="Assets\Images\Efeu.png" />
+    <AndroidAsset Include="Assets\Images\Elefant.png" />
+    <AndroidAsset Include="Assets\Images\Esel.png" />
+    <AndroidAsset Include="Assets\Images\Igel.png" />
+    <AndroidAsset Include="Assets\Images\Iltis.png" />
+    <AndroidAsset Include="Assets\Images\Ina.png" />
+    <AndroidAsset Include="Assets\Images\Insel.png" />
+    <AndroidAsset Include="Assets\Images\Ofen.png" />
+    <AndroidAsset Include="Assets\Images\Ohren.png" />
+    <AndroidAsset Include="Assets\Images\Oma.png" />
+    <AndroidAsset Include="Assets\Images\Opa.png" />
+    <AndroidAsset Include="Assets\Images\U-Boot.png" />
+    <AndroidAsset Include="Assets\Images\Ufo.png" />
+    <AndroidAsset Include="Assets\Images\Uhren.png" />
+    <AndroidAsset Include="Assets\Images\Uhu.png" />
   </ItemGroup>
 </Project>

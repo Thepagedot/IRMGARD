@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
     <GridView
         android:id="@+id/gvFourPictures"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:verticalSpacing="0dp"
-        android:horizontalSpacing="0dp"
+        android:layout_height="fill_parent"
+        android:verticalSpacing="14dip"
+        android:horizontalSpacing="0dip"
         android:stretchMode="columnWidth"
-        android:numColumns="2" />
-</FrameLayout>
+        android:numColumns="2"
+        android:layout_weight="1"
+        android:choiceMode="singleChoice" />
+    <Button
+        android:text="Check"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCheck" />
+</LinearLayout>

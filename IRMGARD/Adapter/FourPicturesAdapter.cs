@@ -22,7 +22,9 @@ namespace IRMGARD
 			if (view == null)
 				view = layoutInflater.Inflate(Resource.Layout.MediaElement, null);
 
-			//view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage).SetImageResource GetItem(position).Media.ImagePath;
+			var bitmap = AssetHelper.GetBitmap(Context, GetItem(position).Media.ImagePath);
+
+			view.FindViewById<ImageView> (Resource.Id.ivMeidaElementImage).SetImageBitmap (bitmap);
 			return view;
 		}
 	}
