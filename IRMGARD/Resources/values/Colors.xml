@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <resources>
-	<color name="transparent">#FF00FF</color>
-    <color name="red">#FFFF0000</color>
+    <color name="light_gray">#FFCCCCCC</color>
 
 </resources>

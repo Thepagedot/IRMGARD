@@ -107,7 +107,6 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_volume_up_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_volume_up_black_24dp.png" />
     <AndroidResource Include="Resources\menu\levelFrame_menu.xml" />
-    <AndroidResource Include="Resources\drawable\irmgard_picture.jpg" />
     <AndroidResource Include="Resources\values\Dimens.xml" />
     <AndroidResource Include="Resources\layout\HearMe.axml" />
     <AndroidResource Include="Resources\layout\FourPictures.axml" />
@@ -115,6 +114,17 @@
     <AndroidResource Include="Resources\layout\MediaElement.axml" />
     <AndroidResource Include="Resources\drawable\list_selector.xml" />
     <AndroidResource Include="Resources\values\Colors.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_forward_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_arrow_forward_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_forward_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow_forward_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_arrow_forward_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_play_arrow_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_play_arrow_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_play_arrow_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_play_arrow_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_play_arrow_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\irmgard_picture.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -166,5 +176,17 @@
     <AndroidAsset Include="Assets\Images\Ufo.png" />
     <AndroidAsset Include="Assets\Images\Uhren.png" />
     <AndroidAsset Include="Assets\Images\Uhu.png" />
+    <AndroidAsset Include="Assets\Sounds\Ahorn.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Eber.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Efeu.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Esel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Iltis.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Ina.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Insel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Ohren.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Oma.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Ufo.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Uhren.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Opa.mp3" />
   </ItemGroup>
 </Project>

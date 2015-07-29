@@ -24,7 +24,8 @@ namespace IRMGARD
 		private int CurrentIterationIndex;
 
 		private GridView gvFourPictures;
-		private Button btnCheck;
+		private TextView tvLetter;
+		private ImageButton btnCheck;
 
 		public FourPicturesFragment (Lesson lesson)
 		{
@@ -56,8 +57,10 @@ namespace IRMGARD
 			gvFourPictures = view.FindViewById<GridView>(Resource.Id.gvFourPictures);
 			gvFourPictures.ItemClick += GvFourPictures_ItemClick;
 
-			btnCheck = view.FindViewById<Button>(Resource.Id.btnCheck);
-			btnCheck.Click += BtnCheck_Click;
+			tvLetter = view.FindViewById<TextView>(Resource.Id.tvLetter);
+
+			btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
+			btnCheck.Click += BtnCheck_Click;		
 
 			InitIteration ();
 
@@ -76,16 +79,18 @@ namespace IRMGARD
 			CurrentOptions.Add(correctOption);
 
 			// Choose three other false Options
+			var random = new Random();
 			var falseOptions = Options.Where(o => !o.Letter.Equals(currentIteration.LettersToLearn.First(), StringComparison.InvariantCultureIgnoreCase));
-			CurrentOptions.Add(falseOptions.ElementAt (new Random ().Next(0, falseOptions.Count() - 1)));
-			CurrentOptions.Add(falseOptions.ElementAt (new Random ().Next(0, falseOptions.Count() - 1)));
-			CurrentOptions.Add(falseOptions.ElementAt (new Random ().Next(0, falseOptions.Count() - 1)));
+			CurrentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
+			CurrentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
+			CurrentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
 
 			// Randomize list
 			CurrentOptions.Shuffle();
 
 			var medidaElementAdapter = new FourPicturesAdapter(Activity.BaseContext, 0, CurrentOptions);
 			gvFourPictures.Adapter = medidaElementAdapter;
+			tvLetter.Text = currentIteration.LettersToLearn.First();
 			btnCheck.Enabled = false;
 		}
 

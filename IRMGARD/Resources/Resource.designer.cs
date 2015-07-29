@@ -44,11 +44,8 @@ namespace IRMGARD
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int red = 2130968577;
-			
 			// aapt resource value: 0x7f040000
-			public const int transparent = 2130968576;
+			public const int light_gray = 2130968576;
 			
 			static Color()
 			{
@@ -83,19 +80,25 @@ namespace IRMGARD
 		{
 			
 			// aapt resource value: 0x7f020000
-			public const int ic_help_black_24dp = 2130837504;
+			public const int ic_arrow_forward_black_24dp = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int ic_volume_up_black_24dp = 2130837505;
+			public const int ic_help_black_24dp = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int Icon = 2130837506;
+			public const int ic_play_arrow_black_24dp = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int irmgard_picture = 2130837507;
+			public const int ic_volume_up_black_24dp = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int list_selector = 2130837508;
+			public const int Icon = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int irmgard_picture = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int list_selector = 2130837510;
 			
 			static Drawable()
 			{
@@ -110,68 +113,71 @@ namespace IRMGARD
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080001
-			public const int btnCheck = 2131230721;
+			// aapt resource value: 0x7f080002
+			public const int btnCheck = 2131230722;
 			
-			// aapt resource value: 0x7f080003
-			public const int btnFinish = 2131230723;
-			
-			// aapt resource value: 0x7f080010
-			public const int btnHint = 2131230736;
+			// aapt resource value: 0x7f080004
+			public const int btnFinish = 2131230724;
 			
 			// aapt resource value: 0x7f080011
-			public const int btnNextLesson = 2131230737;
-			
-			// aapt resource value: 0x7f080013
-			public const int btnNextModule = 2131230739;
+			public const int btnHint = 2131230737;
 			
 			// aapt resource value: 0x7f080012
-			public const int btnPreviousLesson = 2131230738;
+			public const int btnNextLesson = 2131230738;
 			
 			// aapt resource value: 0x7f080014
-			public const int btnPreviousModule = 2131230740;
+			public const int btnNextModule = 2131230740;
 			
-			// aapt resource value: 0x7f08000c
-			public const int btnStart = 2131230732;
+			// aapt resource value: 0x7f080013
+			public const int btnPreviousLesson = 2131230739;
 			
-			// aapt resource value: 0x7f08000f
-			public const int btnVoiceInstruction = 2131230735;
+			// aapt resource value: 0x7f080015
+			public const int btnPreviousModule = 2131230741;
 			
-			// aapt resource value: 0x7f080007
-			public const int fragmentContainer = 2131230727;
+			// aapt resource value: 0x7f08000d
+			public const int btnStart = 2131230733;
+			
+			// aapt resource value: 0x7f080010
+			public const int btnVoiceInstruction = 2131230736;
+			
+			// aapt resource value: 0x7f080008
+			public const int fragmentContainer = 2131230728;
 			
 			// aapt resource value: 0x7f080000
 			public const int gvFourPictures = 2131230720;
 			
-			// aapt resource value: 0x7f080004
-			public const int imageView1 = 2131230724;
-			
-			// aapt resource value: 0x7f08000d
-			public const int ivMeidaElementImage = 2131230733;
-			
-			// aapt resource value: 0x7f08000b
-			public const int linearLayout1 = 2131230731;
-			
-			// aapt resource value: 0x7f08000a
-			public const int lvLevels = 2131230730;
+			// aapt resource value: 0x7f080005
+			public const int imageView1 = 2131230725;
 			
 			// aapt resource value: 0x7f08000e
-			public const int lvModules = 2131230734;
+			public const int ivMeidaElementImage = 2131230734;
 			
-			// aapt resource value: 0x7f080002
-			public const int textView1 = 2131230722;
+			// aapt resource value: 0x7f08000c
+			public const int linearLayout1 = 2131230732;
 			
-			// aapt resource value: 0x7f080008
-			public const int txtCapitalAlphabet = 2131230728;
+			// aapt resource value: 0x7f08000b
+			public const int lvLevels = 2131230731;
 			
-			// aapt resource value: 0x7f080006
-			public const int txtLessonNumber = 2131230726;
+			// aapt resource value: 0x7f08000f
+			public const int lvModules = 2131230735;
+			
+			// aapt resource value: 0x7f080003
+			public const int textView1 = 2131230723;
+			
+			// aapt resource value: 0x7f080001
+			public const int tvLetter = 2131230721;
 			
 			// aapt resource value: 0x7f080009
-			public const int txtLowerAlphabet = 2131230729;
+			public const int txtCapitalAlphabet = 2131230729;
 			
-			// aapt resource value: 0x7f080005
-			public const int txtModuleNumber = 2131230725;
+			// aapt resource value: 0x7f080007
+			public const int txtLessonNumber = 2131230727;
+			
+			// aapt resource value: 0x7f08000a
+			public const int txtLowerAlphabet = 2131230730;
+			
+			// aapt resource value: 0x7f080006
+			public const int txtModuleNumber = 2131230726;
 			
 			static Id()
 			{

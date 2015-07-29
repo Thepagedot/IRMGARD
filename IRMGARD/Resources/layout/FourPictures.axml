@@ -13,9 +13,17 @@
         android:numColumns="2"
         android:layout_weight="1"
         android:choiceMode="singleChoice" />
-    <Button
-        android:text="Check"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvLetter"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnCheck" />
+        android:text="A"
+        android:layout_gravity="center"
+        android:textSize="20dp" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCheck"
+        android:src="@drawable/ic_arrow_forward_black_24dp"
+        android:layout_gravity="end" />
 </LinearLayout>

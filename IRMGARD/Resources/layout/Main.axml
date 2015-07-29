@@ -6,7 +6,7 @@
     android:minWidth="25px"
     android:minHeight="25px">
     <ImageButton
-        android:src="@android:drawable/ic_menu_gallery"
+        android:src="@drawable/ic_play_arrow_black_24dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btnStart"
