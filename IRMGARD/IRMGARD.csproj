@@ -124,6 +124,11 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_play_arrow_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_play_arrow_black_24dp.png" />
     <AndroidResource Include="Resources\drawable\irmgard_picture.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Text.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Text.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Text.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Text.png" />
+    <AndroidResource Include="Resources\drawable\splashscreen.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
