@@ -42,7 +42,7 @@ namespace IRMGARD
 			DataHolder.Current.CurrentLevel = DataHolder.Current.Levels.ElementAt(e.Position);
 
 			// Navigate to lesson view
-			var intent = new Intent(this, typeof(ModuleSelectActivity));
+            var intent = new Intent(this, typeof(LevelSponsorActivity));
 			StartActivity (intent);
 		}
 	}

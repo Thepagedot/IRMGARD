@@ -80,6 +80,7 @@
     <Compile Include="Adapter\FourPicturesAdapter.cs" />
     <Compile Include="Utilities\RandomHelper.cs" />
     <Compile Include="Utilities\AssetHelper.cs" />
+    <Compile Include="Views\LevelSponsorActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -131,6 +132,7 @@
     <AndroidResource Include="Resources\drawable\splashscreen.png" />
     <AndroidResource Include="Resources\values\Styles.xml" />
     <AndroidResource Include="Resources\values-v21\Styles.xml" />
+    <AndroidResource Include="Resources\layout\LevelSponsor.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
