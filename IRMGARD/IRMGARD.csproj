@@ -129,6 +129,8 @@
     <AndroidResource Include="Resources\drawable-xhdpi\Text.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\Text.png" />
     <AndroidResource Include="Resources\drawable\splashscreen.png" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidResource Include="Resources\values-v21\Styles.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -147,6 +149,7 @@
     <Folder Include="Assets\Sounds\Level-1\" />
     <Folder Include="Fragments\" />
     <Folder Include="Assets\Images\" />
+    <Folder Include="Resources\values-v21\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\Ameise.mp3" />

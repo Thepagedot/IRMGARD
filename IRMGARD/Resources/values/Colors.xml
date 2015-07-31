@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <resources>
     <color name="light_gray">#FFCCCCCC</color>
-
+    <color name="irmgard_red">#FFF91A0E</color>
+    <color name="irmgard_red_dark">#FFB7160E</color>
 </resources>

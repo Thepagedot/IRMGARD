@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <!-- Inherit from the light Material Theme -->
+    <style name="IrmgardTheme" parent="android:Theme.Holo.Light">
+       <item name="android:actionBarStyle">@style/IrgmgardActionBar</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="IrgmgardActionBar"
+           parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">@color/irmgard_red</item>
+    </style>
+</resources>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <!-- Inherit from the light Material Theme -->
+    <style name="IrmgardTheme" parent="android:Theme.Material.Light">
+        <!-- Override the app bar color -->
+        <item name="android:colorPrimary">@color/irmgard_red</item>
+
+        <!-- Set status bar color -->
+        <item name="android:statusBarColor">@color/irmgard_red_dark</item>
+
+        <!-- Override the color of UI controls -->
+        <item name="android:colorAccent">@color/irmgard_red</item>
+    </style>
+</resources>

@@ -12,18 +12,13 @@ using Newtonsoft.Json;
 
 namespace IRMGARD
 {
-	[Activity (Label = "Start", MainLauncher = true, Icon = "@drawable/icon")]
+	[Activity (Label = "IRMGARD", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : Activity
 	{
 		protected override async void OnCreate (Bundle bundle)
 		{			
 			base.OnCreate (bundle);
-			SetContentView (Resource.Layout.Main);
-
-			// Init action bar
-			ActionBar.SetLogo (Resource.Drawable.Text);
-			ActionBar.SetDisplayUseLogoEnabled (true);
-			ActionBar.SetDisplayShowHomeEnabled(true);
+			SetContentView (Resource.Layout.Main);           
 
 			// Initialize DataHolder if needed
 			if (DataHolder.Current == null) {
