@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="50dip"
+        android:gravity="center|center"
+        android:textAlignment="center">
+        <TextView
+            android:id="@+id/tvPickSyllable"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minHeight="50dip"
-            android:gravity="center|center"
-            android:textAlignment="center">
-            <TextView
-                android:id="@+id/tvPickSyllable"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAlignment="center"
-                android:gravity="center_vertical|center_horizontal" />
-        </LinearLayout>
-        <GridView
-            android:id="@+id/gvPickSyllable"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:verticalSpacing="0dp"
-            android:horizontalSpacing="0dp"
-            android:stretchMode="columnWidth"
-            android:numColumns="2" />
+            android:textAlignment="center"
+            android:gravity="center_vertical|center_horizontal" />
     </LinearLayout>
-</FrameLayout>
+    <GridView
+        android:id="@+id/gvPickSyllable"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:verticalSpacing="0dp"
+        android:horizontalSpacing="0dp"
+        android:stretchMode="columnWidth"
+        android:numColumns="2"
+        android:choiceMode="singleChoice" />
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCheck"
+        android:src="@drawable/ic_arrow_forward_black_24dp"
+        android:layout_gravity="end" />
+</LinearLayout>

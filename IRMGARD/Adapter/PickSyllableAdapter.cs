@@ -20,9 +20,12 @@ namespace IRMGARD
         {
             View view = convertView;
             if (view == null)
-                view = layoutInflater.Inflate(Resource.Layout.PickSyllable, null);
-            
-            view.FindViewById<TextView>(Resource.Id.tvPickSyllable).Text = GetItem(position).Media.SoundPath;
+                view = layoutInflater.Inflate(Resource.Layout.MediaElement, null);
+
+            var bitmap = AssetHelper.GetBitmap(Context, "Aal.png");
+
+            view.FindViewById<ImageView> (Resource.Id.ivMeidaElementImage).SetImageBitmap (bitmap);
+
             return view;
         }
     }

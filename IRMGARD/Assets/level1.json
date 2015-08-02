@@ -399,39 +399,77 @@
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 6.mp3",
           "Hint": "Lesson 6 Hint",
           "TypeOfLevel": "PickSyllable",
-          "Iterations": [
+          "Options": [
+            {
+              "Letter": "A",
+              "Media": {
+                "SoundPath": "Affe.mp3"
+              }
+            },
+            {
+              "Letter": "E",
+              "Media": {
+                "SoundPath": "Eber.mp3"
+              }
+            },
+            {
+              "Letter": "I",
+              "Media": {
+                "SoundPath": "Insel.mp3"
+              }
+            },
+            {
+              "Letter": "O",
+              "Media": {
+                "SoundPath": "Ohren.mp3"
+              }
+             },
+             {
+                "Letter": "U",
+                "Media": {
+                  "SoundPath": "Ufo.mp3"
+                }
+              }
+            ],
+            "Iterations": [
             {
               "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
               "SyllableToLearn": "MA",
               "SyllableParts": [
                 "M",
                 "A"
-              ],
-              "Options": [
-                {
-                  "Media": {
-                    "SoundPath": "Aal.mp3"
-                  },
-                  "IsCorrect": true
-                },
-                {
-                  "Media": {
-                    "SoundPath": "Igel.mp3"
-                  },
-                  "IsCorrect": true
-                },
-                {
-                  "Media": {
-                    "SoundPath": "Ofen.mp3"
-                  },
-                  "IsCorrect": true
-                },
-                {
-                  "Media": {
-                    "SoundPath": "Wurst.mp3"
-                  },
-                  "IsCorrect": true
-                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "SyllableToLearn": "ME",
+              "SyllableParts": [
+                "M",
+                "E"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "SyllableToLearn": "MI",
+              "SyllableParts": [
+                "M",
+                "I"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "SyllableToLearn": "MO",
+              "SyllableParts": [
+                "M",
+                "O"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "SyllableToLearn": "MU",
+              "SyllableParts": [
+                "M",
+                "U"
               ]
             }
           ]
