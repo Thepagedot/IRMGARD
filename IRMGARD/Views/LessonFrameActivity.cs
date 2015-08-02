@@ -145,6 +145,8 @@ namespace IRMGARD
 				return new HearMeFragment(lesson);
 			if (lesson is FourPictures)	
 				return new FourPicturesFragment(lesson);
+            if (lesson is PickSyllable)
+                return new PickSyllableFragment(lesson);
 			else 						
 				return null;
 		}

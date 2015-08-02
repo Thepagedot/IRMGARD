@@ -81,6 +81,8 @@
     <Compile Include="Utilities\RandomHelper.cs" />
     <Compile Include="Utilities\AssetHelper.cs" />
     <Compile Include="Views\LevelSponsorActivity.cs" />
+    <Compile Include="Fragments\PickSyllableFragment.cs" />
+    <Compile Include="Adapter\PickSyllableAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -133,6 +135,7 @@
     <AndroidResource Include="Resources\values\Styles.xml" />
     <AndroidResource Include="Resources\values-v21\Styles.xml" />
     <AndroidResource Include="Resources\layout\LevelSponsor.axml" />
+    <AndroidResource Include="Resources\layout\PickSyllable.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

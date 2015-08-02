@@ -161,6 +161,9 @@ namespace IRMGARD
 			// aapt resource value: 0x7f090000
 			public const int gvFourPictures = 2131296256;
 			
+			// aapt resource value: 0x7f090011
+			public const int gvPickSyllable = 2131296273;
+			
 			// aapt resource value: 0x7f090005
 			public const int imageView1 = 2131296261;
 			
@@ -184,6 +187,8 @@ namespace IRMGARD
 			
 			// aapt resource value: 0x7f09000c
 			public const int tvSponsorText = 2131296268;
+			// aapt resource value: 0x7f090010
+			public const int tvPickSyllable = 2131296272;
 			
 			// aapt resource value: 0x7f090009
 			public const int txtCapitalAlphabet = 2131296265;
@@ -233,6 +238,9 @@ namespace IRMGARD
 			
 			// aapt resource value: 0x7f030007
 			public const int ModuleSelect = 2130903047;
+			
+			// aapt resource value: 0x7f030007
+			public const int PickSyllable = 2130903047;
 			
 			static Layout()
 			{

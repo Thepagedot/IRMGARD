@@ -47,7 +47,9 @@ namespace IRMGARD
 			var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 			if (capitalize == false)
 				alphabet = alphabet.ToLower();
-				
+			
+            if (markedLetters == null)
+                return new SpannableString(alphabet);
 
 			var spannable = new SpannableString(alphabet);
 			foreach (var letter in markedLetters)
