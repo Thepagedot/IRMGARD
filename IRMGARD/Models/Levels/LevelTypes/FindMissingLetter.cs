@@ -22,7 +22,6 @@ namespace IRMGARD.Models
             this.TaskLetters = taskLetters;
             this.Options = options;
         }
-
     }
 
 	public class FindMissingLetterOption

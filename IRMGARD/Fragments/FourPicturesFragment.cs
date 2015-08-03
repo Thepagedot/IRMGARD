@@ -13,9 +13,9 @@ namespace IRMGARD
 	public class FourPicturesFragment : LessonFragment
 	{
         private FourPictures lesson;
+        private List<FourPicturesIteration> iterations;
         private List<FourPicturesOption> options;
         private List<FourPicturesOption> currentOptions;
-        private List<FourPicturesIteration> iterations;
         private int currentIterationIndex;
 
 		private GridView gvFourPictures;
@@ -40,7 +40,7 @@ namespace IRMGARD
             // Set rest of properties
             this.options = this.lesson.Options;
             this.currentOptions = new List<FourPicturesOption>();
-            currentIterationIndex = 0;
+            this.currentIterationIndex = 0;
 		}
 
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)

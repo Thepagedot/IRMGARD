@@ -83,6 +83,8 @@
     <Compile Include="Views\LevelSponsorActivity.cs" />
     <Compile Include="Fragments\PickSyllableFragment.cs" />
     <Compile Include="Adapter\PickSyllableAdapter.cs" />
+    <Compile Include="Fragments\FindMissingLetterFragment.cs" />
+    <Compile Include="Adapter\FindMissingLetterTaskItemAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -136,6 +138,9 @@
     <AndroidResource Include="Resources\values-v21\Styles.xml" />
     <AndroidResource Include="Resources\layout\LevelSponsor.axml" />
     <AndroidResource Include="Resources\layout\PickSyllable.axml" />
+    <AndroidResource Include="Resources\layout\FindMissingLetter.axml" />
+    <AndroidResource Include="Resources\layout\FindMissingLetterTaskItem.axml" />
+    <AndroidResource Include="Resources\drawable\underscore.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

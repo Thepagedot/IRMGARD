@@ -147,6 +147,8 @@ namespace IRMGARD
 				return new FourPicturesFragment(lesson);
             if (lesson is PickSyllable)
                 return new PickSyllableFragment(lesson);
+            if (lesson is FindMissingLetter)
+                return new FindMissingLetterFragment(lesson);
 			else 						
 				return null;
 		}
