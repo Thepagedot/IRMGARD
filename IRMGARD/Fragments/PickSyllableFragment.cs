@@ -54,13 +54,13 @@ namespace IRMGARD
             btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
             btnCheck.Click += BtnCheck_Click;       
 
-            initIteration ();
+            InitIteration ();
 
 
             return view;
         }
 
-        private void initIteration()
+        private void InitIteration()
         {
             tvPickSyllable.Text = string.Empty;
             var currentIteration = iterations.ElementAt (currentIterationIndex);
@@ -106,25 +106,25 @@ namespace IRMGARD
             btnCheck.Enabled = e.Position >= 0;
         }
 
-        void BtnCheck_Click (object sender, EventArgs e)
+        void BtnCheck_Click(object sender, EventArgs e)
         {
             if (gvPickSyllable.CheckedItemPosition >= 0)
             {
                 var selectedItem = currentOptions.ElementAt(gvPickSyllable.CheckedItemPosition);                                
                 if (selectedItem.IsCorrect) 
                 {
-                    Toast.MakeText (Activity.BaseContext, "Rrrrichtiiig", ToastLength.Short).Show ();
+                    Toast.MakeText (Activity.BaseContext, "Rrrrichtiiig", ToastLength.Short).Show();
                     if (currentIterationIndex == iterations.Count - 1) {
                         // All iterations done. Finish lesson
                         LessonFinished ();
                     } else {
                         currentIterationIndex++;
-                        initIteration ();
+                        InitIteration ();
                     }
                 } 
                 else
                 {
-                    Toast.MakeText (Activity.BaseContext, "Leider verloren", ToastLength.Short).Show ();
+                    Toast.MakeText (Activity.BaseContext, "Leider verloren", ToastLength.Short).Show();
                 }
             }
         }
