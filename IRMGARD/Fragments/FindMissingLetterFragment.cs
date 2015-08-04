@@ -23,6 +23,7 @@ namespace IRMGARD
         private int currentIterationIndex;
 
         private LinearLayout llTaskItems;
+        private ListView lvLetters;
 
         public FindMissingLetterFragment(Lesson lesson)
         {
@@ -48,23 +49,53 @@ namespace IRMGARD
             // Prepare view
             var view = inflater.Inflate(Resource.Layout.FindMissingLetter, container, false);
             llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.llTaskItems);
+            lvLetters = view.FindViewById<ListView>(Resource.Id.lvLetters);
+            lvLetters.ItemClick += LvLetters_ItemClick;
+            var btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
+            btnCheck.Click += BtnCheck_Click;;
 
             // Initialize iteration
             InitIteration();
             return view;
-        }
+        }            
 
         private void InitIteration()
         {
             var currentIteration = iterations.ElementAt(currentIterationIndex);
 
+            // Create lesson
             var taskItemAdapter = new FindMissingLetterTaskItemAdapter(Activity.BaseContext, 0, currentIteration.TaskLetters);
             for (int i = 0; i < currentIteration.TaskLetters.Count; i++)
             {
                 var view = taskItemAdapter.GetView(i, null, null);
                 llTaskItems.AddView(view);
             }
+
+            var letterAdapter = new FindMissingLetterAdapter(Activity.BaseContext, 0, currentIteration.Options);
+            lvLetters.Adapter = letterAdapter;
+        }
+
+        void LvLetters_ItemClick (object sender, AdapterView.ItemClickEventArgs e)
+        {
+            var currentIteration = iterations.ElementAt(currentIterationIndex);
+            var selectedOption = currentIteration.Options.ElementAt(e.Position);
+
+            if (selectedOption.CorrectPos >= 0 && currentIteration.TaskLetters.ElementAt(selectedOption.CorrectPos).Equals(""))
+            {
+                Toast.MakeText (Activity.BaseContext, "Rrrrichtiiig", ToastLength.Short).Show();
+                if (currentIterationIndex == iterations.Count - 1) {
+                    // All iterations done. Finish lesson
+                    LessonFinished ();
+                } else {
+                    currentIterationIndex++;
+                    InitIteration();
+                }
+            }
+        }
+
+        void BtnCheck_Click (object sender, EventArgs e)
+        {
+
         }
     }
 }
-

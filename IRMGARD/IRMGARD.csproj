@@ -85,6 +85,7 @@
     <Compile Include="Adapter\PickSyllableAdapter.cs" />
     <Compile Include="Fragments\FindMissingLetterFragment.cs" />
     <Compile Include="Adapter\FindMissingLetterTaskItemAdapter.cs" />
+    <Compile Include="Adapter\FindMissingLetterAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
