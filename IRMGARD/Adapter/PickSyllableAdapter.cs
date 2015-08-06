@@ -4,6 +4,8 @@ using Android.Widget;
 using Android.Views;
 using Android.Content;
 using System.Collections.Generic;
+using Android.Graphics;
+using Android.Runtime;
 
 namespace IRMGARD
 {
@@ -22,9 +24,12 @@ namespace IRMGARD
             if (view == null)
                 view = layoutInflater.Inflate(Resource.Layout.MediaElement, null);
 
-            var bitmap = AssetHelper.GetBitmap(Context, "Aal.png");
+            var bitmap = BitmapFactory.DecodeResource(Context.Resources, Resource.Drawable.ic_volume_up_black_24dp);
+            //var bitmap = Context.Resource AssetHelper.GetBitmap(Context, "Aal.png");
 
-            view.FindViewById<ImageView> (Resource.Id.ivMeidaElementImage).SetImageBitmap (bitmap);
+            ImageView image = view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage);
+
+            image.SetImageBitmap (bitmap);
 
             return view;
         }

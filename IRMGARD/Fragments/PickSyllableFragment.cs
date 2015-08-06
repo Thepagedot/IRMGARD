@@ -5,6 +5,7 @@ using System.Linq;
 using Android.OS;
 using Android.Widget;
 using Android.Views;
+using Android.Content;
 
 namespace IRMGARD
 {
@@ -18,7 +19,9 @@ namespace IRMGARD
 
         private GridView gvPickSyllable;
         private TextView tvPickSyllable;
+        private TextView textViewDragZone;
         private ImageButton btnCheck;
+        private int correctPosition = -1;
 
         public PickSyllableFragment(Lesson lesson)
         {
@@ -48,6 +51,8 @@ namespace IRMGARD
             var view = inflater.Inflate(Resource.Layout.PickSyllable, container, false);
 
             tvPickSyllable = view.FindViewById<TextView>(Resource.Id.tvPickSyllable);
+            textViewDragZone = view.FindViewById<TextView>(Resource.Id.tvPickSyllableDragZone);
+            textViewDragZone.Drag += textViewDragZoneDrag;
             gvPickSyllable = view.FindViewById<GridView>(Resource.Id.gvPickSyllable);
             gvPickSyllable.ItemClick += GridViewSyllableClicked;
 
@@ -82,6 +87,8 @@ namespace IRMGARD
             // Randomize list
             currentOptions.Shuffle();
 
+            correctPosition = currentOptions.IndexOf(currentOptions.Where(x => x.IsCorrect).FirstOrDefault());
+
 
             foreach (var letter in currentIteration.SyllableParts)
             {
@@ -94,6 +101,7 @@ namespace IRMGARD
 
             var syllableAdapter = new PickSyllableAdapter(Activity.BaseContext, 0, currentOptions);
             gvPickSyllable.Adapter = syllableAdapter;
+            gvPickSyllable.ItemLongClick += imageViewLongClick;
             btnCheck.Enabled = false;
         }
 
@@ -126,6 +134,53 @@ namespace IRMGARD
                 {
                     Toast.MakeText (Activity.BaseContext, "Leider verloren", ToastLength.Short).Show();
                 }
+            }
+        }
+
+        void imageViewLongClick(object sender, AdapterView.ItemLongClickEventArgs e)
+        {
+            // Generate clip data package to attach it to the drag
+            using (var data = ClipData.NewPlainText("position", e.Position.ToString()))
+            {
+                View v = e.View;
+                v.StartDrag(data, new View.DragShadowBuilder(v), null, 0);
+            }
+        }
+
+        void textViewDragZoneDrag (object sender, View.DragEventArgs e)
+        {
+            // React on different dragging events
+            var evt = e.Event;
+            switch (evt.Action) 
+            {
+                case DragAction.Ended:  
+                case DragAction.Started:
+                    e.Handled = true;
+                    break;                
+                    // Dragged element enters the drop zone
+                case DragAction.Entered:                   
+                    //textViewDragZone.Text = "Drop it like it's hot!";
+                    break;
+                    // Dragged element exits the drop zone
+                case DragAction.Exited:                   
+                    //textViewDragZone.Text = "Drop something here!";
+                    break;
+                    // Dragged element has been dropped at the drop zone
+                case DragAction.Drop:
+                    // You can check if element may be dropped here
+                    // If not do not set e.Handled to true
+                    e.Handled = true;
+
+                    // Try to get clip data
+                    var data = e.Event.ClipData;
+                    if (data != null)
+                    {
+                        if (data.GetItemAt(0).Text.Equals(correctPosition.ToString()))
+                            textViewDragZone.Text = data.GetItemAt(0).Text + " correct data.";
+                        else
+                            textViewDragZone.Text = data.GetItemAt(0).Text + " wrong data.";
+                    }
+                    break;
             }
         }
     }

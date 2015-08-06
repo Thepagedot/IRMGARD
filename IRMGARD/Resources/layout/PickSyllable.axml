@@ -16,6 +16,13 @@
             android:layout_height="wrap_content"
             android:textAlignment="center"
             android:gravity="center_vertical|center_horizontal" />
+        <TextView
+            android:id="@+id/tvPickSyllableDragZone"
+            android:text="_____"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:gravity="right" />
     </LinearLayout>
     <GridView
         android:id="@+id/gvPickSyllable"
