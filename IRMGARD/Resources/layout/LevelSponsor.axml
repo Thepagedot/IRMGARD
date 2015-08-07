@@ -14,9 +14,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/tvSponsorText" />
+    <ImageView
+        android:src="@drawable/sponsor_veolia_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginBottom="@dimen/activity_vertical_margin" />
+    <ImageView
+        android:src="@drawable/sponsor_lions_logo"
+        android:layout_width="match_parent"
+        android:maxHeight="100dip"
+        android:layout_weight="1"
+        android:layout_height="100dip"
+        android:layout_marginBottom="@dimen/activity_vertical_margin" />
+    <ImageView
+        android:src="@drawable/sponsor_koenigsdruck_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginBottom="@dimen/activity_vertical_margin" />
     <Button
         android:text="@string/close"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnClose" />
+        android:id="@+id/btnClose"
+        android:layout_gravity="bottom" />
 </LinearLayout>

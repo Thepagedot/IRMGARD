@@ -134,10 +134,19 @@ namespace IRMGARD
 			public const int splashscreen = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int Text = 2130837513;
+			public const int sponsor_koenigsdruck_logo = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int underscore = 2130837514;
+			public const int sponsor_lions_logo = 2130837514;
+			
+			// aapt resource value: 0x7f02000b
+			public const int sponsor_veolia_logo = 2130837515;
+			
+			// aapt resource value: 0x7f02000c
+			public const int Text = 2130837516;
+			
+			// aapt resource value: 0x7f02000d
+			public const int underscore = 2130837517;
 			
 			static Drawable()
 			{
