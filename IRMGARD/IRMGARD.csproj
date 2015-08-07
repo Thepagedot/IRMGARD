@@ -86,6 +86,8 @@
     <Compile Include="Fragments\FindMissingLetterFragment.cs" />
     <Compile Include="Adapter\FindMissingLetterTaskItemAdapter.cs" />
     <Compile Include="Adapter\FindMissingLetterAdapter.cs" />
+    <Compile Include="AddOns\FlowLayout.cs" />
+    <Compile Include="Adapter\LetterAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -142,6 +144,9 @@
     <AndroidResource Include="Resources\layout\FindMissingLetter.axml" />
     <AndroidResource Include="Resources\layout\FindMissingLetterTaskItem.axml" />
     <AndroidResource Include="Resources\drawable\underscore.xml" />
+    <AndroidResource Include="Resources\values\Attrs.xml" />
+    <AndroidResource Include="Resources\layout\Letter.axml" />
+    <AndroidResource Include="Resources\drawable\divider.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -161,6 +166,7 @@
     <Folder Include="Fragments\" />
     <Folder Include="Assets\Images\" />
     <Folder Include="Resources\values-v21\" />
+    <Folder Include="AddOns\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\Ameise.mp3" />

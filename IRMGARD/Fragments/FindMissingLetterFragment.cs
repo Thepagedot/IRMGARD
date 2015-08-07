@@ -22,7 +22,8 @@ namespace IRMGARD
         private int currentIterationIndex;
 
         private LinearLayout llTaskItems;
-        private ListView lvLetters;
+        private FlowLayout flLetters;
+        private ImageButton btnCheck;
 
         public FindMissingLetterFragment(Lesson lesson)
         {
@@ -47,9 +48,8 @@ namespace IRMGARD
             // Prepare view
             var view = inflater.Inflate(Resource.Layout.FindMissingLetter, container, false);
             llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.llTaskItems);
-            lvLetters = view.FindViewById<ListView>(Resource.Id.lvLetters);
-            lvLetters.ItemLongClick += LvLetters_ItemLongClick;
-            var btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
+            flLetters = view.FindViewById<FlowLayout>(Resource.Id.flLetters);
+            btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
             btnCheck.Click += BtnCheck_Click;
 
             // Initialize iteration
@@ -64,8 +64,21 @@ namespace IRMGARD
             // Create lesson
             BuildTaskLetters(currentIteration.TaskLetters);
 
-            var letterAdapter = new FindMissingLetterAdapter(Activity.BaseContext, 0, currentIteration.Options);
-            lvLetters.Adapter = letterAdapter;
+            var letterAdapter = new LetterAdapter(Activity.BaseContext, 0, currentIteration.Options);
+            for (int i = 0; i < currentIteration.Options.Count; i++)
+            {
+                // Add letter to view
+                var view = letterAdapter.GetView(i, null, null);
+                var letter = iterations.ElementAt(currentIterationIndex).Options.ElementAt(i).Letter;
+
+                view.LongClick += (object sender, View.LongClickEventArgs e) => {
+                    var data = ClipData.NewPlainText("letter", letter);
+                    (sender as View).StartDrag(data, new View.DragShadowBuilder(sender as View), null, 0);
+                };
+                flLetters.AddView(view);
+            }
+
+            btnCheck.Enabled = false;
         }
 
         void BuildTaskLetters(List<FindMissingLetterTaskLetter> letters)
@@ -130,6 +143,8 @@ namespace IRMGARD
                                                        
                         BuildTaskLetters(taskLetters);
                     }
+
+                    btnCheck.Enabled = true;
                     break;
             }
         }           
