@@ -304,11 +304,26 @@
                 "U"
               ],
               "TaskLetters": [
-                "A",
-                "E",
-                "I",
-                "",
-                "U"
+                {
+                    Letter: "A",
+                    IsSearched: false
+                },
+                {
+                    Letter: "E",
+                    IsSearched: false
+                },
+                {
+                    Letter: "I",
+                    IsSearched: false
+                },
+                {
+                    Letter: "",
+                    IsSearched: true
+                },
+                {
+                    Letter: "U",
+                    IsSearched: false
+                }                
               ],
               "Options": [
                 {

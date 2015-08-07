@@ -19,7 +19,6 @@ namespace IRMGARD
     {
         private FindMissingLetter lesson;
         private List<FindMissingLetterIteration> iterations;
-        private List<FindMissingLetterOption> currentOptions;
         private int currentIterationIndex;
 
         private LinearLayout llTaskItems;
@@ -40,7 +39,6 @@ namespace IRMGARD
                     iterations.Add(iteration as FindMissingLetterIteration);
             }
 
-            this.currentOptions = new List<FindMissingLetterOption>();
             this.currentIterationIndex = 0;
         }       
 
@@ -50,7 +48,6 @@ namespace IRMGARD
             var view = inflater.Inflate(Resource.Layout.FindMissingLetter, container, false);
             llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.llTaskItems);
             lvLetters = view.FindViewById<ListView>(Resource.Id.lvLetters);
-            lvLetters.ItemClick += LvLetters_ItemClick;
             lvLetters.ItemLongClick += LvLetters_ItemLongClick;
             var btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
             btnCheck.Click += BtnCheck_Click;
@@ -71,18 +68,17 @@ namespace IRMGARD
             lvLetters.Adapter = letterAdapter;
         }
 
-        void BuildTaskLetters(List<string> letters)
+        void BuildTaskLetters(List<FindMissingLetterTaskLetter> letters)
         {
             llTaskItems.RemoveAllViews();
             var taskItemAdapter = new FindMissingLetterTaskItemAdapter(Activity.BaseContext, 0, letters);
             for (int i = 0; i < letters.Count; i++)
             {
                 var view = taskItemAdapter.GetView(i, null, null);
-                if (letters.ElementAt(i).Equals(""))
-                {
-                    // Define as drop zone
-                    view.Drag += View_Drag;
-                }
+
+                // Define searched letters as drop zone
+                if (letters.ElementAt(i).IsSearched)
+                    view.Drag += View_Drag;                
 
                 // Add letter to view
                 llTaskItems.AddView(view);
@@ -125,39 +121,54 @@ namespace IRMGARD
                     var data = e.Event.ClipData;
                     if (data != null)
                     {
-                        var letter = data.GetItemAt(0).Text;
-                        var list = iterations.ElementAt(currentIterationIndex).TaskLetters;
-                        var empty = list.FirstOrDefault(t => t.Equals(""));
-                        empty = letter;                           
-                        
-                                BuildTaskLetters(list);
-                        
-                        
+                        var taskLetters = iterations.ElementAt(currentIterationIndex).TaskLetters;
+                        var draggedLetter = data.GetItemAt(0).Text;
+                        var position = llTaskItems.IndexOfChild(sender as View);
+
+                        if (taskLetters[position].IsSearched)
+                            taskLetters[position].Letter = draggedLetter;
+                                                       
+                        BuildTaskLetters(taskLetters);
                     }
                     break;
             }
-        }
+        }           
 
-        void LvLetters_ItemClick (object sender, AdapterView.ItemClickEventArgs e)
+        void BtnCheck_Click (object sender, EventArgs e)
         {
+            var isCorrect = false;
             var currentIteration = iterations.ElementAt(currentIterationIndex);
-            var selectedOption = currentIteration.Options.ElementAt(e.Position);
-
-            if (selectedOption.CorrectPos >= 0 && currentIteration.TaskLetters.ElementAt(selectedOption.CorrectPos).Equals(""))
+            for(var i = 0; i < currentIteration.TaskLetters.Count; i++ )
             {
-                Toast.MakeText (Activity.BaseContext, "Rrrrichtiiig", ToastLength.Short).Show();
-                if (currentIterationIndex == iterations.Count - 1) {
+                var taskLetter = currentIteration.TaskLetters[i];
+                if (taskLetter.IsSearched)
+                {
+                    var droppedLetter = currentIteration.Options.FirstOrDefault(o => o.Letter.Equals(taskLetter.Letter));
+                    isCorrect = droppedLetter != null && droppedLetter.CorrectPos == i;
+
+                    if (!isCorrect)
+                        break;
+                }
+            }
+
+            if (isCorrect)
+            {
+                Toast.MakeText(Activity.BaseContext, "Rrrrichtiiig", ToastLength.Short).Show();
+                if (currentIterationIndex == iterations.Count - 1)
+                {
                     // All iterations done. Finish lesson
-                    LessonFinished ();
-                } else {
+                    LessonFinished();
+                }
+                else
+                {
                     currentIterationIndex++;
                     InitIteration();
                 }
             }
-        }
-
-        void BtnCheck_Click (object sender, EventArgs e)
-        {
+            else
+            {
+                Toast.MakeText(Activity.BaseContext, "Leider verloren", ToastLength.Short).Show();
+            }
 
         }
     }

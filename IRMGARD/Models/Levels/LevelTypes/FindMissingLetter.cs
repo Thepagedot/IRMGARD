@@ -14,13 +14,27 @@ namespace IRMGARD.Models
 
     public class FindMissingLetterIteration : Iteration
     {
-        public List<string> TaskLetters { get; set; }
+        public List<FindMissingLetterTaskLetter> TaskLetters { get; set; }
         public List<FindMissingLetterOption> Options { get; set; }
 
-        public FindMissingLetterIteration(List<string> lettersToLearn, List<string> taskLetters, List<FindMissingLetterOption> options): base(lettersToLearn)
+        public FindMissingLetterIteration(List<string> lettersToLearn, List<FindMissingLetterTaskLetter> taskLetters, List<FindMissingLetterOption> options): base(lettersToLearn)
         {
             this.TaskLetters = taskLetters;
             this.Options = options;
+        }
+    }
+
+    public class FindMissingLetterTaskLetter
+    {
+        public string Letter { get; set; }
+        public bool IsSearched { get; set; }
+
+        public FindMissingLetterTaskLetter() {}
+
+        public FindMissingLetterTaskLetter(string letter, bool isSearched)
+        {
+            this.Letter = letter;
+            this.IsSearched = isSearched;
         }
     }
 

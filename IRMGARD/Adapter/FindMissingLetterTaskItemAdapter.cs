@@ -3,14 +3,15 @@ using Android.Widget;
 using Android.Content;
 using Android.Views;
 using System.Collections.Generic;
+using IRMGARD.Models;
 
 namespace IRMGARD
 {
-    public class FindMissingLetterTaskItemAdapter : ArrayAdapter<string>
+    public class FindMissingLetterTaskItemAdapter : ArrayAdapter<FindMissingLetterTaskLetter>
     {
         private LayoutInflater layoutInflater;
 
-        public FindMissingLetterTaskItemAdapter(Context context, int resourceId, List<string> items) : base (context, resourceId, items)
+        public FindMissingLetterTaskItemAdapter(Context context, int resourceId, List<FindMissingLetterTaskLetter> items) : base (context, resourceId, items)
         {
             layoutInflater = LayoutInflater.From(context);
         }
@@ -21,7 +22,7 @@ namespace IRMGARD
             if (view == null)
                 view = layoutInflater.Inflate(Resource.Layout.FindMissingLetterTaskItem, null);
 
-            view.FindViewById<TextView>(Resource.Id.tvLetter).Text = GetItem(position);
+            view.FindViewById<TextView>(Resource.Id.tvLetter).Text = GetItem(position).Letter;
             return view;
         }
     }
