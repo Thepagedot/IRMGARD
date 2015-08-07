@@ -51,8 +51,9 @@ namespace IRMGARD
             llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.llTaskItems);
             lvLetters = view.FindViewById<ListView>(Resource.Id.lvLetters);
             lvLetters.ItemClick += LvLetters_ItemClick;
+            lvLetters.ItemLongClick += LvLetters_ItemLongClick;
             var btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
-            btnCheck.Click += BtnCheck_Click;;
+            btnCheck.Click += BtnCheck_Click;
 
             // Initialize iteration
             InitIteration();
@@ -64,15 +65,77 @@ namespace IRMGARD
             var currentIteration = iterations.ElementAt(currentIterationIndex);
 
             // Create lesson
-            var taskItemAdapter = new FindMissingLetterTaskItemAdapter(Activity.BaseContext, 0, currentIteration.TaskLetters);
-            for (int i = 0; i < currentIteration.TaskLetters.Count; i++)
-            {
-                var view = taskItemAdapter.GetView(i, null, null);
-                llTaskItems.AddView(view);
-            }
+            BuildTaskLetters(currentIteration.TaskLetters);
 
             var letterAdapter = new FindMissingLetterAdapter(Activity.BaseContext, 0, currentIteration.Options);
             lvLetters.Adapter = letterAdapter;
+        }
+
+        void BuildTaskLetters(List<string> letters)
+        {
+            llTaskItems.RemoveAllViews();
+            var taskItemAdapter = new FindMissingLetterTaskItemAdapter(Activity.BaseContext, 0, letters);
+            for (int i = 0; i < letters.Count; i++)
+            {
+                var view = taskItemAdapter.GetView(i, null, null);
+                if (letters.ElementAt(i).Equals(""))
+                {
+                    // Define as drop zone
+                    view.Drag += View_Drag;
+                }
+
+                // Add letter to view
+                llTaskItems.AddView(view);
+            }
+        }
+
+        void LvLetters_ItemLongClick (object sender, AdapterView.ItemLongClickEventArgs e)
+        {
+            // Generate clip data package to attach it to the drag
+            var data = ClipData.NewPlainText("letter", iterations.ElementAt(currentIterationIndex).Options.ElementAt(e.Position).Letter);
+
+            // Start dragging and pass data
+            (e.View).StartDrag(data, new View.DragShadowBuilder(e.View), null, 0);
+        }
+
+        void View_Drag (object sender, View.DragEventArgs e)
+        {
+            // React on different dragging events
+            var evt = e.Event;
+            switch (evt.Action) 
+            {
+                case DragAction.Ended:  
+                case DragAction.Started:
+                    e.Handled = true;
+                    break;           
+
+                // Dragged element enters the drop zone
+                case DragAction.Entered:                                       
+                    break;
+
+                // Dragged element exits the drop zone
+                case DragAction.Exited:                                       
+                    break;
+
+                // Dragged element has been dropped at the drop zone
+                case DragAction.Drop:
+                    e.Handled = true;
+
+                    // Try to get clip data
+                    var data = e.Event.ClipData;
+                    if (data != null)
+                    {
+                        var letter = data.GetItemAt(0).Text;
+                        var list = iterations.ElementAt(currentIterationIndex).TaskLetters;
+                        var empty = list.FirstOrDefault(t => t.Equals(""));
+                        empty = letter;                           
+                        
+                                BuildTaskLetters(list);
+                        
+                        
+                    }
+                    break;
+            }
         }
 
         void LvLetters_ItemClick (object sender, AdapterView.ItemClickEventArgs e)
