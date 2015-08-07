@@ -11,3 +11,7 @@ Die Vorteile der App:
 - auch für kurze Zeitfenster am Tag nutzbar,
 - multimedial (Video, Ton, animiert),
 - ermöglicht Lernen, ohne Schamgefühl.
+
+![demo]
+
+[demo]: https://raw.githubusercontent.com/Thepagedot/IRMGARD/master/Misc/IrmgardDemo.gif "App Demo"
