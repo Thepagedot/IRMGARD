@@ -71,15 +71,16 @@ namespace IRMGARD
                 var view = letterAdapter.GetView(i, null, null);
                 var letter = iterations.ElementAt(currentIterationIndex).Options.ElementAt(i).Letter;
 
-                view.LongClick += (object sender, View.LongClickEventArgs e) => {
+                view.Touch += (sender, e) => {
                     var data = ClipData.NewPlainText("letter", letter);
                     (sender as View).StartDrag(data, new View.DragShadowBuilder(sender as View), null, 0);
                 };
+
                 flLetters.AddView(view);
             }
 
             btnCheck.Enabled = false;
-        }
+        }            
 
         void BuildTaskLetters(List<FindMissingLetterTaskLetter> letters)
         {
