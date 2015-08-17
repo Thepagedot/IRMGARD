@@ -15,32 +15,14 @@ using IRMGARD.Models;
 
 namespace IRMGARD
 {
-    public class FindMissingLetterFragment : LessonFragment
+    public class FindMissingLetterFragment : LessonFragment<FindMissingLetter>
     {
-        private FindMissingLetter lesson;
-        private List<FindMissingLetterIteration> iterations;
-        private int currentIterationIndex;
+        LinearLayout llTaskItems;
+        FlowLayout flLetters;
+        ImageButton btnCheck;
 
-        private LinearLayout llTaskItems;
-        private FlowLayout flLetters;
-        private ImageButton btnCheck;
-
-        public FindMissingLetterFragment(Lesson lesson)
+        public FindMissingLetterFragment(Lesson lesson) : base(lesson)
         {
-            // Convert lesson to according sub type
-            this.lesson = lesson as FindMissingLetter;
-            if (lesson == null)
-                throw new NotSupportedException("Wrong lesson type.");
-
-            // Convert iterations
-            iterations = new List<FindMissingLetterIteration>();
-            foreach (var iteration in lesson.Iterations) 
-            {
-                if (iteration is FindMissingLetterIteration)
-                    iterations.Add(iteration as FindMissingLetterIteration);
-            }
-
-            this.currentIterationIndex = 0;
         }       
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -59,7 +41,7 @@ namespace IRMGARD
 
         private void InitIteration()
         {
-            var currentIteration = iterations.ElementAt(currentIterationIndex);
+            var currentIteration = GetCurrentIteration<FindMissingLetterIteration>();
 
             // Create lesson
             BuildTaskLetters(currentIteration.TaskLetters);
@@ -69,8 +51,9 @@ namespace IRMGARD
             {
                 // Add letter to view
                 var view = letterAdapter.GetView(i, null, null);
-                var letter = iterations.ElementAt(currentIterationIndex).Options.ElementAt(i).Letter;
+                var letter = currentIteration.Options.ElementAt(i).Letter;
 
+                // Add drag 
                 view.Touch += (sender, e) => {
                     var data = ClipData.NewPlainText("letter", letter);
                     (sender as View).StartDrag(data, new View.DragShadowBuilder(sender as View), null, 0);
@@ -102,7 +85,7 @@ namespace IRMGARD
         void LvLetters_ItemLongClick (object sender, AdapterView.ItemLongClickEventArgs e)
         {
             // Generate clip data package to attach it to the drag
-            var data = ClipData.NewPlainText("letter", iterations.ElementAt(currentIterationIndex).Options.ElementAt(e.Position).Letter);
+            var data = ClipData.NewPlainText("letter", GetCurrentIteration<FindMissingLetterIteration>().Options.ElementAt(e.Position).Letter);
 
             // Start dragging and pass data
             (e.View).StartDrag(data, new View.DragShadowBuilder(e.View), null, 0);
@@ -135,7 +118,7 @@ namespace IRMGARD
                     var data = e.Event.ClipData;
                     if (data != null)
                     {
-                        var taskLetters = iterations.ElementAt(currentIterationIndex).TaskLetters;
+                        var taskLetters = GetCurrentIteration<FindMissingLetterIteration>().TaskLetters;
                         var draggedLetter = data.GetItemAt(0).Text;
                         var position = llTaskItems.IndexOfChild(sender as View);
 
@@ -153,7 +136,7 @@ namespace IRMGARD
         void BtnCheck_Click (object sender, EventArgs e)
         {
             var isCorrect = false;
-            var currentIteration = iterations.ElementAt(currentIterationIndex);
+            var currentIteration = GetCurrentIteration<FindMissingLetterIteration>();
             for(var i = 0; i < currentIteration.TaskLetters.Count; i++ )
             {
                 var taskLetter = currentIteration.TaskLetters[i];
@@ -170,7 +153,7 @@ namespace IRMGARD
             if (isCorrect)
             {
                 Toast.MakeText(Activity.BaseContext, "Rrrrichtiiig", ToastLength.Short).Show();
-                if (currentIterationIndex == iterations.Count - 1)
+                if (currentIterationIndex == lesson.Iterations.Count - 1)
                 {
                     // All iterations done. Finish lesson
                     LessonFinished();
@@ -185,7 +168,6 @@ namespace IRMGARD
             {
                 Toast.MakeText(Activity.BaseContext, "Leider verloren", ToastLength.Short).Show();
             }
-
         }
     }
 }

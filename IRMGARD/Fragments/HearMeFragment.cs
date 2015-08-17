@@ -15,15 +15,10 @@ using IRMGARD.Models;
 
 namespace IRMGARD
 {
-	public class HearMeFragment : LessonFragment
+    public class HearMeFragment : LessonFragment<HearMe>
 	{
-		private HearMe Lesson;
-
-		public HearMeFragment (Lesson lesson)
+        public HearMeFragment (Lesson lesson) : base(lesson)
 		{
-			this.Lesson = lesson as HearMe;
-			if (Lesson == null)
-				throw new NotSupportedException("Wrong lesson type.");
 		}
 
 		public override void OnCreate (Bundle savedInstanceState)
