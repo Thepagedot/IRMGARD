@@ -17,14 +17,16 @@ namespace IRMGARD
 {
     public class HearMeFragment : LessonFragment<HearMe>
 	{
-        public HearMeFragment (Lesson lesson) : base(lesson)
-		{
-		}
+        public HearMeFragment (Lesson lesson) : base(lesson) {}
 
-		public override void OnCreate (Bundle savedInstanceState)
-		{
-			base.OnCreate (savedInstanceState);
-		}
+        public override void OnCreate (Bundle savedInstanceState)
+        {
+            base.OnCreate (savedInstanceState);
+        }
+
+        protected override void InitIteration()
+        {
+        }
 
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
@@ -36,7 +38,12 @@ namespace IRMGARD
 
 		void FinishButton_Click (object sender, EventArgs e)
 		{
-			LessonFinished();
+            CheckSolution();
 		}
+
+        protected override void CheckSolution()
+        {
+            FinishIteration();
+        }            
 	}
 }

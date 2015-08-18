@@ -9,13 +9,9 @@ using Android.Content;
 
 namespace IRMGARD
 {
-    public class PickSyllableFragment : LessonFragment
+    public class PickSyllableFragment : LessonFragment<PickSyllable>
     {
-        private PickSyllable lesson;
-        private List<PickSyllableOption> options;
         private List<PickSyllableOption> currentOptions;
-        private List<PickSyllableIteration> iterations;
-        private int currentIterationIndex;
 
         private GridView gvPickSyllable;
         private TextView tvPickSyllable;
@@ -23,27 +19,11 @@ namespace IRMGARD
         private ImageButton btnCheck;
         private int correctPosition = -1;
 
-        public PickSyllableFragment(Lesson lesson)
-        {
-            this.lesson = lesson as PickSyllable;
-            if (this.lesson == null)
-                throw new NotSupportedException("Wrong lesson type.");
-
-            this.options = this.lesson.Options;
-            this.currentOptions = new List<PickSyllableOption>();
-
-            this.iterations = new List<PickSyllableIteration>();
-            foreach (var iteration in lesson.Iterations)
-            {
-                if (iteration is PickSyllableIteration)
-                    this.iterations.Add(iteration as PickSyllableIteration);
-            }
-        }
+        public PickSyllableFragment(Lesson lesson) : base(lesson) {}
 
         public override void OnCreate (Bundle savedInstanceState)
         {
             base.OnCreate (savedInstanceState);
-            currentIterationIndex = 0;
         }
 
         public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -59,27 +39,27 @@ namespace IRMGARD
             btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
             btnCheck.Click += BtnCheck_Click;       
 
-            InitIteration ();
+            InitIteration();
 
 
             return view;
         }
 
-        private void InitIteration()
+        protected override void InitIteration()
         {
             tvPickSyllable.Text = string.Empty;
-            var currentIteration = iterations.ElementAt (currentIterationIndex);
-            currentOptions.Clear();
+            var currentIteration = GetCurrentIteration<PickSyllableIteration>();
+            currentOptions = new List<PickSyllableOption>();
 
             // Choose a random correct option
-            var correctOptions = options.Where(o => o.Letter.Equals(currentIteration.SyllableParts.ElementAt(1), StringComparison.InvariantCultureIgnoreCase));
+            var correctOptions = lesson.Options.Where(o => o.Letter.Equals(currentIteration.SyllableParts.ElementAt(1), StringComparison.InvariantCultureIgnoreCase));
             var correctOption = correctOptions.ElementAt(new Random().Next(0, correctOptions.Count() - 1));
             correctOption.IsCorrect = true;
             currentOptions.Add(correctOption);
 
             // Choose three other false Options
             var random = new Random();
-            var falseOptions = options.Where(o => !o.Letter.Equals(currentIteration.SyllableParts.ElementAt(1), StringComparison.InvariantCultureIgnoreCase));
+            var falseOptions = lesson.Options.Where(o => !o.Letter.Equals(currentIteration.SyllableParts.ElementAt(1), StringComparison.InvariantCultureIgnoreCase));
             currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
             currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
             currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
@@ -116,25 +96,7 @@ namespace IRMGARD
 
         void BtnCheck_Click(object sender, EventArgs e)
         {
-            if (gvPickSyllable.CheckedItemPosition >= 0)
-            {
-                var selectedItem = currentOptions.ElementAt(gvPickSyllable.CheckedItemPosition);                                
-                if (selectedItem.IsCorrect) 
-                {
-                    Toast.MakeText (Activity.BaseContext, "Rrrrichtiiig", ToastLength.Short).Show();
-                    if (currentIterationIndex == iterations.Count - 1) {
-                        // All iterations done. Finish lesson
-                        LessonFinished ();
-                    } else {
-                        currentIterationIndex++;
-                        InitIteration ();
-                    }
-                } 
-                else
-                {
-                    Toast.MakeText (Activity.BaseContext, "Leider verloren", ToastLength.Short).Show();
-                }
-            }
+            CheckSolution();
         }
 
         void imageViewLongClick(object sender, AdapterView.ItemLongClickEventArgs e)
@@ -181,6 +143,23 @@ namespace IRMGARD
                             textViewDragZone.Text = data.GetItemAt(0).Text + " wrong data.";
                     }
                     break;
+            }
+        }
+
+        protected override void CheckSolution()
+        {
+            if (gvPickSyllable.CheckedItemPosition >= 0)
+            {
+                var selectedItem = currentOptions.ElementAt(gvPickSyllable.CheckedItemPosition);                                
+                if (selectedItem.IsCorrect) 
+                {
+                    Toast.MakeText (Activity.BaseContext, "Rrrrichtiiig", ToastLength.Short).Show();
+                    FinishIteration();
+                } 
+                else
+                {
+                    Toast.MakeText (Activity.BaseContext, "Leider verloren", ToastLength.Short).Show();
+                }
             }
         }
     }

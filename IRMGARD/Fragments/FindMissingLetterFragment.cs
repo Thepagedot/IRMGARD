@@ -14,16 +14,14 @@ using Android.Widget;
 using IRMGARD.Models;
 
 namespace IRMGARD
-{
+{    
     public class FindMissingLetterFragment : LessonFragment<FindMissingLetter>
     {
         LinearLayout llTaskItems;
         FlowLayout flLetters;
         ImageButton btnCheck;
 
-        public FindMissingLetterFragment(Lesson lesson) : base(lesson)
-        {
-        }       
+        public FindMissingLetterFragment(Lesson lesson) : base(lesson) {}       
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -37,9 +35,9 @@ namespace IRMGARD
             // Initialize iteration
             InitIteration();
             return view;
-        }            
+        } 
 
-        private void InitIteration()
+        protected override void InitIteration()
         {
             var currentIteration = GetCurrentIteration<FindMissingLetterIteration>();
 
@@ -63,7 +61,7 @@ namespace IRMGARD
             }
 
             btnCheck.Enabled = false;
-        }            
+        }                        
 
         void BuildTaskLetters(List<FindMissingLetterTaskLetter> letters)
         {
@@ -135,6 +133,11 @@ namespace IRMGARD
 
         void BtnCheck_Click (object sender, EventArgs e)
         {
+            CheckSolution();
+        }
+
+        protected override void CheckSolution()
+        {
             var isCorrect = false;
             var currentIteration = GetCurrentIteration<FindMissingLetterIteration>();
             for(var i = 0; i < currentIteration.TaskLetters.Count; i++ )
@@ -151,23 +154,9 @@ namespace IRMGARD
             }
 
             if (isCorrect)
-            {
-                Toast.MakeText(Activity.BaseContext, "Rrrrichtiiig", ToastLength.Short).Show();
-                if (currentIterationIndex == lesson.Iterations.Count - 1)
-                {
-                    // All iterations done. Finish lesson
-                    LessonFinished();
-                }
-                else
-                {
-                    currentIterationIndex++;
-                    InitIteration();
-                }
-            }
+                FinishIteration();
             else
-            {
                 Toast.MakeText(Activity.BaseContext, "Leider verloren", ToastLength.Short).Show();
-            }
         }
     }
 }
