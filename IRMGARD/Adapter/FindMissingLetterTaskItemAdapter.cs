@@ -23,6 +23,10 @@ namespace IRMGARD
                 view = layoutInflater.Inflate(Resource.Layout.FindMissingLetterTaskItem, null);
 
             view.FindViewById<TextView>(Resource.Id.tvLetter).Text = GetItem(position).Letter;
+
+            if (!GetItem(position).IsSearched)
+                view.FindViewById<LinearLayout>(Resource.Id.llLayout).Background = null;
+
             return view;
         }
     }

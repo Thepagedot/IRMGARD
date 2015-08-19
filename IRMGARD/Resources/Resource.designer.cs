@@ -110,43 +110,46 @@ namespace IRMGARD
 			public const int divider = 2130837504;
 			
 			// aapt resource value: 0x7f020001
-			public const int ic_arrow_forward_black_24dp = 2130837505;
+			public const int dotted = 2130837505;
 			
 			// aapt resource value: 0x7f020002
-			public const int ic_help_black_24dp = 2130837506;
+			public const int ic_arrow_forward_black_24dp = 2130837506;
 			
 			// aapt resource value: 0x7f020003
-			public const int ic_play_arrow_black_24dp = 2130837507;
+			public const int ic_help_black_24dp = 2130837507;
 			
 			// aapt resource value: 0x7f020004
-			public const int ic_volume_up_black_24dp = 2130837508;
+			public const int ic_play_arrow_black_24dp = 2130837508;
 			
 			// aapt resource value: 0x7f020005
-			public const int Icon = 2130837509;
+			public const int ic_volume_up_black_24dp = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int irmgard_picture = 2130837510;
+			public const int Icon = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int list_selector = 2130837511;
+			public const int irmgard_picture = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int splashscreen = 2130837512;
+			public const int list_selector = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int sponsor_koenigsdruck_logo = 2130837513;
+			public const int splashscreen = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int sponsor_lions_logo = 2130837514;
+			public const int sponsor_koenigsdruck_logo = 2130837514;
 			
 			// aapt resource value: 0x7f02000b
-			public const int sponsor_veolia_logo = 2130837515;
+			public const int sponsor_lions_logo = 2130837515;
 			
 			// aapt resource value: 0x7f02000c
-			public const int Text = 2130837516;
+			public const int sponsor_veolia_logo = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int underscore = 2130837517;
+			public const int Text = 2130837517;
+			
+			// aapt resource value: 0x7f02000e
+			public const int underscore = 2130837518;
 			
 			static Drawable()
 			{
@@ -164,98 +167,101 @@ namespace IRMGARD
 			// aapt resource value: 0x7f090004
 			public const int btnCheck = 2131296260;
 			
-			// aapt resource value: 0x7f090013
-			public const int btnClose = 2131296275;
+			// aapt resource value: 0x7f090014
+			public const int btnClose = 2131296276;
 			
-			// aapt resource value: 0x7f090008
-			public const int btnFinish = 2131296264;
-			
-			// aapt resource value: 0x7f09001c
-			public const int btnHint = 2131296284;
+			// aapt resource value: 0x7f090009
+			public const int btnFinish = 2131296265;
 			
 			// aapt resource value: 0x7f09001d
-			public const int btnNextLesson = 2131296285;
-			
-			// aapt resource value: 0x7f09001f
-			public const int btnNextModule = 2131296287;
+			public const int btnHint = 2131296285;
 			
 			// aapt resource value: 0x7f09001e
-			public const int btnPreviousLesson = 2131296286;
+			public const int btnNextLesson = 2131296286;
 			
 			// aapt resource value: 0x7f090020
-			public const int btnPreviousModule = 2131296288;
+			public const int btnNextModule = 2131296288;
 			
-			// aapt resource value: 0x7f090015
-			public const int btnStart = 2131296277;
+			// aapt resource value: 0x7f09001f
+			public const int btnPreviousLesson = 2131296287;
 			
-			// aapt resource value: 0x7f09001b
-			public const int btnVoiceInstruction = 2131296283;
+			// aapt resource value: 0x7f090021
+			public const int btnPreviousModule = 2131296289;
+			
+			// aapt resource value: 0x7f090016
+			public const int btnStart = 2131296278;
+			
+			// aapt resource value: 0x7f09001c
+			public const int btnVoiceInstruction = 2131296284;
 			
 			// aapt resource value: 0x7f090003
 			public const int flLetters = 2131296259;
 			
-			// aapt resource value: 0x7f09000c
-			public const int fragmentContainer = 2131296268;
+			// aapt resource value: 0x7f09000d
+			public const int fragmentContainer = 2131296269;
 			
-			// aapt resource value: 0x7f090006
-			public const int gvFourPictures = 2131296262;
+			// aapt resource value: 0x7f090007
+			public const int gvFourPictures = 2131296263;
 			
-			// aapt resource value: 0x7f09001a
-			public const int gvPickSyllable = 2131296282;
+			// aapt resource value: 0x7f09001b
+			public const int gvPickSyllable = 2131296283;
 			
 			// aapt resource value: 0x7f090000
 			public const int horizontal = 2131296256;
 			
-			// aapt resource value: 0x7f090009
-			public const int imageView1 = 2131296265;
+			// aapt resource value: 0x7f09000a
+			public const int imageView1 = 2131296266;
 			
-			// aapt resource value: 0x7f090016
-			public const int ivMeidaElementImage = 2131296278;
+			// aapt resource value: 0x7f090017
+			public const int ivMeidaElementImage = 2131296279;
 			
-			// aapt resource value: 0x7f090014
-			public const int linearLayout1 = 2131296276;
+			// aapt resource value: 0x7f090015
+			public const int linearLayout1 = 2131296277;
+			
+			// aapt resource value: 0x7f090005
+			public const int llLayout = 2131296261;
 			
 			// aapt resource value: 0x7f090002
 			public const int llTaskItems = 2131296258;
 			
-			// aapt resource value: 0x7f09000f
-			public const int longIndicator = 2131296271;
-			
-			// aapt resource value: 0x7f090011
-			public const int lvLevels = 2131296273;
-			
-			// aapt resource value: 0x7f090017
-			public const int lvModules = 2131296279;
-			
 			// aapt resource value: 0x7f090010
-			public const int shortIndicator = 2131296272;
-			
-			// aapt resource value: 0x7f090007
-			public const int textView1 = 2131296263;
-			
-			// aapt resource value: 0x7f090005
-			public const int tvLetter = 2131296261;
-			
-			// aapt resource value: 0x7f090018
-			public const int tvPickSyllable = 2131296280;
-			
-			// aapt resource value: 0x7f090019
-			public const int tvPickSyllableDragZone = 2131296281;
+			public const int longIndicator = 2131296272;
 			
 			// aapt resource value: 0x7f090012
-			public const int tvSponsorText = 2131296274;
+			public const int lvLevels = 2131296274;
 			
-			// aapt resource value: 0x7f09000d
-			public const int txtCapitalAlphabet = 2131296269;
+			// aapt resource value: 0x7f090018
+			public const int lvModules = 2131296280;
 			
-			// aapt resource value: 0x7f09000b
-			public const int txtLessonNumber = 2131296267;
+			// aapt resource value: 0x7f090011
+			public const int shortIndicator = 2131296273;
+			
+			// aapt resource value: 0x7f090008
+			public const int textView1 = 2131296264;
+			
+			// aapt resource value: 0x7f090006
+			public const int tvLetter = 2131296262;
+			
+			// aapt resource value: 0x7f090019
+			public const int tvPickSyllable = 2131296281;
+			
+			// aapt resource value: 0x7f09001a
+			public const int tvPickSyllableDragZone = 2131296282;
+			
+			// aapt resource value: 0x7f090013
+			public const int tvSponsorText = 2131296275;
 			
 			// aapt resource value: 0x7f09000e
-			public const int txtLowerAlphabet = 2131296270;
+			public const int txtCapitalAlphabet = 2131296270;
 			
-			// aapt resource value: 0x7f09000a
-			public const int txtModuleNumber = 2131296266;
+			// aapt resource value: 0x7f09000c
+			public const int txtLessonNumber = 2131296268;
+			
+			// aapt resource value: 0x7f09000f
+			public const int txtLowerAlphabet = 2131296271;
+			
+			// aapt resource value: 0x7f09000b
+			public const int txtModuleNumber = 2131296267;
 			
 			// aapt resource value: 0x7f090001
 			public const int vertical = 2131296257;

@@ -215,12 +215,14 @@ namespace IRMGARD
 		private void NextLesson()
 		{
 			var nextLesson = DataHolder.Current.CurrentModule.GetNextLesson (DataHolder.Current.CurrentLesson);
-			if (nextLesson != null) 
-			{
-				DataHolder.Current.CurrentLesson = nextLesson;
-				DataHolder.Current.CurrentIteration = nextLesson.Iterations.First();
-				InitLesson();
-			}	
+            if (nextLesson != null)
+            {
+                DataHolder.Current.CurrentLesson = nextLesson;
+                DataHolder.Current.CurrentIteration = nextLesson.Iterations.First();
+                InitLesson();
+            }
+            else
+                Finish();
 		}
 
 		/// <summary>

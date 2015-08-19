@@ -101,7 +101,7 @@ namespace IRMGARD
                     break;           
 
                 // Dragged element enters the drop zone
-                case DragAction.Entered:                                       
+                case DragAction.Entered:
                     break;
 
                 // Dragged element exits the drop zone

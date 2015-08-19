@@ -150,6 +150,7 @@
     <AndroidResource Include="Resources\drawable\sponsor_koenigsdruck_logo.png" />
     <AndroidResource Include="Resources\drawable\sponsor_lions_logo.png" />
     <AndroidResource Include="Resources\drawable\sponsor_veolia_logo.png" />
+    <AndroidResource Include="Resources\drawable\dotted.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
