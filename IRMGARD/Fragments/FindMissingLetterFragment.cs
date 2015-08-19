@@ -20,6 +20,7 @@ namespace IRMGARD
         LinearLayout llTaskItems;
         FlowLayout flLetters;
         ImageButton btnCheck;
+        Case fontCase;
 
         public FindMissingLetterFragment(Lesson lesson) : base(lesson) {}       
 
@@ -41,8 +42,19 @@ namespace IRMGARD
         {
             var currentIteration = GetCurrentIteration<FindMissingLetterIteration>();
 
+            // Set font case
+            fontCase = Case.Ignore;
+            if (currentIteration.RandomizeCase)
+            {
+                var random = new Random();
+                fontCase = (Case)(random.Next(2) + 1);
+            }
+
+            // Generate options
+            currentIteration.Options = GenerateOptions(currentIteration, 10, fontCase);
+
             // Create lesson
-            BuildTaskLetters(currentIteration.TaskLetters);
+            BuildTaskLetters(currentIteration.TaskLetters, fontCase);
 
             var letterAdapter = new LetterAdapter(Activity.BaseContext, 0, currentIteration.Options);
             for (int i = 0; i < currentIteration.Options.Count; i++)
@@ -61,12 +73,47 @@ namespace IRMGARD
             }
 
             btnCheck.Enabled = false;
-        }                        
+        }         
 
-        void BuildTaskLetters(List<FindMissingLetterTaskLetter> letters)
+        List<FindMissingLetterOption> GenerateOptions(FindMissingLetterIteration iteration, int numberOfOptions, Case fontCase)
+        {
+            var options = new List<FindMissingLetterOption>();
+
+            // Add correct options
+            var correctTasks = iteration.TaskLetters.Where(l => l.IsSearched);
+            foreach (var task in correctTasks)
+                options.Add(new FindMissingLetterOption(task.CorrectLetter.ToCase(fontCase), task.IsLong, task.IsLong, iteration.TaskLetters.IndexOf(task)));
+
+            // Add false options
+            while (options.Count() < numberOfOptions)
+            {
+                var letter = Alphabet.GetRandomLetter();
+
+                // TODO: This will never return two of the same letters with different isLong or isShort indicators. This is probably needed for some lessons.
+                while (options.FirstOrDefault(o => o.Letter.Equals(letter, StringComparison.InvariantCultureIgnoreCase)) != null)
+                {
+                    letter = Alphabet.GetRandomLetter();
+                }
+
+                if (iteration.HasLongAndShortLetters)
+                {
+                    var random = new Random();    
+                    options.Add(new FindMissingLetterOption(letter.ToCase(fontCase), random.Next(1) == 0, random.Next(1) == 0, -1));
+                }
+                else
+                {
+                    options.Add(new FindMissingLetterOption(letter.ToCase(fontCase), false, false, -1));
+                }
+            }
+
+            options.Shuffle();
+            return options;
+        }
+
+        void BuildTaskLetters(List<FindMissingLetterTaskLetter> letters, Case fontCase)
         {
             llTaskItems.RemoveAllViews();
-            var taskItemAdapter = new FindMissingLetterTaskItemAdapter(Activity.BaseContext, 0, letters);
+            var taskItemAdapter = new FindMissingLetterTaskItemAdapter(Activity.BaseContext, 0, letters, fontCase);
             for (int i = 0; i < letters.Count; i++)
             {
                 var view = taskItemAdapter.GetView(i, null, null);
@@ -123,7 +170,7 @@ namespace IRMGARD
                         if (taskLetters[position].IsSearched)
                             taskLetters[position].Letter = draggedLetter;
                                                        
-                        BuildTaskLetters(taskLetters);
+                        BuildTaskLetters(taskLetters, fontCase);
                     }
 
                     btnCheck.Enabled = true;

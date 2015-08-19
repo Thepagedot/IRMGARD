@@ -9,7 +9,7 @@
       "Lessons": [
         {
           "$type": "IRMGARD.Models.HearMe, IRMGARD",
-          "Id": 1,
+          "Id": 111,
           "Title": "AEIOU",
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 1.mp3",
           "Hint": "Lesson 1 Hint",
@@ -74,7 +74,7 @@
         },
         {
           "$type": "IRMGARD.Models.FourPictures, IRMGARD",
-          "Id": 2,
+          "Id": 113,
           "Title": "AEIOU",
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 2.mp3",
           "Hint": "Lesson 2 Hint",
@@ -256,7 +256,7 @@
         },
         {
           "$type": "IRMGARD.Models.LetterDrop, IRMGARD",
-          "Id": 3,
+          "Id": 114,
           "Title": "A oder a?",
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 3.mp3",
           "Hint": "Lesson 3 Hint",
@@ -288,7 +288,7 @@
         },
         {
           "$type": "IRMGARD.Models.FindMissingLetter, IRMGARD",
-          "Id": 4,
+          "Id": 115,
           "Title": "A?IOU",
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 4.mp3",
           "Hint": "Lesson 4 Hint",
@@ -296,107 +296,41 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.FindMissingLetterIteration, IRMGARD",
-              "LettersToLearn": [
-                "A",
-                "E",
-                "I",
-                "O",
-                "U"
-              ],
+              "LettersToLearn": [ "A", "E", "I", "O", "U" ],
+              "HasLongAndShortLetters": false,
+              "RandomizeCase": true,
               "TaskLetters": [
                 {
-                    Letter: "A",
-                    IsSearched: false
+                    "Letter": "A",
+                    "IsShort": false,
+                    "IsLong": false,
+                    "IsSearched": false
                 },
                 {
-                    Letter: "E",
-                    IsSearched: false
+                    "Letter": "E",
+                    "IsShort": false,
+                    "IsLong": false,
+                    "IsSearched": false
                 },
                 {
-                    Letter: "I",
-                    IsSearched: false
+                    "Letter": "I",
+                    "IsShort": false,
+                    "IsLong": false,
+                    "IsSearched": false
                 },
                 {
-                    Letter: "",
-                    IsSearched: true
+                    "Letter": "O",
+                    "IsShort": false,
+                    "IsLong": false,
+                    "IsSearched": true
                 },
                 {
-                    Letter: "U",
-                    IsSearched: false
+                    "Letter": "U",
+                    "IsShort": false,
+                    "IsLong": false,
+                    "IsSearched": false
                 }                
-              ],
-              "Options": [
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "A",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "F",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "G",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "B",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "C",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "O",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": 3
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "I",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "J",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "D",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "E",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
-                }
-              ]
+              ]              
             }
           ]
         }
@@ -409,7 +343,7 @@
       "Lessons": [
         {
           "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
-          "Id": 110,
+          "Id": 121,
           "Title": "AEIOU",
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 6.mp3",
           "Hint": "Lesson 6 Hint",

@@ -10,10 +10,12 @@ namespace IRMGARD
     public class FindMissingLetterTaskItemAdapter : ArrayAdapter<FindMissingLetterTaskLetter>
     {
         private LayoutInflater layoutInflater;
+        private Case fontCase;
 
-        public FindMissingLetterTaskItemAdapter(Context context, int resourceId, List<FindMissingLetterTaskLetter> items) : base (context, resourceId, items)
+        public FindMissingLetterTaskItemAdapter(Context context, int resourceId, List<FindMissingLetterTaskLetter> items, Case fontCase) : base (context, resourceId, items)
         {
-            layoutInflater = LayoutInflater.From(context);
+            this.layoutInflater = LayoutInflater.From(context);
+            this.fontCase = fontCase;
         }
 
         public override View GetView(int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
@@ -22,7 +24,7 @@ namespace IRMGARD
             if (view == null)
                 view = layoutInflater.Inflate(Resource.Layout.FindMissingLetterTaskItem, null);
 
-            view.FindViewById<TextView>(Resource.Id.tvLetter).Text = GetItem(position).Letter;
+            view.FindViewById<TextView>(Resource.Id.tvLetter).Text = GetItem(position).Letter.ToCase(fontCase);
 
             if (!GetItem(position).IsSearched)
                 view.FindViewById<LinearLayout>(Resource.Id.llLayout).Background = null;

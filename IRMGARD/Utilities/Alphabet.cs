@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using Android.Text;
 using Android.Widget;
 using Android.Text.Style;
+using System.Linq;
 
 namespace IRMGARD
 {
 	public static class Alphabet
 	{
-		static List<string> letters;
+		public static List<string> Letters;
 
 		static Alphabet()
 		{
-			letters = new List<string> {
+			Letters = new List<string> {
 				"A",
 				"B",
 				"C",
@@ -42,6 +43,12 @@ namespace IRMGARD
 			};
 		}
 
+        public static string GetRandomLetter()
+        {
+            var rand = new Random();
+            return Letters.ElementAt(rand.Next(Letters.Count - 1));
+        }
+
 		public static SpannableString GetLettersMarked(List<string> markedLetters, bool capitalize)
 		{
 			var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -54,12 +61,27 @@ namespace IRMGARD
 			var spannable = new SpannableString(alphabet);
 			foreach (var letter in markedLetters)
 			{
-				var index = letters.IndexOf(letter.ToUpper());
+				var index = Letters.IndexOf(letter.ToUpper());
 				spannable.SetSpan(new ForegroundColorSpan(Android.Graphics.Color.Red), index, index + 1, SpanTypes.ExclusiveExclusive);
 			}
 
 			return spannable;
-		}
-	}
+		}            
+
+        public static string ToCase(this string letter, Case fontCase)
+        {
+            switch (fontCase)
+            {                
+                default:
+                    return letter;
+                case Case.Upper:
+                    return letter.ToUpper();
+                case Case.Lower:
+                    return letter.ToLower();
+            }
+        }
+	}        
+
+    public enum Case { Ignore, Upper, Lower }
 }
 

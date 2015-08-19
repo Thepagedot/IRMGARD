@@ -88,6 +88,7 @@
     <Compile Include="Adapter\FindMissingLetterAdapter.cs" />
     <Compile Include="AddOns\FlowLayout.cs" />
     <Compile Include="Adapter\LetterAdapter.cs" />
+    <Compile Include="Models\Letter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
