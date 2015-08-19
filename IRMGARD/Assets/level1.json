@@ -535,17 +535,22 @@
               "Syllables": [
                 {
                   "SyllableParts": [
-                    "L",
-                    "a"
+                   {
+                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                  "Letter": "L",
+                  "DraggedLetter": "",
+                  "IsShort": false,
+                  "IsLong": false,
+                   },
+                   {
+                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                  "Letter": "a",
+                  "DraggedLetter": "",
+                  "IsShort": false,
+                  "IsLong": false,
+                   }
                   ],
                   "SoundPath": "La.mp3"
-                },
-                {
-                  "SyllableParts": [
-                    "m",
-                    "a"
-                  ],
-                  "SoundPath": "Ma.mp3"
                 }
               ],
               "Options": [
@@ -554,21 +559,30 @@
                   "Letter": "J",
                   "IsShort": false,
                   "IsLong": false,
-                  "CorrectPos": -1
                 },
                 {
                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "D",
                   "IsShort": false,
                   "IsLong": false,
-                  "CorrectPos": -1
                 },
                 {
                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "E",
                   "IsShort": false,
                   "IsLong": false,
-                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                  "Letter": "L",
+                  "IsShort": false,
+                  "IsLong": false,
+                },
+                {
+                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                  "Letter": "a",
+                  "IsShort": false,
+                  "IsLong": false,
                 }
               ]
             }

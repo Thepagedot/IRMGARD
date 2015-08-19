@@ -9,7 +9,6 @@
         android:minHeight="25px"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/llTaskItems"
         android:layout_gravity="center">
         <ImageView
             android:id="@+id/ivBuildSyllable"
@@ -27,38 +26,12 @@
         android:layout_marginBottom="@dimen/activity_vertical_margin" />
     <LinearLayout
         android:orientation="horizontal"
-        android:minWidth="40px"
-        android:minHeight="40px"
+        android:minWidth="25px"
+        android:minHeight="25px"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center">
-        <TextView
-            android:id="@+id/tvLetter"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:text="A"
-            android:textSize="40dp" />
-        <View
-            android:layout_width="40dp"
-            android:layout_height="2dip"
-            android:background="@drawable/underscore" />
-        <TextView
-            android:id="@+id/tvLetter1"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_gravity="center"
-            android:text="A"
-            android:textSize="40dp" />
-        <View
-            android:layout_width="40dp"
-            android:layout_height="2dip"
-            android:background="@drawable/underscore" />
-    </LinearLayout>
+        android:id="@+id/llTaskItems"
+        android:layout_gravity="center" />
     <IRMGARD.FlowLayout
         android:id="@+id/flLetters"
         android:layout_width="fill_parent"

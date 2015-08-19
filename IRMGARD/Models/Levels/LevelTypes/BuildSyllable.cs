@@ -27,30 +27,30 @@ namespace IRMGARD.Models
 	public class BuildSyllableOption
 	{
 		public string Letter { get; set; }
+        public string DraggedLetter { get; set; }
 		public bool IsShort { get; set; }
 		public bool IsLong { get; set; }
-		public int CorrectPos { get; set; }
 
 		public BuildSyllableOption () {}
 
-		public BuildSyllableOption (string letter, bool isShort, bool isLong, int correctPos)
+        public BuildSyllableOption (string letter, string draggedLetter, bool isShort, bool isLong)
 		{
 			this.Letter = letter;
+            this.DraggedLetter = draggedLetter;
 			this.IsShort = isShort;
 			this.IsLong = isLong;
-			this.CorrectPos = correctPos;
 		}
 	}
 
 
 	public class Syllable
 	{
-		public List<string> SyllableParts { get; set; }
+        public List<BuildSyllableOption> SyllableParts { get; set; }
 		public string SoundPath { get; set; }
 
 		public Syllable () {}
 
-		public Syllable (List<string> syllableParts, string soundPath)
+        public Syllable (List<BuildSyllableOption> syllableParts, string soundPath)
 		{
 			this.SyllableParts = syllableParts;
 			this.SoundPath = soundPath;

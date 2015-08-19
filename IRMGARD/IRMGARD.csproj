@@ -92,7 +92,12 @@
     <Compile Include="Models\Letter.cs" />
 =======
     <Compile Include="Fragments\BuildSyllableFragment.cs" />
+<<<<<<< Upstream, based on origin/master
 >>>>>>> 2315832 build syllable changes
+=======
+    <Compile Include="Adapter\BuildSyllableAdapter.cs" />
+    <Compile Include="Adapter\BuildSyllableTaskItemAdapter.cs" />
+>>>>>>> 959bb30 single buildsyllable works now - multiple to go
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
