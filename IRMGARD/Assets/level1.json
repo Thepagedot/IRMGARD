@@ -301,36 +301,135 @@
               "RandomizeCase": true,
               "TaskLetters": [
                 {
+<<<<<<< Upstream, based on origin/master
                     "Letter": "A",
                     "IsShort": false,
                     "IsLong": false,
                     "IsSearched": false
+=======
+                  "Letter": "A",
+                  "IsSearched": false
+>>>>>>> 2315832 build syllable changes
                 },
                 {
+<<<<<<< Upstream, based on origin/master
                     "Letter": "E",
                     "IsShort": false,
                     "IsLong": false,
                     "IsSearched": false
+=======
+                  "Letter": "E",
+                  "IsSearched": false
+>>>>>>> 2315832 build syllable changes
                 },
                 {
+<<<<<<< Upstream, based on origin/master
                     "Letter": "I",
                     "IsShort": false,
                     "IsLong": false,
                     "IsSearched": false
+=======
+                  "Letter": "I",
+                  "IsSearched": false
+>>>>>>> 2315832 build syllable changes
                 },
                 {
+<<<<<<< Upstream, based on origin/master
                     "Letter": "O",
                     "IsShort": false,
                     "IsLong": false,
                     "IsSearched": true
+=======
+                  "Letter": "",
+                  "IsSearched": true
+>>>>>>> 2315832 build syllable changes
                 },
                 {
+<<<<<<< Upstream, based on origin/master
                     "Letter": "U",
                     "IsShort": false,
                     "IsLong": false,
                     "IsSearched": false
                 }                
               ]              
+=======
+                  "Letter": "U",
+                  "IsSearched": false
+                }
+              ],
+              "Options": [
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "A",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "F",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "G",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "B",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "C",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "O",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": 3
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "I",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "J",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "D",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "E",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                }
+              ]
+>>>>>>> 2315832 build syllable changes
             }
           ]
         }
@@ -372,15 +471,15 @@
               "Media": {
                 "SoundPath": "Ohren.mp3"
               }
-             },
-             {
-                "Letter": "U",
-                "Media": {
-                  "SoundPath": "Ufo.mp3"
-                }
+            },
+            {
+              "Letter": "U",
+              "Media": {
+                "SoundPath": "Ufo.mp3"
               }
-            ],
-            "Iterations": [
+            }
+          ],
+          "Iterations": [
             {
               "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
               "SyllableToLearn": "MA",
@@ -419,6 +518,58 @@
               "SyllableParts": [
                 "M",
                 "U"
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",
+          "Id": 112,
+          "Title": "Silben lesen und schreiben",
+          "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 8.mp3",
+          "Hint": "Lesson 8 Hint",
+          "TypeOfLevel": "BuildSyllable",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
+              "Syllables": [
+                {
+                  "SyllableParts": [
+                    "L",
+                    "a"
+                  ],
+                  "SoundPath": "La.mp3"
+                },
+                {
+                  "SyllableParts": [
+                    "m",
+                    "a"
+                  ],
+                  "SoundPath": "Ma.mp3"
+                }
+              ],
+              "Options": [
+                {
+                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                  "Letter": "J",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                  "Letter": "D",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                  "Letter": "E",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                }
               ]
             }
           ]

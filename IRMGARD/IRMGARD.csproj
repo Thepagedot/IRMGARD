@@ -88,7 +88,11 @@
     <Compile Include="Adapter\FindMissingLetterAdapter.cs" />
     <Compile Include="AddOns\FlowLayout.cs" />
     <Compile Include="Adapter\LetterAdapter.cs" />
+<<<<<<< Upstream, based on origin/master
     <Compile Include="Models\Letter.cs" />
+=======
+    <Compile Include="Fragments\BuildSyllableFragment.cs" />
+>>>>>>> 2315832 build syllable changes
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -152,6 +156,7 @@
     <AndroidResource Include="Resources\drawable\sponsor_lions_logo.png" />
     <AndroidResource Include="Resources\drawable\sponsor_veolia_logo.png" />
     <AndroidResource Include="Resources\drawable\dotted.xml" />
+    <AndroidResource Include="Resources\layout\BuildSyllable.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
