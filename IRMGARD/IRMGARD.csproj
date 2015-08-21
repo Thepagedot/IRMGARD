@@ -88,20 +88,11 @@
     <Compile Include="Adapter\FindMissingLetterAdapter.cs" />
     <Compile Include="AddOns\FlowLayout.cs" />
     <Compile Include="Adapter\LetterAdapter.cs" />
-<<<<<<< Upstream, based on origin/master
     <Compile Include="Models\Letter.cs" />
-=======
     <Compile Include="Fragments\BuildSyllableFragment.cs" />
-<<<<<<< Upstream, based on origin/master
->>>>>>> 2315832 build syllable changes
-=======
     <Compile Include="Adapter\BuildSyllableAdapter.cs" />
     <Compile Include="Adapter\BuildSyllableTaskItemAdapter.cs" />
-<<<<<<< Upstream, based on origin/master
->>>>>>> 959bb30 single buildsyllable works now - multiple to go
-=======
     <Compile Include="Adapter\BuildSyllableMediaElementAdapter.cs" />
->>>>>>> 85ac0ca BuildSyllable now supports multiple syllables
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
