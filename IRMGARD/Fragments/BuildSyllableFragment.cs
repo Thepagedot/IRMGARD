@@ -13,7 +13,7 @@ namespace IRMGARD
     public class BuildSyllableFragment : LessonFragment<BuildSyllable>
     {
         LinearLayout llTaskItems;
-		ImageView ivBuildSyllable;
+        LinearLayout llSoundItems;
         FlowLayout flLetters;
         ImageButton btnCheck;
 
@@ -21,11 +21,11 @@ namespace IRMGARD
 
         public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            var view = inflater.Inflate(Resource.Layout.BuildSyllable, container, false);
+            View view = inflater.Inflate(Resource.Layout.BuildSyllable, container, false);
 
-			if (view != null) {
-                ivBuildSyllable = view.FindViewById<ImageView> (Resource.Id.ivBuildSyllable);
+            if (view != null) {
                 llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.llTaskItems);
+                llSoundItems = view.FindViewById<LinearLayout>(Resource.Id.llSoundItems);
                 flLetters = view.FindViewById<FlowLayout> (Resource.Id.flLetters);
                 btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
                 btnCheck.Click += BtnCheck_Click;
@@ -37,48 +37,84 @@ namespace IRMGARD
 
         protected override void InitIteration()
         {
-            var bitmap = BitmapFactory.DecodeResource(Activity.BaseContext.Resources, Resource.Drawable.ic_volume_up_black_24dp);
-            ivBuildSyllable.SetImageBitmap (bitmap);
             var currentIteration = GetCurrentIteration<BuildSyllableIteration>();
 
+
+            BuildSyllableSoundElements(currentIteration.Syllables);
             BuildSyllableLetters(currentIteration.Syllables);
+            BuildSyllables(currentIteration.Options);
 
-            var buildSyllableAdapter = new BuildSyllableAdapter(Activity.BaseContext, 0, currentIteration.Options);
-			for (int i = 0; i < currentIteration.Options.Count; i++) {
-				// Add letter to view
-                var view = buildSyllableAdapter.GetView (i, null, null);
-                var letter = currentIteration.Options.ElementAt (i).Letter;
 
-				view.Touch += (sender, e) => {
-					var data = ClipData.NewPlainText ("letter", letter);
-					(sender as View).StartDrag (data, new View.DragShadowBuilder (sender as View), null, 0);
-				};
-
-				flLetters.AddView (view);
-			}
-
-            ivBuildSyllable.Click += PlaySoundOnImageClick;
             btnCheck.Enabled = false;
         }
 
         void PlaySoundOnImageClick (object sender, EventArgs e)
         {
             // Play Sound
-            SoundPlayer.PlaySound(Activity.BaseContext, GetCurrentIteration<BuildSyllable>().SoundPath);// currentIteration.Syllables.First().SoundPath);
+            SoundPlayer.PlaySound(Activity.BaseContext, GetCurrentIteration<BuildSyllable>().SoundPath);
 
+        }
+
+        private void BuildSyllableSoundElements(List<Syllable> syllables)
+        {
+            foreach (var syllable in syllables)
+            {
+                var addMultiIcon = false;
+                var index = syllables.IndexOf(syllable);
+                if (index > -1 && syllables.Count > 1 && (index + 1 < syllables.Count))
+                {
+                    addMultiIcon = true;
+                } 
+
+                var mediaElementAdapter = new BuildSyllableMediaElementAdapter(Activity.BaseContext, 0, syllables, addMultiIcon);
+
+
+                var view = mediaElementAdapter.GetView(0, null, null);  
+                view.Click += PlaySoundOnImageClick;
+                // Add letter to view
+                llSoundItems.AddView(view);
+            }
         }
 
         private void BuildSyllableLetters(List<Syllable> syllables)
         {
             llTaskItems.RemoveAllViews();
-            var syllableItemsAdapter = new BuildSyllableTaskItemAdapter(Activity.BaseContext, 0, syllables.First().SyllableParts);
-            for (int i = 0; i < syllables.First().SyllableParts.Count; i++)
+            foreach (var syllable in syllables)
             {
-                var view = syllableItemsAdapter.GetView(i, null, null);
-                view.Drag += View_Drag;    
+                var addMultiIcon = false;
+                var index = syllables.IndexOf(syllable);
+                if (index > -1 && syllables.Count > 1 && (index + 1 < syllables.Count))
+                {
+                    addMultiIcon = true;
+                }
 
+                var syllableItemsAdapter = new BuildSyllableTaskItemAdapter(Activity.BaseContext, 0, syllable.SyllableParts, addMultiIcon);
+
+                for (int i = 0; i < syllable.SyllableParts.Count; i++)
+                {
+                    var view = syllableItemsAdapter.GetView(i, null, null);
+                    view.Drag += View_Drag;    
+
+                    // Add letter to view
+                    llTaskItems.AddView(view);
+                }   
+            }
+        }
+
+        private void BuildSyllables(List<BuildSyllableOption> options)
+        {
+            var buildSyllableAdapter = new BuildSyllableAdapter(Activity.BaseContext, 0, options);
+            for (int i = 0; i < options.Count; i++) {
                 // Add letter to view
-                llTaskItems.AddView(view);
+                var view = buildSyllableAdapter.GetView (i, null, null);
+                var letter = options.ElementAt (i).Letter;
+
+                view.Touch += (sender, e) => {
+                    var data = ClipData.NewPlainText ("letter", letter);
+                    (sender as View).StartDrag (data, new View.DragShadowBuilder (sender as View), null, 0);
+                };
+
+                flLetters.AddView (view);
             }
         }
 
@@ -113,7 +149,19 @@ namespace IRMGARD
                         var draggedLetter = data.GetItemAt(0).Text;
                         var position = llTaskItems.IndexOfChild(sender as View);
 
-                        taskLetters.First().SyllableParts.ElementAt(position).DraggedLetter = draggedLetter;
+                        var index = position;
+                        foreach (var taskLetter in taskLetters)
+                        {
+                            if (taskLetter.SyllableParts.Count > index)
+                            {
+                                taskLetter.SyllableParts.ElementAt(index).DraggedLetter = draggedLetter;
+                                break;
+                            }
+                            else
+                            {
+                                index -= taskLetter.SyllableParts.Count;
+                            }
+                        }
 
                         BuildSyllableLetters(taskLetters);
                     }
@@ -132,13 +180,17 @@ namespace IRMGARD
         {
             var isCorrect = true;
             var currentIteration = GetCurrentIteration<BuildSyllableIteration>();
-            for(var i = 0; i < currentIteration.Syllables.First().SyllableParts.Count; i++ )
-            {
-                if (!currentIteration.Syllables.First().SyllableParts.ElementAt(i).Letter.Equals(currentIteration.Syllables.First().SyllableParts.ElementAt(i).DraggedLetter))
-                    isCorrect = false;
 
-                if (!isCorrect)
-                    break;
+            foreach (var syllables in currentIteration.Syllables)
+            {
+                foreach (var syllable in syllables.SyllableParts)
+                {
+                    if (!syllable.Letter.Equals(syllable.DraggedLetter))
+                        isCorrect = false;
+
+                    if (!isCorrect)
+                        break;
+                }
             }
 
             if (isCorrect)
