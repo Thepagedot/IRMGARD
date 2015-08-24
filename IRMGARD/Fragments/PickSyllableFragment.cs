@@ -6,6 +6,7 @@ using Android.OS;
 using Android.Widget;
 using Android.Views;
 using Android.Content;
+using Android.Graphics;
 
 namespace IRMGARD
 {
@@ -14,9 +15,11 @@ namespace IRMGARD
         private List<PickSyllableOption> currentOptions;
 
         private GridView gvPickSyllable;
+        private LinearLayout llLayout;
         private TextView tvPickSyllable;
-        private TextView textViewDragZone;
         private ImageButton btnCheck;
+        private ImageView ivDropZone;
+        private View originalView;
         private int correctPosition = -1;
 
         public PickSyllableFragment(Lesson lesson) : base(lesson) {}
@@ -28,21 +31,24 @@ namespace IRMGARD
 
         public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            var view = inflater.Inflate(Resource.Layout.PickSyllable, container, false);
+            originalView = inflater.Inflate(Resource.Layout.PickSyllable, container, false);
 
-            tvPickSyllable = view.FindViewById<TextView>(Resource.Id.tvPickSyllable);
-            textViewDragZone = view.FindViewById<TextView>(Resource.Id.tvPickSyllableDragZone);
-            textViewDragZone.Drag += textViewDragZoneDrag;
-            gvPickSyllable = view.FindViewById<GridView>(Resource.Id.gvPickSyllable);
+            tvPickSyllable = originalView.FindViewById<TextView>(Resource.Id.tvPickSyllable);
+            llLayout = originalView.FindViewById<LinearLayout>(Resource.Id.llLayout);
+            llLayout.Drag += textViewDragZoneDrag;
+            gvPickSyllable = originalView.FindViewById<GridView>(Resource.Id.gvPickSyllable);
             gvPickSyllable.ItemClick += GridViewSyllableClicked;
 
-            btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
+
+            ivDropZone = originalView.FindViewById<ImageView>(Resource.Id.ivPickSyllableDropZone);
+
+            btnCheck = originalView.FindViewById<ImageButton>(Resource.Id.btnCheck);
             btnCheck.Click += BtnCheck_Click;       
 
             InitIteration();
 
 
-            return view;
+            return originalView;
         }
 
         protected override void InitIteration()
@@ -109,6 +115,8 @@ namespace IRMGARD
             }
         }
 
+        private int selectedIndex = -1;
+
         void textViewDragZoneDrag (object sender, View.DragEventArgs e)
         {
             // React on different dragging events
@@ -137,29 +145,33 @@ namespace IRMGARD
                     var data = e.Event.ClipData;
                     if (data != null)
                     {
-                        if (data.GetItemAt(0).Text.Equals(correctPosition.ToString()))
-                            textViewDragZone.Text = data.GetItemAt(0).Text + " correct data.";
-                        else
-                            textViewDragZone.Text = data.GetItemAt(0).Text + " wrong data.";
+                        selectedIndex = Convert.ToInt32(data.GetItemAt(0).Text);
+                        var bitmap = BitmapFactory.DecodeResource(Activity.BaseContext.Resources, Resource.Drawable.ic_volume_up_black_24dp);
+
+                        ivDropZone.Click -= DropZoneItemClicked;
+                        ivDropZone.SetImageBitmap (bitmap);
+                        ivDropZone.Click += DropZoneItemClicked;
                     }
                     break;
             }
         }
 
-        protected override void CheckSolution()
+        private void DropZoneItemClicked(object sender, EventArgs e)
         {
-            if (gvPickSyllable.CheckedItemPosition >= 0)
+            if (selectedIndex >= 0)
+                SoundPlayer.PlaySound(Activity.BaseContext, currentOptions.ElementAt(selectedIndex).Media.SoundPath);
+        }
+
+        protected override void CheckSolution()
+        {                     
+            if (selectedIndex > -1 && selectedIndex == correctPosition) 
             {
-                var selectedItem = currentOptions.ElementAt(gvPickSyllable.CheckedItemPosition);                                
-                if (selectedItem.IsCorrect) 
-                {
-                    Toast.MakeText (Activity.BaseContext, "Rrrrichtiiig", ToastLength.Short).Show();
-                    FinishIteration();
-                } 
-                else
-                {
-                    Toast.MakeText (Activity.BaseContext, "Leider verloren", ToastLength.Short).Show();
-                }
+                Toast.MakeText (Activity.BaseContext, "Rrrrichtiiig", ToastLength.Short).Show();
+                FinishIteration();
+            } 
+            else
+            {
+                Toast.MakeText (Activity.BaseContext, "Leider verloren", ToastLength.Short).Show();
             }
         }
     }

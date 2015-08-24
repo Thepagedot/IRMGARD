@@ -215,6 +215,9 @@ namespace IRMGARD
 			// aapt resource value: 0x7f090009
 			public const int ivMeidaElementImage = 2131296265;
 			
+			// aapt resource value: 0x7f09001c
+			public const int ivPickSyllableDropZone = 2131296284;
+			
 			// aapt resource value: 0x7f090018
 			public const int linearLayout1 = 2131296280;
 			
@@ -250,9 +253,6 @@ namespace IRMGARD
 			
 			// aapt resource value: 0x7f09001b
 			public const int tvPickSyllable = 2131296283;
-			
-			// aapt resource value: 0x7f09001c
-			public const int tvPickSyllableDragZone = 2131296284;
 			
 			// aapt resource value: 0x7f090016
 			public const int tvSponsorText = 2131296278;
