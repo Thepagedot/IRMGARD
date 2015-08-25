@@ -50,8 +50,16 @@ namespace IRMGARD
 
         void PlaySoundOnImageClick (object sender, EventArgs e)
         {
-            // Play Sound
-            SoundPlayer.PlaySound(Activity.BaseContext, GetCurrentIteration<BuildSyllable>().SoundPath);
+            LinearLayout layout = (sender as LinearLayout);
+
+            if (layout != null)
+            {
+                int index = ((ViewGroup)layout.Parent).IndexOfChild(layout);
+                if (index >= 0)
+                {
+                    SoundPlayer.PlaySound(Activity.BaseContext, GetCurrentIteration<BuildSyllableIteration>().Syllables.ElementAt(index).SoundPath);
+                }
+            }
 
         }
 
@@ -74,6 +82,7 @@ namespace IRMGARD
                 // Add letter to view
                 llSoundItems.AddView(view);
             }
+
         }
 
         private void BuildSyllableLetters(List<Syllable> syllables)
