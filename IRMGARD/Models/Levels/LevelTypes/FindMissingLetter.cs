@@ -21,22 +21,19 @@ namespace IRMGARD.Models
 
         public FindMissingLetterIteration(List<string> lettersToLearn, List<FindMissingLetterTaskLetter> taskLetters, bool hasLongAndShortLetters, bool randomizeCase): base(lettersToLearn)
         {
-            this.TaskLetters = taskLetters;
-            this.HasLongAndShortLetters = hasLongAndShortLetters;
-            this.RandomizeCase = randomizeCase;
+            TaskLetters = taskLetters;
+            HasLongAndShortLetters = hasLongAndShortLetters;
+            RandomizeCase = randomizeCase;
         }
     }
 
-    public class FindMissingLetterTaskLetter : LetterBase
+    public class FindMissingLetterTaskLetter : TaskLetter
     {
-        public bool IsSearched { get; set; }
-        public string CorrectLetter { get; set; }
-
-        public FindMissingLetterTaskLetter(string letter, bool isShort, bool isLong, bool isSearched) : base (letter, isShort, isLong)
+        public FindMissingLetterTaskLetter(string letter, bool isShort, bool isLong, bool isSearched) : base(letter, isShort, isLong, isSearched, letter)
         {
-            this.IsSearched = isSearched;
-            CorrectLetter = Letter;
-            Letter = isSearched ? "" : letter;
+            // Make letter empty it when is searched
+            if (IsSearched)
+                Letter = "";
         }
     }
 
@@ -46,7 +43,7 @@ namespace IRMGARD.Models
 
         public FindMissingLetterOption (string letter, bool isShort, bool isLong, int correctPos) : base (letter, isShort, isLong)
 		{
-			this.CorrectPos = correctPos;
+			CorrectPos = correctPos;
 		}
 	}
 }

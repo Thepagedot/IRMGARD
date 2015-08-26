@@ -7,11 +7,10 @@ using System.Collections.Generic;
 
 namespace IRMGARD
 {
-    public class LetterAdapter : ArrayAdapter<FindMissingLetterOption>
+    public class LetterAdapter : ArrayAdapter<LetterBase>
     {
-        public LetterAdapter(Context context, int resourceId, List<FindMissingLetterOption> items) : base (context, resourceId, items)
+        public LetterAdapter(Context context, int resourceId, List<LetterBase> items) : base (context, resourceId, items)
         {
-
         }
 
         public override View GetView(int position, Android.Views.View convertView, Android.Views.ViewGroup parent)

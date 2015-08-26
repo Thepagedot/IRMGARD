@@ -24,7 +24,7 @@ namespace IRMGARD.Models
 	    }
 	}
 
-	public class BuildSyllableOption
+    public class BuildSyllableOption
 	{
 		public string Letter { get; set; }
         public string DraggedLetter { get; set; }
