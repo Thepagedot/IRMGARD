@@ -93,6 +93,9 @@
     <Compile Include="Adapter\BuildSyllableAdapter.cs" />
     <Compile Include="Adapter\BuildSyllableTaskItemAdapter.cs" />
     <Compile Include="Adapter\BuildSyllableMediaElementAdapter.cs" />
+    <Compile Include="Fragments\AbcRankFragment.cs" />
+    <Compile Include="Adapter\AbcRankAdapter.cs" />
+    <Compile Include="Adapter\AbcRankSolutionElementAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -159,6 +162,9 @@
     <AndroidResource Include="Resources\layout\BuildSyllable.axml" />
     <AndroidResource Include="Resources\layout\BuildSyllableLetterTaskItem.axml" />
     <AndroidResource Include="Resources\layout\BuildSyllableMediaElement.axml" />
+    <AndroidResource Include="Resources\layout\AbcRank.axml" />
+    <AndroidResource Include="Resources\layout\AbcRankTaskItems.axml" />
+    <AndroidResource Include="Resources\layout\AbcRankSolutionItems.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

@@ -151,6 +151,8 @@ namespace IRMGARD
                 return new BuildSyllableFragment(lesson);
             if (lesson is FindMissingLetter)
                 return new FindMissingLetterFragment(lesson);
+            if (lesson is AbcRank)
+                return new AbcRankFragment(lesson);
 			else 						
 				return null;
 		}

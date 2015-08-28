@@ -494,4 +494,161 @@
               ]
             }
           ]
-        },         {           "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",           "Id": 112,           "Title": "Silben lesen und schreiben",           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 8.mp3",           "Hint": "Lesson 8 Hint",           "TypeOfLevel": "BuildSyllable",           "Iterations": [             {               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",               "Syllables": [                 {                   "SyllableParts": [                    {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "L",                   "DraggedLetter": "",                   "IsShort": false,                   "IsLong": false,                    },                    {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "a",                   "DraggedLetter": "",                   "IsShort": false,                   "IsLong": false,                    }                   ],                   "SoundPath": "La.mp3"                 }               ],               "Options": [                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "J",                   "IsShort": false,                   "IsLong": false,                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "D",                   "IsShort": false,                   "IsLong": false,                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "E",                   "IsShort": false,                   "IsLong": false,                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "L",                   "IsShort": false,                   "IsLong": false,                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "a",                   "IsShort": false,                   "IsLong": false,                 }               ]             }           ]         },         {           "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",           "Id": 112,           "Title": "Silben lesen und schreiben",           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 9.mp3",           "Hint": "Lesson 9 Hint",           "TypeOfLevel": "BuildSyllable",           "Iterations": [             {               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",               "Syllables": [                 {                   "SyllableParts": [                    {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "L",                   "DraggedLetter": "",                   "IsShort": false,                   "IsLong": false,                    },                    {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "a",                   "DraggedLetter": "",                   "IsShort": false,                   "IsLong": false,                    }                   ],                   "SoundPath": "La.mp3"                 },{                   "SyllableParts": [                    {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "m",                   "DraggedLetter": "",                   "IsShort": false,                   "IsLong": false,                    },                    {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "a",                   "DraggedLetter": "",                   "IsShort": false,                   "IsLong": false,                    }                   ],                   "SoundPath": "ma.mp3"                 }               ],               "Options": [                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "J",                   "IsShort": false,                   "IsLong": false,                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "D",                   "IsShort": false,                   "IsLong": false,                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "a",                   "IsShort": false,                   "IsLong": false,                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "E",                   "IsShort": false,                   "IsLong": false,                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "m",                   "IsShort": false,                   "IsLong": false,                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "L",                   "IsShort": false,                   "IsLong": false,                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "a",                   "IsShort": false,                   "IsLong": false,                 }               ]             }           ]         }       ]     }   ] } 
+        },         {           "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",           "Id": 112,           "Title": "Silben lesen und schreiben",           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 8.mp3",           "Hint": "Lesson 8 Hint",           "TypeOfLevel": "BuildSyllable",           "Iterations": [             {               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",               "Syllables": [                 {                   "SyllableParts": [                    {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "L",                   "DraggedLetter": "",                   "IsShort": false,                   "IsLong": false                    },                    {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "a",                   "DraggedLetter": "",                   "IsShort": false,                   "IsLong": false                    }                   ],                   "SoundPath": "La.mp3"                 }               ],               "Options": [                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "J",                   "IsShort": false,                   "IsLong": false                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "D",                   "IsShort": false,                   "IsLong": false                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "E",                   "IsShort": false,                   "IsLong": false                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "L",                   "IsShort": false,                   "IsLong": false                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "a",                   "IsShort": false,                   "IsLong": false                 }               ]             }           ]         },         {           "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",           "Id": 112,           "Title": "Silben lesen und schreiben",           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 9.mp3",           "Hint": "Lesson 9 Hint",           "TypeOfLevel": "BuildSyllable",           "Iterations": [             {               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",               "Syllables": [                 {                   "SyllableParts": [                    {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "L",                   "DraggedLetter": "",                   "IsShort": false,                   "IsLong": false                    },                    {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "a",                   "DraggedLetter": "",                   "IsShort": false,                   "IsLong": false                    }                   ],                   "SoundPath": "La.mp3"                 },{                   "SyllableParts": [                    {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "m",                   "DraggedLetter": "",                   "IsShort": false,                   "IsLong": false                    },                    {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "a",                   "DraggedLetter": "",                   "IsShort": false,                   "IsLong": false                    }                   ],                   "SoundPath": "ma.mp3"                 }               ],               "Options": [                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "J",                   "IsShort": false,                   "IsLong": false                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "D",                   "IsShort": false,                   "IsLong": false                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "a",                   "IsShort": false,                   "IsLong": false                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "E",                   "IsShort": false,                   "IsLong": false                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "m",                   "IsShort": false,                   "IsLong": false                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "L",                   "IsShort": false,                   "IsLong": false                 },                 {                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",                   "Letter": "a",                   "IsShort": false,                   "IsLong": false                 }               ]             }           ]         }       ]     }, 
+    {
+      "Name": "Module 6",
+      "Color": "#AEC1C2",
+      "NumberOfLessonsDone": 0,
+      "Lessons": [
+        {
+          "$type": "IRMGARD.Models.AbcRank, IRMGARD",
+          "Id": 162,
+          "Title": "BAD?",
+          "SoundPath": "Level-1/Level 1 Modul 6 Aufgabe 2.mp3",
+          "Hint": "Lesson 6 Hint",
+          "TypeOfLevel": "AbcRank",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.AbcRankIteration, IRMGARD",
+              "Options": [
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "IsWithImage": false,
+                  "Name": "Aal",
+                  "Media": null
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "IsWithImage": false,
+                  "Name": "Eber",
+                  "Media": null
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "IsWithImage": false,
+                  "Name": "Ufo",
+                  "Media": null
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "IsWithImage": false,
+                  "Name": "Insel",
+                  "Media": null
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "IsWithImage": false,
+                  "Name": "Affe",
+                  "Media": null
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "IsWithImage": false,
+                  "Name": "Ofen",
+                  "Media": null
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "IsWithImage": false,
+                  "Name": "Eber",
+                  "Media": null
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "IsWithImage": false,
+                  "Name": "Uhu",
+                  "Media": null
+                 }
+               ]                                                                           
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.AbcRank, IRMGARD",
+          "Id": 163,
+          "Title": "BAD?",
+          "SoundPath": "Level-1/Level 1 Modul 6 Aufgabe 3.mp3",
+          "Hint": "Lesson 6 Hint",
+          "TypeOfLevel": "AbcRank",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.AbcRankIteration, IRMGARD",
+              "Options": [
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "IsWithImage": true,
+                  "Name": "Affe",
+                  "Media": {
+                    "ImagePath": "Affe.png",
+                    "SoundPath": "Affe.mp3"
+                   }
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "IsWithImage": true,
+                  "Name": "Eber",
+                  "Media": {
+                    "ImagePath": "Eber.png",
+                    "SoundPath": "Eber.mp3"
+                   }
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "IsWithImage": true,
+                  "Name": "Ufo",
+                  "Media": {
+                    "ImagePath": "Ufo.png",
+                    "SoundPath": "Ufo.mp3"
+                   }
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "IsWithImage": true,
+                  "Name": "Insel",
+                  "Media": {
+                    "ImagePath": "Insel.png",
+                    "SoundPath": "Insel.mp3"
+                   }
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "IsWithImage": true,
+                  "Name": "Affe",
+                  "Media": {
+                    "ImagePath": "Affe.png",
+                    "SoundPath": "Affe.mp3"
+                   }
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "IsWithImage": true,
+                  "Name": "Ofen",
+                  "Media": {
+                    "ImagePath": "Ofen.png",
+                    "SoundPath": "Ofen.mp3"
+                   }
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "IsWithImage": true,
+                  "Name": "Eber",
+                  "Media": {
+                    "ImagePath": "Eber.png",
+                    "SoundPath": "Eber.mp3"
+                   }
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "IsWithImage": true,
+                  "Name": "Uhu",
+                  "Media": {
+                    "ImagePath": "Uhu.png",
+                    "SoundPath": "Uhu.mp3"
+                   }
+                 }
+               ]                                                                           
+            }
+          ]
+        }
+      ] 
+    }   ] } 
