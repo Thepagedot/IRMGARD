@@ -42,21 +42,21 @@ namespace IRMGARD
         {
             var currentIteration = GetCurrentIteration<FindMissingLetterIteration>();
 
-            // Set font case
-            fontCase = Case.Ignore;
+            // Set random font case for whole iteration
+            fontCase = Case.Lower;
             if (currentIteration.RandomizeCase)
             {
                 var random = new Random();
                 fontCase = (Case)(random.Next(2) + 1);
             }
 
+            // Create task letters
+            BuildTaskLetters(currentIteration.TaskLetters, fontCase);
+
             // Generate options
             currentIteration.Options = GenerateOptions(currentIteration, 10, fontCase);
 
-            // Create lesson
-            BuildTaskLetters(currentIteration.TaskLetters, fontCase);
-
-            var letterAdapter = new LetterAdapter(Activity.BaseContext, 0, currentIteration.Options);
+            var letterAdapter = new LetterAdapter(Activity.BaseContext, 0, currentIteration.Options.Cast<LetterBase>().ToList());
             for (int i = 0; i < currentIteration.Options.Count; i++)
             {
                 // Add letter to view
@@ -110,7 +110,15 @@ namespace IRMGARD
         void BuildTaskLetters(List<FindMissingLetterTaskLetter> letters, Case fontCase)
         {
             llTaskItems.RemoveAllViews();
-            var taskItemAdapter = new TaskLetterAdapter(Activity.BaseContext, 0, letters, fontCase);
+
+            // Convert letters to font case
+            foreach (var letter in letters)
+            {
+                letter.Letter = letter.Letter.ToCase(fontCase);
+                letter.CorrectLetter = letter.CorrectLetter.ToCase(fontCase);
+            }
+
+            var taskItemAdapter = new TaskLetterAdapter(Activity.BaseContext, 0, letters.Cast<TaskLetter>().ToList());
             for (int i = 0; i < letters.Count; i++)
             {
                 var view = taskItemAdapter.GetView(i, null, null);

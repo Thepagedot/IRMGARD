@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Android.Content;
 using Android.Views;
+using Android.Renderscripts;
 
 namespace IRMGARD
 {
@@ -44,7 +45,11 @@ namespace IRMGARD
             currentIteration.Options = GenerateOptions(currentIteration, 10, fontCase);
 
             // Generate Task letters
-            currentIteration.TaskLetters = currentIteration.LettersToLearn.Select(letter => letter.ToCase(fontCase)).Select(dummy => (LetterDropTaskLetter) dummy).ToList();
+            currentIteration.TaskLetters = new List<LetterDropTaskLetter>();
+            foreach (var letter in currentIteration.LettersToLearn)
+            {
+                currentIteration.TaskLetters.Add(new LetterDropTaskLetter(letter.ToCase(fontCase)));
+            }
 
             // Add options to view
             var letterAdapter = new LetterAdapter(Activity.BaseContext, 0, currentIteration.Options);
@@ -90,10 +95,10 @@ namespace IRMGARD
             return options;
         }
 
-        void BuildTaskLetters(List<TaskLetter> taskLetters)
+        void BuildTaskLetters(List<LetterDropTaskLetter> taskLetters)
         {
             llTaskItems.RemoveAllViews();
-            var taskItemAdapter = new TaskLetterAdapter(Activity.BaseContext, 0, taskLetters);
+            var taskItemAdapter = new TaskLetterAdapter(Activity.BaseContext, 0, taskLetters.Cast<TaskLetter>().ToList());
 
             for (var i = 0; i < taskLetters.Count; i++)
             {
@@ -135,7 +140,7 @@ namespace IRMGARD
                     var data = e.Event.ClipData;
                     if (data != null)
                     {
-                        var taskLetters = GetCurrentIteration<FindMissingLetterIteration>().TaskLetters;
+                        var taskLetters = GetCurrentIteration<LetterDropIteration>().TaskLetters;
                         var draggedLetter = data.GetItemAt(0).Text;
                         var position = llTaskItems.IndexOfChild(sender as View);
 

@@ -9,7 +9,7 @@ namespace IRMGARD
 {
     public class LetterAdapter : ArrayAdapter<LetterBase>
     {
-        public LetterAdapter(Context context, int resourceId, List<LetterBase> items) : base (context, resourceId, items)
+        public LetterAdapter(Context context, int resourceId, IList<LetterBase> items) : base (context, resourceId, items)
         {
         }
 
