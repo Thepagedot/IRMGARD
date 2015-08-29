@@ -144,7 +144,10 @@ namespace IRMGARD
                         var draggedLetter = data.GetItemAt(0).Text;
                         var position = llTaskItems.IndexOfChild(sender as View);
 
-                        if (taskLetters[position].IsSearched && taskLetters[position].CorrectLetter.Equals(draggedLetter))
+                        // Get case of dragged letter
+                        var fontCase = draggedLetter.GetCase(); 
+
+                        if (taskLetters[position].IsSearched && taskLetters[position].CorrectLetter.Equals(draggedLetter.ToNegativeCase(fontCase)))
                         {
                             taskLetters[position].IsCorrect = true;
                             BuildTaskLetters(taskLetters);
@@ -166,13 +169,17 @@ namespace IRMGARD
             var success = true;
             foreach (var taskLetter in GetCurrentIteration<LetterDropIteration>().TaskLetters)
             {
-                if (taskLetter.IsCorrect)
-                    success = false;
+                if (!taskLetter.IsCorrect)
+                {
+                    success = false;                  
                     break;
+                }
             }
 
             if (success)
                 FinishIteration();
+            else
+                Toast.MakeText(Activity.BaseContext, "Leider verloren", ToastLength.Short).Show();
         }
     }
 }

@@ -13,6 +13,7 @@ using Android.Widget;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using IRMGARD.Models;
+using Java.Security;
 
 namespace IRMGARD
 {
@@ -151,6 +152,8 @@ namespace IRMGARD
                 return new BuildSyllableFragment(lesson);
             if (lesson is FindMissingLetter)
                 return new FindMissingLetterFragment(lesson);
+            if (lesson is LetterDrop)
+                return new LetterDropFragment(lesson);
 			else 						
 				return null;
 		}

@@ -93,6 +93,13 @@ namespace IRMGARD
                     return letter.ToUpper();
             }
         }
+
+        public static Case GetCase(this string letter)
+        {
+            // All Alphabet letters are upper case sothat we can simply check
+            // if they contain the given letter.
+            return Alphabet.Letters.Contains(letter) ? Case.Upper : Case.Lower;
+        }
 	}        
 
     public enum Case { Ignore, Upper, Lower }
