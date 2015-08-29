@@ -160,8 +160,8 @@ namespace IRMGARD
 		public override bool OnCreateOptionsMenu (IMenu menu)
 		{
 			MenuInflater.Inflate(Resource.Menu.levelFrame_menu, menu);
-			hintButton = menu.FindItem(Resource.Id.btnHint);
-			hintButton.SetVisible(!string.IsNullOrEmpty(DataHolder.Current.CurrentLesson.Hint));
+			//hintButton = menu.FindItem(Resource.Id.btnHint);
+			//hintButton.SetVisible(!string.IsNullOrEmpty(DataHolder.Current.CurrentLesson.Hint));
 
 			return base.OnCreateOptionsMenu (menu);
 		}
@@ -175,9 +175,9 @@ namespace IRMGARD
 					SoundPlayer.PlaySound(this, DataHolder.Current.CurrentLesson.SoundPath);
 					break;
 				// Show hint
-				case Resource.Id.btnHint:
-					Toast.MakeText (this, DataHolder.Current.CurrentLesson.Hint, ToastLength.Long).Show();
-					break;
+//				case Resource.Id.btnHint:
+//					Toast.MakeText (this, DataHolder.Current.CurrentLesson.Hint, ToastLength.Long).Show();
+//					break;
 				case Resource.Id.btnNextLesson:
 					NextLesson();
 					break;
