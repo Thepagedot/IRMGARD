@@ -17,7 +17,7 @@ namespace IRMGARD
         private List<AbcRankOption> currentsolutionList;
         private List<AbcRankOption> randomized;
         private ImageButton btnCheck;
-        private bool IsSoundPlayedForSelectedItem = false;
+        private bool isSoundPlayedForSelectedItem = false;
 
         public AbcRankFragment(Lesson lesson) : base(lesson) {}
 
@@ -69,10 +69,10 @@ namespace IRMGARD
                     var imagePath = item.Media.ImagePath;
 
                     view.Touch += (sender, e) => {
-                        if (IsSoundPlayedForSelectedItem == false)
+                        if (isSoundPlayedForSelectedItem == false)
                         {
                             imageClickedForSound(item); 
-                            IsSoundPlayedForSelectedItem = true;
+                            isSoundPlayedForSelectedItem = true;
                         }
 
                         var data = ClipData.NewPlainText ("ImagePath", imagePath);
@@ -121,7 +121,7 @@ namespace IRMGARD
             switch (evt.Action) 
             {
                 case DragAction.Ended:
-                    IsSoundPlayedForSelectedItem = false;
+                    isSoundPlayedForSelectedItem = false;
                     break;
                 case DragAction.Started:
                     e.Handled = true;

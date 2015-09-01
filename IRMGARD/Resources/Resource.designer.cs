@@ -209,9 +209,6 @@ namespace IRMGARD
 			// aapt resource value: 0x7f090010
 			public const int gvFourPictures = 2131296272;
 			
-			// aapt resource value: 0x7f090024
-			public const int gvPickSyllable = 2131296292;
-			
 			// aapt resource value: 0x7f090012
 			public const int hearMeImageView = 2131296274;
 			
@@ -256,6 +253,9 @@ namespace IRMGARD
 			
 			// aapt resource value: 0x7f090021
 			public const int lvModules = 2131296289;
+			
+			// aapt resource value: 0x7f090024
+			public const int pickSyllableTaskItems = 2131296292;
 			
 			// aapt resource value: 0x7f090003
 			public const int rankTaskItems = 2131296259;

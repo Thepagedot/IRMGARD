@@ -14,13 +14,14 @@ namespace IRMGARD
     {
         private List<PickSyllableOption> currentOptions;
 
-        private GridView gvPickSyllable;
+        private FlowLayout flTaskItems;
         private LinearLayout llLayout;
         private TextView tvPickSyllable;
         private ImageButton btnCheck;
         private ImageView ivDropZone;
         private View originalView;
         private int correctPosition = -1;
+        private bool isSoundPlayedForSelectedItem = false;
 
         public PickSyllableFragment(Lesson lesson) : base(lesson) {}
 
@@ -36,8 +37,7 @@ namespace IRMGARD
             tvPickSyllable = originalView.FindViewById<TextView>(Resource.Id.tvPickSyllable);
             llLayout = originalView.FindViewById<LinearLayout>(Resource.Id.llLayout);
             llLayout.Drag += textViewDragZoneDrag;
-            gvPickSyllable = originalView.FindViewById<GridView>(Resource.Id.gvPickSyllable);
-            gvPickSyllable.ItemClick += GridViewSyllableClicked;
+            flTaskItems = originalView.FindViewById<FlowLayout>(Resource.Id.pickSyllableTaskItems);
 
 
             ivDropZone = originalView.FindViewById<ImageView>(Resource.Id.ivPickSyllableDropZone);
@@ -85,34 +85,46 @@ namespace IRMGARD
 
             tvPickSyllable.Text += " = " + currentIteration.SyllableToLearn;
 
+
+            BuildPickSyllableTaskItems(currentOptions);
+        }
+
+        void BuildPickSyllableTaskItems(List<PickSyllableOption> currentOptions)
+        {
             var syllableAdapter = new PickSyllableAdapter(Activity.BaseContext, 0, currentOptions);
-            gvPickSyllable.Adapter = syllableAdapter;
-            gvPickSyllable.ItemLongClick += imageViewLongClick;
+
+            flTaskItems.RemoveAllViews();
+            for (int i = 0; i < syllableAdapter.Count; i++) {
+                var view = syllableAdapter.GetView(i, null, null);
+                var item = currentOptions.ElementAt(i);
+
+                view.Touch += (sender, e) => {
+                    if (isSoundPlayedForSelectedItem == false)
+                    {
+                        imageClickedForSound(item); 
+                        isSoundPlayedForSelectedItem = true;
+                    }
+
+                    using (var data = ClipData.NewPlainText("position", currentOptions.IndexOf(item).ToString()))
+                    {
+                        view.StartDrag(data, new View.DragShadowBuilder(view), null, 0);
+                    }
+                };
+                flTaskItems.AddView (view);
+            }
             btnCheck.Enabled = false;
         }
 
-        void GridViewSyllableClicked (object sender, AdapterView.ItemClickEventArgs e)
-        {
-            // Play Sound
-            SoundPlayer.PlaySound(Activity.BaseContext, currentOptions.ElementAt(e.Position).Media.SoundPath);
 
-            // Enable check button
-            btnCheck.Enabled = e.Position >= 0;
+
+        void imageClickedForSound (PickSyllableOption item)
+        {
+            SoundPlayer.PlaySound(Activity.BaseContext, item.Media.SoundPath);
         }
 
         void BtnCheck_Click(object sender, EventArgs e)
         {
             CheckSolution();
-        }
-
-        void imageViewLongClick(object sender, AdapterView.ItemLongClickEventArgs e)
-        {
-            // Generate clip data package to attach it to the drag
-            using (var data = ClipData.NewPlainText("position", e.Position.ToString()))
-            {
-                View v = e.View;
-                v.StartDrag(data, new View.DragShadowBuilder(v), null, 0);
-            }
         }
 
         private int selectedIndex = -1;
@@ -124,6 +136,8 @@ namespace IRMGARD
             switch (evt.Action) 
             {
                 case DragAction.Ended:  
+                    isSoundPlayedForSelectedItem = false;
+                    break;
                 case DragAction.Started:
                     e.Handled = true;
                     break;                
@@ -152,13 +166,14 @@ namespace IRMGARD
                         ivDropZone.SetImageBitmap (bitmap);
                         ivDropZone.Click += DropZoneItemClicked;
                     }
+                    btnCheck.Enabled = true;
                     break;
             }
         }
 
         private void DropZoneItemClicked(object sender, EventArgs e)
         {
-            if (selectedIndex >= 0)
+            if (selectedIndex >= 0 && selectedIndex < currentOptions.Count)
                 SoundPlayer.PlaySound(Activity.BaseContext, currentOptions.ElementAt(selectedIndex).Media.SoundPath);
         }
 
@@ -168,6 +183,10 @@ namespace IRMGARD
             {
                 Toast.MakeText (Activity.BaseContext, "Rrrrichtiiig", ToastLength.Short).Show();
                 FinishIteration();
+
+                var bitmap = BitmapFactory.DecodeResource(Activity.BaseContext.Resources, Resource.Drawable.ic_help_black_24dp);
+                originalView.FindViewById<ImageView>(Resource.Id.ivPickSyllableDropZone).SetImageBitmap(bitmap);
+                btnCheck.Enabled = false;
             } 
             else
             {
