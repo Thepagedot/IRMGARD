@@ -17,6 +17,7 @@ namespace IRMGARD
         private List<AbcRankOption> currentsolutionList;
         private List<AbcRankOption> randomized;
         private ImageButton btnCheck;
+        private bool IsSoundPlayedForSelectedItem = false;
 
         public AbcRankFragment(Lesson lesson) : base(lesson) {}
 
@@ -67,8 +68,13 @@ namespace IRMGARD
                 {
                     var imagePath = item.Media.ImagePath;
 
-                    view.Click += imageClickedForSound;
                     view.Touch += (sender, e) => {
+                        if (IsSoundPlayedForSelectedItem == false)
+                        {
+                            imageClickedForSound(item); 
+                            IsSoundPlayedForSelectedItem = true;
+                        }
+
                         var data = ClipData.NewPlainText ("ImagePath", imagePath);
                         (sender as View).StartDrag (data, new View.DragShadowBuilder (sender as View), null, 0);
                     };
@@ -114,7 +120,9 @@ namespace IRMGARD
             var evt = e.Event;
             switch (evt.Action) 
             {
-                case DragAction.Ended:  
+                case DragAction.Ended:
+                    IsSoundPlayedForSelectedItem = false;
+                    break;
                 case DragAction.Started:
                     e.Handled = true;
                     break;           
@@ -172,15 +180,9 @@ namespace IRMGARD
             }
         }      
 
-        void imageClickedForSound (object sender, EventArgs e)
+        void imageClickedForSound (AbcRankOption item)
         {
-            LinearLayout layout = (sender as LinearLayout);
-            if (layout != null)
-            {
-                int index = ((ViewGroup)layout.Parent).IndexOfChild(layout);
-                if (index > 0)
-                    SoundPlayer.PlaySound(Activity.BaseContext, randomized.ElementAt(index).Media.SoundPath);
-            }
+            SoundPlayer.PlaySound(Activity.BaseContext, item.Media.SoundPath);
         }
 
         void BtnCheck_Click(object sender, EventArgs e)
