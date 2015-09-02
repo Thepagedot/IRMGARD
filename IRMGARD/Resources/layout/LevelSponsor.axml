@@ -3,18 +3,25 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@android:color/white"
     android:minWidth="25px"
-    android:minHeight="25px"
-    android:layout_marginLeft="@dimen/activity_horizontal_margin"
-    android:layout_marginTop="@dimen/activity_vertical_margin"
-    android:layout_marginRight="@dimen/activity_horizontal_margin"
-    android:layout_marginBottom="@dimen/activity_vertical_margin">
+    android:minHeight="25px">
     <TextView
         android:text="Level 1 wird unterstützt von:"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/tvSponsorText" />
+        android:id="@+id/tvSponsorText"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin" />
     <ImageView
+        android:src="@drawable/sponsoren_level_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginBottom="@dimen/activity_vertical_margin" />
+<!--<ImageView
         android:src="@drawable/sponsor_veolia_logo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,11 +39,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_marginBottom="@dimen/activity_vertical_margin" />
+        android:layout_marginBottom="@dimen/activity_vertical_margin" />-->
     <Button
         android:text="@string/close"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnClose"
-        android:layout_gravity="bottom" />
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_vertical_margin" />
 </LinearLayout>

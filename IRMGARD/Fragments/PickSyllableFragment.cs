@@ -64,11 +64,10 @@ namespace IRMGARD
             currentOptions.Add(correctOption);
 
             // Choose three other false Options
-            var random = new Random();
-            var falseOptions = lesson.Options.Where(o => !o.Letter.Equals(currentIteration.SyllableParts.ElementAt(1), StringComparison.InvariantCultureIgnoreCase));
-            currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
-            currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
-            currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
+            var falseOptions = lesson.Options.Where(o => !o.Letter.Equals(currentIteration.SyllableParts.ElementAt(1), StringComparison.InvariantCultureIgnoreCase)).ToList();
+
+            falseOptions.Shuffle();
+            currentOptions.AddRange(falseOptions.Take(3));
 
             // Randomize list
             currentOptions.Shuffle();
@@ -84,7 +83,7 @@ namespace IRMGARD
             }
 
             tvPickSyllable.Text += " = " + currentIteration.SyllableToLearn;
-
+            correctOption.IsCorrect = false;
 
             BuildPickSyllableTaskItems(currentOptions);
         }
@@ -97,6 +96,7 @@ namespace IRMGARD
             for (int i = 0; i < syllableAdapter.Count; i++) {
                 var view = syllableAdapter.GetView(i, null, null);
                 var item = currentOptions.ElementAt(i);
+                var index = currentOptions.IndexOf(item);
 
                 view.Touch += (sender, e) => {
                     if (isSoundPlayedForSelectedItem == false)
@@ -105,7 +105,7 @@ namespace IRMGARD
                         isSoundPlayedForSelectedItem = true;
                     }
 
-                    using (var data = ClipData.NewPlainText("position", currentOptions.IndexOf(item).ToString()))
+                    using (var data = ClipData.NewPlainText("position", index.ToString()))
                     {
                         view.StartDrag(data, new View.DragShadowBuilder(view), null, 0);
                     }
@@ -187,6 +187,7 @@ namespace IRMGARD
                 var bitmap = BitmapFactory.DecodeResource(Activity.BaseContext.Resources, Resource.Drawable.ic_help_black_24dp);
                 originalView.FindViewById<ImageView>(Resource.Id.ivPickSyllableDropZone).SetImageBitmap(bitmap);
                 btnCheck.Enabled = false;
+                currentOptions.Clear();
             } 
             else
             {

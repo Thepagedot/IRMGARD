@@ -53,10 +53,15 @@ namespace IRMGARD
             randomized = new List<AbcRankOption>(currentOptions);
             randomized.Shuffle();
 
-            if(randomized.Any(x => x.IsWithImage))
+            /*if(randomized.Any(x => x.IsWithImage))
                 randomized = randomized.Take(3).ToList();
             else
-                randomized = randomized.Take(5).ToList();
+                randomized = randomized.Take(5).ToList();*/
+
+            if (randomized.Any(x => x.IsWithImage))
+                randomized = getDistinctLetterOptions(randomized, 3);
+            else
+                randomized = getDistinctLetterOptions(randomized, 5);
             
             var abcRankElementAdapter = new AbcRankAdapter(Activity.BaseContext, 0, randomized, randomized.FirstOrDefault().IsWithImage);
             for (int i = 0; i < randomized.Count; i++) {
@@ -96,6 +101,32 @@ namespace IRMGARD
             currentOptionsSorted = currentOptionsSorted.OrderBy(x => x.Name).ToList();
 
             BuildAbcRankSolutionElements(currentOptionsSorted);
+        }
+
+        List<AbcRankOption> getDistinctLetterOptions(List<AbcRankOption> randomized, int i)
+        {
+            List<AbcRankOption> tempList = new List<AbcRankOption>();
+            int count = i;
+
+            do
+            {
+                var item = randomized.ElementAt(0);
+                if (tempList.Where(x => x.Name.Substring(0, 1).Equals(item.Name.Substring(0,1))).ToList().Count == 0)
+                {
+                    tempList.Add(item);
+                    randomized.Shuffle();
+                    count--;
+                }
+                else
+                {
+                    randomized.Shuffle();
+                }
+                
+            } while(count > 0);
+
+
+            tempList.Shuffle();
+            return tempList;
         }
 
         void BuildAbcRankSolutionElements(List<AbcRankOption> currentOptionsSorted, bool createEmptyList = true)

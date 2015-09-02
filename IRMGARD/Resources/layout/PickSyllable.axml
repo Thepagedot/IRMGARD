@@ -14,9 +14,9 @@
             android:id="@+id/tvPickSyllable"
             android:textSize="40dp"
             android:layout_width="wrap_content"
-            android:layout_height="40dip"
+            android:layout_height="match_parent"
             android:textAlignment="center"
-            android:gravity="center_vertical|center_horizontal" />
+            android:gravity="top|center_horizontal" />
         <LinearLayout
             android:id="@+id/llLayout"
             android:orientation="vertical"

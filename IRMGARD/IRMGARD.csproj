@@ -165,6 +165,7 @@
     <AndroidResource Include="Resources\layout\AbcRank.axml" />
     <AndroidResource Include="Resources\layout\AbcRankTaskItems.axml" />
     <AndroidResource Include="Resources\layout\AbcRankSolutionItems.axml" />
+    <AndroidResource Include="Resources\drawable\sponsoren_level_1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -197,7 +198,6 @@
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 6.mp3" />
     <AndroidAsset Include="Assets\test.json" />
     <AndroidAsset Include="Assets\sandbox.json" />
-    <AndroidAsset Include="Assets\level1.json" />
     <AndroidAsset Include="Assets\Images\Aal.png" />
     <AndroidAsset Include="Assets\Images\Affe.png" />
     <AndroidAsset Include="Assets\Images\Ahorn.png" />
@@ -230,6 +230,9 @@
     <AndroidAsset Include="Assets\Sounds\Ufo.mp3" />
     <AndroidAsset Include="Assets\Sounds\Uhren.mp3" />
     <AndroidAsset Include="Assets\Sounds\Opa.mp3" />
+    <AndroidAsset Include="Assets\level1.json" />
+    <AndroidAsset Include="Assets\Sounds\La.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Ma.mp3" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>

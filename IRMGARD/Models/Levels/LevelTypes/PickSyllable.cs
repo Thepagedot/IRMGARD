@@ -42,6 +42,12 @@ namespace IRMGARD.Models
             this.Media = media;
         }
 
+        public PickSyllableOption (string letter, Media media)
+        {
+            this.Letter = letter;
+            this.Media = media;
+        }
+
 		public PickSyllableOption (bool isCorrect, Media media)
 		{
 			this.IsCorrect = isCorrect;

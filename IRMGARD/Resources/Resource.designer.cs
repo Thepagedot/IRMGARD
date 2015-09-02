@@ -146,10 +146,13 @@ namespace IRMGARD
 			public const int sponsor_veolia_logo = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int Text = 2130837517;
+			public const int sponsoren_level_1 = 2130837517;
 			
 			// aapt resource value: 0x7f02000e
-			public const int underscore = 2130837518;
+			public const int Text = 2130837518;
+			
+			// aapt resource value: 0x7f02000f
+			public const int underscore = 2130837519;
 			
 			static Drawable()
 			{
