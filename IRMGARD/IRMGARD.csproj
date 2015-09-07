@@ -166,6 +166,7 @@
     <AndroidResource Include="Resources\layout\AbcRankTaskItems.axml" />
     <AndroidResource Include="Resources\layout\AbcRankSolutionItems.axml" />
     <AndroidResource Include="Resources\drawable\sponsoren_level_1.png" />
+    <AndroidResource Include="Resources\layout\PickSyllableTaskItem.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
