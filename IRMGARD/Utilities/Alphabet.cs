@@ -80,6 +80,26 @@ namespace IRMGARD
                     return letter.ToLower();
             }
         }
+
+        public static string ToNegativeCase(this string letter, Case fontCase)
+        {
+            switch (fontCase)
+            {                
+                default:
+                    return letter;
+                case Case.Upper:
+                    return letter.ToLower();
+                case Case.Lower:
+                    return letter.ToUpper();
+            }
+        }
+
+        public static Case GetCase(this string letter)
+        {
+            // All Alphabet letters are upper case sothat we can simply check
+            // if they contain the given letter.
+            return Alphabet.Letters.Contains(letter) ? Case.Upper : Case.Lower;
+        }
 	}        
 
     public enum Case { Ignore, Upper, Lower }

@@ -5,10 +5,10 @@
 		  android:title="@string/playVoiceInstruction"
 		  android:showAsAction="ifRoom" />
 
-	<item android:id="@+id/btnHint"
+<!--	<item android:id="@+id/btnHint"
 		  android:icon="@drawable/ic_help_black_24dp"
 		  android:title="@string/hint"
-		  android:showAsAction="ifRoom" />
+		  android:showAsAction="ifRoom" />-->
 
 	<item android:id="@+id/btnNextLesson"
 		  android:icon="@drawable/ic_help_black_24dp"

@@ -74,7 +74,7 @@
         },
         {
           "$type": "IRMGARD.Models.FourPictures, IRMGARD",
-          "Id": 113,
+          "Id": 112,
           "Title": "AEIOU",
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 2.mp3",
           "Hint": "Lesson 2 Hint",
@@ -256,7 +256,7 @@
         },
         {
           "$type": "IRMGARD.Models.LetterDrop, IRMGARD",
-          "Id": 114,
+          "Id": 113,
           "Title": "A oder a?",
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 3.mp3",
           "Hint": "Lesson 3 Hint",
@@ -270,18 +270,6 @@
                 "I",
                 "O",
                 "U"
-              ],
-              "Options": [
-                "a",
-                "o",
-                "d",
-                "f",
-                "j",
-                "i",
-                "u",
-                "s",
-                "p",
-                "e"
               ]
             }
           ]
@@ -329,7 +317,7 @@
                     "IsShort": false,
                     "IsLong": false,
                     "IsSearched": false
-                }                
+                }
               ],
               "Options": [
                 {

@@ -14,7 +14,7 @@ using Android.Widget;
 using IRMGARD.Models;
 
 namespace IRMGARD
-{    
+{
     public class FindMissingLetterFragment : LessonFragment<FindMissingLetter>
     {
         LinearLayout llTaskItems;
@@ -22,7 +22,7 @@ namespace IRMGARD
         ImageButton btnCheck;
         Case fontCase;
 
-        public FindMissingLetterFragment(Lesson lesson) : base(lesson) {}       
+        public FindMissingLetterFragment(Lesson lesson) : base(lesson) {}
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -36,34 +36,34 @@ namespace IRMGARD
             // Initialize iteration
             InitIteration();
             return view;
-        } 
+        }
 
         protected override void InitIteration()
         {
             var currentIteration = GetCurrentIteration<FindMissingLetterIteration>();
 
-            // Set font case
-            fontCase = Case.Ignore;
+            // Set random font case for whole iteration
+            fontCase = Case.Lower;
             if (currentIteration.RandomizeCase)
             {
                 var random = new Random();
                 fontCase = (Case)(random.Next(2) + 1);
             }
 
+            // Create task letters
+            BuildTaskLetters(currentIteration.TaskLetters, fontCase);
+
             // Generate options
             currentIteration.Options = GenerateOptions(currentIteration, 10, fontCase);
 
-            // Create lesson
-            BuildTaskLetters(currentIteration.TaskLetters, fontCase);
-
-            var letterAdapter = new LetterAdapter(Activity.BaseContext, 0, currentIteration.Options);
+            var letterAdapter = new LetterAdapter(Activity.BaseContext, 0, currentIteration.Options.Cast<LetterBase>().ToList());
             for (int i = 0; i < currentIteration.Options.Count; i++)
             {
                 // Add letter to view
                 var view = letterAdapter.GetView(i, null, null);
                 var letter = currentIteration.Options.ElementAt(i).Letter;
 
-                // Add drag 
+                // Add drag
                 view.Touch += (sender, e) => {
                     var data = ClipData.NewPlainText("letter", letter);
                     (sender as View).StartDrag(data, new View.DragShadowBuilder(sender as View), null, 0);
@@ -73,16 +73,13 @@ namespace IRMGARD
             }
 
             btnCheck.Enabled = false;
-        }         
+        }
 
         List<FindMissingLetterOption> GenerateOptions(FindMissingLetterIteration iteration, int numberOfOptions, Case fontCase)
         {
-            var options = new List<FindMissingLetterOption>();
-
             // Add correct options
             var correctTasks = iteration.TaskLetters.Where(l => l.IsSearched);
-            foreach (var task in correctTasks)
-                options.Add(new FindMissingLetterOption(task.CorrectLetter.ToCase(fontCase), task.IsLong, task.IsLong, iteration.TaskLetters.IndexOf(task)));
+            var options = correctTasks.Select(task => new FindMissingLetterOption(task.CorrectLetter.ToCase(fontCase), task.IsLong, task.IsLong, iteration.TaskLetters.IndexOf(task))).ToList();
 
             // Add false options
             while (options.Count() < numberOfOptions)
@@ -97,7 +94,7 @@ namespace IRMGARD
 
                 if (iteration.HasLongAndShortLetters)
                 {
-                    var random = new Random();    
+                    var random = new Random();
                     options.Add(new FindMissingLetterOption(letter.ToCase(fontCase), random.Next(1) == 0, random.Next(1) == 0, -1));
                 }
                 else
@@ -113,14 +110,22 @@ namespace IRMGARD
         void BuildTaskLetters(List<FindMissingLetterTaskLetter> letters, Case fontCase)
         {
             llTaskItems.RemoveAllViews();
-            var taskItemAdapter = new FindMissingLetterTaskItemAdapter(Activity.BaseContext, 0, letters, fontCase);
+
+            // Convert letters to font case
+            foreach (var letter in letters)
+            {
+                letter.Letter = letter.Letter.ToCase(fontCase);
+                letter.CorrectLetter = letter.CorrectLetter.ToCase(fontCase);
+            }
+
+            var taskItemAdapter = new TaskLetterAdapter(Activity.BaseContext, 0, letters.Cast<TaskLetter>().ToList());
             for (int i = 0; i < letters.Count; i++)
             {
                 var view = taskItemAdapter.GetView(i, null, null);
 
                 // Define searched letters as drop zone
                 if (letters.ElementAt(i).IsSearched)
-                    view.Drag += View_Drag;                
+                    view.Drag += View_Drag;
 
                 // Add letter to view
                 llTaskItems.AddView(view);
@@ -140,19 +145,19 @@ namespace IRMGARD
         {
             // React on different dragging events
             var evt = e.Event;
-            switch (evt.Action) 
+            switch (evt.Action)
             {
-                case DragAction.Ended:  
+                case DragAction.Ended:
                 case DragAction.Started:
                     e.Handled = true;
-                    break;           
+                    break;
 
                 // Dragged element enters the drop zone
                 case DragAction.Entered:
                     break;
 
                 // Dragged element exits the drop zone
-                case DragAction.Exited:                                       
+                case DragAction.Exited:
                     break;
 
                 // Dragged element has been dropped at the drop zone
@@ -169,14 +174,14 @@ namespace IRMGARD
 
                         if (taskLetters[position].IsSearched)
                             taskLetters[position].Letter = draggedLetter;
-                                                       
+
                         BuildTaskLetters(taskLetters, fontCase);
                     }
 
                     btnCheck.Enabled = true;
                     break;
             }
-        }           
+        }
 
         void BtnCheck_Click (object sender, EventArgs e)
         {

@@ -84,8 +84,6 @@
     <Compile Include="Fragments\PickSyllableFragment.cs" />
     <Compile Include="Adapter\PickSyllableAdapter.cs" />
     <Compile Include="Fragments\FindMissingLetterFragment.cs" />
-    <Compile Include="Adapter\FindMissingLetterTaskItemAdapter.cs" />
-    <Compile Include="Adapter\FindMissingLetterAdapter.cs" />
     <Compile Include="AddOns\FlowLayout.cs" />
     <Compile Include="Adapter\LetterAdapter.cs" />
     <Compile Include="Models\Letter.cs" />
@@ -96,6 +94,8 @@
     <Compile Include="Fragments\AbcRankFragment.cs" />
     <Compile Include="Adapter\AbcRankAdapter.cs" />
     <Compile Include="Adapter\AbcRankSolutionElementAdapter.cs" />
+    <Compile Include="Adapter\TaskLetterAdapter.cs" />
+    <Compile Include="Fragments\LetterDropFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -150,7 +150,6 @@
     <AndroidResource Include="Resources\layout\LevelSponsor.axml" />
     <AndroidResource Include="Resources\layout\PickSyllable.axml" />
     <AndroidResource Include="Resources\layout\FindMissingLetter.axml" />
-    <AndroidResource Include="Resources\layout\FindMissingLetterTaskItem.axml" />
     <AndroidResource Include="Resources\drawable\underscore.xml" />
     <AndroidResource Include="Resources\values\Attrs.xml" />
     <AndroidResource Include="Resources\layout\Letter.axml" />
@@ -167,6 +166,8 @@
     <AndroidResource Include="Resources\layout\AbcRankSolutionItems.axml" />
     <AndroidResource Include="Resources\drawable\sponsoren_level_1.png" />
     <AndroidResource Include="Resources\layout\PickSyllableTaskItem.axml" />
+    <AndroidResource Include="Resources\layout\LetterTaskItem.axml" />
+    <AndroidResource Include="Resources\layout\LetterDrop.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

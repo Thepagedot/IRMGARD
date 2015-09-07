@@ -13,6 +13,7 @@ using Android.Widget;
 using System.Threading.Tasks;
 using System.Security.Cryptography;
 using IRMGARD.Models;
+using Java.Security;
 
 namespace IRMGARD
 {
@@ -153,6 +154,8 @@ namespace IRMGARD
                 return new FindMissingLetterFragment(lesson);
             if (lesson is AbcRank)
                 return new AbcRankFragment(lesson);
+            if (lesson is LetterDrop)
+                return new LetterDropFragment(lesson);
 			else 						
 				return null;
 		}
@@ -162,8 +165,8 @@ namespace IRMGARD
 		public override bool OnCreateOptionsMenu (IMenu menu)
 		{
 			MenuInflater.Inflate(Resource.Menu.levelFrame_menu, menu);
-			hintButton = menu.FindItem(Resource.Id.btnHint);
-			hintButton.SetVisible(!string.IsNullOrEmpty(DataHolder.Current.CurrentLesson.Hint));
+			//hintButton = menu.FindItem(Resource.Id.btnHint);
+			//hintButton.SetVisible(!string.IsNullOrEmpty(DataHolder.Current.CurrentLesson.Hint));
 
 			return base.OnCreateOptionsMenu (menu);
 		}
@@ -177,9 +180,9 @@ namespace IRMGARD
 					SoundPlayer.PlaySound(this, DataHolder.Current.CurrentLesson.SoundPath);
 					break;
 				// Show hint
-				case Resource.Id.btnHint:
-					Toast.MakeText (this, DataHolder.Current.CurrentLesson.Hint, ToastLength.Long).Show();
-					break;
+//				case Resource.Id.btnHint:
+//					Toast.MakeText (this, DataHolder.Current.CurrentLesson.Hint, ToastLength.Long).Show();
+//					break;
 				case Resource.Id.btnNextLesson:
 					NextLesson();
 					break;

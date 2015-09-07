@@ -183,19 +183,16 @@ namespace IRMGARD
 			public const int btnClose = 2131296286;
 			
 			// aapt resource value: 0x7f090026
-			public const int btnHint = 2131296294;
-			
-			// aapt resource value: 0x7f090027
-			public const int btnNextLesson = 2131296295;
-			
-			// aapt resource value: 0x7f090029
-			public const int btnNextModule = 2131296297;
+			public const int btnNextLesson = 2131296294;
 			
 			// aapt resource value: 0x7f090028
-			public const int btnPreviousLesson = 2131296296;
+			public const int btnNextModule = 2131296296;
 			
-			// aapt resource value: 0x7f09002a
-			public const int btnPreviousModule = 2131296298;
+			// aapt resource value: 0x7f090027
+			public const int btnPreviousLesson = 2131296295;
+			
+			// aapt resource value: 0x7f090029
+			public const int btnPreviousModule = 2131296297;
 			
 			// aapt resource value: 0x7f090020
 			public const int btnStart = 2131296288;
@@ -331,37 +328,43 @@ namespace IRMGARD
 			public const int FindMissingLetter = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int FindMissingLetterTaskItem = 2130903047;
+			public const int FourPictures = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int FourPictures = 2130903048;
+			public const int HearMe = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int HearMe = 2130903049;
+			public const int LessonFrame = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int LessonFrame = 2130903050;
+			public const int Letter = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int Letter = 2130903051;
+			public const int LetterDrop = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int LevelSelect = 2130903052;
+			public const int LetterTaskItem = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int LevelSponsor = 2130903053;
+			public const int LevelSelect = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int Main = 2130903054;
+			public const int LevelSponsor = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int MediaElement = 2130903055;
+			public const int Main = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int ModuleSelect = 2130903056;
+			public const int MediaElement = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int PickSyllable = 2130903057;
+			public const int ModuleSelect = 2130903057;
+			
+			// aapt resource value: 0x7f030012
+			public const int PickSyllable = 2130903058;
+			
+			// aapt resource value: 0x7f030013
+			public const int PickSyllableTaskItem = 2130903059;
 			
 			static Layout()
 			{
