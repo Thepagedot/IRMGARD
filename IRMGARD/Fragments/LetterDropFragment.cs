@@ -150,6 +150,7 @@ namespace IRMGARD
                         if (taskLetters[position].IsSearched && taskLetters[position].CorrectLetter.Equals(draggedLetter.ToNegativeCase(fontCase)))
                         {
                             taskLetters[position].IsCorrect = true;
+                            taskLetters[position].Letter += draggedLetter;
                             BuildTaskLetters(taskLetters);
                             btnCheck.Enabled = true;
                         }

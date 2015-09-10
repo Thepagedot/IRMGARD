@@ -168,6 +168,11 @@
     <AndroidResource Include="Resources\layout\PickSyllableTaskItem.axml" />
     <AndroidResource Include="Resources\layout\LetterTaskItem.axml" />
     <AndroidResource Include="Resources\layout\LetterDrop.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_chat_bubble_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_chat_bubble_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_chat_bubble_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_chat_bubble_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_chat_bubble_outline_black_24dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -188,10 +193,11 @@
     <Folder Include="Assets\Images\" />
     <Folder Include="Resources\values-v21\" />
     <Folder Include="AddOns\" />
+    <Folder Include="Assets\Sounds\Objects\" />
+    <Folder Include="Assets\Sounds\Syllables\" />
+    <Folder Include="Assets\Sounds\Letters\" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Sounds\Ameise.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Affe.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 1.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 2.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 3.mp3" />
@@ -220,21 +226,35 @@
     <AndroidAsset Include="Assets\Images\Ufo.png" />
     <AndroidAsset Include="Assets\Images\Uhren.png" />
     <AndroidAsset Include="Assets\Images\Uhu.png" />
-    <AndroidAsset Include="Assets\Sounds\Ahorn.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Eber.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Efeu.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Esel.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Iltis.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Ina.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Insel.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Ohren.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Oma.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Ufo.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Uhren.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Opa.mp3" />
     <AndroidAsset Include="Assets\level1.json" />
-    <AndroidAsset Include="Assets\Sounds\La.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Ma.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Affe.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Ahorn.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Ameise.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Eber.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Efeu.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Esel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Iltis.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Ina.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Insel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Ohren.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Oma.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Opa.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Ufo.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Uhren.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Syllables\La.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Syllables\Ma.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 2 Aufgabe 1.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 2 Aufgabe 2.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 2 Aufgabe 3.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 2 Aufgabe 4.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 2 Aufgabe 5.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 2 Aufgabe 6.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 2 Aufgabe 7.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 2 Aufgabe 8.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 2 Aufgabe 9.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 5 Aufgabe 6.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 1.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 2.mp3" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>
