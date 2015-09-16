@@ -10,15 +10,39 @@ namespace IRMGARD
     public abstract class LessonFragment : Fragment
     {
         /// <summary>
+        /// Occurs when iteration finished.
+        /// </summary>
+        public event IterationFinishedEventHandler IterationFinished;
+        public delegate void IterationFinishedEventHandler(object sender, EventArgs e);
+
+        /// <summary>
+        /// Occurs when iteration changed.
+        /// </summary>
+        public event IterationChangedEventHandler IterationChanged;
+        public delegate void IterationChangedEventHandler(object sender, IterationChangedEventArgs e);
+
+        /// <summary>
         /// Occurs when a lesson has finished all its iterations
         /// </summary>
-        public event FinishedEventHandler Finished;
-        public delegate void FinishedEventHandler(object sender, EventArgs e);
+        public event LessonFinishedEventHandler LessonFinished;
+        public delegate void LessonFinishedEventHandler(object sender, EventArgs e);
 
-        protected void LessonFinished()
+        protected void FireIterationFinished()
         {
-            if (Finished != null)
-                Finished (this, null);
+            if (IterationFinished != null)
+                IterationFinished(this, null);
+        }
+
+        protected void FireIterationChanged(Iteration iteration)
+        {
+            if (IterationChanged != null)
+                IterationChanged(this, new IterationChangedEventArgs(iteration));
+        }
+
+        protected void FireLessonFinished()
+        {
+            if (LessonFinished != null)
+                LessonFinished(this, null);
         }
     }
 
@@ -54,10 +78,12 @@ namespace IRMGARD
         /// </summary>
         protected void FinishIteration()
         {
+            FireIterationFinished();
+
             if (currentIterationIndex == (lesson as Lesson).Iterations.Count - 1)
             {
                 // All iterations done. Finish lesson
-                LessonFinished();
+                FireLessonFinished();
             }
             else
             {
@@ -69,11 +95,25 @@ namespace IRMGARD
         /// <summary>
         /// Initiates the current iteration
         /// </summary>
-        protected abstract void InitIteration();
+        protected virtual void InitIteration()
+        {
+            // Fire iteration changed event
+            FireIterationChanged((lesson as Lesson).Iterations.ElementAt(currentIterationIndex));
+        }
 
         /// <summary>
         /// Checks if the current iteration's entries are correct
         /// </summary>
         protected abstract void CheckSolution();
+    }
+
+    public class IterationChangedEventArgs : EventArgs
+    {
+        public Iteration Iteration { get; set; }
+
+        public IterationChangedEventArgs(Iteration iteration) : base()
+        {
+            this.Iteration = iteration;
+        }
     }
 }	

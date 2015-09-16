@@ -37,8 +37,9 @@ namespace IRMGARD
 
         protected override void InitIteration()
         {
-            var currentIteration = GetCurrentIteration<BuildSyllableIteration>();
+            base.InitIteration();
 
+            var currentIteration = GetCurrentIteration<BuildSyllableIteration>();
 
             BuildSyllableSoundElements(currentIteration.Syllables);
             BuildSyllableLetters(currentIteration.Syllables);

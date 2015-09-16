@@ -53,6 +53,8 @@ namespace IRMGARD
 
         protected override void InitIteration()
         {
+            base.InitIteration();
+
             tvPickSyllable.Text = string.Empty;
             var currentIteration = GetCurrentIteration<PickSyllableIteration>();
             currentOptions = new List<PickSyllableOption>();

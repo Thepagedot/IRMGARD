@@ -44,6 +44,8 @@ namespace IRMGARD
 
         protected override void InitIteration()
         {
+            base.InitIteration();
+
             var currentIteration = GetCurrentIteration<HearMeIteration>();
             letterToLearnView.Text = string.Empty;
             nameView.Text = string.Empty;

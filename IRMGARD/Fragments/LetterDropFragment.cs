@@ -35,6 +35,8 @@ namespace IRMGARD
 
         protected override void InitIteration()
         {
+            base.InitIteration();
+
             var currentIteration = GetCurrentIteration<LetterDropIteration>();
 
             // Randomize font case
@@ -105,7 +107,7 @@ namespace IRMGARD
                 var view = taskItemAdapter.GetView(i, null, null);
 
                 // Define searched letters as drop zone
-                if (taskLetters.ElementAt(i).IsSearched && !taskLetters.ElementAt(i).IsCorrect)
+                if (taskLetters.ElementAt(i).IsSearched)
                     view.Drag += View_Drag;
 
                 // Add letter to view
@@ -147,13 +149,17 @@ namespace IRMGARD
                         // Get case of dragged letter
                         var fontCase = draggedLetter.GetCase(); 
 
+                        // Check if selection is correct
                         if (taskLetters[position].IsSearched && taskLetters[position].CorrectLetter.Equals(draggedLetter.ToNegativeCase(fontCase)))
-                        {
                             taskLetters[position].IsCorrect = true;
-                            taskLetters[position].Letter += draggedLetter;
-                            BuildTaskLetters(taskLetters);
-                            btnCheck.Enabled = true;
-                        }
+
+                        // Rebuild task letters
+                        if (taskLetters[position].Letter.Length > 1)
+                            taskLetters[position].Letter = taskLetters[position].Letter.Remove(1);
+                        
+                        taskLetters[position].Letter += draggedLetter;
+                        BuildTaskLetters(taskLetters);
+                        btnCheck.Enabled = true;
                     }
 
                     break;

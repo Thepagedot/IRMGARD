@@ -42,6 +42,8 @@ namespace IRMGARD
 
         protected override void InitIteration()
         {
+            base.InitIteration();
+
             var currentIteration = GetCurrentIteration<AbcRankIteration>();
 
             currentsolutionList = new List<AbcRankOption>();
