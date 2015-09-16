@@ -173,6 +173,11 @@
     <AndroidResource Include="Resources\drawable-xhdpi\ic_chat_bubble_outline_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_chat_bubble_outline_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_chat_bubble_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_read_out_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_read_out_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_read_out_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_read_out_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_read_out_black_24dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

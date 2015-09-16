@@ -24,7 +24,8 @@ namespace IRMGARD
 
 		//IMenuItem hintButton;
 		TextView ModuleNumberText;
-		TextView LessonNumberText;
+        TextView LessonNumberText;
+		TextView IterationNumberText;
 		TextView CapitalAlphabetText;
 		TextView LowerAlphabetText;
 		FrameLayout FragmentContainer;
@@ -46,6 +47,7 @@ namespace IRMGARD
 
 			ModuleNumberText = FindViewById<TextView>(Resource.Id.txtModuleNumber);
 			LessonNumberText = FindViewById<TextView>(Resource.Id.txtLessonNumber);
+            IterationNumberText = FindViewById<TextView>(Resource.Id.txtIterationNumber);
 			CapitalAlphabetText = FindViewById<TextView>(Resource.Id.txtCapitalAlphabet);
 			LowerAlphabetText = FindViewById<TextView>(Resource.Id.txtLowerAlphabet);
 			FragmentContainer = FindViewById<FrameLayout> (Resource.Id.fragmentContainer);
@@ -122,8 +124,12 @@ namespace IRMGARD
 			}
 		}
 
-        void Fragment_IterationChanged (object sender, IterationChangedEventArgs e)
+        void Fragment_IterationChanged(object sender, IterationChangedEventArgs e)
         {
+            // Update iteration number
+            var iterationNumber = DataHolder.Current.CurrentLesson.Iterations.IndexOf(e.Iteration) + 1;
+            IterationNumberText.Text = "Iteration: " + iterationNumber + "/" + DataHolder.Current.CurrentLesson.Iterations.Count;
+
             // Mark letters in alphabet
             CapitalAlphabetText.TextFormatted = Alphabet.GetLettersMarked(e.Iteration.LettersToLearn, true);
             LowerAlphabetText.TextFormatted = Alphabet.GetLettersMarked(e.Iteration.LettersToLearn, false);
@@ -136,7 +142,7 @@ namespace IRMGARD
 		/// <param name="e">event args.</param>
         void LessonFragment_LessonFinished(object sender, EventArgs e)
 		{
-			Toast.MakeText (this, "Lesson finished!", ToastLength.Short).Show();
+			Toast.MakeText(this, "Lesson finished!", ToastLength.Short).Show();
 			NextLesson();
 		}
 
@@ -145,7 +151,7 @@ namespace IRMGARD
         /// </summary>
         /// <param name="sender">Sender.</param>
         /// <param name="e">E.</param>
-        void Fragment_IterationFinished (object sender, EventArgs e)
+        void Fragment_IterationFinished(object sender, EventArgs e)
         {
             //TODO: Add Thumbs Up Animation here
             Toast.MakeText (this, "Iteration finished!", ToastLength.Short).Show();
@@ -210,7 +216,7 @@ namespace IRMGARD
 					if (nextModule != null)
 					{					
 						DataHolder.Current.CurrentModule = nextModule;
-						DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.Lessons.First ();
+						DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.Lessons.First();
 						DataHolder.Current.CurrentIteration = DataHolder.Current.CurrentLesson.Iterations.First();
 						InitLesson ();
 					}
@@ -220,7 +226,7 @@ namespace IRMGARD
 					if (previousModule != null)
 					{					
 						DataHolder.Current.CurrentModule = previousModule;
-						DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.Lessons.First ();
+						DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.Lessons.First();
 						DataHolder.Current.CurrentIteration = DataHolder.Current.CurrentLesson.Iterations.First();
 						InitLesson ();
 					}
@@ -237,7 +243,7 @@ namespace IRMGARD
 		/// </summary>
 		private void NextLesson()
 		{
-			var nextLesson = DataHolder.Current.CurrentModule.GetNextLesson (DataHolder.Current.CurrentLesson);
+			var nextLesson = DataHolder.Current.CurrentModule.GetNextLesson(DataHolder.Current.CurrentLesson);
             if (nextLesson != null)
             {
                 DataHolder.Current.CurrentLesson = nextLesson;
@@ -258,7 +264,7 @@ namespace IRMGARD
 			{					
 				DataHolder.Current.CurrentLesson = previousLesson;
 				DataHolder.Current.CurrentIteration = previousLesson.Iterations.First();
-				InitLesson ();
+				InitLesson();
 			}	
 		}
 	}
