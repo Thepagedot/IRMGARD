@@ -24,8 +24,16 @@ namespace IRMGARD
 			if (DataHolder.Current == null) {
 				DataHolder.Current = new DataHolder ();
 
-				// Load first level from JSON
-				await DataHolder.Current.LoadLevelAsync (1);
+				// Load levels from JSON
+				await DataHolder.Current.LoadLevelAsync(1);
+                await DataHolder.Current.LoadLevelAsync(2);
+                await DataHolder.Current.LoadLevelAsync(3);
+                await DataHolder.Current.LoadLevelAsync(4);
+                await DataHolder.Current.LoadLevelAsync(5);
+                await DataHolder.Current.LoadLevelAsync(6);
+                await DataHolder.Current.LoadLevelAsync(7);
+                await DataHolder.Current.LoadLevelAsync(8);
+                await DataHolder.Current.LoadLevelAsync(9);
 			}
 
 			var startButton = FindViewById<ImageButton> (Resource.Id.btnStart);
