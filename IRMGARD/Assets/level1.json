@@ -5,6 +5,7 @@
     {
       "Name": "Module 1",
       "Color": "#DDD6BF",
+      "VideoPath": "Videos/Handy_Modul_1_720p.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -23,7 +24,7 @@
               "Name": "Aal",
               "Media": {
                 "ImagePath": "Aal.png",
-                "SoundPath": "Aal.mp3"
+                "SoundPath": "Objects/Aal.mp3"
               }
             },
             {
@@ -399,6 +400,7 @@
     {
       "Name": "Module 2",
       "Color": "#AEC1C2",
+      "VideoPath": null,
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -650,6 +652,7 @@
     {
       "Name": "Module 6",
       "Color": "#A78A98",
+      "VideoPath": null,
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {

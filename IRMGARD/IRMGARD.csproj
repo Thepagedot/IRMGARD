@@ -96,6 +96,7 @@
     <Compile Include="Adapter\AbcRankSolutionElementAdapter.cs" />
     <Compile Include="Adapter\TaskLetterAdapter.cs" />
     <Compile Include="Fragments\LetterDropFragment.cs" />
+    <Compile Include="Views\VideoActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -173,6 +174,8 @@
     <AndroidResource Include="Resources\drawable-xhdpi\ic_chat_bubble_outline_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_chat_bubble_outline_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_chat_bubble_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\layout\Video.axml" />
+    <AndroidResource Include="Resources\raw\Handy_Modul_1_720p.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -185,7 +188,6 @@
     <Folder Include="Models\Levels\" />
     <Folder Include="Enums\" />
     <Folder Include="Resources\raw\" />
-    <Folder Include="Resources\raw\level\" />
     <Folder Include="Utilities\" />
     <Folder Include="Assets\Sounds\" />
     <Folder Include="Assets\Sounds\Level-1\" />

@@ -1,25 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/llLayout"
-    android:orientation="vertical"
-    android:layout_width="45dip"
-    android:layout_height="wrap_content"
-    android:minWidth="45dip"
-    android:padding="4dip"
-    android:layout_marginLeft="4dip"
-    android:layout_marginRight="4dip"
-    android:background="@drawable/dotted">
-    <TextView
-        android:id="@+id/tvLetter"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/llLayout"
+        android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:text="W"
-        android:textSize="40dp" />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dip"
-        android:background="@drawable/underscore" />
-</LinearLayout>
+        android:minWidth="45dip"
+        android:padding="4dip"
+        android:layout_marginLeft="4dip"
+        android:layout_marginRight="4dip"
+        android:background="@drawable/dotted">
+        <TextView
+            android:id="@+id/tvLetter"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="W"
+            android:textSize="40dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dip"
+            android:background="@drawable/underscore" />
+    </LinearLayout>
+</FrameLayout>
