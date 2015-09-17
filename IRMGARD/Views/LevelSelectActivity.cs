@@ -38,6 +38,13 @@ namespace IRMGARD
 
 		void LevelListView_ItemClick (object sender, AdapterView.ItemClickEventArgs e)
 		{
+            // Check if level is enabled
+            if (!DataHolder.Current.Levels.ElementAt(e.Position).IsEnabled)
+            {
+                Toast.MakeText(this, "This level has not been implemented yet.", ToastLength.Short).Show();
+                return;
+            }
+
 			// Set selected level as current
 			DataHolder.Current.CurrentLevel = DataHolder.Current.Levels.ElementAt(e.Position);
 

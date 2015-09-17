@@ -1,6 +1,7 @@
 {
   "Name": "Level 1",
   "Color": "#DEB80C",
+  "IsEnabled": true,
   "Modules": [
     {
       "Name": "Module 1",

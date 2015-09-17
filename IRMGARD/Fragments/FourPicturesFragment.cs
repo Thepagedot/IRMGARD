@@ -36,6 +36,8 @@ namespace IRMGARD
 
         protected override void InitIteration()
 		{
+            base.InitIteration();
+
             var currentIteration = GetCurrentIteration<FourPicturesIteration>();
             currentOptions = new List<FourPicturesOption>();
 

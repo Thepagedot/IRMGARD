@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -99,6 +99,12 @@
     <Compile Include="Views\VideoActivity.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\level4.json" />
+    <AndroidAsset Include="Assets\level9.json" />
+    <AndroidAsset Include="Assets\level5.json" />
+    <AndroidAsset Include="Assets\level6.json" />
+    <AndroidAsset Include="Assets\level7.json" />
+    <AndroidAsset Include="Assets\level8.json" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="packages.config" />
   </ItemGroup>
@@ -140,6 +146,11 @@
     <AndroidResource Include="Resources\drawable-xhdpi\ic_play_arrow_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_play_arrow_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_play_arrow_black_24dp.png" />
+	<AndroidResource Include="Resources\drawable-hdpi\ic_read_out_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_read_out_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_read_out_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_read_out_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_read_out_black_24dp.png" />
     <AndroidResource Include="Resources\drawable\irmgard_picture.png" />
     <AndroidResource Include="Resources\drawable-hdpi\Text.png" />
     <AndroidResource Include="Resources\drawable-mdpi\Text.png" />
@@ -174,7 +185,7 @@
     <AndroidResource Include="Resources\drawable-xhdpi\ic_chat_bubble_outline_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_chat_bubble_outline_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_chat_bubble_outline_black_24dp.png" />
-    <AndroidResource Include="Resources\layout\Video.axml" />
+	<AndroidResource Include="Resources\layout\Video.axml" />
     <AndroidResource Include="Resources\raw\Handy_Modul_1_720p.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
@@ -198,6 +209,7 @@
     <Folder Include="Assets\Sounds\Objects\" />
     <Folder Include="Assets\Sounds\Syllables\" />
     <Folder Include="Assets\Sounds\Letters\" />
+    <Folder Include="Resources\raw\level\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 1.mp3" />
@@ -257,6 +269,8 @@
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 5 Aufgabe 6.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 1.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 2.mp3" />
+    <AndroidAsset Include="Assets\level2.json" />
+    <AndroidAsset Include="Assets\level3.json" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>

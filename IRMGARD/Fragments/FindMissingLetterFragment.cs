@@ -40,6 +40,8 @@ namespace IRMGARD
 
         protected override void InitIteration()
         {
+            base.InitIteration();
+
             var currentIteration = GetCurrentIteration<FindMissingLetterIteration>();
 
             // Set random font case for whole iteration
