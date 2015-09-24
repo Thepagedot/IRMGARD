@@ -6,7 +6,7 @@
     {
       "Name": "Module 1",
       "Color": "#DDD6BF",
-      "VideoPath": "Videos/Handy_Modul_1_720p.mp4",
+      "VideoPath": null,
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -22,10 +22,10 @@
               "LettersToLearn": [
                 "A"
               ],
-              "Name": "Aal",
+              "Name": "Affe",
               "Media": {
-                "ImagePath": "Aal.png",
-                "SoundPath": "Objects/Aal.mp3"
+                "ImagePath": "affe.png",
+                "SoundPath": "Objects/Affe.mp3"
               }
             },
             {
@@ -35,7 +35,7 @@
               ],
               "Name": "Elefant",
               "Media": {
-                "ImagePath": "Elefant.png",
+                "ImagePath": "elefant.png",
                 "SoundPath": "Objects/Elefant.mp3"
               }
             },
@@ -46,7 +46,7 @@
               ],
               "Name": "Igel",
               "Media": {
-                "ImagePath": "Igel.png",
+                "ImagePath": "igel.png",
                 "SoundPath": "Objects/Igel.mp3"
               }
             },
@@ -57,7 +57,7 @@
               ],
               "Name": "Ofen",
               "Media": {
-                "ImagePath": "Ofen.png",
+                "ImagePath": "ofen.png",
                 "SoundPath": "Objects/Ofen.mp3"
               }
             },
@@ -68,7 +68,7 @@
               ],
               "Name": "Uhu",
               "Media": {
-                "ImagePath": "Uhu.png",
+                "ImagePath": "uhu.png",
                 "SoundPath": "Objects/Uhu.mp3"
               }
             }
@@ -85,140 +85,105 @@
             {
               "Letter": "A",
               "Media": {
-                "ImagePath": "Aal.png",
-                "SoundPath": "Objects/Aal.mp3"
-              }
-            },
-            {
-              "Letter": "A",
-              "Media": {
-                "ImagePath": "Ameise.png",
+                "ImagePath": "ameise.png",
                 "SoundPath": "Objects/Ameise.mp3"
               }
             },
             {
               "Letter": "A",
               "Media": {
-                "ImagePath": "Affe.png",
+                "ImagePath": "affe.png",
                 "SoundPath": "Objects/Affe.mp3"
               }
             },
             {
               "Letter": "A",
               "Media": {
-                "ImagePath": "Ahorn.png",
+                "ImagePath": "ahorn.png",
                 "SoundPath": "Objects/Ahorn.mp3"
               }
             },
             {
               "Letter": "E",
               "Media": {
-                "ImagePath": "Elefant.png",
-                "SoundPath": "Objects/Elefant.mp3"
-              }
-            },
-            {
-              "Letter": "E",
-              "Media": {
-                "ImagePath": "Esel.png",
+                "ImagePath": "esel.png",
                 "SoundPath": "Objects/Esel.mp3"
               }
             },
             {
               "Letter": "E",
               "Media": {
-                "ImagePath": "Eber.png",
+                "ImagePath": "eber.png",
                 "SoundPath": "Objects/Eber.mp3"
               }
             },
             {
               "Letter": "E",
               "Media": {
-                "ImagePath": "Efeu.png",
+                "ImagePath": "efeu.png",
                 "SoundPath": "Objects/Efeu.mp3"
               }
             },
             {
               "Letter": "I",
               "Media": {
-                "ImagePath": "Igel.png",
-                "SoundPath": "Objects/Igel.mp3"
-              }
-            },
-            {
-              "Letter": "I",
-              "Media": {
-                "ImagePath": "Insel.png",
+                "ImagePath": "insel.png",
                 "SoundPath": "Objects/Insel.mp3"
               }
             },
             {
               "Letter": "I",
               "Media": {
-                "ImagePath": "Iltis.png",
+                "ImagePath": "iltis.png",
                 "SoundPath": "Objects/Iltis.mp3"
               }
-            },
+            },            
             {
               "Letter": "I",
               "Media": {
-                "ImagePath": "Ina.png",
+                "ImagePath": "ina.png",
                 "SoundPath": "Objects/Ina.mp3"
               }
             },
             {
               "Letter": "O",
               "Media": {
-                "ImagePath": "Ofen.png",
-                "SoundPath": "Objects/Ofen.mp3"
-              }
-            },
-            {
-              "Letter": "O",
-              "Media": {
-                "ImagePath": "Oma.png",
+                "ImagePath": "oma.png",
                 "SoundPath": "Objects/Oma.mp3"
               }
             },
             {
               "Letter": "O",
               "Media": {
-                "ImagePath": "Opa.png",
+                "ImagePath": "opa.png",
                 "SoundPath": "Objects/Opa.mp3"
               }
             },
             {
               "Letter": "O",
               "Media": {
-                "ImagePath": "Ohren.png",
+                "ImagePath": "ohren.png",
                 "SoundPath": "Objects/Ohren.mp3"
               }
             },
             {
               "Letter": "U",
               "Media": {
-                "ImagePath": "U-Boot.png",
+                "ImagePath": "uboot.png",
                 "SoundPath": "Objects/U-Boot.mp3"
               }
             },
             {
               "Letter": "U",
               "Media": {
-                "ImagePath": "Uhu.png",
-                "SoundPath": "Objects/Uhu.mp3"
-              }
-            },
-            {
-              "Letter": "U",
-              "Media": {
-                "ImagePath": "Uhren.png",
+                "ImagePath": "uhr.png",
                 "SoundPath": "Objects/Uhren.mp3"
               }
             },
             {
               "Letter": "U",
               "Media": {
-                "ImagePath": "Ufo.png",
+                "ImagePath": "ufo.png",
                 "SoundPath": "Objects/Ufo.mp3"
               }
             }
@@ -415,31 +380,31 @@
             {
               "Letter": "A",
               "Media": {
-                "SoundPath": "Objects/Affe.mp3"
+                "SoundPath": "Syllables/Ma-lang.mp3"
               }
             },
             {
               "Letter": "E",
               "Media": {
-                "SoundPath": "Objects/Eber.mp3"
+                "SoundPath": "Objects/Me-lang.mp3"
               }
             },
             {
               "Letter": "I",
               "Media": {
-                "SoundPath": "Objects/Insel.mp3"
+                "SoundPath": "Objects/Mi-lang.mp3"
               }
             },
             {
               "Letter": "O",
               "Media": {
-                "SoundPath": "Objects/Ohren.mp3"
+                "SoundPath": "Objects/Mo-lang.mp3"
               }
             },
             {
               "Letter": "U",
               "Media": {
-                "SoundPath": "Ufo.mp3"
+                "SoundPath": "Mu-lang.mp3"
               }
             }
           ],
@@ -450,38 +415,6 @@
               "SyllableParts": [
                 "M",
                 "A"
-              ]
-            },
-            {
-              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
-              "SyllableToLearn": "ME",
-              "SyllableParts": [
-                "M",
-                "E"
-              ]
-            },
-            {
-              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
-              "SyllableToLearn": "MI",
-              "SyllableParts": [
-                "M",
-                "I"
-              ]
-            },
-            {
-              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
-              "SyllableToLearn": "MO",
-              "SyllableParts": [
-                "M",
-                "O"
-              ]
-            },
-            {
-              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
-              "SyllableToLearn": "MU",
-              "SyllableParts": [
-                "M",
-                "U"
               ]
             }
           ]
@@ -500,27 +433,33 @@
                 {
                   "SyllableParts": [
                    {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                  "Letter": "L",
-                  "DraggedLetter": "",
-                  "IsShort": false,
-                  "IsLong": false
+                    "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                    "Letter": "L",
+                    "DraggedLetter": "",
+                    "IsShort": false,
+                    "IsLong": false
                    },
                    {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                  "Letter": "a",
-                  "DraggedLetter": "",
-                  "IsShort": false,
-                  "IsLong": false
+                    "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                    "Letter": "A",
+                    "DraggedLetter": "",
+                    "IsShort": false,
+                    "IsLong": false
                    }
                   ],
-                  "SoundPath": "La.mp3"
+                  "SoundPath": "Syllables/La.mp3"
                 }
               ],
               "Options": [
                 {
                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                  "Letter": "J",
+                  "Letter": "O",
+                  "IsShort": false,
+                  "IsLong": false
+                },
+                {
+                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                  "Letter": "G",
                   "IsShort": false,
                   "IsLong": false
                 },
@@ -532,7 +471,19 @@
                 },
                 {
                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                  "Letter": "E",
+                  "Letter": "T",
+                  "IsShort": false,
+                  "IsLong": false
+                },
+                {
+                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                  "Letter": "I",
+                  "IsShort": false,
+                  "IsLong": false
+                },
+                {
+                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                  "Letter": "M",
                   "IsShort": false,
                   "IsLong": false
                 },
@@ -544,7 +495,13 @@
                 },
                 {
                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                  "Letter": "a",
+                  "Letter": "A",
+                  "IsShort": false,
+                  "IsLong": false
+                },
+                {
+                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                  "Letter": "R",
                   "IsShort": false,
                   "IsLong": false
                 }
@@ -566,33 +523,33 @@
                 {
                   "SyllableParts": [
                    {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                  "Letter": "L",
-                  "DraggedLetter": "",
-                  "IsShort": false,
-                  "IsLong": false
+                      "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                      "Letter": "L",
+                      "DraggedLetter": "",
+                      "IsShort": false,
+                      "IsLong": false
                    },
                    {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                  "Letter": "a",
-                  "DraggedLetter": "",
-                  "IsShort": false,
-                  "IsLong": false
+                      "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                      "Letter": "A",
+                      "DraggedLetter": "",
+                      "IsShort": false,
+                      "IsLong": false
                    }
                   ],
-                  "SoundPath": "La.mp3"
+                  "SoundPath": "Syllables/La.mp3"
                 },{
                   "SyllableParts": [
                    {
                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                  "Letter": "m",
+                  "Letter": "M",
                   "DraggedLetter": "",
                   "IsShort": false,
                   "IsLong": false
                    },
                    {
                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                  "Letter": "a",
+                  "Letter": "A",
                   "DraggedLetter": "",
                   "IsShort": false,
                   "IsLong": false
@@ -604,7 +561,13 @@
               "Options": [
                 {
                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                  "Letter": "J",
+                  "Letter": "M",
+                  "IsShort": false,
+                  "IsLong": false
+                },
+                {
+                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                  "Letter": "G",
                   "IsShort": false,
                   "IsLong": false
                 },
@@ -616,19 +579,19 @@
                 },
                 {
                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                  "Letter": "a",
+                  "Letter": "O",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                  "Letter": "E",
+                  "Letter": "I",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                  "Letter": "m",
+                  "Letter": "M",
                   "IsShort": false,
                   "IsLong": false
                 },
@@ -640,7 +603,13 @@
                 },
                 {
                   "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                  "Letter": "a",
+                  "Letter": "A",
+                  "IsShort": false,
+                  "IsLong": false
+                },
+                {
+                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                  "Letter": "R",
                   "IsShort": false,
                   "IsLong": false
                 }
@@ -670,49 +639,31 @@
                 {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "IsWithImage": false,
-                  "Name": "Aal",
+                  "Name": "A",
                   "Media": null
                  },
                  {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "IsWithImage": false,
-                  "Name": "Eber",
+                  "Name": "E",
                   "Media": null
                  },
                  {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "IsWithImage": false,
-                  "Name": "Ufo",
+                  "Name": "U",
                   "Media": null
                  },
                  {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "IsWithImage": false,
-                  "Name": "Insel",
+                  "Name": "I",
                   "Media": null
                  },
                  {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "IsWithImage": false,
-                  "Name": "Affe",
-                  "Media": null
-                 },
-                 {
-                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "IsWithImage": false,
-                  "Name": "Ofen",
-                  "Media": null
-                 },
-                 {
-                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "IsWithImage": false,
-                  "Name": "Eber",
-                  "Media": null
-                 },
-                 {
-                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "IsWithImage": false,
-                  "Name": "Uhu",
+                  "Name": "O",
                   "Media": null
                  }
                ]                                                                           
@@ -735,7 +686,7 @@
                   "IsWithImage": true,
                   "Name": "Affe",
                   "Media": {
-                    "ImagePath": "Affe.png",
+                    "ImagePath": "affe.png",
                     "SoundPath": "Objects/Affe.mp3"
                    }
                  },
@@ -744,7 +695,7 @@
                   "IsWithImage": true,
                   "Name": "Eber",
                   "Media": {
-                    "ImagePath": "Eber.png",
+                    "ImagePath": "eber.png",
                     "SoundPath": "Objects/Eber.mp3"
                    }
                  },
@@ -753,7 +704,7 @@
                   "IsWithImage": true,
                   "Name": "Ufo",
                   "Media": {
-                    "ImagePath": "Ufo.png",
+                    "ImagePath": "ufo.png",
                     "SoundPath": "Objects/Ufo.mp3"
                    }
                  },
@@ -762,17 +713,8 @@
                   "IsWithImage": true,
                   "Name": "Insel",
                   "Media": {
-                    "ImagePath": "Insel.png",
+                    "ImagePath": "insel.png",
                     "SoundPath": "Objects/Insel.mp3"
-                   }
-                 },
-                 {
-                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "IsWithImage": true,
-                  "Name": "Affe",
-                  "Media": {
-                    "ImagePath": "Affe.png",
-                    "SoundPath": "Objects/Affe.mp3"
                    }
                  },
                  {
@@ -780,7 +722,7 @@
                   "IsWithImage": true,
                   "Name": "Ofen",
                   "Media": {
-                    "ImagePath": "Ofen.png",
+                    "ImagePath": "ofen.png",
                     "SoundPath": "Objects/Ofen.mp3"
                    }
                  },
@@ -789,7 +731,7 @@
                   "IsWithImage": true,
                   "Name": "Eber",
                   "Media": {
-                    "ImagePath": "Eber.png",
+                    "ImagePath": "eber.png",
                     "SoundPath": "Objects/Eber.mp3"
                    }
                  },
@@ -798,7 +740,7 @@
                   "IsWithImage": true,
                   "Name": "Uhu",
                   "Media": {
-                    "ImagePath": "Uhu.png",
+                    "ImagePath": "uhu.png",
                     "SoundPath": "Objects/Uhu.mp3"
                    }
                  }
