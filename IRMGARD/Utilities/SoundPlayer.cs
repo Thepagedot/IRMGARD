@@ -9,6 +9,8 @@ namespace IRMGARD
 {
 	public static class SoundPlayer
 	{
+        private static MediaPlayer player = new MediaPlayer();
+
 		/// <summary>
 		/// Plaies a sound from an Assets sound file
 		/// </summary>
@@ -26,8 +28,13 @@ namespace IRMGARD
 				// Describe sound file from Assets properly
 				var descriptor = context.Assets.OpenFd(folderName + "/" +  fileName);
 						
+
+                // reset player
+                player.Stop();
+                player.Release();
+                player = new MediaPlayer();
+
 				// Play sound file
-				var player = new MediaPlayer();
 				player.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
 				player.Prepare();
 				player.Start();
