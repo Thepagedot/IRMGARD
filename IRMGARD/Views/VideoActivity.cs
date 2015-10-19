@@ -40,15 +40,17 @@ namespace IRMGARD
 
             ISurfaceHolder holder = videoView.Holder;
             holder.AddCallback(this);
-
-            mediaPlayer = new MediaPlayer();
-           
-            //mediaPlayer.Start();
+        }
+         
+        protected override void OnResume()
+        {
+            base.OnResume();
 
             // Play Video
+            mediaPlayer = new MediaPlayer();
             Play();
         }
-            
+
         protected override void OnPause()
         {
             base.OnPause();
@@ -87,7 +89,6 @@ namespace IRMGARD
                 mediaPlayer.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
                 mediaPlayer.Prepare();
                 mediaPlayer.Start();
-
             }
         }
 
