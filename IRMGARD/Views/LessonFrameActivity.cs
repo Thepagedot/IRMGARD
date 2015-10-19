@@ -37,7 +37,8 @@ namespace IRMGARD
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.LessonFrame);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
-            SupportActionBar.SetDisplayHomeAsUpEnabled (true);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            this.CompatMode();
 
 			ModuleNumberText = FindViewById<TextView>(Resource.Id.txtModuleNumber);
 			LessonNumberText = FindViewById<TextView>(Resource.Id.txtLessonNumber);

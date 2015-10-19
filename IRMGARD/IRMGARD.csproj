@@ -109,6 +109,7 @@
     <Compile Include="Adapter\TaskLetterAdapter.cs" />
     <Compile Include="Fragments\LetterDropFragment.cs" />
     <Compile Include="Views\VideoActivity.cs" />
+    <Compile Include="Utilities\CompatHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\level4.json" />

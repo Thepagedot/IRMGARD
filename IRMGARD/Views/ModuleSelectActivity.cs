@@ -23,7 +23,8 @@ namespace IRMGARD
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.ModuleSelect);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
-            SupportActionBar.SetDisplayHomeAsUpEnabled (true);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            this.CompatMode();
 
 			var moduleListView = FindViewById<ListView> (Resource.Id.lvModules);
 			moduleListView.ItemClick += ModuleListView_ItemClick;

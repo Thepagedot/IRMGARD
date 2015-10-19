@@ -24,6 +24,7 @@ namespace IRMGARD
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.Main);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
+            this.CompatMode();         
 
 			// Initialize DataHolder if needed
 			if (DataHolder.Current == null) {

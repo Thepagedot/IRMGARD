@@ -23,7 +23,8 @@ namespace IRMGARD
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.LevelSelect);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));           
-            SupportActionBar.SetDisplayHomeAsUpEnabled (true);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            this.CompatMode();
 
 			var levelListView = FindViewById<ListView> (Resource.Id.lvLevels);
 			levelListView.ItemClick += LevelListView_ItemClick;

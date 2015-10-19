@@ -24,9 +24,10 @@ namespace IRMGARD
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.LevelSponsor);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
-            SupportActionBar.SetDisplayHomeAsUpEnabled (true);
+            SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             SupportActionBar.Subtitle = String.Format(GetString(Resource.String.sponsor_welcome), DataHolder.Current.CurrentLevel.Name);
-                      
+            this.CompatMode();
+
             var closeButton = FindViewById<FloatingActionButton>(Resource.Id.btnClose);
             closeButton.Click += CloseButton_Click;
         }
