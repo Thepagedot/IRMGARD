@@ -12,11 +12,13 @@ using Android.Views;
 using Android.Widget;
 using Android.Content.Res;
 using Android.Media;
+using Android.Support.V7.App;
+using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace IRMGARD
 {
     [Activity(Label = "IRMGARD")]            
-    public class VideoActivity : Activity, MediaPlayer.IOnPreparedListener, ISurfaceHolderCallback
+    public class VideoActivity : AppCompatActivity, MediaPlayer.IOnPreparedListener, ISurfaceHolderCallback
     {
         MediaPlayer mediaPlayer;
         string nextView;
@@ -26,10 +28,13 @@ namespace IRMGARD
             base.OnCreate(bundle);
 
             // Read context
-            nextView = Intent.Extras.GetString("nextView");
+            nextView = Intent.Extras.GetString("nextView");           
 
             // Setup UI
             SetContentView(Resource.Layout.Video);
+            SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
+            SupportActionBar.SetDisplayHomeAsUpEnabled (true);
+
             FindViewById<Button>(Resource.Id.btnNext).Click += BtnNext_Click;
             FindViewById<Button>(Resource.Id.btnRepeat).Click += BtnRepeat_Click;
             var videoView = (VideoView)FindViewById<VideoView>(Resource.Id.videoView);
@@ -38,21 +43,41 @@ namespace IRMGARD
             holder.SetType (SurfaceType.PushBuffers);
             holder.AddCallback(this);
 
-            var descriptor = Assets.OpenFd("Videos/Handy_Modul_1_720p.mp4");
             mediaPlayer = new MediaPlayer();
-            mediaPlayer.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
-            mediaPlayer.Prepare();
-            mediaPlayer.Looping = false;
+           
             //mediaPlayer.Start();
 
             // Play Video
             Play();
         }
-                              
+
+        protected override void OnPause()
+        {
+            base.OnPause();
+            mediaPlayer.Stop();
+            mediaPlayer.Release();
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId) 
+            {
+                // Respond to the action bar's Up/Home button
+                case Android.Resource.Id.Home:
+                    Finish();
+                    return true;
+            }
+
+            return base.OnOptionsItemSelected(item);
+        }
+                           
         protected void Play()
         {            
             if (!String.IsNullOrEmpty(DataHolder.Current.CurrentModule.VideoPath))
             {           
+                var descriptor = Assets.OpenFd(DataHolder.Current.CurrentModule.VideoPath);
+                mediaPlayer.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
+                mediaPlayer.Prepare();
                 mediaPlayer.Start();
             }
         }
@@ -77,21 +102,12 @@ namespace IRMGARD
 
         public void SurfaceCreated(ISurfaceHolder holder)
         {
-            Console.WriteLine("SurfaceCreated");
             mediaPlayer.SetDisplay(holder);
         }
-        public void SurfaceDestroyed(ISurfaceHolder holder)
-        {
-            Console.WriteLine("SurfaceDestroyed");
-        }
-        public void SurfaceChanged(ISurfaceHolder holder, Android.Graphics.Format format, int w, int h)
-        {
-            Console.WriteLine("SurfaceChanged");
-        }
-        public void OnPrepared(MediaPlayer player)
-        {
 
-        }
+        public void SurfaceDestroyed(ISurfaceHolder holder) {}
+        public void SurfaceChanged(ISurfaceHolder holder, Android.Graphics.Format format, int w, int h) {}
+        public void OnPrepared(MediaPlayer player) {}
     }
 }
 

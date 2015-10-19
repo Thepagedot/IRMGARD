@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
     <VideoView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/videoView" />
+        android:layout_height="fill_parent"
+        android:id="@+id/videoView"
+        android:layout_below="@id/toolbar" />
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout1"
-        android:layout_gravity="bottom|end">
+        android:layout_alignRight="@id/videoView"
+        android:layout_alignBottom="@id/videoView">
         <Button
             android:text="Repeat"
             android:layout_width="wrap_content"
@@ -24,4 +29,4 @@
             android:layout_height="match_parent"
             android:id="@+id/btnNext" />
     </LinearLayout>
-</FrameLayout>
+</RelativeLayout>

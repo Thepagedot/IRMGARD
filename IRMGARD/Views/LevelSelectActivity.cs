@@ -10,26 +10,20 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Support.V7.App;
+using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace IRMGARD
 {
 	[Activity (Label = "Levels", ParentActivity = typeof(MainActivity))]			
-	public class LevelSelectActivity : Activity
+    public class LevelSelectActivity : AppCompatActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.LevelSelect);
-
-			// Hide image on Lollypop
-			if (Build.VERSION.SdkInt <= BuildVersionCodes.Kitkat)
-			{
-				ActionBar.SetLogo (Resource.Drawable.Icon);
-				ActionBar.SetDisplayUseLogoEnabled (true);
-				ActionBar.SetDisplayShowHomeEnabled(true);
-			}
-
-			ActionBar.SetDisplayHomeAsUpEnabled (true);
+            SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));           
+            SupportActionBar.SetDisplayHomeAsUpEnabled (true);
 
 			var levelListView = FindViewById<ListView> (Resource.Id.lvLevels);
 			levelListView.ItemClick += LevelListView_ItemClick;

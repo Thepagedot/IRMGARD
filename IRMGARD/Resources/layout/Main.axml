@@ -5,6 +5,9 @@
     android:id="@+id/linearLayout1"
     android:minWidth="25px"
     android:minHeight="25px">
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
     <ImageView
         android:src="@drawable/splashscreen"
         android:layout_width="wrap_content"

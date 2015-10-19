@@ -14,11 +14,13 @@ using System.Threading.Tasks;
 using System.Security.Cryptography;
 using IRMGARD.Models;
 using Java.Security;
+using Android.Support.V7.App;
+using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace IRMGARD
 {
 	[Activity (Label = "Lesson", ParentActivity = typeof(ModuleSelectActivity))]			
-	public class LessonFameActivity : Activity
+    public class LessonFameActivity : AppCompatActivity
 	{
 		private const string lessonFragmentTag = "current-lesson-fragment";
 
@@ -34,16 +36,8 @@ namespace IRMGARD
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.LessonFrame);
-
-			// Hide image on Lollypop
-			if (Build.VERSION.SdkInt <= BuildVersionCodes.Kitkat)
-			{
-				ActionBar.SetLogo (Resource.Drawable.Icon);
-				ActionBar.SetDisplayUseLogoEnabled (true);
-				ActionBar.SetDisplayShowHomeEnabled(true);
-			}
-
-			ActionBar.SetDisplayHomeAsUpEnabled (true);
+            SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
+            SupportActionBar.SetDisplayHomeAsUpEnabled (true);
 
 			ModuleNumberText = FindViewById<TextView>(Resource.Id.txtModuleNumber);
 			LessonNumberText = FindViewById<TextView>(Resource.Id.txtLessonNumber);

@@ -9,16 +9,19 @@ using Android.OS;
 using IRMGARD.Models;
 using System.Collections.Generic;
 using Newtonsoft.Json;
+using Android.Support.V7.App;
+using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace IRMGARD
 {
 	[Activity (Label = "IRMGARD", MainLauncher = true, Icon = "@drawable/icon")]
-	public class MainActivity : Activity
+	public class MainActivity : AppCompatActivity
 	{
 		protected override async void OnCreate (Bundle bundle)
 		{			
 			base.OnCreate (bundle);
-			SetContentView (Resource.Layout.Main);           
+			SetContentView (Resource.Layout.Main);
+            SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
 
 			// Initialize DataHolder if needed
 			if (DataHolder.Current == null) {

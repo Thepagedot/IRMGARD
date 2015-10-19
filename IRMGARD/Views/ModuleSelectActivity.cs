@@ -10,26 +10,20 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Support.V7.App;
+using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace IRMGARD
 {
 	[Activity (Label = "Modules", ParentActivity = typeof(LevelSelectActivity))]			
-	public class ModuleSelectActivity : Activity
+    public class ModuleSelectActivity : AppCompatActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.ModuleSelect);
-
-			// Hide image on Lollypop
-			if (Build.VERSION.SdkInt <= BuildVersionCodes.Kitkat)
-			{
-				ActionBar.SetLogo (Resource.Drawable.Icon);
-				ActionBar.SetDisplayUseLogoEnabled (true);
-				ActionBar.SetDisplayShowHomeEnabled(true);
-			}
-
-			ActionBar.SetDisplayHomeAsUpEnabled (true);
+            SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
+            SupportActionBar.SetDisplayHomeAsUpEnabled (true);
 
 			var moduleListView = FindViewById<ListView> (Resource.Id.lvModules);
 			moduleListView.ItemClick += ModuleListView_ItemClick;
