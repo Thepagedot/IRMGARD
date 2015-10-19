@@ -36,7 +36,7 @@ namespace IRMGARD
             nextView = Intent.Extras.GetString("nextView");           
 
             FindViewById<FloatingActionButton>(Resource.Id.btnNext).Click += BtnNext_Click;
-            var videoView = (VideoView)FindViewById<VideoView>(Resource.Id.videoView);
+            var videoView = FindViewById<VideoView>(Resource.Id.videoView);
 
             ISurfaceHolder holder = videoView.Holder;
             holder.SetType (SurfaceType.PushBuffers);

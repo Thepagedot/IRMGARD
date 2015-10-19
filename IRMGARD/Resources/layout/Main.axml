@@ -16,7 +16,7 @@
         android:id="@+id/imageView1"
         android:layout_gravity="bottom"
         android:adjustViewBounds="true"
-        android:layout_alignBottom="@id/mainLayout" />
+        android:layout_alignParentBottom="true" />
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/btnStart"
         android:layout_below="@id/toolbar"

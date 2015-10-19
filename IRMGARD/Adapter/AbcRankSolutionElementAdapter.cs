@@ -7,6 +7,7 @@ using System.Linq;
 using Android.Widget;
 using Android.Content;
 using Android.Graphics;
+using Android.Graphics.Drawables;
 
 namespace IRMGARD
 {
@@ -41,7 +42,9 @@ namespace IRMGARD
                     bitmap = BitmapFactory.DecodeResource(Context.Resources, Resource.Drawable.ic_help_black_24dp);
                 }
 
-                view.FindViewById<ImageView>(Resource.Id.ivAbcRankSolutionItem).SetImageBitmap(bitmap);
+                var imageView = view.FindViewById<ImageView>(Resource.Id.ivAbcRankSolutionItem);
+                ((BitmapDrawable)imageView.Drawable).Bitmap.Recycle();
+                imageView.SetImageBitmap(bitmap);
             }
             else
             {

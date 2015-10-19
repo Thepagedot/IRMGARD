@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using Android.Content;
 using Android.Views;
 using Android.Graphics;
+using Android.Graphics.Drawables;
 
 namespace IRMGARD
 {
@@ -29,9 +30,9 @@ namespace IRMGARD
 
 
             var bitmap = BitmapFactory.DecodeResource(Context.Resources, Resource.Drawable.ic_volume_up_black_24dp);
-            ImageView image = view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage);
-
-            image.SetImageBitmap (bitmap);
+            var imageView = view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage);
+            ((BitmapDrawable)imageView.Drawable).Bitmap.Recycle();
+            imageView.SetImageBitmap (bitmap);
 
             if (addMultiIcon)
                 view.FindViewById<TextView>(Resource.Id.tvAddMultiIcon).Text = "+";

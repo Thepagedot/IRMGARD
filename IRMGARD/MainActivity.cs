@@ -13,7 +13,6 @@ using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.Design.Widget;
 
-
 namespace IRMGARD
 {
 	[Activity (Label = "IRMGARD", MainLauncher = true, Icon = "@drawable/icon")]

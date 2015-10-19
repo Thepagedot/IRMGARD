@@ -6,6 +6,7 @@ using Android.Content;
 using System.Collections.Generic;
 using Android.Graphics;
 using Android.Runtime;
+using Android.Graphics.Drawables;
 
 namespace IRMGARD
 {
@@ -25,11 +26,9 @@ namespace IRMGARD
                 view = layoutInflater.Inflate(Resource.Layout.MediaElement, null);
 
             var bitmap = BitmapFactory.DecodeResource(Context.Resources, Resource.Drawable.ic_volume_up_black_24dp);
-            //var bitmap = Context.Resource AssetHelper.GetBitmap(Context, "Aal.png");
-
-            ImageView image = view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage);
-
-            image.SetImageBitmap (bitmap);
+            var imageView = view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage);
+            ((BitmapDrawable)imageView.Drawable).Bitmap.Recycle();
+            imageView.SetImageBitmap(bitmap);
 
             return view;
         }

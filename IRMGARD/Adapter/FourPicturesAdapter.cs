@@ -4,6 +4,7 @@ using Android.Widget;
 using Android.Views;
 using Android.Content;
 using System.Collections.Generic;
+using Android.Graphics.Drawables;
 
 namespace IRMGARD
 {
@@ -18,13 +19,11 @@ namespace IRMGARD
 
 		public override View GetView(int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
 		{
-			View view = convertView;
-			if (view == null)
-				view = layoutInflater.Inflate(Resource.Layout.MediaElement, null);
+			View view = convertView ?? layoutInflater.Inflate(Resource.Layout.MediaElement, null);
 
-			var bitmap = AssetHelper.GetBitmap(Context, GetItem(position).Media.ImagePath);
-
-			view.FindViewById<ImageView> (Resource.Id.ivMeidaElementImage).SetImageBitmap (bitmap);
+            var imageView = view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage);
+            ((BitmapDrawable)imageView.Drawable).Bitmap.Recycle();
+            imageView.SetImageBitmap(AssetHelper.GetBitmap(Context, GetItem(position).Media.ImagePath));
 			return view;
 		}
 	}
