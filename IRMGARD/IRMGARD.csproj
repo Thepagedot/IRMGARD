@@ -232,6 +232,7 @@
     <AndroidAsset Include="Assets\Sounds\Syllables\Mu-lang.mp3" />
     <AndroidAsset Include="Assets\Images\eber.png" />
     <AndroidAsset Include="Assets\Sounds\Objects\U-Boot.mp3" />
+    <AndroidAsset Include="Assets\Videos\Handy_Modul_1_720p.mp4" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -311,7 +312,6 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_chat_bubble_outline_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_chat_bubble_outline_black_24dp.png" />
     <AndroidResource Include="Resources\layout\Video.axml" />
-    <AndroidResource Include="Resources\raw\Handy_Modul_1_720p.mp4" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -323,7 +323,6 @@
     <Folder Include="Models\" />
     <Folder Include="Models\Levels\" />
     <Folder Include="Enums\" />
-    <Folder Include="Resources\raw\" />
     <Folder Include="Utilities\" />
     <Folder Include="Assets\Sounds\" />
     <Folder Include="Assets\Sounds\Level-1\" />
@@ -334,7 +333,7 @@
     <Folder Include="Assets\Sounds\Objects\" />
     <Folder Include="Assets\Sounds\Syllables\" />
     <Folder Include="Assets\Sounds\Letters\" />
-    <Folder Include="Resources\raw\level\" />
+    <Folder Include="Assets\Videos\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 1.mp3" />

@@ -16,9 +16,9 @@ using Android.Media;
 namespace IRMGARD
 {
     [Activity(Label = "IRMGARD")]            
-    public class VideoActivity : Activity
+    public class VideoActivity : Activity, MediaPlayer.IOnPreparedListener, ISurfaceHolderCallback
     {
-        VideoView videoView;
+        MediaPlayer mediaPlayer;
         string nextView;
 
         protected override void OnCreate(Bundle bundle)
@@ -28,11 +28,22 @@ namespace IRMGARD
             // Read context
             nextView = Intent.Extras.GetString("nextView");
 
-            // Set UI
+            // Setup UI
             SetContentView(Resource.Layout.Video);
-            videoView = FindViewById<VideoView>(Resource.Id.videoView);
             FindViewById<Button>(Resource.Id.btnNext).Click += BtnNext_Click;
             FindViewById<Button>(Resource.Id.btnRepeat).Click += BtnRepeat_Click;
+            var videoView = (VideoView)FindViewById<VideoView>(Resource.Id.videoView);
+
+            ISurfaceHolder holder = videoView.Holder;
+            holder.SetType (SurfaceType.PushBuffers);
+            holder.AddCallback(this);
+
+            var descriptor = Assets.OpenFd("Videos/Handy_Modul_1_720p.mp4");
+            mediaPlayer = new MediaPlayer();
+            mediaPlayer.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
+            mediaPlayer.Prepare();
+            mediaPlayer.Looping = false;
+            //mediaPlayer.Start();
 
             // Play Video
             Play();
@@ -42,9 +53,7 @@ namespace IRMGARD
         {            
             if (!String.IsNullOrEmpty(DataHolder.Current.CurrentModule.VideoPath))
             {           
-                var uri = Android.Net.Uri.Parse("android.resource://" + PackageName + "/raw/" + Resource.Raw.Handy_Modul_1_720p);
-                videoView.SetVideoURI(uri);
-                videoView.Start();
+                mediaPlayer.Start();
             }
         }
 
@@ -64,6 +73,24 @@ namespace IRMGARD
 
             if (intent != null)            
                 StartActivity(intent);
+        }
+
+        public void SurfaceCreated(ISurfaceHolder holder)
+        {
+            Console.WriteLine("SurfaceCreated");
+            mediaPlayer.SetDisplay(holder);
+        }
+        public void SurfaceDestroyed(ISurfaceHolder holder)
+        {
+            Console.WriteLine("SurfaceDestroyed");
+        }
+        public void SurfaceChanged(ISurfaceHolder holder, Android.Graphics.Format format, int w, int h)
+        {
+            Console.WriteLine("SurfaceChanged");
+        }
+        public void OnPrepared(MediaPlayer player)
+        {
+
         }
     }
 }
