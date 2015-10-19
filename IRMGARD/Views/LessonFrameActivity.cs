@@ -150,6 +150,9 @@ namespace IRMGARD
         {
             //TODO: Add Thumbs Up Animation here
             Toast.MakeText (this, "Iteration finished!", ToastLength.Short).Show();
+
+            // Stop Player
+            SoundPlayer.Stop();
         }
 
 		/// <summary>

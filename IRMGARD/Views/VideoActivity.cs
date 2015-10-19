@@ -39,7 +39,6 @@ namespace IRMGARD
             var videoView = FindViewById<VideoView>(Resource.Id.videoView);
 
             ISurfaceHolder holder = videoView.Holder;
-            holder.SetType (SurfaceType.PushBuffers);
             holder.AddCallback(this);
 
             mediaPlayer = new MediaPlayer();

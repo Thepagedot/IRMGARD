@@ -9,14 +9,13 @@ namespace IRMGARD
 {
 	public static class SoundPlayer
 	{
-        private static MediaPlayer player;
+        static readonly MediaPlayer player;
 
         static SoundPlayer()
         {
             player = new MediaPlayer();
             player.Completion += Player_Completion;
         }
-
 
 		/// <summary>
 		/// Plaies a sound from an Assets sound file
@@ -35,11 +34,8 @@ namespace IRMGARD
 				// Describe sound file from Assets properly
 				var descriptor = context.Assets.OpenFd(folderName + "/" +  fileName);
 						
-                // Reset player
-                player.Stop();
-                player.Release();
-                player = new MediaPlayer();
-                player.Completion += Player_Completion;
+                // Reset player if still playing
+                Stop();
 
 				// Play sound file
 				player.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
@@ -53,10 +49,23 @@ namespace IRMGARD
 			}
 		}
 
+        /// <summary>
+        /// Stops the currently playing sound.
+        /// </summary>
+        public static void Stop()
+        {
+            if (player.IsPlaying)
+            {
+                player.Stop();
+                player.Reset();
+            }
+        }
+
         static void Player_Completion (object sender, EventArgs e)
         {
+            // Reset player after playing a soundfile
             player.Stop();
-            player.Release();
+            player.Reset();
         }
 	}
 }
