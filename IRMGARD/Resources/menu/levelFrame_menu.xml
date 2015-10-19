@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 	<item android:id="@+id/btnVoiceInstruction"
-		  android:icon="@drawable/ic_read_out_black_24dp"
+		  android:icon="@drawable/ic_hearing_white_24dp"
 		  android:title="@string/playVoiceInstruction"
-		  android:showAsAction="ifRoom" />
+		  app:showAsAction="ifRoom" />
 
 <!--	<item android:id="@+id/btnHint"
 		  android:icon="@drawable/ic_help_black_24dp"
@@ -13,20 +14,20 @@
 	<item android:id="@+id/btnNextLesson"
 		  android:icon="@drawable/ic_help_black_24dp"
 		  android:title="DEV: Next"
-		  android:showAsAction="never" />
+		  app:showAsAction="never" />
 
 	<item android:id="@+id/btnPreviousLesson"
 		  android:icon="@drawable/ic_help_black_24dp"
 		  android:title="DEV: Previous"
-		  android:showAsAction="never" />
+		  app:showAsAction="never" />
 
 	<item android:id="@+id/btnNextModule"
 		  android:icon="@drawable/ic_help_black_24dp"
 		  android:title="DEV: Next Module"
-		  android:showAsAction="never" />
+		  app:showAsAction="never" />
 
 	<item android:id="@+id/btnPreviousModule"
 		  android:icon="@drawable/ic_help_black_24dp"
 		  android:title="DEV: Previous Module"
-		  android:showAsAction="never" />
+		  app:showAsAction="never" />
 </menu>

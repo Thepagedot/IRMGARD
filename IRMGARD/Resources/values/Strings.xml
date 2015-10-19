@@ -6,5 +6,6 @@
 	<string name="playVoiceInstruction">Anleitung</string>
     <string name="error_soundfileNotFound">Ups, dieser Sound konnte leider nicht geladen werden!</string>
     <string name="close">Schließen</string>
-	<string name="sponsor_welcome">{0} wird unterstützt von:</string>
+    <string name="sponsor_welcome">{0} wird unterstützt von:</string>
+	<string name="video_replay">Wiederholen</string>
 </resources>

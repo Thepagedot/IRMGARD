@@ -11,6 +11,8 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
+using Android.Support.Design.Widget;
+
 
 namespace IRMGARD
 {
@@ -39,7 +41,7 @@ namespace IRMGARD
                 await DataHolder.Current.LoadLevelAsync(9);
 			}
 
-			var startButton = FindViewById<ImageButton> (Resource.Id.btnStart);
+			var startButton = FindViewById<FloatingActionButton> (Resource.Id.btnStart);           
 			startButton.Click += StartButton_Click;
 		}
 

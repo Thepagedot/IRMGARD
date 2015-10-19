@@ -49,13 +49,13 @@
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Android.Support.v4">
-      <HintPath>..\packages\Xamarin.Android.Support.v4.22.2.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Android.Support.v7.AppCompat">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Android.Support.Design">
-      <HintPath>..\packages\Xamarin.Android.Support.Design.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.Design.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Android.Support.Design.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.Design.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -322,6 +322,37 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_chat_bubble_outline_black_24dp.png" />
     <AndroidResource Include="Resources\layout\Video.axml" />
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_play_arrow_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_play_arrow_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_play_arrow_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_play_arrow_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_play_arrow_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_hearing_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_hearing_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_hearing_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_hearing_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_hearing_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_done_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_done_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_done_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_done_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_done_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_replay_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_replay_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_replay_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_replay_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_replay_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_navigate_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_navigate_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_navigate_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_navigate_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_navigate_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_forward_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_arrow_forward_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_forward_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow_forward_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_arrow_forward_white_24dp.png" />
+    <AndroidResource Include="Resources\menu\video_menu.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
+using Android.Support.Design.Widget;
 
 namespace IRMGARD
 {
@@ -24,11 +25,9 @@ namespace IRMGARD
             SetContentView(Resource.Layout.LevelSponsor);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
             SupportActionBar.SetDisplayHomeAsUpEnabled (true);
-
-            var welcomeText = FindViewById<TextView>(Resource.Id.tvSponsorText);
-            welcomeText.Text = String.Format(GetString(Resource.String.sponsor_welcome), DataHolder.Current.CurrentLevel.Name);
-
-            var closeButton = FindViewById<Button>(Resource.Id.btnClose);
+            SupportActionBar.Subtitle = String.Format(GetString(Resource.String.sponsor_welcome), DataHolder.Current.CurrentLevel.Name);
+                      
+            var closeButton = FindViewById<FloatingActionButton>(Resource.Id.btnClose);
             closeButton.Click += CloseButton_Click;
         }
 
