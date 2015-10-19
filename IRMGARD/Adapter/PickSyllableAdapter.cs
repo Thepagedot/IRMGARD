@@ -24,10 +24,11 @@ namespace IRMGARD
             View view = convertView;
             if (view == null)
                 view = layoutInflater.Inflate(Resource.Layout.MediaElement, null);
+            else
+                ((BitmapDrawable)view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage).Drawable).Bitmap.Recycle();
 
             var bitmap = BitmapFactory.DecodeResource(Context.Resources, Resource.Drawable.ic_volume_up_black_24dp);
             var imageView = view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage);
-            ((BitmapDrawable)imageView.Drawable).Bitmap.Recycle();
             imageView.SetImageBitmap(bitmap);
 
             return view;

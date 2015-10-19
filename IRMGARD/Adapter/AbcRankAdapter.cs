@@ -16,6 +16,8 @@ namespace IRMGARD
             this.checkImage = checkImage;
         }
 
+        //TODO: Add Image Recycle
+
         public override View GetView(int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
         {
             View view = convertView;

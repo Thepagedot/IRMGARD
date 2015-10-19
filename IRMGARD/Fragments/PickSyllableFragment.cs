@@ -112,7 +112,7 @@ namespace IRMGARD
                         view.StartDrag(data, new View.DragShadowBuilder(view), null, 0);
                     }
                 };
-                flTaskItems.AddView (view);
+                flTaskItems.AddView(view);
             }
             btnCheck.Enabled = false;
         }

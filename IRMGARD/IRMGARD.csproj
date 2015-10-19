@@ -119,6 +119,7 @@
     <Compile Include="Fragments\LetterDropFragment.cs" />
     <Compile Include="Views\VideoActivity.cs" />
     <Compile Include="Utilities\CompatHelper.cs" />
+    <Compile Include="Utilities\MemoryHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\level4.json" />

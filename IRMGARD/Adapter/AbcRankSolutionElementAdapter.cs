@@ -42,8 +42,7 @@ namespace IRMGARD
                     bitmap = BitmapFactory.DecodeResource(Context.Resources, Resource.Drawable.ic_help_black_24dp);
                 }
 
-                var imageView = view.FindViewById<ImageView>(Resource.Id.ivAbcRankSolutionItem);
-                ((BitmapDrawable)imageView.Drawable).Bitmap.Recycle();
+                var imageView = view.FindViewById<ImageView>(Resource.Id.ivAbcRankSolutionItem);              
                 imageView.SetImageBitmap(bitmap);
             }
             else
