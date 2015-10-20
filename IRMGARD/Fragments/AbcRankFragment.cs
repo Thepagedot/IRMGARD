@@ -63,14 +63,9 @@ namespace IRMGARD
             if (randomized.Any(x => x.Media != null))
                 randomized = getDistinctLetterOptions(randomized, 3);
             else
-                randomized = getDistinctLetterOptions(randomized, 5);
-<<<<<<< HEAD
-            
+                randomized = getDistinctLetterOptions(randomized, 5);  
             var abcRankElementAdapter = new AbcRankAdapter(Activity.BaseContext, 0, randomized);
-=======
 
-            var abcRankElementAdapter = new AbcRankAdapter(Activity.BaseContext, 0, randomized, randomized.FirstOrDefault().IsWithImage);
->>>>>>> origin/master
             for (int i = 0; i < randomized.Count; i++) {
                 // Add letter to view
                 var view = abcRankElementAdapter.GetView (i, null, null);
