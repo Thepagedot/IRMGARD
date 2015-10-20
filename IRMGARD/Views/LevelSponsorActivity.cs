@@ -16,7 +16,7 @@ using Android.Support.Design.Widget;
 
 namespace IRMGARD
 {
-    [Activity(Label = "Danke an", ParentActivity = typeof(LevelSelectActivity))]            
+    [Activity(Label = "Danke an", ParentActivity = typeof(LevelSelectActivity), NoHistory = true)]            
     public class LevelSponsorActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -35,7 +35,6 @@ namespace IRMGARD
         void CloseButton_Click (object sender, EventArgs e)
         {
             var intent = new Intent(this, typeof(ModuleSelectActivity));
-            intent.SetFlags(ActivityFlags.ClearTop);
             StartActivity(intent);
         }
     }

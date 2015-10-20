@@ -20,31 +20,12 @@
             android:layout_gravity="start"
             android:scaleType="fitStart"
             android:adjustViewBounds="true" />
-        <LinearLayout
-            android:layout_width="wrap_content"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rvProgress"
+            android:scrollbars="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="fill_parent"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:orientation="vertical">
-            <TextView
-                android:text="Module 1"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtModuleNumber" />
-            <TextView
-                android:text="Lesson 1"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtLessonNumber" />
-            <TextView
-                android:text="Iteration 1"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtIterationNumber" />
-        </LinearLayout>
+            android:paddingLeft="@dimen/margin_default" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"

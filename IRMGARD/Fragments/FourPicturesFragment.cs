@@ -84,13 +84,12 @@ namespace IRMGARD
             {
                 var selectedItem = currentOptions.ElementAt(gvFourPictures.CheckedItemPosition);                                
                 if (selectedItem.IsCorrect) 
-                {
-                    Toast.MakeText (Activity.BaseContext, "Rrrrichtiiig", ToastLength.Short).Show();
-                    FinishIteration();
+                {                    
+                    FinishIteration(true);
                 } 
                 else
                 {
-                    Toast.MakeText (Activity.BaseContext, "Leider verloren", ToastLength.Short).Show ();
+                    FinishIteration(false);
                 }
             }
         }

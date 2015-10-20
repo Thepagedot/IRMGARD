@@ -182,9 +182,8 @@ namespace IRMGARD
         protected override void CheckSolution()
         {                     
             if (selectedIndex > -1 && selectedIndex == correctPosition) 
-            {
-                Toast.MakeText (Activity.BaseContext, "Rrrrichtiiig", ToastLength.Short).Show();
-                FinishIteration();
+            {                
+                FinishIteration(true);
 
                 var bitmap = BitmapFactory.DecodeResource(Activity.BaseContext.Resources, Resource.Drawable.ic_help_black_24dp);
                 originalView.FindViewById<ImageView>(Resource.Id.ivPickSyllableDropZone).SetImageBitmap(bitmap);
@@ -193,7 +192,7 @@ namespace IRMGARD
             } 
             else
             {
-                Toast.MakeText (Activity.BaseContext, "Leider verloren", ToastLength.Short).Show();
+                FinishIteration(false);
             }
         }
     }

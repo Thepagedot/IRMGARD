@@ -236,13 +236,12 @@ namespace IRMGARD
             }
 
             if (isCorrect)
-            {
-                Toast.MakeText(Activity.BaseContext, "Rrrrichtiiig", ToastLength.Short).Show();
-                FinishIteration();
+            {                
+                FinishIteration(true);
             }
             else
             {
-                Toast.MakeText(Activity.BaseContext, "Leider verloren", ToastLength.Short).Show();
+                FinishIteration(false);
             }
         }
 

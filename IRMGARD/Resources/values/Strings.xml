@@ -8,4 +8,8 @@
     <string name="close">Schließen</string>
     <string name="sponsor_welcome">{0} wird unterstützt von:</string>
 	<string name="video_replay">Wiederholen</string>
+    <string name="lesson_finished">Aufgabe erledigt</string>
+    <string name="lesson_finished_message">Herzlichen Glückwunsch, du bist fertig und hast die Aufgabe geschafft!</string>
+    <string name="module_finished">Modul erledigt</string>
+    <string name="module_finished_message">Super, du hast alle Aufgaben in diesem Modul erledigt!</string>
 </resources>
