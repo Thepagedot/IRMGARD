@@ -60,18 +60,18 @@ namespace IRMGARD
             else
                 randomized = randomized.Take(5).ToList();*/
 
-            if (randomized.Any(x => x.IsWithImage))
+            if (randomized.Any(x => x.Media != null))
                 randomized = getDistinctLetterOptions(randomized, 3);
             else
                 randomized = getDistinctLetterOptions(randomized, 5);
             
-            var abcRankElementAdapter = new AbcRankAdapter(Activity.BaseContext, 0, randomized, randomized.FirstOrDefault().IsWithImage);
+            var abcRankElementAdapter = new AbcRankAdapter(Activity.BaseContext, 0, randomized);
             for (int i = 0; i < randomized.Count; i++) {
                 // Add letter to view
                 var view = abcRankElementAdapter.GetView (i, null, null);
                 var item = randomized.ElementAt(i);
 
-                if (item.IsWithImage)
+                if (item.Media != null)
                 {
                     var imagePath = item.Media.ImagePath;
 
@@ -137,7 +137,7 @@ namespace IRMGARD
                 foreach (var item in currentOptionsSorted)
                     currentsolutionList.Add(new AbcRankOption());
 
-            var abcRaknkSolutionElementAdapter = new AbcRankSolutionElementAdapter(Activity.BaseContext, 0, currentsolutionList, currentOptionsSorted.FirstOrDefault().IsWithImage);
+            var abcRaknkSolutionElementAdapter = new AbcRankSolutionElementAdapter(Activity.BaseContext, 0, currentsolutionList);
             llAbcRank.RemoveAllViews();
             for (int i = 0; i < currentOptionsSorted.Count; i++) {
                 // Add letter to view
@@ -179,7 +179,7 @@ namespace IRMGARD
                         var position = llAbcRank.IndexOfChild(sender as View);
                         var draggedItem = currentOptionsSorted.ElementAt(position);
 
-                        if (draggedItem.IsWithImage)
+                        if (draggedItem.Media != null)
                         {
                             if (draggedItem.Media.ImagePath.Equals(data.GetItemAt(0).Text))
                             {

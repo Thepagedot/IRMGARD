@@ -638,31 +638,26 @@
               "Options": [
                 {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "IsWithImage": false,
                   "Name": "A",
                   "Media": null
                  },
                  {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "IsWithImage": false,
                   "Name": "E",
                   "Media": null
                  },
                  {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "IsWithImage": false,
                   "Name": "U",
                   "Media": null
                  },
                  {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "IsWithImage": false,
                   "Name": "I",
                   "Media": null
                  },
                  {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "IsWithImage": false,
                   "Name": "O",
                   "Media": null
                  }
@@ -683,7 +678,6 @@
               "Options": [
                 {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "IsWithImage": true,
                   "Name": "Affe",
                   "Media": {
                     "ImagePath": "affe.png",
@@ -692,7 +686,6 @@
                  },
                  {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "IsWithImage": true,
                   "Name": "Eber",
                   "Media": {
                     "ImagePath": "eber.png",
@@ -701,7 +694,6 @@
                  },
                  {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "IsWithImage": true,
                   "Name": "Ufo",
                   "Media": {
                     "ImagePath": "ufo.png",
@@ -710,7 +702,6 @@
                  },
                  {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "IsWithImage": true,
                   "Name": "Insel",
                   "Media": {
                     "ImagePath": "insel.png",
@@ -719,7 +710,6 @@
                  },
                  {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "IsWithImage": true,
                   "Name": "Ofen",
                   "Media": {
                     "ImagePath": "ofen.png",
@@ -728,7 +718,6 @@
                  },
                  {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "IsWithImage": true,
                   "Name": "Eber",
                   "Media": {
                     "ImagePath": "eber.png",
@@ -737,7 +726,6 @@
                  },
                  {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "IsWithImage": true,
                   "Name": "Uhu",
                   "Media": {
                     "ImagePath": "uhu.png",

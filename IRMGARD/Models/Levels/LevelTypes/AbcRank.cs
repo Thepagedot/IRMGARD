@@ -24,15 +24,13 @@ namespace IRMGARD.Models
 
 	public class AbcRankOption
 	{
-        public bool IsWithImage { get; set; }
 		public string Name { get; set; }
 		public Media Media { get; set; }
 
 		public AbcRankOption () {}
 
-		public AbcRankOption (bool isWithImage, string name, Media media)
+		public AbcRankOption (string name, Media media)
 		{
-            this.IsWithImage = isWithImage;
 			this.Name = name;
 			this.Media = media;
 		}
