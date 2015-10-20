@@ -23,9 +23,7 @@ namespace IRMGARD
 
         public override View GetView(int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
         {
-            View view = convertView;
-            if (view == null)
-                view = layoutInflater.Inflate(Resource.Layout.BuildSyllableLetterTaskItem, null);
+            var view = convertView ?? layoutInflater.Inflate(Resource.Layout.BuildSyllableLetterTaskItem, null);
 
             view.FindViewById<TextView>(Resource.Id.tvLetter).Text = GetItem(position).DraggedLetter;
             if (addMultiIcon && (position + 1 == items.Count))

@@ -13,7 +13,7 @@ namespace IRMGARD
         /// Occurs when iteration finished.
         /// </summary>
         public event IterationFinishedEventHandler IterationFinished;
-        public delegate void IterationFinishedEventHandler(object sender, EventArgs e);
+        public delegate void IterationFinishedEventHandler(object sender, IterationFinishedEventArgs e);
 
         /// <summary>
         /// Occurs when iteration changed.
@@ -27,10 +27,10 @@ namespace IRMGARD
         public event LessonFinishedEventHandler LessonFinished;
         public delegate void LessonFinishedEventHandler(object sender, EventArgs e);
 
-        protected void FireIterationFinished()
+        protected void FireIterationFinished(Iteration iteration, bool success)
         {
             if (IterationFinished != null)
-                IterationFinished(this, null);
+                IterationFinished(this, new IterationFinishedEventArgs(iteration, success));
         }
 
         protected void FireIterationChanged(Iteration iteration)
@@ -76,9 +76,10 @@ namespace IRMGARD
         /// <summary>
         /// Finishes the iteration and initiates the next one when available or finishes the lesson.
         /// </summary>
-        protected void FinishIteration()
+        protected void FinishIteration(bool success)
         {
-            FireIterationFinished();
+            var iteration = (lesson as Lesson).Iterations.ElementAt(currentIterationIndex);
+            FireIterationFinished(iteration, success);
 
             if (currentIterationIndex == (lesson as Lesson).Iterations.Count - 1)
             {
@@ -116,4 +117,16 @@ namespace IRMGARD
             this.Iteration = iteration;
         }
     }
+
+    public class IterationFinishedEventArgs : EventArgs
+    {
+        public Iteration Iteration { get; set; }
+        public bool Success { get; set; }
+
+        public IterationFinishedEventArgs(Iteration iteration, bool success) : base()
+        {
+            this.Iteration = iteration;
+            this.Success = success;
+        }
+    }        
 }	

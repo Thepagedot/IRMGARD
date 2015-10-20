@@ -1,4 +1,4 @@
-﻿		
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +15,7 @@ using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace IRMGARD
 {
-	[Activity (Label = "Modules", ParentActivity = typeof(LevelSelectActivity))]			
+	[Activity (Label = "Modules", ParentActivity = typeof(LevelSelectActivity))]
     public class ModuleSelectActivity : AppCompatActivity
 	{
 		protected override void OnCreate (Bundle bundle)

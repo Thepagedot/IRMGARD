@@ -19,11 +19,11 @@ namespace IRMGARD
 	public class MainActivity : AppCompatActivity
 	{
 		protected override async void OnCreate (Bundle bundle)
-		{			
+		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.Main);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
-            this.CompatMode();         
+            this.CompatMode();
 
 			// Initialize DataHolder if needed
 			if (DataHolder.Current == null) {
@@ -41,7 +41,7 @@ namespace IRMGARD
                 await DataHolder.Current.LoadLevelAsync(9);
 			}
 
-			var startButton = FindViewById<FloatingActionButton> (Resource.Id.btnStart);           
+			var startButton = FindViewById<FloatingActionButton> (Resource.Id.btnStart);
 			startButton.Click += StartButton_Click;
 		}
 

@@ -2,35 +2,30 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
 using Android.App;
-using Android.Content;
+using Android.Graphics;
 using Android.OS;
-using Android.Runtime;
+using Android.Support.V7.App;
+using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
-using System.Threading.Tasks;
-using System.Security.Cryptography;
 using IRMGARD.Models;
-using Java.Security;
-using Android.Support.V7.App;
+using AlertDialog = Android.Support.V7.App.AlertDialog;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace IRMGARD
 {
-	[Activity (Label = "Lesson", ParentActivity = typeof(ModuleSelectActivity))]			
+	[Activity (Label = "Lesson", ParentActivity = typeof(ModuleSelectActivity))]
     public class LessonFameActivity : AppCompatActivity
 	{
 		private const string lessonFragmentTag = "current-lesson-fragment";
 
 		//IMenuItem hintButton;
-		TextView ModuleNumberText;
-        TextView LessonNumberText;
-		TextView IterationNumberText;
-		TextView CapitalAlphabetText;
-		TextView LowerAlphabetText;
-		FrameLayout FragmentContainer;
+        TextView txtCapitalAlphabet;
+        TextView txtLowerAlphabet;
+        FrameLayout fragmentContainer;
+        RecyclerView rvProgress;
+        List<Progress> progressList;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -40,12 +35,13 @@ namespace IRMGARD
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             this.CompatMode();
 
-			ModuleNumberText = FindViewById<TextView>(Resource.Id.txtModuleNumber);
-			LessonNumberText = FindViewById<TextView>(Resource.Id.txtLessonNumber);
-            IterationNumberText = FindViewById<TextView>(Resource.Id.txtIterationNumber);
-			CapitalAlphabetText = FindViewById<TextView>(Resource.Id.txtCapitalAlphabet);
-			LowerAlphabetText = FindViewById<TextView>(Resource.Id.txtLowerAlphabet);
-			FragmentContainer = FindViewById<FrameLayout> (Resource.Id.fragmentContainer);
+            progressList = new List<Progress>();
+            rvProgress = FindViewById<RecyclerView>(Resource.Id.rvProgress);
+            rvProgress.SetLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.Horizontal, false));
+            rvProgress.SetAdapter(new ProgressAdapter(progressList));
+			txtCapitalAlphabet = FindViewById<TextView>(Resource.Id.txtCapitalAlphabet);
+			txtLowerAlphabet = FindViewById<TextView>(Resource.Id.txtLowerAlphabet);
+			fragmentContainer = FindViewById<FrameLayout> (Resource.Id.fragmentContainer);
 		}
 
 		protected override void OnStart()
@@ -68,11 +64,7 @@ namespace IRMGARD
 			// ----------------------------------------------------------------------
 
 			// Set playground background color
-			FragmentContainer.SetBackgroundColor(Android.Graphics.Color.ParseColor(module.Color));
-
-			// Prepare module progress overview
-			var moduleNumber = DataHolder.Current.CurrentLevel.Modules.IndexOf(DataHolder.Current.CurrentModule) + 1;
-			ModuleNumberText.Text = "Module: " + moduleNumber + "/" + DataHolder.Current.CurrentLevel.Modules.Count;
+			fragmentContainer.SetBackgroundColor(Color.ParseColor(module.Color));
 
 			// ----------------------------------------------------------------------
 			// Lesson specifics
@@ -82,19 +74,22 @@ namespace IRMGARD
 			Title = lesson.Title;
 
 			// Hide hint button, if no hint is available
-//			if (hintButton != null)
-//				hintButton.SetVisible(!string.IsNullOrEmpty(lesson.Hint));
-            			
-			// Prepare lesson progress overview
-			var lessonNumber = DataHolder.Current.CurrentModule.Lessons.IndexOf(lesson) + 1;
-			LessonNumberText.Text = "Lesson: " + lessonNumber + "/" + DataHolder.Current.CurrentModule.Lessons.Count;
+			//if (hintButton != null)
+			//hintButton.SetVisible(!string.IsNullOrEmpty(lesson.Hint));
+
+            // Progress
+            progressList.Clear();
+            for (var i = 0; i < lesson.Iterations.Count; i++)
+                progressList.Add(new Progress(ProgressStatus.Pending));
+
+            rvProgress.GetAdapter().NotifyDataSetChanged();
 
 			// ----------------------------------------------------------------------
 			// Load lesson fragment
 			// ----------------------------------------------------------------------
 
 			// Create an instance of the fragment according to the current type of level
-			FragmentTransaction transaction = FragmentManager.BeginTransaction();
+			var transaction = FragmentManager.BeginTransaction();
 			var fragment = CreateFragmentForLesson(DataHolder.Current.CurrentLesson);
 			if (fragment != null)
 			{
@@ -106,12 +101,12 @@ namespace IRMGARD
 				// Add the fragment to the container
 				transaction.Replace(Resource.Id.fragmentContainer, fragment, lessonFragmentTag);
 				transaction.Commit();
-			} 
-			else 
+			}
+			else
 			{
 				// Fragment for this type of lesson could not be loaded. Remove old fragment
 				var oldFragment = FragmentManager.FindFragmentByTag(lessonFragmentTag);
-				if (oldFragment != null) 
+				if (oldFragment != null)
 				{
 					transaction.Remove(oldFragment);
 					transaction.Commit();
@@ -122,14 +117,32 @@ namespace IRMGARD
         void Fragment_IterationChanged(object sender, IterationChangedEventArgs e)
         {
             // Update iteration number
-            var iterationNumber = DataHolder.Current.CurrentLesson.Iterations.IndexOf(e.Iteration) + 1;
-            IterationNumberText.Text = "Iteration: " + iterationNumber + "/" + DataHolder.Current.CurrentLesson.Iterations.Count;
+            SupportActionBar.Subtitle = "Iteration " + (DataHolder.Current.CurrentLesson.Iterations.IndexOf(e.Iteration) + 1) + "/" + DataHolder.Current.CurrentLesson.Iterations.Count;
 
             // Mark letters in alphabet
-            CapitalAlphabetText.TextFormatted = Alphabet.GetLettersMarked(e.Iteration.LettersToLearn, true);
-            LowerAlphabetText.TextFormatted = Alphabet.GetLettersMarked(e.Iteration.LettersToLearn, false);
+            txtCapitalAlphabet.TextFormatted = Alphabet.GetLettersMarked(e.Iteration.LettersToLearn, true);
+            txtLowerAlphabet.TextFormatted = Alphabet.GetLettersMarked(e.Iteration.LettersToLearn, false);
         }
-			
+
+        /// <summary>
+        /// Handles the lesson fragement's iteration finished event
+        /// </summary>
+        /// <param name="sender">Sender.</param>
+        /// <param name="e">E.</param>
+        void Fragment_IterationFinished(object sender, IterationFinishedEventArgs e)
+        {
+            //TODO: Add Thumbs Up Animation here
+            //Toast.MakeText (this, "Iteration finished!", ToastLength.Short).Show();
+
+            // Update status
+            var iterationIndex = DataHolder.Current.CurrentLesson.Iterations.IndexOf(e.Iteration);
+            progressList.ElementAt(iterationIndex).Status = e.Success ? ProgressStatus.Success : ProgressStatus.Failed;
+            rvProgress.GetAdapter().NotifyItemChanged(iterationIndex);
+
+            // Stop Player
+            SoundPlayer.Stop();
+        }
+
 		/// <summary>
 		/// Handles the lesson fragment's lesson finished event
 		/// </summary>
@@ -137,23 +150,15 @@ namespace IRMGARD
 		/// <param name="e">event args.</param>
         void LessonFragment_LessonFinished(object sender, EventArgs e)
 		{
-			Toast.MakeText(this, "Lesson finished!", ToastLength.Short).Show();
-			NextLesson();
+			//Toast.MakeText(this, "Lesson finished!", ToastLength.Short).Show();
+
+            var builder = new AlertDialog.Builder(this);
+            builder.SetTitle(Resource.String.lesson_finished);
+            builder.SetMessage(Resource.String.lesson_finished_message);
+            builder.SetCancelable(false);
+            builder.SetPositiveButton(Android.Resource.String.Ok, (s, args) => NextLesson());
+            builder.Show();
 		}
-
-        /// <summary>
-        /// Handles the lesson fragement's iteration finished event
-        /// </summary>
-        /// <param name="sender">Sender.</param>
-        /// <param name="e">E.</param>
-        void Fragment_IterationFinished(object sender, EventArgs e)
-        {
-            //TODO: Add Thumbs Up Animation here
-            Toast.MakeText (this, "Iteration finished!", ToastLength.Short).Show();
-
-            // Stop Player
-            SoundPlayer.Stop();
-        }
 
 		/// <summary>
 		/// Returns a new instance of the fragment type according to the type of lesson
@@ -162,9 +167,9 @@ namespace IRMGARD
 		/// <param name="lesson">current lesson.</param>
 		private LessonFragment CreateFragmentForLesson(Lesson lesson)
 		{
-			if (lesson is HearMe)		
+			if (lesson is HearMe)
 				return new HearMeFragment(lesson);
-			if (lesson is FourPictures)	
+			if (lesson is FourPictures)
 				return new FourPicturesFragment(lesson);
             if (lesson is PickSyllable)
                 return new PickSyllableFragment(lesson);
@@ -176,8 +181,8 @@ namespace IRMGARD
                 return new AbcRankFragment(lesson);
             if (lesson is LetterDrop)
                 return new LetterDropFragment(lesson);
-			else 						
-				return null;
+
+            return null;
 		}
 
 		#region UI Operations
@@ -193,7 +198,7 @@ namespace IRMGARD
 
 		public override bool OnOptionsItemSelected (IMenuItem item)
 		{
-			switch (item.ItemId) 
+			switch (item.ItemId)
 			{
 				// Play voice instruction
 				case Resource.Id.btnVoiceInstruction:
@@ -212,7 +217,7 @@ namespace IRMGARD
 				case Resource.Id.btnNextModule:
 					var nextModule = DataHolder.Current.CurrentLevel.GetNextModule (DataHolder.Current.CurrentModule);
 					if (nextModule != null)
-					{					
+					{
 						DataHolder.Current.CurrentModule = nextModule;
 						DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.Lessons.First();
 						DataHolder.Current.CurrentIteration = DataHolder.Current.CurrentLesson.Iterations.First();
@@ -222,7 +227,7 @@ namespace IRMGARD
 				case Resource.Id.btnPreviousModule:
 					var previousModule = DataHolder.Current.CurrentLevel.GetPreviousModule(DataHolder.Current.CurrentModule);
 					if (previousModule != null)
-					{					
+					{
 						DataHolder.Current.CurrentModule = previousModule;
 						DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.Lessons.First();
 						DataHolder.Current.CurrentIteration = DataHolder.Current.CurrentLesson.Iterations.First();
@@ -249,7 +254,14 @@ namespace IRMGARD
                 InitLesson();
             }
             else
-                Finish();
+            {
+                var builder = new AlertDialog.Builder(this);
+                builder.SetTitle(Resource.String.module_finished);
+                builder.SetMessage(Resource.String.module_finished_message);
+                builder.SetCancelable(false);
+                builder.SetPositiveButton(Android.Resource.String.Ok, (s, args) => Finish());
+                builder.Show();
+            }
 		}
 
 		/// <summary>
@@ -259,11 +271,11 @@ namespace IRMGARD
 		{
 			var previousLesson = DataHolder.Current.CurrentModule.GetPrevioustLesson (DataHolder.Current.CurrentLesson);
 			if (previousLesson != null)
-			{					
+			{
 				DataHolder.Current.CurrentLesson = previousLesson;
 				DataHolder.Current.CurrentIteration = previousLesson.Iterations.First();
 				InitLesson();
-			}	
+			}
 		}
 	}
 }

@@ -81,7 +81,7 @@ namespace IRMGARD
 
         protected override void CheckSolution()
         {
-            FinishIteration();
+            FinishIteration(true);
         }            
 	}
 }

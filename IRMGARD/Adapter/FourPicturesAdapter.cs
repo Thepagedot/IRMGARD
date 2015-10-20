@@ -19,13 +19,13 @@ namespace IRMGARD
 
 		public override View GetView(int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
 		{
-            View view = convertView;
-            if (view == null)
-                view = layoutInflater.Inflate(Resource.Layout.MediaElement, null);
-            else
-                ((BitmapDrawable)view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage).Drawable).Bitmap.Recycle();
-                
-            var imageView = view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage);
+            var view = convertView;
+		    if (view != null)
+		        ((BitmapDrawable) view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage).Drawable).Bitmap.Recycle();
+		    else
+		        view = layoutInflater.Inflate(Resource.Layout.MediaElement, null);
+
+		    var imageView = view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage);
             imageView.SetImageBitmap(AssetHelper.GetBitmap(Context, GetItem(position).Media.ImagePath));
 			return view;
 		}

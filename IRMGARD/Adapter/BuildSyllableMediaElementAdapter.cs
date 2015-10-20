@@ -24,7 +24,7 @@ namespace IRMGARD
 
         public override View GetView(int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
         {
-            View view = convertView;
+            var view = convertView;
             if (view == null)
                 view = layoutInflater.Inflate(Resource.Layout.BuildSyllableMediaElement, null);
             else
@@ -37,7 +37,7 @@ namespace IRMGARD
 
             if (addMultiIcon)
                 view.FindViewById<TextView>(Resource.Id.tvAddMultiIcon).Text = "+";
-            
+
             return view;
         }
     }

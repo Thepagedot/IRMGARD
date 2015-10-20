@@ -15,40 +15,54 @@ using Android.Media;
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.Design.Widget;
+using System.Drawing;
 
 namespace IRMGARD
 {
-    [Activity(Label = "IRMGARD")]            
+    [Activity(Label = "IRMGARD", NoHistory = true)]
     public class VideoActivity : AppCompatActivity, MediaPlayer.IOnPreparedListener, ISurfaceHolderCallback
     {
         MediaPlayer mediaPlayer;
+        VideoView videoView;
         string nextView;
 
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Video);
-            SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
-            SupportActionBar.SetDisplayHomeAsUpEnabled (true);
             this.CompatMode();
 
             // Read context
-            nextView = Intent.Extras.GetString("nextView");           
+            nextView = Intent.Extras.GetString("nextView");
 
             FindViewById<FloatingActionButton>(Resource.Id.btnNext).Click += BtnNext_Click;
-            var videoView = FindViewById<VideoView>(Resource.Id.videoView);
+            FindViewById<FloatingActionButton>(Resource.Id.btnRepeat).Click += BtnRepeat_Click;
+            videoView = FindViewById<VideoView>(Resource.Id.videoView);
 
-            ISurfaceHolder holder = videoView.Holder;
+            var holder = videoView.Holder;
             holder.AddCallback(this);
         }
-         
+
         protected override void OnResume()
         {
             base.OnResume();
-
-            // Play Video
             mediaPlayer = new MediaPlayer();
-            Play();
+        }
+
+        public override void OnWindowFocusChanged(bool hasFocus)
+        {
+            base.OnWindowFocusChanged(hasFocus);
+
+            if (hasFocus)
+            {
+                // Adjust video size to 9:16
+                var layoutParams = videoView.LayoutParameters;
+                layoutParams.Width = Convert.ToInt32(videoView.MeasuredHeight * 0.5625);
+                videoView.LayoutParameters = layoutParams;
+
+                // Play Video
+                Play();
+            }
         }
 
         protected override void OnPause()
@@ -58,33 +72,10 @@ namespace IRMGARD
             mediaPlayer.Release();
         }
 
-        public override bool OnCreateOptionsMenu (IMenu menu)
-        {
-            MenuInflater.Inflate(Resource.Menu.video_menu, menu);
-            return base.OnCreateOptionsMenu (menu);
-        }
-
-        public override bool OnOptionsItemSelected (IMenuItem item)
-        {
-            switch (item.ItemId) 
-            {
-                case Resource.Id.btnReplay:
-                    mediaPlayer.Stop();
-                    mediaPlayer.Prepare();
-                    mediaPlayer.Start();
-                    break;
-                case Android.Resource.Id.Home:
-                    Finish();
-                    return true;
-            }
-
-            return base.OnOptionsItemSelected(item);
-        }
-
         protected void Play()
-        {            
+        {
             if (!String.IsNullOrEmpty(DataHolder.Current.CurrentModule.VideoPath))
-            {           
+            {
                 var descriptor = Assets.OpenFd(DataHolder.Current.CurrentModule.VideoPath);
                 mediaPlayer.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
                 mediaPlayer.Prepare();
@@ -101,8 +92,15 @@ namespace IRMGARD
             else if (nextView.Equals("ModuleSelectActivity"))
                 intent = new Intent(this, typeof(ModuleSelectActivity));
 
-            if (intent != null)            
+            if (intent != null)
                 StartActivity(intent);
+        }
+
+        void BtnRepeat_Click (object sender, EventArgs e)
+        {
+            mediaPlayer.Stop();
+            mediaPlayer.Prepare();
+            mediaPlayer.Start();
         }
 
         public void SurfaceCreated(ISurfaceHolder holder)

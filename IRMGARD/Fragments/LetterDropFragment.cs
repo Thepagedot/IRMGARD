@@ -184,9 +184,11 @@ namespace IRMGARD
             }
 
             if (success)
-                FinishIteration();
+                FinishIteration(true);
             else
-                Toast.MakeText(Activity.BaseContext, "Leider verloren", ToastLength.Short).Show();
+            {                
+                FinishIteration(false);
+            }
         }
     }
 }
