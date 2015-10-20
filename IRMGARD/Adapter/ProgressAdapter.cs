@@ -11,12 +11,12 @@ namespace IRMGARD
 {
     public class ProgressAdapter : RecyclerView.Adapter
     {
-        List<Progress> items;
+        readonly List<Progress> items;
 
         public ProgressAdapter(List<Progress> items)
         {
             this.items = items;
-        }            
+        }
 
         #region implemented abstract members of Adapter
 
@@ -45,12 +45,12 @@ namespace IRMGARD
 
     public class ProgressViewHolder : RecyclerView.ViewHolder
     {
-        private ImageView imageView { get; set; }
-        private Progress progress { get; set; }
+        private ImageView ImageView { get; set; }
+        private Progress Progress { get; set; }
 
         public ProgressViewHolder(View view) : base(view)
         {
-            imageView = view.FindViewById<ImageView>(Resource.Id.ivStatus);
+            ImageView = view.FindViewById<ImageView>(Resource.Id.ivStatus);
         }
 
         public void BindProgress(Progress progress)
@@ -58,13 +58,13 @@ namespace IRMGARD
             switch (progress.Status)
             {
                 case ProgressStatus.Success:
-                    imageView.SetImageResource(Resource.Drawable.ic_check_box_black_24dp);
+                    ImageView.SetImageResource(Resource.Drawable.ic_check_box_black_24dp);
                     break;
                 case ProgressStatus.Failed:
-                    imageView.SetImageResource(Resource.Drawable.ic_indeterminate_check_box_black_24dp);
+                    ImageView.SetImageResource(Resource.Drawable.ic_indeterminate_check_box_black_24dp);
                     break;
                 case ProgressStatus.Pending:
-                    imageView.SetImageResource(Resource.Drawable.ic_check_box_outline_blank_black_24dp);
+                    ImageView.SetImageResource(Resource.Drawable.ic_check_box_outline_blank_black_24dp);
                     break;
             }
         }

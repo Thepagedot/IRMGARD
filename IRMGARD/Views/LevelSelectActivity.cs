@@ -15,14 +15,14 @@ using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace IRMGARD
 {
-	[Activity (Label = "Levels", ParentActivity = typeof(MainActivity))]			
+	[Activity (Label = "Levels", ParentActivity = typeof(MainActivity))]
     public class LevelSelectActivity : AppCompatActivity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.LevelSelect);
-            SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));           
+            SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             this.CompatMode();
 

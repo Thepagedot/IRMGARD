@@ -31,11 +31,9 @@ namespace IRMGARD
 
 		public override Android.Views.View GetView (int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
 		{
-			View view = convertView;
-			if (view == null)
-				view = context.LayoutInflater.Inflate (Android.Resource.Layout.SimpleListItem2, null);
+			var view = convertView ?? context.LayoutInflater.Inflate (Android.Resource.Layout.SimpleListItem2, null);
 
-			view.FindViewById<TextView> (Android.Resource.Id.Text1).Text = items[position].Name;
+		    view.FindViewById<TextView> (Android.Resource.Id.Text1).Text = items[position].Name;
 			view.FindViewById<TextView> (Android.Resource.Id.Text2).Text = "This level has " + items[position].Lessons.Count + " lessons";
 			view.SetBackgroundColor(Android.Graphics.Color.ParseColor (items [position].Color));
 			return view;

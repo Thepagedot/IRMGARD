@@ -31,7 +31,7 @@ namespace IRMGARD
 
 
                 btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
-                btnCheck.Click += BtnCheck_Click; 
+                btnCheck.Click += BtnCheck_Click;
             }
 
             InitIteration ();
@@ -64,7 +64,7 @@ namespace IRMGARD
                 randomized = getDistinctLetterOptions(randomized, 3);
             else
                 randomized = getDistinctLetterOptions(randomized, 5);
-            
+
             var abcRankElementAdapter = new AbcRankAdapter(Activity.BaseContext, 0, randomized, randomized.FirstOrDefault().IsWithImage);
             for (int i = 0; i < randomized.Count; i++) {
                 // Add letter to view
@@ -78,7 +78,7 @@ namespace IRMGARD
                     view.Touch += (sender, e) => {
                         if (isSoundPlayedForSelectedItem == false)
                         {
-                            imageClickedForSound(item); 
+                            imageClickedForSound(item);
                             isSoundPlayedForSelectedItem = true;
                         }
 
@@ -123,7 +123,7 @@ namespace IRMGARD
                 {
                     randomized.Shuffle();
                 }
-                
+
             } while(count > 0);
 
 
@@ -142,7 +142,7 @@ namespace IRMGARD
             for (int i = 0; i < currentOptionsSorted.Count; i++) {
                 // Add letter to view
                 var view = abcRaknkSolutionElementAdapter.GetView (i, null, null);
-                view.Drag += View_Drag;    
+                view.Drag += View_Drag;
                 llAbcRank.AddView (view);
             }
         }
@@ -151,21 +151,21 @@ namespace IRMGARD
         {
             // React on different dragging events
             var evt = e.Event;
-            switch (evt.Action) 
+            switch (evt.Action)
             {
                 case DragAction.Ended:
                     isSoundPlayedForSelectedItem = false;
                     break;
                 case DragAction.Started:
                     e.Handled = true;
-                    break;           
+                    break;
 
                     // Dragged element enters the drop zone
                 case DragAction.Entered:
                     break;
 
                     // Dragged element exits the drop zone
-                case DragAction.Exited:                                       
+                case DragAction.Exited:
                     break;
 
                     // Dragged element has been dropped at the drop zone
@@ -208,10 +208,10 @@ namespace IRMGARD
 
                         BuildAbcRankSolutionElements(currentsolutionList, false);
                     }
-                        
+
                     break;
             }
-        }      
+        }
 
         void imageClickedForSound (AbcRankOption item)
         {
@@ -224,7 +224,7 @@ namespace IRMGARD
         }
 
         protected override void CheckSolution()
-        {       
+        {
             bool isCorrect = true;
             foreach (var item in currentsolutionList)
             {
@@ -236,7 +236,7 @@ namespace IRMGARD
             }
 
             if (isCorrect)
-            {                
+            {
                 FinishIteration(true);
             }
             else

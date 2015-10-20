@@ -19,7 +19,7 @@ using System.Drawing;
 
 namespace IRMGARD
 {
-    [Activity(Label = "IRMGARD", NoHistory = true)]            
+    [Activity(Label = "IRMGARD", NoHistory = true)]
     public class VideoActivity : AppCompatActivity, MediaPlayer.IOnPreparedListener, ISurfaceHolderCallback
     {
         MediaPlayer mediaPlayer;
@@ -39,10 +39,10 @@ namespace IRMGARD
             FindViewById<FloatingActionButton>(Resource.Id.btnRepeat).Click += BtnRepeat_Click;
             videoView = FindViewById<VideoView>(Resource.Id.videoView);
 
-            ISurfaceHolder holder = videoView.Holder;
+            var holder = videoView.Holder;
             holder.AddCallback(this);
         }
-         
+
         protected override void OnResume()
         {
             base.OnResume();
@@ -70,26 +70,12 @@ namespace IRMGARD
             base.OnPause();
             mediaPlayer.Stop();
             mediaPlayer.Release();
-        }           
-
-        public override bool OnOptionsItemSelected (IMenuItem item)
-        {
-            switch (item.ItemId) 
-            {
-                case Resource.Id.btnReplay:
-                    mediaPlayer.Stop();
-                    mediaPlayer.Prepare();
-                    mediaPlayer.Start();
-                    break;
-            }
-
-            return base.OnOptionsItemSelected(item);
         }
 
         protected void Play()
-        {            
+        {
             if (!String.IsNullOrEmpty(DataHolder.Current.CurrentModule.VideoPath))
-            {           
+            {
                 var descriptor = Assets.OpenFd(DataHolder.Current.CurrentModule.VideoPath);
                 mediaPlayer.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
                 mediaPlayer.Prepare();
@@ -106,7 +92,7 @@ namespace IRMGARD
             else if (nextView.Equals("ModuleSelectActivity"))
                 intent = new Intent(this, typeof(ModuleSelectActivity));
 
-            if (intent != null)            
+            if (intent != null)
                 StartActivity(intent);
         }
 

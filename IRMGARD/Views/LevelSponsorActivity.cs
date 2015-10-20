@@ -16,7 +16,7 @@ using Android.Support.Design.Widget;
 
 namespace IRMGARD
 {
-    [Activity(Label = "Danke an", ParentActivity = typeof(LevelSelectActivity), NoHistory = true)]            
+    [Activity(Label = "Danke an", ParentActivity = typeof(LevelSelectActivity), NoHistory = true)]
     public class LevelSponsorActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)

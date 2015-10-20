@@ -2,30 +2,25 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-
 using Android.App;
-using Android.Content;
+using Android.Graphics;
 using Android.OS;
-using Android.Runtime;
+using Android.Support.V7.App;
+using Android.Support.V7.Widget;
 using Android.Views;
 using Android.Widget;
-using System.Threading.Tasks;
-using System.Security.Cryptography;
 using IRMGARD.Models;
-using Java.Security;
-using Android.Support.V7.App;
+using AlertDialog = Android.Support.V7.App.AlertDialog;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
-using Android.Support.V7.Widget;
 
 namespace IRMGARD
 {
-	[Activity (Label = "Lesson", ParentActivity = typeof(ModuleSelectActivity))]			
+	[Activity (Label = "Lesson", ParentActivity = typeof(ModuleSelectActivity))]
     public class LessonFameActivity : AppCompatActivity
 	{
 		private const string lessonFragmentTag = "current-lesson-fragment";
 
-		//IMenuItem hintButton;		
+		//IMenuItem hintButton;
         TextView txtCapitalAlphabet;
         TextView txtLowerAlphabet;
         FrameLayout fragmentContainer;
@@ -38,7 +33,7 @@ namespace IRMGARD
 			SetContentView (Resource.Layout.LessonFrame);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            this.CompatMode();            			
+            this.CompatMode();
 
             progressList = new List<Progress>();
             rvProgress = FindViewById<RecyclerView>(Resource.Id.rvProgress);
@@ -69,7 +64,7 @@ namespace IRMGARD
 			// ----------------------------------------------------------------------
 
 			// Set playground background color
-			fragmentContainer.SetBackgroundColor(Android.Graphics.Color.ParseColor(module.Color));
+			fragmentContainer.SetBackgroundColor(Color.ParseColor(module.Color));
 
 			// ----------------------------------------------------------------------
 			// Lesson specifics
@@ -84,8 +79,9 @@ namespace IRMGARD
 
             // Progress
             progressList.Clear();
-            foreach(var it in lesson.Iterations)
+            for (var i = 0; i < lesson.Iterations.Count; i++)
                 progressList.Add(new Progress(ProgressStatus.Pending));
+
             rvProgress.GetAdapter().NotifyDataSetChanged();
 
 			// ----------------------------------------------------------------------
@@ -93,7 +89,7 @@ namespace IRMGARD
 			// ----------------------------------------------------------------------
 
 			// Create an instance of the fragment according to the current type of level
-			FragmentTransaction transaction = FragmentManager.BeginTransaction();
+			var transaction = FragmentManager.BeginTransaction();
 			var fragment = CreateFragmentForLesson(DataHolder.Current.CurrentLesson);
 			if (fragment != null)
 			{
@@ -105,16 +101,16 @@ namespace IRMGARD
 				// Add the fragment to the container
 				transaction.Replace(Resource.Id.fragmentContainer, fragment, lessonFragmentTag);
 				transaction.Commit();
-			} 
-			else 
+			}
+			else
 			{
 				// Fragment for this type of lesson could not be loaded. Remove old fragment
 				var oldFragment = FragmentManager.FindFragmentByTag(lessonFragmentTag);
-				if (oldFragment != null) 
+				if (oldFragment != null)
 				{
 					transaction.Remove(oldFragment);
 					transaction.Commit();
-				}                    
+				}
 			}
 		}
 
@@ -140,17 +136,13 @@ namespace IRMGARD
 
             // Update status
             var iterationIndex = DataHolder.Current.CurrentLesson.Iterations.IndexOf(e.Iteration);
-            if (e.Success)
-                progressList.ElementAt(iterationIndex).Status = ProgressStatus.Success;
-            else
-                progressList.ElementAt(iterationIndex).Status = ProgressStatus.Failed;
-
+            progressList.ElementAt(iterationIndex).Status = e.Success ? ProgressStatus.Success : ProgressStatus.Failed;
             rvProgress.GetAdapter().NotifyItemChanged(iterationIndex);
 
             // Stop Player
             SoundPlayer.Stop();
         }
-			
+
 		/// <summary>
 		/// Handles the lesson fragment's lesson finished event
 		/// </summary>
@@ -160,7 +152,7 @@ namespace IRMGARD
 		{
 			//Toast.MakeText(this, "Lesson finished!", ToastLength.Short).Show();
 
-            var builder = new Android.Support.V7.App.AlertDialog.Builder(this);
+            var builder = new AlertDialog.Builder(this);
             builder.SetTitle(Resource.String.lesson_finished);
             builder.SetMessage(Resource.String.lesson_finished_message);
             builder.SetCancelable(false);
@@ -175,9 +167,9 @@ namespace IRMGARD
 		/// <param name="lesson">current lesson.</param>
 		private LessonFragment CreateFragmentForLesson(Lesson lesson)
 		{
-			if (lesson is HearMe)		
+			if (lesson is HearMe)
 				return new HearMeFragment(lesson);
-			if (lesson is FourPictures)	
+			if (lesson is FourPictures)
 				return new FourPicturesFragment(lesson);
             if (lesson is PickSyllable)
                 return new PickSyllableFragment(lesson);
@@ -189,8 +181,8 @@ namespace IRMGARD
                 return new AbcRankFragment(lesson);
             if (lesson is LetterDrop)
                 return new LetterDropFragment(lesson);
-			else 						
-				return null;
+
+            return null;
 		}
 
 		#region UI Operations
@@ -206,7 +198,7 @@ namespace IRMGARD
 
 		public override bool OnOptionsItemSelected (IMenuItem item)
 		{
-			switch (item.ItemId) 
+			switch (item.ItemId)
 			{
 				// Play voice instruction
 				case Resource.Id.btnVoiceInstruction:
@@ -225,7 +217,7 @@ namespace IRMGARD
 				case Resource.Id.btnNextModule:
 					var nextModule = DataHolder.Current.CurrentLevel.GetNextModule (DataHolder.Current.CurrentModule);
 					if (nextModule != null)
-					{					
+					{
 						DataHolder.Current.CurrentModule = nextModule;
 						DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.Lessons.First();
 						DataHolder.Current.CurrentIteration = DataHolder.Current.CurrentLesson.Iterations.First();
@@ -235,7 +227,7 @@ namespace IRMGARD
 				case Resource.Id.btnPreviousModule:
 					var previousModule = DataHolder.Current.CurrentLevel.GetPreviousModule(DataHolder.Current.CurrentModule);
 					if (previousModule != null)
-					{					
+					{
 						DataHolder.Current.CurrentModule = previousModule;
 						DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.Lessons.First();
 						DataHolder.Current.CurrentIteration = DataHolder.Current.CurrentLesson.Iterations.First();
@@ -263,13 +255,13 @@ namespace IRMGARD
             }
             else
             {
-                var builder = new Android.Support.V7.App.AlertDialog.Builder(this);
+                var builder = new AlertDialog.Builder(this);
                 builder.SetTitle(Resource.String.module_finished);
                 builder.SetMessage(Resource.String.module_finished_message);
                 builder.SetCancelable(false);
                 builder.SetPositiveButton(Android.Resource.String.Ok, (s, args) => Finish());
                 builder.Show();
-            }                
+            }
 		}
 
 		/// <summary>
@@ -279,11 +271,11 @@ namespace IRMGARD
 		{
 			var previousLesson = DataHolder.Current.CurrentModule.GetPrevioustLesson (DataHolder.Current.CurrentLesson);
 			if (previousLesson != null)
-			{					
+			{
 				DataHolder.Current.CurrentLesson = previousLesson;
 				DataHolder.Current.CurrentIteration = previousLesson.Iterations.First();
 				InitLesson();
-			}	
+			}
 		}
 	}
 }
