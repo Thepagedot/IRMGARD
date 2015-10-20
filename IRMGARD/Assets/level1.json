@@ -433,18 +433,16 @@
                 {
                   "SyllableParts": [
                    {
-                    "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                    "Letter": "L",
-                    "DraggedLetter": "",
-                    "IsShort": false,
-                    "IsLong": false
+                     "Letter": "L",
+                     "IsShort": false,
+                     "IsLong": false,
+                     "IsSearched": true
                    },
                    {
-                    "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                    "Letter": "A",
-                    "DraggedLetter": "",
-                    "IsShort": false,
-                    "IsLong": false
+                     "Letter": "A",                     
+                     "IsShort": false,
+                     "IsLong": false,
+                     "IsSearched": true
                    }
                   ],
                   "SoundPath": "Syllables/La.mp3"
@@ -452,55 +450,46 @@
               ],
               "Options": [
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "O",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "G",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "D",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "T",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "I",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "M",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "L",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "A",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "R",
                   "IsShort": false,
                   "IsLong": false
@@ -522,93 +511,81 @@
               "Syllables": [
                 {
                   "SyllableParts": [
-                   {
-                      "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                    {
                       "Letter": "L",
-                      "DraggedLetter": "",
                       "IsShort": false,
-                      "IsLong": false
-                   },
-                   {
-                      "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
+                      "IsLong": false,
+                      "IsSearched": true
+                    },
+                    {
                       "Letter": "A",
-                      "DraggedLetter": "",
                       "IsShort": false,
-                      "IsLong": false
-                   }
+                      "IsLong": false,
+                      "IsSearched": true
+                    }
                   ],
                   "SoundPath": "Syllables/La.mp3"
-                },{
+                },
+                {
                   "SyllableParts": [
-                   {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                  "Letter": "M",
-                  "DraggedLetter": "",
-                  "IsShort": false,
-                  "IsLong": false
-                   },
-                   {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
-                  "Letter": "A",
-                  "DraggedLetter": "",
-                  "IsShort": false,
-                  "IsLong": false
-                   }
+                    {
+                      "Letter": "M",
+                      "IsShort": false,
+                      "IsLong": false,
+                      "IsSearched": true
+                    },
+                    {
+                      "Letter": "A",
+                      "IsShort": false,
+                      "IsLong": false,
+                      "IsSearched": true
+                    }
                   ],
                   "SoundPath": "Syllables/Ma.mp3"
                 }
               ],
               "Options": [
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "M",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "G",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "D",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "O",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "I",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "M",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "L",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "A",
                   "IsShort": false,
                   "IsLong": false
                 },
                 {
-                  "$type": "IRMGARD.Models.BuildSyllableOption, IRMGARD",
                   "Letter": "R",
                   "IsShort": false,
                   "IsLong": false

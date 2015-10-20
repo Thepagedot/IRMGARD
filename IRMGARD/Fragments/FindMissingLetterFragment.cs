@@ -109,7 +109,7 @@ namespace IRMGARD
             return options;
         }
 
-        void BuildTaskLetters(List<FindMissingLetterTaskLetter> letters, Case fontCase)
+        void BuildTaskLetters(List<TaskLetter> letters, Case fontCase)
         {
             llTaskItems.RemoveAllViews();
 
@@ -120,7 +120,7 @@ namespace IRMGARD
                 letter.CorrectLetter = letter.CorrectLetter.ToCase(fontCase);
             }
 
-            var taskItemAdapter = new TaskLetterAdapter(Activity.BaseContext, 0, letters.Cast<TaskLetter>().ToList());
+            var taskItemAdapter = new TaskLetterAdapter(Activity.BaseContext, 0, letters);
             for (int i = 0; i < letters.Count; i++)
             {
                 var view = taskItemAdapter.GetView(i, null, null);

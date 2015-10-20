@@ -14,29 +14,19 @@ namespace IRMGARD.Models
 
     public class FindMissingLetterIteration : Iteration
     {
-        public List<FindMissingLetterTaskLetter> TaskLetters { get; set; }
+        public List<TaskLetter> TaskLetters { get; set; }
         public List<FindMissingLetterOption> Options { get; set; }
         public bool HasLongAndShortLetters { get; set; }
         public bool RandomizeCase { get; set; }
 
-        public FindMissingLetterIteration(List<string> lettersToLearn, List<FindMissingLetterTaskLetter> taskLetters, bool hasLongAndShortLetters, bool randomizeCase): base(lettersToLearn)
+        public FindMissingLetterIteration(List<string> lettersToLearn, List<TaskLetter> taskLetters, bool hasLongAndShortLetters, bool randomizeCase): base(lettersToLearn)
         {
             TaskLetters = taskLetters;
             HasLongAndShortLetters = hasLongAndShortLetters;
             RandomizeCase = randomizeCase;
         }
     }
-
-    public class FindMissingLetterTaskLetter : TaskLetter
-    {
-        public FindMissingLetterTaskLetter(string letter, bool isShort, bool isLong, bool isSearched) : base(letter, isShort, isLong, isSearched, letter)
-        {
-            // Make letter empty it when is searched
-            if (IsSearched)
-                Letter = "";
-        }
-    }
-
+        
     public class FindMissingLetterOption : LetterBase
 	{
 		public int CorrectPos { get; set; }

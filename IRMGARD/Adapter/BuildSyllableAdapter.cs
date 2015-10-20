@@ -7,11 +7,10 @@ using Android.Content;
 
 namespace IRMGARD
 {
-    public class BuildSyllableAdapter : ArrayAdapter<BuildSyllableOption>
+    public class BuildSyllableAdapter : ArrayAdapter<LetterBase>
     {
-        public BuildSyllableAdapter(Context context, int resourceId, List<BuildSyllableOption> items) : base (context, resourceId, items)
+        public BuildSyllableAdapter(Context context, int resourceId, List<LetterBase> items) : base (context, resourceId, items)
         {
-
         }
 
         public override View GetView(int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
@@ -29,4 +28,3 @@ namespace IRMGARD
         }
     }
 }
-
