@@ -18,7 +18,7 @@ using Android.Support.Design.Widget;
 
 namespace IRMGARD
 {
-    [Activity(Label = "IRMGARD")]            
+    [Activity(Label = "IRMGARD", NoHistory = true)]            
     public class VideoActivity : AppCompatActivity, MediaPlayer.IOnPreparedListener, ISurfaceHolderCallback
     {
         MediaPlayer mediaPlayer;
@@ -33,7 +33,7 @@ namespace IRMGARD
             this.CompatMode();
 
             // Read context
-            nextView = Intent.Extras.GetString("nextView");           
+            nextView = Intent.Extras.GetString("nextView");
 
             FindViewById<FloatingActionButton>(Resource.Id.btnNext).Click += BtnNext_Click;
             var videoView = FindViewById<VideoView>(Resource.Id.videoView);
