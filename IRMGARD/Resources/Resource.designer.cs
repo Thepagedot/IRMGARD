@@ -1861,26 +1861,29 @@ namespace IRMGARD
 			// aapt resource value: 0x7f0b009d
 			public const int btnNext = 2131427485;
 			
-			// aapt resource value: 0x7f0b009f
-			public const int btnNextLesson = 2131427487;
-			
-			// aapt resource value: 0x7f0b00a1
-			public const int btnNextModule = 2131427489;
-			
 			// aapt resource value: 0x7f0b00a0
-			public const int btnPreviousLesson = 2131427488;
+			public const int btnNextLesson = 2131427488;
 			
 			// aapt resource value: 0x7f0b00a2
-			public const int btnPreviousModule = 2131427490;
+			public const int btnNextModule = 2131427490;
+			
+			// aapt resource value: 0x7f0b00a1
+			public const int btnPreviousLesson = 2131427489;
 			
 			// aapt resource value: 0x7f0b00a3
-			public const int btnReplay = 2131427491;
+			public const int btnPreviousModule = 2131427491;
+			
+			// aapt resource value: 0x7f0b009e
+			public const int btnRepeat = 2131427486;
+			
+			// aapt resource value: 0x7f0b00a4
+			public const int btnReplay = 2131427492;
 			
 			// aapt resource value: 0x7f0b0089
 			public const int btnStart = 2131427465;
 			
-			// aapt resource value: 0x7f0b009e
-			public const int btnVoiceInstruction = 2131427486;
+			// aapt resource value: 0x7f0b009f
+			public const int btnVoiceInstruction = 2131427487;
 			
 			// aapt resource value: 0x7f0b004d
 			public const int buttonPanel = 2131427405;
