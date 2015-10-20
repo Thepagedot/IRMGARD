@@ -42,15 +42,41 @@ namespace IRMGARD
             var currentIteration = GetCurrentIteration<BuildSyllableIteration>();
 
             // Generate options
+            currentIteration.Options = GenerateOptions(currentIteration, 10);
+
             BuildOptions(currentIteration.Options);
-
-            // Generate task letter
             BuildTaskLetters(currentIteration.Syllables);
-
             BuildSyllableSoundElements(currentIteration.Syllables);
 
-
             btnCheck.Enabled = false;
+        }
+
+        List<LetterBase> GenerateOptions(BuildSyllableIteration iteration, int numberOfOptions)
+        {
+            var options = new List<LetterBase>();
+            var random = new Random();
+
+            // Add correct options
+            foreach (var syllable in iteration.Syllables)
+                foreach (var letter in syllable.SyllableParts)
+                    options.Add(new LetterBase(letter.CorrectLetter, letter.IsShort, letter.IsLong));
+
+            // Add false options
+            while (options.Count < numberOfOptions)
+            {
+                var randomLetter = Alphabet.GetRandomLetter();
+                if (iteration.HasLongAndShortLetters)
+                {                    
+                    options.Add(new LetterBase(randomLetter, random.Next(1) == 0, random.Next(1) == 0));
+                }
+                else
+                {
+                    options.Add(new LetterBase(randomLetter));
+                }
+            }
+
+            options.Shuffle();
+            return options;
         }
 
         void BuildOptions(List<LetterBase> options)
@@ -210,5 +236,4 @@ namespace IRMGARD
             FinishIteration(success);
         }
     }
-}
-
+}    

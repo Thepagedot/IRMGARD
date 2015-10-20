@@ -10,6 +10,7 @@ namespace IRMGARD
 	public static class Alphabet
 	{
 		public static List<string> Letters;
+        public static Random rand = new Random();
 
 		static Alphabet()
 		{
@@ -44,8 +45,7 @@ namespace IRMGARD
 		}
 
         public static string GetRandomLetter()
-        {
-            var rand = new Random();
+        {            
             return Letters.ElementAt(rand.Next(Letters.Count - 1));
         }
 

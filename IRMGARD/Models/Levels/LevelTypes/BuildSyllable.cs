@@ -16,11 +16,12 @@ namespace IRMGARD.Models
 	{
 		public List<Syllable> Syllables { get; set; }
 		public List<LetterBase> Options { get; set; }
+        public bool HasLongAndShortLetters { get; set; }
 
-		public BuildSyllableIteration(List<string> lettersToLearn, List<Syllable> syllables, List<LetterBase> options) : base (lettersToLearn)
+        public BuildSyllableIteration(List<string> lettersToLearn, List<Syllable> syllables, bool hasLongAndShortLetters) : base (lettersToLearn)
 	    {
 	        this.Syllables = syllables;
-	        this.Options = options;
+            this.HasLongAndShortLetters = hasLongAndShortLetters;
 	    }
 	}        
 

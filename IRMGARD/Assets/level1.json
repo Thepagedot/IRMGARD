@@ -429,6 +429,7 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
+              "HasLongAndShortLetters": false,
               "Syllables": [
                 {
                   "SyllableParts": [
@@ -447,53 +448,6 @@
                   ],
                   "SoundPath": "Syllables/La.mp3"
                 }
-              ],
-              "Options": [
-                {
-                  "Letter": "O",
-                  "IsShort": false,
-                  "IsLong": false
-                },
-                {
-                  "Letter": "G",
-                  "IsShort": false,
-                  "IsLong": false
-                },
-                {
-                  "Letter": "D",
-                  "IsShort": false,
-                  "IsLong": false
-                },
-                {
-                  "Letter": "T",
-                  "IsShort": false,
-                  "IsLong": false
-                },
-                {
-                  "Letter": "I",
-                  "IsShort": false,
-                  "IsLong": false
-                },
-                {
-                  "Letter": "M",
-                  "IsShort": false,
-                  "IsLong": false
-                },
-                {
-                  "Letter": "L",
-                  "IsShort": false,
-                  "IsLong": false
-                },
-                {
-                  "Letter": "A",
-                  "IsShort": false,
-                  "IsLong": false
-                },
-                {
-                  "Letter": "R",
-                  "IsShort": false,
-                  "IsLong": false
-                }
               ]
             }
           ]
@@ -508,6 +462,7 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
+              "HasLongAndShortLetters": false,
               "Syllables": [
                 {
                   "SyllableParts": [
@@ -543,54 +498,7 @@
                   ],
                   "SoundPath": "Syllables/Ma.mp3"
                 }
-              ],
-              "Options": [
-                {
-                  "Letter": "M",
-                  "IsShort": false,
-                  "IsLong": false
-                },
-                {
-                  "Letter": "G",
-                  "IsShort": false,
-                  "IsLong": false
-                },
-                {
-                  "Letter": "D",
-                  "IsShort": false,
-                  "IsLong": false
-                },
-                {
-                  "Letter": "O",
-                  "IsShort": false,
-                  "IsLong": false
-                },
-                {
-                  "Letter": "I",
-                  "IsShort": false,
-                  "IsLong": false
-                },
-                {
-                  "Letter": "M",
-                  "IsShort": false,
-                  "IsLong": false
-                },
-                {
-                  "Letter": "L",
-                  "IsShort": false,
-                  "IsLong": false
-                },
-                {
-                  "Letter": "A",
-                  "IsShort": false,
-                  "IsLong": false
-                },
-                {
-                  "Letter": "R",
-                  "IsShort": false,
-                  "IsLong": false
-                }
-              ]
+              ]            
             }
           ]
         }
