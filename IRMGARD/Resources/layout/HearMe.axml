@@ -1,39 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <TextView
-        android:text=""
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/hearMeLetterToLearn"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:layout_weight="1" />
-    <ImageView
-        android:src="@drawable/ic_arrow_forward_black_24dp"
-        android:id="@+id/hearMeImageView"
-        android:maxWidth="200dp"
-        android:maxHeight="200dp"
-        android:adjustViewBounds="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center" />
-    <TextView
-        android:text=""
+        android:text="Aa"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/hearMeName"
         android:gravity="center"
+        android:layout_marginBottom="@dimen/margin_default" />
+    <TextView
+        android:id="@+id/hearMeName"
+        android:text="Affe"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnCheck"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_default" />
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardView"
         android:layout_gravity="center"
-        android:layout_weight="1" />
+        android:padding="20dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:cardCornerRadius="4dp"
+        card_view:contentPadding="10dp"
+        android:layout_below="@id/hearMeLetterToLearn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/hearMeName">
+        <ImageView
+            android:src="@drawable/ic_arrow_forward_black_24dp"
+            android:id="@+id/hearMeImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </android.support.v7.widget.CardView>
     <ImageButton
+        android:id="@+id/btnCheck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnCheck"
         android:src="@drawable/ic_arrow_forward_black_24dp"
-        android:layout_gravity="end" />
-</LinearLayout>
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
+</RelativeLayout>
