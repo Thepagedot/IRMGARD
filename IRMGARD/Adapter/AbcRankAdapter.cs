@@ -33,6 +33,7 @@ namespace IRMGARD
             }
             else
             {
+                view.FindViewById<ImageView>(Resource.Id.abcRankMeidaElementImage).Visibility = ViewStates.Gone;
                 view.FindViewById<TextView>(Resource.Id.abcRankElementName).Text = item.Name;
             }
 
