@@ -1550,6 +1550,9 @@ namespace IRMGARD
 			// aapt resource value: 0x7f050000
 			public const int item_touch_helper_max_drag_scroll_per_frame = 2131034112;
 			
+			// aapt resource value: 0x7f050069
+			public const int letter_card_width = 2131034217;
+			
 			// aapt resource value: 0x7f050068
 			public const int margin_default = 2131034216;
 			
@@ -2137,8 +2140,8 @@ namespace IRMGARD
 			// aapt resource value: 0x7f060070
 			public const int llTaskItems = 2131099760;
 			
-			// aapt resource value: 0x7f060082
-			public const int longIndicator = 2131099778;
+			// aapt resource value: 0x7f060083
+			public const int longIndicator = 2131099779;
 			
 			// aapt resource value: 0x7f060084
 			public const int lvLevels = 2131099780;
@@ -2251,8 +2254,8 @@ namespace IRMGARD
 			// aapt resource value: 0x7f060066
 			public const int select_dialog_listview = 2131099750;
 			
-			// aapt resource value: 0x7f060083
-			public const int shortIndicator = 2131099779;
+			// aapt resource value: 0x7f060082
+			public const int shortIndicator = 2131099778;
 			
 			// aapt resource value: 0x7f060051
 			public const int shortcut = 2131099729;

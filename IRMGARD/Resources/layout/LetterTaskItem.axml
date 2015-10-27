@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="50dip">
     <LinearLayout
         android:id="@+id/llLayout"
         android:orientation="vertical"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:minWidth="45dip"
+        android:minWidth="50dip"
         android:padding="4dip"
         android:layout_marginLeft="4dip"
         android:layout_marginRight="4dip"
@@ -26,4 +26,4 @@
             android:layout_height="2dip"
             android:background="@drawable/underscore" />
     </LinearLayout>
-</FrameLayout>
+</RelativeLayout>
