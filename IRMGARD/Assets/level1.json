@@ -386,25 +386,25 @@
             {
               "Letter": "E",
               "Media": {
-                "SoundPath": "Objects/Me-lang.mp3"
+                "SoundPath": "Syllables/Me-lang.mp3"
               }
             },
             {
               "Letter": "I",
               "Media": {
-                "SoundPath": "Objects/Mi-lang.mp3"
+                "SoundPath": "Syllables/Mi-lang.mp3"
               }
             },
             {
               "Letter": "O",
               "Media": {
-                "SoundPath": "Objects/Mo-lang.mp3"
+                "SoundPath": "Syllables/Mo-lang.mp3"
               }
             },
             {
               "Letter": "U",
               "Media": {
-                "SoundPath": "Objects/Mu-lang.mp3"
+                "SoundPath": "Syllables/Mu-lang.mp3"
               }
             }
           ],
