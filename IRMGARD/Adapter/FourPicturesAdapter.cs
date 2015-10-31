@@ -1,10 +1,12 @@
-﻿using System;
+using System;
 using IRMGARD.Models;
 using Android.Widget;
 using Android.Views;
 using Android.Content;
 using System.Collections.Generic;
 using Android.Graphics.Drawables;
+
+//using Square.Picasso;
 
 namespace IRMGARD
 {
@@ -19,14 +21,14 @@ namespace IRMGARD
 
 		public override View GetView(int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
 		{
-            var view = convertView;
-		    if (view != null)
-		        ((BitmapDrawable) view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage).Drawable).Bitmap.Recycle();
-		    else
-		        view = layoutInflater.Inflate(Resource.Layout.MediaElement, null);
-
-		    var imageView = view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage);
-            imageView.SetImageBitmap(AssetHelper.GetBitmap(Context, GetItem(position).Media.ImagePath));
+            View view = convertView;
+            if (view == null)
+            {
+                view = layoutInflater.Inflate(Resource.Layout.MediaElement, null);
+                var imageView = view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage);
+//                Picasso.With(Context).Load("file:///android_asset/Images/"+GetItem(position).Media.ImagePath).Into(imageView);
+                imageView.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(position, Context, GetItem(position).Media.ImagePath));
+            }
 			return view;
 		}
 	}

@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +12,8 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using IRMGARD.Models;
+
+//using Square.Picasso;
 
 namespace IRMGARD
 {
@@ -57,9 +59,8 @@ namespace IRMGARD
                 {
                     letterToLearnView.Text += letter.ToUpper() + letter.ToLower();
                 }
-
-                var bitmap = AssetHelper.GetBitmap(Activity.BaseContext, currentIteration.Media.ImagePath);
-                imageButtonView.SetImageBitmap(bitmap);
+//                Picasso.With(Activity.BaseContext).Load("file:///android_asset/Images/"+currentIteration.Media.ImagePath).Into(imageButtonView);
+                imageButtonView.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(0, Activity.BaseContext, currentIteration.Media.ImagePath));
                 imageButtonView.Click += PlayImageSound;
 
                 nameView.Text = currentIteration.Name;
