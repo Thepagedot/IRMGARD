@@ -10,6 +10,19 @@ using Android.Util;
 
 namespace IRMGARD
 {
+    /// <summary>
+    /// Represents a bitmap image loader facility to reduce the memory usage and the amount of GC events
+    /// by loading new bitmaps into the space of bitmaps used before.
+    ///
+    /// Re-using the allocated memory of an old image is only applicable for equally-sized or smaller images.
+    ///
+    /// To reuse the allocated memory of an old bitmap you have to assign the same index for the new bitmap
+    /// (imgInx in <see cref="LoadBitmap"/>) as the bitmap before.
+    ///
+    /// To finally release the allocated memory use <see cref="ReleaseCache"/>.
+    /// The best time to release allocated bitmap memory is at the end of each lesson if the subsequent lesson
+    /// is using a smaller amount of bitmaps per iteration than the previous one.
+    /// </summary>
     public sealed class BitmapLoader
     {
         const string TAG = "BitmapCache";
@@ -17,13 +30,25 @@ namespace IRMGARD
 
         static readonly BitmapLoader instance = new BitmapLoader();
 
-        private BitmapLoader() {}
+        readonly BitmapFactoryOptionsPool bitmapPool;
+
+        private BitmapLoader() {
+            bitmapPool = new BitmapFactoryOptionsPool();
+        }
 
         public static BitmapLoader Instance
         {
             get { return instance; }
         }
 
+        /// <summary>
+        /// Loads a non-scaled bitmap from the Assets folder into memory.
+        /// </summary>
+        /// <returns>The bitmap.</returns>
+        /// <param name="imgIdx">The new or reused index position of the temporary image pool to load the image into.</param>
+        /// <param name="context">A context to get an AssetManager instance.</param>
+        /// <param name="fileName">The image file path.</param>
+        /// <param name="assetImageDir">The parent directory for <paramref name="fileName"/> path parameter.</param>
         public Bitmap LoadBitmap(int imgIdx, Context context, string fileName,
             string assetImageDir = AssetImageDir)
         {
@@ -36,22 +61,30 @@ namespace IRMGARD
             return bitmap;
         }
 
+        /// <summary>
+        /// Loads a non-scaled bitmap from the Assets folder on a background thread into an ImageView.
+        /// </summary>
+        /// <param name="imgIdx">The new or reused index position of the temporary image pool to load the image into.</param>
+        /// <param name="imageView">The ImageView for the bitmap to load into.</param>
+        /// <param name="context">A context to get an AssetManager instance.</param>
+        /// <param name="fileName">The image file path.</param>
+        /// <param name="assetImageDir">The parent directory for <paramref name="fileName"/> path parameter.</param>
         public void LoadBitmapInImageViewAsync(int imgIdx, ImageView imageView, Context context, string fileName,
             string assetImageDir = AssetImageDir)
         {
-            BitmapWorkerTask task = new BitmapWorkerTask(imageView);
+            BitmapWorkerTask task = new BitmapWorkerTask(this, imageView);
             task.Execute(imgIdx, context, fileName, assetImageDir);
         }
 
         public void ReleaseCache()
         {
-            BitmapFactoryOptionsPool.Instance.ReleaseCache();
+            bitmapPool.ReleaseCache();
         }
 
-        static Bitmap DecodeBitmap(int imgIdx, Context context, string fileName, string assetImageDir)
+        Bitmap DecodeBitmap(int imgIdx, Context context, string fileName, string assetImageDir)
         {
             long started = TimeProfiler.Start();
-            BitmapFactory.Options options = BitmapFactoryOptionsPool.Instance.Get(imgIdx);
+            BitmapFactory.Options options = bitmapPool.Get(imgIdx);
             if (options.InBitmap == null)
             {
                 // First decode with inJustDecodeBounds=true to check dimensions
@@ -64,7 +97,7 @@ namespace IRMGARD
                 options.InJustDecodeBounds = false;
                 options.InBitmap = bitmap;
                 options.InSampleSize = 1;
-                BitmapFactoryOptionsPool.Instance.Put(imgIdx, options);
+                bitmapPool.Put(imgIdx, options);
             }
             // Decode bitmap with inSampleSize set
             using (var stream = context.Assets.Open(System.IO.Path.Combine(assetImageDir, fileName)))
@@ -77,16 +110,9 @@ namespace IRMGARD
 
         class BitmapFactoryOptionsPool
         {
-            static readonly BitmapFactoryOptionsPool instance = new BitmapFactoryOptionsPool();
-
             readonly List<BitmapFactory.Options> items = new List<BitmapFactory.Options>();
 
-            private BitmapFactoryOptionsPool() {}
-
-            public static BitmapFactoryOptionsPool Instance
-            {
-                get { return instance; }
-            }
+            public BitmapFactoryOptionsPool() {}
 
             void CheckAddItems(int index)
             {
@@ -128,10 +154,12 @@ namespace IRMGARD
         {
             const string TAG = "BitmapWorkerTask";
 
+            readonly BitmapLoader parent;
             readonly WeakReference<ImageView> imageViewReference;
 
-            public BitmapWorkerTask(ImageView imageView)
+            public BitmapWorkerTask(BitmapLoader parent, ImageView imageView)
             {
+                this.parent = parent;
                 // Use a WeakReference to ensure the ImageView can be garbage collected
                 imageViewReference = new WeakReference<ImageView>(imageView);
             }
@@ -144,7 +172,7 @@ namespace IRMGARD
                 string fileName = ((Java.Lang.String)objArr[2]).ToString();
                 string assetImageDir = ((Java.Lang.String)objArr[3]).ToString();
 
-                return DecodeBitmap(imgIdx, context, fileName, assetImageDir);
+                return parent.DecodeBitmap(imgIdx, context, fileName, assetImageDir);
             }
 
             // Once complete, see if ImageView is still around and set bitmap.
