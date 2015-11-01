@@ -35,6 +35,13 @@ namespace IRMGARD
 		{
 			// Set selected level as current
 			DataHolder.Current.CurrentModule = DataHolder.Current.CurrentLevel.Modules.ElementAt(e.Position);
+            if (!DataHolder.Current.CurrentModule.Lessons.Any())
+            {
+                Toast.MakeText(this, "This module has not been implemented yet.", ToastLength.Short).Show();
+                return;
+            }
+
+
 			DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.Lessons.First();
 			DataHolder.Current.CurrentIteration = DataHolder.Current.CurrentLesson.Iterations.First();
 

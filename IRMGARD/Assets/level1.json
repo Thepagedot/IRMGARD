@@ -1,6 +1,6 @@
 {
   "Name": "Level 1",
-  "Color": "#DEB80C",
+  "Color": "#DEB803",
   "IsEnabled": true,
   "Modules": [
     {
@@ -365,7 +365,7 @@
     },
     {
       "Name": "Module 2",
-      "Color": "#AEC1C2",
+      "Color": "#AFC3C4",
       "VideoPath": null,
       "NumberOfLessonsDone": 0,
       "Lessons": [
@@ -505,8 +505,29 @@
       ]
     }, 
     {
+      "Name": "Module 3",
+      "Color": "#d8cbd1",
+      "VideoPath": null,
+      "NumberOfLessonsDone": 0,
+      "Lessons": []
+    },
+    {
+      "Name": "Module 4",
+      "Color": "#c1cbac",
+      "VideoPath": null,
+      "NumberOfLessonsDone": 0,
+      "Lessons": []
+    },
+    {
+      "Name": "Module 5",
+      "Color": "#dcd08f",
+      "VideoPath": null,
+      "NumberOfLessonsDone": 0,
+      "Lessons": []
+    },
+    {
       "Name": "Module 6",
-      "Color": "#A78A98",
+      "Color": "#e5c8c4",
       "VideoPath": null,
       "NumberOfLessonsDone": 0,
       "Lessons": [
