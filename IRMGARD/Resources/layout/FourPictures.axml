@@ -7,8 +7,6 @@
         android:id="@+id/gvFourPictures"
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
-        android:verticalSpacing="14dip"
-        android:horizontalSpacing="0dip"
         android:stretchMode="columnWidth"
         android:numColumns="2"
         android:layout_weight="1"

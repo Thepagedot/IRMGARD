@@ -72,7 +72,7 @@
       <HintPath>..\packages\Square.OkHttp.2.5.0.0\lib\MonoAndroid\Square.OkHttp.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Android.Support.v7.CardView">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.23.0.1.3\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -391,7 +391,6 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_indeterminate_check_box_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_indeterminate_check_box_black_24dp.png" />
   </ItemGroup>
-  <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Adapter\" />
@@ -486,4 +485,5 @@
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

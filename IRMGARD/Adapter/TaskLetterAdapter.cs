@@ -4,6 +4,8 @@ using Android.Content;
 using Android.Views;
 using System.Collections.Generic;
 using IRMGARD.Models;
+using Android.Support.V7.Widget;
+using Android.Graphics;
 
 namespace IRMGARD
 {
@@ -22,8 +24,20 @@ namespace IRMGARD
 
             view.FindViewById<TextView>(Resource.Id.tvLetter).Text = GetItem(position).Letter;
 
-            if (!GetItem(position).IsSearched)
+            if (GetItem(position).IsSearched)
+            {
+                if (GetItem(position).Letter != "")
+                {
+                    view.FindViewById<CardView>(Resource.Id.cardView).SetCardBackgroundColor(Color.White);
+                    view.FindViewById<CardView>(Resource.Id.cardView).Elevation = 8f;
+                    view.FindViewById<LinearLayout>(Resource.Id.llLayout).Background = null;
+                    view.FindViewById<View>(Resource.Id.underscore).Visibility = ViewStates.Invisible;
+                }
+            }
+            else
+            {
                 view.FindViewById<LinearLayout>(Resource.Id.llLayout).Background = null;
+            }
 
             return view;
         }
