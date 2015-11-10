@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -124,6 +124,9 @@
     <Compile Include="Utilities\MemoryHelper.cs" />
     <Compile Include="Models\Progress.cs" />
     <Compile Include="Adapter\ProgressAdapter.cs" />
+    <Compile Include="Utilities\TimeProfiler.cs" />
+    <Compile Include="Utilities\BitmapLoader.cs" />
+    <Compile Include="Utilities\Env.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\level4.json" />
@@ -384,6 +387,7 @@
     <AndroidResource Include="Resources\drawable-xhdpi\ic_indeterminate_check_box_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_indeterminate_check_box_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_indeterminate_check_box_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\empty_photo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
