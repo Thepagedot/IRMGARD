@@ -16,31 +16,37 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:textAlignment="center"
-            android:gravity="top|center_horizontal" />
-        <LinearLayout
-            android:id="@+id/llLayout"
-            android:orientation="vertical"
-            android:layout_width="40dip"
+            android:gravity="top|center_horizontal"
+            android:text="M+A = MA" />
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/cardView"
+            card_view:cardUseCompatPadding="true"
+            card_view:cardCornerRadius="4dp"
+            card_view:cardBackgroundColor="@android:color/transparent"
+            card_view:cardElevation="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minWidth="40dip"
-            android:minHeight="40dip"
-            android:padding="4dip"
-            android:layout_marginLeft="4dip"
-            android:layout_marginRight="4dip"
-            android:background="@drawable/dotted">
-            <ImageView
-                android:id="@+id/ivPickSyllableDropZone"
-                android:src="@drawable/ic_help_black_24dp"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
+            <LinearLayout
+                android:id="@+id/llLayout"
+                android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minHeight="40dip"
-                android:gravity="center"
-                android:layout_gravity="center" />
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dip"
-                android:background="@drawable/underscore" />
-        </LinearLayout>
+                android:minWidth="50dip"
+                android:padding="4dip"
+                android:background="@drawable/dotted">
+                <ImageView
+                    android:id="@+id/ivPickSyllableDropZone"
+                    android:src="@drawable/ic_help_black_24dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="40dip"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
     </LinearLayout>
     <ImageView
         android:src="@drawable/divider"

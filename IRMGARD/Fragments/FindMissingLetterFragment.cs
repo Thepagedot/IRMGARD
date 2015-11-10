@@ -175,7 +175,10 @@ namespace IRMGARD
                         var position = llTaskItems.IndexOfChild(sender as View);
 
                         if (taskLetters[position].IsSearched)
+                        {
                             taskLetters[position].Letter = draggedLetter;
+                            taskLetters[position].IsDirty = true;
+                        }
 
                         BuildTaskLetters(taskLetters, fontCase);
                     }

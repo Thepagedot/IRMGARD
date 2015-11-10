@@ -156,8 +156,9 @@ namespace IRMGARD
                         // Rebuild task letters
                         if (taskLetters[position].Letter.Length > 1)
                             taskLetters[position].Letter = taskLetters[position].Letter.Remove(1);
-                        
+                                                
                         taskLetters[position].Letter += draggedLetter;
+                        taskLetters[position].IsDirty = true;
                         BuildTaskLetters(taskLetters);
                         btnCheck.Enabled = true;
                     }

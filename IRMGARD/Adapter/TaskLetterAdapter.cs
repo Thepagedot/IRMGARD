@@ -21,12 +21,12 @@ namespace IRMGARD
         public override View GetView(int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
         {
             var view = convertView ?? layoutInflater.Inflate(Resource.Layout.LetterTaskItem, null);
-
             view.FindViewById<TextView>(Resource.Id.tvLetter).Text = GetItem(position).Letter;
 
-            if (GetItem(position).IsSearched)
+            var item = GetItem(position);
+            if (item.IsSearched)
             {
-                if (GetItem(position).Letter != "")
+                if (item.Letter != "" && item.IsDirty)
                 {
                     view.FindViewById<CardView>(Resource.Id.cardView).SetCardBackgroundColor(Color.White);
                     view.FindViewById<CardView>(Resource.Id.cardView).Elevation = 8f;

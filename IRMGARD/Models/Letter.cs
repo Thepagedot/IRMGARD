@@ -30,6 +30,7 @@ namespace IRMGARD
         public bool IsSearched { get; set; }
         public string CorrectLetter { get; set; }
         public bool IsCorrect { get; set; }
+        public bool IsDirty { get; set; }
 
         protected TaskLetter(string letterString) : base (letterString)
         {
