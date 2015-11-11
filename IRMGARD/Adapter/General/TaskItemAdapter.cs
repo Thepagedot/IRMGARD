@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using IRMGARD.Models;
 using Android.Support.V7.Widget;
 using Android.Graphics;
+using Android.Media;
 
 namespace IRMGARD
 {
@@ -20,13 +21,24 @@ namespace IRMGARD
 
         public override View GetView(int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
         {
-            var view = convertView ?? layoutInflater.Inflate(Resource.Layout.LetterTaskItem, null);
-            view.FindViewById<TextView>(Resource.Id.tvLetter).Text = GetItem(position).TaskLetter.Letter;
-
             var item = GetItem(position);
+            var view = convertView ?? layoutInflater.Inflate(Resource.Layout.TaskItem, null);
+
+            if (item.TaskLetter != null)
+            {
+                view.FindViewById<TextView>(Resource.Id.letter).Text = GetItem(position).TaskLetter.Letter;
+            }
+
+            if (item.Media != null)
+            {
+                var imageView = view.FindViewById<ImageView>(Resource.Id.image);
+                imageView.Visibility = ViewStates.Visible;
+            }
+
+
             if (item.IsSearched)
             {
-                if (item.TaskLetter.Letter != "" && item.IsDirty)
+                if (item.IsDirty)
                 {
                     view.FindViewById<CardView>(Resource.Id.cardView).SetCardBackgroundColor(Color.White);
                     view.FindViewById<CardView>(Resource.Id.cardView).Elevation = 8f;

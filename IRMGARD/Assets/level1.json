@@ -377,16 +377,22 @@
                 {
                   "SyllableParts": [
                     {
-                      "Letter": "L",
-                      "IsShort": false,
-                      "IsLong": false,
-                      "IsSearched": true
-                    },
+                      "TaskLetter": {
+                        "Letter": "L",
+                        "IsShort": false,
+                        "IsLong": false
+                      },
+                      "IsSearched": true,
+                      "EmptySearchedLetters":  true
+                    },         
                     {
-                      "Letter": "A",
-                      "IsShort": false,
-                      "IsLong": false,
-                      "IsSearched": true
+                      "TaskLetter": {
+                        "Letter": "A",
+                        "IsShort": false,
+                        "IsLong": false
+                      },
+                      "IsSearched": true,
+                      "EmptySearchedLetters":  true
                     }
                   ],
                   "SoundPath": "Syllables/La.mp3"
@@ -410,16 +416,22 @@
                 {
                   "SyllableParts": [
                     {
-                      "Letter": "L",
-                      "IsShort": false,
-                      "IsLong": false,
-                      "IsSearched": true
-                    },
+                      "TaskLetter": {
+                        "Letter": "L",
+                        "IsShort": false,
+                        "IsLong": false
+                      },
+                      "IsSearched": true,
+                      "EmptySearchedLetters":  true
+                    },         
                     {
-                      "Letter": "A",
-                      "IsShort": false,
-                      "IsLong": false,
-                      "IsSearched": true
+                      "TaskLetter": {
+                        "Letter": "A",
+                        "IsShort": false,
+                        "IsLong": false
+                      },
+                      "IsSearched": true,
+                      "EmptySearchedLetters":  true
                     }
                   ],
                   "SoundPath": "Syllables/La.mp3"
@@ -427,16 +439,22 @@
                 {
                   "SyllableParts": [
                     {
-                      "Letter": "M",
-                      "IsShort": false,
-                      "IsLong": false,
-                      "IsSearched": true
-                    },
+                      "TaskLetter": {
+                        "Letter": "M",
+                        "IsShort": false,
+                        "IsLong": false
+                      },
+                      "IsSearched": true,
+                      "EmptySearchedLetters":  true
+                    },         
                     {
-                      "Letter": "A",
-                      "IsShort": false,
-                      "IsLong": false,
-                      "IsSearched": true
+                      "TaskLetter": {
+                        "Letter": "A",
+                        "IsShort": false,
+                        "IsLong": false
+                      },
+                      "IsSearched": true,
+                      "EmptySearchedLetters":  true
                     }
                   ],
                   "SoundPath": "Syllables/Ma.mp3"

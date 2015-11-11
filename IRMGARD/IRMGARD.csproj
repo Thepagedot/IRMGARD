@@ -392,6 +392,7 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_indeterminate_check_box_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_indeterminate_check_box_black_24dp.png" />
     <AndroidResource Include="Resources\layout\Dropzone.axml" />
+    <AndroidResource Include="Resources\layout\TaskItem.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Adapter\Specific\" />

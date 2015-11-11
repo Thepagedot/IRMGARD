@@ -51,7 +51,7 @@ namespace IRMGARD
             foreach (var letter in currentIteration.LettersToLearn)
             {
                 var taskLetter = new TaskLetter(letter.ToCase(fontCase));
-                var taskItem = new TaskItem(taskLetter, true);
+                var taskItem = new TaskItem(taskLetter, null, true);
                 currentIteration.TaskItems.Add(taskItem);
             }
 

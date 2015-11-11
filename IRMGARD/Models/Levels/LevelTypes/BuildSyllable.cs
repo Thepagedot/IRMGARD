@@ -27,12 +27,12 @@ namespace IRMGARD.Models
 
 	public class Syllable
 	{
-        public List<TaskLetter> SyllableParts { get; set; }
+        public List<TaskItem> SyllableParts { get; set; }
 		public string SoundPath { get; set; }
 
 		public Syllable () {}
 
-        public Syllable (List<TaskLetter> syllableParts, string soundPath)
+        public Syllable (List<TaskItem> syllableParts, string soundPath)
 		{
 			this.SyllableParts = syllableParts;
 			this.SoundPath = soundPath;

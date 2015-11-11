@@ -28,7 +28,7 @@ namespace IRMGARD
     public class TaskLetter : LetterBase
     {        
         public string CorrectLetter { get; set; }
-        public bool IsCorrect { get; set; }        
+        public bool IsCorrect { get; set; }
 
         public TaskLetter(string letterString) : base(letterString)
         {
