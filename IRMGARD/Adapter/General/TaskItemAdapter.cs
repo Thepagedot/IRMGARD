@@ -9,11 +9,11 @@ using Android.Graphics;
 
 namespace IRMGARD
 {
-    public class TaskLetterAdapter : ArrayAdapter<TaskLetter>
+    public class TaskItemAdapter : ArrayAdapter<TaskItem>
     {
         private readonly LayoutInflater layoutInflater;
 
-        public TaskLetterAdapter(Context context, int resourceId, IList<TaskLetter> items) : base (context, resourceId, items)
+        public TaskItemAdapter(Context context, int resourceId, IList<TaskItem> items) : base (context, resourceId, items)
         {
             layoutInflater = LayoutInflater.From(context);
         }
@@ -21,12 +21,12 @@ namespace IRMGARD
         public override View GetView(int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
         {
             var view = convertView ?? layoutInflater.Inflate(Resource.Layout.LetterTaskItem, null);
-            view.FindViewById<TextView>(Resource.Id.tvLetter).Text = GetItem(position).Letter;
+            view.FindViewById<TextView>(Resource.Id.tvLetter).Text = GetItem(position).TaskLetter.Letter;
 
             var item = GetItem(position);
             if (item.IsSearched)
             {
-                if (item.Letter != "" && item.IsDirty)
+                if (item.TaskLetter.Letter != "" && item.IsDirty)
                 {
                     view.FindViewById<CardView>(Resource.Id.cardView).SetCardBackgroundColor(Color.White);
                     view.FindViewById<CardView>(Resource.Id.cardView).Elevation = 8f;

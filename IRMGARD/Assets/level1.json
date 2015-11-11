@@ -137,7 +137,7 @@
                 "ImagePath": "iltis.png",
                 "SoundPath": "Objects/Iltis.mp3"
               }
-            },            
+            },
             {
               "Letter": "I",
               "Media": {
@@ -254,108 +254,51 @@
               "LettersToLearn": [ "A", "E", "I", "O", "U" ],
               "HasLongAndShortLetters": false,
               "RandomizeCase": true,
-              "TaskLetters": [
+              "TaskItems": [
                 {
+                  "TaskLetter": {
                     "Letter": "A",
                     "IsShort": false,
-                    "IsLong": false,
-                    "IsSearched": false
+                    "IsLong": false
+                  },
+                  "IsSearched": false,
+                  "EmptySearchedLetters":  true
                 },
                 {
+                  "TaskLetter": {
                     "Letter": "E",
                     "IsShort": false,
-                    "IsLong": false,
-                    "IsSearched": false
+                    "IsLong": false
+                  },                  
+                  "IsSearched": false,
+                  "EmptySearchedLetters":  true
                 },
                 {
+                  "TaskLetter": {
                     "Letter": "I",
                     "IsShort": false,
-                    "IsLong": false,
-                    "IsSearched": false
+                    "IsLong": false
+                  },                  
+                  "IsSearched": false,
+                  "EmptySearchedLetters":  true
                 },
                 {
+                  "TaskLetter": {
                     "Letter": "O",
                     "IsShort": false,
-                    "IsLong": false,
-                    "IsSearched": true
+                    "IsLong": false
+                  },                  
+                  "IsSearched": true,
+                  "EmptySearchedLetters":  true
                 },
                 {
+                  "TaskLetter": {
                     "Letter": "U",
                     "IsShort": false,
-                    "IsLong": false,
-                    "IsSearched": false
-                }
-              ],
-              "Options": [
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "A",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "F",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "G",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "B",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "C",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "O",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": 3
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "I",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "J",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "D",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
-                },
-                {
-                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
-                  "Letter": "E",
-                  "IsShort": false,
-                  "IsLong": false,
-                  "CorrectPos": -1
+                    "IsLong": false
+                  },                  
+                  "IsSearched": false,
+                  "EmptySearchedLetters":  true
                 }
               ]
             }
@@ -433,18 +376,18 @@
               "Syllables": [
                 {
                   "SyllableParts": [
-                   {
-                     "Letter": "L",
-                     "IsShort": false,
-                     "IsLong": false,
-                     "IsSearched": true
-                   },
-                   {
-                     "Letter": "A",                     
-                     "IsShort": false,
-                     "IsLong": false,
-                     "IsSearched": true
-                   }
+                    {
+                      "Letter": "L",
+                      "IsShort": false,
+                      "IsLong": false,
+                      "IsSearched": true
+                    },
+                    {
+                      "Letter": "A",
+                      "IsShort": false,
+                      "IsLong": false,
+                      "IsSearched": true
+                    }
                   ],
                   "SoundPath": "Syllables/La.mp3"
                 }
@@ -498,12 +441,12 @@
                   ],
                   "SoundPath": "Syllables/Ma.mp3"
                 }
-              ]            
+              ]
             }
           ]
         }
       ]
-    }, 
+    },
     {
       "Name": "Module 6",
       "Color": "#A78A98",
@@ -525,28 +468,28 @@
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "A",
                   "Media": null
-                 },
-                 {
+                },
+                {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "E",
                   "Media": null
-                 },
-                 {
+                },
+                {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "U",
                   "Media": null
-                 },
-                 {
+                },
+                {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "I",
                   "Media": null
-                 },
-                 {
+                },
+                {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "O",
                   "Media": null
-                 }
-               ]                                                                           
+                }
+              ]
             }
           ]
         },
@@ -567,61 +510,61 @@
                   "Media": {
                     "ImagePath": "affe.png",
                     "SoundPath": "Objects/Affe.mp3"
-                   }
-                 },
-                 {
+                  }
+                },
+                {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "Eber",
                   "Media": {
                     "ImagePath": "eber.png",
                     "SoundPath": "Objects/Eber.mp3"
-                   }
-                 },
-                 {
+                  }
+                },
+                {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "Ufo",
                   "Media": {
                     "ImagePath": "ufo.png",
                     "SoundPath": "Objects/Ufo.mp3"
-                   }
-                 },
-                 {
+                  }
+                },
+                {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "Insel",
                   "Media": {
                     "ImagePath": "insel.png",
                     "SoundPath": "Objects/Insel.mp3"
-                   }
-                 },
-                 {
+                  }
+                },
+                {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "Ofen",
                   "Media": {
                     "ImagePath": "ofen.png",
                     "SoundPath": "Objects/Ofen.mp3"
-                   }
-                 },
-                 {
+                  }
+                },
+                {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "Eber",
                   "Media": {
                     "ImagePath": "eber.png",
                     "SoundPath": "Objects/Eber.mp3"
-                   }
-                 },
-                 {
+                  }
+                },
+                {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "Uhu",
                   "Media": {
                     "ImagePath": "uhu.png",
                     "SoundPath": "Objects/Uhu.mp3"
-                   }
-                 }
-               ]                                                                           
+                  }
+                }
+              ]
             }
           ]
         }
-      ] 
+      ]
     }
   ]
 }

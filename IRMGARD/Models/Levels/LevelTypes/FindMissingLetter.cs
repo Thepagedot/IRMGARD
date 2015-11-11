@@ -14,14 +14,14 @@ namespace IRMGARD.Models
 
     public class FindMissingLetterIteration : Iteration
     {
-        public List<TaskLetter> TaskLetters { get; set; }
+        public List<TaskItem> TaskItems { get; set; }
         public List<FindMissingLetterOption> Options { get; set; }
         public bool HasLongAndShortLetters { get; set; }
         public bool RandomizeCase { get; set; }
 
-        public FindMissingLetterIteration(List<string> lettersToLearn, List<TaskLetter> taskLetters, bool hasLongAndShortLetters, bool randomizeCase): base(lettersToLearn)
+        public FindMissingLetterIteration(List<string> lettersToLearn, List<TaskItem> taskItems, bool hasLongAndShortLetters, bool randomizeCase) : base(lettersToLearn)
         {
-            TaskLetters = taskLetters;
+            TaskItems = taskItems;
             HasLongAndShortLetters = hasLongAndShortLetters;
             RandomizeCase = randomizeCase;
         }

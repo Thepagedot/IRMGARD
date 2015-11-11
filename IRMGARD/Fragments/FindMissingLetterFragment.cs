@@ -17,10 +17,10 @@ namespace IRMGARD
 {
     public class FindMissingLetterFragment : LessonFragment<FindMissingLetter>
     {
-        LinearLayout llTaskItems;
-        FlowLayout flLetters;
-        ImageButton btnCheck;
-        Case fontCase;
+        private LinearLayout llTaskItems;
+        private FlowLayout flLetters;
+        private ImageButton btnCheck;
+        private Case fontCase;
 
         public FindMissingLetterFragment(Lesson lesson) : base(lesson) {}
 
@@ -53,13 +53,13 @@ namespace IRMGARD
             }
 
             // Create task letters
-            BuildTaskLetters(currentIteration.TaskLetters, fontCase);
+            BuildTaskLetters(currentIteration.TaskItems, fontCase);
 
             // Generate options
             currentIteration.Options = GenerateOptions(currentIteration, 10, fontCase);
 
             var letterAdapter = new LetterAdapter(Activity.BaseContext, 0, currentIteration.Options.Cast<LetterBase>().ToList());
-            for (int i = 0; i < currentIteration.Options.Count; i++)
+            for (var i = 0; i < currentIteration.Options.Count; i++)
             {
                 // Add letter to view
                 var view = letterAdapter.GetView(i, null, null);
@@ -77,14 +77,14 @@ namespace IRMGARD
             btnCheck.Enabled = false;
         }
 
-        List<FindMissingLetterOption> GenerateOptions(FindMissingLetterIteration iteration, int numberOfOptions, Case fontCase)
+        private List<FindMissingLetterOption> GenerateOptions(FindMissingLetterIteration iteration, int numberOfOptions, Case fontCase)
         {
             // Add correct options
-            var correctTasks = iteration.TaskLetters.Where(l => l.IsSearched);
-            var options = correctTasks.Select(task => new FindMissingLetterOption(task.CorrectLetter.ToCase(fontCase), task.IsLong, task.IsLong, iteration.TaskLetters.IndexOf(task))).ToList();
+            var correctTasks = iteration.TaskItems.Where(l => l.IsSearched);
+            var options = correctTasks.Select(task => new FindMissingLetterOption(task.TaskLetter.CorrectLetter.ToCase(fontCase), task.TaskLetter.IsLong, task.TaskLetter.IsLong, iteration.TaskItems.IndexOf(task))).ToList();
 
             // Add false options
-            while (options.Count() < numberOfOptions)
+            while (options.Count < numberOfOptions)
             {
                 var letter = Alphabet.GetRandomLetter();
 
@@ -109,24 +109,24 @@ namespace IRMGARD
             return options;
         }
 
-        void BuildTaskLetters(List<TaskLetter> letters, Case fontCase)
+        private void BuildTaskLetters(List<TaskItem> taskItems, Case fontCase)
         {
             llTaskItems.RemoveAllViews();
 
             // Convert letters to font case
-            foreach (var letter in letters)
+            foreach (var item in taskItems)
             {
-                letter.Letter = letter.Letter.ToCase(fontCase);
-                letter.CorrectLetter = letter.CorrectLetter.ToCase(fontCase);
+                item.TaskLetter.Letter = item.TaskLetter.Letter.ToCase(fontCase);
+                item.TaskLetter.CorrectLetter = item.TaskLetter.CorrectLetter.ToCase(fontCase);
             }
 
-            var taskItemAdapter = new TaskLetterAdapter(Activity.BaseContext, 0, letters);
-            for (int i = 0; i < letters.Count; i++)
+            var taskItemAdapter = new TaskItemAdapter(Activity.BaseContext, 0, taskItems);
+            for (var i = 0; i < taskItems.Count; i++)
             {
                 var view = taskItemAdapter.GetView(i, null, null);
 
                 // Define searched letters as drop zone
-                if (letters.ElementAt(i).IsSearched)
+                if (taskItems.ElementAt(i).IsSearched)
                     view.Drag += View_Drag;
 
                 // Add letter to view
@@ -134,16 +134,7 @@ namespace IRMGARD
             }
         }
 
-        void LvLetters_ItemLongClick (object sender, AdapterView.ItemLongClickEventArgs e)
-        {
-            // Generate clip data package to attach it to the drag
-            var data = ClipData.NewPlainText("letter", GetCurrentIteration<FindMissingLetterIteration>().Options.ElementAt(e.Position).Letter);
-
-            // Start dragging and pass data
-            (e.View).StartDrag(data, new View.DragShadowBuilder(e.View), null, 0);
-        }
-
-        void View_Drag (object sender, View.DragEventArgs e)
+        private void View_Drag (object sender, View.DragEventArgs e)
         {
             // React on different dragging events
             var evt = e.Event;
@@ -170,17 +161,17 @@ namespace IRMGARD
                     var data = e.Event.ClipData;
                     if (data != null)
                     {
-                        var taskLetters = GetCurrentIteration<FindMissingLetterIteration>().TaskLetters;
+                        var taskItems = GetCurrentIteration<FindMissingLetterIteration>().TaskItems;
                         var draggedLetter = data.GetItemAt(0).Text;
                         var position = llTaskItems.IndexOfChild(sender as View);
 
-                        if (taskLetters[position].IsSearched)
+                        if (taskItems[position].IsSearched)
                         {
-                            taskLetters[position].Letter = draggedLetter;
-                            taskLetters[position].IsDirty = true;
+                            taskItems[position].TaskLetter.Letter = draggedLetter;
+                            taskItems[position].IsDirty = true;
                         }
 
-                        BuildTaskLetters(taskLetters, fontCase);
+                        BuildTaskLetters(taskItems, fontCase);
                     }
 
                     btnCheck.Enabled = true;
@@ -188,7 +179,7 @@ namespace IRMGARD
             }
         }
 
-        void BtnCheck_Click (object sender, EventArgs e)
+        private void BtnCheck_Click (object sender, EventArgs e)
         {
             CheckSolution();
         }
@@ -197,12 +188,12 @@ namespace IRMGARD
         {
             var isCorrect = false;
             var currentIteration = GetCurrentIteration<FindMissingLetterIteration>();
-            for(var i = 0; i < currentIteration.TaskLetters.Count; i++ )
+            for(var i = 0; i < currentIteration.TaskItems.Count; i++ )
             {
-                var taskLetter = currentIteration.TaskLetters[i];
-                if (taskLetter.IsSearched)
+                var taskItem = currentIteration.TaskItems[i];
+                if (taskItem.IsSearched)
                 {
-                    var droppedLetter = currentIteration.Options.FirstOrDefault(o => o.Letter.Equals(taskLetter.Letter));
+                    var droppedLetter = currentIteration.Options.FirstOrDefault(o => o.Letter.Equals(taskItem.TaskLetter.Letter));
                     isCorrect = droppedLetter != null && droppedLetter.CorrectPos == i;
 
                     if (!isCorrect)
@@ -210,12 +201,7 @@ namespace IRMGARD
                 }
             }
 
-            if (isCorrect)
-                FinishIteration(true);
-            else
-            {                
-                FinishIteration(false);
-            }
+            FinishIteration(isCorrect);
         }
     }
 }
