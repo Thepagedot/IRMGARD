@@ -117,7 +117,7 @@ namespace IRMGARD
                 if (i != syllables.Count - 1)
                 {
                     var divider = new TextView(Activity.BaseContext);
-                    divider.LayoutParameters = new ViewGroup.LayoutParams(WindowManagerLayoutParams.WrapContent, WindowManagerLayoutParams.WrapContent);
+                    divider.LayoutParameters = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
                     divider.Gravity = GravityFlags.Center;
                     divider.TextSize = 36f;
                     divider.SetTextColor(Color.Black);
