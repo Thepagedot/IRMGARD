@@ -22,7 +22,7 @@
         android:layout_below="@id/toolbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dip"
+        android:layout_marginTop="30dip"
         android:clickable="true"
         android:src="@drawable/ic_play_arrow_white_24dp"
         android:layout_gravity="center_horizontal"

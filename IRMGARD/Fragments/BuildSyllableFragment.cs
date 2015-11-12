@@ -192,6 +192,16 @@ namespace IRMGARD
                         var draggedLetter = data.GetItemAt(0).Text;
                         var position = llTaskItems.IndexOfChild(sender as View);
 
+                        // Adjust position by consiering the "+" icons
+                        var count = 0;
+                        for (var i = 0; i < taskItems.Count; i++)
+                        {
+                            count += taskItems[i].SyllableParts.Count;
+                            if (count <= position - 1)
+                            {
+                                position -= 1;
+                            }
+                        }
 
                         // Check if selection is correct
                         var index = position;

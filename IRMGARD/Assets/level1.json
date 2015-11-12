@@ -262,7 +262,7 @@
                     "IsLong": false
                   },
                   "IsSearched": false,
-                  "EmptySearchedLetters":  true
+                  "EmptySearchedItems":  true
                 },
                 {
                   "TaskLetter": {
@@ -271,7 +271,7 @@
                     "IsLong": false
                   },                  
                   "IsSearched": false,
-                  "EmptySearchedLetters":  true
+                  "EmptySearchedItems":  true
                 },
                 {
                   "TaskLetter": {
@@ -280,7 +280,7 @@
                     "IsLong": false
                   },                  
                   "IsSearched": false,
-                  "EmptySearchedLetters":  true
+                  "EmptySearchedItems":  true
                 },
                 {
                   "TaskLetter": {
@@ -289,7 +289,7 @@
                     "IsLong": false
                   },                  
                   "IsSearched": true,
-                  "EmptySearchedLetters":  true
+                  "EmptySearchedItems":  true
                 },
                 {
                   "TaskLetter": {
@@ -298,7 +298,7 @@
                     "IsLong": false
                   },                  
                   "IsSearched": false,
-                  "EmptySearchedLetters":  true
+                  "EmptySearchedItems":  true
                 }
               ]
             }
@@ -383,7 +383,7 @@
                         "IsLong": false
                       },
                       "IsSearched": true,
-                      "EmptySearchedLetters":  true
+                      "EmptySearchedItems":  true
                     },         
                     {
                       "TaskLetter": {
@@ -392,7 +392,7 @@
                         "IsLong": false
                       },
                       "IsSearched": true,
-                      "EmptySearchedLetters":  true
+                      "EmptySearchedItems":  true
                     }
                   ],
                   "SoundPath": "Syllables/La.mp3"
@@ -422,7 +422,7 @@
                         "IsLong": false
                       },
                       "IsSearched": true,
-                      "EmptySearchedLetters":  true
+                      "EmptySearchedItems":  true
                     },         
                     {
                       "TaskLetter": {
@@ -431,7 +431,7 @@
                         "IsLong": false
                       },
                       "IsSearched": true,
-                      "EmptySearchedLetters":  true
+                      "EmptySearchedItems":  true
                     }
                   ],
                   "SoundPath": "Syllables/La.mp3"
@@ -445,7 +445,7 @@
                         "IsLong": false
                       },
                       "IsSearched": true,
-                      "EmptySearchedLetters":  true
+                      "EmptySearchedItems":  true
                     },         
                     {
                       "TaskLetter": {
@@ -454,7 +454,7 @@
                         "IsLong": false
                       },
                       "IsSearched": true,
-                      "EmptySearchedLetters":  true
+                      "EmptySearchedItems":  true
                     }
                   ],
                   "SoundPath": "Syllables/Ma.mp3"

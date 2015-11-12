@@ -29,13 +29,12 @@ namespace IRMGARD
                 var imageView = view.FindViewById<ImageView>(Resource.Id.image);
                 imageView.SetImageBitmap(AssetHelper.GetBitmap(Context, item.Media.ImagePath));
                 imageView.Visibility = ViewStates.Visible;
-                view.FindViewById<TextView>(Resource.Id.letter).Visibility = ViewStates.Gone;
+                view.FindViewById<TextView>(Resource.Id.letter).Visibility = ViewStates.Invisible;
             }
             else if (item.TaskLetter != null)
             {
                 view.FindViewById<TextView>(Resource.Id.letter).Text = GetItem(position).TaskLetter.Letter;
             }
-
 
             if (item.IsSearched)
             {
@@ -43,13 +42,13 @@ namespace IRMGARD
                 {
                     view.FindViewById<CardView>(Resource.Id.cardView).SetCardBackgroundColor(Color.White);
                     view.FindViewById<CardView>(Resource.Id.cardView).Elevation = 8f;
-                    view.FindViewById<LinearLayout>(Resource.Id.llLayout).Background = null;
+                    view.FindViewById<RelativeLayout>(Resource.Id.llLayout).Background = null;
                     view.FindViewById<View>(Resource.Id.underscore).Visibility = ViewStates.Invisible;
                 }
             }
             else
             {
-                view.FindViewById<LinearLayout>(Resource.Id.llLayout).Background = null;
+                view.FindViewById<RelativeLayout>(Resource.Id.llLayout).Background = null;
             }
 
             return view;
