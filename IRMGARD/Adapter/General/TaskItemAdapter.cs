@@ -24,15 +24,16 @@ namespace IRMGARD
             var item = GetItem(position);
             var view = convertView ?? layoutInflater.Inflate(Resource.Layout.TaskItem, null);
 
-            if (item.TaskLetter != null)
-            {
-                view.FindViewById<TextView>(Resource.Id.letter).Text = GetItem(position).TaskLetter.Letter;
-            }
-
             if (item.Media != null)
             {
                 var imageView = view.FindViewById<ImageView>(Resource.Id.image);
+                imageView.SetImageBitmap(AssetHelper.GetBitmap(Context, item.Media.ImagePath));
                 imageView.Visibility = ViewStates.Visible;
+                view.FindViewById<TextView>(Resource.Id.letter).Visibility = ViewStates.Gone;
+            }
+            else if (item.TaskLetter != null)
+            {
+                view.FindViewById<TextView>(Resource.Id.letter).Text = GetItem(position).TaskLetter.Letter;
             }
 
 

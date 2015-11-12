@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <LinearLayout
-        android:id="@+id/resolvedRankTaskItems"
+        android:id="@+id/llTaskItems"
         android:orientation="horizontal"
         android:minWidth="25px"
         android:minHeight="25px"
@@ -19,7 +19,7 @@
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginBottom="@dimen/activity_vertical_margin" />
     <IRMGARD.FlowLayout
-        android:id="@+id/rankTaskItems"
+        android:id="@+id/flOptions"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

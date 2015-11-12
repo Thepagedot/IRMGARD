@@ -561,22 +561,6 @@
                     "ImagePath": "ofen.png",
                     "SoundPath": "Objects/Ofen.mp3"
                   }
-                },
-                {
-                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "Name": "Eber",
-                  "Media": {
-                    "ImagePath": "eber.png",
-                    "SoundPath": "Objects/Eber.mp3"
-                  }
-                },
-                {
-                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "Name": "Uhu",
-                  "Media": {
-                    "ImagePath": "uhu.png",
-                    "SoundPath": "Objects/Uhu.mp3"
-                  }
                 }
               ]
             }
