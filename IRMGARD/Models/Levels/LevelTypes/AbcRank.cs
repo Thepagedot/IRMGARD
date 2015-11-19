@@ -14,11 +14,13 @@ namespace IRMGARD.Models
 
 	public class AbcRankIteration : Iteration
 	{
+        public List<TaskItem> TaskItems { get; set; }
 		public List<AbcRankOption> Options { get; set; }
 
 		public AbcRankIteration (List<string> lettersToLearn, List<AbcRankOption> options) : base (lettersToLearn)
 		{
 			this.Options = options;
+            this.TaskItems = new List<TaskItem>();
 		}
 	}
 

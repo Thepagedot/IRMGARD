@@ -11,15 +11,15 @@ namespace IRMGARD
 {
     public class LetterDropFragment : LessonFragment<LetterDrop>
     {
-        LinearLayout llTaskItems;
-        FlowLayout flLetters;
-        ImageButton btnCheck;
+        private LinearLayout llTaskItems;
+        private FlowLayout flLetters;
+        private ImageButton btnCheck;
 
         public LetterDropFragment(Lesson lesson) : base(lesson)
         {
         }
 
-        public override Android.Views.View OnCreateView(Android.Views.LayoutInflater inflater, Android.Views.ViewGroup container, Android.OS.Bundle savedInstanceState)
+        public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Android.OS.Bundle savedInstanceState)
         {
             // Prepare view
             var view = inflater.Inflate(Resource.Layout.FindMissingLetter, container, false);
@@ -47,10 +47,12 @@ namespace IRMGARD
             currentIteration.Options = GenerateOptions(currentIteration, 10, fontCase);
 
             // Generate Task letters
-            currentIteration.TaskLetters = new List<LetterDropTaskLetter>();
+            currentIteration.TaskItems = new List<TaskItem>();
             foreach (var letter in currentIteration.LettersToLearn)
             {
-                currentIteration.TaskLetters.Add(new LetterDropTaskLetter(letter.ToCase(fontCase)));
+                var taskLetter = new TaskLetter(letter.ToCase(fontCase));
+                var taskItem = new TaskItem(taskLetter, null, true);
+                currentIteration.TaskItems.Add(taskItem);
             }
 
             // Add options to view
@@ -71,7 +73,7 @@ namespace IRMGARD
             }
 
             // Add task letters to view
-            BuildTaskLetters(currentIteration.TaskLetters);
+            BuildTaskLetters(currentIteration.TaskItems);
 
             btnCheck.Enabled = false;
         }
@@ -84,7 +86,7 @@ namespace IRMGARD
             var options = iteration.LettersToLearn.Select(letter => new LetterBase(letter.ToNegativeCase(fontCase))).ToList();
 
             // Add false options with random cases
-            while (options.Count() < numberOfOptions)
+            while (options.Count < numberOfOptions)
             {
                 var letter = Alphabet.GetRandomLetter().ToCase((Case)(random.Next(2) + 1));
                 while (options.FirstOrDefault(o => o.Letter.Equals(letter)) != null)
@@ -97,17 +99,17 @@ namespace IRMGARD
             return options;
         }
 
-        void BuildTaskLetters(List<LetterDropTaskLetter> taskLetters)
+        private void BuildTaskLetters(List<TaskItem> taskItems)
         {
             llTaskItems.RemoveAllViews();
-            var taskItemAdapter = new TaskLetterAdapter(Activity.BaseContext, 0, taskLetters.Cast<TaskLetter>().ToList());
+            var taskItemAdapter = new TaskItemAdapter(Activity.BaseContext, 0, taskItems);
 
-            for (var i = 0; i < taskLetters.Count; i++)
+            for (var i = 0; i < taskItems.Count; i++)
             {
                 var view = taskItemAdapter.GetView(i, null, null);
 
                 // Define searched letters as drop zone
-                if (taskLetters.ElementAt(i).IsSearched)
+                if (taskItems.ElementAt(i).IsSearched)
                     view.Drag += View_Drag;
 
                 // Add letter to view
@@ -115,7 +117,7 @@ namespace IRMGARD
             }
         }
 
-        void View_Drag(object sender, View.DragEventArgs e)
+        private void View_Drag(object sender, View.DragEventArgs e)
         {
             // React on different dragging events
             var evt = e.Event;
@@ -142,7 +144,7 @@ namespace IRMGARD
                     var data = e.Event.ClipData;
                     if (data != null)
                     {
-                        var taskLetters = GetCurrentIteration<LetterDropIteration>().TaskLetters;
+                        var taskLetters = GetCurrentIteration<LetterDropIteration>().TaskItems;
                         var draggedLetter = data.GetItemAt(0).Text;
                         var position = llTaskItems.IndexOfChild(sender as View);
 
@@ -150,14 +152,15 @@ namespace IRMGARD
                         var fontCase = draggedLetter.GetCase(); 
 
                         // Check if selection is correct
-                        if (taskLetters[position].IsSearched && taskLetters[position].CorrectLetter.Equals(draggedLetter.ToNegativeCase(fontCase)))
-                            taskLetters[position].IsCorrect = true;
+                        if (taskLetters[position].IsSearched && taskLetters[position].TaskLetter.CorrectLetter.Equals(draggedLetter.ToNegativeCase(fontCase)))
+                            taskLetters[position].TaskLetter.IsCorrect = true;
 
                         // Rebuild task letters
-                        if (taskLetters[position].Letter.Length > 1)
-                            taskLetters[position].Letter = taskLetters[position].Letter.Remove(1);
-                        
-                        taskLetters[position].Letter += draggedLetter;
+                        if (taskLetters[position].TaskLetter.Letter.Length > 1)
+                            taskLetters[position].TaskLetter.Letter = taskLetters[position].TaskLetter.Letter.Remove(1);
+                                                
+                        taskLetters[position].TaskLetter.Letter += draggedLetter;
+                        taskLetters[position].IsDirty = true;
                         BuildTaskLetters(taskLetters);
                         btnCheck.Enabled = true;
                     }
@@ -166,29 +169,15 @@ namespace IRMGARD
             }
         }
 
-        void BtnCheck_Click (object sender, EventArgs e)
+        private void BtnCheck_Click (object sender, EventArgs e)
         {
             CheckSolution();
         }
 
         protected override void CheckSolution()
         {
-            var success = true;
-            foreach (var taskLetter in GetCurrentIteration<LetterDropIteration>().TaskLetters)
-            {
-                if (!taskLetter.IsCorrect)
-                {
-                    success = false;                  
-                    break;
-                }
-            }
-
-            if (success)
-                FinishIteration(true);
-            else
-            {                
-                FinishIteration(false);
-            }
+            var success = GetCurrentIteration<LetterDropIteration>().TaskItems.All(taskItem => taskItem.TaskLetter.IsCorrect);
+            FinishIteration(success);
         }
     }
 }

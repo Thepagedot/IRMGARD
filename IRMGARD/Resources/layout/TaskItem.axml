@@ -10,28 +10,43 @@
         card_view:cardElevation="0dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
-        <LinearLayout
+        <RelativeLayout
             android:id="@+id/llLayout"
-            android:orientation="vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minWidth="50dip"
             android:padding="4dip"
-            android:background="@drawable/dotted">
-            <TextView
-                android:id="@+id/tvLetter"
+            android:background="@drawable/dotted"
+            android:minWidth="50dip">
+            <TextView xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/letter"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:text="W"
-                android:textSize="40dp" />
+                android:textSize="40dp"
+                android:minWidth="40dp"
+                android:layout_centerHorizontal="true" />
+            <ImageView xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/image"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:maxHeight="40dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center"
+                android:src="@drawable/icon"
+                android:visibility="invisible"
+                android:layout_alignRight="@id/letter"
+                android:layout_centerHorizontal="true" />
             <View
                 android:id="@+id/underscore"
                 android:layout_width="match_parent"
                 android:layout_height="2dip"
-                android:background="@drawable/underscore" />
-        </LinearLayout>
+                android:background="@drawable/underscore"
+                android:layout_below="@id/letter"
+                android:layout_alignRight="@id/letter"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
     </android.support.v7.widget.CardView>
 </RelativeLayout>

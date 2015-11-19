@@ -5,6 +5,8 @@ using Android.Views;
 using Android.Content;
 using System.Collections.Generic;
 using Android.Graphics.Drawables;
+using Android.Views.Animations;
+using Android.Content.Res;
 
 //using Square.Picasso;
 
@@ -24,8 +26,8 @@ namespace IRMGARD
             View view = convertView;
             if (view == null)
             {
-                view = layoutInflater.Inflate(Resource.Layout.MediaElement, null);
-                var imageView = view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage);
+		        view = layoutInflater.Inflate(Resource.Layout.MediaElement, null);
+		    var imageView = view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage);
 //                Picasso.With(Context).Load("file:///android_asset/Images/"+GetItem(position).Media.ImagePath).Into(imageView);
                 imageView.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(position, Context, GetItem(position).Media.ImagePath));
             }

@@ -11,13 +11,10 @@ namespace IRMGARD
 {
     public class AbcRankFragment : LessonFragment<AbcRank>
     {
-        private FlowLayout flAbcRank;
-        private LinearLayout llAbcRank;
-        private List<AbcRankOption> currentOptionsSorted;
+        private FlowLayout flOptions;
+        private LinearLayout llTaskItems;
         private List<AbcRankOption> currentsolutionList;
-        private List<AbcRankOption> randomized;
         private ImageButton btnCheck;
-        private bool isSoundPlayedForSelectedItem = false;
 
         public AbcRankFragment(Lesson lesson) : base(lesson) {}
 
@@ -26,8 +23,8 @@ namespace IRMGARD
             View view = inflater.Inflate(Resource.Layout.AbcRank, container, false);
 
             if (view != null) {
-                flAbcRank = view.FindViewById<FlowLayout> (Resource.Id.rankTaskItems);
-                llAbcRank = view.FindViewById<LinearLayout>(Resource.Id.resolvedRankTaskItems);
+                flOptions = view.FindViewById<FlowLayout> (Resource.Id.flOptions);
+                llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.llTaskItems);
 
 
                 btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
@@ -47,103 +44,59 @@ namespace IRMGARD
             var currentIteration = GetCurrentIteration<AbcRankIteration>();
 
             currentsolutionList = new List<AbcRankOption>();
-            BuildAbcRankTaskElements(currentIteration.Options);
-        }
 
-        void BuildAbcRankTaskElements(List<AbcRankOption> currentOptions)
-        {
-            randomized = new List<AbcRankOption>(currentOptions);
-            randomized.Shuffle();
-
-            /*if(randomized.Any(x => x.IsWithImage))
-                randomized = randomized.Take(3).ToList();
-            else
-                randomized = randomized.Take(5).ToList();*/
-
-            if (randomized.Any(x => x.Media != null))
-                randomized = getDistinctLetterOptions(randomized, 3);
-            else
-                randomized = getDistinctLetterOptions(randomized, 5);  
-            var abcRankElementAdapter = new AbcRankAdapter(Activity.BaseContext, 0, randomized);
-
-            for (int i = 0; i < randomized.Count; i++) {
-                // Add letter to view
-                var view = abcRankElementAdapter.GetView (i, null, null);
-                var item = randomized.ElementAt(i);
-
-                if (item.Media != null)
-                {
-                    var imagePath = item.Media.ImagePath;
-
-                    view.Touch += (sender, e) => {
-                        if (isSoundPlayedForSelectedItem == false)
-                        {
-                            imageClickedForSound(item);
-                            isSoundPlayedForSelectedItem = true;
-                        }
-
-                        var data = ClipData.NewPlainText ("ImagePath", imagePath);
-                        (sender as View).StartDrag (data, new View.DragShadowBuilder (sender as View), null, 0);
-                    };
-                }
-                else
-                {
-                    var name = item.Name;
-
-                    view.Touch += (sender, e) => {
-                        var data = ClipData.NewPlainText ("Name", name);
-                        (sender as View).StartDrag (data, new View.DragShadowBuilder (sender as View), null, 0);
-                    };
-                }
-
-                flAbcRank.AddView (view);
+            // Genrate Task items
+            foreach (var option in currentIteration.Options)
+            {
+                currentIteration.TaskItems.Add(new TaskItem(new TaskLetter(option.Name), option.Media, true, true));
             }
 
-            currentOptionsSorted = new List<AbcRankOption>(randomized);
-            currentOptionsSorted = currentOptionsSorted.OrderBy(x => x.Name).ToList();
+            BuildTaskElements(currentIteration.TaskItems);
+            BuildOptions(currentIteration.Options);
 
-            BuildAbcRankSolutionElements(currentOptionsSorted);
+            btnCheck.Enabled = false;
         }
 
-        List<AbcRankOption> getDistinctLetterOptions(List<AbcRankOption> randomized, int i)
+        private void BuildTaskElements(List<TaskItem> taskItems)
         {
-            List<AbcRankOption> tempList = new List<AbcRankOption>();
-            int count = i;
-
-            do
+            // Add task items to view and attach Drag and Drop handler
+            llTaskItems.RemoveAllViews();
+            var adapter = new TaskItemAdapter(Activity.BaseContext, 0, taskItems);
+            for (var i = 0; i < taskItems.Count; i++)
             {
-                var item = randomized.ElementAt(0);
-                if (tempList.Where(x => x.Name.Substring(0, 1).Equals(item.Name.Substring(0,1))).ToList().Count == 0)
-                {
-                    tempList.Add(item);
-                    randomized.Shuffle();
-                    count--;
-                }
-                else
-                {
-                    randomized.Shuffle();
-                }
-
-            } while(count > 0);
-
-
-            tempList.Shuffle();
-            return tempList;
+                var view = adapter.GetView(i, null, null);
+                view.Drag += View_Drag;
+                llTaskItems.AddView(view);
+            }
         }
 
-        void BuildAbcRankSolutionElements(List<AbcRankOption> currentOptionsSorted, bool createEmptyList = true)
+        private void BuildOptions(List<AbcRankOption> currentOptions)
         {
-            if (createEmptyList)
-                foreach (var item in currentOptionsSorted)
-                    currentsolutionList.Add(new AbcRankOption());
+            // Shuffle options
+            currentOptions.Shuffle();
 
-            var abcRaknkSolutionElementAdapter = new AbcRankSolutionElementAdapter(Activity.BaseContext, 0, currentsolutionList);
-            llAbcRank.RemoveAllViews();
-            for (int i = 0; i < currentOptionsSorted.Count; i++) {
-                // Add letter to view
-                var view = abcRaknkSolutionElementAdapter.GetView (i, null, null);
-                view.Drag += View_Drag;
-                llAbcRank.AddView (view);
+            // Add options to view
+            var adapter = new AbcRankAdapter(Activity.BaseContext, 0, currentOptions);
+            for (var i = 0; i < currentOptions.Count; i++)
+            {
+                var view = adapter.GetView(i, null, null);
+                var item = currentOptions.ElementAt(i);
+
+                // Play sound if item has a media element that gets touched
+                if (item.Media != null)
+                {
+                    view.Touch += (sender, e) => {
+                        SoundPlayer.PlaySound(Activity.BaseContext, item.Media.SoundPath);
+                    };
+                }
+
+                // Add drag
+                view.Touch += (sender, e) => {
+                    var data = ClipData.NewPlainText("letter", item.Name);
+                    (sender as View).StartDrag(data, new View.DragShadowBuilder(sender as View), null, 0);
+                };
+
+                flOptions.AddView(view);
             }
         }
 
@@ -153,22 +106,15 @@ namespace IRMGARD
             var evt = e.Event;
             switch (evt.Action)
             {
-                case DragAction.Ended:
-                    isSoundPlayedForSelectedItem = false;
+                case DragAction.Ended:                    
                     break;
                 case DragAction.Started:
                     e.Handled = true;
                     break;
-
-                    // Dragged element enters the drop zone
                 case DragAction.Entered:
                     break;
-
-                    // Dragged element exits the drop zone
                 case DragAction.Exited:
                     break;
-
-                    // Dragged element has been dropped at the drop zone
                 case DragAction.Drop:
                     e.Handled = true;
 
@@ -176,47 +122,22 @@ namespace IRMGARD
                     var data = e.Event.ClipData;
                     if (data != null)
                     {
-                        var position = llAbcRank.IndexOfChild(sender as View);
-                        var draggedItem = currentOptionsSorted.ElementAt(position);
+                        var taskLetters = GetCurrentIteration<AbcRankIteration>().TaskItems;
+                        var position = llTaskItems.IndexOfChild(sender as View);
+                        var draggedLetter = data.GetItemAt(0).Text;
+                        var draggedItem = GetCurrentIteration<AbcRankIteration>().Options.FirstOrDefault(o => o.Name.Equals(draggedLetter));
 
-                        if (draggedItem.Media != null)
-                        {
-                            if (draggedItem.Media.ImagePath.Equals(data.GetItemAt(0).Text))
-                            {
-                                currentsolutionList.RemoveAt(position);
-                                currentsolutionList.Insert(position, draggedItem);
-                            }
-                            else
-                            {
-                                currentsolutionList.RemoveAt(position);
-                                currentsolutionList.Insert(position, new AbcRankOption());
-                            }
-                        }
-                        else
-                        {
-                            if (draggedItem.Name.Equals(data.GetItemAt(0).Text))
-                            {
-                                currentsolutionList.RemoveAt(position);
-                                currentsolutionList.Insert(position, draggedItem);
-                            }
-                            else
-                            {
-                                currentsolutionList.RemoveAt(position);
-                                currentsolutionList.Insert(position, new AbcRankOption());
-                            }
-                        }
+                        taskLetters[position].TaskLetter.Letter = draggedItem.Name;
+                        taskLetters[position].Media = draggedItem.Media;
+                        taskLetters[position].IsDirty = true;
 
-                        BuildAbcRankSolutionElements(currentsolutionList, false);
+                        BuildTaskElements(taskLetters);
+                        btnCheck.Enabled = true;
                     }
 
                     break;
             }
-        }
-
-        void imageClickedForSound (AbcRankOption item)
-        {
-            SoundPlayer.PlaySound(Activity.BaseContext, item.Media.SoundPath);
-        }
+        }            
 
         void BtnCheck_Click(object sender, EventArgs e)
         {
@@ -224,25 +145,29 @@ namespace IRMGARD
         }
 
         protected override void CheckSolution()
-        {
-            bool isCorrect = true;
-            foreach (var item in currentsolutionList)
+        {            
+            var isCorrect = true;
+            var taskLetters = GetCurrentIteration<AbcRankIteration>().TaskItems;
+
+            for (var i = 1; i < taskLetters.Count; i++)
             {
-                if (string.IsNullOrEmpty(item.Name))
+                if (String.IsNullOrEmpty(taskLetters[i].TaskLetter.Letter))
+                {
+                    isCorrect = false;
+                    break;
+                }
+
+                var previousPos = Alphabet.Letters.IndexOf(taskLetters[i - 1].TaskLetter.Letter.ToUpper()[0].ToString());
+                var thisPos = Alphabet.Letters.IndexOf(taskLetters[i].TaskLetter.Letter.ToUpper()[0].ToString());
+
+                if (previousPos >= thisPos)
                 {
                     isCorrect = false;
                     break;
                 }
             }
-
-            if (isCorrect)
-            {
-                FinishIteration(true);
-            }
-            else
-            {
-                FinishIteration(false);
-            }
+                
+            FinishIteration(isCorrect);
         }
 
         #endregion

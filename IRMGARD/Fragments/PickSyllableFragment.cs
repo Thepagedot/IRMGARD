@@ -7,6 +7,7 @@ using Android.Widget;
 using Android.Views;
 using Android.Content;
 using Android.Graphics;
+using Android.Support.V7.Widget;
 
 namespace IRMGARD
 {
@@ -19,6 +20,7 @@ namespace IRMGARD
         private TextView tvPickSyllable;
         private ImageButton btnCheck;
         private ImageView ivDropZone;
+        private CardView cvDropZone;
         private View originalView;
         private int correctPosition = -1;
         private bool isSoundPlayedForSelectedItem = false;
@@ -41,6 +43,7 @@ namespace IRMGARD
 
 
             ivDropZone = originalView.FindViewById<ImageView>(Resource.Id.ivPickSyllableDropZone);
+            cvDropZone = originalView.FindViewById<CardView>(Resource.Id.cardView);
 
             btnCheck = originalView.FindViewById<ImageButton>(Resource.Id.btnCheck);
             btnCheck.Click += BtnCheck_Click;       
@@ -164,9 +167,15 @@ namespace IRMGARD
                         selectedIndex = Convert.ToInt32(data.GetItemAt(0).Text);
                         var bitmap = BitmapFactory.DecodeResource(Activity.BaseContext.Resources, Resource.Drawable.ic_volume_up_black_24dp);
 
+                        //TODO: Why removing and adding the item clicked handler?
                         ivDropZone.Click -= DropZoneItemClicked;
                         ivDropZone.SetImageBitmap (bitmap);
+                        ivDropZone.Visibility = ViewStates.Visible;
                         ivDropZone.Click += DropZoneItemClicked;
+
+                        cvDropZone.SetCardBackgroundColor(Color.White);
+                        cvDropZone.CardElevation = 8f;
+                        llLayout.Background = null;
                     }
                     btnCheck.Enabled = true;
                     break;

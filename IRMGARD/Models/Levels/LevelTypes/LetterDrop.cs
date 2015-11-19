@@ -14,19 +14,11 @@ namespace IRMGARD.Models
 
 	public class LetterDropIteration : Iteration
 	{
-        public List<LetterDropTaskLetter> TaskLetters { get; set; }
+        public List<TaskItem> TaskItems { get; set; }
         public List<LetterBase> Options { get; set; }
 
         public LetterDropIteration(List<string> lettersToLearn) : base (lettersToLearn)
 		{
 		}
 	}
-
-    public class LetterDropTaskLetter : TaskLetter
-    {
-        public LetterDropTaskLetter(string letter) : base (letter)
-        {
-            IsSearched = true;
-        }
-    }
 }
