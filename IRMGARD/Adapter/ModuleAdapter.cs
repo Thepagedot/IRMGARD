@@ -3,6 +3,7 @@ using Android.App;
 using IRMGARD.Models;
 using Android.Views;
 using Android.Widget;
+using System.Linq;
 
 namespace IRMGARD
 {
@@ -34,8 +35,10 @@ namespace IRMGARD
 			var view = convertView ?? context.LayoutInflater.Inflate (Android.Resource.Layout.SimpleListItem2, null);
 
 		    view.FindViewById<TextView> (Android.Resource.Id.Text1).Text = items[position].Name;
-			view.FindViewById<TextView> (Android.Resource.Id.Text2).Text = "This level has " + items[position].Lessons.Count + " lessons";
+			view.FindViewById<TextView> (Android.Resource.Id.Text2).Text = "This module has " + items[position].Lessons.Count + " lessons";
 			view.SetBackgroundColor(Android.Graphics.Color.ParseColor (items [position].Color));
+            if (!items[position].Lessons.Any())
+                view.Alpha = (float)0.5;
 			return view;
 		}
 

@@ -46,6 +46,7 @@ namespace IRMGARD
             currentsolutionList = new List<AbcRankOption>();
 
             // Genrate Task items
+            currentIteration.TaskItems.Clear();
             foreach (var option in currentIteration.Options)
             {
                 currentIteration.TaskItems.Add(new TaskItem(new TaskLetter(option.Name), option.Media, true, true));
