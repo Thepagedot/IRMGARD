@@ -151,11 +151,20 @@ namespace IRMGARD
 
             for (var i = 1; i < taskLetters.Count; i++)
             {
+                if (String.IsNullOrEmpty(taskLetters[i].TaskLetter.Letter))
+                {
+                    isCorrect = false;
+                    break;
+                }
+
                 var previousPos = Alphabet.Letters.IndexOf(taskLetters[i - 1].TaskLetter.Letter.ToUpper()[0].ToString());
                 var thisPos = Alphabet.Letters.IndexOf(taskLetters[i].TaskLetter.Letter.ToUpper()[0].ToString());
 
                 if (previousPos >= thisPos)
+                {
                     isCorrect = false;
+                    break;
+                }
             }
                 
             FinishIteration(isCorrect);

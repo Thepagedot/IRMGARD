@@ -331,7 +331,6 @@
     <AndroidResource Include="Resources\layout\BuildSyllableLetterTaskItem.axml" />
     <AndroidResource Include="Resources\layout\BuildSyllableMediaElement.axml" />
     <AndroidResource Include="Resources\layout\AbcRank.axml" />
-    <AndroidResource Include="Resources\layout\AbcRankTaskItems.axml" />
     <AndroidResource Include="Resources\layout\AbcRankSolutionItems.axml" />
     <AndroidResource Include="Resources\drawable\sponsoren_level_1.png" />
     <AndroidResource Include="Resources\layout\PickSyllableTaskItem.axml" />
@@ -394,6 +393,7 @@
     <AndroidResource Include="Resources\layout\Dropzone.axml" />
     <AndroidResource Include="Resources\layout\TaskItem.axml" />
     <AndroidResource Include="Resources\layout\Test.axml" />
+    <AndroidResource Include="Resources\layout\AbcRankOptionItem.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Adapter\Specific\" />
