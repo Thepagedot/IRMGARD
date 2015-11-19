@@ -1,4 +1,4 @@
-﻿
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -92,6 +92,17 @@ namespace IRMGARD
                     FinishIteration(false);
                 }
             }
+        }
+
+        public override void OnDestroy()
+        {
+            base.OnDestroy();
+
+            if (gvFourPictures != null)
+            {
+                gvFourPictures.Adapter = null;
+            }
+            BitmapLoader.Instance.ReleaseCache();
         }
 	}
 }

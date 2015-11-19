@@ -1,6 +1,10 @@
 {
   "Name": "Level 1",
+<<<<<<< HEAD
   "Color": "#DEB80C",
+=======
+  "Color": "#DEB803",
+>>>>>>> master
   "IsEnabled": true,
   "Modules": [
     {
@@ -137,7 +141,11 @@
                 "ImagePath": "iltis.png",
                 "SoundPath": "Objects/Iltis.mp3"
               }
+<<<<<<< HEAD
             },
+=======
+            },            
+>>>>>>> master
             {
               "Letter": "I",
               "Media": {
@@ -254,6 +262,7 @@
               "LettersToLearn": [ "A", "E", "I", "O", "U" ],
               "HasLongAndShortLetters": false,
               "RandomizeCase": true,
+<<<<<<< HEAD
               "TaskItems": [
                 {
                   "TaskLetter": {
@@ -299,6 +308,110 @@
                   },                  
                   "IsSearched": false,
                   "EmptySearchedItems":  true
+=======
+              "TaskLetters": [
+                {
+                    "Letter": "A",
+                    "IsShort": false,
+                    "IsLong": false,
+                    "IsSearched": false
+                },
+                {
+                    "Letter": "E",
+                    "IsShort": false,
+                    "IsLong": false,
+                    "IsSearched": false
+                },
+                {
+                    "Letter": "I",
+                    "IsShort": false,
+                    "IsLong": false,
+                    "IsSearched": false
+                },
+                {
+                    "Letter": "O",
+                    "IsShort": false,
+                    "IsLong": false,
+                    "IsSearched": true
+                },
+                {
+                    "Letter": "U",
+                    "IsShort": false,
+                    "IsLong": false,
+                    "IsSearched": false
+                }
+              ],
+              "Options": [
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "A",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "F",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "G",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "B",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "C",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "O",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": 3
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "I",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "J",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "D",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+                },
+                {
+                  "$type": "IRMGARD.Models.FindMissingLetterOption, IRMGARD",
+                  "Letter": "E",
+                  "IsShort": false,
+                  "IsLong": false,
+                  "CorrectPos": -1
+>>>>>>> master
                 }
               ]
             }
@@ -308,7 +421,11 @@
     },
     {
       "Name": "Module 2",
+<<<<<<< HEAD
       "Color": "#AEC1C2",
+=======
+      "Color": "#AFC3C4",
+>>>>>>> master
       "VideoPath": null,
       "NumberOfLessonsDone": 0,
       "Lessons": [
@@ -329,25 +446,41 @@
             {
               "Letter": "E",
               "Media": {
+<<<<<<< HEAD
                 "SoundPath": "Objects/Me-lang.mp3"
+=======
+                "SoundPath": "Syllables/Me-lang.mp3"
+>>>>>>> master
               }
             },
             {
               "Letter": "I",
               "Media": {
+<<<<<<< HEAD
                 "SoundPath": "Objects/Mi-lang.mp3"
+=======
+                "SoundPath": "Syllables/Mi-lang.mp3"
+>>>>>>> master
               }
             },
             {
               "Letter": "O",
               "Media": {
+<<<<<<< HEAD
                 "SoundPath": "Objects/Mo-lang.mp3"
+=======
+                "SoundPath": "Syllables/Mo-lang.mp3"
+>>>>>>> master
               }
             },
             {
               "Letter": "U",
               "Media": {
+<<<<<<< HEAD
                 "SoundPath": "Objects/Mu-lang.mp3"
+=======
+                "SoundPath": "Syllables/Mu-lang.mp3"
+>>>>>>> master
               }
             }
           ],
@@ -376,6 +509,7 @@
               "Syllables": [
                 {
                   "SyllableParts": [
+<<<<<<< HEAD
                     {
                       "TaskLetter": {
                         "Letter": "L",
@@ -394,6 +528,20 @@
                       "IsSearched": true,
                       "EmptySearchedItems":  true
                     }
+=======
+                   {
+                     "Letter": "L",
+                     "IsShort": false,
+                     "IsLong": false,
+                     "IsSearched": true
+                   },
+                   {
+                     "Letter": "A",                     
+                     "IsShort": false,
+                     "IsLong": false,
+                     "IsSearched": true
+                   }
+>>>>>>> master
                   ],
                   "SoundPath": "Syllables/La.mp3"
                 }
@@ -416,6 +564,7 @@
                 {
                   "SyllableParts": [
                     {
+<<<<<<< HEAD
                       "TaskLetter": {
                         "Letter": "L",
                         "IsShort": false,
@@ -432,6 +581,18 @@
                       },
                       "IsSearched": true,
                       "EmptySearchedItems":  true
+=======
+                      "Letter": "L",
+                      "IsShort": false,
+                      "IsLong": false,
+                      "IsSearched": true
+                    },
+                    {
+                      "Letter": "A",
+                      "IsShort": false,
+                      "IsLong": false,
+                      "IsSearched": true
+>>>>>>> master
                     }
                   ],
                   "SoundPath": "Syllables/La.mp3"
@@ -439,6 +600,7 @@
                 {
                   "SyllableParts": [
                     {
+<<<<<<< HEAD
                       "TaskLetter": {
                         "Letter": "M",
                         "IsShort": false,
@@ -455,19 +617,63 @@
                       },
                       "IsSearched": true,
                       "EmptySearchedItems":  true
+=======
+                      "Letter": "M",
+                      "IsShort": false,
+                      "IsLong": false,
+                      "IsSearched": true
+                    },
+                    {
+                      "Letter": "A",
+                      "IsShort": false,
+                      "IsLong": false,
+                      "IsSearched": true
+>>>>>>> master
                     }
                   ],
                   "SoundPath": "Syllables/Ma.mp3"
                 }
+<<<<<<< HEAD
               ]
+=======
+              ]            
+>>>>>>> master
             }
           ]
         }
       ]
+<<<<<<< HEAD
     },
     {
       "Name": "Module 6",
       "Color": "#A78A98",
+=======
+    }, 
+    {
+      "Name": "Module 3",
+      "Color": "#d8cbd1",
+      "VideoPath": null,
+      "NumberOfLessonsDone": 0,
+      "Lessons": []
+    },
+    {
+      "Name": "Module 4",
+      "Color": "#c1cbac",
+      "VideoPath": null,
+      "NumberOfLessonsDone": 0,
+      "Lessons": []
+    },
+    {
+      "Name": "Module 5",
+      "Color": "#dcd08f",
+      "VideoPath": null,
+      "NumberOfLessonsDone": 0,
+      "Lessons": []
+    },
+    {
+      "Name": "Module 6",
+      "Color": "#e5c8c4",
+>>>>>>> master
       "VideoPath": null,
       "NumberOfLessonsDone": 0,
       "Lessons": [
@@ -486,6 +692,7 @@
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "A",
                   "Media": null
+<<<<<<< HEAD
                 },
                 {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
@@ -508,6 +715,30 @@
                   "Media": null
                 }
               ]
+=======
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "E",
+                  "Media": null
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "U",
+                  "Media": null
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "I",
+                  "Media": null
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "O",
+                  "Media": null
+                 }
+               ]                                                                           
+>>>>>>> master
             }
           ]
         },
@@ -528,38 +759,63 @@
                   "Media": {
                     "ImagePath": "affe.png",
                     "SoundPath": "Objects/Affe.mp3"
+<<<<<<< HEAD
                   }
                 },
                 {
+=======
+                   }
+                 },
+                 {
+>>>>>>> master
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "Eber",
                   "Media": {
                     "ImagePath": "eber.png",
                     "SoundPath": "Objects/Eber.mp3"
+<<<<<<< HEAD
                   }
                 },
                 {
+=======
+                   }
+                 },
+                 {
+>>>>>>> master
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "Ufo",
                   "Media": {
                     "ImagePath": "ufo.png",
                     "SoundPath": "Objects/Ufo.mp3"
+<<<<<<< HEAD
                   }
                 },
                 {
+=======
+                   }
+                 },
+                 {
+>>>>>>> master
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "Insel",
                   "Media": {
                     "ImagePath": "insel.png",
                     "SoundPath": "Objects/Insel.mp3"
+<<<<<<< HEAD
                   }
                 },
                 {
+=======
+                   }
+                 },
+                 {
+>>>>>>> master
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "Ofen",
                   "Media": {
                     "ImagePath": "ofen.png",
                     "SoundPath": "Objects/Ofen.mp3"
+<<<<<<< HEAD
                   }
                 }
               ]
@@ -567,6 +823,31 @@
           ]
         }
       ]
+=======
+                   }
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "Eber",
+                  "Media": {
+                    "ImagePath": "eber.png",
+                    "SoundPath": "Objects/Eber.mp3"
+                   }
+                 },
+                 {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "Uhu",
+                  "Media": {
+                    "ImagePath": "uhu.png",
+                    "SoundPath": "Objects/Uhu.mp3"
+                   }
+                 }
+               ]                                                                           
+            }
+          ]
+        }
+      ] 
+>>>>>>> master
     }
   ]
 }

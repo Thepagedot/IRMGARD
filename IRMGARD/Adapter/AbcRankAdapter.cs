@@ -35,7 +35,12 @@ namespace IRMGARD
             }
             else
             {
+<<<<<<< HEAD
                 view.FindViewById<TextView>(Resource.Id.letter).Text = item.Name;
+=======
+                view.FindViewById<ImageView>(Resource.Id.abcRankMeidaElementImage).Visibility = ViewStates.Gone;
+                view.FindViewById<TextView>(Resource.Id.abcRankElementName).Text = item.Name;
+>>>>>>> master
             }
 
             return view;

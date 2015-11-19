@@ -80,11 +80,11 @@ namespace IRMGARD
 
         void BuildOptions(List<LetterBase> options)
         {
-            var buildSyllableAdapter = new BuildSyllableAdapter(Activity.BaseContext, 0, options);
+            var adapter = new LetterAdapter(Activity.BaseContext, 0, options);
             for (int i = 0; i < options.Count; i++) 
             {
                 // Add letter to view
-                var view = buildSyllableAdapter.GetView(i, null, null);
+                var view = adapter.GetView(i, null, null);
                 var letter = options.ElementAt (i).Letter;
 
                 view.Touch += (sender, e) => {
