@@ -107,22 +107,15 @@
     <Compile Include="Fragments\LessonFragment.cs" />
     <Compile Include="Views\ModuleSelectActivity.cs" />
     <Compile Include="Adapter\ModuleAdapter.cs" />
-    <Compile Include="Adapter\FourPicturesAdapter.cs" />
     <Compile Include="Utilities\RandomHelper.cs" />
     <Compile Include="Utilities\AssetHelper.cs" />
     <Compile Include="Views\LevelSponsorActivity.cs" />
     <Compile Include="Fragments\PickSyllableFragment.cs" />
-    <Compile Include="Adapter\PickSyllableAdapter.cs" />
     <Compile Include="Fragments\FindMissingLetterFragment.cs" />
     <Compile Include="AddOns\FlowLayout.cs" />
-    <Compile Include="Adapter\LetterAdapter.cs" />
     <Compile Include="Models\Letter.cs" />
     <Compile Include="Fragments\BuildSyllableFragment.cs" />
-    <Compile Include="Adapter\BuildSyllableTaskItemAdapter.cs" />
-    <Compile Include="Adapter\BuildSyllableMediaElementAdapter.cs" />
     <Compile Include="Fragments\AbcRankFragment.cs" />
-    <Compile Include="Adapter\AbcRankAdapter.cs" />
-    <Compile Include="Adapter\AbcRankSolutionElementAdapter.cs" />
     <Compile Include="Adapter\General\TaskItemAdapter.cs" />
     <Compile Include="Fragments\LetterDropFragment.cs" />
     <Compile Include="Views\VideoActivity.cs" />
@@ -133,6 +126,11 @@
     <Compile Include="Utilities\TimeProfiler.cs" />
     <Compile Include="Utilities\BitmapLoader.cs" />
     <Compile Include="Utilities\Env.cs" />
+    <Compile Include="Adapter\Specific\AbcRankAdapter.cs" />
+    <Compile Include="Adapter\Specific\FourPicturesAdapter.cs" />
+    <Compile Include="Adapter\General\LetterAdapter.cs" />
+    <Compile Include="Adapter\Specific\PickSyllableAdapter.cs" />
+    <Compile Include="Adapter\Specific\BuildSyllableMediaElementAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\level4.json" />
@@ -330,12 +328,8 @@
     <AndroidResource Include="Resources\drawable\sponsor_veolia_logo.png" />
     <AndroidResource Include="Resources\drawable\dotted.xml" />
     <AndroidResource Include="Resources\layout\BuildSyllable.axml" />
-    <AndroidResource Include="Resources\layout\BuildSyllableLetterTaskItem.axml" />
-    <AndroidResource Include="Resources\layout\BuildSyllableMediaElement.axml" />
     <AndroidResource Include="Resources\layout\AbcRank.axml" />
-    <AndroidResource Include="Resources\layout\AbcRankSolutionItems.axml" />
     <AndroidResource Include="Resources\drawable\sponsoren_level_1.png" />
-    <AndroidResource Include="Resources\layout\PickSyllableTaskItem.axml" />
     <AndroidResource Include="Resources\layout\LetterTaskItem.axml" />
     <AndroidResource Include="Resources\layout\LetterDrop.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_chat_bubble_outline_black_24dp.png" />
@@ -395,6 +389,7 @@
     <AndroidResource Include="Resources\drawable\empty_photo.png" />
     <AndroidResource Include="Resources\layout\AbcRankOptionItem.axml" />
     <AndroidResource Include="Resources\layout\TaskItem.axml" />
+    <AndroidResource Include="Resources\layout\BuildSyllableMediaElement.axml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Adapter\Specific\" />
