@@ -1834,34 +1834,25 @@ namespace IRMGARD
 			public const int Icon = 2130837585;
 			
 			// aapt resource value: 0x7f020052
-			public const int irmgard_picture = 2130837586;
+			public const int irmgard_danke_01 = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int list_selector = 2130837587;
-			
-			// aapt resource value: 0x7f02005b
-			public const int notification_template_icon_bg = 2130837595;
+			public const int irmgard_picture = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int splashscreen = 2130837588;
-			
-			// aapt resource value: 0x7f020055
-			public const int sponsor_koenigsdruck_logo = 2130837589;
-			
-			// aapt resource value: 0x7f020056
-			public const int sponsor_lions_logo = 2130837590;
-			
-			// aapt resource value: 0x7f020057
-			public const int sponsor_veolia_logo = 2130837591;
+			public const int list_selector = 2130837588;
 			
 			// aapt resource value: 0x7f020058
-			public const int sponsoren_level_1 = 2130837592;
+			public const int notification_template_icon_bg = 2130837592;
 			
-			// aapt resource value: 0x7f020059
-			public const int Text = 2130837593;
+			// aapt resource value: 0x7f020055
+			public const int splashscreen = 2130837589;
 			
-			// aapt resource value: 0x7f02005a
-			public const int underscore = 2130837594;
+			// aapt resource value: 0x7f020056
+			public const int Text = 2130837590;
+			
+			// aapt resource value: 0x7f020057
+			public const int underscore = 2130837591;
 			
 			static Drawable()
 			{

@@ -16,7 +16,7 @@ using Android.Support.Design.Widget;
 
 namespace IRMGARD
 {
-    [Activity(Label = "Danke an", ParentActivity = typeof(LevelSelectActivity), NoHistory = true)]
+    [Activity(Label = "Danke", ParentActivity = typeof(LevelSelectActivity), NoHistory = true)]
     public class LevelSponsorActivity : AppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -25,7 +25,6 @@ namespace IRMGARD
             SetContentView(Resource.Layout.LevelSponsor);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            SupportActionBar.Subtitle = String.Format(GetString(Resource.String.sponsor_welcome), DataHolder.Current.CurrentLevel.Name);
             this.CompatMode();
 
             var closeButton = FindViewById<FloatingActionButton>(Resource.Id.btnClose);

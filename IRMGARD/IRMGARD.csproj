@@ -323,13 +323,9 @@
     <AndroidResource Include="Resources\values\Attrs.xml" />
     <AndroidResource Include="Resources\layout\Letter.axml" />
     <AndroidResource Include="Resources\drawable\divider.png" />
-    <AndroidResource Include="Resources\drawable\sponsor_koenigsdruck_logo.png" />
-    <AndroidResource Include="Resources\drawable\sponsor_lions_logo.png" />
-    <AndroidResource Include="Resources\drawable\sponsor_veolia_logo.png" />
     <AndroidResource Include="Resources\drawable\dotted.xml" />
     <AndroidResource Include="Resources\layout\BuildSyllable.axml" />
     <AndroidResource Include="Resources\layout\AbcRank.axml" />
-    <AndroidResource Include="Resources\drawable\sponsoren_level_1.png" />
     <AndroidResource Include="Resources\layout\LetterTaskItem.axml" />
     <AndroidResource Include="Resources\layout\LetterDrop.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_chat_bubble_outline_black_24dp.png" />
@@ -390,6 +386,7 @@
     <AndroidResource Include="Resources\layout\AbcRankOptionItem.axml" />
     <AndroidResource Include="Resources\layout\TaskItem.axml" />
     <AndroidResource Include="Resources\layout\BuildSyllableMediaElement.axml" />
+    <AndroidResource Include="Resources\drawable\irmgard_danke_01.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Adapter\Specific\" />
