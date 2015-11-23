@@ -399,6 +399,8 @@
     <AndroidResource Include="Resources\drawable-xhdpi\irmgard_icon_spiel_nochmal.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_icon_spiel_nochmal.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_icon_spiel_nochmal.png" />
+    <AndroidResource Include="Resources\anim\ShowNextButton.xml" />
+    <AndroidResource Include="Resources\anim\HideNextButton.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">

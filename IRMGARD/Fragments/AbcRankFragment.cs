@@ -114,6 +114,8 @@ namespace IRMGARD
                     var data = e.Event.ClipData;
                     if (data != null)
                     {
+                        FireUserInteracted();
+
                         var taskLetters = GetCurrentIteration<AbcRankIteration>().TaskItems;
                         var position = llTaskItems.IndexOfChild(sender as View);
                         var draggedLetter = data.GetItemAt(0).Text;

@@ -74,7 +74,13 @@ namespace IRMGARD
 			public const int design_snackbar_out = 2130968589;
 			
 			// aapt resource value: 0x7f04000e
-			public const int ShowFeedbackIcon = 2130968590;
+			public const int HideNextButton = 2130968590;
+			
+			// aapt resource value: 0x7f04000f
+			public const int ShowFeedbackIcon = 2130968591;
+			
+			// aapt resource value: 0x7f040010
+			public const int ShowNextButton = 2130968592;
 			
 			static Animation()
 			{

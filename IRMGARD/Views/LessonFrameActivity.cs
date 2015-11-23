@@ -68,28 +68,28 @@ namespace IRMGARD
 		/// Initiates the view with the current lession.
 		/// </summary>
 		private void InitLesson()
-		{
-			var module = DataHolder.Current.CurrentModule;
-			var lesson = DataHolder.Current.CurrentLesson;
-			var iteration = DataHolder.Current.CurrentIteration;
+        {
+            var module = DataHolder.Current.CurrentModule;
+            var lesson = DataHolder.Current.CurrentLesson;
+            var iteration = DataHolder.Current.CurrentIteration;
 
-			// ----------------------------------------------------------------------
-			// Module specifics
-			// ----------------------------------------------------------------------
+            // ----------------------------------------------------------------------
+            // Module specifics
+            // ----------------------------------------------------------------------
 
-			// Set playground background color
-			fragmentContainer.SetBackgroundColor(Color.ParseColor(module.Color));
+            // Set playground background color
+            fragmentContainer.SetBackgroundColor(Color.ParseColor(module.Color));
 
-			// ----------------------------------------------------------------------
-			// Lesson specifics
-			// ----------------------------------------------------------------------
+            // ----------------------------------------------------------------------
+            // Lesson specifics
+            // ----------------------------------------------------------------------
 
-			// Set the name of the current lesson as page title
-			Title = lesson.Title;
+            // Set the name of the current lesson as page title
+            Title = lesson.Title;
 
-			// Hide hint button, if no hint is available
-			//if (hintButton != null)
-			//hintButton.SetVisible(!string.IsNullOrEmpty(lesson.Hint));
+            // Hide hint button, if no hint is available
+            //if (hintButton != null)
+            //hintButton.SetVisible(!string.IsNullOrEmpty(lesson.Hint));
 
             // Progress
             progressList.Clear();
@@ -98,38 +98,49 @@ namespace IRMGARD
 
             rvProgress.GetAdapter().NotifyDataSetChanged();
 
-			// ----------------------------------------------------------------------
-			// Load lesson fragment
-			// ----------------------------------------------------------------------
+            // ----------------------------------------------------------------------
+            // Load lesson fragment
+            // ----------------------------------------------------------------------
 
-			// Create an instance of the fragment according to the current type of level
-			var transaction = FragmentManager.BeginTransaction();
-			currentFragment = CreateFragmentForLesson(DataHolder.Current.CurrentLesson);
+            // Create an instance of the fragment according to the current type of level
+            var transaction = FragmentManager.BeginTransaction();
+            currentFragment = CreateFragmentForLesson(DataHolder.Current.CurrentLesson);
             if (currentFragment != null)
-			{
-				// Handle finished events
+            {
+                // Handle finished events
                 currentFragment.LessonFinished += LessonFragment_LessonFinished;
                 currentFragment.IterationFinished += Fragment_IterationFinished;
                 currentFragment.IterationChanged += Fragment_IterationChanged;
+                currentFragment.UserInteracted += CurrentFragment_UserInteracted;
 
-				// Add the fragment to the container
+                // Add the fragment to the container
                 transaction.Replace(Resource.Id.fragmentContainer, currentFragment, lessonFragmentTag);
-				transaction.Commit();
-			}
-			else
-			{
-				// Fragment for this type of lesson could not be loaded. Remove old fragment
-				var oldFragment = FragmentManager.FindFragmentByTag(lessonFragmentTag);
-				if (oldFragment != null)
-				{
-					transaction.Remove(oldFragment);
-					transaction.Commit();
-				}
-			}
+                transaction.Commit();
+            }
+            else
+            {
+                // Fragment for this type of lesson could not be loaded. Remove old fragment
+                var oldFragment = FragmentManager.FindFragmentByTag(lessonFragmentTag);
+                if (oldFragment != null)
+                {
+                    transaction.Remove(oldFragment);
+                    transaction.Commit();
+                }
+            }
+        }
+
+        private void CurrentFragment_UserInteracted (object sender, UserInteractedEventArgs e)
+        {
+            btnNext.Enabled = true;
+            btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.ShowNextButton));
 		}
 
         void Fragment_IterationChanged(object sender, IterationChangedEventArgs e)
         {
+            // Disable check button
+            btnNext.Enabled = false;
+            btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.HideNextButton));
+
             // Update iteration number
             SupportActionBar.Subtitle = "Iteration " + (DataHolder.Current.CurrentLesson.Iterations.IndexOf(e.Iteration) + 1) + "/" + DataHolder.Current.CurrentLesson.Iterations.Count;
 
@@ -172,8 +183,6 @@ namespace IRMGARD
 		/// <param name="e">event args.</param>
         void LessonFragment_LessonFinished(object sender, EventArgs e)
 		{
-			//Toast.MakeText(this, "Lesson finished!", ToastLength.Short).Show();
-
             var builder = new AlertDialog.Builder(this);
             builder.SetTitle(Resource.String.lesson_finished);
             builder.SetMessage(Resource.String.lesson_finished_message);

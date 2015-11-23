@@ -66,13 +66,9 @@ namespace IRMGARD
 
         void PlayImageSound(object sender, EventArgs e)
         {
+            FireUserInteracted();
             SoundPlayer.PlaySound(Activity.BaseContext, GetCurrentIteration<HearMeIteration>().Media.SoundPath);
         }
-
-		void FinishButton_Click (object sender, EventArgs e)
-		{
-            CheckSolution();
-		}
 
         public override void CheckSolution()
         {

@@ -27,6 +27,12 @@ namespace IRMGARD
         public event LessonFinishedEventHandler LessonFinished;
         public delegate void LessonFinishedEventHandler(object sender, EventArgs e);
 
+        /// <summary>
+        /// Occurs when a user interacted with the fragment
+        /// </summary>
+        public event UserInteractedEventHandler UserInteracted;
+        public delegate void UserInteractedEventHandler(object sender, UserInteractedEventArgs e);
+
         protected void FireIterationFinished(Iteration iteration, bool success)
         {
             if (IterationFinished != null)
@@ -43,6 +49,12 @@ namespace IRMGARD
         {
             if (LessonFinished != null)
                 LessonFinished(this, null);
+        }
+
+        protected void FireUserInteracted()
+        {
+            if (UserInteracted != null)
+                UserInteracted(this, new UserInteractedEventArgs(true));
         }
             
         public abstract void CheckSolution();
@@ -130,5 +142,15 @@ namespace IRMGARD
             this.Iteration = iteration;
             this.Success = success;
         }
-    }        
+    }    
+
+    public class UserInteractedEventArgs : EventArgs
+    {
+        public bool IsDirty { get; set; }
+
+        public UserInteractedEventArgs(bool isDirty) : base()
+        {
+            this.IsDirty = isDirty;
+        }
+    }
 }	
