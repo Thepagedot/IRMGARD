@@ -13,6 +13,7 @@ using Android.Widget;
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.Design.Widget;
+using Square.Picasso;
 
 namespace IRMGARD
 {
@@ -26,6 +27,11 @@ namespace IRMGARD
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             this.CompatMode();
+
+            // Set title and image
+            Title = DataHolder.Current.CurrentLevel.Name;
+            var imageView = FindViewById<ImageView>(Resource.Id.ivSponsors);
+            Picasso.With(this).Load(Resource.Drawable.irmgard_danke_01).Into(imageView);
 
             var closeButton = FindViewById<FloatingActionButton>(Resource.Id.btnClose);
             closeButton.Click += CloseButton_Click;

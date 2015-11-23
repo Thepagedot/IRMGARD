@@ -45,7 +45,7 @@ namespace IRMGARD
 
 			// Navigate to lesson view
             var intent = new Intent(this, typeof(LevelSponsorActivity));
-			StartActivity (intent);
+			StartActivity(intent);
 		}
 	}
 }

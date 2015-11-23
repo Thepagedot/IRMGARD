@@ -12,14 +12,15 @@
         layout="@layout/toolbar" />
     <ImageView
         android:id="@+id/ivSponsors"
-        android:src="@drawable/irmgard_danke_01"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:layout_below="@id/toolbar" />
+        android:layout_below="@id/toolbar"
+        android:layout_above="@+id/btnClose"
+        android:layout_marginTop="@dimen/activity_vertical_margin" />
     <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btnClose"
+        android:id="@id/btnClose"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_default"
