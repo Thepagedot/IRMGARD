@@ -16,6 +16,7 @@ using IRMGARD.Shared;
 using AlertDialog = Android.Support.V7.App.AlertDialog;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.Design.Widget;
+using Android.Views.Animations;
 
 namespace IRMGARD
 {
@@ -32,6 +33,7 @@ namespace IRMGARD
         RecyclerView rvProgress;
         List<Progress> progressList;
         LessonFragment currentFragment;
+        ImageView ivSuccess;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -50,6 +52,10 @@ namespace IRMGARD
 			txtCapitalAlphabet = FindViewById<TextView>(Resource.Id.txtCapitalAlphabet);
 			txtLowerAlphabet = FindViewById<TextView>(Resource.Id.txtLowerAlphabet);
 			fragmentContainer = FindViewById<FrameLayout> (Resource.Id.fragmentContainer);
+            ivSuccess = FindViewById<ImageView>(Resource.Id.ivSuccess);
+
+            // Initially hide success image
+            ivSuccess.Visibility = ViewStates.Gone;
 		}            
 
 		protected override void OnStart()
@@ -139,13 +145,21 @@ namespace IRMGARD
         /// <param name="e">E.</param>
         void Fragment_IterationFinished(object sender, IterationFinishedEventArgs e)
         {
-            //TODO: Add Thumbs Up Animation here
-            //Toast.MakeText (this, "Iteration finished!", ToastLength.Short).Show();
-
             // Update status
             var iterationIndex = DataHolder.Current.CurrentLesson.Iterations.IndexOf(e.Iteration);
             progressList.ElementAt(iterationIndex).Status = e.Success ? ProgressStatus.Success : ProgressStatus.Failed;
             rvProgress.GetAdapter().NotifyItemChanged(iterationIndex);
+
+            // Show success animation
+            if (e.Success)
+                ivSuccess.SetImageResource(Resource.Drawable.irmgard_icon_spiel_supergemacht);
+            else
+                ivSuccess.SetImageResource(Resource.Drawable.irmgard_icon_spiel_nochmal);
+
+            var animation = AnimationUtils.LoadAnimation(this, Resource.Animation.ShowFeedbackIcon);
+            animation.AnimationEnd += (s, args) => ivSuccess.Visibility = ViewStates.Gone;
+            ivSuccess.Visibility = ViewStates.Visible;
+            ivSuccess.StartAnimation(animation);
 
             // Stop Player
             SoundPlayer.Stop();

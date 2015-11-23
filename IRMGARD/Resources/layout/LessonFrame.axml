@@ -30,10 +30,9 @@
             android:layout_height="fill_parent"
             android:paddingLeft="@dimen/margin_default" />
     </LinearLayout>
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/fragmentFrame"
         android:layout_below="@id/llHeader"
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/llAlphabetContainer">
@@ -49,7 +48,13 @@
             android:paddingTop="@dimen/activity_vertical_margin"
             android:layout_height="match_parent"
             android:layout_marginBottom="@dimen/activity_horizontal_margin" />
-    </LinearLayout>
+        <ImageView
+            android:id="@+id/ivSuccess"
+            android:src="@drawable/irmgard_icon_spiel_supergemacht"
+            android:layout_width="150dip"
+            android:layout_height="150dip"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/btnNext"
         android:layout_width="wrap_content"

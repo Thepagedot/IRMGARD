@@ -388,6 +388,17 @@
     <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_01.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_01.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_01.png" />
+    <AndroidResource Include="Resources\anim\ShowFeedbackIcon.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_icon_spiel_supergemacht.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\irmgard_icon_spiel_supergemacht.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_icon_spiel_supergemacht.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_icon_spiel_supergemacht.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_icon_spiel_supergemacht.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_icon_spiel_nochmal.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_icon_spiel_nochmal.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_icon_spiel_nochmal.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_icon_spiel_nochmal.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_icon_spiel_nochmal.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">
@@ -469,4 +480,7 @@
     </XamarinComponentReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Resources\anim\" />
+  </ItemGroup>
 </Project>
