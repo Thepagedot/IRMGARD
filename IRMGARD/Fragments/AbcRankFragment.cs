@@ -15,24 +15,16 @@ namespace IRMGARD
         private FlowLayout flOptions;
         private LinearLayout llTaskItems;
         private List<AbcRankOption> currentsolutionList;
-        private ImageButton btnCheck;
 
         public AbcRankFragment(Lesson lesson) : base(lesson) {}
 
         public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.AbcRank, container, false);
+            flOptions = view.FindViewById<FlowLayout> (Resource.Id.flOptions);
+            llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.llTaskItems);
 
-            if (view != null) {
-                flOptions = view.FindViewById<FlowLayout> (Resource.Id.flOptions);
-                llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.llTaskItems);
-
-
-                btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
-                btnCheck.Click += BtnCheck_Click;
-            }
-
-            InitIteration ();
+            InitIteration();
             return view;
         }
 
@@ -55,8 +47,6 @@ namespace IRMGARD
 
             BuildTaskElements(currentIteration.TaskItems);
             BuildOptions(currentIteration.Options);
-
-            btnCheck.Enabled = false;
         }
 
         private void BuildTaskElements(List<TaskItem> taskItems)
@@ -134,7 +124,6 @@ namespace IRMGARD
                         taskLetters[position].IsDirty = true;
 
                         BuildTaskElements(taskLetters);
-                        btnCheck.Enabled = true;
                     }
 
                     break;
@@ -146,7 +135,7 @@ namespace IRMGARD
             CheckSolution();
         }
 
-        protected override void CheckSolution()
+        public override void CheckSolution()
         {            
             var isCorrect = true;
             var taskLetters = GetCurrentIteration<AbcRankIteration>().TaskItems;

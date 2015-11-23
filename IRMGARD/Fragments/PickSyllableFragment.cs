@@ -19,7 +19,6 @@ namespace IRMGARD
         private FlowLayout flTaskItems;
         private LinearLayout llLayout;
         private TextView tvPickSyllable;
-        private ImageButton btnCheck;
         private ImageView ivDropZone;
         private CardView cvDropZone;
         private View originalView;
@@ -42,12 +41,8 @@ namespace IRMGARD
             llLayout.Drag += textViewDragZoneDrag;
             flTaskItems = originalView.FindViewById<FlowLayout>(Resource.Id.pickSyllableTaskItems);
 
-
             ivDropZone = originalView.FindViewById<ImageView>(Resource.Id.ivPickSyllableDropZone);
-            cvDropZone = originalView.FindViewById<CardView>(Resource.Id.cardView);
-
-            btnCheck = originalView.FindViewById<ImageButton>(Resource.Id.btnCheck);
-            btnCheck.Click += BtnCheck_Click;       
+            cvDropZone = originalView.FindViewById<CardView>(Resource.Id.cardView);     
 
             InitIteration();
 
@@ -118,7 +113,6 @@ namespace IRMGARD
                 };
                 flTaskItems.AddView(view);
             }
-            btnCheck.Enabled = false;
         }
 
 
@@ -178,7 +172,6 @@ namespace IRMGARD
                         cvDropZone.CardElevation = 8f;
                         llLayout.Background = null;
                     }
-                    btnCheck.Enabled = true;
                     break;
             }
         }
@@ -189,7 +182,7 @@ namespace IRMGARD
                 SoundPlayer.PlaySound(Activity.BaseContext, currentOptions.ElementAt(selectedIndex).Media.SoundPath);
         }
 
-        protected override void CheckSolution()
+        public override void CheckSolution()
         {                     
             if (selectedIndex > -1 && selectedIndex == correctPosition) 
             {                
@@ -197,7 +190,6 @@ namespace IRMGARD
 
                 var bitmap = BitmapFactory.DecodeResource(Activity.BaseContext.Resources, Resource.Drawable.ic_help_black_24dp);
                 originalView.FindViewById<ImageView>(Resource.Id.ivPickSyllableDropZone).SetImageBitmap(bitmap);
-                btnCheck.Enabled = false;
                 currentOptions.Clear();
             } 
             else

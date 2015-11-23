@@ -15,6 +15,7 @@ using IRMGARD.Models;
 using IRMGARD.Shared;
 using AlertDialog = Android.Support.V7.App.AlertDialog;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
+using Android.Support.Design.Widget;
 
 namespace IRMGARD
 {
@@ -24,11 +25,13 @@ namespace IRMGARD
 		private const string lessonFragmentTag = "current-lesson-fragment";
 
 		//IMenuItem hintButton;
+        FloatingActionButton btnNext;
         TextView txtCapitalAlphabet;
         TextView txtLowerAlphabet;
         FrameLayout fragmentContainer;
         RecyclerView rvProgress;
         List<Progress> progressList;
+        LessonFragment currentFragment;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -36,16 +39,18 @@ namespace IRMGARD
 			SetContentView (Resource.Layout.LessonFrame);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            progressList = new List<Progress>();
             this.CompatMode();
 
-            progressList = new List<Progress>();
+            btnNext = FindViewById<FloatingActionButton>(Resource.Id.btnNext);
+            btnNext.Click += BtnNext_Click;
             rvProgress = FindViewById<RecyclerView>(Resource.Id.rvProgress);
             rvProgress.SetLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.Horizontal, false));
             rvProgress.SetAdapter(new ProgressAdapter(progressList));
 			txtCapitalAlphabet = FindViewById<TextView>(Resource.Id.txtCapitalAlphabet);
 			txtLowerAlphabet = FindViewById<TextView>(Resource.Id.txtLowerAlphabet);
 			fragmentContainer = FindViewById<FrameLayout> (Resource.Id.fragmentContainer);
-		}
+		}            
 
 		protected override void OnStart()
 		{
@@ -93,16 +98,16 @@ namespace IRMGARD
 
 			// Create an instance of the fragment according to the current type of level
 			var transaction = FragmentManager.BeginTransaction();
-			var fragment = CreateFragmentForLesson(DataHolder.Current.CurrentLesson);
-			if (fragment != null)
+			currentFragment = CreateFragmentForLesson(DataHolder.Current.CurrentLesson);
+            if (currentFragment != null)
 			{
 				// Handle finished events
-                fragment.LessonFinished += LessonFragment_LessonFinished;
-                fragment.IterationFinished += Fragment_IterationFinished;
-                fragment.IterationChanged += Fragment_IterationChanged;
+                currentFragment.LessonFinished += LessonFragment_LessonFinished;
+                currentFragment.IterationFinished += Fragment_IterationFinished;
+                currentFragment.IterationChanged += Fragment_IterationChanged;
 
 				// Add the fragment to the container
-				transaction.Replace(Resource.Id.fragmentContainer, fragment, lessonFragmentTag);
+                transaction.Replace(Resource.Id.fragmentContainer, currentFragment, lessonFragmentTag);
 				transaction.Commit();
 			}
 			else
@@ -189,6 +194,11 @@ namespace IRMGARD
 		}
 
 		#region UI Operations
+
+        private void BtnNext_Click (object sender, EventArgs e)
+        {
+            currentFragment.CheckSolution();
+        }
 
 		public override bool OnCreateOptionsMenu (IMenu menu)
 		{

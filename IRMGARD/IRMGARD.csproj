@@ -83,22 +83,11 @@
     <Compile Include="Views\LevelSelectActivity.cs" />
     <Compile Include="Adapter\LevelAdapter.cs" />
     <Compile Include="Views\LessonFrameActivity.cs" />
-    <Compile Include="Models\Levels\LevelTypes\AbcRank.cs" />
-    <Compile Include="Models\Levels\LevelTypes\BuildSyllable.cs" />
-    <Compile Include="Models\Levels\LevelTypes\FindMissingLetter.cs" />
-    <Compile Include="Models\Levels\LevelTypes\HearMe.cs" />
-    <Compile Include="Models\Levels\LevelTypes\HearMeAbc.cs" />
-    <Compile Include="Models\Levels\LevelTypes\HearTheLetter.cs" />
-    <Compile Include="Models\Levels\LevelTypes\LetterDrop.cs" />
-    <Compile Include="Models\Levels\LevelTypes\Memory.cs" />
-    <Compile Include="Models\Levels\LevelTypes\PickSyllable.cs" />
     <Compile Include="Models\Lesson.cs" />
     <Compile Include="Models\Level.cs" />
     <Compile Include="Models\Module.cs" />
     <Compile Include="Enums\LevelType.cs" />
-    <Compile Include="Models\Levels\LevelTypes\FourPictures.cs" />
     <Compile Include="Utilities\SoundPlayer.cs" />
-    <Compile Include="Models\Levels\Media.cs" />
     <Compile Include="Utilities\DataHolder.cs" />
     <Compile Include="Models\Iteration.cs" />
     <Compile Include="Fragments\HearMeFragment.cs" />
@@ -128,6 +117,17 @@
     <Compile Include="Adapter\General\LetterAdapter.cs" />
     <Compile Include="Adapter\Specific\PickSyllableAdapter.cs" />
     <Compile Include="Adapter\Specific\BuildSyllableMediaElementAdapter.cs" />
+    <Compile Include="Models\Media.cs" />
+    <Compile Include="Models\Levels\AbcRank.cs" />
+    <Compile Include="Models\Levels\BuildSyllable.cs" />
+    <Compile Include="Models\Levels\FindMissingLetter.cs" />
+    <Compile Include="Models\Levels\FourPictures.cs" />
+    <Compile Include="Models\Levels\HearMe.cs" />
+    <Compile Include="Models\Levels\HearMeAbc.cs" />
+    <Compile Include="Models\Levels\HearTheLetter.cs" />
+    <Compile Include="Models\Levels\LetterDrop.cs" />
+    <Compile Include="Models\Levels\Memory.cs" />
+    <Compile Include="Models\Levels\PickSyllable.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\level4.json" />

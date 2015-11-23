@@ -16,7 +16,6 @@ namespace IRMGARD
         LinearLayout llTaskItems;
         LinearLayout llSoundItems;
         FlowLayout flLetters;
-        ImageButton btnCheck;
 
         public BuildSyllableFragment(Lesson lesson) : base(lesson) {}
 
@@ -27,8 +26,6 @@ namespace IRMGARD
             llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.llTaskItems);
             llSoundItems = view.FindViewById<LinearLayout>(Resource.Id.llSoundItems);
             flLetters = view.FindViewById<FlowLayout> (Resource.Id.flLetters);
-            btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
-            btnCheck.Click += BtnCheck_Click;
 			
             // Initialize iteration
             InitIteration();
@@ -47,8 +44,6 @@ namespace IRMGARD
             BuildOptions(currentIteration.Options);
             BuildTaskLetters(currentIteration.Syllables);
             BuildSyllableSoundElements(currentIteration.Syllables);
-
-            btnCheck.Enabled = false;
         }
 
         List<LetterBase> GenerateOptions(BuildSyllableIteration iteration, int numberOfOptions)
@@ -222,7 +217,6 @@ namespace IRMGARD
                         }
 
                         BuildTaskLetters(taskItems);
-                        btnCheck.Enabled = true;
                     }
 
                     break;
@@ -234,7 +228,7 @@ namespace IRMGARD
             CheckSolution();
         }
 
-        protected override void CheckSolution()
+        public override void CheckSolution()
         {
             var success = true;
             foreach (var syllable in GetCurrentIteration<BuildSyllableIteration>().Syllables)

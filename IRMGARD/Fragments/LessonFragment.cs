@@ -44,6 +44,8 @@ namespace IRMGARD
             if (LessonFinished != null)
                 LessonFinished(this, null);
         }
+            
+        public abstract void CheckSolution();
     }
 
     public abstract class LessonFragment<T> : LessonFragment
@@ -105,7 +107,7 @@ namespace IRMGARD
         /// <summary>
         /// Checks if the current iteration's entries are correct
         /// </summary>
-        protected abstract void CheckSolution();
+        public override abstract void CheckSolution();
     }
 
     public class IterationChangedEventArgs : EventArgs

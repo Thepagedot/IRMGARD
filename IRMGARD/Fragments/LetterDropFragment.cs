@@ -14,11 +14,8 @@ namespace IRMGARD
     {
         private LinearLayout llTaskItems;
         private FlowLayout flLetters;
-        private ImageButton btnCheck;
 
-        public LetterDropFragment(Lesson lesson) : base(lesson)
-        {
-        }
+        public LetterDropFragment(Lesson lesson) : base(lesson) {}
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Android.OS.Bundle savedInstanceState)
         {
@@ -26,8 +23,6 @@ namespace IRMGARD
             var view = inflater.Inflate(Resource.Layout.FindMissingLetter, container, false);
             llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.llTaskItems);
             flLetters = view.FindViewById<FlowLayout>(Resource.Id.flLetters);
-            btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
-            btnCheck.Click += BtnCheck_Click;
 
             // Initialize iteration
             InitIteration();
@@ -75,8 +70,6 @@ namespace IRMGARD
 
             // Add task letters to view
             BuildTaskLetters(currentIteration.TaskItems);
-
-            btnCheck.Enabled = false;
         }
 
         private List<LetterBase> GenerateOptions(LetterDropIteration iteration, int numberOfOptions, Case fontCase)
@@ -163,7 +156,6 @@ namespace IRMGARD
                         taskLetters[position].TaskLetter.Letter += draggedLetter;
                         taskLetters[position].IsDirty = true;
                         BuildTaskLetters(taskLetters);
-                        btnCheck.Enabled = true;
                     }
 
                     break;
@@ -175,7 +167,7 @@ namespace IRMGARD
             CheckSolution();
         }
 
-        protected override void CheckSolution()
+        public override void CheckSolution()
         {
             var success = GetCurrentIteration<LetterDropIteration>().TaskItems.All(taskItem => taskItem.TaskLetter.IsCorrect);
             FinishIteration(success);

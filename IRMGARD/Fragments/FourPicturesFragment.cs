@@ -18,7 +18,6 @@ namespace IRMGARD
         private ImageView ivImage3;
         private ImageView ivImage4;
 		private TextView tvLetter;
-		private ImageButton btnCheck;
         private List<FourPicturesOption> currentOptions;
         private int selectedPosition = -1;
 
@@ -38,9 +37,7 @@ namespace IRMGARD
             ivImage3.Click += (sender, e) => Image_Click(sender, e, 2);
             ivImage4.Click += (sender, e) => Image_Click(sender, e, 3);
 
-			tvLetter = view.FindViewById<TextView>(Resource.Id.tvLetter);
-			btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
-			btnCheck.Click += BtnCheck_Click;		
+			tvLetter = view.FindViewById<TextView>(Resource.Id.tvLetter);	
 
             // Initialize iteration
 			InitIteration();
@@ -77,14 +74,12 @@ namespace IRMGARD
             ivImage4.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(3, Activity, currentOptions[3].Media.ImagePath));
 
 			tvLetter.Text = currentIteration.LettersToLearn.First();
-			btnCheck.Enabled = false;
 		}
 
         private void Image_Click (object sender, EventArgs e, int position)
         {
             SoundPlayer.PlaySound(Activity.BaseContext, currentOptions.ElementAt(position).Media.SoundPath);           
             selectedPosition = position;
-            btnCheck.Enabled = true;
         }
 
 		void BtnCheck_Click(object sender, EventArgs e)
@@ -92,7 +87,7 @@ namespace IRMGARD
             CheckSolution();
 		}
 
-        protected override void CheckSolution()
+        public override void CheckSolution()
         {
             if (selectedPosition > -1)
             {

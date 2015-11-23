@@ -22,7 +22,6 @@ namespace IRMGARD
         private TextView letterToLearnView;
         private ImageView imageButtonView;
         private TextView nameView;
-        private ImageView finishButton;
 
         public HearMeFragment (Lesson lesson) : base(lesson) {}
 
@@ -35,8 +34,6 @@ namespace IRMGARD
                 letterToLearnView = view.FindViewById<TextView>(Resource.Id.hearMeLetterToLearn);
                 imageButtonView = view.FindViewById<ImageView>(Resource.Id.hearMeImageView);
                 nameView = view.FindViewById<TextView>(Resource.Id.hearMeName);
-                finishButton = view.FindViewById<ImageView>(Resource.Id.btnCheck);
-                finishButton.Click += FinishButton_Click;
             }
 
             InitIteration();
@@ -65,14 +62,11 @@ namespace IRMGARD
 
                 nameView.Text = currentIteration.Name;
             }
-            finishButton.Enabled = false;
         }
 
         void PlayImageSound(object sender, EventArgs e)
         {
             SoundPlayer.PlaySound(Activity.BaseContext, GetCurrentIteration<HearMeIteration>().Media.SoundPath);
-
-            finishButton.Enabled = true;
         }
 
 		void FinishButton_Click (object sender, EventArgs e)
@@ -80,7 +74,7 @@ namespace IRMGARD
             CheckSolution();
 		}
 
-        protected override void CheckSolution()
+        public override void CheckSolution()
         {
             FinishIteration(true);
         }            

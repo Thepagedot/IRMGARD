@@ -20,7 +20,6 @@ namespace IRMGARD
     {
         private LinearLayout llTaskItems;
         private FlowLayout flLetters;
-        private ImageButton btnCheck;
         private Case fontCase;
 
         public FindMissingLetterFragment(Lesson lesson) : base(lesson) {}
@@ -31,8 +30,6 @@ namespace IRMGARD
             var view = inflater.Inflate(Resource.Layout.FindMissingLetter, container, false);
             llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.llTaskItems);
             flLetters = view.FindViewById<FlowLayout>(Resource.Id.flLetters);
-            btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
-            btnCheck.Click += BtnCheck_Click;
 
             // Initialize iteration
             InitIteration();
@@ -74,8 +71,6 @@ namespace IRMGARD
 
                 flLetters.AddView(view);
             }
-
-            btnCheck.Enabled = false;
         }
 
         private List<FindMissingLetterOption> GenerateOptions(FindMissingLetterIteration iteration, int numberOfOptions, Case fontCase)
@@ -174,8 +169,6 @@ namespace IRMGARD
 
                         BuildTaskLetters(taskItems, fontCase);
                     }
-
-                    btnCheck.Enabled = true;
                     break;
             }
         }
@@ -185,7 +178,7 @@ namespace IRMGARD
             CheckSolution();
         }
 
-        protected override void CheckSolution()
+        public override void CheckSolution()
         {
             var isCorrect = false;
             var currentIteration = GetCurrentIteration<FindMissingLetterIteration>();
