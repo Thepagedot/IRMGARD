@@ -7,6 +7,7 @@ using Android.OS;
 using Android.Widget;
 using Android.Graphics;
 using Android.Content;
+using IRMGARD.Shared;
 
 namespace IRMGARD
 {

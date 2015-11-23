@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Android.Widget;
 using Android.Content;
+using IRMGARD.Shared;
 
 namespace IRMGARD
 {

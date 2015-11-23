@@ -7,15 +7,20 @@ using Android.OS;
 using Android.Views;
 using Android.Widget;
 using IRMGARD.Models;
+using IRMGARD.Shared;
 
 namespace IRMGARD
 {	
     public class FourPicturesFragment : LessonFragment<FourPictures>
 	{
-		private GridView gvFourPictures;
+        private ImageView ivImage1;
+        private ImageView ivImage2;
+        private ImageView ivImage3;
+        private ImageView ivImage4;
 		private TextView tvLetter;
 		private ImageButton btnCheck;
         private List<FourPicturesOption> currentOptions;
+        private int selectedPosition = -1;
 
         public FourPicturesFragment (Lesson lesson) : base(lesson) {}
 
@@ -23,8 +28,16 @@ namespace IRMGARD
 		{
             // Prepare view
 			var view = inflater.Inflate(Resource.Layout.FourPictures, container, false);
-			gvFourPictures = view.FindViewById<GridView>(Resource.Id.gvFourPictures);
-			gvFourPictures.ItemClick += GvFourPictures_ItemClick;
+
+            ivImage1 = view.FindViewById<ImageView>(Resource.Id.ivImage1);
+            ivImage2 = view.FindViewById<ImageView>(Resource.Id.ivImage2);
+            ivImage3 = view.FindViewById<ImageView>(Resource.Id.ivImage3);
+            ivImage4 = view.FindViewById<ImageView>(Resource.Id.ivImage4);
+            ivImage1.Click += (sender, e) => Image_Click(sender, e, 0);
+            ivImage2.Click += (sender, e) => Image_Click(sender, e, 1);
+            ivImage3.Click += (sender, e) => Image_Click(sender, e, 2);
+            ivImage4.Click += (sender, e) => Image_Click(sender, e, 3);
+
 			tvLetter = view.FindViewById<TextView>(Resource.Id.tvLetter);
 			btnCheck = view.FindViewById<ImageButton>(Resource.Id.btnCheck);
 			btnCheck.Click += BtnCheck_Click;		
@@ -32,7 +45,7 @@ namespace IRMGARD
             // Initialize iteration
 			InitIteration();
 			return view;
-		}
+		}            
 
         protected override void InitIteration()
 		{
@@ -58,20 +71,21 @@ namespace IRMGARD
 			currentOptions.Shuffle();
 
             // Fill view
-			var medidaElementAdapter = new FourPicturesAdapter(Activity.BaseContext, 0, currentOptions);
-			gvFourPictures.Adapter = medidaElementAdapter;
+            ivImage1.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(0, Activity, currentOptions[0].Media.ImagePath));
+            ivImage2.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(1, Activity, currentOptions[1].Media.ImagePath));
+            ivImage3.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(2, Activity, currentOptions[2].Media.ImagePath));
+            ivImage4.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(3, Activity, currentOptions[3].Media.ImagePath));
+
 			tvLetter.Text = currentIteration.LettersToLearn.First();
 			btnCheck.Enabled = false;
 		}
 
-		void GvFourPictures_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
-		{
-			// Play Sound
-			SoundPlayer.PlaySound(Activity.BaseContext, currentOptions.ElementAt(e.Position).Media.SoundPath);
-
-			// Enable check button
-			btnCheck.Enabled = e.Position >= 0;
-		}
+        private void Image_Click (object sender, EventArgs e, int position)
+        {
+            SoundPlayer.PlaySound(Activity.BaseContext, currentOptions.ElementAt(position).Media.SoundPath);           
+            selectedPosition = position;
+            btnCheck.Enabled = true;
+        }
 
 		void BtnCheck_Click(object sender, EventArgs e)
 		{
@@ -80,28 +94,15 @@ namespace IRMGARD
 
         protected override void CheckSolution()
         {
-            if (gvFourPictures.CheckedItemPosition >= 0)
+            if (selectedPosition > -1)
             {
-                var selectedItem = currentOptions.ElementAt(gvFourPictures.CheckedItemPosition);                                
-                if (selectedItem.IsCorrect) 
-                {                    
-                    FinishIteration(true);
-                } 
-                else
-                {
-                    FinishIteration(false);
-                }
+                FinishIteration(currentOptions.ElementAt(selectedPosition).IsCorrect);
             }
         }
 
         public override void OnDestroy()
         {
             base.OnDestroy();
-
-            if (gvFourPictures != null)
-            {
-                gvFourPictures.Adapter = null;
-            }
             BitmapLoader.Instance.ReleaseCache();
         }
 	}

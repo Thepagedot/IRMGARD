@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRMGARD", "IRMGARD\IRMGARD.csproj", "{B0991947-64A8-4744-8EA5-0F827082F249}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRMGARD.UITests", "IRMGARD.UITests\IRMGARD.UITests.csproj", "{E705D1F7-D590-4DE3-9885-0928856D56FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRMGARD.Shared", "IRMGARD.Shared\IRMGARD.Shared.csproj", "{7F96B7FB-44BF-48BF-893F-C381525B7113}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,5 +23,12 @@ Global
 		{E705D1F7-D590-4DE3-9885-0928856D56FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E705D1F7-D590-4DE3-9885-0928856D56FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E705D1F7-D590-4DE3-9885-0928856D56FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7F96B7FB-44BF-48BF-893F-C381525B7113}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F96B7FB-44BF-48BF-893F-C381525B7113}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F96B7FB-44BF-48BF-893F-C381525B7113}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F96B7FB-44BF-48BF-893F-C381525B7113}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

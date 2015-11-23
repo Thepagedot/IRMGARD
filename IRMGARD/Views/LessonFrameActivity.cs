@@ -7,9 +7,12 @@ using Android.Graphics;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
+using Android.Text;
+using Android.Text.Style;
 using Android.Views;
 using Android.Widget;
 using IRMGARD.Models;
+using IRMGARD.Shared;
 using AlertDialog = Android.Support.V7.App.AlertDialog;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 
@@ -120,8 +123,8 @@ namespace IRMGARD
             SupportActionBar.Subtitle = "Iteration " + (DataHolder.Current.CurrentLesson.Iterations.IndexOf(e.Iteration) + 1) + "/" + DataHolder.Current.CurrentLesson.Iterations.Count;
 
             // Mark letters in alphabet
-            txtCapitalAlphabet.TextFormatted = Alphabet.GetLettersMarked(e.Iteration.LettersToLearn, true);
-            txtLowerAlphabet.TextFormatted = Alphabet.GetLettersMarked(e.Iteration.LettersToLearn, false);
+            txtCapitalAlphabet.TextFormatted = GetLettersMarked(e.Iteration.LettersToLearn, true);
+            txtLowerAlphabet.TextFormatted = GetLettersMarked(e.Iteration.LettersToLearn, false);
         }
 
         /// <summary>
@@ -277,5 +280,24 @@ namespace IRMGARD
 				InitLesson();
 			}
 		}
-	}
+
+        public static SpannableString GetLettersMarked(List<string> markedLetters, bool capitalize)
+        {
+            var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            if (capitalize == false)
+                alphabet = alphabet.ToLower();
+
+            if (markedLetters == null)
+                return new SpannableString(alphabet);
+
+            var spannable = new SpannableString(alphabet);
+            foreach (var letter in markedLetters)
+            {
+                var index = Alphabet.Letters.IndexOf(letter.ToUpper());
+                spannable.SetSpan(new ForegroundColorSpan(Android.Graphics.Color.Red), index, index + 1, SpanTypes.ExclusiveExclusive);
+            }
+
+            return spannable;
+        }
+    }
 }

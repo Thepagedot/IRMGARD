@@ -6,6 +6,7 @@ using System.Linq;
 using Android.Content;
 using Android.Views;
 using Android.Renderscripts;
+using IRMGARD.Shared;
 
 namespace IRMGARD
 {

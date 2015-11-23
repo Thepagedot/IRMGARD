@@ -12,6 +12,7 @@ using Android.Util;
 using Android.Views;
 using Android.Widget;
 using IRMGARD.Models;
+using IRMGARD.Shared;
 
 namespace IRMGARD
 {
