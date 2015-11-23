@@ -28,10 +28,8 @@ namespace IRMGARD
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             this.CompatMode();
 
-            // Set title and image
+            // Set title
             Title = DataHolder.Current.CurrentLevel.Name;
-            var imageView = FindViewById<ImageView>(Resource.Id.ivSponsors);
-            Picasso.With(this).Load(Resource.Drawable.irmgard_danke_01).Into(imageView);
 
             var closeButton = FindViewById<FloatingActionButton>(Resource.Id.btnClose);
             closeButton.Click += CloseButton_Click;
