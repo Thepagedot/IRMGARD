@@ -3,6 +3,7 @@ using Android.Widget;
 using Android.App;
 using Android.Views;
 using IRMGARD.Models;
+using Android.Graphics;
 
 namespace IRMGARD
 {
@@ -33,7 +34,11 @@ namespace IRMGARD
 		{
 			var view = convertView ?? context.LayoutInflater.Inflate (Android.Resource.Layout.SimpleListItem2, null);
 
-		    view.FindViewById<TextView> (Android.Resource.Id.Text1).Text = items[position].Name;
+            var text1 = view.FindViewById<TextView>(Android.Resource.Id.Text1);
+            text1.Text = items[position].Name.ToUpper();
+            var font = Typeface.CreateFromAsset(context.Assets, "Fonts/Garaje_53_Uni_Black.otf");
+            text1.Typeface = font;
+
 			view.FindViewById<TextView> (Android.Resource.Id.Text2).Text = "This level has " + items[position].Modules.Count + " modules";
 			view.SetBackgroundColor(Android.Graphics.Color.ParseColor (items [position].Color));
             if (!items[position].IsEnabled)

@@ -261,6 +261,7 @@
     <AndroidAsset Include="Assets\Images\eber.png" />
     <AndroidAsset Include="Assets\Sounds\Objects\U-Boot.mp3" />
     <AndroidAsset Include="Assets\Videos\Handy_Modul_1_720p.mp4" />
+    <AndroidAsset Include="Assets\Fonts\Garaje_53_Uni_Black.otf" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -484,5 +485,6 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup>
     <Folder Include="Resources\anim\" />
+    <Folder Include="Assets\Fonts\" />
   </ItemGroup>
 </Project>
