@@ -31,13 +31,7 @@ namespace IRMGARD
         /// Occurs when a user interacted with the fragment
         /// </summary>
         public event UserInteractedEventHandler UserInteracted;
-        public delegate void UserInteractedEventHandler(object sender, UserInteractedEventArgs e);
-
-        /// <summary>
-        /// Indicates if a lesson is ready to be ckeched.
-        /// </summary>
-        /// <value><c>true</c> if this instance is ready; otherwise, <c>false</c>.</value>
-        public bool IsReady { get; set; }
+        public delegate void UserInteractedEventHandler(object sender, UserInteractedEventArgs e);      
 
         protected void FireIterationFinished(Iteration iteration, bool success)
         {
@@ -57,10 +51,14 @@ namespace IRMGARD
                 LessonFinished(this, null);
         }
 
-        protected void FireUserInteracted()
+        /// <summary>
+        /// Fires the user interacted.
+        /// </summary>
+        /// <param name="isReady">Indicates if a lesson is ready to be ckeched.</param>
+        protected void FireUserInteracted(bool isReady)
         {
             if (UserInteracted != null)
-                UserInteracted(this, new UserInteractedEventArgs(IsReady));
+                UserInteracted(this, new UserInteractedEventArgs(isReady));
         }
             
         public abstract void CheckSolution();
@@ -74,7 +72,6 @@ namespace IRMGARD
         protected LessonFragment(Lesson lesson)
         {
             this.currentIterationIndex = 0;
-            this.IsReady = false;
 
             // Convert lesson to the according sub type
             var obj = (object)lesson;

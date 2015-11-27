@@ -216,16 +216,16 @@ namespace IRMGARD
                             }
                         }                            
 
-                        IsReady = true;
+                        var isReady = true;
                         foreach (var taskLetter in taskItems)
                             foreach (var syllable in taskLetter.SyllableParts)
                                 if (!syllable.IsDirty)
                                 {
-                                    IsReady = false;
+                                    isReady = false;
                                     break;
                                 }                               
 
-                        FireUserInteracted();
+                        FireUserInteracted(isReady);
                         BuildTaskLetters(taskItems);
                     }
 

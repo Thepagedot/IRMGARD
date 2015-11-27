@@ -156,9 +156,8 @@ namespace IRMGARD
                         taskLetters[position].TaskLetter.Letter += draggedLetter;
                         taskLetters[position].IsDirty = true;
 
-                        IsReady = taskLetters.All(t => t.IsDirty);
-
-                        FireUserInteracted();
+                        var isReady = taskLetters.Count(t => t.IsSearched && !t.IsDirty) == 0;
+                        FireUserInteracted(isReady);
                         BuildTaskLetters(taskLetters);
                     }
 

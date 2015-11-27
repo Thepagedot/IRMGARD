@@ -120,9 +120,8 @@ namespace IRMGARD
                         taskLetters[position].Media = draggedItem.Media;
                         taskLetters[position].IsDirty = true;
 
-                        IsReady = taskLetters.All(l => l.IsDirty);
-
-                        FireUserInteracted();
+                        var isReady = taskLetters.All(l => l.IsDirty);
+                        FireUserInteracted(isReady);
                         BuildTaskElements(taskLetters);
                     }
 

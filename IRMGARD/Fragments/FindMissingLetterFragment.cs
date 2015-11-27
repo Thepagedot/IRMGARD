@@ -167,9 +167,8 @@ namespace IRMGARD
                             taskItems[position].IsDirty = true;
                         }
 
-                        IsReady = taskItems.Count(t => t.IsSearched && !t.IsDirty) == 0;
-
-                        FireUserInteracted();
+                        var isReady = taskItems.Count(t => t.IsSearched && !t.IsDirty) == 0;
+                        FireUserInteracted(isReady);
                         BuildTaskLetters(taskItems, fontCase);
                     }
                     break;
