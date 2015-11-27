@@ -60,6 +60,9 @@ namespace IRMGARD
 			// Choose three other false Options
 			var random = new Random();
             var falseOptions = lesson.Options.Where(o => !o.Letter.Equals(currentIteration.LettersToLearn.First(), StringComparison.InvariantCultureIgnoreCase)).ToList();
+            foreach (var option in falseOptions)
+                option.IsCorrect = false;
+
 			currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
 			currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
 			currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
