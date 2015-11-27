@@ -8,6 +8,7 @@ using Android.Views;
 using Android.Widget;
 using IRMGARD.Models;
 using IRMGARD.Shared;
+using Org.Apache.Http.Cookies;
 
 namespace IRMGARD
 {	
@@ -59,7 +60,10 @@ namespace IRMGARD
 
 			// Choose three other false Options
 			var random = new Random();
-            var falseOptions = lesson.Options.Where(o => !o.Letter.Equals(currentIteration.LettersToLearn.First(), StringComparison.InvariantCultureIgnoreCase)).ToList();
+            var falseOptions = 
+                lesson.Options.Where(o => 
+                    !o.Letter.Equals(currentIteration.LettersToLearn.First(), StringComparison.InvariantCultureIgnoreCase) &&
+                    !o.Letter.Equals(correctOption.Letter, StringComparison.InvariantCultureIgnoreCase)).ToList();
             foreach (var option in falseOptions)
                 option.IsCorrect = false;
 
