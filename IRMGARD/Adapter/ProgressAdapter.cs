@@ -45,26 +45,30 @@ namespace IRMGARD
 
     public class ProgressViewHolder : RecyclerView.ViewHolder
     {
-        private ImageView ImageView { get; set; }
+        private ImageView ImageViewStatus { get; set; }
+        private ImageView ImageViewIndicator { get; set; }
         private Progress Progress { get; set; }
 
         public ProgressViewHolder(View view) : base(view)
         {
-            ImageView = view.FindViewById<ImageView>(Resource.Id.ivStatus);
+            ImageViewStatus = view.FindViewById<ImageView>(Resource.Id.ivStatus);
+            ImageViewIndicator = view.FindViewById<ImageView>(Resource.Id.ivIndicator);
         }
 
         public void BindProgress(Progress progress)
         {
+            ImageViewIndicator.Visibility = progress.IsCurrent ? ViewStates.Visible : ViewStates.Invisible;                   
+
             switch (progress.Status)
             {
                 case ProgressStatus.Success:
-                    ImageView.SetImageResource(Resource.Drawable.ic_check_box_black_24dp);
+                    ImageViewStatus.SetImageResource(Resource.Drawable.ic_check_box_black_24dp);
                     break;
                 case ProgressStatus.Failed:
-                    ImageView.SetImageResource(Resource.Drawable.ic_indeterminate_check_box_black_24dp);
+                    ImageViewStatus.SetImageResource(Resource.Drawable.ic_indeterminate_check_box_black_24dp);
                     break;
                 case ProgressStatus.Pending:
-                    ImageView.SetImageResource(Resource.Drawable.ic_check_box_outline_blank_black_24dp);
+                    ImageViewStatus.SetImageResource(Resource.Drawable.ic_check_box_outline_blank_black_24dp);
                     break;
             }
         }
