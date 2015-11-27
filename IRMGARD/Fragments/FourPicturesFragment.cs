@@ -78,6 +78,7 @@ namespace IRMGARD
 
         private void Image_Click (object sender, EventArgs e, int position)
         {
+            IsReady = true;
             FireUserInteracted();
             SoundPlayer.PlaySound(Activity.BaseContext, currentOptions.ElementAt(position).Media.SoundPath);           
             selectedPosition = position;

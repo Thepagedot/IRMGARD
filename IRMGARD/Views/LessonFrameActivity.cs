@@ -132,8 +132,11 @@ namespace IRMGARD
 
         private void CurrentFragment_UserInteracted (object sender, UserInteractedEventArgs e)
         {
-            btnNext.Enabled = true;
-            btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.ShowNextButton));
+            if (e.IsReady)
+            {
+                btnNext.Enabled = true;
+                btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.ShowNextButton));
+            }
 		}
 
         void Fragment_IterationChanged(object sender, IterationChangedEventArgs e)

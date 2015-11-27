@@ -184,8 +184,6 @@ namespace IRMGARD
                     var data = e.Event.ClipData;
                     if (data != null)
                     {
-                        FireUserInteracted();
-
                         var taskItems = GetCurrentIteration<BuildSyllableIteration>().Syllables;
                         var draggedLetter = data.GetItemAt(0).Text;
                         var position = llTaskItems.IndexOfChild(sender as View);
@@ -216,8 +214,18 @@ namespace IRMGARD
                             {
                                 index -= taskLetter.SyllableParts.Count;
                             }
-                        }
+                        }                            
 
+                        IsReady = true;
+                        foreach (var taskLetter in taskItems)
+                            foreach (var syllable in taskLetter.SyllableParts)
+                                if (!syllable.IsDirty)
+                                {
+                                    IsReady = false;
+                                    break;
+                                }                               
+
+                        FireUserInteracted();
                         BuildTaskLetters(taskItems);
                     }
 

@@ -33,6 +33,12 @@ namespace IRMGARD
         public event UserInteractedEventHandler UserInteracted;
         public delegate void UserInteractedEventHandler(object sender, UserInteractedEventArgs e);
 
+        /// <summary>
+        /// Indicates if a lesson is ready to be ckeched.
+        /// </summary>
+        /// <value><c>true</c> if this instance is ready; otherwise, <c>false</c>.</value>
+        public bool IsReady { get; set; }
+
         protected void FireIterationFinished(Iteration iteration, bool success)
         {
             if (IterationFinished != null)
@@ -40,7 +46,7 @@ namespace IRMGARD
         }
 
         protected void FireIterationChanged(Iteration iteration)
-        {
+        {            
             if (IterationChanged != null)
                 IterationChanged(this, new IterationChangedEventArgs(iteration));
         }
@@ -54,7 +60,7 @@ namespace IRMGARD
         protected void FireUserInteracted()
         {
             if (UserInteracted != null)
-                UserInteracted(this, new UserInteractedEventArgs(true));
+                UserInteracted(this, new UserInteractedEventArgs(IsReady));
         }
             
         public abstract void CheckSolution();
@@ -68,6 +74,7 @@ namespace IRMGARD
         protected LessonFragment(Lesson lesson)
         {
             this.currentIterationIndex = 0;
+            this.IsReady = false;
 
             // Convert lesson to the according sub type
             var obj = (object)lesson;
@@ -146,11 +153,11 @@ namespace IRMGARD
 
     public class UserInteractedEventArgs : EventArgs
     {
-        public bool IsDirty { get; set; }
+        public bool IsReady { get; set; }
 
-        public UserInteractedEventArgs(bool isDirty) : base()
+        public UserInteractedEventArgs(bool isReady) : base()
         {
-            this.IsDirty = isDirty;
+            this.IsReady = isReady;
         }
     }
 }	

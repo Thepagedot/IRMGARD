@@ -159,6 +159,7 @@ namespace IRMGARD
                     var data = e.Event.ClipData;
                     if (data != null)
                     {
+                        IsReady = true;
                         FireUserInteracted();
 
                         selectedIndex = Convert.ToInt32(data.GetItemAt(0).Text);
