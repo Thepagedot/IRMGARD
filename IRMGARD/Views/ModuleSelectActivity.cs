@@ -47,7 +47,7 @@ namespace IRMGARD
 
             if (String.IsNullOrEmpty(DataHolder.Current.CurrentModule.VideoPath))
             {
-                // Navigate to lesson view
+                // Navigate to Lesson view
                 var intent = new Intent(this, typeof(LessonFameActivity));
                 StartActivity(intent);
             }

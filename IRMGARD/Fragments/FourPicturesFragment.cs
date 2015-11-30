@@ -28,6 +28,7 @@ namespace IRMGARD
             // Prepare view
 			var view = inflater.Inflate(Resource.Layout.FourPictures, container, false);
 
+            tvLetter = view.FindViewById<TextView>(Resource.Id.tvLetter);
             ivImage1 = view.FindViewById<ImageView>(Resource.Id.ivImage1);
             ivImage2 = view.FindViewById<ImageView>(Resource.Id.ivImage2);
             ivImage3 = view.FindViewById<ImageView>(Resource.Id.ivImage3);
@@ -35,9 +36,7 @@ namespace IRMGARD
             ivImage1.Click += (sender, e) => Image_Click(sender, e, 0);
             ivImage2.Click += (sender, e) => Image_Click(sender, e, 1);
             ivImage3.Click += (sender, e) => Image_Click(sender, e, 2);
-            ivImage4.Click += (sender, e) => Image_Click(sender, e, 3);
-
-			tvLetter = view.FindViewById<TextView>(Resource.Id.tvLetter);	
+            ivImage4.Click += (sender, e) => Image_Click(sender, e, 3);			
 
             // Initialize iteration
 			InitIteration();
@@ -52,14 +51,14 @@ namespace IRMGARD
             currentOptions = new List<FourPicturesOption>();
 
 			// Choose a random correct option
-            var correctOptions = lesson.Options.Where(o => o.Letter.Equals(currentIteration.LettersToLearn.First(), StringComparison.InvariantCultureIgnoreCase)).ToList();
+            var correctOptions = Lesson.Options.Where(o => o.Letter.Equals(currentIteration.LettersToLearn.First(), StringComparison.InvariantCultureIgnoreCase)).ToList();
 			var correctOption = correctOptions.ElementAt(new Random().Next(0, correctOptions.Count() - 1));
 			correctOption.IsCorrect = true;
 			currentOptions.Add(correctOption);
 
 			// Choose three other false Options
 			var random = new Random();
-            var falseOptions = lesson.Options.Where(o => !o.Letter.Equals(currentIteration.LettersToLearn.First(), StringComparison.InvariantCultureIgnoreCase)).ToList();
+            var falseOptions = Lesson.Options.Where(o => !o.Letter.Equals(currentIteration.LettersToLearn.First(), StringComparison.InvariantCultureIgnoreCase)).ToList();
 			currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
 			currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
 			currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
@@ -82,11 +81,6 @@ namespace IRMGARD
             SoundPlayer.PlaySound(Activity.BaseContext, currentOptions.ElementAt(position).Media.SoundPath);           
             selectedPosition = position;
         }
-
-		void BtnCheck_Click(object sender, EventArgs e)
-		{
-            CheckSolution();
-		}
 
         public override void CheckSolution()
         {

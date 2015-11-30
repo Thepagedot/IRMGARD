@@ -23,7 +23,7 @@ namespace IRMGARD
 	[Activity (Label = "Lesson", ParentActivity = typeof(ModuleSelectActivity))]
     public class LessonFameActivity : AppCompatActivity
 	{
-		private const string lessonFragmentTag = "current-lesson-fragment";
+		private const string lessonFragmentTag = "current-Lesson-fragment";
 
 		//IMenuItem hintButton;
         FloatingActionButton btnNext;
@@ -84,12 +84,12 @@ namespace IRMGARD
             // Lesson specifics
             // ----------------------------------------------------------------------
 
-            // Set the name of the current lesson as page title
+            // Set the name of the current Lesson as page title
             Title = lesson.Title;
 
             // Hide hint button, if no hint is available
             //if (hintButton != null)
-            //hintButton.SetVisible(!string.IsNullOrEmpty(lesson.Hint));
+            //hintButton.SetVisible(!string.IsNullOrEmpty(Lesson.Hint));
 
             // Progress
             progressList.Clear();
@@ -99,7 +99,7 @@ namespace IRMGARD
             rvProgress.GetAdapter().NotifyDataSetChanged();
 
             // ----------------------------------------------------------------------
-            // Load lesson fragment
+            // Load Lesson fragment
             // ----------------------------------------------------------------------
 
             // Create an instance of the fragment according to the current type of level
@@ -119,7 +119,7 @@ namespace IRMGARD
             }
             else
             {
-                // Fragment for this type of lesson could not be loaded. Remove old fragment
+                // Fragment for this type of Lesson could not be loaded. Remove old fragment
                 var oldFragment = FragmentManager.FindFragmentByTag(lessonFragmentTag);
                 if (oldFragment != null)
                 {
@@ -150,7 +150,7 @@ namespace IRMGARD
         }
 
         /// <summary>
-        /// Handles the lesson fragement's iteration finished event
+        /// Handles the Lesson fragement's iteration finished event
         /// </summary>
         /// <param name="sender">Sender.</param>
         /// <param name="e">E.</param>
@@ -177,7 +177,7 @@ namespace IRMGARD
         }
 
 		/// <summary>
-		/// Handles the lesson fragment's lesson finished event
+		/// Handles the Lesson fragment's Lesson finished event
 		/// </summary>
 		/// <param name="sender">sender.</param>
 		/// <param name="e">event args.</param>
@@ -192,10 +192,10 @@ namespace IRMGARD
 		}
 
 		/// <summary>
-		/// Returns a new instance of the fragment type according to the type of lesson
+		/// Returns a new instance of the fragment type according to the type of Lesson
 		/// </summary>
-		/// <returns>The fragment for the lesson.</returns>
-		/// <param name="lesson">current lesson.</param>
+		/// <returns>The fragment for the Lesson.</returns>
+		/// <param name="lesson">current Lesson.</param>
 		private LessonFragment CreateFragmentForLesson(Lesson lesson)
 		{
 			if (lesson is HearMe)
@@ -278,7 +278,7 @@ namespace IRMGARD
 		#endregion
 
 		/// <summary>
-		/// Switches to the next lesson if available
+		/// Switches to the next Lesson if available
 		/// </summary>
 		private void NextLesson()
 		{
@@ -301,7 +301,7 @@ namespace IRMGARD
 		}
 
 		/// <summary>
-		/// Swtiches to the previous lesson if available.
+		/// Swtiches to the previous Lesson if available.
 		/// </summary>
 		private void PreviousLesson()
 		{

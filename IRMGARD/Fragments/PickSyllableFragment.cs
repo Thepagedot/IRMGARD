@@ -27,10 +27,6 @@ namespace IRMGARD
 
         public PickSyllableFragment(Lesson lesson) : base(lesson) {}
 
-        public override void OnCreate (Bundle savedInstanceState)
-        {
-            base.OnCreate (savedInstanceState);
-        }
 
         public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -59,13 +55,13 @@ namespace IRMGARD
             currentOptions = new List<PickSyllableOption>();
 
             // Choose a random correct option
-            var correctOptions = lesson.Options.Where(o => o.Letter.Equals(currentIteration.SyllableParts.ElementAt(1), StringComparison.InvariantCultureIgnoreCase));
+            var correctOptions = Lesson.Options.Where(o => o.Letter.Equals(currentIteration.SyllableParts.ElementAt(1), StringComparison.InvariantCultureIgnoreCase));
             var correctOption = correctOptions.ElementAt(new Random().Next(0, correctOptions.Count() - 1));
             correctOption.IsCorrect = true;
             currentOptions.Add(correctOption);
 
             // Choose three other false Options
-            var falseOptions = lesson.Options.Where(o => !o.Letter.Equals(currentIteration.SyllableParts.ElementAt(1), StringComparison.InvariantCultureIgnoreCase)).ToList();
+            var falseOptions = Lesson.Options.Where(o => !o.Letter.Equals(currentIteration.SyllableParts.ElementAt(1), StringComparison.InvariantCultureIgnoreCase)).ToList();
 
             falseOptions.Shuffle();
             currentOptions.AddRange(falseOptions.Take(3));
@@ -140,19 +136,8 @@ namespace IRMGARD
                     break;
                 case DragAction.Started:
                     e.Handled = true;
-                    break;                
-                    // Dragged element enters the drop zone
-                case DragAction.Entered:                   
-                    //textViewDragZone.Text = "Drop it like it's hot!";
                     break;
-                    // Dragged element exits the drop zone
-                case DragAction.Exited:                   
-                    //textViewDragZone.Text = "Drop something here!";
-                    break;
-                    // Dragged element has been dropped at the drop zone
                 case DragAction.Drop:
-                    // You can check if element may be dropped here
-                    // If not do not set e.Handled to true
                     e.Handled = true;
 
                     // Try to get clip data

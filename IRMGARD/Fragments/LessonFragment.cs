@@ -22,7 +22,7 @@ namespace IRMGARD
         public delegate void IterationChangedEventHandler(object sender, IterationChangedEventArgs e);
 
         /// <summary>
-        /// Occurs when a lesson has finished all its iterations
+        /// Occurs when a Lesson has finished all its iterations
         /// </summary>
         public event LessonFinishedEventHandler LessonFinished;
         public delegate void LessonFinishedEventHandler(object sender, EventArgs e);
@@ -56,48 +56,40 @@ namespace IRMGARD
             if (UserInteracted != null)
                 UserInteracted(this, new UserInteractedEventArgs(true));
         }
-            
-        public abstract void CheckSolution();
     }
 
-    public abstract class LessonFragment<T> : LessonFragment
+    public abstract class LessonFragment<T> : LessonFragment where T : Lesson
     {
-        protected T lesson;
+        protected T Lesson;
         private int currentIterationIndex;
 
         protected LessonFragment(Lesson lesson)
         {
             this.currentIterationIndex = 0;
-
-            // Convert lesson to the according sub type
-            var obj = (object)lesson;
-            this.lesson = (T)obj;
-            if (lesson == null)
-                throw new NotSupportedException("Wrong lesson type.");
+            this.Lesson = (T)lesson;
         }
 
         /// <summary>
         /// Gets the current iteration.
         /// </summary>
         /// <returns>The current iteration.</returns>
-        /// <typeparam name="U">The type of iteration you are expecting.</typeparam>
-        protected U GetCurrentIteration<U>()
+        /// <typeparam name="TIteration">The type of iteration you are expecting.</typeparam>
+        protected TIteration GetCurrentIteration<TIteration>() where TIteration : Iteration
         {
-            var obj = (object)((lesson as Lesson).Iterations.ElementAt(currentIterationIndex));
-            return (U)obj;
+            return (TIteration)Lesson.Iterations.ElementAt(currentIterationIndex);
         }
 
         /// <summary>
-        /// Finishes the iteration and initiates the next one when available or finishes the lesson.
+        /// Finishes the iteration and initiates the next one when available or finishes the Lesson.
         /// </summary>
         protected void FinishIteration(bool success)
         {
-            var iteration = (lesson as Lesson).Iterations.ElementAt(currentIterationIndex);
+            var iteration = Lesson.Iterations.ElementAt(currentIterationIndex);
             FireIterationFinished(iteration, success);
 
-            if (currentIterationIndex == (lesson as Lesson).Iterations.Count - 1)
+            if (currentIterationIndex == Lesson.Iterations.Count - 1)
             {
-                // All iterations done. Finish lesson
+                // All iterations done. Finish Lesson
                 FireLessonFinished();
             }
             else
@@ -113,13 +105,14 @@ namespace IRMGARD
         protected virtual void InitIteration()
         {
             // Fire iteration changed event
-            FireIterationChanged((lesson as Lesson).Iterations.ElementAt(currentIterationIndex));
+            FireIterationChanged(Lesson.Iterations.ElementAt(currentIterationIndex));
         }
 
         /// <summary>
         /// Checks if the current iteration's entries are correct
         /// </summary>
-        public override abstract void CheckSolution();
+        public abstract void CheckSolution();
+
     }
 
     public class IterationChangedEventArgs : EventArgs

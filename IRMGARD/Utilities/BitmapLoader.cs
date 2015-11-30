@@ -20,7 +20,7 @@ namespace IRMGARD
     /// (imgInx in <see cref="LoadBitmap"/>) as the bitmap before.
     ///
     /// To finally release the allocated memory use <see cref="ReleaseCache"/>.
-    /// The best time to release allocated bitmap memory is at the end of each lesson if the subsequent lesson
+    /// The best time to release allocated bitmap memory is at the end of each Lesson if the subsequent Lesson
     /// is using a smaller amount of bitmaps per iteration than the previous one.
     /// </summary>
     public sealed class BitmapLoader

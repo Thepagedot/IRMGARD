@@ -43,7 +43,7 @@ namespace IRMGARD
 			// Set selected level as current
 			DataHolder.Current.CurrentLevel = DataHolder.Current.Levels.ElementAt(e.Position);
 
-			// Navigate to lesson view
+			// Navigate to Lesson view
             var intent = new Intent(this, typeof(LevelSponsorActivity));
 			StartActivity(intent);
 		}

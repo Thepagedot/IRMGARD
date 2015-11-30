@@ -167,16 +167,6 @@ namespace IRMGARD
                 case DragAction.Started:
                     e.Handled = true;
                     break;           
-
-                    // Dragged element enters the drop zone
-                case DragAction.Entered:
-                    break;
-
-                    // Dragged element exits the drop zone
-                case DragAction.Exited:                                       
-                    break;
-
-                    // Dragged element has been dropped at the drop zone
                 case DragAction.Drop:
                     e.Handled = true;
 
@@ -223,11 +213,6 @@ namespace IRMGARD
 
                     break;
             }
-        }        
-
-        void BtnCheck_Click (object sender, EventArgs e)
-        {
-            CheckSolution();
         }
 
         public override void CheckSolution()

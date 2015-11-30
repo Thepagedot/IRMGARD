@@ -98,14 +98,8 @@ namespace IRMGARD
             var evt = e.Event;
             switch (evt.Action)
             {
-                case DragAction.Ended:                    
-                    break;
                 case DragAction.Started:
                     e.Handled = true;
-                    break;
-                case DragAction.Entered:
-                    break;
-                case DragAction.Exited:
                     break;
                 case DragAction.Drop:
                     e.Handled = true;
@@ -131,11 +125,6 @@ namespace IRMGARD
                     break;
             }
         }            
-
-        void BtnCheck_Click(object sender, EventArgs e)
-        {
-            CheckSolution();
-        }
 
         public override void CheckSolution()
         {            
