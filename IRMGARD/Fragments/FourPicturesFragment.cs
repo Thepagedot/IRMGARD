@@ -86,6 +86,9 @@ namespace IRMGARD
 			// Randomize list
 			currentOptions.Shuffle();
 
+            foreach (var card in cards)
+                card.SetCardBackgroundColor(Color.White);
+
             // Fill view
             ivImage1.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(0, Activity, currentOptions[0].Media.ImagePath));
             ivImage2.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(1, Activity, currentOptions[1].Media.ImagePath));
@@ -98,9 +101,11 @@ namespace IRMGARD
         private void Image_Click (object sender, EventArgs e, int position)
         {
             selectedPosition = position;
+
             foreach (var card in cards)
                 card.SetCardBackgroundColor(Color.White);
-            cards[selectedPosition].SetCardBackgroundColor(); // Color resource
+            
+            cards[position].SetCardBackgroundColor(Resources.GetColor(Resource.Color.selected_background));
 
             SoundPlayer.PlaySound(Activity.BaseContext, currentOptions.ElementAt(position).Media.SoundPath);           
 
