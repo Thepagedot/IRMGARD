@@ -4,6 +4,7 @@ using System.Linq;
 
 using Android.App;
 using IRMGARD.Models;
+using Android.Provider;
 
 namespace IRMGARD
 {	
@@ -97,6 +98,8 @@ namespace IRMGARD
         protected void FinishIteration(bool success)
         {
             var iteration = (lesson as Lesson).Iterations.ElementAt(currentIterationIndex);
+            iteration.Status = success ? IterationStatus.Success : IterationStatus.Failed;
+
             FireIterationFinished(iteration, success);
 
             if (currentIterationIndex == (lesson as Lesson).Iterations.Count - 1)

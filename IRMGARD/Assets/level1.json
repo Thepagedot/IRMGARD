@@ -3,9 +3,10 @@
   "Name": "Level 1",
   "Color": "#DEB803",
   "IsEnabled": true,
+  "IsCompleted": false,
   "Modules": [
     {
-      "Name": "Module 1",
+      "Name": "1",
       "Color": "#DDD6BF",
       "VideoPath": "Videos/Handy_Modul_1_720p.mp4",
       "NumberOfLessonsDone": 0,
@@ -14,6 +15,7 @@
           "$type": "IRMGARD.Models.HearMe, IRMGARD",
           "Id": 111,
           "Title": "AEIOU",
+           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 1.mp3",
           "Hint": "Lesson 1 Hint",
           "TypeOfLevel": "HearMe",
@@ -79,6 +81,7 @@
           "$type": "IRMGARD.Models.FourPictures, IRMGARD",
           "Id": 112,
           "Title": "AEIOU",
+          "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 2.mp3",
           "Hint": "Lesson 2 Hint",
           "TypeOfLevel": "FourPictures",
@@ -226,6 +229,7 @@
           "$type": "IRMGARD.Models.LetterDrop, IRMGARD",
           "Id": 113,
           "Title": "A oder a?",
+          "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 3.mp3",
           "Hint": "Lesson 3 Hint",
           "TypeOfLevel": "LetterDrop",
@@ -246,6 +250,7 @@
           "$type": "IRMGARD.Models.FindMissingLetter, IRMGARD",
           "Id": 115,
           "Title": "A?IOU",
+          "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 4.mp3",
           "Hint": "Lesson 4 Hint",
           "TypeOfLevel": "FindMissingLetter",
@@ -308,7 +313,7 @@
       ]
     },
     {
-      "Name": "Module 2",
+      "Name": "2",
       "Color": "#AFC3C4",
       "VideoPath": null,
       "NumberOfLessonsDone": 0,
@@ -317,6 +322,7 @@
           "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
           "Id": 121,
           "Title": "AEIOU",
+          "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 6.mp3",
           "Hint": "Lesson 6 Hint",
           "TypeOfLevel": "PickSyllable",
@@ -367,6 +373,7 @@
           "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",
           "Id": 112,
           "Title": "Silben lesen und schreiben",
+          "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 8.mp3",
           "Hint": "Lesson 8 Hint",
           "TypeOfLevel": "BuildSyllable",
@@ -406,6 +413,7 @@
           "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",
           "Id": 112,
           "Title": "Silben lesen und schreiben",
+          "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 9.mp3",
           "Hint": "Lesson 9 Hint",
           "TypeOfLevel": "BuildSyllable",
@@ -467,28 +475,28 @@
       ]
     },
     {
-      "Name": "Module 3",
+      "Name": "3",
       "Color": "#d8cbd1",
       "VideoPath": null,
       "NumberOfLessonsDone": 0,
       "Lessons": []
     },
     {
-      "Name": "Module 4",
+      "Name": "4",
       "Color": "#c1cbac",
       "VideoPath": null,
       "NumberOfLessonsDone": 0,
       "Lessons": []
     },
     {
-      "Name": "Module 5",
+      "Name": "5",
       "Color": "#dcd08f",
       "VideoPath": null,
       "NumberOfLessonsDone": 0,
       "Lessons": []
     },
     {
-      "Name": "Module 6",
+      "Name": "6",
       "Color": "#e5c8c4",
       "VideoPath": null,
       "NumberOfLessonsDone": 0,

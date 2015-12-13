@@ -94,7 +94,7 @@ namespace IRMGARD
             // Progress
             progressList.Clear();
             for (var i = 0; i < lesson.Iterations.Count; i++)
-                progressList.Add(new Progress(ProgressStatus.Pending));
+                progressList.Add(new Progress(lesson.Iterations[i].Status)); // Set iteration's status to the same as progess's staus
             progressList[0].IsCurrent = true;
 
             rvProgress.GetAdapter().NotifyDataSetChanged();
@@ -168,7 +168,7 @@ namespace IRMGARD
         {
             // Update status
             var iterationIndex = DataHolder.Current.CurrentLesson.Iterations.IndexOf(e.Iteration);
-            progressList.ElementAt(iterationIndex).Status = e.Success ? ProgressStatus.Success : ProgressStatus.Failed;
+            progressList.ElementAt(iterationIndex).Status = e.Success ? IterationStatus.Success : IterationStatus.Failed;
             progressList.ElementAt(iterationIndex).IsCurrent = false;
             rvProgress.GetAdapter().NotifyItemChanged(iterationIndex);
 

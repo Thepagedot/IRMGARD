@@ -1888,8 +1888,8 @@ namespace IRMGARD
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080097
-			public const int action0 = 2131230871;
+			// aapt resource value: 0x7f080099
+			public const int action0 = 2131230873;
 			
 			// aapt resource value: 0x7f080058
 			public const int action_bar = 2131230808;
@@ -1915,8 +1915,8 @@ namespace IRMGARD
 			// aapt resource value: 0x7f080059
 			public const int action_context_bar = 2131230809;
 			
-			// aapt resource value: 0x7f08009b
-			public const int action_divider = 2131230875;
+			// aapt resource value: 0x7f08009d
+			public const int action_divider = 2131230877;
 			
 			// aapt resource value: 0x7f080004
 			public const int action_menu_divider = 2131230724;
@@ -1954,35 +1954,35 @@ namespace IRMGARD
 			// aapt resource value: 0x7f080089
 			public const int btnNext = 2131230857;
 			
-			// aapt resource value: 0x7f0800ad
-			public const int btnNextLesson = 2131230893;
-			
 			// aapt resource value: 0x7f0800af
-			public const int btnNextModule = 2131230895;
-			
-			// aapt resource value: 0x7f0800ae
-			public const int btnPreviousLesson = 2131230894;
-			
-			// aapt resource value: 0x7f0800b0
-			public const int btnPreviousModule = 2131230896;
-			
-			// aapt resource value: 0x7f0800ab
-			public const int btnRepeat = 2131230891;
+			public const int btnNextLesson = 2131230895;
 			
 			// aapt resource value: 0x7f0800b1
-			public const int btnReplay = 2131230897;
+			public const int btnNextModule = 2131230897;
+			
+			// aapt resource value: 0x7f0800b0
+			public const int btnPreviousLesson = 2131230896;
+			
+			// aapt resource value: 0x7f0800b2
+			public const int btnPreviousModule = 2131230898;
+			
+			// aapt resource value: 0x7f0800ad
+			public const int btnRepeat = 2131230893;
+			
+			// aapt resource value: 0x7f0800b3
+			public const int btnReplay = 2131230899;
 			
 			// aapt resource value: 0x7f080095
 			public const int btnStart = 2131230869;
 			
-			// aapt resource value: 0x7f0800ac
-			public const int btnVoiceInstruction = 2131230892;
+			// aapt resource value: 0x7f0800ae
+			public const int btnVoiceInstruction = 2131230894;
 			
 			// aapt resource value: 0x7f08004e
 			public const int buttonPanel = 2131230798;
 			
-			// aapt resource value: 0x7f080098
-			public const int cancel_action = 2131230872;
+			// aapt resource value: 0x7f08009a
+			public const int cancel_action = 2131230874;
 			
 			// aapt resource value: 0x7f080075
 			public const int card1 = 2131230837;
@@ -2011,8 +2011,8 @@ namespace IRMGARD
 			// aapt resource value: 0x7f080050
 			public const int checkbox = 2131230800;
 			
-			// aapt resource value: 0x7f08009e
-			public const int chronometer = 2131230878;
+			// aapt resource value: 0x7f0800a0
+			public const int chronometer = 2131230880;
 			
 			// aapt resource value: 0x7f08001c
 			public const int clip_horizontal = 2131230748;
@@ -2050,8 +2050,8 @@ namespace IRMGARD
 			// aapt resource value: 0x7f080016
 			public const int end = 2131230742;
 			
-			// aapt resource value: 0x7f0800a3
-			public const int end_padder = 2131230883;
+			// aapt resource value: 0x7f0800a5
+			public const int end_padder = 2131230885;
 			
 			// aapt resource value: 0x7f08000b
 			public const int enterAlways = 2131230731;
@@ -2122,8 +2122,8 @@ namespace IRMGARD
 			// aapt resource value: 0x7f08006d
 			public const int imageView1 = 2131230829;
 			
-			// aapt resource value: 0x7f0800a2
-			public const int info = 2131230882;
+			// aapt resource value: 0x7f0800a4
+			public const int info = 2131230884;
 			
 			// aapt resource value: 0x7f080000
 			public const int item_touch_helper_previous_elevation = 2131230720;
@@ -2140,20 +2140,20 @@ namespace IRMGARD
 			// aapt resource value: 0x7f08007d
 			public const int ivImage4 = 2131230845;
 			
-			// aapt resource value: 0x7f0800a8
-			public const int ivIndicator = 2131230888;
+			// aapt resource value: 0x7f0800aa
+			public const int ivIndicator = 2131230890;
 			
 			// aapt resource value: 0x7f08006f
 			public const int ivMeidaElementImage = 2131230831;
 			
-			// aapt resource value: 0x7f0800a5
-			public const int ivPickSyllableDropZone = 2131230885;
+			// aapt resource value: 0x7f0800a7
+			public const int ivPickSyllableDropZone = 2131230887;
 			
 			// aapt resource value: 0x7f080092
 			public const int ivSponsors = 2131230866;
 			
-			// aapt resource value: 0x7f0800a7
-			public const int ivStatus = 2131230887;
+			// aapt resource value: 0x7f0800a9
+			public const int ivStatus = 2131230889;
 			
 			// aapt resource value: 0x7f080088
 			public const int ivSuccess = 2131230856;
@@ -2167,11 +2167,11 @@ namespace IRMGARD
 			// aapt resource value: 0x7f080091
 			public const int levelSponsorLayout = 2131230865;
 			
-			// aapt resource value: 0x7f08009c
-			public const int line1 = 2131230876;
+			// aapt resource value: 0x7f08009e
+			public const int line1 = 2131230878;
 			
-			// aapt resource value: 0x7f0800a0
-			public const int line3 = 2131230880;
+			// aapt resource value: 0x7f0800a2
+			public const int line3 = 2131230882;
 			
 			// aapt resource value: 0x7f080073
 			public const int linearLayout1 = 2131230835;
@@ -2197,6 +2197,9 @@ namespace IRMGARD
 			// aapt resource value: 0x7f08008e
 			public const int llLayout = 2131230862;
 			
+			// aapt resource value: 0x7f080097
+			public const int llLessons = 2131230871;
+			
 			// aapt resource value: 0x7f08006c
 			public const int llSoundItems = 2131230828;
 			
@@ -2209,14 +2212,14 @@ namespace IRMGARD
 			// aapt resource value: 0x7f080090
 			public const int lvLevels = 2131230864;
 			
-			// aapt resource value: 0x7f080096
-			public const int lvModules = 2131230870;
+			// aapt resource value: 0x7f080098
+			public const int lvModules = 2131230872;
 			
 			// aapt resource value: 0x7f080094
 			public const int mainLayout = 2131230868;
 			
-			// aapt resource value: 0x7f08009a
-			public const int media_actions = 2131230874;
+			// aapt resource value: 0x7f08009c
+			public const int media_actions = 2131230876;
 			
 			// aapt resource value: 0x7f080032
 			public const int middle = 2131230770;
@@ -2242,8 +2245,8 @@ namespace IRMGARD
 			// aapt resource value: 0x7f080045
 			public const int parentPanel = 2131230789;
 			
-			// aapt resource value: 0x7f0800a6
-			public const int pickSyllableTaskItems = 2131230886;
+			// aapt resource value: 0x7f0800a8
+			public const int pickSyllableTaskItems = 2131230888;
 			
 			// aapt resource value: 0x7f080011
 			public const int pin = 2131230737;
@@ -2257,8 +2260,8 @@ namespace IRMGARD
 			// aapt resource value: 0x7f080052
 			public const int radio = 2131230802;
 			
-			// aapt resource value: 0x7f0800a9
-			public const int relativeLayout = 2131230889;
+			// aapt resource value: 0x7f0800ab
+			public const int relativeLayout = 2131230891;
 			
 			// aapt resource value: 0x7f080019
 			public const int right = 2131230745;
@@ -2347,8 +2350,8 @@ namespace IRMGARD
 			// aapt resource value: 0x7f08001a
 			public const int start = 2131230746;
 			
-			// aapt resource value: 0x7f080099
-			public const int status_bar_latest_event_content = 2131230873;
+			// aapt resource value: 0x7f08009b
+			public const int status_bar_latest_event_content = 2131230875;
 			
 			// aapt resource value: 0x7f080063
 			public const int submit_area = 2131230819;
@@ -2356,17 +2359,17 @@ namespace IRMGARD
 			// aapt resource value: 0x7f080025
 			public const int tabMode = 2131230757;
 			
-			// aapt resource value: 0x7f0800a1
-			public const int text = 2131230881;
+			// aapt resource value: 0x7f0800a3
+			public const int text = 2131230883;
 			
-			// aapt resource value: 0x7f08009f
-			public const int text2 = 2131230879;
+			// aapt resource value: 0x7f0800a1
+			public const int text2 = 2131230881;
 			
 			// aapt resource value: 0x7f08004b
 			public const int textSpacerNoButtons = 2131230795;
 			
-			// aapt resource value: 0x7f08009d
-			public const int time = 2131230877;
+			// aapt resource value: 0x7f08009f
+			public const int time = 2131230879;
 			
 			// aapt resource value: 0x7f080044
 			public const int title = 2131230788;
@@ -2389,8 +2392,11 @@ namespace IRMGARD
 			// aapt resource value: 0x7f08007e
 			public const int tvLetter = 2131230846;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int tvPickSyllable = 2131230884;
+			// aapt resource value: 0x7f080096
+			public const int tvName = 2131230870;
+			
+			// aapt resource value: 0x7f0800a6
+			public const int tvPickSyllable = 2131230886;
 			
 			// aapt resource value: 0x7f08008a
 			public const int txtCapitalAlphabet = 2131230858;
@@ -2410,8 +2416,8 @@ namespace IRMGARD
 			// aapt resource value: 0x7f08003a
 			public const int vertical = 2131230778;
 			
-			// aapt resource value: 0x7f0800aa
-			public const int videoView = 2131230890;
+			// aapt resource value: 0x7f0800ac
+			public const int videoView = 2131230892;
 			
 			// aapt resource value: 0x7f080001
 			public const int view_offset_helper = 2131230721;
@@ -2611,58 +2617,61 @@ namespace IRMGARD
 			public const int MediaElement = 2130903087;
 			
 			// aapt resource value: 0x7f030030
-			public const int ModuleSelect = 2130903088;
+			public const int ModuleItem = 2130903088;
 			
 			// aapt resource value: 0x7f030031
-			public const int notification_media_action = 2130903089;
+			public const int ModuleSelect = 2130903089;
 			
 			// aapt resource value: 0x7f030032
-			public const int notification_media_cancel_action = 2130903090;
+			public const int notification_media_action = 2130903090;
 			
 			// aapt resource value: 0x7f030033
-			public const int notification_template_big_media = 2130903091;
+			public const int notification_media_cancel_action = 2130903091;
 			
 			// aapt resource value: 0x7f030034
-			public const int notification_template_big_media_narrow = 2130903092;
+			public const int notification_template_big_media = 2130903092;
 			
 			// aapt resource value: 0x7f030035
-			public const int notification_template_lines = 2130903093;
+			public const int notification_template_big_media_narrow = 2130903093;
 			
 			// aapt resource value: 0x7f030036
-			public const int notification_template_media = 2130903094;
+			public const int notification_template_lines = 2130903094;
 			
 			// aapt resource value: 0x7f030037
-			public const int notification_template_part_chronometer = 2130903095;
+			public const int notification_template_media = 2130903095;
 			
 			// aapt resource value: 0x7f030038
-			public const int notification_template_part_time = 2130903096;
+			public const int notification_template_part_chronometer = 2130903096;
 			
 			// aapt resource value: 0x7f030039
-			public const int PickSyllable = 2130903097;
+			public const int notification_template_part_time = 2130903097;
 			
 			// aapt resource value: 0x7f03003a
-			public const int ProgressItem = 2130903098;
+			public const int PickSyllable = 2130903098;
 			
 			// aapt resource value: 0x7f03003b
-			public const int select_dialog_item_material = 2130903099;
+			public const int ProgressItem = 2130903099;
 			
 			// aapt resource value: 0x7f03003c
-			public const int select_dialog_multichoice_material = 2130903100;
+			public const int select_dialog_item_material = 2130903100;
 			
 			// aapt resource value: 0x7f03003d
-			public const int select_dialog_singlechoice_material = 2130903101;
+			public const int select_dialog_multichoice_material = 2130903101;
 			
 			// aapt resource value: 0x7f03003e
-			public const int support_simple_spinner_dropdown_item = 2130903102;
+			public const int select_dialog_singlechoice_material = 2130903102;
 			
 			// aapt resource value: 0x7f03003f
-			public const int TaskItem = 2130903103;
+			public const int support_simple_spinner_dropdown_item = 2130903103;
 			
 			// aapt resource value: 0x7f030040
-			public const int Toolbar = 2130903104;
+			public const int TaskItem = 2130903104;
 			
 			// aapt resource value: 0x7f030041
-			public const int Video = 2130903105;
+			public const int Toolbar = 2130903105;
+			
+			// aapt resource value: 0x7f030042
+			public const int Video = 2130903106;
 			
 			static Layout()
 			{

@@ -407,6 +407,7 @@
     <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_drop_up_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow_drop_up_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_arrow_drop_up_black_24dp.png" />
+    <AndroidResource Include="Resources\layout\ModuleItem.axml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace IRMGARD.Models
 {
@@ -12,6 +13,11 @@ namespace IRMGARD.Models
 		public string Hint { get; set; }
 		public LevelType TypeOfLevel { get; set; }
 		public List<Iteration> Iterations { get; set; }
+
+        public bool IsCompleted 
+        {
+            get { return Iterations.All(i => i.Status == IterationStatus.Success); }
+        }
 
 	    protected Lesson () {}
 
