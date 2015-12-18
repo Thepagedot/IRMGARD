@@ -31,7 +31,7 @@ namespace IRMGARD
         /// Occurs when a user interacted with the fragment
         /// </summary>
         public event UserInteractedEventHandler UserInteracted;
-        public delegate void UserInteractedEventHandler(object sender, UserInteractedEventArgs e);
+        public delegate void UserInteractedEventHandler(object sender, UserInteractedEventArgs e);      
 
         protected void FireIterationFinished(Iteration iteration, bool success)
         {
@@ -40,7 +40,7 @@ namespace IRMGARD
         }
 
         protected void FireIterationChanged(Iteration iteration)
-        {
+        {            
             if (IterationChanged != null)
                 IterationChanged(this, new IterationChangedEventArgs(iteration));
         }
@@ -51,10 +51,14 @@ namespace IRMGARD
                 LessonFinished(this, null);
         }
 
-        protected void FireUserInteracted()
+        /// <summary>
+        /// Fires the user interacted.
+        /// </summary>
+        /// <param name="isReady">Indicates if a lesson is ready to be ckeched.</param>
+        protected void FireUserInteracted(bool isReady)
         {
             if (UserInteracted != null)
-                UserInteracted(this, new UserInteractedEventArgs(true));
+                UserInteracted(this, new UserInteractedEventArgs(isReady));
         }
     }
 
@@ -139,11 +143,11 @@ namespace IRMGARD
 
     public class UserInteractedEventArgs : EventArgs
     {
-        public bool IsDirty { get; set; }
+        public bool IsReady { get; set; }
 
-        public UserInteractedEventArgs(bool isDirty) : base()
+        public UserInteractedEventArgs(bool isReady) : base()
         {
-            this.IsDirty = isDirty;
+            this.IsReady = isReady;
         }
     }
 }	

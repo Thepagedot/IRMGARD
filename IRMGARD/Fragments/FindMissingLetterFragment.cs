@@ -148,8 +148,6 @@ namespace IRMGARD
                     var data = e.Event.ClipData;
                     if (data != null)
                     {
-                        FireUserInteracted();
-
                         var taskItems = GetCurrentIteration<FindMissingLetterIteration>().TaskItems;
                         var draggedLetter = data.GetItemAt(0).Text;
                         var position = llTaskItems.IndexOfChild(sender as View);
@@ -160,6 +158,8 @@ namespace IRMGARD
                             taskItems[position].IsDirty = true;
                         }
 
+                        var isReady = taskItems.Count(t => t.IsSearched && !t.IsDirty) == 0;
+                        FireUserInteracted(isReady);
                         BuildTaskLetters(taskItems, fontCase);
                     }
                     break;

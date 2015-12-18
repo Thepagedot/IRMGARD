@@ -144,7 +144,7 @@ namespace IRMGARD
                     var data = e.Event.ClipData;
                     if (data != null)
                     {
-                        FireUserInteracted();
+                        FireUserInteracted(true);
 
                         selectedIndex = Convert.ToInt32(data.GetItemAt(0).Text);
                         var bitmap = BitmapFactory.DecodeResource(Activity.BaseContext.Resources, Resource.Drawable.ic_volume_up_black_24dp);

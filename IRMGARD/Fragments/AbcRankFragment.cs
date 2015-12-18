@@ -14,7 +14,6 @@ namespace IRMGARD
     {
         private FlowLayout flOptions;
         private LinearLayout llTaskItems;
-        private List<AbcRankOption> currentsolutionList;
 
         public AbcRankFragment(Lesson lesson) : base(lesson) {}
 
@@ -35,8 +34,6 @@ namespace IRMGARD
             base.InitIteration();
 
             var currentIteration = GetCurrentIteration<AbcRankIteration>();
-
-            currentsolutionList = new List<AbcRankOption>();
 
             // Genrate Task items
             currentIteration.TaskItems.Clear();
@@ -108,8 +105,6 @@ namespace IRMGARD
                     var data = e.Event.ClipData;
                     if (data != null)
                     {
-                        FireUserInteracted();
-
                         var taskLetters = GetCurrentIteration<AbcRankIteration>().TaskItems;
                         var position = llTaskItems.IndexOfChild(sender as View);
                         var draggedLetter = data.GetItemAt(0).Text;
@@ -119,6 +114,8 @@ namespace IRMGARD
                         taskLetters[position].Media = draggedItem.Media;
                         taskLetters[position].IsDirty = true;
 
+                        var isReady = taskLetters.All(l => l.IsDirty);
+                        FireUserInteracted(isReady);
                         BuildTaskElements(taskLetters);
                     }
 

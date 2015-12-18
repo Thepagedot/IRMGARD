@@ -95,6 +95,7 @@ namespace IRMGARD
             progressList.Clear();
             for (var i = 0; i < lesson.Iterations.Count; i++)
                 progressList.Add(new Progress(ProgressStatus.Pending));
+            progressList[0].IsCurrent = true;
 
             rvProgress.GetAdapter().NotifyDataSetChanged();
 
@@ -131,12 +132,21 @@ namespace IRMGARD
 
         private void CurrentFragment_UserInteracted (object sender, UserInteractedEventArgs e)
         {
-            btnNext.Enabled = true;
-            btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.ShowNextButton));
+            if (e.IsReady)
+            {
+                btnNext.Enabled = true;
+                btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.ShowNextButton));
+            }
 		}
 
         void Fragment_IterationChanged(object sender, IterationChangedEventArgs e)
         {
+            var iterationIndex = DataHolder.Current.CurrentLesson.Iterations.IndexOf(e.Iteration);
+
+            // Update progress
+            progressList.ElementAt(iterationIndex).IsCurrent = true;
+            rvProgress.GetAdapter().NotifyItemChanged(iterationIndex);
+
             // Disable check button
             btnNext.Enabled = false;
             btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.HideNextButton));
@@ -159,6 +169,7 @@ namespace IRMGARD
             // Update status
             var iterationIndex = DataHolder.Current.CurrentLesson.Iterations.IndexOf(e.Iteration);
             progressList.ElementAt(iterationIndex).Status = e.Success ? ProgressStatus.Success : ProgressStatus.Failed;
+            progressList.ElementAt(iterationIndex).IsCurrent = false;
             rvProgress.GetAdapter().NotifyItemChanged(iterationIndex);
 
             // Show success animation

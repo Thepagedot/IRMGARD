@@ -8,6 +8,7 @@ using Android.Views;
 using Android.Widget;
 using IRMGARD.Models;
 using IRMGARD.Shared;
+using Org.Apache.Http.Cookies;
 
 namespace IRMGARD
 {	
@@ -36,7 +37,7 @@ namespace IRMGARD
             ivImage1.Click += (sender, e) => Image_Click(sender, e, 0);
             ivImage2.Click += (sender, e) => Image_Click(sender, e, 1);
             ivImage3.Click += (sender, e) => Image_Click(sender, e, 2);
-            ivImage4.Click += (sender, e) => Image_Click(sender, e, 3);			
+            ivImage4.Click += (sender, e) => Image_Click(sender, e, 3);
 
             // Initialize iteration
 			InitIteration();
@@ -58,7 +59,13 @@ namespace IRMGARD
 
 			// Choose three other false Options
 			var random = new Random();
-            var falseOptions = Lesson.Options.Where(o => !o.Letter.Equals(currentIteration.LettersToLearn.First(), StringComparison.InvariantCultureIgnoreCase)).ToList();
+            var falseOptions = 
+                lesson.Options.Where(o => 
+                    !o.Letter.Equals(currentIteration.LettersToLearn.First(), StringComparison.InvariantCultureIgnoreCase) &&
+                    !o.Letter.Equals(correctOption.Letter, StringComparison.InvariantCultureIgnoreCase)).ToList();
+            foreach (var option in falseOptions)
+                option.IsCorrect = false;
+
 			currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
 			currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
 			currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
@@ -77,7 +84,7 @@ namespace IRMGARD
 
         private void Image_Click (object sender, EventArgs e, int position)
         {
-            FireUserInteracted();
+            FireUserInteracted(true);
             SoundPlayer.PlaySound(Activity.BaseContext, currentOptions.ElementAt(position).Media.SoundPath);           
             selectedPosition = position;
         }

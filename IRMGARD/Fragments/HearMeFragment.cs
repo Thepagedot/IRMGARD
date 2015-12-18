@@ -66,7 +66,7 @@ namespace IRMGARD
 
         void PlayImageSound(object sender, EventArgs e)
         {
-            FireUserInteracted();
+            FireUserInteracted(true);
             SoundPlayer.PlaySound(Activity.BaseContext, GetCurrentIteration<HearMeIteration>().Media.SoundPath);
         }
 
