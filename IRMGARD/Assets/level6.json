@@ -2,5 +2,6 @@
   "Name": "Level 6",
   "Color": "#b79da7",
   "IsEnabled": false,
+  "IsCompleted": false,
   "Modules": []
 }

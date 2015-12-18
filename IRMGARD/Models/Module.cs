@@ -13,6 +13,11 @@ namespace IRMGARD.Models
 		public List<Lesson> Lessons;
 		public int NumberOfLessonsDone;
 
+        public bool IsCompleted
+        {
+            get { return Lessons.Count > 0 && Lessons.All(l => l.IsCompleted); }
+        }
+
 		public Module () {}
 
 		public Module (string name, string color, string videoPath, List<Lesson> lessons, int numberOfLessonsDone)

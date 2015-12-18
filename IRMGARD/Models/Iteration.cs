@@ -6,6 +6,7 @@ namespace IRMGARD.Models
 	public class Iteration
 	{
 		public List<string> LettersToLearn;
+        public IterationStatus Status { get; set; }
 
 	    protected Iteration() {}
 
@@ -14,4 +15,11 @@ namespace IRMGARD.Models
 			this.LettersToLearn = lettersToLearn;
 		}
 	}
+
+    public enum IterationStatus
+    {
+        Pending,
+        Success,
+        Failed
+    }
 }

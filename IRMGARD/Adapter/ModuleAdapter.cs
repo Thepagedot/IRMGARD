@@ -33,17 +33,33 @@ namespace IRMGARD
 
 		public override Android.Views.View GetView (int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
 		{
-			var view = convertView ?? context.LayoutInflater.Inflate (Android.Resource.Layout.SimpleListItem2, null);
+            var view = convertView ?? context.LayoutInflater.Inflate (Resource.Layout.ModuleItem, null);
 
-            var text1 = view.FindViewById<TextView>(Android.Resource.Id.Text1);
-            text1.Text = items[position].Name.ToUpper();
+            // Set name
+            var tvName = view.FindViewById<TextView>(Resource.Id.tvName);
+            tvName.Text = items[position].Name.ToUpper();
             var font = Typeface.CreateFromAsset(context.Assets, "Fonts/Garaje_53_Uni_Black.otf");
-            text1.Typeface = font;
+            tvName.Typeface = font;
 
-			view.FindViewById<TextView> (Android.Resource.Id.Text2).Text = "This module has " + items[position].Lessons.Count + " lessons";
-			view.SetBackgroundColor(Android.Graphics.Color.ParseColor (items [position].Color));
-            if (!items[position].Lessons.Any())
+            // Set background color
+            view.SetBackgroundColor(Android.Graphics.Color.ParseColor (items [position].Color));
+
+            // Set lesson indicators
+            var llLessons = view.FindViewById<LinearLayout>(Resource.Id.llLessons);
+            llLessons.RemoveAllViews();
+            foreach (var lesson in items[position].Lessons)
+            {
+                var text = new TextView(context);
+                text.Text = lesson.IsCompleted.ToString();
+                llLessons.AddView(text);
+            }
+
+            // Reduce alpha when not available
+            if (!items[position].Lessons.Any() || (position > 0 && !items[position - 1].IsCompleted))
                 view.Alpha = (float)0.5;
+            else
+                view.Alpha = (float)1;
+            
 			return view;
 		}
 

@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Graphics.Drawables;
 using Android.Support.V7.Widget;
 using System.Linq;
+using IRMGARD.Models;
 
 namespace IRMGARD
 {
@@ -61,13 +62,13 @@ namespace IRMGARD
 
             switch (progress.Status)
             {
-                case ProgressStatus.Success:
+                case IterationStatus.Success:
                     ImageViewStatus.SetImageResource(Resource.Drawable.ic_check_box_black_24dp);
                     break;
-                case ProgressStatus.Failed:
+                case IterationStatus.Failed:
                     ImageViewStatus.SetImageResource(Resource.Drawable.ic_indeterminate_check_box_black_24dp);
                     break;
-                case ProgressStatus.Pending:
+                case IterationStatus.Pending:
                     ImageViewStatus.SetImageResource(Resource.Drawable.ic_check_box_outline_blank_black_24dp);
                     break;
             }

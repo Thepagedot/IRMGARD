@@ -1,24 +1,18 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
+using IRMGARD.Models;
 
 namespace IRMGARD
 {
     public class Progress
     {
-        public ProgressStatus Status { get; set; }
+        public IterationStatus Status { get; set; }
         public bool IsCurrent { get; set; }
 
-        public Progress(ProgressStatus status)
+        public Progress(IterationStatus status)
         {
             Status = status;
             IsCurrent = false;
         }
-    }
-
-    public enum ProgressStatus
-    {
-        Pending,
-        Success,
-        Failed
     }
 }

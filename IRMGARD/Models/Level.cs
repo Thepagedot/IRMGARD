@@ -10,15 +10,17 @@ namespace IRMGARD.Models
 		public string Name { get; set; }
 		public string Color { get; set; }
         public bool IsEnabled { get; set; }
+        public bool IsCompleted { get; set; }
 		public List<Module> Modules { get; set; }
 
 		public Level () {}
 
-        public Level (string name, string color, bool isEnabled, List<Module> modules)
+        public Level (string name, string color, bool isEnabled, bool isCompleted, List<Module> modules)
 		{
 			this.Name = name;
 			this.Color = color;
             this.IsEnabled = isEnabled;
+            this.IsCompleted = isCompleted;
 			this.Modules = modules;
 		}
 
