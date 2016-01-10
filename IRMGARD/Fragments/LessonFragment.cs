@@ -61,6 +61,8 @@ namespace IRMGARD
             if (UserInteracted != null)
                 UserInteracted(this, new UserInteractedEventArgs(isReady));
         }
+
+        public abstract void CheckSolution();
     }
 
     public abstract class LessonFragment<T> : LessonFragment where T : Lesson
@@ -89,7 +91,7 @@ namespace IRMGARD
         /// </summary>
         protected void FinishIteration(bool success)
         {
-            var iteration = (lesson as Lesson).Iterations.ElementAt(currentIterationIndex);
+            var iteration = Lesson.Iterations.ElementAt(currentIterationIndex);
             iteration.Status = success ? IterationStatus.Success : IterationStatus.Failed;
 
             FireIterationFinished(iteration, success);
@@ -118,7 +120,7 @@ namespace IRMGARD
         /// <summary>
         /// Checks if the current iteration's entries are correct
         /// </summary>
-        public abstract void CheckSolution();
+        public override abstract void CheckSolution();
 
     }
 

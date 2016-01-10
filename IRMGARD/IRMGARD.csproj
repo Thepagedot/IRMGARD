@@ -408,6 +408,17 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow_drop_up_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_arrow_drop_up_black_24dp.png" />
     <AndroidResource Include="Resources\layout\ModuleItem.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_skip_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_skip_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_skip_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_skip_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_skip_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_skip_previous_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_skip_previous_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_skip_previous_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_skip_previous_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_skip_previous_white_24dp.png" />
+    <AndroidResource Include="Resources\layout\ModuleProgressItem.axml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">

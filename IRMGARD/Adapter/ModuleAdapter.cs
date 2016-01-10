@@ -49,9 +49,19 @@ namespace IRMGARD
             llLessons.RemoveAllViews();
             foreach (var lesson in items[position].Lessons)
             {
-                var text = new TextView(context);
-                text.Text = lesson.IsCompleted.ToString();
-                llLessons.AddView(text);
+                var indicator = context.LayoutInflater.Inflate(Resource.Layout.ModuleProgressItem, null);
+                if (lesson.IsCompleted)
+                {
+                    indicator.FindViewById<ImageView>(Resource.Id.ivChecked).Visibility = ViewStates.Visible;
+                    indicator.FindViewById<ImageView>(Resource.Id.ivUnchecked).Visibility = ViewStates.Gone;
+                }
+                else
+                {
+                    indicator.FindViewById<ImageView>(Resource.Id.ivChecked).Visibility = ViewStates.Gone;
+                    indicator.FindViewById<ImageView>(Resource.Id.ivUnchecked).Visibility = ViewStates.Visible;
+                }
+                    
+                llLessons.AddView(indicator);
             }
 
             // Reduce alpha when not available
