@@ -968,6 +968,13 @@
                 }
             },
             {
+                "Name": "Liege",
+                "Media": {
+                    "ImagePath": "liege.png",
+                    "SoundPath": "Objects/Liege.mp3"
+                }
+            },
+            {
                 "Name": "Lisa",
                 "Media": {
                     "ImagePath": "lisa.png",
