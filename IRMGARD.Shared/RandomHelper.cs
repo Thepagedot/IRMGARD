@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace IRMGARD.Shared
 {
@@ -20,5 +21,29 @@ namespace IRMGARD.Shared
 				list[n] = value;
 			}  
 		}
+
+        /// <summary>
+        /// Picks <paramref name="count"/> random items of this collection.
+        /// </summary>
+        /// <returns>
+        /// A collection of random items of this collection.
+        /// Using List instead of HashSet as the returned collection type,
+        /// results in less type conversion work later.
+        /// </returns>
+        /// <param name="count">The count of items returned</param>
+        public static IList<T> PickRandomItems<T>(this IList<T> src, int count)
+        {
+            List<int> idxItems = new List<int>(Enumerable.Range(0, src.Count));
+            var result = new List<T>();
+
+            for (var i = 0; i < count; i++)
+            {
+                int idx = Rand.Next(idxItems.Count);
+                result.Add(src[idxItems[idx]]);
+                idxItems.RemoveAt(idx);
+            }
+
+            return result;
+        }
 	}
 }

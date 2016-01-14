@@ -12,4 +12,6 @@
     <string name="lesson_finished_message">Herzlichen Glückwunsch, du bist fertig und hast die Aufgabe geschafft!</string>
     <string name="module_finished">Modul erledigt</string>
     <string name="module_finished_message">Super, du hast alle Aufgaben in diesem Modul erledigt!</string>
+    <string name="memory_too_many_cards_rev">Bitte nicht noch eine Karte aufdecken...</string>
+    <string name="memory_cards_match">Super! Kartenpaar gefunden!</string>
 </resources>

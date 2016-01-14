@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/flCardContainer"
+    android:layout_width="70dp"
+    android:layout_height="70dp">
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        cardview:cardCornerRadius="4dp"
+        cardview:cardUseCompatPadding="true"
+        cardview:cardPreventCornerOverlap="true"
+        cardview:contentPadding="4dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp">
+        <TextView
+            android:id="@+id/tvCardTextFront"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            style="@android:style/TextAppearance.Medium"
+            android:visibility="gone" />
+        <ImageView
+            android:id="@+id/ivCardPictureFront"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+        <ImageView
+            android:id="@+id/ivCardBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/icon" />
+    </android.support.v7.widget.CardView>
+</FrameLayout>
