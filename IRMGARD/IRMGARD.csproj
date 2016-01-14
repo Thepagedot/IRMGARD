@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -128,6 +128,8 @@
     <Compile Include="Models\Levels\LetterDrop.cs" />
     <Compile Include="Models\Levels\Memory.cs" />
     <Compile Include="Models\Levels\PickSyllable.cs" />
+    <Compile Include="Fragments\MemoryFragment.cs" />
+    <Compile Include="Adapter\Specific\MemoryAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\level4.json" />
@@ -160,7 +162,7 @@
     <AndroidAsset Include="Assets\Images\fahrrad.png" />
     <AndroidAsset Include="Assets\Images\fernrohr.png" />
     <AndroidAsset Include="Assets\Images\fisch.png" />
-    <AndroidAsset Include="Assets\Images\fotos.png" />
+    <AndroidAsset Include="Assets\Images\foto.png" />
     <AndroidAsset Include="Assets\Images\gabel.png" />
     <AndroidAsset Include="Assets\Images\gans.png" />
     <AndroidAsset Include="Assets\Images\giraffe.png" />
@@ -177,8 +179,9 @@
     <AndroidAsset Include="Assets\Images\insel.png" />
     <AndroidAsset Include="Assets\Images\jacke.png" />
     <AndroidAsset Include="Assets\Images\jade.png" />
+    <AndroidAsset Include="Assets\Images\jaguar.png" />
     <AndroidAsset Include="Assets\Images\jet.png" />
-    <AndroidAsset Include="Assets\Images\kacheln.png" />
+    <AndroidAsset Include="Assets\Images\kachel.png" />
     <AndroidAsset Include="Assets\Images\katze.png" />
     <AndroidAsset Include="Assets\Images\kilo.png" />
     <AndroidAsset Include="Assets\Images\kino.png" />
@@ -186,10 +189,8 @@
     <AndroidAsset Include="Assets\Images\kuchen.png" />
     <AndroidAsset Include="Assets\Images\lama.png" />
     <AndroidAsset Include="Assets\Images\lasso.png" />
-    <AndroidAsset Include="Assets\Images\liege.png" />
     <AndroidAsset Include="Assets\Images\lisa.png" />
     <AndroidAsset Include="Assets\Images\los.png" />
-    <AndroidAsset Include="Assets\Images\luchs.png" />
     <AndroidAsset Include="Assets\Images\lupe.png" />
     <AndroidAsset Include="Assets\Images\mama.png" />
     <AndroidAsset Include="Assets\Images\maus.png" />
@@ -209,16 +210,12 @@
     <AndroidAsset Include="Assets\Images\papa.png" />
     <AndroidAsset Include="Assets\Images\petersilie.png" />
     <AndroidAsset Include="Assets\Images\po.png" />
+    <AndroidAsset Include="Assets\Images\puma.png" />
     <AndroidAsset Include="Assets\Images\qualle.png" />
     <AndroidAsset Include="Assets\Images\ratte.png" />
     <AndroidAsset Include="Assets\Images\regen.png" />
     <AndroidAsset Include="Assets\Images\riss.png" />
     <AndroidAsset Include="Assets\Images\rose.png" />
-    <AndroidAsset Include="Assets\Images\rz_jaguar.png" />
-    <AndroidAsset Include="Assets\Images\rz_kachel.png" />
-    <AndroidAsset Include="Assets\Images\rz_panther.png" />
-    <AndroidAsset Include="Assets\Images\rz_puma.png" />
-    <AndroidAsset Include="Assets\Images\rz_wale.png" />
     <AndroidAsset Include="Assets\Images\saege.png" />
     <AndroidAsset Include="Assets\Images\sahne.png" />
     <AndroidAsset Include="Assets\Images\senf.png" />
@@ -228,16 +225,16 @@
     <AndroidAsset Include="Assets\Images\teller.png" />
     <AndroidAsset Include="Assets\Images\toilette.png" />
     <AndroidAsset Include="Assets\Images\tomate.png" />
-    <AndroidAsset Include="Assets\Images\uboot.png" />
+    <AndroidAsset Include="Assets\Images\u-boot.png" />
     <AndroidAsset Include="Assets\Images\ufo.png" />
-    <AndroidAsset Include="Assets\Images\uhr.png" />
+    <AndroidAsset Include="Assets\Images\uhren.png" />
     <AndroidAsset Include="Assets\Images\uhu.png" />
     <AndroidAsset Include="Assets\Images\vogel.png" />
     <AndroidAsset Include="Assets\Images\waffe.png" />
     <AndroidAsset Include="Assets\Images\wald.png" />
+    <AndroidAsset Include="Assets\Images\wale.png" />
     <AndroidAsset Include="Assets\Images\weg.png" />
     <AndroidAsset Include="Assets\Images\weste.png" />
-    <AndroidAsset Include="Assets\Images\wildschwein.png" />
     <AndroidAsset Include="Assets\Images\zauberer.png" />
     <AndroidAsset Include="Assets\Images\zecke.png" />
     <AndroidAsset Include="Assets\Images\zelt.png" />
@@ -262,6 +259,103 @@
     <AndroidAsset Include="Assets\Sounds\Objects\U-Boot.mp3" />
     <AndroidAsset Include="Assets\Videos\Handy_Modul_1_720p.mp4" />
     <AndroidAsset Include="Assets\Fonts\Garaje_53_Uni_Black.otf" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Aal.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Affe.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Ahorn.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Ameise.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Baby.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Bad.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Birne.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Bohne.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Boot.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Clown.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Dame.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Degen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Dollar.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Dose.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Drachen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Dusche.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Eber.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Efeu.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Ente.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Esel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Fahrrad.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Fernrohr.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Fisch.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Foto.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Gabel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Gans.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Giraffe.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Gluehbirne.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Hand.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Handy.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Hase.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Hexe.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Hose.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Hut.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Iltis.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Ina.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Insel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Jacke.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Jade.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Jaguar.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Jet.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Kachel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Katze.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Kilo.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Kino.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Kohle.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Kuchen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Lama.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Lasso.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Lisa.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Los.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Lupe.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Mama.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Maus.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Mofa.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Mond.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Muehle.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Mund.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Nagel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Nase.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Natter.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Note.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Ohren.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Oma.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Opa.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Panda.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Papa.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Petersilie.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Po.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Puma.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Qualle.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Ratte.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Regen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Riss.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Rose.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Saege.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Sahne.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Senf.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Sofa.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Sonne.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Tasse.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Teller.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Toilette.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Tomate.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Ufo.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Uhren.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Vogel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Waffe.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Wald.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Wale.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Weg.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Weste.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Zauberer.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Zecke.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Zelt.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Zone.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Zylinder.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -408,6 +502,8 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow_drop_up_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_arrow_drop_up_black_24dp.png" />
     <AndroidResource Include="Resources\layout\ModuleItem.axml" />
+    <AndroidResource Include="Resources\layout\Memory.axml" />
+    <AndroidResource Include="Resources\layout\MemoryCard.axml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">
@@ -425,20 +521,6 @@
     <AndroidAsset Include="Assets\test.json" />
     <AndroidAsset Include="Assets\sandbox.json" />
     <AndroidAsset Include="Assets\level1.json" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Affe.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Ahorn.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Ameise.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Eber.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Efeu.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Esel.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Iltis.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Ina.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Insel.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Ohren.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Oma.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Opa.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Ufo.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Uhren.mp3" />
     <AndroidAsset Include="Assets\Sounds\Syllables\La.mp3" />
     <AndroidAsset Include="Assets\Sounds\Syllables\Ma.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 2 Aufgabe 1.mp3" />
@@ -453,6 +535,7 @@
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 5 Aufgabe 6.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 1.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 2.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 5.mp3" />
     <AndroidAsset Include="Assets\level2.json" />
     <AndroidAsset Include="Assets\level3.json" />
   </ItemGroup>
