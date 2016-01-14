@@ -72,7 +72,7 @@ namespace IRMGARD
 			// Choose three other false Options
 			var random = new Random();
             var falseOptions = 
-                lesson.Options.Where(o => 
+                Lesson.Options.Where(o => 
                     !o.Letter.Equals(currentIteration.LettersToLearn.First(), StringComparison.InvariantCultureIgnoreCase) &&
                     !o.Letter.Equals(correctOption.Letter, StringComparison.InvariantCultureIgnoreCase)).ToList();
             
