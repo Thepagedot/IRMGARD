@@ -1297,7 +1297,7 @@
                 }
             },
             {
-                "Name": "Zauberer",
+                "Name": "Zaube-rer",
                 "Media": {
                     "ImagePath": "zauberer.png",
                     "SoundPath": "Objects/Zauberer.mp3"

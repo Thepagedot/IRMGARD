@@ -34,27 +34,10 @@ namespace IRMGARD
             gridView = view.FindViewById<GridView>(Resource.Id.gridview);
             gridView.ItemClick += GridView_ItemClick;
 
-            CreateMemoryCards();
-            gridView.Adapter = new MemoryAdapter(Activity.BaseContext, 0, memoryCards);
-
             // Initialize iteration
             InitIteration();
 
             return view;
-        }
-
-        void CreateMemoryCards()
-        {
-            // Choose and initialize six random card pairs
-            foreach (MemoryOption option in Lesson.Options.PickRandomItems<MemoryOption>(CountOfCardPairs))
-            {
-                memoryCards.Add(option);
-                memoryCards.Add(new MemoryOption {
-                    Name = option.Name,
-                    Media = null,
-                });
-            }
-            memoryCards.Shuffle();
         }
 
         async void GridView_ItemClick (object sender, AdapterView.ItemClickEventArgs e)
@@ -87,9 +70,8 @@ namespace IRMGARD
                         await Task.Delay(1500);
                         parentView.Visibility = ViewStates.Gone;
                         firstParentView.Visibility = ViewStates.Gone;
-                        if (++countOfPairsMatched == CountOfCardPairs) {
-                            CheckSolution();
-                        }
+                        countOfPairsMatched++;
+                        CheckSolution();
                     }
                     else
                     {
@@ -113,11 +95,32 @@ namespace IRMGARD
         protected override void InitIteration()
         {
             base.InitIteration();
+
+            memoryCards.Clear();
+            memoryCardsRevealed.Clear();
+            countOfPairsMatched = 0;
+
+            // Choose and initialize six random card pairs
+            foreach (MemoryOption option in Lesson.Options.PickRandomItems<MemoryOption>(CountOfCardPairs))
+            {
+                memoryCards.Add(option);
+                memoryCards.Add(new MemoryOption {
+                    Name = option.Name,
+                    Media = null,
+                });
+            }
+            memoryCards.Shuffle();
+
+            // Add memory cards to adapter
+            gridView.Adapter = new MemoryAdapter(Activity.BaseContext, 0, memoryCards);
         }
 
         public override void CheckSolution()
         {
-            FinishIteration(true);
+            if (countOfPairsMatched == CountOfCardPairs)
+            {
+                FinishIteration(true);
+            }
         }
 
         public override void OnDestroy()
