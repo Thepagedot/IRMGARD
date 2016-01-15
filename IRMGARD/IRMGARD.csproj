@@ -356,6 +356,8 @@
     <AndroidAsset Include="Assets\Sounds\Objects\Zelt.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Zone.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Zylinder.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Liege.mp3" />
+    <AndroidAsset Include="Assets\Images\liege.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
