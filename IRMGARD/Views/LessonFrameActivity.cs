@@ -223,6 +223,8 @@ namespace IRMGARD
                 return new AbcRankFragment(lesson);
             if (lesson is LetterDrop)
                 return new LetterDropFragment(lesson);
+            if (lesson is HearTheLetter)
+                return new HearTheLetterFragment(lesson);
 
             return null;
 		}
