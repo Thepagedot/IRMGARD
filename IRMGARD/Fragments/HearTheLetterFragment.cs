@@ -18,6 +18,7 @@ namespace IRMGARD
         HearTheLetterOption currentOption;
         int selectedLocation;
 
+        public HearTheLetterFragment() {}
         public HearTheLetterFragment(Lesson lesson) : base(lesson) {}
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -61,8 +62,22 @@ namespace IRMGARD
             selectedLocation = -1;
             ivHeadImage.Alpha = ivBodyImage.Alpha = ivTailImage.Alpha = 1;
 
-            currentOption = GetCurrentIteration<HearTheLetterIteration>().LetterLocations.PickRandomItems(1)[0];
-            PlayTaskDesc();
+            var currentIteration = GetCurrentIteration<HearTheLetterIteration>();
+            currentOption = currentIteration.LetterLocations.PickRandomItems(1)[0];
+
+            if (DataHolder.Current.CurrentLesson.Iterations.IndexOf(currentIteration) == 0)
+            {
+                PlayLessonDesc();
+            }
+            else
+            {
+                PlayTaskDesc();
+            }
+        }
+
+        void PlayLessonDesc()
+        {
+            SoundPlayer.PlaySound(Activity.BaseContext, Lesson.SoundPath);
         }
 
         void PlayTaskDesc()

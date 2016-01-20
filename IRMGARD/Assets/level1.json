@@ -506,6 +506,7 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "LettersToLearn": [ "A", "B", "D" ],
               "LetterLocations": [
                 {
                   "Location": 2,
@@ -523,6 +524,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "LettersToLearn": [ "E", "F", "G" ],
               "LetterLocations": [
                 {
                   "Location": 2,
@@ -540,6 +542,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "LettersToLearn": [ "I", "K", "L" ],
               "LetterLocations": [
                 {
                   "Location": 0,
@@ -557,6 +560,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "LettersToLearn": [ "M", "N", "O" ],
               "LetterLocations": [
                 {
                   "Location": 0,
@@ -574,6 +578,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "LettersToLearn": [ "P", "R", "T" ],
               "LetterLocations": [
                 {
                   "Location": 1,
@@ -591,6 +596,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "LettersToLearn": [ "U", "W", "Z" ],
               "LetterLocations": [
                 {
                   "Location": 0,
