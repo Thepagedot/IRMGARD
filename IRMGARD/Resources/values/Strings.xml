@@ -14,6 +14,4 @@
     <string name="module_finished_message">Super, du hast alle Aufgaben in diesem Modul erledigt!</string>
     <string name="menu_next">Nächste Übung</string>
     <string name="menu_previous">Vorherige Übung</string>
-    <string name="memory_too_many_cards_rev">Bitte nicht noch eine Karte aufdecken...</string>
-    <string name="memory_cards_match">Super! Kartenpaar gefunden!</string>
 </resources>

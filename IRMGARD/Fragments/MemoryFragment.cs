@@ -23,6 +23,7 @@ namespace IRMGARD
         private GridView gridView;
         private IList<MemoryOption> memoryCards = new List<MemoryOption>(CountOfCardPairs * 2);
         private IDictionary<string, FrameLayout> memoryCardsRevealed = new Dictionary<string, FrameLayout>();
+        private IList<FrameLayout> memoryCardsMarked = new List<FrameLayout>();
         private int countOfPairsMatched;
 
         public MemoryFragment (Lesson lesson) : base(lesson) {}
@@ -64,9 +65,10 @@ namespace IRMGARD
                         cardTextFront.Visibility = ViewStates.Visible;
                     }
                     if (memoryCardsRevealed.Count == 1 && memoryCardsRevealed.ContainsKey(memoryCard.Name)) {
-                        Toast.MakeText(Activity.BaseContext, Resource.String.memory_cards_match, ToastLength.Short).Show();
                         var firstParentView = memoryCardsRevealed.Single().Value;
                         memoryCardsRevealed.Clear();
+                        parentView.Background = Resources.GetDrawable(Resource.Drawable.solid_green);
+                        firstParentView.Background = Resources.GetDrawable(Resource.Drawable.solid_green);
                         await Task.Delay(1500);
                         parentView.Visibility = ViewStates.Gone;
                         firstParentView.Visibility = ViewStates.Gone;
@@ -80,7 +82,17 @@ namespace IRMGARD
                 }
                 else
                 {
-                    Toast.MakeText(Activity.BaseContext, Resource.String.memory_too_many_cards_rev, ToastLength.Short).Show();
+                    foreach (var memoryCardRevealed in memoryCardsRevealed)
+                    {
+                        memoryCardRevealed.Value.Background = Resources.GetDrawable(Resource.Drawable.solid_red);
+                        memoryCardsMarked.Add(memoryCardRevealed.Value);
+                    }
+                    await Task.Delay(1000);
+                    foreach (var memoryCardMarked in memoryCardsMarked)
+                    {
+                        memoryCardMarked.Background = null;
+                    }
+                    memoryCardsMarked.Clear();
                 }
             }
             else

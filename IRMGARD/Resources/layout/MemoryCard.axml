@@ -5,11 +5,11 @@
     android:layout_width="70dp"
     android:layout_height="70dp">
     <android.support.v7.widget.CardView
-        android:id="@+id/cardView"
+        android:id="@+id/memoryCardView"
         cardview:cardCornerRadius="4dp"
         cardview:cardUseCompatPadding="true"
         cardview:cardPreventCornerOverlap="true"
-        cardview:contentPadding="4dp"
+        cardview:contentPadding="3dp"
         android:layout_width="70dp"
         android:layout_height="70dp">
         <TextView

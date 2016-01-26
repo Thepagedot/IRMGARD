@@ -517,6 +517,8 @@
     <AndroidResource Include="Resources\layout\ModuleProgressItem.axml" />
     <AndroidResource Include="Resources\layout\Memory.axml" />
     <AndroidResource Include="Resources\layout\MemoryCard.axml" />
+    <AndroidResource Include="Resources\drawable\solid_green.xml" />
+    <AndroidResource Include="Resources\drawable\solid_red.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">
