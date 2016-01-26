@@ -493,7 +493,128 @@
       "Color": "#dcd08f",
       "VideoPath": null,
       "NumberOfLessonsDone": 0,
-      "Lessons": []
+      "Lessons": [
+        {
+          "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
+          "Id": 155,
+          "Title": "Wo sind die Mitlaute?",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 5 Aufgabe 5.mp3",
+          "Hint": "Lesson 5 Hint",
+          "ClickImagePath": "Images/Tasks/5-5/hund.png",
+          "TypeOfLevel": "HearTheLetter",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "LettersToLearn": [ "A", "B", "D" ],
+              "LetterLocations": [
+                {
+                  "Location": 2,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_A_in_Ina.mp3"
+                },
+                {
+                  "Location": 1,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_B_in_Eber.mp3"
+                },
+                {
+                  "Location": 2,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_D_in_Mond.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "LettersToLearn": [ "E", "F", "G" ],
+              "LetterLocations": [
+                {
+                  "Location": 2,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_E_in_Nase.mp3"
+                },
+                {
+                  "Location": 1,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_F_in_Affe.mp3"
+                },
+                {
+                  "Location": 1,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_G_in_Regen.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "LettersToLearn": [ "I", "K", "L" ],
+              "LetterLocations": [
+                {
+                  "Location": 0,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_I_in_Igel.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_K_in_Kuchen.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_L_in_Liege.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "LettersToLearn": [ "M", "N", "O" ],
+              "LetterLocations": [
+                {
+                  "Location": 0,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_M_in_Mund.mp3"
+                },
+                {
+                  "Location": 1,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_N_in_Sonne.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_O_in_Ofen.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "LettersToLearn": [ "P", "R", "T" ],
+              "LetterLocations": [
+                {
+                  "Location": 1,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_P_in_Lupe.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_R_in_Rose.mp3"
+                },
+                {
+                  "Location": 2,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_T_in_Boot.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "LettersToLearn": [ "U", "W", "Z" ],
+              "LetterLocations": [
+                {
+                  "Location": 0,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_U_in_Uhr.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_W_in_Wald.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "Tasks/5-5/wo_hoerst_du_Z_in_Zauberer.mp3"
+                }
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "Name": "6",
