@@ -13,5 +13,5 @@
     <string name="module_finished">Modul erledigt</string>
     <string name="module_finished_message">Super, du hast alle Aufgaben in diesem Modul erledigt!</string>
     <string name="menu_next">Nächste Übung</string>
-    <string name="menu_previous">Vorherige Übung</string>  
+    <string name="menu_previous">Vorherige Übung</string>
 </resources>

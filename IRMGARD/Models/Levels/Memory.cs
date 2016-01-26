@@ -3,38 +3,38 @@ using System.Collections.Generic;
 
 namespace IRMGARD.Models
 {
-	public class Memory : Lesson
-	{		
-		public Memory () {}
-
-		public Memory (int id, string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (id, title, soundPath, hint, typeOfLevel, iterations)
-		{
-		}
-	}
-
-    public class MemoryIteration : Iteration
+    public class Memory : Lesson
     {
-        public List<MemoryOption> LevelOptionsList { get; set; }
+        public List<MemoryOption> Options { get; set; }
 
-        public MemoryIteration(List<string> lettersToLearn, List<MemoryOption> levelOptionsList) : base (lettersToLearn)
+        public Memory() {}
+
+        public Memory(int id, string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations, List<MemoryOption> options)
+            : base (id, title, soundPath, hint, typeOfLevel, iterations)
         {
-            LevelOptionsList = levelOptionsList;
+            this.Options = options;
         }
     }
 
-	public class MemoryOption
-	{
-		public string Name { get; set; }
-		public string SoundPath { get; set; }
+    public class MemoryIteration : Iteration
+    {
+        public MemoryIteration (List<string> lettersToLearn, List<MemoryOption> options) : base (lettersToLearn)
+        {
+        }
+    }
 
+    public class MemoryOption
+    {
+        public string Name { get; set; }
+        public Media Media { get; set; }
 
-		public MemoryOption () {}
+        public MemoryOption () {}
 
-		public MemoryOption (string name, string soundPath) 
-		{
-			this.Name = name;
-			this.SoundPath = soundPath;
-		}
-	}
+        public MemoryOption (string name, Media media)
+        {
+            this.Name = name;
+            this.Media = media;
+        }
+    }
 }
 
