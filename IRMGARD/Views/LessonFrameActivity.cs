@@ -225,6 +225,8 @@ namespace IRMGARD
                 return new LetterDropFragment(lesson);
             if (lesson is HearTheLetter)
                 return new HearTheLetterFragment(lesson);
+            if (lesson is Memory)
+                return new MemoryFragment(lesson);
 
             return null;
 		}
