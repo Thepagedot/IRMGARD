@@ -41,7 +41,10 @@ namespace IRMGARD
                 if (item.IsDirty)
                 {
                     view.FindViewById<CardView>(Resource.Id.cardView).SetCardBackgroundColor(Color.White);
-                    view.FindViewById<CardView>(Resource.Id.cardView).Elevation = 8f;
+                    if (Env.LollipopSupport)
+                    {
+                        view.FindViewById<CardView>(Resource.Id.cardView).Elevation = 8f;
+                    }
                     view.FindViewById<RelativeLayout>(Resource.Id.llLayout).Background = null;
                     view.FindViewById<View>(Resource.Id.underscore).Visibility = ViewStates.Invisible;
                 }

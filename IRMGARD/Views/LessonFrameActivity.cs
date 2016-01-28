@@ -41,6 +41,7 @@ namespace IRMGARD
 			SetContentView (Resource.Layout.LessonFrame);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
             progressList = new List<Progress>();
             this.CompatMode();
 

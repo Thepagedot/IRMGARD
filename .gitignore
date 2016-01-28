@@ -224,3 +224,4 @@ UpgradeLog.*
 *.dotCover
 
 Components/*
+IRMGARD/Resources/Resource.designer.cs

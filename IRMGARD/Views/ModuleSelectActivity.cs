@@ -58,14 +58,15 @@ namespace IRMGARD
                 return;
             }
 
-            // Check if module is available
-            if (e.Position > 0 && !DataHolder.Current.CurrentLevel.Modules.ElementAt(e.Position - 1).IsCompleted)
+            if (Env.Release)
             {
-                Toast.MakeText(this, "This module is not available yet. Unlock this module by completing the previous ones.", ToastLength.Short).Show();
-                return;
+                // Check if module is available
+                if (e.Position > 0 && !DataHolder.Current.CurrentLevel.Modules.ElementAt(e.Position - 1).IsCompleted)
+                {
+                    Toast.MakeText(this, "This module is not available yet. Unlock this module by completing the previous ones.", ToastLength.Short).Show();
+                    return;
+                }
             }
-
-
 
 			DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.Lessons.First();
 			DataHolder.Current.CurrentIteration = DataHolder.Current.CurrentLesson.Iterations.First();
