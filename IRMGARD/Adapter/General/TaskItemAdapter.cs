@@ -26,9 +26,13 @@ namespace IRMGARD
 
             if (item.Media != null)
             {
-                var imageView = view.FindViewById<ImageView>(Resource.Id.image);
-                imageView.SetImageBitmap(AssetHelper.GetBitmap(Context, item.Media.ImagePath));
-                imageView.Visibility = ViewStates.Visible;
+                var bitmap = BitmapLoader.Instance.LoadBitmap(position, Context, item.Media.ImagePath);
+                if (bitmap != null)
+                {
+                    var imageView = view.FindViewById<ImageView>(Resource.Id.image);
+                    imageView.SetImageBitmap(bitmap);
+                    imageView.Visibility = ViewStates.Visible;
+                }
                 view.FindViewById<TextView>(Resource.Id.letter).Visibility = ViewStates.Invisible;
             }
             else if (item.TaskLetter != null)
