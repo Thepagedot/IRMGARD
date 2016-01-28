@@ -70,7 +70,6 @@ namespace IRMGARD
 			currentOptions.Add(correctOption);
 
 			// Choose three other false Options
-			var random = new Random();
             var falseOptions = 
                 Lesson.Options.Where(o => 
                     !o.Letter.Equals(currentIteration.LettersToLearn.First(), StringComparison.InvariantCultureIgnoreCase) &&
@@ -79,9 +78,7 @@ namespace IRMGARD
             foreach (var option in falseOptions)
                 option.IsCorrect = false;
 
-			currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
-			currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
-			currentOptions.Add(falseOptions.ElementAt(random.Next(0, falseOptions.Count() - 1)));
+            currentOptions.AddRange(falseOptions.PickRandomItems(3));
 
 			// Randomize list
 			currentOptions.Shuffle();
