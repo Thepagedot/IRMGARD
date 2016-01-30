@@ -1,5 +1,4 @@
-﻿using Android.Graphics;
-using Android.OS;
+﻿using Android.OS;
 using Android.Views;
 using Android.Widget;
 
@@ -11,9 +10,7 @@ namespace IRMGARD
     public class HearTheLetterFragment : LessonFragment<HearTheLetter>
     {
         ImageButton ibSpeaker;
-        ImageView ivHeadImage;
-        ImageView ivBodyImage;
-        ImageView ivTailImage;
+        SeekBar sbLetterPos;
 
         HearTheLetterOption currentOption;
         int selectedLocation;
@@ -25,41 +22,26 @@ namespace IRMGARD
             View view = inflater.Inflate(Resource.Layout.HearTheLetter, container, false);
             ibSpeaker = view.FindViewById<ImageButton>(Resource.Id.ibSpeaker);
             ibSpeaker.Click += ((e, sender) => PlayTaskDesc());
-            InitClickImage(view);
+
+            sbLetterPos = view.FindViewById<SeekBar>(Resource.Id.sbLetterPos);
+            sbLetterPos.ProgressChanged += (object sender, SeekBar.ProgressChangedEventArgs e) => {
+                selectedLocation = ConvertProgressToLocation(e.Progress);
+            };
 
             InitIteration();
 
             return view;
         }
 
-        void InitClickImage(View view)
+        private int ConvertProgressToLocation(int p)
         {
-            using (var stream = Activity.Assets.Open(Lesson.ClickImagePath))
-            {
-                BitmapRegionDecoder brd = BitmapRegionDecoder.NewInstance(stream, false);
-                Bitmap bmpHead = brd.DecodeRegion(new Rect(0, 195, 332, 1000), null);
-                Bitmap bmpBody = brd.DecodeRegion(new Rect(333, 195, 666, 1000), null);
-                Bitmap bmpTail = brd.DecodeRegion(new Rect(667, 195, 1000, 1000), null);
-
-                ivHeadImage = view.FindViewById<ImageView>(Resource.Id.ivHeadImage);
-                ivHeadImage.SetImageBitmap(bmpHead);
-                ivHeadImage.Click += ((sender, e) => ClickImage_Click(0, new float[] { 1, 0.6f, 0.6f }));
-
-                ivBodyImage = view.FindViewById<ImageView>(Resource.Id.ivBodyImage);
-                ivBodyImage.SetImageBitmap(bmpBody);
-                ivBodyImage.Click += ((sender, e) => ClickImage_Click(1, new float[] { 0.6f, 1, 0.6f }));
-
-                ivTailImage = view.FindViewById<ImageView>(Resource.Id.ivTailImage);
-                ivTailImage.SetImageBitmap(bmpTail);
-                ivTailImage.Click += ((sender, e) => ClickImage_Click(2, new float[] { 0.6f, 0.6f, 1 }));
-            }
+            return (p < 10) ? 0 : ((p < 20) ? 1 : ((p < 30) ? 2 : 0));
         }
 
         protected override void InitIteration()
         {
             base.InitIteration();
-            selectedLocation = -1;
-            ivHeadImage.Alpha = ivBodyImage.Alpha = ivTailImage.Alpha = 1;
+            selectedLocation = ConvertProgressToLocation(sbLetterPos.Progress);
 
             var currentIteration = GetCurrentIteration<HearTheLetterIteration>();
             currentOption = currentIteration.LetterLocations.PickRandomItems(1)[0];
@@ -72,6 +54,8 @@ namespace IRMGARD
             {
                 PlayTaskDesc();
             }
+
+            FireUserInteracted(true);
         }
 
         void PlayLessonDesc()
@@ -82,16 +66,6 @@ namespace IRMGARD
         void PlayTaskDesc()
         {
             SoundPlayer.PlaySound(Activity.BaseContext, currentOption.SoundPath);
-        }
-
-        void ClickImage_Click(int location, float[] alphaValues)
-        {
-            ivHeadImage.Alpha = alphaValues[0];
-            ivBodyImage.Alpha = alphaValues[1];
-            ivTailImage.Alpha = alphaValues[2];
-
-            selectedLocation = location;
-            FireUserInteracted(true);
         }
 
         public override void CheckSolution()

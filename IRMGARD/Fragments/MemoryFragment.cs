@@ -67,8 +67,8 @@ namespace IRMGARD
                     if (memoryCardsRevealed.Count == 1 && memoryCardsRevealed.ContainsKey(memoryCard.Name)) {
                         var firstParentView = memoryCardsRevealed.Single().Value;
                         memoryCardsRevealed.Clear();
-                        parentView.Background = Resources.GetDrawable(Resource.Drawable.solid_green);
-                        firstParentView.Background = Resources.GetDrawable(Resource.Drawable.solid_green);
+                        parentView.Background = Resources.GetDrawable(Resource.Drawable.rectangle_green);
+                        firstParentView.Background = Resources.GetDrawable(Resource.Drawable.rectangle_green);
                         await Task.Delay(1500);
                         parentView.Visibility = ViewStates.Gone;
                         firstParentView.Visibility = ViewStates.Gone;
@@ -84,7 +84,7 @@ namespace IRMGARD
                 {
                     foreach (var memoryCardRevealed in memoryCardsRevealed)
                     {
-                        memoryCardRevealed.Value.Background = Resources.GetDrawable(Resource.Drawable.solid_red);
+                        memoryCardRevealed.Value.Background = Resources.GetDrawable(Resource.Drawable.rectangle_red);
                         memoryCardsMarked.Add(memoryCardRevealed.Value);
                     }
                     await Task.Delay(1000);

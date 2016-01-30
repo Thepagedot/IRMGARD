@@ -501,7 +501,6 @@
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 5 Aufgabe 5.mp3",
           "Hint": "Lesson 5 Hint",
-          "ClickImagePath": "Images/Tasks/5-5/hund.png",
           "TypeOfLevel": "HearTheLetter",
           "Iterations": [
             {
@@ -727,7 +726,7 @@
           "TypeOfLevel": "Memory",
           "Iterations": [
             {
-              "$type": "IRMGARD.Models.MemoryIteration, IRMGARD",
+              "$type": "IRMGARD.Models.MemoryIteration, IRMGARD"
             }
           ],
           "Options": [

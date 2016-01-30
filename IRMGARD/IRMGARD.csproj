@@ -260,7 +260,6 @@
     <AndroidAsset Include="Assets\Sounds\Objects\U-Boot.mp3" />
     <AndroidAsset Include="Assets\Videos\Handy_Modul_1_720p.mp4" />
     <AndroidAsset Include="Assets\Fonts\Garaje_53_Uni_Black.otf" />
-    <AndroidAsset Include="Assets\Images\Tasks\5-5\hund.png" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 5 Aufgabe 5.mp3" />
     <AndroidAsset Include="Assets\Sounds\Tasks\5-5\wo_hoerst_du_A_in_Ina.mp3" />
     <AndroidAsset Include="Assets\Sounds\Tasks\5-5\wo_hoerst_du_B_in_Eber.mp3" />
@@ -539,8 +538,10 @@
     <AndroidResource Include="Resources\layout\HearTheLetter.axml" />
     <AndroidResource Include="Resources\layout\Memory.axml" />
     <AndroidResource Include="Resources\layout\MemoryCard.axml" />
-    <AndroidResource Include="Resources\drawable\solid_green.xml" />
-    <AndroidResource Include="Resources\drawable\solid_red.xml" />
+    <AndroidResource Include="Resources\drawable\rectangle_green.xml" />
+    <AndroidResource Include="Resources\drawable\rectangle_red.xml" />
+    <AndroidResource Include="Resources\drawable\line_red.xml" />
+    <AndroidResource Include="Resources\drawable\oval_red.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">
@@ -611,8 +612,6 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <ItemGroup />
   <ItemGroup>
-    <Folder Include="Assets\Images\Tasks\" />
-    <Folder Include="Assets\Images\Tasks\5-5\" />
     <Folder Include="Assets\Sounds\Tasks\" />
     <Folder Include="Assets\Sounds\Tasks\5-5\" />
   </ItemGroup>

@@ -5,15 +5,10 @@ namespace IRMGARD.Models
 {
     public class HearTheLetter : Lesson
     {
-        public string ClickImagePath { get; set; }
-
         public HearTheLetter () {}
 
-        public HearTheLetter(int id, string title, string soundPath, string hint, string clickImagePath, LevelType typeOfLevel, List<Iteration> iterations)
-            : base (id, title, soundPath, hint, typeOfLevel, iterations)
-        {
-            this.ClickImagePath = clickImagePath;
-        }
+        public HearTheLetter(int id, string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations)
+            : base (id, title, soundPath, hint, typeOfLevel, iterations) {}
     }
 
     public class HearTheLetterIteration : Iteration
