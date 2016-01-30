@@ -27,7 +27,7 @@
               ],
               "Name": "Affe",
               "Media": {
-                "ImagePath": "affe.png",
+                "ImagePath": "Affe.png",
                 "SoundPath": "Objects/Affe.mp3"
               }
             },
@@ -38,7 +38,7 @@
               ],
               "Name": "Elefant",
               "Media": {
-                "ImagePath": "elefant.png",
+                "ImagePath": "Elefant.png",
                 "SoundPath": "Objects/Elefant.mp3"
               }
             },
@@ -49,7 +49,7 @@
               ],
               "Name": "Igel",
               "Media": {
-                "ImagePath": "igel.png",
+                "ImagePath": "Igel.png",
                 "SoundPath": "Objects/Igel.mp3"
               }
             },
@@ -60,7 +60,7 @@
               ],
               "Name": "Ofen",
               "Media": {
-                "ImagePath": "ofen.png",
+                "ImagePath": "Ofen.png",
                 "SoundPath": "Objects/Ofen.mp3"
               }
             },
@@ -71,7 +71,7 @@
               ],
               "Name": "Uhu",
               "Media": {
-                "ImagePath": "uhu.png",
+                "ImagePath": "Uhu.png",
                 "SoundPath": "Objects/Uhu.mp3"
               }
             }
@@ -89,105 +89,105 @@
             {
               "Letter": "A",
               "Media": {
-                "ImagePath": "ameise.png",
+                "ImagePath": "Ameise.png",
                 "SoundPath": "Objects/Ameise.mp3"
               }
             },
             {
               "Letter": "A",
               "Media": {
-                "ImagePath": "affe.png",
+                "ImagePath": "Affe.png",
                 "SoundPath": "Objects/Affe.mp3"
               }
             },
             {
               "Letter": "A",
               "Media": {
-                "ImagePath": "ahorn.png",
+                "ImagePath": "Ahorn.png",
                 "SoundPath": "Objects/Ahorn.mp3"
               }
             },
             {
               "Letter": "E",
               "Media": {
-                "ImagePath": "esel.png",
+                "ImagePath": "Esel.png",
                 "SoundPath": "Objects/Esel.mp3"
               }
             },
             {
               "Letter": "E",
               "Media": {
-                "ImagePath": "eber.png",
+                "ImagePath": "Eber.png",
                 "SoundPath": "Objects/Eber.mp3"
               }
             },
             {
               "Letter": "E",
               "Media": {
-                "ImagePath": "efeu.png",
+                "ImagePath": "Efeu.png",
                 "SoundPath": "Objects/Efeu.mp3"
               }
             },
             {
               "Letter": "I",
               "Media": {
-                "ImagePath": "insel.png",
+                "ImagePath": "Insel.png",
                 "SoundPath": "Objects/Insel.mp3"
               }
             },
             {
               "Letter": "I",
               "Media": {
-                "ImagePath": "iltis.png",
+                "ImagePath": "Iltis.png",
                 "SoundPath": "Objects/Iltis.mp3"
               }
             },
             {
               "Letter": "I",
               "Media": {
-                "ImagePath": "ina.png",
+                "ImagePath": "Ina.png",
                 "SoundPath": "Objects/Ina.mp3"
               }
             },
             {
               "Letter": "O",
               "Media": {
-                "ImagePath": "oma.png",
+                "ImagePath": "Oma.png",
                 "SoundPath": "Objects/Oma.mp3"
               }
             },
             {
               "Letter": "O",
               "Media": {
-                "ImagePath": "opa.png",
+                "ImagePath": "Opa.png",
                 "SoundPath": "Objects/Opa.mp3"
               }
             },
             {
               "Letter": "O",
               "Media": {
-                "ImagePath": "ohren.png",
+                "ImagePath": "Ohren.png",
                 "SoundPath": "Objects/Ohren.mp3"
               }
             },
             {
               "Letter": "U",
               "Media": {
-                "ImagePath": "u-boot.png",
+                "ImagePath": "U-Boot.png",
                 "SoundPath": "Objects/U-Boot.mp3"
               }
             },
             {
               "Letter": "U",
               "Media": {
-                "ImagePath": "uhren.png",
+                "ImagePath": "Uhren.png",
                 "SoundPath": "Objects/Uhren.mp3"
               }
             },
             {
               "Letter": "U",
               "Media": {
-                "ImagePath": "ufo.png",
+                "ImagePath": "Ufo.png",
                 "SoundPath": "Objects/Ufo.mp3"
               }
             }
@@ -676,7 +676,7 @@
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "Affe",
                   "Media": {
-                    "ImagePath": "affe.png",
+                    "ImagePath": "Affe.png",
                     "SoundPath": "Objects/Affe.mp3"
                   }
                 },
@@ -684,7 +684,7 @@
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "Eber",
                   "Media": {
-                    "ImagePath": "eber.png",
+                    "ImagePath": "Eber.png",
                     "SoundPath": "Objects/Eber.mp3"
                   }
                 },
@@ -692,7 +692,7 @@
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "Ufo",
                   "Media": {
-                    "ImagePath": "ufo.png",
+                    "ImagePath": "Ufo.png",
                     "SoundPath": "Objects/Ufo.mp3"
                   }
                 },
@@ -700,7 +700,7 @@
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "Insel",
                   "Media": {
-                    "ImagePath": "insel.png",
+                    "ImagePath": "Insel.png",
                     "SoundPath": "Objects/Insel.mp3"
                   }
                 },
@@ -708,7 +708,7 @@
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "Ofen",
                   "Media": {
-                    "ImagePath": "ofen.png",
+                    "ImagePath": "Ofen.png",
                     "SoundPath": "Objects/Ofen.mp3"
                   }
                 }
@@ -733,721 +733,721 @@
             {
                 "Name": "Aal",
                 "Media": {
-                    "ImagePath": "aal.png",
+                    "ImagePath": "Aal.png",
                     "SoundPath": "Objects/Aal.mp3"
                 }
             },
             {
                 "Name": "Affe",
                 "Media": {
-                    "ImagePath": "affe.png",
+                    "ImagePath": "Affe.png",
                     "SoundPath": "Objects/Affe.mp3"
                 }
             },
             {
                 "Name": "Ahorn",
                 "Media": {
-                    "ImagePath": "ahorn.png",
+                    "ImagePath": "Ahorn.png",
                     "SoundPath": "Objects/Ahorn.mp3"
                 }
             },
             {
                 "Name": "Ameise",
                 "Media": {
-                    "ImagePath": "ameise.png",
+                    "ImagePath": "Ameise.png",
                     "SoundPath": "Objects/Ameise.mp3"
                 }
             },
             {
                 "Name": "Baby",
                 "Media": {
-                    "ImagePath": "baby.png",
+                    "ImagePath": "Baby.png",
                     "SoundPath": "Objects/Baby.mp3"
                 }
             },
             {
                 "Name": "Bad",
                 "Media": {
-                    "ImagePath": "bad.png",
+                    "ImagePath": "Bad.png",
                     "SoundPath": "Objects/Bad.mp3"
                 }
             },
             {
                 "Name": "Birne",
                 "Media": {
-                    "ImagePath": "birne.png",
+                    "ImagePath": "Birne.png",
                     "SoundPath": "Objects/Birne.mp3"
                 }
             },
             {
                 "Name": "Bohne",
                 "Media": {
-                    "ImagePath": "bohne.png",
+                    "ImagePath": "Bohne.png",
                     "SoundPath": "Objects/Bohne.mp3"
                 }
             },
             {
                 "Name": "Boot",
                 "Media": {
-                    "ImagePath": "boot.png",
+                    "ImagePath": "Boot.png",
                     "SoundPath": "Objects/Boot.mp3"
                 }
             },
             {
                 "Name": "Clown",
                 "Media": {
-                    "ImagePath": "clown.png",
+                    "ImagePath": "Clown.png",
                     "SoundPath": "Objects/Clown.mp3"
                 }
             },
             {
                 "Name": "Dame",
                 "Media": {
-                    "ImagePath": "dame.png",
+                    "ImagePath": "Dame.png",
                     "SoundPath": "Objects/Dame.mp3"
                 }
             },
             {
                 "Name": "Degen",
                 "Media": {
-                    "ImagePath": "degen.png",
+                    "ImagePath": "Degen.png",
                     "SoundPath": "Objects/Degen.mp3"
                 }
             },
             {
                 "Name": "Dollar",
                 "Media": {
-                    "ImagePath": "dollar.png",
+                    "ImagePath": "Dollar.png",
                     "SoundPath": "Objects/Dollar.mp3"
                 }
             },
             {
                 "Name": "Dose",
                 "Media": {
-                    "ImagePath": "dose.png",
+                    "ImagePath": "Dose.png",
                     "SoundPath": "Objects/Dose.mp3"
                 }
             },
             {
                 "Name": "Drachen",
                 "Media": {
-                    "ImagePath": "drachen.png",
+                    "ImagePath": "Drachen.png",
                     "SoundPath": "Objects/Drachen.mp3"
                 }
             },
             {
                 "Name": "Dusche",
                 "Media": {
-                    "ImagePath": "dusche.png",
+                    "ImagePath": "Dusche.png",
                     "SoundPath": "Objects/Dusche.mp3"
                 }
             },
             {
                 "Name": "Eber",
                 "Media": {
-                    "ImagePath": "eber.png",
+                    "ImagePath": "Eber.png",
                     "SoundPath": "Objects/Eber.mp3"
                 }
             },
             {
                 "Name": "Efeu",
                 "Media": {
-                    "ImagePath": "efeu.png",
+                    "ImagePath": "Efeu.png",
                     "SoundPath": "Objects/Efeu.mp3"
                 }
             },
             {
                 "Name": "Elefant",
                 "Media": {
-                    "ImagePath": "elefant.png",
+                    "ImagePath": "Elefant.png",
                     "SoundPath": "Objects/Elefant.mp3"
                 }
             },
             {
                 "Name": "Ente",
                 "Media": {
-                    "ImagePath": "ente.png",
+                    "ImagePath": "Ente.png",
                     "SoundPath": "Objects/Ente.mp3"
                 }
             },
             {
                 "Name": "Esel",
                 "Media": {
-                    "ImagePath": "esel.png",
+                    "ImagePath": "Esel.png",
                     "SoundPath": "Objects/Esel.mp3"
                 }
             },
             {
                 "Name": "Fahrrad",
                 "Media": {
-                    "ImagePath": "fahrrad.png",
+                    "ImagePath": "Fahrrad.png",
                     "SoundPath": "Objects/Fahrrad.mp3"
                 }
             },
             {
                 "Name": "Fernrohr",
                 "Media": {
-                    "ImagePath": "fernrohr.png",
+                    "ImagePath": "Fernrohr.png",
                     "SoundPath": "Objects/Fernrohr.mp3"
                 }
             },
             {
                 "Name": "Fisch",
                 "Media": {
-                    "ImagePath": "fisch.png",
+                    "ImagePath": "Fisch.png",
                     "SoundPath": "Objects/Fisch.mp3"
                 }
             },
             {
                 "Name": "Foto",
                 "Media": {
-                    "ImagePath": "foto.png",
+                    "ImagePath": "Foto.png",
                     "SoundPath": "Objects/Foto.mp3"
                 }
             },
             {
                 "Name": "Gabel",
                 "Media": {
-                    "ImagePath": "gabel.png",
+                    "ImagePath": "Gabel.png",
                     "SoundPath": "Objects/Gabel.mp3"
                 }
             },
             {
                 "Name": "Gans",
                 "Media": {
-                    "ImagePath": "gans.png",
+                    "ImagePath": "Gans.png",
                     "SoundPath": "Objects/Gans.mp3"
                 }
             },
             {
                 "Name": "Giraffe",
                 "Media": {
-                    "ImagePath": "giraffe.png",
+                    "ImagePath": "Giraffe.png",
                     "SoundPath": "Objects/Giraffe.mp3"
                 }
             },
             {
                 "Name": "Glühbirne",
                 "Media": {
-                    "ImagePath": "gluehbirne.png",
+                    "ImagePath": "Gluehbirne.png",
                     "SoundPath": "Objects/Gluehbirne.mp3"
                 }
             },
             {
                 "Name": "Hand",
                 "Media": {
-                    "ImagePath": "hand.png",
+                    "ImagePath": "Hand.png",
                     "SoundPath": "Objects/Hand.mp3"
                 }
             },
             {
                 "Name": "Handy",
                 "Media": {
-                    "ImagePath": "handy.png",
+                    "ImagePath": "Handy.png",
                     "SoundPath": "Objects/Handy.mp3"
                 }
             },
             {
                 "Name": "Hase",
                 "Media": {
-                    "ImagePath": "hase.png",
+                    "ImagePath": "Hase.png",
                     "SoundPath": "Objects/Hase.mp3"
                 }
             },
             {
                 "Name": "Hexe",
                 "Media": {
-                    "ImagePath": "hexe.png",
+                    "ImagePath": "Hexe.png",
                     "SoundPath": "Objects/Hexe.mp3"
                 }
             },
             {
                 "Name": "Hose",
                 "Media": {
-                    "ImagePath": "hose.png",
+                    "ImagePath": "Hose.png",
                     "SoundPath": "Objects/Hose.mp3"
                 }
             },
             {
                 "Name": "Hut",
                 "Media": {
-                    "ImagePath": "hut.png",
+                    "ImagePath": "Hut.png",
                     "SoundPath": "Objects/Hut.mp3"
                 }
             },
             {
                 "Name": "Igel",
                 "Media": {
-                    "ImagePath": "igel.png",
+                    "ImagePath": "Igel.png",
                     "SoundPath": "Objects/Igel.mp3"
                 }
             },
             {
                 "Name": "Iltis",
                 "Media": {
-                    "ImagePath": "iltis.png",
+                    "ImagePath": "Iltis.png",
                     "SoundPath": "Objects/Iltis.mp3"
                 }
             },
             {
                 "Name": "Ina",
                 "Media": {
-                    "ImagePath": "ina.png",
+                    "ImagePath": "Ina.png",
                     "SoundPath": "Objects/Ina.mp3"
                 }
             },
             {
                 "Name": "Insel",
                 "Media": {
-                    "ImagePath": "insel.png",
+                    "ImagePath": "Insel.png",
                     "SoundPath": "Objects/Insel.mp3"
                 }
             },
             {
                 "Name": "Jacke",
                 "Media": {
-                    "ImagePath": "jacke.png",
+                    "ImagePath": "Jacke.png",
                     "SoundPath": "Objects/Jacke.mp3"
                 }
             },
             {
                 "Name": "Jade",
                 "Media": {
-                    "ImagePath": "jade.png",
+                    "ImagePath": "Jade.png",
                     "SoundPath": "Objects/Jade.mp3"
                 }
             },
             {
                 "Name": "Jaguar",
                 "Media": {
-                    "ImagePath": "jaguar.png",
+                    "ImagePath": "Jaguar.png",
                     "SoundPath": "Objects/Jaguar.mp3"
                 }
             },
             {
                 "Name": "Jet",
                 "Media": {
-                    "ImagePath": "jet.png",
+                    "ImagePath": "Jet.png",
                     "SoundPath": "Objects/Jet.mp3"
                 }
             },
             {
                 "Name": "Kachel",
                 "Media": {
-                    "ImagePath": "kachel.png",
+                    "ImagePath": "Kachel.png",
                     "SoundPath": "Objects/Kachel.mp3"
                 }
             },
             {
                 "Name": "Katze",
                 "Media": {
-                    "ImagePath": "katze.png",
+                    "ImagePath": "Katze.png",
                     "SoundPath": "Objects/Katze.mp3"
                 }
             },
             {
                 "Name": "Kilo",
                 "Media": {
-                    "ImagePath": "kilo.png",
+                    "ImagePath": "Kilo.png",
                     "SoundPath": "Objects/Kilo.mp3"
                 }
             },
             {
                 "Name": "Kino",
                 "Media": {
-                    "ImagePath": "kino.png",
+                    "ImagePath": "Kino.png",
                     "SoundPath": "Objects/Kino.mp3"
                 }
             },
             {
                 "Name": "Kohle",
                 "Media": {
-                    "ImagePath": "kohle.png",
+                    "ImagePath": "Kohle.png",
                     "SoundPath": "Objects/Kohle.mp3"
                 }
             },
             {
                 "Name": "Kuchen",
                 "Media": {
-                    "ImagePath": "kuchen.png",
+                    "ImagePath": "Kuchen.png",
                     "SoundPath": "Objects/Kuchen.mp3"
                 }
             },
             {
                 "Name": "Lama",
                 "Media": {
-                    "ImagePath": "lama.png",
+                    "ImagePath": "Lama.png",
                     "SoundPath": "Objects/Lama.mp3"
                 }
             },
             {
                 "Name": "Lasso",
                 "Media": {
-                    "ImagePath": "lasso.png",
+                    "ImagePath": "Lasso.png",
                     "SoundPath": "Objects/Lasso.mp3"
                 }
             },
             {
                 "Name": "Liege",
                 "Media": {
-                    "ImagePath": "liege.png",
+                    "ImagePath": "Liege.png",
                     "SoundPath": "Objects/Liege.mp3"
                 }
             },
             {
                 "Name": "Lisa",
                 "Media": {
-                    "ImagePath": "lisa.png",
+                    "ImagePath": "Lisa.png",
                     "SoundPath": "Objects/Lisa.mp3"
                 }
             },
             {
                 "Name": "Los",
                 "Media": {
-                    "ImagePath": "los.png",
+                    "ImagePath": "Los.png",
                     "SoundPath": "Objects/Los.mp3"
                 }
             },
             {
                 "Name": "Lupe",
                 "Media": {
-                    "ImagePath": "lupe.png",
+                    "ImagePath": "Lupe.png",
                     "SoundPath": "Objects/Lupe.mp3"
                 }
             },
             {
                 "Name": "Mama",
                 "Media": {
-                    "ImagePath": "mama.png",
+                    "ImagePath": "Mama.png",
                     "SoundPath": "Objects/Mama.mp3"
                 }
             },
             {
                 "Name": "Maus",
                 "Media": {
-                    "ImagePath": "maus.png",
+                    "ImagePath": "Maus.png",
                     "SoundPath": "Objects/Maus.mp3"
                 }
             },
             {
                 "Name": "Mofa",
                 "Media": {
-                    "ImagePath": "mofa.png",
+                    "ImagePath": "Mofa.png",
                     "SoundPath": "Objects/Mofa.mp3"
                 }
             },
             {
                 "Name": "Mond",
                 "Media": {
-                    "ImagePath": "mond.png",
+                    "ImagePath": "Mond.png",
                     "SoundPath": "Objects/Mond.mp3"
                 }
             },
             {
                 "Name": "Mühle",
                 "Media": {
-                    "ImagePath": "muehle.png",
+                    "ImagePath": "Muehle.png",
                     "SoundPath": "Objects/Muehle.mp3"
                 }
             },
             {
                 "Name": "Mund",
                 "Media": {
-                    "ImagePath": "mund.png",
+                    "ImagePath": "Mund.png",
                     "SoundPath": "Objects/Mund.mp3"
                 }
             },
             {
                 "Name": "Nagel",
                 "Media": {
-                    "ImagePath": "nagel.png",
+                    "ImagePath": "Nagel.png",
                     "SoundPath": "Objects/Nagel.mp3"
                 }
             },
             {
                 "Name": "Nase",
                 "Media": {
-                    "ImagePath": "nase.png",
+                    "ImagePath": "Nase.png",
                     "SoundPath": "Objects/Nase.mp3"
                 }
             },
             {
                 "Name": "Natter",
                 "Media": {
-                    "ImagePath": "natter.png",
+                    "ImagePath": "Natter.png",
                     "SoundPath": "Objects/Natter.mp3"
                 }
             },
             {
                 "Name": "Note",
                 "Media": {
-                    "ImagePath": "note.png",
+                    "ImagePath": "Note.png",
                     "SoundPath": "Objects/Note.mp3"
                 }
             },
             {
                 "Name": "Ofen",
                 "Media": {
-                    "ImagePath": "ofen.png",
+                    "ImagePath": "Ofen.png",
                     "SoundPath": "Objects/Ofen.mp3"
                 }
             },
             {
                 "Name": "Ohren",
                 "Media": {
-                    "ImagePath": "ohren.png",
+                    "ImagePath": "Ohren.png",
                     "SoundPath": "Objects/Ohren.mp3"
                 }
             },
             {
                 "Name": "Oma",
                 "Media": {
-                    "ImagePath": "oma.png",
+                    "ImagePath": "Oma.png",
                     "SoundPath": "Objects/Oma.mp3"
                 }
             },
             {
                 "Name": "Opa",
                 "Media": {
-                    "ImagePath": "opa.png",
+                    "ImagePath": "Opa.png",
                     "SoundPath": "Objects/Opa.mp3"
                 }
             },
             {
                 "Name": "Panda",
                 "Media": {
-                    "ImagePath": "panda.png",
+                    "ImagePath": "Panda.png",
                     "SoundPath": "Objects/Panda.mp3"
                 }
             },
             {
                 "Name": "Papa",
                 "Media": {
-                    "ImagePath": "papa.png",
+                    "ImagePath": "Papa.png",
                     "SoundPath": "Objects/Papa.mp3"
                 }
             },
             {
-                "Name": "Peter-silie",
+                "Name": "Petersilie",
                 "Media": {
-                    "ImagePath": "petersilie.png",
+                    "ImagePath": "Petersilie.png",
                     "SoundPath": "Objects/Petersilie.mp3"
                 }
             },
             {
                 "Name": "Po",
                 "Media": {
-                    "ImagePath": "po.png",
+                    "ImagePath": "Po.png",
                     "SoundPath": "Objects/Po.mp3"
                 }
             },
             {
                 "Name": "Puma",
                 "Media": {
-                    "ImagePath": "puma.png",
+                    "ImagePath": "Puma.png",
                     "SoundPath": "Objects/Puma.mp3"
                 }
             },
             {
                 "Name": "Qualle",
                 "Media": {
-                    "ImagePath": "qualle.png",
+                    "ImagePath": "Qualle.png",
                     "SoundPath": "Objects/Qualle.mp3"
                 }
             },
             {
                 "Name": "Ratte",
                 "Media": {
-                    "ImagePath": "ratte.png",
+                    "ImagePath": "Ratte.png",
                     "SoundPath": "Objects/Ratte.mp3"
                 }
             },
             {
                 "Name": "Regen",
                 "Media": {
-                    "ImagePath": "regen.png",
+                    "ImagePath": "Regen.png",
                     "SoundPath": "Objects/Regen.mp3"
                 }
             },
             {
                 "Name": "Riss",
                 "Media": {
-                    "ImagePath": "riss.png",
+                    "ImagePath": "Riss.png",
                     "SoundPath": "Objects/Riss.mp3"
                 }
             },
             {
                 "Name": "Rose",
                 "Media": {
-                    "ImagePath": "rose.png",
+                    "ImagePath": "Rose.png",
                     "SoundPath": "Objects/Rose.mp3"
                 }
             },
             {
                 "Name": "Säge",
                 "Media": {
-                    "ImagePath": "saege.png",
+                    "ImagePath": "Saege.png",
                     "SoundPath": "Objects/Saege.mp3"
                 }
             },
             {
                 "Name": "Sahne",
                 "Media": {
-                    "ImagePath": "sahne.png",
+                    "ImagePath": "Sahne.png",
                     "SoundPath": "Objects/Sahne.mp3"
                 }
             },
             {
                 "Name": "Senf",
                 "Media": {
-                    "ImagePath": "senf.png",
+                    "ImagePath": "Senf.png",
                     "SoundPath": "Objects/Senf.mp3"
                 }
             },
             {
                 "Name": "Sofa",
                 "Media": {
-                    "ImagePath": "sofa.png",
+                    "ImagePath": "Sofa.png",
                     "SoundPath": "Objects/Sofa.mp3"
                 }
             },
             {
                 "Name": "Sonne",
                 "Media": {
-                    "ImagePath": "sonne.png",
+                    "ImagePath": "Sonne.png",
                     "SoundPath": "Objects/Sonne.mp3"
                 }
             },
             {
                 "Name": "Tasse",
                 "Media": {
-                    "ImagePath": "tasse.png",
+                    "ImagePath": "Tasse.png",
                     "SoundPath": "Objects/Tasse.mp3"
                 }
             },
             {
                 "Name": "Teller",
                 "Media": {
-                    "ImagePath": "teller.png",
+                    "ImagePath": "Teller.png",
                     "SoundPath": "Objects/Teller.mp3"
                 }
             },
             {
                 "Name": "Toilette",
                 "Media": {
-                    "ImagePath": "toilette.png",
+                    "ImagePath": "Toilette.png",
                     "SoundPath": "Objects/Toilette.mp3"
                 }
             },
             {
                 "Name": "Tomate",
                 "Media": {
-                    "ImagePath": "tomate.png",
+                    "ImagePath": "Tomate.png",
                     "SoundPath": "Objects/Tomate.mp3"
                 }
             },
             {
                 "Name": "U-Boot",
                 "Media": {
-                    "ImagePath": "u-boot.png",
+                    "ImagePath": "U-Boot.png",
                     "SoundPath": "Objects/U-Boot.mp3"
                 }
             },
             {
                 "Name": "Ufo",
                 "Media": {
-                    "ImagePath": "ufo.png",
+                    "ImagePath": "Ufo.png",
                     "SoundPath": "Objects/Ufo.mp3"
                 }
             },
             {
                 "Name": "Uhren",
                 "Media": {
-                    "ImagePath": "uhren.png",
+                    "ImagePath": "Uhren.png",
                     "SoundPath": "Objects/Uhren.mp3"
                 }
             },
             {
                 "Name": "Uhu",
                 "Media": {
-                    "ImagePath": "uhu.png",
+                    "ImagePath": "Uhu.png",
                     "SoundPath": "Objects/Uhu.mp3"
                 }
             },
             {
                 "Name": "Vogel",
                 "Media": {
-                    "ImagePath": "vogel.png",
+                    "ImagePath": "Vogel.png",
                     "SoundPath": "Objects/Vogel.mp3"
                 }
             },
             {
                 "Name": "Waffe",
                 "Media": {
-                    "ImagePath": "waffe.png",
+                    "ImagePath": "Waffe.png",
                     "SoundPath": "Objects/Waffe.mp3"
                 }
             },
             {
                 "Name": "Wald",
                 "Media": {
-                    "ImagePath": "wald.png",
+                    "ImagePath": "Wald.png",
                     "SoundPath": "Objects/Wald.mp3"
                 }
             },
             {
                 "Name": "Wale",
                 "Media": {
-                    "ImagePath": "wale.png",
+                    "ImagePath": "Wale.png",
                     "SoundPath": "Objects/Wale.mp3"
                 }
             },
             {
                 "Name": "Weg",
                 "Media": {
-                    "ImagePath": "weg.png",
+                    "ImagePath": "Weg.png",
                     "SoundPath": "Objects/Weg.mp3"
                 }
             },
             {
                 "Name": "Weste",
                 "Media": {
-                    "ImagePath": "weste.png",
+                    "ImagePath": "Weste.png",
                     "SoundPath": "Objects/Weste.mp3"
                 }
             },
             {
-                "Name": "Zaube-rer",
+                "Name": "Zauberer",
                 "Media": {
-                    "ImagePath": "zauberer.png",
+                    "ImagePath": "Zauberer.png",
                     "SoundPath": "Objects/Zauberer.mp3"
                 }
             },
             {
                 "Name": "Zecke",
                 "Media": {
-                    "ImagePath": "zecke.png",
+                    "ImagePath": "Zecke.png",
                     "SoundPath": "Objects/Zecke.mp3"
                 }
             },
             {
                 "Name": "Zelt",
                 "Media": {
-                    "ImagePath": "zelt.png",
+                    "ImagePath": "Zelt.png",
                     "SoundPath": "Objects/Zelt.mp3"
                 }
             },
             {
                 "Name": "Zone",
                 "Media": {
-                    "ImagePath": "zone.png",
+                    "ImagePath": "Zone.png",
                     "SoundPath": "Objects/Zone.mp3"
                 }
             },
             {
                 "Name": "Zylinder",
                 "Media": {
-                    "ImagePath": "zylinder.png",
+                    "ImagePath": "Zylinder.png",
                     "SoundPath": "Objects/Zylinder.mp3"
                 }
             }
