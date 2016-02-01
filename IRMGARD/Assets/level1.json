@@ -25,10 +25,10 @@
               "LettersToLearn": [
                 "A"
               ],
-              "Name": "Affe",
+              "Name": "Aal",
               "Media": {
-                "ImagePath": "Affe.png",
-                "SoundPath": "Objects/Affe.mp3"
+                "ImagePath": "Aal.png",
+                "SoundPath": "Objects/Aal.mp3"
               }
             },
             {
@@ -89,6 +89,13 @@
             {
               "Letter": "A",
               "Media": {
+                "ImagePath": "Aal.png",
+                "SoundPath": "Objects/Aal.mp3"
+              }
+            },
+            {
+              "Letter": "A",
+              "Media": {
                 "ImagePath": "Ameise.png",
                 "SoundPath": "Objects/Ameise.mp3"
               }
@@ -105,6 +112,13 @@
               "Media": {
                 "ImagePath": "Ahorn.png",
                 "SoundPath": "Objects/Ahorn.mp3"
+              }
+            },
+            {
+              "Letter": "E",
+              "Media": {
+                "ImagePath": "Elefant.png",
+                "SoundPath": "Objects/Elefant.mp3"
               }
             },
             {
@@ -131,6 +145,13 @@
             {
               "Letter": "I",
               "Media": {
+                "ImagePath": "Igel.png",
+                "SoundPath": "Objects/Igel.mp3"
+              }
+            },
+            {
+              "Letter": "I",
+              "Media": {
                 "ImagePath": "Insel.png",
                 "SoundPath": "Objects/Insel.mp3"
               }
@@ -147,6 +168,13 @@
               "Media": {
                 "ImagePath": "Ina.png",
                 "SoundPath": "Objects/Ina.mp3"
+              }
+            },
+            {
+              "Letter": "O",
+              "Media": {
+                "ImagePath": "Ofen.png",
+                "SoundPath": "Objects/Ofen.mp3"
               }
             },
             {
@@ -175,6 +203,13 @@
               "Media": {
                 "ImagePath": "U-Boot.png",
                 "SoundPath": "Objects/U-Boot.mp3"
+              }
+            },
+            {
+              "Letter": "U",
+              "Media": {
+                "ImagePath": "Uhu.png",
+                "SoundPath": "Objects/Uhu.mp3"
               }
             },
             {
@@ -248,7 +283,7 @@
         },
         {
           "$type": "IRMGARD.Models.FindMissingLetter, IRMGARD",
-          "Id": 115,
+          "Id": 114,
           "Title": "A?IOU",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 4.mp3",
@@ -319,8 +354,278 @@
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
-          "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
+          "$type": "IRMGARD.Models.HearMe, IRMGARD",
           "Id": 121,
+          "Title": "LMNRS",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 1.mp3",
+          "Hint": "Lesson 1 Hint",
+          "TypeOfLevel": "HearMe",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "L"
+              ],
+              "Name": "Los",
+              "Media": {
+                "ImagePath": "Los.png",
+                "SoundPath": "Objects/Los.mp3"
+              }
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "M"
+              ],
+              "Name": "Mond",
+              "Media": {
+                "ImagePath": "Mond.png",
+                "SoundPath": "Objects/Mond.mp3"
+              }
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "N"
+              ],
+              "Name": "Nase",
+              "Media": {
+                "ImagePath": "Nase.png",
+                "SoundPath": "Objects/Nase.mp3"
+              }
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "R"
+              ],
+              "Name": "Regen",
+              "Media": {
+                "ImagePath": "Regen.png",
+                "SoundPath": "Objects/Regen.mp3"
+              }
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "S"
+              ],
+              "Name": "Sonne",
+              "Media": {
+                "ImagePath": "Sonne.png",
+                "SoundPath": "Objects/Sonne.mp3"
+              }
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.LetterDrop, IRMGARD",
+          "Id": 122,
+          "Title": "M oder m?",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 2.mp3",
+          "Hint": "Lesson 2 Hint",
+          "TypeOfLevel": "LetterDrop",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.LetterDropIteration, IRMGARD",
+              "LettersToLearn": [
+                "L",
+                "M",
+                "N",
+                "R",
+                "S"
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.FourPictures, IRMGARD",
+          "Id": 123,
+          "Title": "LMNRS",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 3.mp3",
+          "Hint": "Lesson 3 Hint",
+          "TypeOfLevel": "FourPictures",
+          "Options": [
+            {
+              "Letter": "L",
+              "Media": {
+                "ImagePath": "Lasso.png",
+                "SoundPath": "Objects/Lasso.mp3"
+              }
+            },
+            {
+              "Letter": "L",
+              "Media": {
+                "ImagePath": "Liege.png",
+                "SoundPath": "Objects/Liege.mp3"
+              }
+            },
+            {
+              "Letter": "L",
+              "Media": {
+                "ImagePath": "Los.png",
+                "SoundPath": "Objects/Los.mp3"
+              }
+            },
+            {
+              "Letter": "L",
+              "Media": {
+                "ImagePath": "Lupe.png",
+                "SoundPath": "Objects/Lupe.mp3"
+              }
+            },
+            {
+              "Letter": "M",
+              "Media": {
+                "ImagePath": "Maus.png",
+                "SoundPath": "Objects/Maus.mp3"
+              }
+            },
+            {
+              "Letter": "M",
+              "Media": {
+                "ImagePath": "Mond.png",
+                "SoundPath": "Objects/Mond.mp3"
+              }
+            },
+            {
+              "Letter": "M",
+              "Media": {
+                "ImagePath": "Muehle.png",
+                "SoundPath": "Objects/Muehle.mp3"
+              }
+            },
+            {
+              "Letter": "M",
+              "Media": {
+                "ImagePath": "Mund.png",
+                "SoundPath": "Objects/Mund.mp3"
+              }
+            },
+            {
+              "Letter": "N",
+              "Media": {
+                "ImagePath": "Nagel.png",
+                "SoundPath": "Objects/Nagel.mp3"
+              }
+            },
+            {
+              "Letter": "N",
+              "Media": {
+                "ImagePath": "Nase.png",
+                "SoundPath": "Objects/Nase.mp3"
+              }
+            },
+            {
+              "Letter": "N",
+              "Media": {
+                "ImagePath": "Natter.png",
+                "SoundPath": "Objects/Natter.mp3"
+              }
+            },
+            {
+              "Letter": "N",
+              "Media": {
+                "ImagePath": "Note.png",
+                "SoundPath": "Objects/Note.mp3"
+              }
+            },
+            {
+              "Letter": "R",
+              "Media": {
+                "ImagePath": "Ratte.png",
+                "SoundPath": "Objects/Ratte.mp3"
+              }
+            },
+            {
+              "Letter": "R",
+              "Media": {
+                "ImagePath": "Regen.png",
+                "SoundPath": "Objects/Regen.mp3"
+              }
+            },
+            {
+              "Letter": "R",
+              "Media": {
+                "ImagePath": "Riss.png",
+                "SoundPath": "Objects/Riss.mp3"
+              }
+            },
+            {
+              "Letter": "R",
+              "Media": {
+                "ImagePath": "Rose.png",
+                "SoundPath": "Objects/Rose.mp3"
+              }
+            },
+            {
+              "Letter": "S",
+              "Media": {
+                "ImagePath": "Saege.png",
+                "SoundPath": "Objects/Saege.mp3"
+              }
+            },
+            {
+              "Letter": "S",
+              "Media": {
+                "ImagePath": "Sahne.png",
+                "SoundPath": "Objects/Sahne.mp3"
+              }
+            },
+            {
+              "Letter": "S",
+              "Media": {
+                "ImagePath": "Senf.png",
+                "SoundPath": "Objects/Senf.mp3"
+              }
+            },
+            {
+              "Letter": "S",
+              "Media": {
+                "ImagePath": "Sonne.png",
+                "SoundPath": "Objects/Sonne.mp3"
+              }
+            }
+          ],
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "LettersToLearn": [
+                "L"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "LettersToLearn": [
+                "M"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "LettersToLearn": [
+                "N"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "LettersToLearn": [
+                "R"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "LettersToLearn": [
+                "S"
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
+          "Id": 126,
           "Title": "AEIOU",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 6.mp3",
@@ -371,7 +676,7 @@
         },
         {
           "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",
-          "Id": 112,
+          "Id": 128,
           "Title": "Silben lesen und schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 8.mp3",
@@ -411,7 +716,7 @@
         },
         {
           "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",
-          "Id": 112,
+          "Id": 129,
           "Title": "Silben lesen und schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 9.mp3",
@@ -479,14 +784,595 @@
       "Color": "#d8cbd1",
       "VideoPath": null,
       "NumberOfLessonsDone": 0,
-      "Lessons": []
+      "Lessons": [
+        {
+          "$type": "IRMGARD.Models.HearMe, IRMGARD",
+          "Id": 131,
+          "Title": "FHJWZ",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 3 Aufgabe 1.mp3",
+          "Hint": "Lesson 1 Hint",
+          "TypeOfLevel": "HearMe",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "F"
+              ],
+              "Name": "Fisch",
+              "Media": {
+                "ImagePath": "Fisch.png",
+                "SoundPath": "Objects/Fisch.mp3"
+              }
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "H"
+              ],
+              "Name": "Hose",
+              "Media": {
+                "ImagePath": "Hose.png",
+                "SoundPath": "Objects/Hose.mp3"
+              }
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "J"
+              ],
+              "Name": "Jacke",
+              "Media": {
+                "ImagePath": "Jacke.png",
+                "SoundPath": "Objects/Jacke.mp3"
+              }
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "W"
+              ],
+              "Name": "Wald",
+              "Media": {
+                "ImagePath": "Wald.png",
+                "SoundPath": "Objects/Wald.mp3"
+              }
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "Z"
+              ],
+              "Name": "Zelt",
+              "Media": {
+                "ImagePath": "Zelt.png",
+                "SoundPath": "Objects/Zelt.mp3"
+              }
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.LetterDrop, IRMGARD",
+          "Id": 132,
+          "Title": "F oder f?",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 3 Aufgabe 2.mp3",
+          "Hint": "Lesson 2 Hint",
+          "TypeOfLevel": "LetterDrop",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.LetterDropIteration, IRMGARD",
+              "LettersToLearn": [
+                "F",
+                "H",
+                "J",
+                "W",
+                "Z"
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.FourPictures, IRMGARD",
+          "Id": 133,
+          "Title": "FHJWZ",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 3 Aufgabe 3.mp3",
+          "Hint": "Lesson 3 Hint",
+          "TypeOfLevel": "FourPictures",
+          "Options": [
+            {
+              "Letter": "F",
+              "Media": {
+                "ImagePath": "Fahrrad.png",
+                "SoundPath": "Objects/Fahrrad.mp3"
+              }
+            },
+            {
+              "Letter": "F",
+              "Media": {
+                "ImagePath": "Fernrohr.png",
+                "SoundPath": "Objects/Fernrohr.mp3"
+              }
+            },
+            {
+              "Letter": "F",
+              "Media": {
+                "ImagePath": "Fisch.png",
+                "SoundPath": "Objects/Fisch.mp3"
+              }
+            },
+            {
+              "Letter": "F",
+              "Media": {
+                "ImagePath": "Foto.png",
+                "SoundPath": "Objects/Foto.mp3"
+              }
+            },
+            {
+              "Letter": "H",
+              "Media": {
+                "ImagePath": "Hand.png",
+                "SoundPath": "Objects/Hand.mp3"
+              }
+            },
+            {
+              "Letter": "H",
+              "Media": {
+                "ImagePath": "Handy.png",
+                "SoundPath": "Objects/Handy.mp3"
+              }
+            },
+            {
+              "Letter": "H",
+              "Media": {
+                "ImagePath": "Hose.png",
+                "SoundPath": "Objects/Hose.mp3"
+              }
+            },
+            {
+              "Letter": "H",
+              "Media": {
+                "ImagePath": "Hut.png",
+                "SoundPath": "Objects/Hut.mp3"
+              }
+            },
+            {
+              "Letter": "J",
+              "Media": {
+                "ImagePath": "Jacke.png",
+                "SoundPath": "Objects/Jacke.mp3"
+              }
+            },
+            {
+              "Letter": "J",
+              "Media": {
+                "ImagePath": "Jaguar.png",
+                "SoundPath": "Objects/Jaguar.mp3"
+              }
+            },
+            {
+              "Letter": "J",
+              "Media": {
+                "ImagePath": "Jet.png",
+                "SoundPath": "Objects/Jet.mp3"
+              }
+            },
+            {
+              "Letter": "W",
+              "Media": {
+                "ImagePath": "Waffe.png",
+                "SoundPath": "Objects/Waffe.mp3"
+              }
+            },
+            {
+              "Letter": "W",
+              "Media": {
+                "ImagePath": "Wald.png",
+                "SoundPath": "Objects/Wald.mp3"
+              }
+            },
+            {
+              "Letter": "W",
+              "Media": {
+                "ImagePath": "Weg.png",
+                "SoundPath": "Objects/Weg.mp3"
+              }
+            },
+            {
+              "Letter": "W",
+              "Media": {
+                "ImagePath": "Weste.png",
+                "SoundPath": "Objects/Weste.mp3"
+              }
+            },
+            {
+              "Letter": "Z",
+              "Media": {
+                "ImagePath": "Zauberer.png",
+                "SoundPath": "Objects/Zauberer.mp3"
+              }
+            },
+            {
+              "Letter": "Z",
+              "Media": {
+                "ImagePath": "Zecke.png",
+                "SoundPath": "Objects/Zecke.mp3"
+              }
+            },
+            {
+              "Letter": "Z",
+              "Media": {
+                "ImagePath": "Zelt.png",
+                "SoundPath": "Objects/Zelt.mp3"
+              }
+            },
+            {
+              "Letter": "Z",
+              "Media": {
+                "ImagePath": "Zylinder.png",
+                "SoundPath": "Objects/Zylinder.mp3"
+              }
+            }
+          ],
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "LettersToLearn": [
+                "F"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "LettersToLearn": [
+                "H"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "LettersToLearn": [
+                "J"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "LettersToLearn": [
+                "W"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "LettersToLearn": [
+                "Z"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "Name": "4",
       "Color": "#c1cbac",
       "VideoPath": null,
       "NumberOfLessonsDone": 0,
-      "Lessons": []
+      "Lessons": [
+        {
+          "$type": "IRMGARD.Models.HearMe, IRMGARD",
+          "Id": 141,
+          "Title": "BDGKPT",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 4 Aufgabe 1.mp3",
+          "Hint": "Lesson 1 Hint",
+          "TypeOfLevel": "HearMe",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "B"
+              ],
+              "Name": "Boot",
+              "Media": {
+                "ImagePath": "Boot.png",
+                "SoundPath": "Objects/Boot.mp3"
+              }
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "D"
+              ],
+              "Name": "Dusche",
+              "Media": {
+                "ImagePath": "Dusche.png",
+                "SoundPath": "Objects/Dusche.mp3"
+              }
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "G"
+              ],
+              "Name": "Gabel",
+              "Media": {
+                "ImagePath": "Gabel.png",
+                "SoundPath": "Objects/Gabel.mp3"
+              }
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "K"
+              ],
+              "Name": "Katze",
+              "Media": {
+                "ImagePath": "Katze.png",
+                "SoundPath": "Objects/Katze.mp3"
+              }
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "P"
+              ],
+              "Name": "Po",
+              "Media": {
+                "ImagePath": "Po.png",
+                "SoundPath": "Objects/Po.mp3"
+              }
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "T"
+              ],
+              "Name": "Tomate",
+              "Media": {
+                "ImagePath": "Tomate.png",
+                "SoundPath": "Objects/Tomate.mp3"
+              }
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.LetterDrop, IRMGARD",
+          "Id": 142,
+          "Title": "B oder b?",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 4 Aufgabe 2.mp3",
+          "Hint": "Lesson 2 Hint",
+          "TypeOfLevel": "LetterDrop",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.LetterDropIteration, IRMGARD",
+              "LettersToLearn": [
+                "B",
+                "D",
+                "G",
+                "K",
+                "P",
+                "T"
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.FourPictures, IRMGARD",
+          "Id": 143,
+          "Title": "BDGKPT",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 4 Aufgabe 3.mp3",
+          "Hint": "Lesson 3 Hint",
+          "TypeOfLevel": "FourPictures",
+          "Options": [
+            {
+              "Letter": "B",
+              "Media": {
+                "ImagePath": "Bad.png",
+                "SoundPath": "Objects/Bad.mp3"
+              }
+            },
+            {
+              "Letter": "B",
+              "Media": {
+                "ImagePath": "Birne.png",
+                "SoundPath": "Objects/Birne.mp3"
+              }
+            },
+            {
+              "Letter": "B",
+              "Media": {
+                "ImagePath": "Bohne.png",
+                "SoundPath": "Objects/Bohne.mp3"
+              }
+            },
+            {
+              "Letter": "B",
+              "Media": {
+                "ImagePath": "Boot.png",
+                "SoundPath": "Objects/Boot.mp3"
+              }
+            },
+            {
+              "Letter": "D",
+              "Media": {
+                "ImagePath": "Degen.png",
+                "SoundPath": "Objects/Degen.mp3"
+              }
+            },
+            {
+              "Letter": "D",
+              "Media": {
+                "ImagePath": "Dollar.png",
+                "SoundPath": "Objects/Dollar.mp3"
+              }
+            },
+            {
+              "Letter": "D",
+              "Media": {
+                "ImagePath": "Drachen.png",
+                "SoundPath": "Objects/Drachen.mp3"
+              }
+            },
+            {
+              "Letter": "D",
+              "Media": {
+                "ImagePath": "Dusche.png",
+                "SoundPath": "Objects/Dusche.mp3"
+              }
+            },
+            {
+              "Letter": "G",
+              "Media": {
+                "ImagePath": "Gabel.png",
+                "SoundPath": "Objects/Gabel.mp3"
+              }
+            },
+            {
+              "Letter": "G",
+              "Media": {
+                "ImagePath": "Gans.png",
+                "SoundPath": "Objects/Gans.mp3"
+              }
+            },
+            {
+              "Letter": "G",
+              "Media": {
+                "ImagePath": "Giraffe.png",
+                "SoundPath": "Objects/Giraffe.mp3"
+              }
+            },
+            {
+              "Letter": "G",
+              "Media": {
+                "ImagePath": "Gluehbirne.png",
+                "SoundPath": "Objects/Gluehbirne.mp3"
+              }
+            },
+            {
+              "Letter": "K",
+              "Media": {
+                "ImagePath": "Kachel.png",
+                "SoundPath": "Objects/Kachel.mp3"
+              }
+            },
+            {
+              "Letter": "K",
+              "Media": {
+                "ImagePath": "Katze.png",
+                "SoundPath": "Objects/Katze.mp3"
+              }
+            },
+            {
+              "Letter": "K",
+              "Media": {
+                "ImagePath": "Kohle.png",
+                "SoundPath": "Objects/Kohle.mp3"
+              }
+            },
+            {
+              "Letter": "K",
+              "Media": {
+                "ImagePath": "Kuchen.png",
+                "SoundPath": "Objects/Kuchen.mp3"
+              }
+            },
+            {
+              "Letter": "P",
+              "Media": {
+                "ImagePath": "Panda.png",
+                "SoundPath": "Objects/Panda.mp3"
+              }
+            },
+            {
+              "Letter": "P",
+              "Media": {
+                "ImagePath": "Petersilie.png",
+                "SoundPath": "Objects/Petersilie.mp3"
+              }
+            },
+            {
+              "Letter": "P",
+              "Media": {
+                "ImagePath": "Po.png",
+                "SoundPath": "Objects/Po.mp3"
+              }
+            },
+            {
+              "Letter": "P",
+              "Media": {
+                "ImagePath": "Puma.png",
+                "SoundPath": "Objects/Puma.mp3"
+              }
+            },
+            {
+              "Letter": "T",
+              "Media": {
+                "ImagePath": "Tasse.png",
+                "SoundPath": "Objects/Tasse.mp3"
+              }
+            },
+            {
+              "Letter": "T",
+              "Media": {
+                "ImagePath": "Teller.png",
+                "SoundPath": "Objects/Teller.mp3"
+              }
+            },
+            {
+              "Letter": "T",
+              "Media": {
+                "ImagePath": "Toilette.png",
+                "SoundPath": "Objects/Toilette.mp3"
+              }
+            },
+            {
+              "Letter": "T",
+              "Media": {
+                "ImagePath": "Tomate.png",
+                "SoundPath": "Objects/Tomate.mp3"
+              }
+            }
+          ],
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "LettersToLearn": [
+                "B"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "LettersToLearn": [
+                "D"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "LettersToLearn": [
+                "G"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "LettersToLearn": [
+                "K"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "LettersToLearn": [
+                "P"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "LettersToLearn": [
+                "T"
+              ]
+            }
+          ]
+        }
+      ]
     },
     {
       "Name": "5",
@@ -495,9 +1381,96 @@
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
+          "$type": "IRMGARD.Models.HearMe, IRMGARD",
+          "Id": 151,
+          "Title": "CQVXY",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 5 Aufgabe 1.mp3",
+          "Hint": "Lesson 1 Hint",
+          "TypeOfLevel": "HearMe",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "C"
+              ],
+              "Name": "Clown",
+              "Media": {
+                "ImagePath": "Clown.png",
+                "SoundPath": "Objects/Clown.mp3"
+              }
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "Q"
+              ],
+              "Name": "Qualle",
+              "Media": {
+                "ImagePath": "Qualle.png",
+                "SoundPath": "Objects/Qualle.mp3"
+              }
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "V"
+              ],
+              "Name": "Vogel",
+              "Media": {
+                "ImagePath": "Vogel.png",
+                "SoundPath": "Objects/Vogel.mp3"
+              }
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "X"
+              ],
+              "Name": "Hexe",
+              "Media": {
+                "ImagePath": "Hexe.png",
+                "SoundPath": "Objects/Hexe.mp3"
+              }
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "LettersToLearn": [
+                "Y"
+              ],
+              "Name": "Baby",
+              "Media": {
+                "ImagePath": "Baby.png",
+                "SoundPath": "Objects/Baby.mp3"
+              }
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.LetterDrop, IRMGARD",
+          "Id": 152,
+          "Title": "X oder x?",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 5 Aufgabe 2.mp3",
+          "Hint": "Lesson 2 Hint",
+          "TypeOfLevel": "LetterDrop",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.LetterDropIteration, IRMGARD",
+              "LettersToLearn": [
+                "C",
+                "Q",
+                "V",
+                "X",
+                "Y"
+              ]
+            }
+          ]
+        },
+        {
           "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
           "Id": 155,
-          "Title": "Wo sind die Mitlaute?",
+          "Title": "Vorne, Mitte oder hinten?",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 5 Aufgabe 5.mp3",
           "Hint": "Lesson 5 Hint",
@@ -626,7 +1599,7 @@
           "Id": 162,
           "Title": "BAD?",
           "SoundPath": "Level-1/Level 1 Modul 6 Aufgabe 2.mp3",
-          "Hint": "Lesson 6 Hint",
+          "Hint": "Lesson 2 Hint",
           "TypeOfLevel": "AbcRank",
           "Iterations": [
             {
@@ -639,22 +1612,22 @@
                 },
                 {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "B",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "C",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "D",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
                   "Name": "E",
-                  "Media": null
-                },
-                {
-                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "Name": "U",
-                  "Media": null
-                },
-                {
-                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "Name": "I",
-                  "Media": null
-                },
-                {
-                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "Name": "O",
                   "Media": null
                 }
               ]
@@ -666,7 +1639,7 @@
           "Id": 163,
           "Title": "BAD?",
           "SoundPath": "Level-1/Level 1 Modul 6 Aufgabe 3.mp3",
-          "Hint": "Lesson 6 Hint",
+          "Hint": "Lesson 3 Hint",
           "TypeOfLevel": "AbcRank",
           "Iterations": [
             {
@@ -674,42 +1647,42 @@
               "Options": [
                 {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "Name": "Affe",
+                  "Name": "Aal",
                   "Media": {
-                    "ImagePath": "Affe.png",
-                    "SoundPath": "Objects/Affe.mp3"
+                    "ImagePath": "Aal.png",
+                    "SoundPath": "Objects/Aal.mp3"
                   }
                 },
                 {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "Name": "Eber",
+                  "Name": "Bad",
                   "Media": {
-                    "ImagePath": "Eber.png",
-                    "SoundPath": "Objects/Eber.mp3"
+                    "ImagePath": "Bad.png",
+                    "SoundPath": "Objects/Bad.mp3"
                   }
                 },
                 {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "Name": "Ufo",
+                  "Name": "Clown",
                   "Media": {
-                    "ImagePath": "Ufo.png",
-                    "SoundPath": "Objects/Ufo.mp3"
+                    "ImagePath": "Clown.png",
+                    "SoundPath": "Objects/Clown.mp3"
                   }
                 },
                 {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "Name": "Insel",
+                  "Name": "Dusche",
                   "Media": {
-                    "ImagePath": "Insel.png",
-                    "SoundPath": "Objects/Insel.mp3"
+                    "ImagePath": "Dusche.png",
+                    "SoundPath": "Objects/Dusche.mp3"
                   }
                 },
                 {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
-                  "Name": "Ofen",
+                  "Name": "Elefant",
                   "Media": {
-                    "ImagePath": "Ofen.png",
-                    "SoundPath": "Objects/Ofen.mp3"
+                    "ImagePath": "Elefant.png",
+                    "SoundPath": "Objects/Elefant.mp3"
                   }
                 }
               ]
@@ -718,7 +1691,7 @@
         },
         {
           "$type": "IRMGARD.Models.Memory, IRMGARD",
-          "Id": 164,
+          "Id": 165,
           "Title": "Memory",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 6 Aufgabe 5.mp3",
