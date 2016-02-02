@@ -6,6 +6,6 @@
     <solid
         android:color="@color/irmgard_red_dark" />
     <size
-        android:height="40dp"
-        android:width="40dp" />
+        android:height="30dp"
+        android:width="30dp" />
 </shape>

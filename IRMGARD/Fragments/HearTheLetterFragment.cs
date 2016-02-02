@@ -35,7 +35,7 @@ namespace IRMGARD
 
         private int ConvertProgressToLocation(int p)
         {
-            return (p < 10) ? 0 : ((p < 20) ? 1 : ((p < 30) ? 2 : 0));
+            return (p < 10) ? 0 : ((p <= 20) ? 1 : ((p <= 30) ? 2 : 0));
         }
 
         protected override void InitIteration()

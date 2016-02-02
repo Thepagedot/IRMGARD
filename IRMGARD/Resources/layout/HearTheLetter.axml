@@ -9,14 +9,19 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:src="@drawable/ic_volume_up_black_24dp" />
-    <SeekBar
-        android:id="@+id/sbLetterPos"
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="50dp"
-        android:progressDrawable="@drawable/line_red"
-        android:thumb="@drawable/oval_red"
-        android:progress="15"
-        android:max="29" />
+        android:paddingTop="120dp"
+        android:layout_gravity="center">
+        <SeekBar
+            android:id="@+id/sbLetterPos"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:progressDrawable="@drawable/line_red"
+            android:thumb="@drawable/oval_red"
+            android:background="@drawable/vert_lines_inset"
+            android:progress="15"
+            android:max="30" />
+    </FrameLayout>
 </LinearLayout>
-
