@@ -34,10 +34,10 @@ namespace IRMGARD
         public event UserInteractedEventHandler UserInteracted;
         public delegate void UserInteractedEventHandler(object sender, UserInteractedEventArgs e);      
 
-        protected void FireIterationFinished(Iteration iteration, bool success)
+        protected void FireIterationFinished(Iteration iteration, bool success, bool showAnimation)
         {
             if (IterationFinished != null)
-                IterationFinished(this, new IterationFinishedEventArgs(iteration, success));
+                IterationFinished(this, new IterationFinishedEventArgs(iteration, success, showAnimation));
         }
 
         protected void FireIterationChanged(Iteration iteration)
@@ -91,10 +91,18 @@ namespace IRMGARD
         /// </summary>
         protected void FinishIteration(bool success)
         {
+            FinishIteration(success, true);
+        }
+
+        /// <summary>
+        /// Finishes the iteration and initiates the next one when available or finishes the Lesson.
+        /// </summary>
+        protected void FinishIteration(bool success, bool showAnimation)
+        {
             var iteration = Lesson.Iterations.ElementAt(currentIterationIndex);
             iteration.Status = success ? IterationStatus.Success : IterationStatus.Failed;
 
-            FireIterationFinished(iteration, success);
+            FireIterationFinished(iteration, success, showAnimation);
 
             if (currentIterationIndex == Lesson.Iterations.Count - 1)
             {
@@ -138,11 +146,13 @@ namespace IRMGARD
     {
         public Iteration Iteration { get; set; }
         public bool Success { get; set; }
+        public bool ShowAnimation { get; set; }
 
-        public IterationFinishedEventArgs(Iteration iteration, bool success) : base()
+        public IterationFinishedEventArgs(Iteration iteration, bool success, bool showAnimation) : base()
         {
             this.Iteration = iteration;
             this.Success = success;
+            this.ShowAnimation = showAnimation;
         }
     }    
 

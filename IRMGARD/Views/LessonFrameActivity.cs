@@ -174,15 +174,18 @@ namespace IRMGARD
             rvProgress.GetAdapter().NotifyItemChanged(iterationIndex);
 
             // Show success animation
-            if (e.Success)
-                ivSuccess.SetImageResource(Resource.Drawable.irmgard_icon_spiel_supergemacht);
-            else
-                ivSuccess.SetImageResource(Resource.Drawable.irmgard_icon_spiel_nochmal);
+            if (e.ShowAnimation)
+            {
+                if (e.Success)
+                    ivSuccess.SetImageResource(Resource.Drawable.irmgard_icon_spiel_supergemacht);
+                else
+                    ivSuccess.SetImageResource(Resource.Drawable.irmgard_icon_spiel_nochmal);
 
-            var animation = AnimationUtils.LoadAnimation(this, Resource.Animation.ShowFeedbackIcon);
-            animation.AnimationEnd += (s, args) => ivSuccess.Visibility = ViewStates.Gone;
-            ivSuccess.Visibility = ViewStates.Visible;
-            ivSuccess.StartAnimation(animation);
+                var animation = AnimationUtils.LoadAnimation(this, Resource.Animation.ShowFeedbackIcon);
+                animation.AnimationEnd += (s, args) => ivSuccess.Visibility = ViewStates.Gone;
+                ivSuccess.Visibility = ViewStates.Visible;
+                ivSuccess.StartAnimation(animation);
+            }
 
             // Stop Player
             SoundPlayer.Stop();

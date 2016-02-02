@@ -72,7 +72,7 @@ namespace IRMGARD
 
         public override void CheckSolution()
         {
-            FinishIteration(true);
+            FinishIteration(true, false);
         }            
 	}
 }
