@@ -11,6 +11,14 @@ namespace IRMGARD
 	{
         static readonly MediaPlayer player;
 
+        public static bool IsPlaying
+        {
+            get
+            {
+                return player.IsPlaying;
+            }
+        }
+
         static SoundPlayer()
         {
             player = new MediaPlayer();
@@ -28,12 +36,12 @@ namespace IRMGARD
 			// Set default folder "Sounds" if nothing else is set
 			if (folderName == null)
 				folderName = "Sounds";
-			
-			try 
+
+			try
 			{
 				// Describe sound file from Assets properly
 				var descriptor = context.Assets.OpenFd(folderName + "/" +  fileName);
-						
+
                 // Reset player if still playing
                 Stop();
 
@@ -41,7 +49,7 @@ namespace IRMGARD
 				player.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
 				player.Prepare();
 				player.Start();
-			} 
+			}
 			catch (FileNotFoundException)
 			{
 				Toast.MakeText(context, context.GetString(Resource.String.error_soundfileNotFound), ToastLength.Short);
