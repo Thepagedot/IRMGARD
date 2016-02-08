@@ -141,11 +141,6 @@
     <AndroidAsset Include="Assets\level8.json" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="packages.config" />
-    <AndroidAsset Include="Assets\Sounds\Letters\A-lang.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Letters\E-lang.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Letters\I-lang.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Letters\O-lang.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Letters\U-lang.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Elefant.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Ofen.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Uhu.mp3" />
@@ -656,6 +651,32 @@
     <AndroidAsset Include="Assets\Sounds\Syllables\BDGKPT\up_lang.mp3" />
     <AndroidAsset Include="Assets\Sounds\Syllables\BDGKPT\ut_kurz.mp3" />
     <AndroidAsset Include="Assets\Sounds\Syllables\BDGKPT\ut_lang.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\AAal.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\BBoot.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\CClown.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\DDusche.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\EElefant.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\FFisch.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\GGabel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\HHose.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\IIgel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\JJacke.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\KKatze.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\LLos.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\MMond.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\NNase.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\OOfen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\PPo.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\QQualle.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\RRegen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\SSonne.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\TTomate.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\UUhu.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\VVogel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\WWald.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\XHexe.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\YBaby.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\ZZelt.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />

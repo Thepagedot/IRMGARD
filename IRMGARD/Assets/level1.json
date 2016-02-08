@@ -28,7 +28,7 @@
               "Name": "Aal",
               "Media": {
                 "ImagePath": "Aal.png",
-                "SoundPath": "Objects/Aal.mp3"
+                "SoundPath": "Letters/AAal.mp3"
               }
             },
             {
@@ -39,7 +39,7 @@
               "Name": "Elefant",
               "Media": {
                 "ImagePath": "Elefant.png",
-                "SoundPath": "Objects/Elefant.mp3"
+                "SoundPath": "Letters/EElefant.mp3"
               }
             },
             {
@@ -50,7 +50,7 @@
               "Name": "Igel",
               "Media": {
                 "ImagePath": "Igel.png",
-                "SoundPath": "Objects/Igel.mp3"
+                "SoundPath": "Letters/IIgel.mp3"
               }
             },
             {
@@ -61,7 +61,7 @@
               "Name": "Ofen",
               "Media": {
                 "ImagePath": "Ofen.png",
-                "SoundPath": "Objects/Ofen.mp3"
+                "SoundPath": "Letters/OOfen.mp3"
               }
             },
             {
@@ -72,7 +72,7 @@
               "Name": "Uhu",
               "Media": {
                 "ImagePath": "Uhu.png",
-                "SoundPath": "Objects/Uhu.mp3"
+                "SoundPath": "Letters/UUhu.mp3"
               }
             }
           ]
@@ -370,7 +370,7 @@
               "Name": "Los",
               "Media": {
                 "ImagePath": "Los.png",
-                "SoundPath": "Objects/Los.mp3"
+                "SoundPath": "Letters/LLos.mp3"
               }
             },
             {
@@ -381,7 +381,7 @@
               "Name": "Mond",
               "Media": {
                 "ImagePath": "Mond.png",
-                "SoundPath": "Objects/Mond.mp3"
+                "SoundPath": "Letters/MMond.mp3"
               }
             },
             {
@@ -392,7 +392,7 @@
               "Name": "Nase",
               "Media": {
                 "ImagePath": "Nase.png",
-                "SoundPath": "Objects/Nase.mp3"
+                "SoundPath": "Letters/NNase.mp3"
               }
             },
             {
@@ -403,7 +403,7 @@
               "Name": "Regen",
               "Media": {
                 "ImagePath": "Regen.png",
-                "SoundPath": "Objects/Regen.mp3"
+                "SoundPath": "Letters/RRegen.mp3"
               }
             },
             {
@@ -414,7 +414,7 @@
               "Name": "Sonne",
               "Media": {
                 "ImagePath": "Sonne.png",
-                "SoundPath": "Objects/Sonne.mp3"
+                "SoundPath": "Letters/SSonne.mp3"
               }
             }
           ]
@@ -802,7 +802,7 @@
               "Name": "Fisch",
               "Media": {
                 "ImagePath": "Fisch.png",
-                "SoundPath": "Objects/Fisch.mp3"
+                "SoundPath": "Letters/FFisch.mp3"
               }
             },
             {
@@ -813,7 +813,7 @@
               "Name": "Hose",
               "Media": {
                 "ImagePath": "Hose.png",
-                "SoundPath": "Objects/Hose.mp3"
+                "SoundPath": "Letters/HHose.mp3"
               }
             },
             {
@@ -824,7 +824,7 @@
               "Name": "Jacke",
               "Media": {
                 "ImagePath": "Jacke.png",
-                "SoundPath": "Objects/Jacke.mp3"
+                "SoundPath": "Letters/JJacke.mp3"
               }
             },
             {
@@ -835,7 +835,7 @@
               "Name": "Wald",
               "Media": {
                 "ImagePath": "Wald.png",
-                "SoundPath": "Objects/Wald.mp3"
+                "SoundPath": "Letters/WWald.mp3"
               }
             },
             {
@@ -846,7 +846,7 @@
               "Name": "Zelt",
               "Media": {
                 "ImagePath": "Zelt.png",
-                "SoundPath": "Objects/Zelt.mp3"
+                "SoundPath": "Letters/ZZelt.mp3"
               }
             }
           ]
@@ -1073,7 +1073,7 @@
               "Name": "Boot",
               "Media": {
                 "ImagePath": "Boot.png",
-                "SoundPath": "Objects/Boot.mp3"
+                "SoundPath": "Letters/BBoot.mp3"
               }
             },
             {
@@ -1084,7 +1084,7 @@
               "Name": "Dusche",
               "Media": {
                 "ImagePath": "Dusche.png",
-                "SoundPath": "Objects/Dusche.mp3"
+                "SoundPath": "Letters/DDusche.mp3"
               }
             },
             {
@@ -1095,7 +1095,7 @@
               "Name": "Gabel",
               "Media": {
                 "ImagePath": "Gabel.png",
-                "SoundPath": "Objects/Gabel.mp3"
+                "SoundPath": "Letters/GGabel.mp3"
               }
             },
             {
@@ -1106,7 +1106,7 @@
               "Name": "Katze",
               "Media": {
                 "ImagePath": "Katze.png",
-                "SoundPath": "Objects/Katze.mp3"
+                "SoundPath": "Letters/KKatze.mp3"
               }
             },
             {
@@ -1117,7 +1117,7 @@
               "Name": "Po",
               "Media": {
                 "ImagePath": "Po.png",
-                "SoundPath": "Objects/Po.mp3"
+                "SoundPath": "Letters/PPo.mp3"
               }
             },
             {
@@ -1128,7 +1128,7 @@
               "Name": "Tomate",
               "Media": {
                 "ImagePath": "Tomate.png",
-                "SoundPath": "Objects/Tomate.mp3"
+                "SoundPath": "Letters/TTomate.mp3"
               }
             }
           ]
@@ -1397,7 +1397,7 @@
               "Name": "Clown",
               "Media": {
                 "ImagePath": "Clown.png",
-                "SoundPath": "Objects/Clown.mp3"
+                "SoundPath": "Letters/CClown.mp3"
               }
             },
             {
@@ -1408,7 +1408,7 @@
               "Name": "Qualle",
               "Media": {
                 "ImagePath": "Qualle.png",
-                "SoundPath": "Objects/Qualle.mp3"
+                "SoundPath": "Letters/QQualle.mp3"
               }
             },
             {
@@ -1419,7 +1419,7 @@
               "Name": "Vogel",
               "Media": {
                 "ImagePath": "Vogel.png",
-                "SoundPath": "Objects/Vogel.mp3"
+                "SoundPath": "Letters/VVogel.mp3"
               }
             },
             {
@@ -1430,7 +1430,7 @@
               "Name": "Hexe",
               "Media": {
                 "ImagePath": "Hexe.png",
-                "SoundPath": "Objects/Hexe.mp3"
+                "SoundPath": "Letters/XHexe.mp3"
               }
             },
             {
@@ -1441,7 +1441,7 @@
               "Name": "Baby",
               "Media": {
                 "ImagePath": "Baby.png",
-                "SoundPath": "Objects/Baby.mp3"
+                "SoundPath": "Letters/YBaby.mp3"
               }
             }
           ]
