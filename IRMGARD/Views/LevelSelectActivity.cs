@@ -15,7 +15,7 @@ using Toolbar = Android.Support.V7.Widget.Toolbar;
 
 namespace IRMGARD
 {
-	[Activity (Label = "Levels", ParentActivity = typeof(MainActivity))]
+	[Activity (Label = "Level Auswahl", ParentActivity = typeof(MainActivity))]
     public class LevelSelectActivity : AppCompatActivity
 	{
 		protected override void OnCreate (Bundle bundle)

@@ -34,6 +34,7 @@ namespace IRMGARD
         List<Progress> progressList;
         LessonFragment currentFragment;
         ImageView ivSuccess;
+        ImageView ivIrmgard;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -54,10 +55,13 @@ namespace IRMGARD
 			txtLowerAlphabet = FindViewById<TextView>(Resource.Id.txtLowerAlphabet);
 			fragmentContainer = FindViewById<FrameLayout> (Resource.Id.fragmentContainer);
             ivSuccess = FindViewById<ImageView>(Resource.Id.ivSuccess);
+            ivIrmgard = FindViewById<ImageView>(Resource.Id.ivIrmgard);
+            ivIrmgard.Click += (s, e) => PlayOrStopInstruction();
+
 
             // Initially hide success image
             ivSuccess.Visibility = ViewStates.Gone;
-		}            
+		}
 
 		protected override void OnStart()
 		{
@@ -129,6 +133,9 @@ namespace IRMGARD
                     transaction.Commit();
                 }
             }
+
+            // Play instruction
+            SoundPlayer.PlaySound(this, DataHolder.Current.CurrentLesson.SoundPath);
         }
 
         private void CurrentFragment_UserInteracted (object sender, UserInteractedEventArgs e)
@@ -257,7 +264,7 @@ namespace IRMGARD
 			{
 				// Play voice instruction
 				case Resource.Id.btnVoiceInstruction:
-					SoundPlayer.PlaySound(this, DataHolder.Current.CurrentLesson.SoundPath);
+                    PlayOrStopInstruction();
 					break;
 				// Show hint
 //				case Resource.Id.btnHint:
@@ -294,12 +301,24 @@ namespace IRMGARD
 			return base.OnOptionsItemSelected (item);
 		}
 
-		#endregion
+        private void PlayOrStopInstruction()
+        {
+            if (SoundPlayer.IsPlaying)
+            {
+                SoundPlayer.Stop();
+            }
+            else
+            {
+                SoundPlayer.PlaySound(this, DataHolder.Current.CurrentLesson.SoundPath);
+            }
+        }
 
-		/// <summary>
-		/// Switches to the next Lesson if available
-		/// </summary>
-		private void NextLesson()
+        #endregion
+
+        /// <summary>
+        /// Switches to the next Lesson if available
+        /// </summary>
+        private void NextLesson()
 		{
 			var nextLesson = DataHolder.Current.CurrentModule.GetNextLesson(DataHolder.Current.CurrentLesson);
             if (nextLesson != null)

@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IRMGARD", "IRMGARD\IRMGARD.csproj", "{B0991947-64A8-4744-8EA5-0F827082F249}"
 EndProject
@@ -17,6 +17,7 @@ Global
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{B0991947-64A8-4744-8EA5-0F827082F249}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B0991947-64A8-4744-8EA5-0F827082F249}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0991947-64A8-4744-8EA5-0F827082F249}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{B0991947-64A8-4744-8EA5-0F827082F249}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0991947-64A8-4744-8EA5-0F827082F249}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E705D1F7-D590-4DE3-9885-0928856D56FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
