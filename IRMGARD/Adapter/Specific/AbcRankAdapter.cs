@@ -29,7 +29,7 @@ namespace IRMGARD
             if (item.Media != null)
             {
                 view.FindViewById<TextView>(Resource.Id.letter).Visibility = ViewStates.Gone;
-                var bitmap = BitmapLoader.Instance.LoadBitmap(position, Context, item.Media.ImagePath);
+                var bitmap = BitmapLoader.Instance.LoadBitmap(Count, Context, item.Media.ImagePath);
                 if (bitmap != null)
                     view.FindViewById<ImageView>(Resource.Id.image).SetImageBitmap(bitmap);
             }

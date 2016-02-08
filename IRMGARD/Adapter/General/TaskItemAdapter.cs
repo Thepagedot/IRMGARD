@@ -21,41 +21,44 @@ namespace IRMGARD
 
         public override View GetView(int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
         {
-            var item = GetItem(position);
             var view = convertView ?? layoutInflater.Inflate(Resource.Layout.TaskItem, null);
 
-            if (item.Media != null)
+            var item = GetItem(position);
+            if (item != null)
             {
-                var bitmap = BitmapLoader.Instance.LoadBitmap(position, Context, item.Media.ImagePath);
-                if (bitmap != null)
+                if (item.Media != null)
                 {
-                    var imageView = view.FindViewById<ImageView>(Resource.Id.image);
-                    imageView.SetImageBitmap(bitmap);
-                    imageView.Visibility = ViewStates.Visible;
-                }
-                view.FindViewById<TextView>(Resource.Id.letter).Visibility = ViewStates.Invisible;
-            }
-            else if (item.TaskLetter != null)
-            {
-                view.FindViewById<TextView>(Resource.Id.letter).Text = GetItem(position).TaskLetter.Letter;
-            }
-
-            if (item.IsSearched)
-            {
-                if (item.IsDirty)
-                {
-                    view.FindViewById<CardView>(Resource.Id.cardView).SetCardBackgroundColor(Color.White);
-                    if (Env.LollipopSupport)
+                    var bitmap = BitmapLoader.Instance.LoadBitmap(Count, Context, item.Media.ImagePath);
+                    if (bitmap != null)
                     {
-                        view.FindViewById<CardView>(Resource.Id.cardView).Elevation = 8f;
+                        var imageView = view.FindViewById<ImageView>(Resource.Id.image);
+                        imageView.SetImageBitmap(bitmap);
+                        imageView.Visibility = ViewStates.Visible;
                     }
-                    view.FindViewById<RelativeLayout>(Resource.Id.llLayout).Background = null;
-                    view.FindViewById<View>(Resource.Id.underscore).Visibility = ViewStates.Invisible;
+                    view.FindViewById<TextView>(Resource.Id.letter).Visibility = ViewStates.Invisible;
                 }
-            }
-            else
-            {
-                view.FindViewById<RelativeLayout>(Resource.Id.llLayout).Background = null;
+                else if (item.TaskLetter != null)
+                {
+                    view.FindViewById<TextView>(Resource.Id.letter).Text = GetItem(position).TaskLetter.Letter;
+                }
+
+                if (item.IsSearched)
+                {
+                    if (item.IsDirty)
+                    {
+                        view.FindViewById<CardView>(Resource.Id.cardView).SetCardBackgroundColor(Color.White);
+                        if (Env.LollipopSupport)
+                        {
+                            view.FindViewById<CardView>(Resource.Id.cardView).Elevation = 8f;
+                        }
+                        view.FindViewById<RelativeLayout>(Resource.Id.llLayout).Background = null;
+                        view.FindViewById<View>(Resource.Id.underscore).Visibility = ViewStates.Invisible;
+                    }
+                }
+                else
+                {
+                    view.FindViewById<RelativeLayout>(Resource.Id.llLayout).Background = null;
+                }
             }
 
             return view;

@@ -57,7 +57,7 @@ namespace IRMGARD
                     letterToLearnView.Text += letter.ToUpper() + letter.ToLower();
                 }
 //                Picasso.With(Activity.BaseContext).Load("file:///android_asset/Images/"+currentIteration.Media.ImagePath).Into(imageButtonView);
-                imageButtonView.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(0, Activity.BaseContext, currentIteration.Media.ImagePath));
+                imageButtonView.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(1, Activity.BaseContext, currentIteration.Media.ImagePath));
                 imageButtonView.Click += PlayImageSound;
 
                 nameView.Text = currentIteration.Name;

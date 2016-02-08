@@ -8,7 +8,6 @@ using Android.Views;
 using Android.Widget;
 using IRMGARD.Models;
 using IRMGARD.Shared;
-using Org.Apache.Http.Cookies;
 using Android.Support.V7.Widget;
 using Android.Graphics;
 
@@ -87,10 +86,10 @@ namespace IRMGARD
                 card.SetCardBackgroundColor(Color.White);
 
             // Fill view
-            ivImage1.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(0, Activity, currentOptions[0].Media.ImagePath));
-            ivImage2.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(1, Activity, currentOptions[1].Media.ImagePath));
-            ivImage3.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(2, Activity, currentOptions[2].Media.ImagePath));
-            ivImage4.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(3, Activity, currentOptions[3].Media.ImagePath));
+            ivImage1.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(4, Activity, currentOptions[0].Media.ImagePath));
+            ivImage2.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(4, Activity, currentOptions[1].Media.ImagePath));
+            ivImage3.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(4, Activity, currentOptions[2].Media.ImagePath));
+            ivImage4.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(4, Activity, currentOptions[3].Media.ImagePath));
 
 			tvLetter.Text = currentIteration.LettersToLearn.First();
 		}
@@ -117,10 +116,10 @@ namespace IRMGARD
             }
         }
 
-        public override void OnDestroy()
-        {
-            base.OnDestroy();
-            BitmapLoader.Instance.ReleaseCache();
-        }
+        // public override void OnDestroy()
+        // {
+        //     base.OnDestroy();
+        //     BitmapLoader.Instance.ReleaseCache();
+        // }
 	}
 }

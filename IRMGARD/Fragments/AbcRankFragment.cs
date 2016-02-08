@@ -39,7 +39,7 @@ namespace IRMGARD
             currentIteration.TaskItems.Clear();
             foreach (var option in currentIteration.Options)
             {
-                currentIteration.TaskItems.Add(new TaskItem(new TaskLetter(option.Name), option.Media, true, true));
+                currentIteration.TaskItems.Add(null);
             }
 
             BuildTaskElements(currentIteration.TaskItems);
@@ -110,11 +110,10 @@ namespace IRMGARD
                         var draggedLetter = data.GetItemAt(0).Text;
                         var draggedItem = GetCurrentIteration<AbcRankIteration>().Options.FirstOrDefault(o => o.Name.Equals(draggedLetter));
 
-                        taskLetters[position].TaskLetter.Letter = draggedItem.Name;
-                        taskLetters[position].Media = draggedItem.Media;
+                        taskLetters[position] = new TaskItem(new TaskLetter(draggedItem.Name), draggedItem.Media, true);
                         taskLetters[position].IsDirty = true;
 
-                        var isReady = taskLetters.All(l => l.IsDirty);
+                        var isReady = taskLetters.All(l => l != null ? l.IsDirty : false);
                         FireUserInteracted(isReady);
                         BuildTaskElements(taskLetters);
                     }

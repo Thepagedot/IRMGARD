@@ -27,7 +27,7 @@ namespace IRMGARD
                 if (item.Media != null)
                 {
                     var ivCardPictureFront = view.FindViewById<ImageView>(Resource.Id.ivCardPictureFront);
-                    ivCardPictureFront.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(position, (Activity) view.Context, item.Media.ImagePath));
+                    ivCardPictureFront.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(Count / 2, (Activity) view.Context, item.Media.ImagePath));
                 }
                 else
                 {

@@ -135,10 +135,10 @@ namespace IRMGARD
             }
         }
 
-        public override void OnDestroy()
-        {
-            base.OnDestroy();
-            BitmapLoader.Instance.ReleaseCache();
-        }
+        // public override void OnDestroy()
+        // {
+        //     base.OnDestroy();
+        //     BitmapLoader.Instance.ReleaseCache();
+        // }
     }
 }
