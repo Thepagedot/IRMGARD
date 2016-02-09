@@ -19,8 +19,6 @@ namespace IRMGARD
 			this.items = items;
 		}
 
-		#region implemented abstract members of BaseAdapter
-
 		public override Java.Lang.Object GetItem (int position)
 		{
 			return null;
@@ -60,7 +58,7 @@ namespace IRMGARD
                     indicator.FindViewById<ImageView>(Resource.Id.ivChecked).Visibility = ViewStates.Gone;
                     indicator.FindViewById<ImageView>(Resource.Id.ivUnchecked).Visibility = ViewStates.Visible;
                 }
-                    
+
                 llLessons.AddView(indicator);
             }
 
@@ -69,7 +67,7 @@ namespace IRMGARD
                 view.Alpha = (float)0.5;
             else
                 view.Alpha = (float)1;
-            
+
 			return view;
 		}
 
@@ -78,7 +76,5 @@ namespace IRMGARD
 				return items.Length;
 			}
 		}
-
-		#endregion
 	}
 }

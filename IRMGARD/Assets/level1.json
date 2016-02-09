@@ -6,7 +6,7 @@
   "IsCompleted": false,
   "Modules": [
     {
-      "Name": "1",
+      "Name": "1: AEIOU",
       "Color": "#DDD6BF",
       "VideoPath": "Videos/Handy_Modul_1_720p.mp4",
       "NumberOfLessonsDone": 0,
@@ -348,7 +348,7 @@
       ]
     },
     {
-      "Name": "2",
+      "Name": "2: LMNRS",
       "Color": "#AFC3C4",
       "VideoPath": null,
       "NumberOfLessonsDone": 0,
@@ -780,7 +780,7 @@
       ]
     },
     {
-      "Name": "3",
+      "Name": "3: FHJWZ",
       "Color": "#d8cbd1",
       "VideoPath": null,
       "NumberOfLessonsDone": 0,
@@ -1051,7 +1051,7 @@
       ]
     },
     {
-      "Name": "4",
+      "Name": "4: BPGKDT",
       "Color": "#c1cbac",
       "VideoPath": null,
       "NumberOfLessonsDone": 0,
@@ -1375,7 +1375,7 @@
       ]
     },
     {
-      "Name": "5",
+      "Name": "5: CQVXY",
       "Color": "#dcd08f",
       "VideoPath": null,
       "NumberOfLessonsDone": 0,
@@ -1589,7 +1589,7 @@
       ]
     },
     {
-      "Name": "6",
+      "Name": "6: ABC",
       "Color": "#e5c8c4",
       "VideoPath": null,
       "NumberOfLessonsDone": 0,
