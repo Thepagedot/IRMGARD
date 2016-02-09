@@ -1,33 +1,31 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto">
+
 	<item android:id="@+id/btnVoiceInstruction"
 		  android:icon="@drawable/ic_hearing_white_24dp"
 		  android:title="@string/playVoiceInstruction"
 		  app:showAsAction="always" />
 
-<!--	<item android:id="@+id/btnHint"
+    <!--	<item android:id="@+id/btnHint"
 		  android:icon="@drawable/ic_help_black_24dp"
 		  android:title="@string/hint"
 		  android:showAsAction="ifRoom" />-->
 
-    <item android:id="@+id/btnPreviousLesson"
-          android:icon="@drawable/ic_skip_previous_white_24dp"
-          android:title="@string/menu_previous"
-          app:showAsAction="always" />
+  <item
+    android:icon="@drawable/ic_more_vert_white_24dp"
+    android:title="Mehr..."
+    app:showAsAction="always">
 
-	<item android:id="@+id/btnNextLesson"
-		  android:icon="@drawable/ic_skip_next_white_24dp"
-		  android:title="@string/menu_next"
-		  app:showAsAction="always" />
+    <menu>
+      <item
+        android:id="@+id/btnNextLesson"
+		    android:icon="@drawable/ic_skip_next_black_24dp" />
 
-	<item android:id="@+id/btnNextModule"
-		  android:icon="@drawable/ic_help_black_24dp"
-		  android:title="DEV: Next Module"
-		  app:showAsAction="never" />
-
-	<item android:id="@+id/btnPreviousModule"
-		  android:icon="@drawable/ic_help_black_24dp"
-		  android:title="DEV: Previous Module"
-		  app:showAsAction="never" />
+      <item
+        android:id="@+id/btnPreviousLesson"
+        android:icon="@drawable/ic_skip_previous_black_24dp" />
+    </menu>
+  </item>
 </menu>

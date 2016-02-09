@@ -32,14 +32,12 @@ namespace IRMGARD
 
 		public override Android.Views.View GetView (int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
 		{
-			var view = convertView ?? context.LayoutInflater.Inflate (Android.Resource.Layout.SimpleListItem2, null);
+			var view = convertView ?? context.LayoutInflater.Inflate (Android.Resource.Layout.SimpleListItem1, null);
 
             var text1 = view.FindViewById<TextView>(Android.Resource.Id.Text1);
             text1.Text = items[position].Name.ToUpper();
-            var font = Typeface.CreateFromAsset(context.Assets, "Fonts/Garaje_53_Uni_Black.otf");
-            text1.Typeface = font;
+            text1.Typeface = Typeface.CreateFromAsset(context.Assets, "Fonts/Garaje_53_Uni_Black.otf");
 
-			view.FindViewById<TextView> (Android.Resource.Id.Text2).Text = "This level has " + items[position].Modules.Count + " modules";
 			view.SetBackgroundColor(Android.Graphics.Color.ParseColor (items [position].Color));
             if (!items[position].IsEnabled)
                 view.Alpha = (float)0.5;

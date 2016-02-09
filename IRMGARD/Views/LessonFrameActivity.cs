@@ -159,9 +159,6 @@ namespace IRMGARD
             btnNext.Enabled = false;
             btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.HideNextButton));
 
-            // Update iteration number
-            SupportActionBar.Subtitle = "Iteration " + (DataHolder.Current.CurrentLesson.Iterations.IndexOf(e.Iteration) + 1) + "/" + DataHolder.Current.CurrentLesson.Iterations.Count;
-
             // Mark letters in alphabet
             txtCapitalAlphabet.TextFormatted = GetLettersMarked(e.Iteration.LettersToLearn, true);
             txtLowerAlphabet.TextFormatted = GetLettersMarked(e.Iteration.LettersToLearn, false);
@@ -276,26 +273,6 @@ namespace IRMGARD
 				case Resource.Id.btnPreviousLesson:
 					PreviousLesson();
 					break;
-				case Resource.Id.btnNextModule:
-					var nextModule = DataHolder.Current.CurrentLevel.GetNextModule (DataHolder.Current.CurrentModule);
-					if (nextModule != null)
-					{
-						DataHolder.Current.CurrentModule = nextModule;
-						DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.Lessons.First();
-						DataHolder.Current.CurrentIteration = DataHolder.Current.CurrentLesson.Iterations.First();
-						InitLesson ();
-					}
-					break;
-				case Resource.Id.btnPreviousModule:
-					var previousModule = DataHolder.Current.CurrentLevel.GetPreviousModule(DataHolder.Current.CurrentModule);
-					if (previousModule != null)
-					{
-						DataHolder.Current.CurrentModule = previousModule;
-						DataHolder.Current.CurrentLesson = DataHolder.Current.CurrentModule.Lessons.First();
-						DataHolder.Current.CurrentIteration = DataHolder.Current.CurrentLesson.Iterations.First();
-						InitLesson ();
-					}
-				break;
 			}
 
 			return base.OnOptionsItemSelected (item);
