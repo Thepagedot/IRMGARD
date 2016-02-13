@@ -27,7 +27,6 @@ namespace IRMGARD
     public sealed class BitmapLoader
     {
         const string TAG = "BitmapCache";
-        const string AssetImageDir = "Images";
 
         static readonly BitmapLoader instance = new BitmapLoader();
 
@@ -51,7 +50,7 @@ namespace IRMGARD
         /// <param name="fileName">The image file path.</param>
         /// <param name="assetImageDir">The parent directory for <paramref name="fileName"/> path parameter.</param>
         public Bitmap LoadBitmap(int maxPoolSize, Context context, string fileName,
-            string assetImageDir = AssetImageDir)
+            string assetImageDir = Env.AssetImageDir)
         {
             Bitmap bitmap = DecodeBitmap(maxPoolSize, context, fileName, assetImageDir);
             if (Env.Debug)
@@ -71,7 +70,7 @@ namespace IRMGARD
         /// <param name="fileName">The image file path.</param>
         /// <param name="assetImageDir">The parent directory for <paramref name="fileName"/> path parameter.</param>
         public void LoadBitmapInImageViewAsync(int maxPoolSize, ImageView imageView, Context context, string fileName,
-            string assetImageDir = AssetImageDir)
+            string assetImageDir = Env.AssetImageDir)
         {
             BitmapWorkerTask task = new BitmapWorkerTask(this, imageView);
             task.Execute(maxPoolSize, context, fileName, assetImageDir);
