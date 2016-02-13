@@ -626,50 +626,153 @@
         {
           "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
           "Id": 126,
-          "Title": "AEIOU",
+          "Title": "M+A=MA",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 6.mp3",
+          "SyllablePath": "Syllables/LMNRS",
           "Hint": "Lesson 6 Hint",
           "TypeOfLevel": "PickSyllable",
-          "Options": [
-            {
-              "Letter": "A",
-              "Media": {
-                "SoundPath": "Syllables/Ma-lang.mp3"
-              }
-            },
-            {
-              "Letter": "E",
-              "Media": {
-                "SoundPath": "Objects/Me-lang.mp3"
-              }
-            },
-            {
-              "Letter": "I",
-              "Media": {
-                "SoundPath": "Objects/Mi-lang.mp3"
-              }
-            },
-            {
-              "Letter": "O",
-              "Media": {
-                "SoundPath": "Objects/Mo-lang.mp3"
-              }
-            },
-            {
-              "Letter": "U",
-              "Media": {
-                "SoundPath": "Objects/Mu-lang.mp3"
-              }
-            }
-          ],
           "Iterations": [
             {
               "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
-              "SyllableToLearn": "MA",
-              "SyllableParts": [
-                "M",
-                "A"
+              "LettersToLearn": [
+                "l"
+              ],
+              "SyllablesToLearn": [
+                [ "l", "a" ],
+                [ "l", "e" ],
+                [ "l", "i" ],
+                [ "l", "o" ],
+                [ "l", "u" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "m"
+              ],
+              "SyllablesToLearn": [
+                [ "m", "a" ],
+                [ "m", "e" ],
+                [ "m", "i" ],
+                [ "m", "o" ],
+                [ "m", "u" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "n"
+              ],
+              "SyllablesToLearn": [
+                [ "n", "a" ],
+                [ "n", "e" ],
+                [ "n", "i" ],
+                [ "n", "o" ],
+                [ "n", "u" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "r"
+              ],
+              "SyllablesToLearn": [
+                [ "r", "a" ],
+                [ "r", "e" ],
+                [ "r", "i" ],
+                [ "r", "o" ],
+                [ "r", "u" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "s"
+              ],
+              "SyllablesToLearn": [
+                [ "s", "a" ],
+                [ "s", "e" ],
+                [ "s", "i" ],
+                [ "s", "o" ],
+                [ "s", "u" ]
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
+          "Id": 127,
+          "Title": "A+M=AM",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 7.mp3",
+          "SyllablePath": "Syllables/LMNRS",
+          "Hint": "Lesson 7 Hint",
+          "TypeOfLevel": "PickSyllable",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "l", "m", "n", "r", "s"
+              ],
+              "SyllablesToLearn": [
+                [ "a", "l" ],
+                [ "a", "m" ],
+                [ "a", "n" ],
+                [ "a", "r" ],
+                [ "a", "s" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "l", "m", "n", "r", "s"
+              ],
+              "SyllablesToLearn": [
+                [ "e", "l" ],
+                [ "e", "m" ],
+                [ "e", "n" ],
+                [ "e", "r" ],
+                [ "e", "s" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "l", "m", "n", "r", "s"
+              ],
+              "SyllablesToLearn": [
+                [ "i", "l" ],
+                [ "i", "m" ],
+                [ "i", "n" ],
+                [ "i", "r" ],
+                [ "i", "s" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "l", "m", "n", "r", "s"
+              ],
+              "SyllablesToLearn": [
+                [ "o", "l" ],
+                [ "o", "m" ],
+                [ "o", "n" ],
+                [ "o", "r" ],
+                [ "o", "s" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "l", "m", "n", "r", "s"
+              ],
+              "SyllablesToLearn": [
+                [ "u", "l" ],
+                [ "u", "m" ],
+                [ "u", "n" ],
+                [ "u", "r" ],
+                [ "u", "s" ]
               ]
             }
           ]
@@ -677,7 +780,7 @@
         {
           "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",
           "Id": 128,
-          "Title": "Silben lesen und schreiben",
+          "Title": "Silben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 8.mp3",
           "Hint": "Lesson 8 Hint",
@@ -708,7 +811,7 @@
                       "EmptySearchedItems":  true
                     }
                   ],
-                  "SoundPath": "Syllables/La.mp3"
+                  "SoundPath": "Syllables/LMNRS/la_lang.mp3"
                 }
               ]
             }
@@ -717,7 +820,7 @@
         {
           "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",
           "Id": 129,
-          "Title": "Silben lesen und schreiben",
+          "Title": "W�rter schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 9.mp3",
           "Hint": "Lesson 9 Hint",
@@ -748,7 +851,7 @@
                       "EmptySearchedItems":  true
                     }
                   ],
-                  "SoundPath": "Syllables/La.mp3"
+                  "SoundPath": "Syllables/LMNRS/la_lang.mp3"
                 },
                 {
                   "SyllableParts": [
@@ -771,7 +874,7 @@
                       "EmptySearchedItems":  true
                     }
                   ],
-                  "SoundPath": "Syllables/Ma.mp3"
+                  "SoundPath": "Syllables/LMNRS/ma_lang.mp3"
                 }
               ]
             }
@@ -1044,6 +1147,160 @@
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
               "LettersToLearn": [
                 "Z"
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
+          "Id": 136,
+          "Title": "W+O=WO",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 3 Aufgabe 6.mp3",
+          "SyllablePath": "Syllables/FHJWZ",
+          "Hint": "Lesson 6 Hint",
+          "TypeOfLevel": "PickSyllable",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "f"
+              ],
+              "SyllablesToLearn": [
+                [ "f", "a" ],
+                [ "f", "e" ],
+                [ "f", "i" ],
+                [ "f", "o" ],
+                [ "f", "u" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "h"
+              ],
+              "SyllablesToLearn": [
+                [ "h", "a" ],
+                [ "h", "e" ],
+                [ "h", "i" ],
+                [ "h", "o" ],
+                [ "h", "u" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "j"
+              ],
+              "SyllablesToLearn": [
+                [ "j", "a" ],
+                [ "j", "e" ],
+                [ "j", "i" ],
+                [ "j", "o" ],
+                [ "j", "u" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "w"
+              ],
+              "SyllablesToLearn": [
+                [ "w", "a" ],
+                [ "w", "e" ],
+                [ "w", "i" ],
+                [ "w", "o" ],
+                [ "w", "u" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "z"
+              ],
+              "SyllablesToLearn": [
+                [ "z", "a" ],
+                [ "z", "e" ],
+                [ "z", "i" ],
+                [ "z", "o" ],
+                [ "z", "u" ]
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
+          "Id": 137,
+          "Title": "O+F=OF",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 3 Aufgabe 7.mp3",
+          "SyllablePath": "Syllables/FHJWZ",
+          "Hint": "Lesson 7 Hint",
+          "TypeOfLevel": "PickSyllable",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "f", "h", "j", "w", "z"
+              ],
+              "SyllablesToLearn": [
+                [ "a", "f" ],
+                [ "a", "h" ],
+                [ "a", "j" ],
+                [ "a", "w" ],
+                [ "a", "z" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "f", "h", "j", "w", "z"
+              ],
+              "SyllablesToLearn": [
+                [ "e", "f" ],
+                [ "e", "h" ],
+                [ "e", "j" ],
+                [ "e", "w" ],
+                [ "e", "z" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "f", "h", "j", "w", "z"
+              ],
+              "SyllablesToLearn": [
+                [ "i", "f" ],
+                [ "i", "h" ],
+                [ "i", "j" ],
+                [ "i", "w" ],
+                [ "i", "z" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "f", "h", "j", "w", "z"
+              ],
+              "SyllablesToLearn": [
+                [ "o", "f" ],
+                [ "o", "h" ],
+                [ "o", "j" ],
+                [ "o", "w" ],
+                [ "o", "z" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "f", "h", "j", "w", "z"
+              ],
+              "SyllablesToLearn": [
+                [ "u", "f" ],
+                [ "u", "h" ],
+                [ "u", "j" ],
+                [ "u", "w" ],
+                [ "u", "z" ]
               ]
             }
           ]
@@ -1368,6 +1625,178 @@
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
               "LettersToLearn": [
                 "T"
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
+          "Id": 146,
+          "Title": "B+O=BO",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 4 Aufgabe 6.mp3",
+          "SyllablePath": "Syllables/BDGKPT",
+          "Hint": "Lesson 6 Hint",
+          "TypeOfLevel": "PickSyllable",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "b"
+              ],
+              "SyllablesToLearn": [
+                [ "b", "a" ],
+                [ "b", "e" ],
+                [ "b", "i" ],
+                [ "b", "o" ],
+                [ "b", "u" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "p"
+              ],
+              "SyllablesToLearn": [
+                [ "p", "a" ],
+                [ "p", "e" ],
+                [ "p", "i" ],
+                [ "p", "o" ],
+                [ "p", "u" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "g"
+              ],
+              "SyllablesToLearn": [
+                [ "g", "a" ],
+                [ "g", "e" ],
+                [ "g", "i" ],
+                [ "g", "o" ],
+                [ "g", "u" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "k"
+              ],
+              "SyllablesToLearn": [
+                [ "k", "a" ],
+                [ "k", "e" ],
+                [ "k", "i" ],
+                [ "k", "o" ],
+                [ "k", "u" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "d"
+              ],
+              "SyllablesToLearn": [
+                [ "d", "a" ],
+                [ "d", "e" ],
+                [ "d", "i" ],
+                [ "d", "o" ],
+                [ "d", "u" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "t"
+              ],
+              "SyllablesToLearn": [
+                [ "t", "a" ],
+                [ "t", "e" ],
+                [ "t", "i" ],
+                [ "t", "o" ],
+                [ "t", "u" ]
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
+          "Id": 147,
+          "Title": "A+B=AB",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 4 Aufgabe 7.mp3",
+          "SyllablePath": "Syllables/BDGKPT",
+          "Hint": "Lesson 7 Hint",
+          "TypeOfLevel": "PickSyllable",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "b", "p", "g", "k", "d", "t"
+              ],
+              "SyllablesToLearn": [
+                [ "a", "b" ],
+                [ "a", "p" ],
+                [ "a", "g" ],
+                [ "a", "k" ],
+                [ "a", "d" ],
+                [ "a", "t" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "b", "p", "g", "k", "d", "t"
+              ],
+              "SyllablesToLearn": [
+                [ "e", "b" ],
+                [ "e", "p" ],
+                [ "e", "g" ],
+                [ "e", "k" ],
+                [ "e", "d" ],
+                [ "e", "t" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "b", "p", "g", "k", "d", "t"
+              ],
+              "SyllablesToLearn": [
+                [ "i", "b" ],
+                [ "i", "p" ],
+                [ "i", "g" ],
+                [ "i", "k" ],
+                [ "i", "d" ],
+                [ "i", "t" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "b", "p", "g", "k", "d", "t"
+              ],
+              "SyllablesToLearn": [
+                [ "o", "b" ],
+                [ "o", "p" ],
+                [ "o", "g" ],
+                [ "o", "k" ],
+                [ "o", "d" ],
+                [ "o", "t" ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "LettersToLearn": [
+                "b", "p", "g", "k", "d", "t"
+              ],
+              "SyllablesToLearn": [
+                [ "u", "b" ],
+                [ "u", "p" ],
+                [ "u", "g" ],
+                [ "u", "k" ],
+                [ "u", "d" ],
+                [ "u", "t" ]
               ]
             }
           ]

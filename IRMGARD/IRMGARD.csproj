@@ -145,11 +145,6 @@
     <AndroidAsset Include="Assets\Sounds\Objects\Ofen.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Uhu.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Igel.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Syllables\Ma-lang.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Syllables\Me-lang.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Syllables\Mi-lang.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Syllables\Mo-lang.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Syllables\Mu-lang.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\U-Boot.mp3" />
     <AndroidAsset Include="Assets\Videos\Handy_Modul_1_720p.mp4" />
     <AndroidAsset Include="Assets\Fonts\Garaje_53_Uni_Black.otf" />
@@ -860,8 +855,6 @@
     <AndroidAsset Include="Assets\test.json" />
     <AndroidAsset Include="Assets\sandbox.json" />
     <AndroidAsset Include="Assets\level1.json" />
-    <AndroidAsset Include="Assets\Sounds\Syllables\La.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Syllables\Ma.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 2 Aufgabe 1.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 2 Aufgabe 2.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 2 Aufgabe 3.mp3" />
