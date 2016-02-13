@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 
 using Android.App;
+using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
@@ -64,8 +65,8 @@ namespace IRMGARD
                     if (memoryCardsRevealed.Count == 1 && memoryCardsRevealed.ContainsKey(memoryCard.Name)) {
                         var firstParentView = memoryCardsRevealed.Single().Value;
                         memoryCardsRevealed.Clear();
-                        parentView.Background = Resources.GetDrawable(Resource.Drawable.rectangle_green);
-                        firstParentView.Background = Resources.GetDrawable(Resource.Drawable.rectangle_green);
+                        parentView.Background = GetDrawable(Resource.Drawable.rectangle_green);
+                        firstParentView.Background = GetDrawable(Resource.Drawable.rectangle_green);
                         await Task.Delay(1500);
                         parentView.Visibility = ViewStates.Gone;
                         firstParentView.Visibility = ViewStates.Gone;
@@ -81,7 +82,7 @@ namespace IRMGARD
                 {
                     foreach (var memoryCardRevealed in memoryCardsRevealed)
                     {
-                        memoryCardRevealed.Value.Background = Resources.GetDrawable(Resource.Drawable.rectangle_red);
+                        memoryCardRevealed.Value.Background = GetDrawable(Resource.Drawable.rectangle_red);
                         memoryCardsMarked.Add(memoryCardRevealed.Value);
                     }
                     await Task.Delay(1000);
@@ -99,6 +100,11 @@ namespace IRMGARD
                 cardBack.Visibility = ViewStates.Visible;
                 memoryCardsRevealed.Remove(memoryCard.Name);
             }
+        }
+
+        Drawable GetDrawable(int id)
+        {
+            return (Env.LollipopSupport) ? Resources.GetDrawable(id, Activity.BaseContext.Theme) : Resources.GetDrawable(id);
         }
 
         protected override void InitIteration()

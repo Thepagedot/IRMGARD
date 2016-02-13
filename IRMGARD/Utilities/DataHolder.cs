@@ -48,7 +48,14 @@ namespace IRMGARD
                     {
                         foreach (var iteration in lesson.Iterations)
                         {
-                            dict.Add(iteration.Id, iteration.Status);
+                            try
+                            {
+                                dict.Add(iteration.Id, iteration.Status);
+                            }
+                            catch (ArgumentException)
+                            {
+                                throw new ArgumentException("Multiple iteration id (" + iteration.Id + ") occurs. Please check, if all iterations have different ids!");
+                            }
                         }
                     }
                 }

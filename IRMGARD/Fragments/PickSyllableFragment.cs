@@ -7,6 +7,7 @@ using Android.Widget;
 using Android.Views;
 using Android.Content;
 using Android.Graphics;
+using Android.Graphics.Drawables;
 using Android.Support.V7.Widget;
 using IRMGARD.Shared;
 
@@ -22,6 +23,9 @@ namespace IRMGARD
         private ImageView ivDropZone;
         private CardView cvDropZone;
         private View originalView;
+        private Bitmap emptyDropZoneImage;
+        private Bitmap volumeUpDropZoneImage;
+
         private int correctPosition = -1;
         private bool isSoundPlayedForSelectedItem = false;
 
@@ -40,8 +44,10 @@ namespace IRMGARD
             ivDropZone = originalView.FindViewById<ImageView>(Resource.Id.ivPickSyllableDropZone);
             cvDropZone = originalView.FindViewById<CardView>(Resource.Id.cardView);     
 
-            InitIteration();
+            emptyDropZoneImage = BitmapFactory.DecodeResource(Activity.BaseContext.Resources, Resource.Drawable.ic_help_black_24dp);
+            volumeUpDropZoneImage = BitmapFactory.DecodeResource(Activity.BaseContext.Resources, Resource.Drawable.ic_volume_up_black_24dp);
 
+            InitIteration();
 
             return originalView;
         }
@@ -50,37 +56,50 @@ namespace IRMGARD
         {
             base.InitIteration();
 
-            tvPickSyllable.Text = string.Empty;
+            // Reset drop zone
+            ivDropZone.Click -= DropZoneItemClicked;
+            ivDropZone.SetImageBitmap(emptyDropZoneImage);
+            cvDropZone.SetCardBackgroundColor(Color.GetAlphaComponent(0));
+            cvDropZone.CardElevation = 0;
+            llLayout.Background = GetDrawable(Resource.Drawable.dotted);
+
             var currentIteration = GetCurrentIteration<PickSyllableIteration>();
             currentOptions = new List<PickSyllableOption>();
 
+            // Get all syllable files in directory
+            var syllableFilesAvail = Activity.Assets.List(System.IO.Path.Combine(Env.AssetSoundDir, Lesson.SyllablePath)).ToList();
+
+            // Pick a syllable for the current iteration
+            var syllableToLearn = currentIteration.SyllablesToLearn.PickRandomItems(1).FirstOrDefault();
+
             // Choose a random correct option
-            var correctOptions = Lesson.Options.Where(o => o.Letter.Equals(currentIteration.SyllableParts.ElementAt(1), StringComparison.InvariantCultureIgnoreCase));
-            var correctOption = correctOptions.ElementAt(new Random().Next(0, correctOptions.Count() - 1));
-            correctOption.IsCorrect = true;
-            currentOptions.Add(correctOption);
-
-            // Choose three other false Options
-            var falseOptions = Lesson.Options.Where(o => !o.Letter.Equals(currentIteration.SyllableParts.ElementAt(1), StringComparison.InvariantCultureIgnoreCase)).ToList();
-
-            falseOptions.Shuffle();
-            currentOptions.AddRange(falseOptions.Take(3));
+            var syllableFiles = syllableFilesAvail.FindAll(f => f.StartsWith(String.Concat(syllableToLearn), StringComparison.InvariantCultureIgnoreCase));
+            syllableFilesAvail.RemoveAll(f => f.StartsWith(String.Concat(syllableToLearn), StringComparison.InvariantCultureIgnoreCase));
+            var syllableFile = syllableFiles.PickRandomItems(1).FirstOrDefault();
+            currentOptions.Add(new PickSyllableOption(true, new Media(null, System.IO.Path.Combine(Lesson.SyllablePath, syllableFile))));
+            
+            // Choose three other false options
+            foreach (var item in syllableFilesAvail.PickRandomItems(3))
+            {
+                currentOptions.Add(new PickSyllableOption(false, new Media(null, System.IO.Path.Combine(Lesson.SyllablePath, item))));
+            }
 
             // Randomize list
             currentOptions.Shuffle();
 
             correctPosition = currentOptions.IndexOf(currentOptions.Where(x => x.IsCorrect).FirstOrDefault());
 
-
-            foreach (var letter in currentIteration.SyllableParts)
+            // Prepare task description
+            tvPickSyllable.Text = String.Empty;
+            foreach (var part in syllableToLearn)
             {
-                tvPickSyllable.Text += letter;
-                if (currentIteration.SyllableParts.IndexOf(letter) == 0)
+                if (!String.IsNullOrEmpty(tvPickSyllable.Text))
+                {
                     tvPickSyllable.Text += "+";
+                }
+                tvPickSyllable.Text += part.ToUpper();
             }
-
-            tvPickSyllable.Text += " = " + currentIteration.SyllableToLearn;
-            correctOption.IsCorrect = false;
+            tvPickSyllable.Text += " = " + String.Concat(syllableToLearn).ToUpper();
 
             BuildPickSyllableTaskItems(currentOptions);
         }
@@ -147,17 +166,12 @@ namespace IRMGARD
                         FireUserInteracted(true);
 
                         selectedIndex = Convert.ToInt32(data.GetItemAt(0).Text);
-                        var bitmap = BitmapFactory.DecodeResource(Activity.BaseContext.Resources, Resource.Drawable.ic_volume_up_black_24dp);
 
-                        //TODO: Why removing and adding the item clicked handler?
-                        ivDropZone.Click -= DropZoneItemClicked;
-                        ivDropZone.SetImageBitmap (bitmap);
-                        ivDropZone.Visibility = ViewStates.Visible;
-                        ivDropZone.Click += DropZoneItemClicked;
-
+                        llLayout.Background = null;
                         cvDropZone.SetCardBackgroundColor(Color.White);
                         cvDropZone.CardElevation = 8f;
-                        llLayout.Background = null;
+                        ivDropZone.SetImageBitmap(volumeUpDropZoneImage);
+                        ivDropZone.Click += DropZoneItemClicked;
                     }
                     break;
             }
@@ -169,15 +183,16 @@ namespace IRMGARD
                 SoundPlayer.PlaySound(Activity.BaseContext, currentOptions.ElementAt(selectedIndex).Media.SoundPath);
         }
 
+        Drawable GetDrawable(int id)
+        {
+            return (Env.LollipopSupport) ? Resources.GetDrawable(id, Activity.BaseContext.Theme) : Resources.GetDrawable(id);
+        }
+
         public override void CheckSolution()
         {                     
             if (selectedIndex > -1 && selectedIndex == correctPosition) 
             {                
                 FinishIteration(true);
-
-                var bitmap = BitmapFactory.DecodeResource(Activity.BaseContext.Resources, Resource.Drawable.ic_help_black_24dp);
-                originalView.FindViewById<ImageView>(Resource.Id.ivPickSyllableDropZone).SetImageBitmap(bitmap);
-                currentOptions.Clear();
             } 
             else
             {

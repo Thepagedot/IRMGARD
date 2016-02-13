@@ -35,7 +35,7 @@ namespace IRMGARD
 		{
 			// Set default folder "Sounds" if nothing else is set
 			if (folderName == null)
-				folderName = "Sounds";
+                folderName = Env.AssetSoundDir;
 
 			try
 			{
