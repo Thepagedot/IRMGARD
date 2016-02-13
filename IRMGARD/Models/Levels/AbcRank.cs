@@ -4,11 +4,11 @@ using System.Collections.Generic;
 namespace IRMGARD.Models
 {
 	public class AbcRank : Lesson
-	{		
+	{
 		public AbcRank () {}
 
 		public AbcRank (int id, string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (id, title, soundPath, hint, typeOfLevel, iterations)
-		{			
+		{
 		}
 	}
 
@@ -17,7 +17,7 @@ namespace IRMGARD.Models
         public List<TaskItem> TaskItems { get; set; }
 		public List<AbcRankOption> Options { get; set; }
 
-		public AbcRankIteration (List<string> lettersToLearn, List<AbcRankOption> options) : base (lettersToLearn)
+		public AbcRankIteration (int id, List<string> lettersToLearn, List<AbcRankOption> options) : base (id, lettersToLearn)
 		{
 			this.Options = options;
             this.TaskItems = new List<TaskItem>();

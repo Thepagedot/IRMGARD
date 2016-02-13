@@ -15,7 +15,7 @@ namespace IRMGARD.Models
     {
         public List<HearTheLetterOption> LetterLocations { get; set; }
 
-        public HearTheLetterIteration(List<string> lettersToLearn, List<HearTheLetterOption> letterLocations) : base(lettersToLearn)
+        public HearTheLetterIteration(int id, List<string> lettersToLearn, List<HearTheLetterOption> letterLocations) : base(id, lettersToLearn)
         {
             this.LetterLocations = letterLocations;
         }

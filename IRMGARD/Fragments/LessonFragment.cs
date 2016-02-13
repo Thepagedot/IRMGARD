@@ -7,7 +7,7 @@ using IRMGARD.Models;
 using Android.Provider;
 
 namespace IRMGARD
-{	
+{
     public abstract class LessonFragment : Fragment
     {
         /// <summary>
@@ -32,7 +32,7 @@ namespace IRMGARD
         /// Occurs when a user interacted with the fragment
         /// </summary>
         public event UserInteractedEventHandler UserInteracted;
-        public delegate void UserInteractedEventHandler(object sender, UserInteractedEventArgs e);      
+        public delegate void UserInteractedEventHandler(object sender, UserInteractedEventArgs e);
 
         protected void FireIterationFinished(Iteration iteration, bool success, bool showAnimation)
         {
@@ -41,7 +41,7 @@ namespace IRMGARD
         }
 
         protected void FireIterationChanged(Iteration iteration)
-        {            
+        {
             if (IterationChanged != null)
                 IterationChanged(this, new IterationChangedEventArgs(iteration));
         }
@@ -114,7 +114,7 @@ namespace IRMGARD
                 currentIterationIndex++;
                 InitIteration();
             }
-        }                        
+        }
 
         /// <summary>
         /// Initiates the current iteration
@@ -154,7 +154,7 @@ namespace IRMGARD
             this.Success = success;
             this.ShowAnimation = showAnimation;
         }
-    }    
+    }
 
     public class UserInteractedEventArgs : EventArgs
     {
@@ -165,4 +165,4 @@ namespace IRMGARD
             this.IsReady = isReady;
         }
     }
-}	
+}

@@ -17,7 +17,7 @@ namespace IRMGARD.Models
         public List<TaskItem> TaskItems { get; set; }
         public List<LetterBase> Options { get; set; }
 
-        public LetterDropIteration(List<string> lettersToLearn) : base (lettersToLearn)
+        public LetterDropIteration(int id, List<string> lettersToLearn) : base (id, lettersToLearn)
 		{
 		}
 	}

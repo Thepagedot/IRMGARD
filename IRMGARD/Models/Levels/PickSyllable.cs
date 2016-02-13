@@ -20,7 +20,7 @@ namespace IRMGARD.Models
         public string SyllableToLearn { get; set; }
         public List<string> SyllableParts { get; set; }
 
-        public PickSyllableIteration(List<string> lettersToLearn, string syllableToLearn, List<string> syllableParts) : base (lettersToLearn)
+        public PickSyllableIteration(int id, List<string> lettersToLearn, string syllableToLearn, List<string> syllableParts) : base (id, lettersToLearn)
         {
             SyllableToLearn = syllableToLearn;
             SyllableParts = syllableParts;

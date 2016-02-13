@@ -18,7 +18,7 @@ namespace IRMGARD.Models
 
     public class MemoryIteration : Iteration
     {
-        public MemoryIteration (List<string> lettersToLearn, List<MemoryOption> options) : base (lettersToLearn)
+        public MemoryIteration (int id, List<string> lettersToLearn, List<MemoryOption> options) : base (id, lettersToLearn)
         {
         }
     }

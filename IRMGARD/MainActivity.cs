@@ -26,11 +26,12 @@ namespace IRMGARD
             this.CompatMode();
 
 			// Initialize DataHolder if needed
-			if (DataHolder.Current == null) {
-				DataHolder.Current = new DataHolder ();
+			if (DataHolder.Current == null)
+            {
+				DataHolder.Current = new DataHolder();
 
-				// Load levels from JSON
-				await DataHolder.Current.LoadLevelAsync(1);
+                // Load levels from JSON
+                await DataHolder.Current.LoadLevelAsync(1);
                 await DataHolder.Current.LoadLevelAsync(2);
                 await DataHolder.Current.LoadLevelAsync(3);
                 await DataHolder.Current.LoadLevelAsync(4);
@@ -39,6 +40,11 @@ namespace IRMGARD
                 await DataHolder.Current.LoadLevelAsync(7);
                 await DataHolder.Current.LoadLevelAsync(8);
                 await DataHolder.Current.LoadLevelAsync(9);
+
+                //await DataHolder.Current.LoadLevelAsync(-1);
+
+                // Load progress
+                await DataHolder.Current.LoadProgressAsync();
 			}
 
 			var startButton = FindViewById<FloatingActionButton> (Resource.Id.btnStart);
@@ -47,7 +53,7 @@ namespace IRMGARD
 
 		void StartButton_Click (object sender, EventArgs e)
 		{
-			var intent = new Intent (this, typeof(LevelSelectActivity));
+            var intent = new Intent (this, typeof(LevelSelectActivity));
 			StartActivity (intent);
 		}
 	}

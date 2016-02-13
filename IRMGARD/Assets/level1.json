@@ -22,6 +22,7 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1111,
               "LettersToLearn": [
                 "A"
               ],
@@ -33,6 +34,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1112,
               "LettersToLearn": [
                 "E"
               ],
@@ -44,6 +46,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1113,
               "LettersToLearn": [
                 "I"
               ],
@@ -55,6 +58,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1114,
               "LettersToLearn": [
                 "O"
               ],
@@ -66,6 +70,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1115,
               "LettersToLearn": [
                 "U"
               ],
@@ -230,30 +235,35 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1121,
               "LettersToLearn": [
                 "A"
               ]
             },
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1122,
               "LettersToLearn": [
                 "E"
               ]
             },
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1123,
               "LettersToLearn": [
                 "I"
               ]
             },
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1124,
               "LettersToLearn": [
                 "O"
               ]
             },
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1125,
               "LettersToLearn": [
                 "U"
               ]
@@ -270,6 +280,7 @@
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
             {
+              "Id": 1131,
               "$type": "IRMGARD.Models.LetterDropIteration, IRMGARD",
               "LettersToLearn": [
                 "A",
@@ -291,6 +302,7 @@
           "TypeOfLevel": "FindMissingLetter",
           "Iterations": [
             {
+              "Id": 1141,
               "$type": "IRMGARD.Models.FindMissingLetterIteration, IRMGARD",
               "LettersToLearn": [ "A", "E", "I", "O", "U" ],
               "HasLongAndShortLetters": false,
@@ -303,7 +315,7 @@
                     "IsLong": false
                   },
                   "IsSearched": false,
-                  "EmptySearchedItems":  true
+                  "EmptySearchedItems": true
                 },
                 {
                   "TaskLetter": {
@@ -312,7 +324,7 @@
                     "IsLong": false
                   },
                   "IsSearched": false,
-                  "EmptySearchedItems":  true
+                  "EmptySearchedItems": true
                 },
                 {
                   "TaskLetter": {
@@ -321,7 +333,7 @@
                     "IsLong": false
                   },
                   "IsSearched": false,
-                  "EmptySearchedItems":  true
+                  "EmptySearchedItems": true
                 },
                 {
                   "TaskLetter": {
@@ -330,7 +342,7 @@
                     "IsLong": false
                   },
                   "IsSearched": true,
-                  "EmptySearchedItems":  true
+                  "EmptySearchedItems": true
                 },
                 {
                   "TaskLetter": {
@@ -339,7 +351,7 @@
                     "IsLong": false
                   },
                   "IsSearched": false,
-                  "EmptySearchedItems":  true
+                  "EmptySearchedItems": true
                 }
               ]
             }
@@ -364,6 +376,7 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1211,
               "LettersToLearn": [
                 "L"
               ],
@@ -375,6 +388,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1212,
               "LettersToLearn": [
                 "M"
               ],
@@ -386,6 +400,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1213,
               "LettersToLearn": [
                 "N"
               ],
@@ -397,6 +412,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1214,
               "LettersToLearn": [
                 "R"
               ],
@@ -408,6 +424,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1215,
               "LettersToLearn": [
                 "S"
               ],
@@ -429,6 +446,7 @@
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
             {
+              "Id": 1221,
               "$type": "IRMGARD.Models.LetterDropIteration, IRMGARD",
               "LettersToLearn": [
                 "L",
@@ -593,30 +611,35 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1231,
               "LettersToLearn": [
                 "L"
               ]
             },
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1232,
               "LettersToLearn": [
                 "M"
               ]
             },
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1233,
               "LettersToLearn": [
                 "N"
               ]
             },
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1234,
               "LettersToLearn": [
                 "R"
               ]
             },
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1235,
               "LettersToLearn": [
                 "S"
               ]
@@ -666,6 +689,7 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
+              "Id": 1261,
               "SyllableToLearn": "MA",
               "SyllableParts": [
                 "M",
@@ -685,6 +709,7 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
+              "Id": 1281,
               "HasLongAndShortLetters": false,
               "Syllables": [
                 {
@@ -696,7 +721,7 @@
                         "IsLong": false
                       },
                       "IsSearched": true,
-                      "EmptySearchedItems":  true
+                      "EmptySearchedItems": true
                     },
                     {
                       "TaskLetter": {
@@ -705,7 +730,7 @@
                         "IsLong": false
                       },
                       "IsSearched": true,
-                      "EmptySearchedItems":  true
+                      "EmptySearchedItems": true
                     }
                   ],
                   "SoundPath": "Syllables/La.mp3"
@@ -725,6 +750,7 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
+              "Id": 1291,
               "HasLongAndShortLetters": false,
               "Syllables": [
                 {
@@ -736,7 +762,7 @@
                         "IsLong": false
                       },
                       "IsSearched": true,
-                      "EmptySearchedItems":  true
+                      "EmptySearchedItems": true
                     },
                     {
                       "TaskLetter": {
@@ -745,7 +771,7 @@
                         "IsLong": false
                       },
                       "IsSearched": true,
-                      "EmptySearchedItems":  true
+                      "EmptySearchedItems": true
                     }
                   ],
                   "SoundPath": "Syllables/La.mp3"
@@ -759,7 +785,7 @@
                         "IsLong": false
                       },
                       "IsSearched": true,
-                      "EmptySearchedItems":  true
+                      "EmptySearchedItems": true
                     },
                     {
                       "TaskLetter": {
@@ -768,7 +794,7 @@
                         "IsLong": false
                       },
                       "IsSearched": true,
-                      "EmptySearchedItems":  true
+                      "EmptySearchedItems": true
                     }
                   ],
                   "SoundPath": "Syllables/Ma.mp3"
@@ -796,6 +822,7 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1311,
               "LettersToLearn": [
                 "F"
               ],
@@ -807,6 +834,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1312,
               "LettersToLearn": [
                 "H"
               ],
@@ -818,6 +846,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1313,
               "LettersToLearn": [
                 "J"
               ],
@@ -829,6 +858,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1314,
               "LettersToLearn": [
                 "W"
               ],
@@ -840,6 +870,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1315,
               "LettersToLearn": [
                 "Z"
               ],
@@ -862,6 +893,7 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.LetterDropIteration, IRMGARD",
+              "Id": 1321,
               "LettersToLearn": [
                 "F",
                 "H",
@@ -1018,30 +1050,35 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1331,
               "LettersToLearn": [
                 "F"
               ]
             },
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1332,
               "LettersToLearn": [
                 "H"
               ]
             },
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1333,
               "LettersToLearn": [
                 "J"
               ]
             },
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1334,
               "LettersToLearn": [
                 "W"
               ]
             },
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1335,
               "LettersToLearn": [
                 "Z"
               ]
@@ -1067,6 +1104,7 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1411,
               "LettersToLearn": [
                 "B"
               ],
@@ -1078,6 +1116,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1412,
               "LettersToLearn": [
                 "D"
               ],
@@ -1089,6 +1128,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1413,
               "LettersToLearn": [
                 "G"
               ],
@@ -1100,6 +1140,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1414,
               "LettersToLearn": [
                 "K"
               ],
@@ -1111,6 +1152,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1415,
               "LettersToLearn": [
                 "P"
               ],
@@ -1122,6 +1164,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1416,
               "LettersToLearn": [
                 "T"
               ],
@@ -1144,6 +1187,7 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.LetterDropIteration, IRMGARD",
+              "Id": 1421,
               "LettersToLearn": [
                 "B",
                 "D",
@@ -1336,36 +1380,42 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1431,
               "LettersToLearn": [
                 "B"
               ]
             },
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1432,
               "LettersToLearn": [
                 "D"
               ]
             },
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1433,
               "LettersToLearn": [
                 "G"
               ]
             },
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1434,
               "LettersToLearn": [
                 "K"
               ]
             },
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1435,
               "LettersToLearn": [
                 "P"
               ]
             },
             {
               "$type": "IRMGARD.Models.FourPicturesIteration, IRMGARD",
+              "Id": 1436,
               "LettersToLearn": [
                 "T"
               ]
@@ -1391,6 +1441,7 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1511,
               "LettersToLearn": [
                 "C"
               ],
@@ -1402,6 +1453,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1512,
               "LettersToLearn": [
                 "Q"
               ],
@@ -1413,6 +1465,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1513,
               "LettersToLearn": [
                 "V"
               ],
@@ -1424,6 +1477,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1514,
               "LettersToLearn": [
                 "X"
               ],
@@ -1435,6 +1489,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 1515,
               "LettersToLearn": [
                 "Y"
               ],
@@ -1457,6 +1512,7 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.LetterDropIteration, IRMGARD",
+              "Id": 1521,
               "LettersToLearn": [
                 "C",
                 "Q",
@@ -1478,6 +1534,7 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 1551,
               "LettersToLearn": [ "A", "B", "D" ],
               "LetterLocations": [
                 {
@@ -1496,6 +1553,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 1552,
               "LettersToLearn": [ "E", "F", "G" ],
               "LetterLocations": [
                 {
@@ -1514,6 +1572,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 1553,
               "LettersToLearn": [ "I", "K", "L" ],
               "LetterLocations": [
                 {
@@ -1532,6 +1591,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 1554,
               "LettersToLearn": [ "M", "N", "O" ],
               "LetterLocations": [
                 {
@@ -1550,6 +1610,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 1555,
               "LettersToLearn": [ "P", "R", "T" ],
               "LetterLocations": [
                 {
@@ -1568,6 +1629,7 @@
             },
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 1556,
               "LettersToLearn": [ "U", "W", "Z" ],
               "LetterLocations": [
                 {
@@ -1604,6 +1666,7 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.AbcRankIteration, IRMGARD",
+              "Id": 1621,
               "Options": [
                 {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
@@ -1644,6 +1707,7 @@
           "Iterations": [
             {
               "$type": "IRMGARD.Models.AbcRankIteration, IRMGARD",
+              "Id": 1631,
               "Options": [
                 {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
@@ -1655,6 +1719,7 @@
                 },
                 {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Id": 1632,
                   "Name": "Bad",
                   "Media": {
                     "ImagePath": "Bad.png",
@@ -1663,6 +1728,7 @@
                 },
                 {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Id": 1633,
                   "Name": "Clown",
                   "Media": {
                     "ImagePath": "Clown.png",
@@ -1671,6 +1737,7 @@
                 },
                 {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Id": 1634,
                   "Name": "Dusche",
                   "Media": {
                     "ImagePath": "Dusche.png",
@@ -1679,6 +1746,7 @@
                 },
                 {
                   "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Id": 1635,
                   "Name": "Elefant",
                   "Media": {
                     "ImagePath": "Elefant.png",
@@ -1699,7 +1767,8 @@
           "TypeOfLevel": "Memory",
           "Iterations": [
             {
-              "$type": "IRMGARD.Models.MemoryIteration, IRMGARD"
+              "$type": "IRMGARD.Models.MemoryIteration, IRMGARD",
+              "Id": 1651
             }
           ],
           "Options": [

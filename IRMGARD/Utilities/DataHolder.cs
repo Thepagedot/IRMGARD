@@ -6,11 +6,13 @@ using Android.App;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using System.Threading.Tasks;
+using IRMGARD.Utilities;
 
 namespace IRMGARD
 {
 	public class DataHolder
 	{
+        // Singleton
 		public static DataHolder Current;
 
 		// Current variables
@@ -29,26 +31,55 @@ namespace IRMGARD
 
 		public async Task LoadLevelAsync(int levelNumber)
 		{
-			using (var reader = new StreamReader(Application.Context.Assets.Open("level" + levelNumber + ".json")))
-			{				
-				try
-				{
-					var jsonContent = await reader.ReadToEndAsync();
-					var json = JObject.Parse(jsonContent);
-					var level = JsonConvert.DeserializeObject<Level> (json.ToString(), new JsonSerializerSettings
-					{
-						TypeNameHandling = TypeNameHandling.All
-					});				
-					
-					Levels.Add(level);
-				} 
-				catch (Exception ex) 
-				{
-					Console.WriteLine("JSON reader Exception on reading level {0}", levelNumber);
-					Console.WriteLine("Message: {0}", ex.Message);
-				}
-			}
+            var level = await LocalStorage.LoadLevelAsync(levelNumber);
+            if (level != null)
+                Levels.Add(level);
 		}
-	}
+
+        public async Task SaveProgressAsync()
+        {
+            var dict = new Dictionary<int, IterationStatus>();
+
+            foreach (var level in Levels)
+            {
+                foreach (var module in level.Modules)
+                {
+                    foreach (var lesson in module.Lessons)
+                    {
+                        foreach (var iteration in lesson.Iterations)
+                        {
+                            dict.Add(iteration.Id, iteration.Status);
+                        }
+                    }
+                }
+            }
+
+            await LocalStorage.SaveToFileAsync("progress.json", dict);
+        }
+
+        public async Task LoadProgressAsync()
+        {
+            var dict = await LocalStorage.LoadFromFileAsync<Dictionary<int, IterationStatus>>("progress.json");
+            if (dict == null)
+                return;
+
+            foreach (var level in Levels)
+            {
+                foreach (var module in level.Modules)
+                {
+                    foreach (var lesson in module.Lessons)
+                    {
+                        foreach (var iteration in lesson.Iterations)
+                        {
+                            if (dict.ContainsKey(iteration.Id))
+                            {
+                                iteration.Status = dict[iteration.Id];
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 

@@ -17,7 +17,7 @@ namespace IRMGARD.Models
             public string Append { get; set; }
             public Media Media { get; set; }
 
-            public HearMeAbcIteration(List<string> lettersToLearn, string letterToLearn, string prepend, string append, Media media) : base(lettersToLearn)
+            public HearMeAbcIteration(int id, List<string> lettersToLearn, string letterToLearn, string prepend, string append, Media media) : base(id, lettersToLearn)
             {
                 Prepend = prepend;
                 Append = append;

@@ -16,10 +16,10 @@ namespace IRMGARD.Models
 	}
 
 	public class FourPicturesIteration : Iteration
-	{		
-		public FourPicturesIteration (List<string> lettersToLearn) : base (lettersToLearn)
+	{
+		public FourPicturesIteration (int id, List<string> lettersToLearn) : base (id, lettersToLearn)
 		{
-			
+
 		}
 	}
 

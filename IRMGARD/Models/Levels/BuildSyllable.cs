@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace IRMGARD.Models
 {
 	public class BuildSyllable : Lesson
-	{		
+	{
 		public BuildSyllable () {}
 
 		public BuildSyllable (int id, string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (id, title, soundPath, hint, typeOfLevel, iterations)
@@ -18,12 +18,12 @@ namespace IRMGARD.Models
 		public List<LetterBase> Options { get; set; }
         public bool HasLongAndShortLetters { get; set; }
 
-        public BuildSyllableIteration(List<string> lettersToLearn, List<Syllable> syllables, bool hasLongAndShortLetters) : base (lettersToLearn)
+        public BuildSyllableIteration(int id, List<string> lettersToLearn, List<Syllable> syllables, bool hasLongAndShortLetters) : base (id, lettersToLearn)
 	    {
 	        this.Syllables = syllables;
             this.HasLongAndShortLetters = hasLongAndShortLetters;
 	    }
-	}        
+	}
 
 	public class Syllable
 	{
@@ -38,4 +38,4 @@ namespace IRMGARD.Models
 			this.SoundPath = soundPath;
 		}
 	}
-}   
+}

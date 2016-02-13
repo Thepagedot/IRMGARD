@@ -169,7 +169,7 @@ namespace IRMGARD
         /// </summary>
         /// <param name="sender">Sender.</param>
         /// <param name="e">E.</param>
-        void Fragment_IterationFinished(object sender, IterationFinishedEventArgs e)
+        async void Fragment_IterationFinished(object sender, IterationFinishedEventArgs e)
         {
             // Update status
             var iterationIndex = DataHolder.Current.CurrentLesson.Iterations.IndexOf(e.Iteration);
@@ -193,6 +193,9 @@ namespace IRMGARD
 
             // Stop Player
             SoundPlayer.Stop();
+
+            // Save changes
+            await DataHolder.Current.SaveProgressAsync();
         }
 
 		/// <summary>

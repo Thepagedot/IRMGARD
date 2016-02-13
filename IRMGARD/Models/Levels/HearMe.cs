@@ -19,7 +19,7 @@ namespace IRMGARD.Models
 
 		public HearMeIteration () {}
 
-		public HearMeIteration (List<string> lettersToLearn, string name, Media media) : base (lettersToLearn)
+		public HearMeIteration (int id, List<string> lettersToLearn, string name, Media media) : base (id, lettersToLearn)
 		{
 			this.Name = name;
 			this.Media = media;
