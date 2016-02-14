@@ -14,11 +14,21 @@ namespace IRMGARD.Models
 
 	public class BuildSyllableIteration : Iteration
 	{
+		public List<SyllablesToLearn> SyllablePool { get; set; }
+
+        public BuildSyllableIteration(int id, List<string> lettersToLearn, List<SyllablesToLearn> syllablePool) : base (id, lettersToLearn)
+	    {
+	        this.SyllablePool = syllablePool;
+	    }
+	}        
+
+	public class SyllablesToLearn
+	{
 		public List<Syllable> Syllables { get; set; }
 		public List<LetterBase> Options { get; set; }
         public bool HasLongAndShortLetters { get; set; }
 
-        public BuildSyllableIteration(int id, List<string> lettersToLearn, List<Syllable> syllables, bool hasLongAndShortLetters) : base (id, lettersToLearn)
+        public SyllablesToLearn(List<Syllable> syllables, bool hasLongAndShortLetters)
 	    {
 	        this.Syllables = syllables;
             this.HasLongAndShortLetters = hasLongAndShortLetters;

@@ -673,6 +673,16 @@
     <AndroidAsset Include="Assets\Sounds\Letters\XHexe.mp3" />
     <AndroidAsset Include="Assets\Sounds\Letters\YBaby.mp3" />
     <AndroidAsset Include="Assets\Sounds\Letters\ZZelt.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\a_kurz.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\a_lang.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\e_kurz.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\e_lang.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\i_kurz.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\i_lang.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\o_kurz.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\o_lang.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\u_kurz.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Letters\u_lang.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />

@@ -17,6 +17,8 @@ namespace IRMGARD
         LinearLayout llSoundItems;
         FlowLayout flLetters;
 
+        SyllablesToLearn currentSyllablesToLearn;
+
         public BuildSyllableFragment(Lesson lesson) : base(lesson) {}
 
         public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
@@ -36,23 +38,34 @@ namespace IRMGARD
         {
             base.InitIteration();
 
-            var currentIteration = GetCurrentIteration<BuildSyllableIteration>();
+            // Pick random syllable(s) from pool
+            currentSyllablesToLearn = GetCurrentIteration<BuildSyllableIteration>().SyllablePool.PickRandomItems(1).FirstOrDefault();
+
+            // Reset drop zone
+            foreach (var syllable in currentSyllablesToLearn.Syllables)
+            {
+                foreach (var taskItem in syllable.SyllableParts)
+                {
+                    taskItem.IsDirty = false;
+                    taskItem.TaskLetter.Letter = String.Empty;
+                }
+            }
 
             // Generate options
-            currentIteration.Options = GenerateOptions(currentIteration, 10);
+            currentSyllablesToLearn.Options = GenerateOptions(currentSyllablesToLearn, 10);
 
-            BuildOptions(currentIteration.Options);
-            BuildTaskLetters(currentIteration.Syllables);
-            BuildSyllableSoundElements(currentIteration.Syllables);
+            BuildOptions(currentSyllablesToLearn.Options);
+            BuildTaskLetters(currentSyllablesToLearn.Syllables);
+            BuildSyllableSoundElements(currentSyllablesToLearn.Syllables);
         }
 
-        List<LetterBase> GenerateOptions(BuildSyllableIteration iteration, int numberOfOptions)
+        List<LetterBase> GenerateOptions(SyllablesToLearn syllablesToLearn, int numberOfOptions)
         {
             var options = new List<LetterBase>();
             var random = new Random();
 
             // Add correct options
-            foreach (var syllable in iteration.Syllables)
+            foreach (var syllable in syllablesToLearn.Syllables)
                 foreach (var letter in syllable.SyllableParts)
                     options.Add(new LetterBase(letter.TaskLetter.CorrectLetter, letter.TaskLetter.IsShort, letter.TaskLetter.IsLong));
 
@@ -60,7 +73,7 @@ namespace IRMGARD
             while (options.Count < numberOfOptions)
             {
                 var randomLetter = Alphabet.GetRandomLetter();
-                if (iteration.HasLongAndShortLetters)
+                if (syllablesToLearn.HasLongAndShortLetters)
                 {                    
                     options.Add(new LetterBase(randomLetter, random.Next(1) == 0, random.Next(1) == 0));
                 }
@@ -76,6 +89,7 @@ namespace IRMGARD
 
         void BuildOptions(List<LetterBase> options)
         {
+            flLetters.RemoveAllViews();
             var adapter = new LetterAdapter(Activity.BaseContext, 0, options);
             for (int i = 0; i < options.Count; i++) 
             {
@@ -132,7 +146,7 @@ namespace IRMGARD
                 int index = ((ViewGroup)layout.Parent).IndexOfChild(layout);
                 if (index >= 0)
                 {
-                    SoundPlayer.PlaySound(Activity.BaseContext, GetCurrentIteration<BuildSyllableIteration>().Syllables.ElementAt(index).SoundPath);
+                    SoundPlayer.PlaySound(Activity.BaseContext, currentSyllablesToLearn.Syllables.ElementAt(index).SoundPath);
                 }
             }
 
@@ -140,6 +154,7 @@ namespace IRMGARD
 
         private void BuildSyllableSoundElements(List<Syllable> syllables)
         {
+            llSoundItems.RemoveAllViews();
             foreach (var syllable in syllables)
             {
                 var addMultiIcon = false;
@@ -174,7 +189,7 @@ namespace IRMGARD
                     var data = e.Event.ClipData;
                     if (data != null)
                     {
-                        var taskItems = GetCurrentIteration<BuildSyllableIteration>().Syllables;
+                        var taskItems = currentSyllablesToLearn.Syllables;
                         var draggedLetter = data.GetItemAt(0).Text;
                         var position = llTaskItems.IndexOfChild(sender as View);
 
@@ -226,7 +241,7 @@ namespace IRMGARD
         public override void CheckSolution()
         {
             var success = true;
-            foreach (var syllable in GetCurrentIteration<BuildSyllableIteration>().Syllables)
+            foreach (var syllable in currentSyllablesToLearn.Syllables)
             {
                 foreach (var taskLetter in syllable.SyllableParts)
                 {
