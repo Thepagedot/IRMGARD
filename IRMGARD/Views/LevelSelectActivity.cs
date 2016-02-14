@@ -36,7 +36,11 @@ namespace IRMGARD
             // Check if level is enabled
             if (!DataHolder.Current.Levels.ElementAt(e.Position).IsEnabled)
             {
-                Toast.MakeText(this, "This level has not been implemented yet.", ToastLength.Short).Show();
+                if (SoundPlayer.IsPlaying)
+                {
+                    SoundPlayer.Stop();
+                }
+                SoundPlayer.PlaySound(this, "Application/Level_Not_Available.mp3");
                 return;
             }
 

@@ -683,6 +683,7 @@
     <AndroidAsset Include="Assets\Sounds\Letters\o_lang.mp3" />
     <AndroidAsset Include="Assets\Sounds\Letters\u_kurz.mp3" />
     <AndroidAsset Include="Assets\Sounds\Letters\u_lang.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Application\Level_Not_Available.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -959,5 +960,8 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_skip_next_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Sounds\Application\" />
   </ItemGroup>
 </Project>
