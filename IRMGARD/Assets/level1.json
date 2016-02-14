@@ -17,7 +17,7 @@
           "Title": "AEIOU",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 1.mp3",
-          "Hint": "Lesson 1 Hint",
+          "Hint": "Hints/05_extra_Tip_es_gibt_so_viele_erwachsene_in_dtschl.mp3",
           "TypeOfLevel": "HearMe",
           "Iterations": [
             {
@@ -88,7 +88,6 @@
           "Title": "AEIOU",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 2.mp3",
-          "Hint": "Lesson 2 Hint",
           "TypeOfLevel": "FourPictures",
           "Options": [
             {
@@ -276,7 +275,7 @@
           "Title": "A oder a?",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 3.mp3",
-          "Hint": "Lesson 3 Hint",
+          "Hint": "Hints/06_extra_Tip_es_ist_wichtig_moeglichst_taeglich_zu_ueben.mp3",
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
             {
@@ -298,7 +297,6 @@
           "Title": "A?IOU",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 4.mp3",
-          "Hint": "Lesson 4 Hint",
           "TypeOfLevel": "FindMissingLetter",
           "Iterations": [
             {
@@ -371,7 +369,6 @@
           "Title": "LMNRS",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 1.mp3",
-          "Hint": "Lesson 1 Hint",
           "TypeOfLevel": "HearMe",
           "Iterations": [
             {
@@ -442,7 +439,7 @@
           "Title": "M oder m?",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 2.mp3",
-          "Hint": "Lesson 2 Hint",
+          "Hint": "Hints/17_extra_Tip_trinkst_du_auch_genug_wasser.mp3",
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
             {
@@ -464,7 +461,6 @@
           "Title": "LMNRS",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 3.mp3",
-          "Hint": "Lesson 3 Hint",
           "TypeOfLevel": "FourPictures",
           "Options": [
             {
@@ -653,7 +649,7 @@
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 6.mp3",
           "SyllablePath": "Syllables/LMNRS",
-          "Hint": "Lesson 6 Hint",
+          "Hint": "Hints/07_extra_Tip_hast_du_freunde_zum_erzaehlen.mp3",
           "TypeOfLevel": "PickSyllable",
           "Iterations": [
             {
@@ -735,7 +731,6 @@
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 7.mp3",
           "SyllablePath": "Syllables/LMNRS",
-          "Hint": "Lesson 7 Hint",
           "TypeOfLevel": "PickSyllable",
           "Iterations": [
             {
@@ -836,7 +831,7 @@
           "Title": "Silben schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 8.mp3",
-          "Hint": "Lesson 8 Hint",
+          "Hint": "Hints/20_extra_Tip_wenn_du_jeden_tag_ein_bisschen_mit_mir_uebst_wirst_du_bestimmt_bald_lesen_koennen.mp3",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
             {
@@ -1592,7 +1587,6 @@
           "Title": "Wörter schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2 Aufgabe 9.mp3",
-          "Hint": "Lesson 9 Hint",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
             {
@@ -1986,7 +1980,6 @@
           "Title": "FHJWZ",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 3 Aufgabe 1.mp3",
-          "Hint": "Lesson 1 Hint",
           "TypeOfLevel": "HearMe",
           "Iterations": [
             {
@@ -2057,7 +2050,6 @@
           "Title": "F oder f?",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 3 Aufgabe 2.mp3",
-          "Hint": "Lesson 2 Hint",
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
             {
@@ -2079,7 +2071,6 @@
           "Title": "FHJWZ",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 3 Aufgabe 3.mp3",
-          "Hint": "Lesson 3 Hint",
           "TypeOfLevel": "FourPictures",
           "Options": [
             {
@@ -2261,7 +2252,7 @@
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 3 Aufgabe 6.mp3",
           "SyllablePath": "Syllables/FHJWZ",
-          "Hint": "Lesson 6 Hint",
+          "Hint": "Hints/08_extra_Tip_hole_dir_eine_Zeitung.mp3",
           "TypeOfLevel": "PickSyllable",
           "Iterations": [
             {
@@ -2343,7 +2334,6 @@
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 3 Aufgabe 7.mp3",
           "SyllablePath": "Syllables/FHJWZ",
-          "Hint": "Lesson 7 Hint",
           "TypeOfLevel": "PickSyllable",
           "Iterations": [
             {
@@ -2424,7 +2414,6 @@
           "Title": "Silben schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 3 Aufgabe 8.mp3",
-          "Hint": "Lesson 8 Hint",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
             {
@@ -3180,7 +3169,7 @@
           "Title": "Wörter schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 3 Aufgabe 9.mp3",
-          "Hint": "Lesson 9 Hint",
+          "Hint": "Hints/18_extra_Tip_vergisst_du_manchmal_was_du_schon_geuebt_hast.mp3",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
             {
@@ -3619,7 +3608,6 @@
           "Title": "BDGKPT",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 4 Aufgabe 1.mp3",
-          "Hint": "Lesson 1 Hint",
           "TypeOfLevel": "HearMe",
           "Iterations": [
             {
@@ -3702,7 +3690,7 @@
           "Title": "B oder b?",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 4 Aufgabe 2.mp3",
-          "Hint": "Lesson 2 Hint",
+          "Hint": "Hints/09_extra_Tip_ich_finde_es_toll_dass_du_immernoch_dabei_bist.mp3",
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
             {
@@ -3725,7 +3713,6 @@
           "Title": "BDGKPT",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 4 Aufgabe 3.mp3",
-          "Hint": "Lesson 3 Hint",
           "TypeOfLevel": "FourPictures",
           "Options": [
             {
@@ -3949,7 +3936,6 @@
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 4 Aufgabe 6.mp3",
           "SyllablePath": "Syllables/BDGKPT",
-          "Hint": "Lesson 6 Hint",
           "TypeOfLevel": "PickSyllable",
           "Iterations": [
             {
@@ -4045,7 +4031,6 @@
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 4 Aufgabe 7.mp3",
           "SyllablePath": "Syllables/BDGKPT",
-          "Hint": "Lesson 7 Hint",
           "TypeOfLevel": "PickSyllable",
           "Iterations": [
             {
@@ -4131,7 +4116,6 @@
           "Title": "Silben schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 4 Aufgabe 8.mp3",
-          "Hint": "Lesson 8 Hint",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
             {
@@ -5036,7 +5020,7 @@
           "Title": "Wörter schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 4 Aufgabe 9.mp3",
-          "Hint": "Lesson 9 Hint",
+          "Hint": "Hints/14_extra_Tip_schau_dich_doch_mal_um.mp3",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
             {
@@ -5595,7 +5579,6 @@
           "Title": "CQVXY",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 5 Aufgabe 1.mp3",
-          "Hint": "Lesson 1 Hint",
           "TypeOfLevel": "HearMe",
           "Iterations": [
             {
@@ -5666,7 +5649,6 @@
           "Title": "X oder x?",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 5 Aufgabe 2.mp3",
-          "Hint": "Lesson 2 Hint",
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
             {
@@ -5688,7 +5670,7 @@
           "Title": "Vorne, Mitte oder hinten?",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 5 Aufgabe 5.mp3",
-          "Hint": "Lesson 5 Hint",
+          "Hint": "Hints/21_extra_Tip_wenn_etwas_nicht_auf_anhieb_klappt_nicht_verzagen.mp3",
           "TypeOfLevel": "HearTheLetter",
           "Iterations": [
             {
@@ -5820,7 +5802,7 @@
           "Id": 162,
           "Title": "BAD?",
           "SoundPath": "Level-1/Level 1 Modul 6 Aufgabe 2.mp3",
-          "Hint": "Lesson 2 Hint",
+          "Hint": "Hints/01_extra_Tip_belohn_dich.mp3",
           "TypeOfLevel": "AbcRank",
           "Iterations": [
             {
@@ -5861,7 +5843,7 @@
           "Id": 163,
           "Title": "BAD?",
           "SoundPath": "Level-1/Level 1 Modul 6 Aufgabe 3.mp3",
-          "Hint": "Lesson 3 Hint",
+          "Hint": "Hints/11_extra_Tip_ich_freue_mich_dass_du_schon_so_weit_gekommen_bist.mp3",
           "TypeOfLevel": "AbcRank",
           "Iterations": [
             {
@@ -5922,7 +5904,7 @@
           "Title": "Memory",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 6 Aufgabe 5.mp3",
-          "Hint": "Lesson 5 Hint",
+          "Hint": "Hints/04_extra_Tip_ein_memoryspiel_selbst_erstellen.mp3",
           "TypeOfLevel": "Memory",
           "Iterations": [
             {

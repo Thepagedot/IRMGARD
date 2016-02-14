@@ -684,6 +684,27 @@
     <AndroidAsset Include="Assets\Sounds\Letters\u_kurz.mp3" />
     <AndroidAsset Include="Assets\Sounds\Letters\u_lang.mp3" />
     <AndroidAsset Include="Assets\Sounds\Application\Level_Not_Available.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\01_extra_Tip_belohn_dich.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\02_extra_Tip_arbeite_nicht_mit_losen_zetteln.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\03_extra_Tip_du_kannst_mit_deinem_finger_im_sand_oder_schnee_schreiben.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\04_extra_Tip_ein_memoryspiel_selbst_erstellen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\05_extra_Tip_es_gibt_so_viele_erwachsene_in_dtschl.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\08_extra_Tip_hole_dir_eine_Zeitung.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\09_extra_Tip_ich_finde_es_toll_dass_du_immernoch_dabei_bist.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\10_extra_Tip_ich_freue_mich_dass_du_immernoch_mit_mir_lernst.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\11_extra_Tip_ich_freue_mich_dass_du_schon_so_weit_gekommen_bist.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\12_extra_Tip_kannst_du_deinen_namen_schrieben.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\13_extra_Tip_kannst_du_namen_auf_den_Verpackungen_der_Lebensmittel_lesen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\14_extra_Tip_schau_dich_doch_mal_um.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\17_extra_Tip_trinkst_du_auch_genug_wasser.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\21_extra_Tip_wenn_etwas_nicht_auf_anhieb_klappt_nicht_verzagen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\06_extra_Tip_es_ist_wichtig_moeglichst_taeglich_zu_ueben.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\07_extra_Tip_hast_du_freunde_zum_erzaehlen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\15_extra_Tip_schoen_waere_es_wenn_du_dir_ein_Heft_und_einen_stift_anschaffen_wuerdest.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\16_extra_Tip_super_du_hast_echt_durchhaltevermoegen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\18_extra_Tip_vergisst_du_manchmal_was_du_schon_geuebt_hast.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\19_extra_Tip_wenn_du_bishierhin_alle_aufgaben_geloest_hast_kannst_du_stolz_auf_dich_sein.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\20_extra_Tip_wenn_du_jeden_tag_ein_bisschen_mit_mir_uebst_wirst_du_bestimmt_bald_lesen_koennen.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -963,5 +984,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\Sounds\Application\" />
+    <Folder Include="Assets\Sounds\Hints\" />
   </ItemGroup>
 </Project>

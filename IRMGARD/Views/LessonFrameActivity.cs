@@ -25,7 +25,7 @@ namespace IRMGARD
 	{
 		private const string lessonFragmentTag = "current-Lesson-fragment";
 
-		//IMenuItem hintButton;
+		IMenu topMenu;
         FloatingActionButton btnNext;
         TextView txtCapitalAlphabet;
         TextView txtLowerAlphabet;
@@ -77,6 +77,8 @@ namespace IRMGARD
             var module = DataHolder.Current.CurrentModule;
             var lesson = DataHolder.Current.CurrentLesson;
             var iteration = DataHolder.Current.CurrentIteration;
+
+            checkHintButton();
 
             // ----------------------------------------------------------------------
             // Module specifics
@@ -251,9 +253,9 @@ namespace IRMGARD
 
 		public override bool OnCreateOptionsMenu (IMenu menu)
 		{
-			MenuInflater.Inflate(Resource.Menu.levelFrame_menu, menu);
-			//hintButton = menu.FindItem(Resource.Id.btnHint);
-			//hintButton.SetVisible(!string.IsNullOrEmpty(DataHolder.Current.CurrentLesson.Hint));
+            topMenu = menu;
+            MenuInflater.Inflate(Resource.Menu.levelFrame_menu, topMenu);
+            checkHintButton();
 
 			return base.OnCreateOptionsMenu (menu);
 		}
@@ -267,9 +269,16 @@ namespace IRMGARD
                     PlayOrStopInstruction();
 					break;
 				// Show hint
-//				case Resource.Id.btnHint:
-//					Toast.MakeText (this, DataHolder.Current.CurrentLesson.Hint, ToastLength.Long).Show();
-//					break;
+                case Resource.Id.btnHint:
+                    if (!string.IsNullOrEmpty(DataHolder.Current.CurrentLesson.Hint))
+                    {
+                        if (SoundPlayer.IsPlaying)
+                        {
+                            SoundPlayer.Stop();
+                        }
+                        SoundPlayer.PlaySound(this, DataHolder.Current.CurrentLesson.Hint);
+                    }
+					break;
 				case Resource.Id.btnNextLesson:
 					NextLesson();
 					break;
@@ -349,6 +358,16 @@ namespace IRMGARD
             }
 
             return spannable;
+        }
+
+        private void checkHintButton()
+        {
+            if (topMenu != null)
+            {
+                var hintButton = topMenu.FindItem(Resource.Id.btnHint);
+                if (hintButton != null)
+                    hintButton.SetVisible(!string.IsNullOrEmpty(DataHolder.Current.CurrentLesson.Hint));
+            }
         }
     }
 }
