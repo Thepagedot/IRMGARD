@@ -982,8 +982,4 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_skip_next_black_24dp.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\Sounds\Application\" />
-    <Folder Include="Assets\Sounds\Hints\" />
-  </ItemGroup>
 </Project>
