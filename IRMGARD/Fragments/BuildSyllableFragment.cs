@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.Graphics;
 using Android.Content;
 using IRMGARD.Shared;
+using Android.Views.Animations;
 
 namespace IRMGARD
 {
@@ -16,6 +17,7 @@ namespace IRMGARD
         LinearLayout llTaskItems;
         LinearLayout llSoundItems;
         FlowLayout flLetters;
+        ImageView ivImagePopup;
 
         SyllablesToLearn currentSyllablesToLearn;
 
@@ -28,6 +30,7 @@ namespace IRMGARD
             llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.llTaskItems);
             llSoundItems = view.FindViewById<LinearLayout>(Resource.Id.llSoundItems);
             flLetters = view.FindViewById<FlowLayout> (Resource.Id.flLetters);
+            ivImagePopup = view.FindViewById<ImageView>(Resource.Id.ivImagePopup);
 			
             // Initialize iteration
             InitIteration();
@@ -117,7 +120,10 @@ namespace IRMGARD
                 for (int j = 0; j < syllable.SyllableParts.Count; j++)
                 {
                     var view = adapter.GetView(j, null, null);
-                    view.Drag += View_Drag;    
+                    view.Drag += View_Drag;
+
+                    view.FindViewById<TextView>(Resource.Id.letter).SetTextColor(Resources.GetColor(
+                        (i % 2 == 0) ? Resource.Color.irmgard_red_dark : Resource.Color.irmgard_red));
 
                     // Add letter to view
                     llTaskItems.AddView(view);
@@ -232,13 +238,23 @@ namespace IRMGARD
 
                         FireUserInteracted(isReady);
                         BuildTaskLetters(taskItems);
+                        
+                        if (currentSyllablesToLearn.Media != null && isReady && IsSuccess())
+                        {
+                            SoundPlayer.PlaySound(Activity.BaseContext, currentSyllablesToLearn.Media.SoundPath);
+                            ivImagePopup.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(1, Activity.BaseContext, currentSyllablesToLearn.Media.ImagePath));
+                            var animation = AnimationUtils.LoadAnimation(Activity.BaseContext, Resource.Animation.ShowPicturePopup);
+                            animation.AnimationEnd += (s, args) => ivImagePopup.Visibility = ViewStates.Gone;
+                            ivImagePopup.Visibility = ViewStates.Visible;
+                            ivImagePopup.StartAnimation(animation);
+                        }
                     }
 
                     break;
             }
         }
-
-        public override void CheckSolution()
+        
+        bool IsSuccess()
         {
             var success = true;
             foreach (var syllable in currentSyllablesToLearn.Syllables)
@@ -252,8 +268,13 @@ namespace IRMGARD
                     }
                 }
             }
-                
-            FinishIteration(success);
+            
+            return success;
+        }
+
+        public override void CheckSolution()
+        {
+            FinishIteration(IsSuccess());
         }
     }
 }    

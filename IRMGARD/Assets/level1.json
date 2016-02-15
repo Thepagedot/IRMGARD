@@ -1602,6 +1602,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Lama.png",
+                    "SoundPath": "Objects/Lama.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -1666,6 +1670,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Mama.png",
+                    "SoundPath": "Objects/Mama.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -1730,6 +1738,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Rose.png",
+                    "SoundPath": "Objects/Rose.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -1794,6 +1806,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Nase.png",
+                    "SoundPath": "Objects/Nase.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -1858,6 +1874,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Oma.png",
+                    "SoundPath": "Objects/Oma.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -1913,6 +1933,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Lisa.png",
+                    "SoundPath": "Objects/Lisa.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -3181,6 +3205,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Hose.png",
+                    "SoundPath": "Objects/Hose.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -3241,6 +3269,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Hase.png",
+                    "SoundPath": "Objects/Hase.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -3301,6 +3333,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Wale.png",
+                    "SoundPath": "Objects/Wale.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -3361,6 +3397,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Zone.png",
+                    "SoundPath": "Objects/Zone.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -3421,6 +3461,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Sofa.png",
+                    "SoundPath": "Objects/Sofa.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -3481,6 +3525,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Affe.png",
+                    "SoundPath": "Objects/Affe.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -3541,6 +3589,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Mofa.png",
+                    "SoundPath": "Objects/Mofa.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -5032,6 +5084,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Dame.png",
+                    "SoundPath": "Objects/Dame.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -5092,6 +5148,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Puma.png",
+                    "SoundPath": "Objects/Puma.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -5152,6 +5212,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Jade.png",
+                    "SoundPath": "Objects/Jade.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -5212,6 +5276,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Papa.png",
+                    "SoundPath": "Objects/Papa.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -5272,6 +5340,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Ente.png",
+                    "SoundPath": "Objects/Ente.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -5332,6 +5404,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Kilo.png",
+                    "SoundPath": "Objects/Kilo.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -5392,6 +5468,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Po.png",
+                    "SoundPath": "Objects/Po.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -5452,6 +5532,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Kino.png",
+                    "SoundPath": "Objects/Kino.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [
@@ -5512,6 +5596,10 @@
               "SyllablePool": [
                 {
                   "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Dose.png",
+                    "SoundPath": "Objects/Dose.mp3"
+                  },
                   "Syllables": [
                     {
                       "SyllableParts": [

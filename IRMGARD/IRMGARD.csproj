@@ -871,6 +871,7 @@
     <AndroidResource Include="Resources\drawable\oval_red.xml" />
     <AndroidResource Include="Resources\drawable\vert_lines.xml" />
     <AndroidResource Include="Resources\drawable\vert_lines_inset.xml" />
+    <AndroidResource Include="Resources\anim\ShowPicturePopup.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">
