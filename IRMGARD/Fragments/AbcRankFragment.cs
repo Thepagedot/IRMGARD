@@ -65,6 +65,7 @@ namespace IRMGARD
             currentOptions.Shuffle();
 
             // Add options to view
+            flOptions.RemoveAllViews();
             var adapter = new AbcRankAdapter(Activity.BaseContext, 0, currentOptions);
             for (var i = 0; i < currentOptions.Count; i++)
             {
