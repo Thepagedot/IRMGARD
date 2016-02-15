@@ -30,6 +30,7 @@ namespace IRMGARD
             var view = inflater.Inflate(Resource.Layout.FindMissingLetter, container, false);
             llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.llTaskItems);
             flLetters = view.FindViewById<FlowLayout>(Resource.Id.flLetters);
+            DataHolder.Current.CurrentLesson.Iterations.Shuffle();
 
             // Initialize iteration
             InitIteration();
@@ -108,6 +109,7 @@ namespace IRMGARD
         private void BuildTaskLetters(List<TaskItem> taskItems, Case fontCase)
         {
             llTaskItems.RemoveAllViews();
+            flLetters.RemoveAllViews();
 
             // Convert letters to font case
             foreach (var item in taskItems)

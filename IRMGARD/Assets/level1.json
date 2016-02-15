@@ -312,6 +312,168 @@
                     "IsShort": false,
                     "IsLong": false
                   },
+                  "IsSearched": true,
+                  "EmptySearchedItems": true
+                },
+                {
+                  "TaskLetter": {
+                    "Letter": "E",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": false,
+                  "EmptySearchedItems": true
+                },
+                {
+                  "TaskLetter": {
+                    "Letter": "I",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": false,
+                  "EmptySearchedItems": true
+                },
+                {
+                  "TaskLetter": {
+                    "Letter": "O",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": false,
+                  "EmptySearchedItems": true
+                },
+                {
+                  "TaskLetter": {
+                    "Letter": "U",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": false,
+                  "EmptySearchedItems": true
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.FindMissingLetterIteration, IRMGARD",
+              "Id": 1142,
+              "LettersToLearn": [ "A", "E", "I", "O", "U" ],
+              "HasLongAndShortLetters": false,
+              "RandomizeCase": true,
+              "TaskItems": [
+                {
+                  "TaskLetter": {
+                    "Letter": "A",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": false,
+                  "EmptySearchedItems": true
+                },
+                {
+                  "TaskLetter": {
+                    "Letter": "E",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": true,
+                  "EmptySearchedItems": true
+                },
+                {
+                  "TaskLetter": {
+                    "Letter": "I",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": false,
+                  "EmptySearchedItems": true
+                },
+                {
+                  "TaskLetter": {
+                    "Letter": "O",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": false,
+                  "EmptySearchedItems": true
+                },
+                {
+                  "TaskLetter": {
+                    "Letter": "U",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": false,
+                  "EmptySearchedItems": true
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.FindMissingLetterIteration, IRMGARD",
+              "Id": 1143,
+              "LettersToLearn": [ "A", "E", "I", "O", "U" ],
+              "HasLongAndShortLetters": false,
+              "RandomizeCase": true,
+              "TaskItems": [
+                {
+                  "TaskLetter": {
+                    "Letter": "A",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": false,
+                  "EmptySearchedItems": true
+                },
+                {
+                  "TaskLetter": {
+                    "Letter": "E",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": false,
+                  "EmptySearchedItems": true
+                },
+                {
+                  "TaskLetter": {
+                    "Letter": "I",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": true,
+                  "EmptySearchedItems": true
+                },
+                {
+                  "TaskLetter": {
+                    "Letter": "O",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": false,
+                  "EmptySearchedItems": true
+                },
+                {
+                  "TaskLetter": {
+                    "Letter": "U",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": false,
+                  "EmptySearchedItems": true
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.FindMissingLetterIteration, IRMGARD",
+              "Id": 1144,
+              "LettersToLearn": [ "A", "E", "I", "O", "U" ],
+              "HasLongAndShortLetters": false,
+              "RandomizeCase": true,
+              "TaskItems": [
+                {
+                  "TaskLetter": {
+                    "Letter": "A",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
                   "IsSearched": false,
                   "EmptySearchedItems": true
                 },
@@ -349,6 +511,60 @@
                     "IsLong": false
                   },
                   "IsSearched": false,
+                  "EmptySearchedItems": true
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.FindMissingLetterIteration, IRMGARD",
+              "Id": 1145,
+              "LettersToLearn": [ "A", "E", "I", "O", "U" ],
+              "HasLongAndShortLetters": false,
+              "RandomizeCase": true,
+              "TaskItems": [
+                {
+                  "TaskLetter": {
+                    "Letter": "A",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": false,
+                  "EmptySearchedItems": true
+                },
+                {
+                  "TaskLetter": {
+                    "Letter": "E",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": false,
+                  "EmptySearchedItems": true
+                },
+                {
+                  "TaskLetter": {
+                    "Letter": "I",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": false,
+                  "EmptySearchedItems": true
+                },
+                {
+                  "TaskLetter": {
+                    "Letter": "O",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": false,
+                  "EmptySearchedItems": true
+                },
+                {
+                  "TaskLetter": {
+                    "Letter": "U",
+                    "IsShort": false,
+                    "IsLong": false
+                  },
+                  "IsSearched": true,
                   "EmptySearchedItems": true
                 }
               ]
