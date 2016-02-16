@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 using Android.Graphics;
 using Android.Content;
@@ -57,6 +56,7 @@ namespace IRMGARD
             {
                 Log.Debug(TAG, "Sync. Decoding ({0}) done. Bytes:{1}", bitmap.ToString(), bitmap.ByteCount.ToString());
                 TimeProfiler.LogMemInfo();
+                Log.Debug(TAG, "========================================");
             }
             return bitmap;
         }
@@ -117,66 +117,78 @@ namespace IRMGARD
 
         class BitmapFactoryOptionsPool
         {
-            readonly Queue<OptionsData> queue = new Queue<OptionsData>();
+            readonly List<OptionsData> pool = new List<OptionsData>();
 
             public BitmapFactoryOptionsPool() {}
 
             public bool TryGetOptions(int maxPoolSize, string filePath, out BitmapFactory.Options options)
             {
-                options = null;
-                foreach (var item in queue)
+                foreach (var item in pool)
                 {
-                    if (item.FilePath.Equals(filePath)) {
+                    if (item.FilePath.Equals(filePath))
+                    {
+                        // Image already in the pool - just return it
+                        item.LastAccess = DateTime.Now;
                         options = item.Options;
-                        break;
+                        return true;
                     }
                 }
 
-                if (options != null)
+                if (maxPoolSize > pool.Count)
                 {
-                    return true;
+                    // Add new instance to pool
+                    var optionsData = new OptionsData(filePath, DateTime.Now, new BitmapFactory.Options());
+                    options = optionsData.Options;
+
+                    pool.Add(optionsData);
                 }
                 else
                 {
-                    if (queue.Count < maxPoolSize)
+                    // Find the oldest pool item
+                    OptionsData optionsData = null;
+                    var lastAccess = DateTime.Now;
+                    foreach (var item in pool)
                     {
-                        options = new BitmapFactory.Options();
-                        queue.Enqueue(new OptionsData(filePath, options));
+                        if (lastAccess.CompareTo(item.LastAccess) == 1)
+                        {
+                            lastAccess = item.LastAccess;
+                            optionsData = item;
+                        }
                     }
-                    else
-                    {
-                        var item = queue.Dequeue();
-                        item.FilePath = filePath;
-                        options = item.Options;
-                        queue.Enqueue(item);
-                    }
-                    return false;
+
+                    // ...and substitute with the new item 
+                    optionsData.FilePath = filePath;
+                    optionsData.LastAccess = DateTime.Now;
+                    options = optionsData.Options;
                 }
+
+                return false;
             }
 
             public void ReleaseCache()
             {
-                foreach (var item in queue)
+                foreach (var item in pool)
                 {
-                    if (item != null && item.Options != null && item.Options.InBitmap != null)
+                    if (item.Options != null && item.Options.InBitmap != null)
                     {
                         item.Options.InBitmap.Dispose();
                         item.Options.InBitmap = null;
                     }
                 }
-                queue.Clear();
-
+                pool.Clear();
                 System.GC.Collect();
             }
 
             class OptionsData
             {
                 public string FilePath { get; set; }
+                public DateTime LastAccess { get; set; }
                 public BitmapFactory.Options Options { get; set; }
 
-                public OptionsData(string filePath, BitmapFactory.Options options)
+                public OptionsData(string filePath, DateTime lastAccess, BitmapFactory.Options options)
                 {
                     FilePath = filePath;
+                    LastAccess = lastAccess;
                     Options = options;
                 }
             }
