@@ -23,6 +23,7 @@ namespace IRMGARD
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.Main);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
+            RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
             this.CompatMode();
 
 			// Initialize DataHolder if needed

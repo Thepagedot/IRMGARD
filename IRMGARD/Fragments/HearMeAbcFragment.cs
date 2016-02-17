@@ -52,7 +52,6 @@ namespace IRMGARD
 
         void GridView_ItemClick (object sender, AdapterView.ItemClickEventArgs e)
         {
-            var parentView = (FrameLayout)e.View;
             var hearMeAbcLetter = GetCurrentIteration<HearMeAbcIteration>().Letters.ElementAt(e.Position);
 
             hearMeAbcLetter.HasVisited = true;
