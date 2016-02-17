@@ -6102,6 +6102,264 @@
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
+          "$type": "IRMGARD.Models.HearMeAbc, IRMGARD",
+          "Id": 161,
+          "Title": "Von A-Z",
+          "SoundPath": "Level-1/Level 1 Modul 6 Aufgabe 1.mp3",
+          "Hint": "Hints/19_extra_Tip_wenn_du_bishierhin_alle_aufgaben_geloest_hast_kannst_du_stolz_auf_dich_sein.mp3",
+          "TypeOfLevel": "HearMeAbc",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.HearMeAbcIteration, IRMGARD",
+              "Id": 1611,
+              "LettersToLearn": [
+                "A",
+                "B",
+                "C",
+                "D",
+                "E"
+              ],
+              "SoundPath": "Tasks/6-1/ABCDE.mp3",
+              "Letters": [
+                {
+                  "Letter": "A",
+                  "Media": {
+                    "SoundPath": "Letters/AAal.mp3"
+                  }
+                },
+                {
+                  "Letter": "B",
+                  "Append": "e",
+                  "Media": {
+                    "SoundPath": "Letters/BBoot.mp3"
+                  }
+                },
+                {
+                  "Letter": "C",
+                  "Append": "e",
+                  "Media": {
+                    "SoundPath": "Letters/CClown.mp3"
+                  }
+                },
+                {
+                  "Letter": "D",
+                  "Append": "e",
+                  "Media": {
+                    "SoundPath": "Letters/DDusche.mp3"
+                  }
+                },
+                {
+                  "Letter": "E",
+                  "Media": {
+                    "SoundPath": "Letters/EElefant.mp3"
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeAbcIteration, IRMGARD",
+              "Id": 1612,
+              "LettersToLearn": [
+                "F",
+                "G",
+                "H",
+                "I",
+                "J"
+              ],
+              "SoundPath": "Tasks/6-1/FGHIJ.mp3",
+              "Letters": [
+                {
+                  "Prepend": "e",
+                  "Letter": "F",
+                  "Media": {
+                    "SoundPath": "Letters/FFisch.mp3"
+                  }
+                },
+                {
+                  "Letter": "G",
+                  "Append": "e",
+                  "Media": {
+                    "SoundPath": "Letters/GGabel.mp3"
+                  }
+                },
+                {
+                  "Letter": "H",
+                  "Append": "a",
+                  "Media": {
+                    "SoundPath": "Letters/HHose.mp3"
+                  }
+                },
+                {
+                  "Letter": "I",
+                  "Media": {
+                    "SoundPath": "Letters/IIgel.mp3"
+                  }
+                },
+                {
+                  "Letter": "J",
+                  "Append": "ott",
+                  "Media": {
+                    "SoundPath": "Letters/JJacke.mp3"
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeAbcIteration, IRMGARD",
+              "Id": 1613,
+              "LettersToLearn": [
+                "K",
+                "L",
+                "M",
+                "N",
+                "O"
+              ],
+              "SoundPath": "Tasks/6-1/KLMNO.mp3",
+              "Letters": [
+                {
+                  "Letter": "K",
+                  "Append": "a",
+                  "Media": {
+                    "SoundPath": "Letters/KKatze.mp3"
+                  }
+                },
+                {
+                  "Prepend": "e",
+                  "Letter": "L",
+                  "Media": {
+                    "SoundPath": "Letters/LLos.mp3"
+                  }
+                },
+                {
+                  "Prepend": "e",
+                  "Letter": "M",
+                  "Media": {
+                    "SoundPath": "Letters/MMond.mp3"
+                  }
+                },
+                {
+                  "Prepend": "e",
+                  "Letter": "N",
+                  "Media": {
+                    "SoundPath": "Letters/NNase.mp3"
+                  }
+                },
+                {
+                  "Letter": "O",
+                  "Media": {
+                    "SoundPath": "Letters/OOfen.mp3"
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeAbcIteration, IRMGARD",
+              "Id": 1614,
+              "LettersToLearn": [
+                "P",
+                "Q",
+                "R",
+                "S",
+                "T"
+              ],
+              "SoundPath": "Tasks/6-1/PQRST.mp3",
+              "Letters": [
+                {
+                  "Letter": "P",
+                  "Append": "e",
+                  "Media": {
+                    "SoundPath": "Letters/PPo.mp3"
+                  }
+                },
+                {
+                  "Letter": "Q",
+                  "Append": "u",
+                  "Media": {
+                    "SoundPath": "Letters/QQualle.mp3"
+                  }
+                },
+                {
+                  "Prepend": "e",
+                  "Letter": "R",
+                  "Media": {
+                    "SoundPath": "Letters/RRegen.mp3"
+                  }
+                },
+                {
+                  "Prepend": "e",
+                  "Letter": "S",
+                  "Media": {
+                    "SoundPath": "Letters/SSonne.mp3"
+                  }
+                },
+                {
+                  "Letter": "T",
+                  "Append": "e",
+                  "Media": {
+                    "SoundPath": "Letters/TTomate.mp3"
+                  }
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearMeAbcIteration, IRMGARD",
+              "Id": 1615,
+              "LettersToLearn": [
+                "U",
+                "V",
+                "W",
+                "X",
+                "Y",
+                "Z"
+              ],
+              "SoundPath": "Tasks/6-1/UVWXYZ.mp3",
+              "Letters": [
+                {
+                  "Letter": "U",
+                  "Media": {
+                    "SoundPath": "Letters/UUhu.mp3"
+                  }
+                },
+                {
+                  "Letter": "V",
+                  "Append": "au",
+                  "Media": {
+                    "SoundPath": "Letters/VVogel.mp3"
+                  }
+                },
+                {
+                  "Letter": "W",
+                  "Append": "e",
+                  "Media": {
+                    "SoundPath": "Letters/WWald.mp3"
+                  }
+                },
+                {
+                  "Prepend": "i",
+                  "Letter": "X",
+                  "Media": {
+                    "SoundPath": "Letters/XHexe.mp3"
+                  }
+                },
+                {
+                  "Letter": "Y",
+                  "Append": "psilon",
+                  "Media": {
+                    "SoundPath": "Letters/YBaby.mp3"
+                  }
+                },
+                {
+                  "Letter": "Z",
+                  "Append": "ett",
+                  "Media": {
+                    "SoundPath": "Letters/ZZelt.mp3"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
           "$type": "IRMGARD.Models.AbcRank, IRMGARD",
           "Id": 162,
           "Title": "ACB?",

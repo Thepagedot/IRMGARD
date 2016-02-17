@@ -132,6 +132,8 @@
     <Compile Include="Fragments\HearTheLetterFragment.cs" />
     <Compile Include="Fragments\MemoryFragment.cs" />
     <Compile Include="Adapter\Specific\MemoryAdapter.cs" />
+    <Compile Include="Fragments\HearMeAbcFragment.cs" />
+    <Compile Include="Adapter\Specific\HearMeAbcAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\level4.json" />
@@ -705,6 +707,11 @@
     <AndroidAsset Include="Assets\Sounds\Hints\18_extra_Tip_vergisst_du_manchmal_was_du_schon_geuebt_hast.mp3" />
     <AndroidAsset Include="Assets\Sounds\Hints\19_extra_Tip_wenn_du_bishierhin_alle_aufgaben_geloest_hast_kannst_du_stolz_auf_dich_sein.mp3" />
     <AndroidAsset Include="Assets\Sounds\Hints\20_extra_Tip_wenn_du_jeden_tag_ein_bisschen_mit_mir_uebst_wirst_du_bestimmt_bald_lesen_koennen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Tasks\6-1\ABCDE.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Tasks\6-1\FGHIJ.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Tasks\6-1\KLMNO.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Tasks\6-1\PQRST.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Tasks\6-1\UVWXYZ.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -873,6 +880,8 @@
     <AndroidResource Include="Resources\drawable\vert_lines_inset.xml" />
     <AndroidResource Include="Resources\anim\ShowPicturePopup.xml" />
     <AndroidResource Include="Resources\menu\levelFrame_menu_debug.xml" />
+    <AndroidResource Include="Resources\layout\HearMeAbc.axml" />
+    <AndroidResource Include="Resources\layout\HearMeAbcItem.axml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">
@@ -899,7 +908,6 @@
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 2 Aufgabe 7.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 2 Aufgabe 8.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 2 Aufgabe 9.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 5 Aufgabe 6.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 1.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 2.mp3" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 5.mp3" />
