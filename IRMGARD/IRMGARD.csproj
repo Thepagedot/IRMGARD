@@ -239,6 +239,7 @@
     <AndroidAsset Include="Assets\Sounds\Objects\Papa.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Petersilie.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Po.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Popo.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Puma.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Qualle.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Ratte.mp3" />
