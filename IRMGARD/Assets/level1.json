@@ -288,6 +288,17 @@
                 "O",
                 "U"
               ]
+            },
+            {
+              "$type": "IRMGARD.Models.LetterDropIteration, IRMGARD",
+              "Id": 1132,
+              "LettersToLearn": [
+                "a",
+                "e",
+                "i",
+                "o",
+                "u"
+              ]
             }
           ]
         },
@@ -854,6 +865,17 @@
                 "N",
                 "R",
                 "S"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.LetterDropIteration, IRMGARD",
+              "Id": 1232,
+              "LettersToLearn": [
+                "l",
+                "m",
+                "n",
+                "r",
+                "s"
               ]
             }
           ]
@@ -2481,6 +2503,17 @@
                 "J",
                 "W",
                 "Z"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.LetterDropIteration, IRMGARD",
+              "Id": 1332,
+              "LettersToLearn": [
+                "f",
+                "h",
+                "j",
+                "w",
+                "z"
               ]
             }
           ]
@@ -4193,6 +4226,18 @@
                 "K",
                 "P",
                 "T"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.LetterDropIteration, IRMGARD",
+              "Id": 1432,
+              "LettersToLearn": [
+                "b",
+                "d",
+                "g",
+                "k",
+                "p",
+                "t"
               ]
             }
           ]
@@ -5964,6 +6009,17 @@
                 "V",
                 "X",
                 "Y"
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.LetterDropIteration, IRMGARD",
+              "Id": 1522,
+              "LettersToLearn": [
+                "c",
+                "q",
+                "v",
+                "x",
+                "y"
               ]
             }
           ]
