@@ -152,6 +152,8 @@ namespace IRMGARD
                 int index = ((ViewGroup)layout.Parent).IndexOfChild(layout);
                 if (index >= 0)
                 {
+                    if (SoundPlayer.IsPlaying)
+                        SoundPlayer.Stop();
                     SoundPlayer.PlaySound(Activity.BaseContext, currentSyllablesToLearn.Syllables.ElementAt(index).SoundPath);
                 }
             }
@@ -241,6 +243,8 @@ namespace IRMGARD
                         
                         if (currentSyllablesToLearn.Media != null && isReady && IsSuccess())
                         {
+                            if (SoundPlayer.IsPlaying)
+                                SoundPlayer.Stop();
                             SoundPlayer.PlaySound(Activity.BaseContext, currentSyllablesToLearn.Media.SoundPath);
                             ivImagePopup.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(1, Activity.BaseContext, currentSyllablesToLearn.Media.ImagePath));
                             var animation = AnimationUtils.LoadAnimation(Activity.BaseContext, Resource.Animation.ShowPicturePopup);

@@ -93,7 +93,10 @@ namespace IRMGARD
                 intent = new Intent(this, typeof(ModuleSelectActivity));
 
             if (intent != null)
+            {
+                mediaPlayer.Stop();
                 StartActivity(intent);
+            }
         }
 
         void BtnRepeat_Click (object sender, EventArgs e)

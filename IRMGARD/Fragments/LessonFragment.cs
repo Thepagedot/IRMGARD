@@ -99,6 +99,9 @@ namespace IRMGARD
         /// </summary>
         protected void FinishIteration(bool success, bool showAnimation)
         {
+            if (SoundPlayer.IsPlaying)
+                SoundPlayer.Stop();
+            
             var iteration = Lesson.Iterations.ElementAt(currentIterationIndex);
             iteration.Status = success ? IterationStatus.Success : IterationStatus.Failed;
 

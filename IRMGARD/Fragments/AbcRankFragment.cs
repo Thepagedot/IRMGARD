@@ -76,6 +76,8 @@ namespace IRMGARD
                 if (item.Media != null)
                 {
                     view.Touch += (sender, e) => {
+                        if (SoundPlayer.IsPlaying)
+                            SoundPlayer.Stop();
                         SoundPlayer.PlaySound(Activity.BaseContext, item.Media.SoundPath);
                     };
                 }

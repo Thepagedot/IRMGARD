@@ -207,6 +207,9 @@ namespace IRMGARD
 		/// <param name="e">event args.</param>
         void LessonFragment_LessonFinished(object sender, EventArgs e)
 		{
+            if (SoundPlayer.IsPlaying)
+                SoundPlayer.Stop();
+            
             var builder = new AlertDialog.Builder(this);
             builder.SetTitle(Resource.String.lesson_finished);
             builder.SetMessage(Resource.String.lesson_finished_message);

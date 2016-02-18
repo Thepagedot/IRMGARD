@@ -47,6 +47,8 @@ namespace IRMGARD
 
         void PlayTaskDesc()
         {
+            if (SoundPlayer.IsPlaying)
+                SoundPlayer.Stop();
             SoundPlayer.PlaySound(Activity.BaseContext, GetCurrentIteration<HearMeAbcIteration>().SoundPath);
         }
 
@@ -55,6 +57,8 @@ namespace IRMGARD
             var hearMeAbcLetter = GetCurrentIteration<HearMeAbcIteration>().Letters.ElementAt(e.Position);
 
             hearMeAbcLetter.HasVisited = true;
+            if (SoundPlayer.IsPlaying)
+                SoundPlayer.Stop();
             SoundPlayer.PlaySound(Activity.BaseContext, hearMeAbcLetter.Media.SoundPath);
 
             FireUserInteracted(true);
