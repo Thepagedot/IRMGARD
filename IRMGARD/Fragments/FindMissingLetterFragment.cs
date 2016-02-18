@@ -57,6 +57,7 @@ namespace IRMGARD
             // Generate options
             currentIteration.Options = GenerateOptions(currentIteration, 10, fontCase);
 
+            flLetters.RemoveAllViews();
             var letterAdapter = new LetterAdapter(Activity.BaseContext, 0, currentIteration.Options.Cast<LetterBase>().ToList());
             for (var i = 0; i < currentIteration.Options.Count; i++)
             {
@@ -109,7 +110,6 @@ namespace IRMGARD
         private void BuildTaskLetters(List<TaskItem> taskItems, Case fontCase)
         {
             llTaskItems.RemoveAllViews();
-            flLetters.RemoveAllViews();
 
             // Convert letters to font case
             foreach (var item in taskItems)
