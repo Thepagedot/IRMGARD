@@ -42,14 +42,10 @@
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:id="@+id/imageView1" />
-        <FrameLayout
+        <IRMGARD.FlowLayout
+            android:id="@+id/flLetters"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
-            <IRMGARD.FlowLayout
-                android:id="@+id/flLetters"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-        </FrameLayout>
+            android:layout_gravity="center" />
     </LinearLayout>
 </ScrollView>

@@ -16,7 +16,7 @@ using IRMGARD.Models;
 
 namespace IRMGARD
 {
-	[Activity (Label = "Modul Auswahl", ParentActivity = typeof(LevelSelectActivity))]
+	[Activity (Label = "Modulauswahl", ParentActivity = typeof(LevelSelectActivity))]
     public class ModuleSelectActivity : AppCompatActivity
 	{
         private ModuleAdapter moduleAdapter;
