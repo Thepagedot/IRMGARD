@@ -207,6 +207,9 @@ namespace IRMGARD
 		/// <param name="e">event args.</param>
         void LessonFragment_LessonFinished(object sender, EventArgs e)
 		{
+            if (SoundPlayer.IsPlaying)
+                SoundPlayer.Stop();
+
             var builder = new AlertDialog.Builder(this);
             builder.SetTitle(Resource.String.lesson_finished);
             builder.SetMessage(Resource.String.lesson_finished_message);
@@ -238,6 +241,8 @@ namespace IRMGARD
                 return new LetterDropFragment(lesson);
             if (lesson is HearTheLetter)
                 return new HearTheLetterFragment(lesson);
+            if (lesson is HearMeAbc)
+                return new HearMeAbcFragment(lesson);
             if (lesson is Memory)
                 return new MemoryFragment(lesson);
 
@@ -254,7 +259,9 @@ namespace IRMGARD
 		public override bool OnCreateOptionsMenu (IMenu menu)
 		{
             topMenu = menu;
-            MenuInflater.Inflate(Resource.Menu.levelFrame_menu, topMenu);
+            MenuInflater.Inflate(Env.Debug
+                ? Resource.Menu.levelFrame_menu_debug
+                : Resource.Menu.levelFrame_menu, topMenu);
             checkHintButton();
 
 			return base.OnCreateOptionsMenu (menu);

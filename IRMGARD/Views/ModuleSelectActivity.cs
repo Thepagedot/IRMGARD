@@ -38,6 +38,8 @@ namespace IRMGARD
         protected override void OnResume()
         {
             base.OnResume();
+            if (SoundPlayer.IsPlaying)
+                SoundPlayer.Stop();
 
             if (moduleAdapter != null)
             {

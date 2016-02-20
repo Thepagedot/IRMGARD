@@ -27,11 +27,13 @@ namespace IRMGARD.Models
 		public List<Syllable> Syllables { get; set; }
 		public List<LetterBase> Options { get; set; }
         public bool HasLongAndShortLetters { get; set; }
-
-        public SyllablesToLearn(List<Syllable> syllables, bool hasLongAndShortLetters)
+        public Media Media { get; set; }
+        
+        public SyllablesToLearn(List<Syllable> syllables, bool hasLongAndShortLetters, Media media)
 	    {
 	        this.Syllables = syllables;
             this.HasLongAndShortLetters = hasLongAndShortLetters;
+            this.Media = media;
 	    }
 	}
 

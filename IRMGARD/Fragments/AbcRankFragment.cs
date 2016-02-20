@@ -65,6 +65,7 @@ namespace IRMGARD
             currentOptions.Shuffle();
 
             // Add options to view
+            flOptions.RemoveAllViews();
             var adapter = new AbcRankAdapter(Activity.BaseContext, 0, currentOptions);
             for (var i = 0; i < currentOptions.Count; i++)
             {
@@ -75,6 +76,8 @@ namespace IRMGARD
                 if (item.Media != null)
                 {
                     view.Touch += (sender, e) => {
+                        if (SoundPlayer.IsPlaying)
+                            SoundPlayer.Stop();
                         SoundPlayer.PlaySound(Activity.BaseContext, item.Media.SoundPath);
                     };
                 }

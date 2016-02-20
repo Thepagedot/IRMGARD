@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -23,6 +23,15 @@
             android:layout_height="wrap_content"
             android:id="@+id/llTaskItems"
             android:layout_gravity="center" />
+        <ImageView
+            android:id="@+id/ivImagePopup"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:background="@android:color/white"
+            android:visibility="gone" />
         <ImageView
             android:src="@drawable/divider"
             android:layout_width="match_parent"

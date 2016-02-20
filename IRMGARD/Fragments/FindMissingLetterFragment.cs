@@ -30,6 +30,7 @@ namespace IRMGARD
             var view = inflater.Inflate(Resource.Layout.FindMissingLetter, container, false);
             llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.llTaskItems);
             flLetters = view.FindViewById<FlowLayout>(Resource.Id.flLetters);
+            DataHolder.Current.CurrentLesson.Iterations.Shuffle();
 
             // Initialize iteration
             InitIteration();
@@ -56,6 +57,7 @@ namespace IRMGARD
             // Generate options
             currentIteration.Options = GenerateOptions(currentIteration, 10, fontCase);
 
+            flLetters.RemoveAllViews();
             var letterAdapter = new LetterAdapter(Activity.BaseContext, 0, currentIteration.Options.Cast<LetterBase>().ToList());
             for (var i = 0; i < currentIteration.Options.Count; i++)
             {

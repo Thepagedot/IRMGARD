@@ -9,9 +9,9 @@
 		  android:title="@string/playVoiceInstruction"
 		  app:showAsAction="always" />
 
-  <item android:id="@+id/btnHint"
-		android:icon="@drawable/ic_help_black_24dp"
-		android:title="@string/hint"
+    <item android:id="@+id/btnHint"
+		  android:icon="@drawable/ic_help_black_24dp"
+		  android:title="@string/hint"
 		android:showAsAction="always" />
 
   <item

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using IRMGARD.Shared;
 
 namespace IRMGARD.Models
 {
@@ -24,6 +25,8 @@ namespace IRMGARD.Models
             TaskItems = taskItems;
             HasLongAndShortLetters = hasLongAndShortLetters;
             RandomizeCase = randomizeCase;
+
+            TaskItems.Shuffle();
         }
     }
 

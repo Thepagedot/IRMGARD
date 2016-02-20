@@ -51,6 +51,9 @@ namespace IRMGARD
                 currentIteration.TaskItems.Add(taskItem);
             }
 
+            currentIteration.TaskItems.Shuffle();
+            flLetters.RemoveAllViews();
+
             // Add options to view
             var letterAdapter = new LetterAdapter(Activity.BaseContext, 0, currentIteration.Options);
             for (var i = 0; i < currentIteration.Options.Count; i++)
