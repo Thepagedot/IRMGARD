@@ -10,7 +10,7 @@
 		  app:showAsAction="always" />
 
     <item android:id="@+id/btnHint"
-		  android:icon="@drawable/ic_help_black_24dp"
+		  android:icon="@drawable/ic_lightbulb_outline_white_24dp"
 		  android:title="@string/hint"
 		android:showAsAction="always" />
 
