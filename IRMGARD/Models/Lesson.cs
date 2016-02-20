@@ -13,13 +13,16 @@ namespace IRMGARD.Models
 		public string Hint { get; set; }
 		public LevelType TypeOfLevel { get; set; }
 		public List<Iteration> Iterations { get; set; }
-
-        public bool IsCompleted 
+        public bool IsCompleted
         {
             get { return Iterations.All(i => i.Status == IterationStatus.Success); }
         }
+        public bool IsDirty
+        {
+            get { return Iterations.Any(i => i.Status != IterationStatus.Pending); }
+        }
 
-	    protected Lesson () {}
+        protected Lesson () {}
 
 	    protected Lesson (int id, string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations)
 		{

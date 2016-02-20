@@ -13,4 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/ivUnchecked" />
+    <ImageView
+        android:src="@drawable/ic_indeterminate_check_box_black_24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivIntermediate"
+        android:visibility="gone" />
 </FrameLayout>

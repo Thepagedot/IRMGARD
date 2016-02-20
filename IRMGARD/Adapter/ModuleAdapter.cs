@@ -52,11 +52,19 @@ namespace IRMGARD
                 {
                     indicator.FindViewById<ImageView>(Resource.Id.ivChecked).Visibility = ViewStates.Visible;
                     indicator.FindViewById<ImageView>(Resource.Id.ivUnchecked).Visibility = ViewStates.Gone;
+                    indicator.FindViewById<ImageView>(Resource.Id.ivIntermediate).Visibility = ViewStates.Gone;
+                }
+                else if (lesson.IsDirty)
+                {
+                    indicator.FindViewById<ImageView>(Resource.Id.ivChecked).Visibility = ViewStates.Gone;
+                    indicator.FindViewById<ImageView>(Resource.Id.ivUnchecked).Visibility = ViewStates.Gone;
+                    indicator.FindViewById<ImageView>(Resource.Id.ivIntermediate).Visibility = ViewStates.Visible;
                 }
                 else
                 {
                     indicator.FindViewById<ImageView>(Resource.Id.ivChecked).Visibility = ViewStates.Gone;
                     indicator.FindViewById<ImageView>(Resource.Id.ivUnchecked).Visibility = ViewStates.Visible;
+                    indicator.FindViewById<ImageView>(Resource.Id.ivIntermediate).Visibility = ViewStates.Gone;
                 }
 
                 llLessons.AddView(indicator);
