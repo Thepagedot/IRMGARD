@@ -45,7 +45,7 @@
                     android:gravity="center"
                     android:layout_gravity="center" />
             </LinearLayout>
-        </android.support.v7.widget.CardView>
+         </android.support.v7.widget.CardView>
     </LinearLayout>
     <ImageView
         android:src="@drawable/divider"
@@ -54,8 +54,10 @@
         android:adjustViewBounds="false"
         android:layout_marginTop="@dimen/activity_vertical_margin"
         android:layout_marginBottom="@dimen/activity_vertical_margin" />
-    <IRMGARD.FlowLayout
+    <LinearLayout
         android:id="@+id/pickSyllableTaskItems"
+        android:orientation="horizontal"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>

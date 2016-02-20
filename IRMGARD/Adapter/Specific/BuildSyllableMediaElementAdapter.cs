@@ -28,11 +28,11 @@ namespace IRMGARD
             if (view == null)
                 view = layoutInflater.Inflate(Resource.Layout.BuildSyllableMediaElement, null);
             else
-                ((BitmapDrawable)view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage).Drawable).Bitmap.Recycle();
+                ((BitmapDrawable)view.FindViewById<ImageView>(Resource.Id.ivMediaElementImage).Drawable).Bitmap.Recycle();
 
 
             var bitmap = BitmapFactory.DecodeResource(Context.Resources, Resource.Drawable.ic_volume_up_black_24dp);
-            var imageView = view.FindViewById<ImageView>(Resource.Id.ivMeidaElementImage);
+            var imageView = view.FindViewById<ImageView>(Resource.Id.ivMediaElementImage);
             imageView.SetImageBitmap(bitmap);
 
             if (addMultiIcon)

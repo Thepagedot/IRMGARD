@@ -17,12 +17,12 @@ namespace IRMGARD
     {
         private List<PickSyllableOption> currentOptions;
 
-        private FlowLayout flTaskItems;
+        private LinearLayout llTaskItems;
         private LinearLayout llLayout;
         private TextView tvPickSyllable;
         private ImageView ivDropZone;
         private CardView cvDropZone;
-        private View originalView;
+
         private Bitmap emptyDropZoneImage;
         private Bitmap volumeUpDropZoneImage;
 
@@ -34,22 +34,24 @@ namespace IRMGARD
 
         public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
-            originalView = inflater.Inflate(Resource.Layout.PickSyllable, container, false);
+            // Prepare view
+            var view = inflater.Inflate(Resource.Layout.PickSyllable, container, false);
 
-            tvPickSyllable = originalView.FindViewById<TextView>(Resource.Id.tvPickSyllable);
-            llLayout = originalView.FindViewById<LinearLayout>(Resource.Id.llLayout);
+            tvPickSyllable = view.FindViewById<TextView>(Resource.Id.tvPickSyllable);
+            llLayout = view.FindViewById<LinearLayout>(Resource.Id.llLayout);
             llLayout.Drag += textViewDragZoneDrag;
-            flTaskItems = originalView.FindViewById<FlowLayout>(Resource.Id.pickSyllableTaskItems);
+            llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.pickSyllableTaskItems);
 
-            ivDropZone = originalView.FindViewById<ImageView>(Resource.Id.ivPickSyllableDropZone);
-            cvDropZone = originalView.FindViewById<CardView>(Resource.Id.cardView);     
+            ivDropZone = view.FindViewById<ImageView>(Resource.Id.ivPickSyllableDropZone);
+            cvDropZone = view.FindViewById<CardView>(Resource.Id.cardView);     
+
 
             emptyDropZoneImage = BitmapFactory.DecodeResource(Activity.BaseContext.Resources, Resource.Drawable.ic_help_black_24dp);
             volumeUpDropZoneImage = BitmapFactory.DecodeResource(Activity.BaseContext.Resources, Resource.Drawable.ic_volume_up_black_24dp);
 
             InitIteration();
 
-            return originalView;
+            return view;
         }
 
         protected override void InitIteration()
@@ -108,7 +110,7 @@ namespace IRMGARD
         {
             var syllableAdapter = new PickSyllableAdapter(Activity.BaseContext, 0, currentOptions);
 
-            flTaskItems.RemoveAllViews();
+            llTaskItems.RemoveAllViews();
             for (int i = 0; i < syllableAdapter.Count; i++) {
                 var view = syllableAdapter.GetView(i, null, null);
                 var item = currentOptions.ElementAt(i);
@@ -126,7 +128,7 @@ namespace IRMGARD
                         view.StartDrag(data, new View.DragShadowBuilder(view), null, 0);
                     }
                 };
-                flTaskItems.AddView(view);
+                llTaskItems.AddView(view);
             }
         }
 
