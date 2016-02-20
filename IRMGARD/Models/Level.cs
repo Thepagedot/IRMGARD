@@ -11,16 +11,18 @@ namespace IRMGARD.Models
 		public string Color { get; set; }
         public bool IsEnabled { get; set; }
         public bool IsCompleted { get; set; }
-		public List<Module> Modules { get; set; }
+        public string VideoPath { get; set; }
+        public List<Module> Modules { get; set; }
 
 		public Level () {}
 
-        public Level (string name, string color, bool isEnabled, bool isCompleted, List<Module> modules)
+        public Level (string name, string color, bool isEnabled, bool isCompleted, string videoPath, List<Module> modules)
 		{
 			this.Name = name;
 			this.Color = color;
             this.IsEnabled = isEnabled;
             this.IsCompleted = isCompleted;
+            this.VideoPath = videoPath;
 			this.Modules = modules;
 		}
 
@@ -45,7 +47,7 @@ namespace IRMGARD.Models
 			if (HasNextModule(currentModule))
 			{
 				var index = Modules.IndexOf (currentModule) + 1;
-				return Modules.ElementAt(index); 
+				return Modules.ElementAt(index);
 			}
 
 			return null;

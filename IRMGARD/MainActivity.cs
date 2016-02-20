@@ -55,7 +55,7 @@ namespace IRMGARD
 		void StartButton_Click (object sender, EventArgs e)
 		{
             var intent = new Intent (this, typeof(LevelSelectActivity));
-			StartActivity (intent);
+			StartActivity(intent);
 		}
 	}
 }

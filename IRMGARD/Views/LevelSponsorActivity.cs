@@ -37,8 +37,20 @@ namespace IRMGARD
 
         void CloseButton_Click (object sender, EventArgs e)
         {
-            var intent = new Intent(this, typeof(ModuleSelectActivity));
-            StartActivity(intent);
+            if (String.IsNullOrEmpty(DataHolder.Current.CurrentLevel.VideoPath))
+            {
+                StartActivity(new Intent(this, typeof(ModuleSelectActivity)));
+            }
+            else
+            {
+                // Navigate to video player
+                var intent = new Intent(this, typeof(VideoActivity));
+                var bundle = new Bundle();
+                bundle.PutString("nextView", "ModuleSelectActivity");
+                bundle.PutString("videoPath", DataHolder.Current.CurrentLevel.VideoPath);
+                intent.PutExtras(bundle);
+                StartActivity(intent);
+            }
         }
     }
 }

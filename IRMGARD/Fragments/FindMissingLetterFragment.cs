@@ -30,6 +30,8 @@ namespace IRMGARD
             var view = inflater.Inflate(Resource.Layout.FindMissingLetter, container, false);
             llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.llTaskItems);
             flLetters = view.FindViewById<FlowLayout>(Resource.Id.flLetters);
+
+            // Shuffle Iterations
             DataHolder.Current.CurrentLesson.Iterations.Shuffle();
 
             // Initialize iteration

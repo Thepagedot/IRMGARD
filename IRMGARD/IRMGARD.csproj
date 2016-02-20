@@ -149,7 +149,6 @@
     <AndroidAsset Include="Assets\Sounds\Objects\Uhu.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Igel.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\U-Boot.mp3" />
-    <AndroidAsset Include="Assets\Videos\Handy_Modul_1_720p.mp4" />
     <AndroidAsset Include="Assets\Fonts\Garaje_53_Uni_Black.otf" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 5 Aufgabe 5.mp3" />
     <AndroidAsset Include="Assets\Sounds\Tasks\5-5\wo_hoerst_du_A_in_Ina.mp3" />
@@ -1006,5 +1005,26 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\anim\SwipeOutRight.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Videos\Handy_Modul1_720p.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Videos\Handy_Modul2_720p.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Videos\Handy_Modul3_720p.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Videos\Handy_Modul4_720p.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Videos\Handy_Modul5_720p.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Videos\Handy_Modul6_720p.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\Videos\Handy_Level1_720p.mp4" />
   </ItemGroup>
 </Project>

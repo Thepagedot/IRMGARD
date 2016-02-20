@@ -1,14 +1,14 @@
-
 {
   "Name": "Level 1",
   "Color": "#DEB803",
   "IsEnabled": true,
   "IsCompleted": false,
+  "VideoPath": "Videos/Handy_Level1_720p.mp4",
   "Modules": [
     {
       "Name": "1: AEIOU",
       "Color": "#DDD6BF",
-      "VideoPath": "Videos/Handy_Modul_1_720p.mp4",
+      "VideoPath": "Videos/Handy_Modul1_720p.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -587,7 +587,7 @@
     {
       "Name": "2: LMNRS",
       "Color": "#AFC3C4",
-      "VideoPath": null,
+      "VideoPath": "Videos/Handy_Modul2_720p.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -1091,7 +1091,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1100,7 +1100,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/la_lang.mp3"
@@ -1119,7 +1119,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1128,7 +1128,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/le_lang.mp3"
@@ -1147,7 +1147,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1156,7 +1156,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/li_lang.mp3"
@@ -1175,7 +1175,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1184,7 +1184,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/lo_lang.mp3"
@@ -1203,7 +1203,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1212,7 +1212,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/lu_lang.mp3"
@@ -1240,7 +1240,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1249,7 +1249,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/ma_lang.mp3"
@@ -1268,7 +1268,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1277,7 +1277,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/me_lang.mp3"
@@ -1296,7 +1296,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1305,7 +1305,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/mi_lang.mp3"
@@ -1324,7 +1324,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1333,7 +1333,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/mo_lang.mp3"
@@ -1352,7 +1352,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1361,7 +1361,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/mu_lang.mp3"
@@ -1389,7 +1389,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1398,7 +1398,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/na_lang.mp3"
@@ -1417,7 +1417,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1426,7 +1426,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/ne_lang.mp3"
@@ -1445,7 +1445,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1454,7 +1454,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/ni_lang.mp3"
@@ -1473,7 +1473,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1482,7 +1482,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/no_lang.mp3"
@@ -1501,7 +1501,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1510,7 +1510,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/nu_lang.mp3"
@@ -1538,7 +1538,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1547,7 +1547,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/ra_lang.mp3"
@@ -1566,7 +1566,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1575,7 +1575,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/re_lang.mp3"
@@ -1594,7 +1594,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1603,7 +1603,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/ri_lang.mp3"
@@ -1622,7 +1622,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1631,7 +1631,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/ro_lang.mp3"
@@ -1650,7 +1650,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1659,7 +1659,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/ru_lang.mp3"
@@ -1687,7 +1687,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1696,7 +1696,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/sa_lang.mp3"
@@ -1715,7 +1715,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1724,7 +1724,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/se_lang.mp3"
@@ -1743,7 +1743,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1752,7 +1752,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/si_lang.mp3"
@@ -1771,7 +1771,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1780,7 +1780,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/so_lang.mp3"
@@ -1799,7 +1799,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -1808,7 +1808,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/LMNRS/su_lang.mp3"
@@ -2233,7 +2233,7 @@
     {
       "Name": "3: FHJWZ",
       "Color": "#d8cbd1",
-      "VideoPath": null,
+      "VideoPath": "Videos/Handy_Modul3_720p.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -2613,7 +2613,11 @@
               "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
               "Id": 1371,
               "LettersToLearn": [
-                "f", "h", "j", "w", "z"
+                "f",
+                "h",
+                "j",
+                "w",
+                "z"
               ],
               "SyllablesToLearn": [
                 [ "a", "f" ],
@@ -2627,7 +2631,11 @@
               "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
               "Id": 1372,
               "LettersToLearn": [
-                "f", "h", "j", "w", "z"
+                "f",
+                "h",
+                "j",
+                "w",
+                "z"
               ],
               "SyllablesToLearn": [
                 [ "e", "f" ],
@@ -2641,7 +2649,11 @@
               "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
               "Id": 1373,
               "LettersToLearn": [
-                "f", "h", "j", "w", "z"
+                "f",
+                "h",
+                "j",
+                "w",
+                "z"
               ],
               "SyllablesToLearn": [
                 [ "i", "f" ],
@@ -2655,7 +2667,11 @@
               "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
               "Id": 1374,
               "LettersToLearn": [
-                "f", "h", "j", "w", "z"
+                "f",
+                "h",
+                "j",
+                "w",
+                "z"
               ],
               "SyllablesToLearn": [
                 [ "o", "f" ],
@@ -2669,7 +2685,11 @@
               "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
               "Id": 1375,
               "LettersToLearn": [
-                "f", "h", "j", "w", "z"
+                "f",
+                "h",
+                "j",
+                "w",
+                "z"
               ],
               "SyllablesToLearn": [
                 [ "u", "f" ],
@@ -2708,7 +2728,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -2717,7 +2737,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/fa_lang.mp3"
@@ -2736,7 +2756,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -2745,7 +2765,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/fe_lang.mp3"
@@ -2764,7 +2784,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -2773,7 +2793,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/fi_lang.mp3"
@@ -2792,7 +2812,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -2801,7 +2821,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/fo_lang.mp3"
@@ -2820,7 +2840,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -2829,7 +2849,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/fu_lang.mp3"
@@ -2857,7 +2877,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -2866,7 +2886,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/ha_lang.mp3"
@@ -2885,7 +2905,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -2894,7 +2914,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/he_lang.mp3"
@@ -2913,7 +2933,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -2922,7 +2942,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/hi_lang.mp3"
@@ -2941,7 +2961,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -2950,7 +2970,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/ho_lang.mp3"
@@ -2969,7 +2989,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -2978,7 +2998,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/hu_lang.mp3"
@@ -3006,7 +3026,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -3015,7 +3035,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/ja_lang.mp3"
@@ -3034,7 +3054,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -3043,7 +3063,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/je_lang.mp3"
@@ -3062,7 +3082,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -3071,7 +3091,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/ji_lang.mp3"
@@ -3090,7 +3110,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -3099,7 +3119,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/jo_lang.mp3"
@@ -3118,7 +3138,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -3127,7 +3147,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/ju_lang.mp3"
@@ -3155,7 +3175,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -3164,7 +3184,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/wa_lang.mp3"
@@ -3183,7 +3203,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -3192,7 +3212,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/we_lang.mp3"
@@ -3211,7 +3231,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -3220,7 +3240,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/wi_lang.mp3"
@@ -3239,7 +3259,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -3248,7 +3268,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/wo_lang.mp3"
@@ -3267,7 +3287,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -3276,7 +3296,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/wu_lang.mp3"
@@ -3304,7 +3324,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -3313,7 +3333,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/za_lang.mp3"
@@ -3332,7 +3352,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -3341,7 +3361,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/ze_lang.mp3"
@@ -3360,7 +3380,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -3369,7 +3389,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/zi_lang.mp3"
@@ -3388,7 +3408,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -3397,7 +3417,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/zo_lang.mp3"
@@ -3416,7 +3436,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -3425,7 +3445,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/FHJWZ/zu_lang.mp3"
@@ -3449,7 +3469,11 @@
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
               "Id": 1391,
               "LettersToLearn": [
-                "f", "h", "j", "w", "z"
+                "f",
+                "h",
+                "j",
+                "w",
+                "z"
               ],
               "SyllablePool": [
                 {
@@ -3513,7 +3537,11 @@
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
               "Id": 1392,
               "LettersToLearn": [
-                "f", "h", "j", "w", "z"
+                "f",
+                "h",
+                "j",
+                "w",
+                "z"
               ],
               "SyllablePool": [
                 {
@@ -3577,7 +3605,11 @@
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
               "Id": 1393,
               "LettersToLearn": [
-                "f", "h", "j", "w", "z"
+                "f",
+                "h",
+                "j",
+                "w",
+                "z"
               ],
               "SyllablePool": [
                 {
@@ -3641,7 +3673,11 @@
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
               "Id": 1394,
               "LettersToLearn": [
-                "f", "h", "j", "w", "z"
+                "f",
+                "h",
+                "j",
+                "w",
+                "z"
               ],
               "SyllablePool": [
                 {
@@ -3705,7 +3741,11 @@
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
               "Id": 1395,
               "LettersToLearn": [
-                "f", "h", "j", "w", "z"
+                "f",
+                "h",
+                "j",
+                "w",
+                "z"
               ],
               "SyllablePool": [
                 {
@@ -3769,7 +3809,11 @@
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
               "Id": 1396,
               "LettersToLearn": [
-                "f", "h", "j", "w", "z"
+                "f",
+                "h",
+                "j",
+                "w",
+                "z"
               ],
               "SyllablePool": [
                 {
@@ -3833,7 +3877,11 @@
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
               "Id": 1397,
               "LettersToLearn": [
-                "f", "h", "j", "w", "z"
+                "f",
+                "h",
+                "j",
+                "w",
+                "z"
               ],
               "SyllablePool": [
                 {
@@ -3900,7 +3948,7 @@
     {
       "Name": "4: BPGKDT",
       "Color": "#c1cbac",
-      "VideoPath": null,
+      "VideoPath": "Videos/Handy_Modul4_720p.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -4350,7 +4398,12 @@
               "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
               "Id": 1471,
               "LettersToLearn": [
-                "b", "p", "g", "k", "d", "t"
+                "b",
+                "p",
+                "g",
+                "k",
+                "d",
+                "t"
               ],
               "SyllablesToLearn": [
                 [ "a", "b" ],
@@ -4365,7 +4418,12 @@
               "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
               "Id": 1472,
               "LettersToLearn": [
-                "b", "p", "g", "k", "d", "t"
+                "b",
+                "p",
+                "g",
+                "k",
+                "d",
+                "t"
               ],
               "SyllablesToLearn": [
                 [ "e", "b" ],
@@ -4380,7 +4438,12 @@
               "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
               "Id": 1473,
               "LettersToLearn": [
-                "b", "p", "g", "k", "d", "t"
+                "b",
+                "p",
+                "g",
+                "k",
+                "d",
+                "t"
               ],
               "SyllablesToLearn": [
                 [ "i", "b" ],
@@ -4395,7 +4458,12 @@
               "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
               "Id": 1474,
               "LettersToLearn": [
-                "b", "p", "g", "k", "d", "t"
+                "b",
+                "p",
+                "g",
+                "k",
+                "d",
+                "t"
               ],
               "SyllablesToLearn": [
                 [ "o", "b" ],
@@ -4410,7 +4478,12 @@
               "$type": "IRMGARD.Models.PickSyllableIteration, IRMGARD",
               "Id": 1475,
               "LettersToLearn": [
-                "b", "p", "g", "k", "d", "t"
+                "b",
+                "p",
+                "g",
+                "k",
+                "d",
+                "t"
               ],
               "SyllablesToLearn": [
                 [ "u", "b" ],
@@ -4450,7 +4523,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4459,7 +4532,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/ba_lang.mp3"
@@ -4478,7 +4551,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4487,7 +4560,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/be_lang.mp3"
@@ -4506,7 +4579,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4515,7 +4588,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/bi_lang.mp3"
@@ -4534,7 +4607,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4543,7 +4616,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/bo_lang.mp3"
@@ -4562,7 +4635,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4571,7 +4644,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/bu_lang.mp3"
@@ -4599,7 +4672,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4608,7 +4681,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/pa_lang.mp3"
@@ -4627,7 +4700,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4636,7 +4709,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/pe_lang.mp3"
@@ -4655,7 +4728,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4664,7 +4737,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/pi_lang.mp3"
@@ -4683,7 +4756,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4692,7 +4765,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/po_lang.mp3"
@@ -4711,7 +4784,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4720,7 +4793,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/pu_lang.mp3"
@@ -4748,7 +4821,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4757,7 +4830,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/ga_lang.mp3"
@@ -4776,7 +4849,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4785,7 +4858,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/ge_lang.mp3"
@@ -4804,7 +4877,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4813,7 +4886,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/gi_lang.mp3"
@@ -4832,7 +4905,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4841,7 +4914,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/go_lang.mp3"
@@ -4860,7 +4933,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4869,7 +4942,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/gu_lang.mp3"
@@ -4897,7 +4970,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4906,7 +4979,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/ka_lang.mp3"
@@ -4925,7 +4998,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4934,7 +5007,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/ke_lang.mp3"
@@ -4953,7 +5026,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4962,7 +5035,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/ki_lang.mp3"
@@ -4981,7 +5054,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -4990,7 +5063,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/ko_lang.mp3"
@@ -5009,7 +5082,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -5018,7 +5091,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/ku_lang.mp3"
@@ -5046,7 +5119,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -5055,7 +5128,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/da_lang.mp3"
@@ -5074,7 +5147,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -5083,7 +5156,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/de_lang.mp3"
@@ -5102,7 +5175,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -5111,7 +5184,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/di_lang.mp3"
@@ -5130,7 +5203,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -5139,7 +5212,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/do_lang.mp3"
@@ -5158,7 +5231,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -5167,7 +5240,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/du_lang.mp3"
@@ -5195,7 +5268,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -5204,7 +5277,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/ta_lang.mp3"
@@ -5223,7 +5296,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -5232,7 +5305,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/te_lang.mp3"
@@ -5251,7 +5324,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -5260,7 +5333,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/ti_lang.mp3"
@@ -5279,7 +5352,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -5288,7 +5361,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/to_lang.mp3"
@@ -5307,7 +5380,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         },
                         {
                           "TaskLetter": {
@@ -5316,7 +5389,7 @@
                             "IsLong": false
                           },
                           "IsSearched": true,
-                          "EmptySearchedItems":  true
+                          "EmptySearchedItems": true
                         }
                       ],
                       "SoundPath": "Syllables/BDGKPT/tu_lang.mp3"
@@ -5340,7 +5413,12 @@
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
               "Id": 1491,
               "LettersToLearn": [
-                "b", "p", "g", "k", "d", "t"
+                "b",
+                "p",
+                "g",
+                "k",
+                "d",
+                "t"
               ],
               "SyllablePool": [
                 {
@@ -5404,7 +5482,12 @@
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
               "Id": 1492,
               "LettersToLearn": [
-                "b", "p", "g", "k", "d", "t"
+                "b",
+                "p",
+                "g",
+                "k",
+                "d",
+                "t"
               ],
               "SyllablePool": [
                 {
@@ -5468,7 +5551,12 @@
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
               "Id": 1493,
               "LettersToLearn": [
-                "b", "p", "g", "k", "d", "t"
+                "b",
+                "p",
+                "g",
+                "k",
+                "d",
+                "t"
               ],
               "SyllablePool": [
                 {
@@ -5532,7 +5620,12 @@
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
               "Id": 1494,
               "LettersToLearn": [
-                "b", "p", "g", "k", "d", "t"
+                "b",
+                "p",
+                "g",
+                "k",
+                "d",
+                "t"
               ],
               "SyllablePool": [
                 {
@@ -5596,7 +5689,12 @@
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
               "Id": 1495,
               "LettersToLearn": [
-                "b", "p", "g", "k", "d", "t"
+                "b",
+                "p",
+                "g",
+                "k",
+                "d",
+                "t"
               ],
               "SyllablePool": [
                 {
@@ -5660,7 +5758,12 @@
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
               "Id": 1496,
               "LettersToLearn": [
-                "b", "p", "g", "k", "d", "t"
+                "b",
+                "p",
+                "g",
+                "k",
+                "d",
+                "t"
               ],
               "SyllablePool": [
                 {
@@ -5724,7 +5827,12 @@
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
               "Id": 1497,
               "LettersToLearn": [
-                "b", "p", "g", "k", "d", "t"
+                "b",
+                "p",
+                "g",
+                "k",
+                "d",
+                "t"
               ],
               "SyllablePool": [
                 {
@@ -5788,7 +5896,12 @@
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
               "Id": 1498,
               "LettersToLearn": [
-                "b", "p", "g", "k", "d", "t"
+                "b",
+                "p",
+                "g",
+                "k",
+                "d",
+                "t"
               ],
               "SyllablePool": [
                 {
@@ -5852,7 +5965,12 @@
               "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
               "Id": 1499,
               "LettersToLearn": [
-                "b", "p", "g", "k", "d", "t"
+                "b",
+                "p",
+                "g",
+                "k",
+                "d",
+                "t"
               ],
               "SyllablePool": [
                 {
@@ -5919,7 +6037,7 @@
     {
       "Name": "5: CQVXY",
       "Color": "#dcd08f",
-      "VideoPath": null,
+      "VideoPath": "Videos/Handy_Modul5_720p.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -6154,7 +6272,7 @@
     {
       "Name": "6: ABC",
       "Color": "#e5c8c4",
-      "VideoPath": null,
+      "VideoPath": "Videos/Handy_Modul6_720p.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -6836,165 +6954,165 @@
           ],
           "Options": [
             {
-                "Name": "Affe",
-                "Media": {
-                    "ImagePath": "Affe.png",
-                    "SoundPath": "Objects/Affe.mp3"
-                }
+              "Name": "Affe",
+              "Media": {
+                "ImagePath": "Affe.png",
+                "SoundPath": "Objects/Affe.mp3"
+              }
             },
             {
-                "Name": "Dame",
-                "Media": {
-                    "ImagePath": "Dame.png",
-                    "SoundPath": "Objects/Dame.mp3"
-                }
+              "Name": "Dame",
+              "Media": {
+                "ImagePath": "Dame.png",
+                "SoundPath": "Objects/Dame.mp3"
+              }
             },
             {
-                "Name": "Dose",
-                "Media": {
-                    "ImagePath": "Dose.png",
-                    "SoundPath": "Objects/Dose.mp3"
-                }
+              "Name": "Dose",
+              "Media": {
+                "ImagePath": "Dose.png",
+                "SoundPath": "Objects/Dose.mp3"
+              }
             },
             {
-                "Name": "Ente",
-                "Media": {
-                    "ImagePath": "Ente.png",
-                    "SoundPath": "Objects/Ente.mp3"
-                }
+              "Name": "Ente",
+              "Media": {
+                "ImagePath": "Ente.png",
+                "SoundPath": "Objects/Ente.mp3"
+              }
             },
             {
-                "Name": "Hase",
-                "Media": {
-                    "ImagePath": "Hase.png",
-                    "SoundPath": "Objects/Hase.mp3"
-                }
+              "Name": "Hase",
+              "Media": {
+                "ImagePath": "Hase.png",
+                "SoundPath": "Objects/Hase.mp3"
+              }
             },
             {
-                "Name": "Hose",
-                "Media": {
-                    "ImagePath": "Hose.png",
-                    "SoundPath": "Objects/Hose.mp3"
-                }
+              "Name": "Hose",
+              "Media": {
+                "ImagePath": "Hose.png",
+                "SoundPath": "Objects/Hose.mp3"
+              }
             },
             {
-                "Name": "Jade",
-                "Media": {
-                    "ImagePath": "Jade.png",
-                    "SoundPath": "Objects/Jade.mp3"
-                }
+              "Name": "Jade",
+              "Media": {
+                "ImagePath": "Jade.png",
+                "SoundPath": "Objects/Jade.mp3"
+              }
             },
             {
-                "Name": "Kilo",
-                "Media": {
-                    "ImagePath": "Kilo.png",
-                    "SoundPath": "Objects/Kilo.mp3"
-                }
+              "Name": "Kilo",
+              "Media": {
+                "ImagePath": "Kilo.png",
+                "SoundPath": "Objects/Kilo.mp3"
+              }
             },
             {
-                "Name": "Kino",
-                "Media": {
-                    "ImagePath": "Kino.png",
-                    "SoundPath": "Objects/Kino.mp3"
-                }
+              "Name": "Kino",
+              "Media": {
+                "ImagePath": "Kino.png",
+                "SoundPath": "Objects/Kino.mp3"
+              }
             },
             {
-                "Name": "Lama",
-                "Media": {
-                    "ImagePath": "Lama.png",
-                    "SoundPath": "Objects/Lama.mp3"
-                }
+              "Name": "Lama",
+              "Media": {
+                "ImagePath": "Lama.png",
+                "SoundPath": "Objects/Lama.mp3"
+              }
             },
             {
-                "Name": "Lisa",
-                "Media": {
-                    "ImagePath": "Lisa.png",
-                    "SoundPath": "Objects/Lisa.mp3"
-                }
+              "Name": "Lisa",
+              "Media": {
+                "ImagePath": "Lisa.png",
+                "SoundPath": "Objects/Lisa.mp3"
+              }
             },
             {
-                "Name": "Mama",
-                "Media": {
-                    "ImagePath": "Mama.png",
-                    "SoundPath": "Objects/Mama.mp3"
-                }
+              "Name": "Mama",
+              "Media": {
+                "ImagePath": "Mama.png",
+                "SoundPath": "Objects/Mama.mp3"
+              }
             },
             {
-                "Name": "Mofa",
-                "Media": {
-                    "ImagePath": "Mofa.png",
-                    "SoundPath": "Objects/Mofa.mp3"
-                }
+              "Name": "Mofa",
+              "Media": {
+                "ImagePath": "Mofa.png",
+                "SoundPath": "Objects/Mofa.mp3"
+              }
             },
             {
-                "Name": "Nase",
-                "Media": {
-                    "ImagePath": "Nase.png",
-                    "SoundPath": "Objects/Nase.mp3"
-                }
+              "Name": "Nase",
+              "Media": {
+                "ImagePath": "Nase.png",
+                "SoundPath": "Objects/Nase.mp3"
+              }
             },
             {
-                "Name": "Oma",
-                "Media": {
-                    "ImagePath": "Oma.png",
-                    "SoundPath": "Objects/Oma.mp3"
-                }
+              "Name": "Oma",
+              "Media": {
+                "ImagePath": "Oma.png",
+                "SoundPath": "Objects/Oma.mp3"
+              }
             },
             {
-                "Name": "Panda",
-                "Media": {
-                    "ImagePath": "Panda.png",
-                    "SoundPath": "Objects/Panda.mp3"
-                }
+              "Name": "Panda",
+              "Media": {
+                "ImagePath": "Panda.png",
+                "SoundPath": "Objects/Panda.mp3"
+              }
             },
             {
-                "Name": "Papa",
-                "Media": {
-                    "ImagePath": "Papa.png",
-                    "SoundPath": "Objects/Papa.mp3"
-                }
+              "Name": "Papa",
+              "Media": {
+                "ImagePath": "Papa.png",
+                "SoundPath": "Objects/Papa.mp3"
+              }
             },
             {
-                "Name": "Po",
-                "Media": {
-                    "ImagePath": "Po.png",
-                    "SoundPath": "Objects/Po.mp3"
-                }
+              "Name": "Po",
+              "Media": {
+                "ImagePath": "Po.png",
+                "SoundPath": "Objects/Po.mp3"
+              }
             },
             {
-                "Name": "Puma",
-                "Media": {
-                    "ImagePath": "Puma.png",
-                    "SoundPath": "Objects/Puma.mp3"
-                }
+              "Name": "Puma",
+              "Media": {
+                "ImagePath": "Puma.png",
+                "SoundPath": "Objects/Puma.mp3"
+              }
             },
             {
-                "Name": "Rose",
-                "Media": {
-                    "ImagePath": "Rose.png",
-                    "SoundPath": "Objects/Rose.mp3"
-                }
+              "Name": "Rose",
+              "Media": {
+                "ImagePath": "Rose.png",
+                "SoundPath": "Objects/Rose.mp3"
+              }
             },
             {
-                "Name": "Sofa",
-                "Media": {
-                    "ImagePath": "Sofa.png",
-                    "SoundPath": "Objects/Sofa.mp3"
-                }
+              "Name": "Sofa",
+              "Media": {
+                "ImagePath": "Sofa.png",
+                "SoundPath": "Objects/Sofa.mp3"
+              }
             },
             {
-                "Name": "Wale",
-                "Media": {
-                    "ImagePath": "Wale.png",
-                    "SoundPath": "Objects/Wale.mp3"
-                }
+              "Name": "Wale",
+              "Media": {
+                "ImagePath": "Wale.png",
+                "SoundPath": "Objects/Wale.mp3"
+              }
             },
             {
-                "Name": "Zone",
-                "Media": {
-                    "ImagePath": "Zone.png",
-                    "SoundPath": "Objects/Zone.mp3"
-                }
+              "Name": "Zone",
+              "Media": {
+                "ImagePath": "Zone.png",
+                "SoundPath": "Objects/Zone.mp3"
+              }
             }
           ]
         }

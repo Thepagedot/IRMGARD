@@ -85,6 +85,7 @@ namespace IRMGARD
                 var intent = new Intent(this, typeof(VideoActivity));
                 var bundle = new Bundle();
                 bundle.PutString("nextView", "LessonFrameActivity");
+                bundle.PutString("videoPath", DataHolder.Current.CurrentModule.VideoPath);
                 intent.PutExtras(bundle);
                 StartActivity(intent);
             }

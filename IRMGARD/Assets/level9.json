@@ -3,5 +3,6 @@
   "Color": "#bd8745",
   "IsEnabled": false,
   "IsCompleted": false,
-  "Modules": []
+  "VideoPath": null,
+  "Modules": [ ]
 }

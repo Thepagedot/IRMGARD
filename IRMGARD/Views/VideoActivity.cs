@@ -25,6 +25,7 @@ namespace IRMGARD
         MediaPlayer mediaPlayer;
         VideoView videoView;
         string nextView;
+        string videoPath;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -34,6 +35,7 @@ namespace IRMGARD
 
             // Read context
             nextView = Intent.Extras.GetString("nextView");
+            videoPath = Intent.Extras.GetString("videoPath");
 
             FindViewById<FloatingActionButton>(Resource.Id.btnNext).Click += BtnNext_Click;
             FindViewById<FloatingActionButton>(Resource.Id.btnRepeat).Click += BtnRepeat_Click;
@@ -74,9 +76,9 @@ namespace IRMGARD
 
         protected void Play()
         {
-            if (!String.IsNullOrEmpty(DataHolder.Current.CurrentModule.VideoPath))
+            if (!String.IsNullOrEmpty(videoPath))
             {
-                var descriptor = Assets.OpenFd(DataHolder.Current.CurrentModule.VideoPath);
+                var descriptor = Assets.OpenFd(videoPath);
                 mediaPlayer.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
                 mediaPlayer.Prepare();
                 mediaPlayer.Start();
