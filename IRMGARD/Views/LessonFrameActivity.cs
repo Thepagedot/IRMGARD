@@ -78,7 +78,7 @@ namespace IRMGARD
             var lesson = DataHolder.Current.CurrentLesson;
             var iteration = DataHolder.Current.CurrentIteration;
 
-            checkHintButton();
+            CheckHintButton();
 
             // ----------------------------------------------------------------------
             // Module specifics
@@ -257,7 +257,7 @@ namespace IRMGARD
             MenuInflater.Inflate(Env.Debug
                 ? Resource.Menu.levelFrame_menu_debug
                 : Resource.Menu.levelFrame_menu, topMenu);
-            checkHintButton();
+            CheckHintButton();
 
 			return base.OnCreateOptionsMenu (menu);
 		}
@@ -381,7 +381,7 @@ namespace IRMGARD
             return spannable;
         }
 
-        private void checkHintButton()
+        private void CheckHintButton()
         {
             if (topMenu != null)
             {
