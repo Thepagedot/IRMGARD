@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Android.Content;
 using Android.Views;
-using Android.Renderscripts;
 using IRMGARD.Shared;
 
 namespace IRMGARD
@@ -13,19 +12,25 @@ namespace IRMGARD
     public class LetterDropFragment : LessonFragment<LetterDrop>
     {
         private LinearLayout llTaskItems;
+        private FlowLayout flTaskItems;
         private FlowLayout flLetters;
+
+        private bool useAlternateView;
 
         public LetterDropFragment(Lesson lesson) : base(lesson) {}
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Android.OS.Bundle savedInstanceState)
         {
             // Prepare view
-            var view = inflater.Inflate(Resource.Layout.FindMissingLetter, container, false);
+            var view = inflater.Inflate(Resource.Layout.LetterDrop, container, false);
             llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.llTaskItems);
+            llTaskItems.ViewTreeObserver.GlobalLayout += Layout_ViewChange;
+            flTaskItems = view.FindViewById<FlowLayout>(Resource.Id.flTaskItems);
             flLetters = view.FindViewById<FlowLayout>(Resource.Id.flLetters);
 
             // Initialize iteration
             InitIteration();
+
             return view;
         }
 
@@ -72,6 +77,9 @@ namespace IRMGARD
             }
 
             // Add task letters to view
+            useAlternateView = currentIteration.TaskItems.Count > 5;
+            llTaskItems.Visibility = (useAlternateView) ? ViewStates.Gone : ViewStates.Visible;
+            flTaskItems.Visibility = (useAlternateView) ? ViewStates.Visible : ViewStates.Gone;
             BuildTaskLetters(currentIteration.TaskItems);
         }
 
@@ -98,19 +106,57 @@ namespace IRMGARD
 
         private void BuildTaskLetters(List<TaskItem> taskItems)
         {
-            llTaskItems.RemoveAllViews();
-            var taskItemAdapter = new TaskItemAdapter(Activity.BaseContext, 0, taskItems);
+            if (useAlternateView)
+            {
+                flTaskItems.RemoveAllViews();
+                flTaskItems.HorizontalSpacing = (int) (5 * Resources.DisplayMetrics.Density);
+            }
+            else
+            {
+                llTaskItems.RemoveAllViews();
 
+            }
+            var taskItemAdapter = new TaskItemAdapter(Activity.BaseContext, 0, taskItems);
             for (var i = 0; i < taskItems.Count; i++)
             {
                 var view = taskItemAdapter.GetView(i, null, null);
+
+                // Use different text size
+                var tvLetter = view.FindViewById<TextView>(Resource.Id.letter);
+                tvLetter.TextSize = 32f;
 
                 // Define searched letters as drop zone
                 if (taskItems.ElementAt(i).IsSearched)
                     view.Drag += View_Drag;
 
                 // Add letter to view
-                llTaskItems.AddView(view);
+                if (useAlternateView)
+                {
+                    var llLayout = view.FindViewById<RelativeLayout>(Resource.Id.llLayout);
+                    llLayout.SetMinimumWidth((int) (70 * Resources.DisplayMetrics.Density));
+                    flTaskItems.AddView(view);
+                }
+                else
+                {
+                    llTaskItems.AddView(view);
+                }
+            }
+        }
+
+        void Layout_ViewChange(object sender, EventArgs e)
+        {
+            if (!useAlternateView)
+            {
+                var firstChild = llTaskItems.GetChildAt(0);
+                var lastChild = llTaskItems.GetChildAt(llTaskItems.ChildCount - 1);
+                if (lastChild.Height > firstChild.Height)
+                {
+                    for (int i = 0; i < llTaskItems.ChildCount; i++)
+                    {
+                        var tvLetter = llTaskItems.GetChildAt(i).FindViewById<TextView>(Resource.Id.letter);
+                        tvLetter.TextSize = 28f;
+                    }
+                }
             }
         }
 
@@ -133,7 +179,7 @@ namespace IRMGARD
                     {
                         var taskLetters = GetCurrentIteration<LetterDropIteration>().TaskItems;
                         var draggedLetter = data.GetItemAt(0).Text;
-                        var position = llTaskItems.IndexOfChild(sender as View);
+                        var position = (useAlternateView) ? flTaskItems.IndexOfChild(sender as View) : llTaskItems.IndexOfChild(sender as View);
 
                         // Get case of dragged letter
                         var fontCase = draggedLetter.GetCase(); 
@@ -145,7 +191,7 @@ namespace IRMGARD
                         // Rebuild task letters
                         if (taskLetters[position].TaskLetter.Letter.Length > 1)
                             taskLetters[position].TaskLetter.Letter = taskLetters[position].TaskLetter.Letter.Remove(1);
-                                                
+
                         taskLetters[position].TaskLetter.Letter += draggedLetter;
                         taskLetters[position].IsDirty = true;
 
