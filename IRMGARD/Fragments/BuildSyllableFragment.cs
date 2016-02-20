@@ -143,21 +143,14 @@ namespace IRMGARD
             }
         }
 
-        void PlaySoundOnImageClick (object sender, EventArgs e)
+        void ImageButton_Click (object sender, EventArgs e, int index)
         {
-            LinearLayout layout = (sender as LinearLayout);
-
-            if (layout != null)
+            if (index >= 0)
             {
-                int index = ((ViewGroup)layout.Parent).IndexOfChild(layout);
-                if (index >= 0)
-                {
-                    if (SoundPlayer.IsPlaying)
-                        SoundPlayer.Stop();
-                    SoundPlayer.PlaySound(Activity.BaseContext, currentSyllablesToLearn.Syllables.ElementAt(index).SoundPath);
-                }
+                if (SoundPlayer.IsPlaying)
+                    SoundPlayer.Stop();
+                SoundPlayer.PlaySound(Activity.BaseContext, currentSyllablesToLearn.Syllables.ElementAt(index).SoundPath);
             }
-
         }
 
         private void BuildSyllableSoundElements(List<Syllable> syllables)
@@ -174,7 +167,7 @@ namespace IRMGARD
 
                 var mediaElementAdapter = new BuildSyllableMediaElementAdapter(Activity.BaseContext, 0, syllables, addMultiIcon);
                 var view = mediaElementAdapter.GetView(0, null, null);  
-                view.Click += PlaySoundOnImageClick;
+                view.FindViewById<ImageButton>(Resource.Id.ibSpeaker).Click += (sender, e) => ImageButton_Click(sender, e, index);
                 llSoundItems.AddView(view);
             }
 

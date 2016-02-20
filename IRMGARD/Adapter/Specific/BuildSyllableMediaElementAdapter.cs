@@ -24,16 +24,7 @@ namespace IRMGARD
 
         public override View GetView(int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
         {
-            var view = convertView;
-            if (view == null)
-                view = layoutInflater.Inflate(Resource.Layout.BuildSyllableMediaElement, null);
-            else
-                ((BitmapDrawable)view.FindViewById<ImageView>(Resource.Id.ivMediaElementImage).Drawable).Bitmap.Recycle();
-
-
-            var bitmap = BitmapFactory.DecodeResource(Context.Resources, Resource.Drawable.ic_volume_up_black_24dp);
-            var imageView = view.FindViewById<ImageView>(Resource.Id.ivMediaElementImage);
-            imageView.SetImageBitmap(bitmap);
+            var view = convertView ?? layoutInflater.Inflate(Resource.Layout.BuildSyllableMediaElement, null);
 
             if (addMultiIcon)
                 view.FindViewById<TextView>(Resource.Id.tvAddMultiIcon).Text = "+";

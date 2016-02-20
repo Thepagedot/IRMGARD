@@ -21,8 +21,10 @@
             android:minHeight="25px"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
             android:id="@+id/llTaskItems"
-            android:layout_gravity="center" />
+            android:layout_gravity="center"
+            android:gravity="center" />
         <ImageView
             android:id="@+id/ivImagePopup"
             android:layout_width="200dp"
@@ -40,10 +42,14 @@
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:id="@+id/imageView1" />
-        <IRMGARD.FlowLayout
-            android:id="@+id/flLetters"
-            android:layout_width="fill_parent"
+        <FrameLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_gravity="center">
+            <IRMGARD.FlowLayout
+                android:id="@+id/flLetters"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
     </LinearLayout>
 </ScrollView>
