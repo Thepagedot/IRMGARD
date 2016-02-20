@@ -366,7 +366,10 @@ namespace IRMGARD
             {
                 var hintButton = topMenu.FindItem(Resource.Id.btnHint);
                 if (hintButton != null)
-                    hintButton.SetVisible(!string.IsNullOrEmpty(DataHolder.Current.CurrentLesson.Hint));
+                {
+                    var isVisible = !string.IsNullOrEmpty(DataHolder.Current.CurrentLesson.Hint);
+                    hintButton.SetVisible(isVisible);
+                }
             }
         }
     }

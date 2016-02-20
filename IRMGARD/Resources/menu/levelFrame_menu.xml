@@ -9,8 +9,20 @@
 		  android:title="@string/playVoiceInstruction"
 		  app:showAsAction="always" />
 
-    <item android:id="@+id/btnHint"
-		  android:icon="@drawable/ic_help_black_24dp"
-		  android:title="@string/hint"
-		  android:showAsAction="always" />
+  <item android:id="@+id/btnHint"
+		android:icon="@drawable/ic_help_black_24dp"
+		android:title="@string/hint"
+		android:showAsAction="always" />
+
+  <item
+    android:id="@+id/btnNextLesson"
+		android:icon="@drawable/ic_skip_next_black_24dp"
+    android:title="Weiter"
+    android:showAsAction="never"/>
+
+  <item
+    android:id="@+id/btnPreviousLesson"
+    android:icon="@drawable/ic_skip_previous_black_24dp"
+    android:title="Zurück"
+    android:showAsAction="never"/>
 </menu>
