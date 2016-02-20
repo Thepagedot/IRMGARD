@@ -210,12 +210,7 @@ namespace IRMGARD
             if (SoundPlayer.IsPlaying)
                 SoundPlayer.Stop();
 
-            var builder = new AlertDialog.Builder(this);
-            builder.SetTitle(Resource.String.lesson_finished);
-            builder.SetMessage(Resource.String.lesson_finished_message);
-            builder.SetCancelable(false);
-            builder.SetPositiveButton(Android.Resource.String.Ok, (s, args) => NextLesson());
-            builder.Show();
+            NextLesson();
 		}
 
 		/// <summary>
@@ -316,37 +311,56 @@ namespace IRMGARD
         /// </summary>
         private void NextLesson()
 		{
-			var nextLesson = DataHolder.Current.CurrentModule.GetNextLesson(DataHolder.Current.CurrentLesson);
-            if (nextLesson != null)
+            // TODO: Check success
+            var success = false;
+
+            // Out Animation
+            var outAnimation = AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeOutLeft);
+            outAnimation.AnimationEnd += (s, args) =>
             {
-                DataHolder.Current.CurrentLesson = nextLesson;
-                DataHolder.Current.CurrentIteration = nextLesson.Iterations.First();
-                InitLesson();
-            }
-            else
-            {
-                var builder = new AlertDialog.Builder(this);
-                builder.SetTitle(Resource.String.module_finished);
-                builder.SetMessage(Resource.String.module_finished_message);
-                builder.SetCancelable(false);
-                builder.SetPositiveButton(Android.Resource.String.Ok, (s, args) => Finish());
-                builder.Show();
-            }
+                // Show success or failure badge
+                // regarding to success variable
+
+                var nextLesson = DataHolder.Current.CurrentModule.GetNextLesson(DataHolder.Current.CurrentLesson);
+                if (nextLesson != null)
+                {
+                    DataHolder.Current.CurrentLesson = nextLesson;
+                    DataHolder.Current.CurrentIteration = nextLesson.Iterations.First();
+                    InitLesson();
+                }
+                else
+                {
+                    Finish();
+                }
+
+                fragmentContainer.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeInRight));
+            };
+
+            fragmentContainer.StartAnimation(outAnimation);
 		}
 
-		/// <summary>
-		/// Swtiches to the previous Lesson if available.
-		/// </summary>
-		private void PreviousLesson()
-		{
-			var previousLesson = DataHolder.Current.CurrentModule.GetPrevioustLesson (DataHolder.Current.CurrentLesson);
-			if (previousLesson != null)
-			{
-				DataHolder.Current.CurrentLesson = previousLesson;
-				DataHolder.Current.CurrentIteration = previousLesson.Iterations.First();
-				InitLesson();
-			}
-		}
+        /// <summary>
+        /// Swtiches to the previous Lesson if available.
+        /// </summary>
+        private void PreviousLesson()
+        {
+            // Out Animation
+            var outAnimation = AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeOutRight);
+            outAnimation.AnimationEnd += (s, args) =>
+            {
+                var previousLesson = DataHolder.Current.CurrentModule.GetPrevioustLesson(DataHolder.Current.CurrentLesson);
+                if (previousLesson != null)
+                {
+                    DataHolder.Current.CurrentLesson = previousLesson;
+                    DataHolder.Current.CurrentIteration = previousLesson.Iterations.First();
+                    InitLesson();
+                }
+
+                fragmentContainer.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeInLeft));
+            };
+
+            fragmentContainer.StartAnimation(outAnimation);
+        }
 
         public static SpannableString GetLettersMarked(List<string> markedLetters, bool capitalize)
         {

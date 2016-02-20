@@ -995,4 +995,16 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_skip_next_black_24dp.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\anim\SwipeOutLeft.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\anim\SwipeInRight.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\anim\SwipeInLeft.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\anim\SwipeOutRight.xml" />
+  </ItemGroup>
 </Project>
