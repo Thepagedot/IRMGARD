@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using Android.App;
 using Android.Graphics;
+using Path = System.IO.Path;
 using Android.OS;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Android.Text;
 using Android.Text.Style;
+using System.Threading.Tasks;
 using Android.Views;
 using Android.Widget;
 using IRMGARD.Models;
@@ -36,6 +38,12 @@ namespace IRMGARD
         ImageView ivSuccess;
         ImageView ivIrmgard;
 
+        List<string> praiseFilesAvail;
+        List<string> criticismFilesAvail;
+        bool isPlayingPraiseOrCriticism;
+
+        Common Common { get { return DataHolder.Current.Common; } }
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -58,10 +66,14 @@ namespace IRMGARD
             ivIrmgard = FindViewById<ImageView>(Resource.Id.ivIrmgard);
             ivIrmgard.Click += (s, e) => PlayOrStopInstruction();
 
-
             // Initially hide success image
             ivSuccess.Visibility = ViewStates.Gone;
-		}
+
+            praiseFilesAvail = Assets.List(Path.Combine(Common.AssetSoundDir, Common.AssetPraiseDir))
+                .Select(s => Path.Combine(Common.AssetPraiseDir, s)).ToList();
+            criticismFilesAvail = Assets.List(Path.Combine(Common.AssetSoundDir, Common.AssetCriticismDir))
+                .Select(s => Path.Combine(Common.AssetCriticismDir, s)).ToList();
+        }
 
 		protected override void OnStart()
 		{
@@ -140,7 +152,7 @@ namespace IRMGARD
             bool waitForCompletion = false;
             if (DataHolder.Current.CurrentLesson.IsRecurringTask)
             {
-                var recurringTaskSoundFile = DataHolder.Current.Common.RecurringTaskSoundFiles.PickRandomItems(1).FirstOrDefault();
+                var recurringTaskSoundFile = Common.RecurringTaskSoundFiles.PickRandomItems(1).FirstOrDefault();
                 if (recurringTaskSoundFile != null)
                 {
                     SoundPlayer.PlaySound(this, recurringTaskSoundFile);
@@ -215,10 +227,25 @@ namespace IRMGARD
 		/// </summary>
 		/// <param name="sender">sender.</param>
 		/// <param name="e">event args.</param>
-        void LessonFragment_LessonFinished(object sender, EventArgs e)
+        async void LessonFragment_LessonFinished(object sender, EventArgs e)
 		{
             if (SoundPlayer.IsPlaying)
                 SoundPlayer.Stop();
+
+            // Play random praise or criticism audio depending on lesson success status excluding lesson HearMe
+            if (!DataHolder.Current.CurrentLesson.TypeOfLevel.Equals(LevelType.HearMe))
+            {
+                isPlayingPraiseOrCriticism = true;
+                SoundPlayer.PlaySound(this,
+                    DataHolder.Current.CurrentLesson.Iterations.All(i => i.Status == IterationStatus.Success)
+                    ? praiseFilesAvail.PickRandomItems(1).FirstOrDefault()
+                    : criticismFilesAvail.PickRandomItems(1).FirstOrDefault());
+            }
+            while (SoundPlayer.IsPlaying)
+            {
+                await Task.Delay(500);
+            }
+            isPlayingPraiseOrCriticism = false;
 
             NextLesson();
 		}
@@ -258,7 +285,15 @@ namespace IRMGARD
 
         private void BtnNext_Click (object sender, EventArgs e)
         {
-            currentFragment.CheckSolution();
+            if (isPlayingPraiseOrCriticism)
+            {
+                // User clicked on the next button to skip praise or criticism audio
+                SoundPlayer.Stop();
+            }
+            else
+            {
+                currentFragment.CheckSolution();
+            }
         }
 
 		public override bool OnCreateOptionsMenu (IMenu menu)

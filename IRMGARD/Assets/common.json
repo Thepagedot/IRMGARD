@@ -2,6 +2,8 @@
 {
   "AssetImageDir": "Images",
   "AssetSoundDir": "Sounds",
+  "AssetPraiseDir": "Praise",
+  "AssetCriticismDir": "Criticism",
   "RecurringTaskSoundFiles": [
         null,
         "Tasks/Diese_Uebung_kennst_du_schon.mp3",
