@@ -30,6 +30,7 @@ namespace IRMGARD
 			if (DataHolder.Current == null)
             {
 				DataHolder.Current = new DataHolder();
+                await DataHolder.Current.LoadCommonAsync();
 
                 // Load levels from JSON
                 await DataHolder.Current.LoadLevelAsync(1);

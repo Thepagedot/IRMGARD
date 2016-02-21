@@ -8,7 +8,8 @@ namespace IRMGARD.Models
 
         public PickSyllable () {}
 
-        public PickSyllable (int id, string title, string soundPath, string syllablePath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (id, title, soundPath, hint, typeOfLevel, iterations)
+        public PickSyllable (int id, string title, bool isRecurringTask, string soundPath, string syllablePath, string hint, LevelType typeOfLevel, List<Iteration> iterations)
+            : base (id, title, isRecurringTask, soundPath, hint, typeOfLevel, iterations)
 		{
             this.SyllablePath = syllablePath;
 		}

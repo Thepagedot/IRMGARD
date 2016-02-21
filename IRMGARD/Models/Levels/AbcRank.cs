@@ -7,7 +7,8 @@ namespace IRMGARD.Models
 	{
 		public AbcRank () {}
 
-		public AbcRank (int id, string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (id, title, soundPath, hint, typeOfLevel, iterations)
+        public AbcRank (int id, string title, bool isRecurringTask, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations)
+            : base (id, title, isRecurringTask, soundPath, hint, typeOfLevel, iterations)
 		{
 		}
 	}

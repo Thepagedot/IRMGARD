@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using IRMGARD.Shared;
 
 namespace IRMGARD.Models
 {
@@ -8,7 +7,8 @@ namespace IRMGARD.Models
 	{
 		public LetterDrop () {}
 
-		public LetterDrop (int id, string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations) : base (id, title, soundPath, hint, typeOfLevel, iterations)
+        public LetterDrop (int id, string title, bool isRecurringTask, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations)
+            : base (id, title, isRecurringTask, soundPath, hint, typeOfLevel, iterations)
 		{
 		}
 	}

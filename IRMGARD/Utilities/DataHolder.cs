@@ -23,6 +23,8 @@ namespace IRMGARD
 
 		public List<Level> Levels { get; set; }
 
+        public Common Common { get; private set; }
+
 		public DataHolder()
 		{
 			Levels = new List<Level>();
@@ -35,6 +37,11 @@ namespace IRMGARD
             if (level != null)
                 Levels.Add(level);
 		}
+
+        public async Task LoadCommonAsync()
+        {
+            Common = await LocalStorage.LoadCommonAsync();
+        }
 
         public async Task SaveProgressAsync()
         {

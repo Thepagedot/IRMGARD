@@ -134,6 +134,7 @@
     <Compile Include="Adapter\Specific\MemoryAdapter.cs" />
     <Compile Include="Fragments\HearMeAbcFragment.cs" />
     <Compile Include="Adapter\Specific\HearMeAbcAdapter.cs" />
+    <Compile Include="Models\Common.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\level4.json" />
@@ -712,6 +713,10 @@
     <AndroidAsset Include="Assets\Sounds\Tasks\6-1\KLMNO.mp3" />
     <AndroidAsset Include="Assets\Sounds\Tasks\6-1\PQRST.mp3" />
     <AndroidAsset Include="Assets\Sounds\Tasks\6-1\UVWXYZ.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Tasks\Diese_Uebung_kennst_du_schon.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Tasks\Diese_Uebung_kommt_dir_sicher_bekannt_vor.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Tasks\Erinnerst_du_dich_an_die_Uebung.mp3" />
+    <AndroidAsset Include="Assets\common.json" />    
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />

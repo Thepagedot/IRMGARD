@@ -9,7 +9,8 @@ namespace IRMGARD.Models
 
 		public FourPictures(){}
 
-		public FourPictures(int id, string title, string soundPath, string hint, LevelType typeOfLevel, List<FourPicturesOption> options, List<Iteration> iterations) : base (id, title, soundPath, hint, typeOfLevel, iterations)
+        public FourPictures(int id, string title, bool isRecurringTask, string soundPath, string hint, LevelType typeOfLevel, List<FourPicturesOption> options, List<Iteration> iterations)
+            : base (id, title, isRecurringTask, soundPath, hint, typeOfLevel, iterations)
 		{
 			this.Options = options;
 		}

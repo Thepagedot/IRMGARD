@@ -47,6 +47,27 @@ namespace IRMGARD.Utilities
             }
         }
 
+        public static async Task<Common> LoadCommonAsync()
+        {
+            var fileName = "common.json";
+            using (var reader = new StreamReader(Application.Context.Assets.Open(fileName)))
+            {
+                try
+                {
+                    var jsonContent = await reader.ReadToEndAsync();
+                    var json = JObject.Parse(jsonContent);
+                    return JsonConvert.DeserializeObject<Common>(json.ToString(), _JsonSettings);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("JSON reader Exception on reading {0}!", fileName);
+                    Console.WriteLine("Message: {0}", ex.Message);
+                }
+
+                return null;
+            }
+        }
+
         public static async Task SaveToFileAsync(string fileName, object content)
         {
             var json = JsonConvert.SerializeObject(content, Formatting.Indented, _JsonSettings);

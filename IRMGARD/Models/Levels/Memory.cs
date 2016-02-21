@@ -9,8 +9,8 @@ namespace IRMGARD.Models
 
         public Memory() {}
 
-        public Memory(int id, string title, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations, List<MemoryOption> options)
-            : base (id, title, soundPath, hint, typeOfLevel, iterations)
+        public Memory(int id, string title, bool isRecurringTask, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations, List<MemoryOption> options)
+            : base (id, title, isRecurringTask, soundPath, hint, typeOfLevel, iterations)
         {
             this.Options = options;
         }

@@ -69,7 +69,7 @@ namespace IRMGARD
             currentOptions = new List<PickSyllableOption>();
 
             // Get all syllable files in directory
-            var syllableFilesAvail = Activity.Assets.List(System.IO.Path.Combine(Env.AssetSoundDir, Lesson.SyllablePath)).ToList();
+            var syllableFilesAvail = Activity.Assets.List(System.IO.Path.Combine(DataHolder.Current.Common.AssetSoundDir, Lesson.SyllablePath)).ToList();
 
             // Pick a syllable for the current iteration
             var syllableToLearn = currentIteration.SyllablesToLearn.PickRandomItems(1).FirstOrDefault();

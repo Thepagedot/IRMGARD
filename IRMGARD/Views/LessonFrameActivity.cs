@@ -137,7 +137,17 @@ namespace IRMGARD
             }
 
             // Play instruction
-            SoundPlayer.PlaySound(this, DataHolder.Current.CurrentLesson.SoundPath);
+            bool waitForCompletion = false;
+            if (DataHolder.Current.CurrentLesson.IsRecurringTask)
+            {
+                var recurringTaskSoundFile = DataHolder.Current.Common.RecurringTaskSoundFiles.PickRandomItems(1).FirstOrDefault();
+                if (recurringTaskSoundFile != null)
+                {
+                    SoundPlayer.PlaySound(this, recurringTaskSoundFile);
+                    waitForCompletion = true;
+                }
+            }
+            SoundPlayer.PlaySound(this, waitForCompletion, DataHolder.Current.CurrentLesson.SoundPath);
         }
 
         private void CurrentFragment_UserInteracted (object sender, UserInteractedEventArgs e)

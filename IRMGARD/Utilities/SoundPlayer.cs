@@ -11,6 +11,8 @@ namespace IRMGARD
 	{
         static readonly MediaPlayer player;
 
+        static bool waitForCompletionActive;
+
         public static bool IsPlaying
         {
             get
@@ -25,22 +27,45 @@ namespace IRMGARD
             player.Completion += Player_Completion;
         }
 
+        /// <summary>
+        /// Plays a sound from an Assets sound file
+        /// </summary>
+        /// <param name="context">Context.</param>
+        /// <param name="fileName">File name.</param>
+        /// <param name = "folderName">Folder Name. Takes "Sounds" if nothing else is set</param>
+        public static void PlaySound(Context context, string fileName, string folderName = null)
+        {
+            PlaySound(context, false, fileName, folderName);
+        }
+
 		/// <summary>
-		/// Plaies a sound from an Assets sound file
+		/// Plays a sound from an Assets sound file
 		/// </summary>
 		/// <param name="context">Context.</param>
+        /// <param name="waitForCompletion">Wait for the last audio to finish before starting to play this audio file</param>
 		/// <param name="fileName">File name.</param>
 		/// <param name = "folderName">Folder Name. Takes "Sounds" if nothing else is set</param>
-		public static void PlaySound(Context context, string fileName, string folderName = null)
+		public static async void PlaySound(Context context, bool waitForCompletion, string fileName, string folderName = null)
 		{
-			// Set default folder "Sounds" if nothing else is set
-			if (folderName == null)
-                folderName = Env.AssetSoundDir;
-
 			try
 			{
 				// Describe sound file from Assets properly
-				var descriptor = context.Assets.OpenFd(folderName + "/" +  fileName);
+                var descriptor = context.Assets.OpenFd(folderName ?? DataHolder.Current.Common.AssetSoundDir + "/" +  fileName);
+
+                // Mark as active
+                waitForCompletionActive = waitForCompletion;
+
+                // Still playing?
+                while (waitForCompletion && IsPlaying)
+                {
+                    await Task.Delay(500);
+                }
+
+                // Continue to play next sound?
+                if (waitForCompletion && !waitForCompletionActive)
+                {
+                    return;
+                }
 
                 // Reset player if still playing
                 Stop();

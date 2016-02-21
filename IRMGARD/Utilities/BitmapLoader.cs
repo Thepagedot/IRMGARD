@@ -49,7 +49,7 @@ namespace IRMGARD
         /// <param name="fileName">The image file path.</param>
         /// <param name="assetImageDir">The parent directory for <paramref name="fileName"/> path parameter.</param>
         public Bitmap LoadBitmap(int maxPoolSize, Context context, string fileName,
-            string assetImageDir = Env.AssetImageDir)
+            string assetImageDir = null)
         {
             Bitmap bitmap = DecodeBitmap(maxPoolSize, context, fileName, assetImageDir);
             if (Env.Debug)
@@ -70,7 +70,7 @@ namespace IRMGARD
         /// <param name="fileName">The image file path.</param>
         /// <param name="assetImageDir">The parent directory for <paramref name="fileName"/> path parameter.</param>
         public void LoadBitmapInImageViewAsync(int maxPoolSize, ImageView imageView, Context context, string fileName,
-            string assetImageDir = Env.AssetImageDir)
+            string assetImageDir = null)
         {
             BitmapWorkerTask task = new BitmapWorkerTask(this, imageView);
             task.Execute(maxPoolSize, context, fileName, assetImageDir);
@@ -83,7 +83,7 @@ namespace IRMGARD
 
         Bitmap DecodeBitmap(int maxPoolSize, Context context, string fileName, string assetImageDir)
         {
-            string filePath = System.IO.Path.Combine(assetImageDir, fileName);
+            string filePath = System.IO.Path.Combine(assetImageDir ?? DataHolder.Current.Common.AssetImageDir, fileName);
 
             BitmapFactory.Options options = null;
             if (bitmapPool.TryGetOptions(maxPoolSize, filePath, out options))
