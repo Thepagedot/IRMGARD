@@ -13,7 +13,8 @@ namespace IRMGARD
 		HearTheLetter,
 		HearMeAbc,
 		AbcRank,
-		Memory
+		Memory,
+        ShowGif
 	}
 }
 

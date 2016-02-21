@@ -12,6 +12,32 @@
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
+          "$type": "IRMGARD.Models.ShowGif, IRMGARD",
+          "Id": 11111111,
+          "Title": "A?IOU",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 5.mp3",
+          "Hint": "Hints/02_extra_Tip_arbeite_nicht_mit_losen_zetteln.mp3",
+          "TypeOfLevel": "ShowGif",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1111,
+              "LettersToLearn": [
+                "A"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/A.gif"
+                },
+                {
+                  "Path": "Gif/a_1.gif"
+                }
+             ]
+            }
+          ]
+        },
+        {
           "$type": "IRMGARD.Models.HearMe, IRMGARD",
           "Id": 111,
           "Title": "AEIOU",

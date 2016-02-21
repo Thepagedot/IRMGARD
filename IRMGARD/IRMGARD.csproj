@@ -53,9 +53,6 @@
     <Reference Include="Square.OkIO">
       <HintPath>..\packages\Square.OkIO.1.6.0.0\lib\MonoAndroid\Square.OkIO.dll</HintPath>
     </Reference>
-    <Reference Include="Square.OkHttp">
-      <HintPath>..\packages\Square.OkHttp.2.5.0.0\lib\MonoAndroid\Square.OkHttp.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Android.Support.v4">
       <HintPath>..\packages\Xamarin.Android.Support.v4.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
@@ -71,8 +68,14 @@
     <Reference Include="Xamarin.Android.Support.Design">
       <HintPath>..\packages\Xamarin.Android.Support.Design.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.Design.dll</HintPath>
     </Reference>
+    <Reference Include="Square.OkHttp">
+      <HintPath>..\packages\Square.OkHttp.2.7.4.0\lib\MonoAndroid\Square.OkHttp.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.GifImageView">
+      <HintPath>..\packages\Refractored.GifImageView.2.0.0\lib\monoandroid\Refractored.GifImageView.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +138,9 @@
     <Compile Include="Fragments\HearMeAbcFragment.cs" />
     <Compile Include="Adapter\Specific\HearMeAbcAdapter.cs" />
     <Compile Include="Models\Common.cs" />
+    <Compile Include="Fragments\ShowGifFragment.cs" />
+    <Compile Include="Models\Levels\ShowGif.cs" />
+    <Compile Include="Adapter\Specific\GifAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\level4.json" />
@@ -778,6 +784,8 @@
     <AndroidAsset Include="Assets\Sounds\Criticism\zwar_hast_du_nicht1.mp3" />
     <AndroidAsset Include="Assets\Sounds\Criticism\zwar_hast_du_nicht2.mp3" />
     <AndroidAsset Include="Assets\Sounds\Criticism\zwar_hast_du_nicht3.mp3" />
+    <AndroidAsset Include="Assets\Gif\a_1.gif" />
+    <AndroidAsset Include="Assets\Gif\A.gif" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -953,6 +961,8 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_lightbulb_outline_white_24dp.png" />
     <AndroidResource Include="Resources\layout\SpeakerElement.axml" />
     <AndroidResource Include="Resources\drawable\result_zone.xml" />
+    <AndroidResource Include="Resources\layout\GifAnimation.axml" />
+    <AndroidResource Include="Resources\layout\GifTask.axml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">
@@ -1097,5 +1107,8 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Videos\Handy_Level1_720p.mp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\Gif\" />
   </ItemGroup>
 </Project>
