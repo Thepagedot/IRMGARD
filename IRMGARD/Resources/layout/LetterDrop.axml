@@ -7,30 +7,20 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-        <LinearLayout
-            android:id="@+id/llTaskItems"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center" />
         <FrameLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center">
+            style="@style/result_zone"
+            android:padding="4dp">
+            <LinearLayout
+                android:id="@+id/llTaskItems"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center" />
             <IRMGARD.FlowLayout
                 android:id="@+id/flTaskItems"
-                android:layout_marginLeft="35dp"
-                android:layout_marginRight="35dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </FrameLayout>
-        <ImageView
-            android:src="@drawable/divider"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="false"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginBottom="@dimen/activity_vertical_margin" />
         <IRMGARD.FlowLayout
             android:id="@+id/flLetters"
             android:layout_width="wrap_content"

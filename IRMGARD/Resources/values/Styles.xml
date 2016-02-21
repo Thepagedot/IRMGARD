@@ -20,4 +20,14 @@
 
     <style name="IrmgardTheme" parent="IrmgardTheme.Base">
     </style>
+
+    <style name="result_zone">
+        <item name="android:layout_margin">@dimen/margin_default</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:background">@drawable/result_zone</item>
+    </style>
 </resources>

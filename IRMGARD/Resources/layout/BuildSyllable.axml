@@ -15,33 +15,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center" />
-        <LinearLayout
-            android:orientation="horizontal"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:id="@+id/llTaskItems"
-            android:layout_gravity="center"
-            android:gravity="center" />
+        <FrameLayout
+            style="@style/result_zone">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/llTaskItems"
+                android:gravity="center" />
+        </FrameLayout>
         <ImageView
             android:id="@+id/ivImagePopup"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:layout_gravity="center"
             android:layout_margin="10dp"
             android:padding="10dp"
-            android:background="@android:color/white"
+            android:background="@drawable/result_zone"
             android:visibility="gone" />
-        <ImageView
-            android:src="@drawable/divider"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="false"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:id="@+id/imageView1" />
         <IRMGARD.FlowLayout
             android:id="@+id/flLetters"
             android:layout_width="wrap_content"

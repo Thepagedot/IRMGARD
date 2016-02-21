@@ -3,58 +3,54 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:minHeight="50dip"
-        android:gravity="center|center"
-        android:textAlignment="center"
-        android:layout_gravity="center">
-        <TextView
-            android:id="@+id/tvPickSyllable"
-            android:textSize="40dp"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:textAlignment="center"
-            android:gravity="top|center_horizontal"
-            android:text="" />
-        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/cardView"
-            card_view:cardUseCompatPadding="true"
-            card_view:cardCornerRadius="4dp"
-            card_view:cardBackgroundColor="@android:color/transparent"
-            card_view:cardElevation="0dp"
+    <FrameLayout
+        style="@style/result_zone">
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:layout_marginRight="@dimen/activity_horizontal_margin">
-            <LinearLayout
-                android:id="@+id/llLayout"
-                android:orientation="vertical"
+            android:minHeight="50dip"
+            android:gravity="center|center"
+            android:textAlignment="center"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/tvPickSyllable"
+                android:textSize="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:gravity="top|center_horizontal"
+                android:text="" />
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardView"
+                card_view:cardUseCompatPadding="true"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardBackgroundColor="@android:color/transparent"
+                card_view:cardElevation="0dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:minWidth="50dip"
-                android:padding="4dip"
-                android:background="@drawable/dotted">
-                <ImageView
-                    android:id="@+id/ivPickSyllableDropZone"
-                    android:src="@drawable/ic_help_black_24dp"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:layout_marginRight="@dimen/activity_horizontal_margin">
+                <LinearLayout
+                    android:id="@+id/llLayout"
+                    android:orientation="vertical"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:minHeight="40dip"
-                    android:gravity="center"
-                    android:layout_gravity="center" />
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-    </LinearLayout>
-    <ImageView
-        android:src="@drawable/divider"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="false"
-        android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:layout_marginBottom="@dimen/activity_vertical_margin" />
+                    android:minWidth="50dip"
+                    android:padding="4dip"
+                    android:background="@drawable/dotted">
+                    <ImageView
+                        android:id="@+id/ivPickSyllableDropZone"
+                        android:src="@drawable/ic_help_black_24dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:minHeight="40dip"
+                        android:gravity="center"
+                        android:layout_gravity="center" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </FrameLayout>
     <LinearLayout
         android:id="@+id/pickSyllableTaskItems"
         android:orientation="horizontal"

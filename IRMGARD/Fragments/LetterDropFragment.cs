@@ -16,6 +16,7 @@ namespace IRMGARD
         private FlowLayout flLetters;
 
         private bool useAlternateView;
+        private float letterTextSize;
 
         public LetterDropFragment(Lesson lesson) : base(lesson) {}
 
@@ -123,7 +124,8 @@ namespace IRMGARD
 
                 // Use different text size
                 var tvLetter = view.FindViewById<TextView>(Resource.Id.letter);
-                tvLetter.TextSize = 32f;
+                letterTextSize = 32f;
+                tvLetter.TextSize = letterTextSize;
 
                 // Define searched letters as drop zone
                 if (taskItems.ElementAt(i).IsSearched)
@@ -151,10 +153,10 @@ namespace IRMGARD
                 var lastChild = llTaskItems.GetChildAt(llTaskItems.ChildCount - 1);
                 if (lastChild.Height > firstChild.Height)
                 {
+                    letterTextSize -= 2f;
                     for (int i = 0; i < llTaskItems.ChildCount; i++)
                     {
-                        var tvLetter = llTaskItems.GetChildAt(i).FindViewById<TextView>(Resource.Id.letter);
-                        tvLetter.TextSize = 28f;
+                        llTaskItems.GetChildAt(i).FindViewById<TextView>(Resource.Id.letter).TextSize = letterTextSize;
                     }
                 }
             }

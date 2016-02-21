@@ -54,6 +54,11 @@ namespace IRMGARD
             for (var i = 0; i < taskItems.Count; i++)
             {
                 var view = adapter.GetView(i, null, null);
+                if (GetCurrentIteration<AbcRankIteration>().Options.FirstOrDefault().Media != null)
+                {
+                    // Workaround to resize drop zone space for picture cards
+                    view.FindViewById<TextView>(Resource.Id.letter).SetTextSize(Android.Util.ComplexUnitType.Dip, 30);
+                }
                 view.Drag += View_Drag;
                 llTaskItems.AddView(view);
             }

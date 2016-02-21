@@ -13,9 +13,7 @@
         android:elevation="5dp"
         android:src="@drawable/ic_volume_up_black_24dp" />
     <FrameLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center">
+        style="@style/result_zone">
         <SeekBar
             android:id="@+id/sbLetterPos"
             android:layout_width="240dp"
