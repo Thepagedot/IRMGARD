@@ -2,16 +2,16 @@
 <FrameLayout xmlns:cardview="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/flCardContainer"
-    android:layout_width="60dp"
-    android:layout_height="60dp">
+    android:layout_width="70dp"
+    android:layout_height="70dp">
     <android.support.v7.widget.CardView
         android:id="@+id/memoryCardView"
         cardview:cardCornerRadius="4dp"
         cardview:cardUseCompatPadding="true"
         cardview:cardPreventCornerOverlap="true"
         cardview:contentPadding="3dp"
-        android:layout_width="60dp"
-        android:layout_height="60dp">
+        android:layout_width="70dp"
+        android:layout_height="70dp">
         <TextView
             android:id="@+id/tvCardTextFront"
             android:layout_width="match_parent"

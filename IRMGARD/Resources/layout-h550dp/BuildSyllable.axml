@@ -26,10 +26,10 @@
         </FrameLayout>
         <ImageView
             android:id="@+id/ivImagePopup"
-            android:layout_width="95dp"
-            android:layout_height="95dp"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
             android:layout_gravity="center"
-            android:layout_margin="20dp"
+            android:layout_margin="10dp"
             android:padding="10dp"
             android:background="@drawable/result_zone"
             android:visibility="gone" />
