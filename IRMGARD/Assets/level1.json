@@ -6521,7 +6521,7 @@
           "Title": "SchREIBEN",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 4.mp3",
-          "TypeOfLevel": "Sho1544wGif",
+          "TypeOfLevel": "ShowGif",
           "Iterations": [
             {
               "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
