@@ -7,8 +7,8 @@
         android:id="@+id/gifImageView"
         android:layout_gravity="center"
         android:scaleType="fitCenter"
-        android:minHeight="25dp"
-        android:minWidth="25dp"
+        android:minHeight="75dp"
+        android:minWidth="75dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 </LinearLayout>

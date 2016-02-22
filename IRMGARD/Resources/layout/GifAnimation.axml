@@ -8,8 +8,8 @@
         <LinearLayout
             android:id="@+id/llGifItems"
             android:orientation="horizontal"
-            android:minWidth="25px"
-            android:minHeight="25px"
+            android:minWidth="75dp"
+            android:minHeight="75dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </FrameLayout>
