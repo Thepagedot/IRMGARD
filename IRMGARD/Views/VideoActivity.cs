@@ -82,10 +82,21 @@ namespace IRMGARD
                 mediaPlayer.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
                 mediaPlayer.Prepare();
                 mediaPlayer.Start();
+                mediaPlayer.Completion += MediaPlayer_Completion;
             }
         }
 
+        private void MediaPlayer_Completion(object sender, EventArgs e)
+        {
+            NavigateNext();
+        }
+
         void BtnNext_Click (object sender, EventArgs e)
+        {
+            NavigateNext();
+        }
+
+        private void NavigateNext()
         {
             // Navigate to next activity according to the given bundle
             Intent intent = null;
