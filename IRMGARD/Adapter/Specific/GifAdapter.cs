@@ -26,27 +26,22 @@ namespace IRMGARD
             /*else
                 ((BitmapDrawable)view.FindViewById<ImageView>(Resource.Id.image).Drawable).Bitmap.Recycle();*/
 
+            var gifImageView = view.FindViewById<GifImageView>(Resource.Id.gifImageView);
 
             if (item.Path != null)
             {
-                byte[] buffer;
-
                 using (var stream = Context.Assets.Open(item.Path))
-                {
-                    StreamReader bodyReader = new StreamReader(stream);
-                    string bodyString = bodyReader.ReadToEnd();
-                    int length = bodyString.Length;
-                    buffer = new byte[length];
+                {                   
+                    var streamReader = new StreamReader(stream);
+                    var bytes = default(byte[]);
+                    using (var memoryStream = new MemoryStream())
+                    {
+                        streamReader.BaseStream.CopyTo(memoryStream);
+                        bytes = memoryStream.ToArray();
 
-                    stream.Read(buffer, 0, length);
-                    var gifImageView = view.FindViewById<GifImageView>(Resource.Id.gifImageView);
-
-                    /*byte[] bytes = new byte[bodyString.Length * sizeof(char)];
-                    System.Buffer.BlockCopy(bodyString.ToCharArray(), 0, bytes, 0, bytes.Length);
-                    */
-                        
-                    if (gifImageView != null)
-                        gifImageView.SetBytes(buffer);
+                        if (gifImageView != null)
+                            gifImageView.SetBytes(bytes);
+                    }
                 }
             }
 
