@@ -14,7 +14,7 @@ namespace IRMGARD
 		HearMeAbc,
 		AbcRank,
 		Memory,
-        ShowGif
-	}
+        LetterWrite
+    }
 }
 

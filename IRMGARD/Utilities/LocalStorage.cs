@@ -34,6 +34,8 @@ namespace IRMGARD.Utilities
                 {
                     var jsonContent = await reader.ReadToEndAsync();
                     var json = JObject.Parse(jsonContent);
+
+                    //TODO: Try to do this async
                     var level = JsonConvert.DeserializeObject<Level>(json.ToString(), _JsonSettings);
                     return level;
                 }

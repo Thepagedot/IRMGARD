@@ -583,88 +583,88 @@
           ]
         },
         {
-          "$type": "IRMGARD.Models.ShowGif, IRMGARD",
+          "$type": "IRMGARD.Models.LetterWrite, IRMGARD",
           "Id": 115,
-          "Title": "SchREIBEN",
+          "Title": "Schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 5.mp3",
           "Hint": "Hints/02_extra_Tip_arbeite_nicht_mit_losen_zetteln.mp3",
-          "TypeOfLevel": "ShowGif",
+          "TypeOfLevel": "LetterWrite",
           "Iterations": [
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1151,
               "LettersToLearn": [
                 "A"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/A.gif"
                 },
                 {
                   "Path": "Gif/a_1.gif"
                 }
-             ]
+              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1152,
               "LettersToLearn": [
                 "E"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/E.gif"
                 },
                 {
                   "Path": "Gif/e_1.gif"
                 }
-             ]
+              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1153,
               "LettersToLearn": [
                 "I"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/I.gif"
                 },
                 {
                   "Path": "Gif/i_1.gif"
                 }
-             ]
+              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1154,
               "LettersToLearn": [
                 "O"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/O.gif"
                 },
                 {
                   "Path": "Gif/o_1.gif"
                 }
-             ]
+              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1155,
               "LettersToLearn": [
                 "U"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/U.gif"
                 },
                 {
                   "Path": "Gif/u_1.gif"
                 }
-             ]
+              ]
             }
           ]
         }
@@ -967,21 +967,21 @@
           ]
         },
         {
-          "$type": "IRMGARD.Models.ShowGif, IRMGARD",
+          "$type": "IRMGARD.Models.LetterWrite, IRMGARD",
           "Id": 124,
-          "Title": "SchREIBEN",
+          "Title": "Schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 4.mp3",
           "Hint": "Hints/03_extra_Tip_du_kannst_mit_deinem_finger_im_sand_oder_schnee_schreiben.mp3",
-          "TypeOfLevel": "ShowGif",
+          "TypeOfLevel": "LetterWrite",
           "Iterations": [
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1241,
               "LettersToLearn": [
                 "L"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/L.gif"
                 },
@@ -991,12 +991,12 @@
              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1242,
               "LettersToLearn": [
                 "M"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/M.gif"
                 },
@@ -1006,12 +1006,12 @@
              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1243,
               "LettersToLearn": [
                 "N"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/N.gif"
                 },
@@ -1021,12 +1021,12 @@
              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1244,
               "LettersToLearn": [
                 "R"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/R.gif"
                 },
@@ -1036,12 +1036,12 @@
              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1245,
               "LettersToLearn": [
                 "S"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/S.gif"
                 },
@@ -2694,20 +2694,20 @@
           ]
         },
         {
-          "$type": "IRMGARD.Models.ShowGif, IRMGARD",
+          "$type": "IRMGARD.Models.LetterWrite, IRMGARD",
           "Id": 134,
-          "Title": "SchREIBEN",
+          "Title": "Schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 4.mp3",
-          "TypeOfLevel": "ShowGif",
+          "TypeOfLevel": "LetterWrite",
           "Iterations": [
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1341,
               "LettersToLearn": [
                 "F"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/F.gif"
                 },
@@ -2717,12 +2717,12 @@
              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1342,
               "LettersToLearn": [
                 "H"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/H.gif"
                 },
@@ -2732,12 +2732,12 @@
              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1343,
               "LettersToLearn": [
                 "J"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/J.gif"
                 },
@@ -2747,12 +2747,12 @@
              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1344,
               "LettersToLearn": [
                 "W"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/W.gif"
                 },
@@ -2762,12 +2762,12 @@
              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1345,
               "LettersToLearn": [
                 "Z"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/Z.gif"
                 },
@@ -4558,20 +4558,20 @@
           ]
         },
         {
-          "$type": "IRMGARD.Models.ShowGif, IRMGARD",
+          "$type": "IRMGARD.Models.LetterWrite, IRMGARD",
           "Id": 144,
-          "Title": "SchREIBEN",
+          "Title": "Schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 4.mp3",
-          "TypeOfLevel": "ShowGif",
+          "TypeOfLevel": "LetterWrite",
           "Iterations": [
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1441,
               "LettersToLearn": [
                 "B"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/B.gif"
                 },
@@ -4581,12 +4581,12 @@
              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1442,
               "LettersToLearn": [
                 "P"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/P.gif"
                 },
@@ -4596,12 +4596,12 @@
              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1443,
               "LettersToLearn": [
                 "G"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/G.gif"
                 },
@@ -4611,12 +4611,12 @@
              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1444,
               "LettersToLearn": [
                 "K"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/K.gif"
                 },
@@ -4626,12 +4626,12 @@
              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1445,
               "LettersToLearn": [
                 "D"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/D.gif"
                 },
@@ -4641,12 +4641,12 @@
              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1446,
               "LettersToLearn": [
                 "T"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/T.gif"
                 },
@@ -6516,20 +6516,20 @@
           ]
         },
         {
-          "$type": "IRMGARD.Models.ShowGif, IRMGARD",
+          "$type": "IRMGARD.Models.LetterWrite, IRMGARD",
           "Id": 154,
-          "Title": "SchREIBEN",
+          "Title": "Schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 4.mp3",
-          "TypeOfLevel": "ShowGif",
+          "TypeOfLevel": "LetterWrite",
           "Iterations": [
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1541,
               "LettersToLearn": [
                 "C"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/C.gif"
                 },
@@ -6539,12 +6539,12 @@
              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1542,
               "LettersToLearn": [
                 "Q"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/Q.gif"
                 },
@@ -6554,12 +6554,12 @@
              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1543,
               "LettersToLearn": [
                 "V"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/V.gif"
                 },
@@ -6569,12 +6569,12 @@
              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1544,
               "LettersToLearn": [
                 "X"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/X.gif"
                 },
@@ -6584,12 +6584,12 @@
              ]
             },
             {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
               "Id": 1545,
               "LettersToLearn": [
                 "Y"
               ],
-              "GifTasks": [
+              "TasksItems": [
                 {
                   "Path": "Gif/Y.gif"
                 },

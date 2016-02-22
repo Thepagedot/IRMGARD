@@ -277,8 +277,8 @@ namespace IRMGARD
                 return new HearMeAbcFragment(lesson);
             if (lesson is Memory)
                 return new MemoryFragment(lesson);
-            if (lesson is ShowGif)
-                return new ShowGifFragment(lesson);
+            if (lesson is LetterWrite)
+                return new LetterWriteFragment(lesson);
 
             return null;
 		}

@@ -31,7 +31,7 @@ namespace IRMGARD
             llSoundItems = view.FindViewById<LinearLayout>(Resource.Id.llSoundItems);
             flLetters = view.FindViewById<FlowLayout> (Resource.Id.flLetters);
             ivImagePopup = view.FindViewById<ImageView>(Resource.Id.ivImagePopup);
-			
+
             // Initialize iteration
             InitIteration();
             return view;
@@ -77,7 +77,7 @@ namespace IRMGARD
             {
                 var randomLetter = Alphabet.GetRandomLetter();
                 if (syllablesToLearn.HasLongAndShortLetters)
-                {                    
+                {
                     options.Add(new LetterBase(randomLetter, random.Next(1) == 0, random.Next(1) == 0));
                 }
                 else
@@ -94,7 +94,7 @@ namespace IRMGARD
         {
             flLetters.RemoveAllViews();
             var adapter = new LetterAdapter(Activity.BaseContext, 0, options);
-            for (int i = 0; i < options.Count; i++) 
+            for (int i = 0; i < options.Count; i++)
             {
                 // Add letter to view
                 var view = adapter.GetView(i, null, null);
@@ -163,26 +163,26 @@ namespace IRMGARD
                 if (index > -1 && syllables.Count > 1 && (index + 1 < syllables.Count))
                 {
                     addMultiIcon = true;
-                } 
+                }
 
                 var mediaElementAdapter = new BuildSyllableMediaElementAdapter(Activity.BaseContext, 0, syllables, addMultiIcon);
-                var view = mediaElementAdapter.GetView(0, null, null);  
+                var view = mediaElementAdapter.GetView(0, null, null);
                 view.FindViewById<ImageButton>(Resource.Id.ibSpeaker).Click += (sender, e) => ImageButton_Click(sender, e, index);
                 llSoundItems.AddView(view);
             }
 
-        }            
+        }
 
         void View_Drag (object sender, View.DragEventArgs e)
         {
             // React on different dragging events
             var evt = e.Event;
-            switch (evt.Action) 
+            switch (evt.Action)
             {
-                case DragAction.Ended:  
+                case DragAction.Ended:
                 case DragAction.Started:
                     e.Handled = true;
-                    break;           
+                    break;
                 case DragAction.Drop:
                     e.Handled = true;
 
@@ -229,11 +229,11 @@ namespace IRMGARD
                                 {
                                     isReady = false;
                                     break;
-                                }                               
+                                }
 
                         FireUserInteracted(isReady);
                         BuildTaskLetters(taskItems);
-                        
+
                         if (currentSyllablesToLearn.Media != null && isReady && IsSuccess())
                         {
                             if (SoundPlayer.IsPlaying)
@@ -250,7 +250,7 @@ namespace IRMGARD
                     break;
             }
         }
-        
+
         bool IsSuccess()
         {
             var success = true;
@@ -260,12 +260,12 @@ namespace IRMGARD
                 {
                     if (!taskLetter.TaskLetter.IsCorrect)
                     {
-                        success = false;                  
+                        success = false;
                         break;
                     }
                 }
             }
-            
+
             return success;
         }
 
@@ -274,4 +274,4 @@ namespace IRMGARD
             FinishIteration(IsSuccess());
         }
     }
-}    
+}

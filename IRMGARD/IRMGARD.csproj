@@ -138,9 +138,9 @@
     <Compile Include="Fragments\HearMeAbcFragment.cs" />
     <Compile Include="Adapter\Specific\HearMeAbcAdapter.cs" />
     <Compile Include="Models\Common.cs" />
-    <Compile Include="Fragments\ShowGifFragment.cs" />
-    <Compile Include="Models\Levels\ShowGif.cs" />
-    <Compile Include="Adapter\Specific\GifAdapter.cs" />
+    <Compile Include="Fragments\LetterWriteFragment.cs" />
+    <Compile Include="Models\Levels\LetterWrite.cs" />
+    <Compile Include="Adapter\Specific\LetterWriteAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\level4.json" />
@@ -1158,7 +1158,5 @@
   <ItemGroup>
     <AndroidAsset Include="Assets\Videos\Handy_Level1_720p.mp4" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\Gif\" />
-  </ItemGroup>
+  <ItemGroup />
 </Project>
