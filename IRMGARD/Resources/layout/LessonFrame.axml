@@ -48,7 +48,7 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="@dimen/activity_horizontal_margin" />
         <ImageView
-            android:id="@+id/ivSuccess"
+            android:id="@+id/ivBadge"
             android:src="@drawable/irmgard_icon_spiel_supergemacht"
             android:layout_width="150dip"
             android:layout_height="150dip"
