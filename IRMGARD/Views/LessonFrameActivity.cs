@@ -167,6 +167,7 @@ namespace IRMGARD
             if (e.IsReady)
             {
                 btnNext.Enabled = true;
+                btnNext.Clickable = true;
                 btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.ShowNextButton));
             }
 		}
@@ -180,6 +181,7 @@ namespace IRMGARD
             rvProgress.GetAdapter().NotifyItemChanged(iterationIndex);
 
             // Disable check button
+            btnNext.Clickable = false;
             btnNext.Enabled = false;
             btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.HideNextButton));
 
