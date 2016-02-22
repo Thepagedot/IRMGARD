@@ -69,10 +69,8 @@ namespace IRMGARD
             // Initially hide success image
             ivSuccess.Visibility = ViewStates.Gone;
 
-            praiseFilesAvail = Assets.List(Path.Combine(Common.AssetSoundDir, Common.AssetPraiseDir))
-                .Select(s => Path.Combine(Common.AssetPraiseDir, s)).ToList();
-            criticismFilesAvail = Assets.List(Path.Combine(Common.AssetSoundDir, Common.AssetCriticismDir))
-                .Select(s => Path.Combine(Common.AssetCriticismDir, s)).ToList();
+            praiseFilesAvail = Assets.List(Path.Combine(Common.AssetSoundDir, Common.AssetPraiseDir)).Select(s => Path.Combine(Common.AssetPraiseDir, s)).ToList();
+            criticismFilesAvail = Assets.List(Path.Combine(Common.AssetSoundDir, Common.AssetCriticismDir)).Select(s => Path.Combine(Common.AssetCriticismDir, s)).ToList();
         }
 
 		protected override void OnStart()
@@ -294,6 +292,11 @@ namespace IRMGARD
             }
             else
             {
+                // Diable button to prevent double click
+                btnNext.Enabled = false;
+                btnNext.Clickable = false;
+
+                // Check soution
                 currentFragment.CheckSolution();
             }
         }
