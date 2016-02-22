@@ -41,7 +41,7 @@ namespace IRMGARD
             BuildGifElements(currentIteration.GifTasks);
         }
 
-        private void BuildGifElements(List<GifTask> gifItems)
+        private async void BuildGifElements(List<GifTask> gifItems)
         {
             // Add task items to view and attach Drag and Drop handler
             llGifItems.RemoveAllViews();
@@ -51,6 +51,10 @@ namespace IRMGARD
             {
                 playedAllGifs.Add(i, false);
                 var view = adapter.GetView(i, null, null);
+                var child = ((view as LinearLayout).GetChildAt(0) as GifImageView);
+                if (child != null)
+                {
+                }
                 view.Click += GifViewItemClicked;
                 llGifItems.AddView(view);
             }

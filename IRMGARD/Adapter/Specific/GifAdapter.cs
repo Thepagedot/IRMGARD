@@ -34,7 +34,7 @@ namespace IRMGARD
             return view;
         }
 
-        private async Task getGifStream(string path, GifImageView gifImageView)
+        private async void getGifStream(string path, GifImageView gifImageView)
         {
             using (var stream = Context.Assets.Open(path))
             {                   
@@ -49,7 +49,7 @@ namespace IRMGARD
                     {
                         gifImageView.SetBytes(bytes);
                         gifImageView.StartAnimation();
-                        await Task.Delay(1);
+                        await Task.Delay(50);
                         gifImageView.StopAnimation();
                     }
                 }

@@ -12,32 +12,6 @@
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
-          "$type": "IRMGARD.Models.ShowGif, IRMGARD",
-          "Id": 11111111,
-          "Title": "A?IOU",
-          "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 5.mp3",
-          "Hint": "Hints/02_extra_Tip_arbeite_nicht_mit_losen_zetteln.mp3",
-          "TypeOfLevel": "ShowGif",
-          "Iterations": [
-            {
-              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
-              "Id": 111111111,
-              "LettersToLearn": [
-                "A"
-              ],
-              "GifTasks": [
-                {
-                  "Path": "Gif/A.gif"
-                },
-                {
-                  "Path": "Gif/a_1.gif"
-                }
-             ]
-            }
-          ]
-        },
-        {
           "$type": "IRMGARD.Models.HearMe, IRMGARD",
           "Id": 111,
           "Title": "AEIOU",
@@ -607,6 +581,92 @@
               ]
             }
           ]
+        },
+        {
+          "$type": "IRMGARD.Models.ShowGif, IRMGARD",
+          "Id": 115,
+          "Title": "SchREIBEN",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 5.mp3",
+          "Hint": "Hints/02_extra_Tip_arbeite_nicht_mit_losen_zetteln.mp3",
+          "TypeOfLevel": "ShowGif",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1151,
+              "LettersToLearn": [
+                "A"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/A.gif"
+                },
+                {
+                  "Path": "Gif/a_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1152,
+              "LettersToLearn": [
+                "E"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/E.gif"
+                },
+                {
+                  "Path": "Gif/e_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1153,
+              "LettersToLearn": [
+                "I"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/I.gif"
+                },
+                {
+                  "Path": "Gif/i_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1154,
+              "LettersToLearn": [
+                "O"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/O.gif"
+                },
+                {
+                  "Path": "Gif/o_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1155,
+              "LettersToLearn": [
+                "U"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/U.gif"
+                },
+                {
+                  "Path": "Gif/u_1.gif"
+                }
+             ]
+            }
+          ]
         }
       ]
     },
@@ -903,6 +963,92 @@
                 "r",
                 "s"
               ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.ShowGif, IRMGARD",
+          "Id": 124,
+          "Title": "SchREIBEN",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 4.mp3",
+          "Hint": "Hints/03_extra_Tip_du_kannst_mit_deinem_finger_im_sand_oder_schnee_schreiben.mp3",
+          "TypeOfLevel": "ShowGif",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1241,
+              "LettersToLearn": [
+                "L"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/L.gif"
+                },
+                {
+                  "Path": "Gif/l_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1242,
+              "LettersToLearn": [
+                "M"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/M.gif"
+                },
+                {
+                  "Path": "Gif/m_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1243,
+              "LettersToLearn": [
+                "N"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/N.gif"
+                },
+                {
+                  "Path": "Gif/n_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1244,
+              "LettersToLearn": [
+                "R"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/R.gif"
+                },
+                {
+                  "Path": "Gif/r_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1245,
+              "LettersToLearn": [
+                "S"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/S.gif"
+                },
+                {
+                  "Path": "Gif/s_1.gif"
+                }
+             ]
             }
           ]
         },
@@ -2544,6 +2690,91 @@
                 "w",
                 "z"
               ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.ShowGif, IRMGARD",
+          "Id": 134,
+          "Title": "SchREIBEN",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 4.mp3",
+          "TypeOfLevel": "ShowGif",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1341,
+              "LettersToLearn": [
+                "F"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/F.gif"
+                },
+                {
+                  "Path": "Gif/f_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1342,
+              "LettersToLearn": [
+                "H"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/H.gif"
+                },
+                {
+                  "Path": "Gif/h_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1343,
+              "LettersToLearn": [
+                "J"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/J.gif"
+                },
+                {
+                  "Path": "Gif/j_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1344,
+              "LettersToLearn": [
+                "W"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/W.gif"
+                },
+                {
+                  "Path": "Gif/w_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1345,
+              "LettersToLearn": [
+                "Z"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/Z.gif"
+                },
+                {
+                  "Path": "Gif/z_1.gif"
+                }
+             ]
             }
           ]
         },
@@ -4323,6 +4554,106 @@
                 "p",
                 "t"
               ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.ShowGif, IRMGARD",
+          "Id": 144,
+          "Title": "SchREIBEN",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 4.mp3",
+          "TypeOfLevel": "ShowGif",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1441,
+              "LettersToLearn": [
+                "B"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/B.gif"
+                },
+                {
+                  "Path": "Gif/b_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1442,
+              "LettersToLearn": [
+                "P"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/P.gif"
+                },
+                {
+                  "Path": "Gif/p_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1443,
+              "LettersToLearn": [
+                "G"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/G.gif"
+                },
+                {
+                  "Path": "Gif/g_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1444,
+              "LettersToLearn": [
+                "K"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/K.gif"
+                },
+                {
+                  "Path": "Gif/k_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1445,
+              "LettersToLearn": [
+                "D"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/D.gif"
+                },
+                {
+                  "Path": "Gif/d_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1446,
+              "LettersToLearn": [
+                "T"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/T.gif"
+                },
+                {
+                  "Path": "Gif/t_1.gif"
+                }
+             ]
             }
           ]
         },
@@ -6181,6 +6512,91 @@
                 "x",
                 "y"
               ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.ShowGif, IRMGARD",
+          "Id": 154,
+          "Title": "SchREIBEN",
+          "IsCompleted": false,
+          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 4.mp3",
+          "TypeOfLevel": "ShowGif",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1541,
+              "LettersToLearn": [
+                "C"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/C.gif"
+                },
+                {
+                  "Path": "Gif/c_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1542,
+              "LettersToLearn": [
+                "Q"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/Q.gif"
+                },
+                {
+                  "Path": "Gif/q_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1543,
+              "LettersToLearn": [
+                "V"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/V.gif"
+                },
+                {
+                  "Path": "Gif/v_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1544,
+              "LettersToLearn": [
+                "X"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/X.gif"
+                },
+                {
+                  "Path": "Gif/x_1.gif"
+                }
+             ]
+            },
+            {
+              "$type": "IRMGARD.Models.ShowGifIteration, IRMGARD",
+              "Id": 1544,
+              "LettersToLearn": [
+                "Y"
+              ],
+              "GifTasks": [
+                {
+                  "Path": "Gif/Y.gif"
+                },
+                {
+                  "Path": "Gif/y_1.gif"
+                }
+             ]
             }
           ]
         },

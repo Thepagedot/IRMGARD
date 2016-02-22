@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <FrameLayout
-        style="@style/result_zone">
+        style="@style/result_zone"
+        android:layout_gravity="center|center">
         <LinearLayout
             android:id="@+id/llGifItems"
-            android:orientation="horizontal"
-            android:minWidth="75dp"
-            android:minHeight="75dp"
+            android:orientation="vertical"
+            android:layout_gravity="center|center"
+            android:minWidth="150dp"
+            android:minHeight="150dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </FrameLayout>
