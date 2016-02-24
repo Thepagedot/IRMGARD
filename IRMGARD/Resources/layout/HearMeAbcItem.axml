@@ -6,6 +6,7 @@
     cardview:cardUseCompatPadding="true"
     cardview:cardPreventCornerOverlap="true"
     cardview:contentPadding="3dp"
+    cardview:cardElevation="0dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
     <TextView

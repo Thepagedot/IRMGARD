@@ -173,7 +173,6 @@ namespace IRMGARD
 
                         llLayout.Background = null;
                         cvDropZone.SetCardBackgroundColor(Color.White);
-                        cvDropZone.CardElevation = 8f;
                         ivDropZone.SetImageBitmap(volumeUpDropZoneImage);
                         ivDropZone.Click += DropZoneItemClicked;
                     }
