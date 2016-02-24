@@ -233,9 +233,10 @@ namespace IRMGARD
                 SoundPlayer.Stop();
 
             var success = DataHolder.Current.CurrentLesson.Iterations.All(i => i.Status == IterationStatus.Success);
+            bool giveFeedback = !DataHolder.Current.CurrentLesson.TypeOfLevel.Equals(LevelType.HearMe);
 
             // Play random praise or criticism audio depending on lesson success status excluding lesson HearMe
-            if (!DataHolder.Current.CurrentLesson.TypeOfLevel.Equals(LevelType.HearMe))
+            if (giveFeedback)
             {
                 isPlayingPraiseOrCriticism = true;
                 SoundPlayer.PlaySound(this,
@@ -249,7 +250,7 @@ namespace IRMGARD
             }
             isPlayingPraiseOrCriticism = false;
 
-            NextLesson(success);
+            NextLesson(success, giveFeedback);
 		}
 
 		/// <summary>
@@ -297,6 +298,7 @@ namespace IRMGARD
                 // Diable button to prevent double click
                 btnNext.Enabled = false;
                 btnNext.Clickable = false;
+                btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.HideNextButton));
 
                 // Check soution
                 currentFragment.CheckSolution();
