@@ -13,6 +13,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </FrameLayout>
+    <ImageView
+        android:src="@drawable/divider"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        android:layout_marginBottom="@dimen/activity_vertical_margin" />
     <IRMGARD.FlowLayout
         android:id="@+id/flOptions"
         android:layout_width="wrap_content"

@@ -978,12 +978,13 @@
     <AndroidResource Include="Resources\drawable-mdpi\ic_lightbulb_outline_white_24dp.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_lightbulb_outline_white_24dp.png" />
     <AndroidResource Include="Resources\layout\SpeakerElement.axml" />
-    <AndroidResource Include="Resources\drawable\result_zone.xml" />
     <AndroidResource Include="Resources\layout-h550dp\Memory.axml" />
     <AndroidResource Include="Resources\layout-h550dp\MemoryCard.axml" />
     <AndroidResource Include="Resources\layout-h550dp\Letter.axml" />
     <AndroidResource Include="Resources\layout-h550dp\TaskItem.axml" />
     <AndroidResource Include="Resources\layout-h550dp\BuildSyllable.axml" />
+    <AndroidResource Include="Resources\drawable\divider.png" />
+    <AndroidResource Include="Resources\drawable\slider_background.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">
