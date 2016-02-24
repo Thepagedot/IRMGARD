@@ -123,7 +123,7 @@ namespace IRMGARD
                     view.Drag += View_Drag;
 
                     view.FindViewById<TextView>(Resource.Id.letter).SetTextColor(Resources.GetColor(
-                        (i % 2 == 0) ? Resource.Color.irmgard_red_dark : Resource.Color.irmgard_red));
+                        (i % 2 == 0) ? Resource.Color.irmgard_red_dark : Resource.Color.green));
 
                     // Add letter to view
                     llTaskItems.AddView(view);

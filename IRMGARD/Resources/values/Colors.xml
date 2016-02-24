@@ -3,5 +3,6 @@
     <color name="light_gray">#FFCCCCCC</color>
     <color name="irmgard_red">#FFF91A0E</color>
     <color name="irmgard_red_dark">#FFB7160E</color>
-    <color name="selected_background">#FFEEEEEE</color>
+    <color name="green">#83A25B</color>
+    <color name="selected_background">#FFDDDDDD</color>
 </resources>
