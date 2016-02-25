@@ -5,79 +5,417 @@
   "IsCompleted": false,
   "Modules": [
     {
-      "Name": "1: AEIOU",
-      "Color": "#DDD6BF",
-      "VideoPath": "Videos/Handy_Modul_1_720p.mp4",
+      "Name": "2: LMNRS",
+      "Color": "#AFC3C4",
+      "VideoPath": "Videos/Handy_Modul2_720p.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
-          "$type": "IRMGARD.Models.HearMe, IRMGARD",
-          "Id": 111,
-          "Title": "AEIOU",
+          "$type": "IRMGARD.Models.BuildSyllable, IRMGARD",
+          "Id": 129,
+          "Title": "Wörter schreiben",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 1.mp3",
-          "Hint": "Lesson 1 Hint",
-          "TypeOfLevel": "HearMe",
+          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 9.mp3",
+          "TypeOfLevel": "BuildSyllable",
           "Iterations": [
             {
-              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
-              "Id": 1111,
+              "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
+              "Id": 1291,
               "LettersToLearn": [
-                "A"
+                "l",
+                "m",
+                "n",
+                "r",
+                "s"
               ],
-              "Name": "Aal",
-              "Media": {
-                "ImagePath": "Aal.png",
-                "SoundPath": "Letters/AAal.mp3"
-              }
+              "SyllablePool": [
+                {
+                  "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Lama.png",
+                    "SoundPath": "Objects/Lama.mp3"
+                  },
+                  "Syllables": [
+                    {
+                      "SyllableParts": [
+                        {
+                          "TaskLetter": {
+                            "Letter": "L",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        },
+                        {
+                          "TaskLetter": {
+                            "Letter": "A",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        }
+                      ],
+                      "SoundPath": "Syllables/LMNRS/la_lang.mp3"
+                    },
+                    {
+                      "SyllableParts": [
+                        {
+                          "TaskLetter": {
+                            "Letter": "M",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        },
+                        {
+                          "TaskLetter": {
+                            "Letter": "A",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        }
+                      ],
+                      "SoundPath": "Syllables/LMNRS/ma_lang.mp3"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
-              "Id": 1112,
+              "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
+              "Id": 1292,
               "LettersToLearn": [
-                "E"
+                "l",
+                "m",
+                "n",
+                "r",
+                "s"
               ],
-              "Name": "Elefant",
-              "Media": {
-                "ImagePath": "Elefant.png",
-                "SoundPath": "Letters/EElefant.mp3"
-              }
+              "SyllablePool": [
+                {
+                  "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Mama.png",
+                    "SoundPath": "Objects/Mama.mp3"
+                  },
+                  "Syllables": [
+                    {
+                      "SyllableParts": [
+                        {
+                          "TaskLetter": {
+                            "Letter": "M",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        },
+                        {
+                          "TaskLetter": {
+                            "Letter": "A",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        }
+                      ],
+                      "SoundPath": "Syllables/LMNRS/ma_lang.mp3"
+                    },
+                    {
+                      "SyllableParts": [
+                        {
+                          "TaskLetter": {
+                            "Letter": "M",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        },
+                        {
+                          "TaskLetter": {
+                            "Letter": "A",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        }
+                      ],
+                      "SoundPath": "Syllables/LMNRS/ma_lang.mp3"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
-              "Id": 1113,
+              "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
+              "Id": 1293,
               "LettersToLearn": [
-                "I"
+                "l",
+                "m",
+                "n",
+                "r",
+                "s"
               ],
-              "Name": "Igel",
-              "Media": {
-                "ImagePath": "Igel.png",
-                "SoundPath": "Letters/IIgel.mp3"
-              }
+              "SyllablePool": [
+                {
+                  "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Rose.png",
+                    "SoundPath": "Objects/Rose.mp3"
+                  },
+                  "Syllables": [
+                    {
+                      "SyllableParts": [
+                        {
+                          "TaskLetter": {
+                            "Letter": "R",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        },
+                        {
+                          "TaskLetter": {
+                            "Letter": "O",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        }
+                      ],
+                      "SoundPath": "Syllables/LMNRS/ro_lang.mp3"
+                    },
+                    {
+                      "SyllableParts": [
+                        {
+                          "TaskLetter": {
+                            "Letter": "S",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        },
+                        {
+                          "TaskLetter": {
+                            "Letter": "E",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        }
+                      ],
+                      "SoundPath": "Syllables/LMNRS/se_lang.mp3"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
-              "Id": 1114,
+              "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
+              "Id": 1294,
               "LettersToLearn": [
-                "O"
+                "l",
+                "m",
+                "n",
+                "r",
+                "s"
               ],
-              "Name": "Ofen",
-              "Media": {
-                "ImagePath": "Ofen.png",
-                "SoundPath": "Letters/OOfen.mp3"
-              }
+              "SyllablePool": [
+                {
+                  "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Nase.png",
+                    "SoundPath": "Objects/Nase.mp3"
+                  },
+                  "Syllables": [
+                    {
+                      "SyllableParts": [
+                        {
+                          "TaskLetter": {
+                            "Letter": "N",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        },
+                        {
+                          "TaskLetter": {
+                            "Letter": "A",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        }
+                      ],
+                      "SoundPath": "Syllables/LMNRS/na_lang.mp3"
+                    },
+                    {
+                      "SyllableParts": [
+                        {
+                          "TaskLetter": {
+                            "Letter": "S",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        },
+                        {
+                          "TaskLetter": {
+                            "Letter": "E",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        }
+                      ],
+                      "SoundPath": "Syllables/LMNRS/se_lang.mp3"
+                    }
+                  ]
+                }
+              ]
             },
             {
-              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
-              "Id": 1115,
+              "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
+              "Id": 1295,
               "LettersToLearn": [
-                "U"
+                "l",
+                "m",
+                "n",
+                "r",
+                "s"
               ],
-              "Name": "Uhu",
-              "Media": {
-                "ImagePath": "Uhu.png",
-                "SoundPath": "Letters/UUhu.mp3"
-              }
+              "SyllablePool": [
+                {
+                  "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Oma.png",
+                    "SoundPath": "Objects/Oma.mp3"
+                  },
+                  "Syllables": [
+                    {
+                      "SyllableParts": [
+                        {
+                          "TaskLetter": {
+                            "Letter": "O",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        }
+                      ],
+                      "SoundPath": "Letters/o_lang.mp3"
+                    },
+                    {
+                      "SyllableParts": [
+                        {
+                          "TaskLetter": {
+                            "Letter": "M",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        },
+                        {
+                          "TaskLetter": {
+                            "Letter": "A",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        }
+                      ],
+                      "SoundPath": "Syllables/LMNRS/ma_lang.mp3"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.BuildSyllableIteration, IRMGARD",
+              "Id": 1296,
+              "LettersToLearn": [
+                "l",
+                "m",
+                "n",
+                "r",
+                "s"
+              ],
+              "SyllablePool": [
+                {
+                  "HasLongAndShortLetters": false,
+                  "Media": {
+                    "ImagePath": "Lisa.png",
+                    "SoundPath": "Objects/Lisa.mp3"
+                  },
+                  "Syllables": [
+                    {
+                      "SyllableParts": [
+                        {
+                          "TaskLetter": {
+                            "Letter": "L",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        },
+                        {
+                          "TaskLetter": {
+                            "Letter": "I",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        }
+                      ],
+                      "SoundPath": "Syllables/LMNRS/li_lang.mp3"
+                    },
+                    {
+                      "SyllableParts": [
+                        {
+                          "TaskLetter": {
+                            "Letter": "S",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        },
+                        {
+                          "TaskLetter": {
+                            "Letter": "A",
+                            "IsShort": false,
+                            "IsLong": false
+                          },
+                          "IsSearched": true,
+                          "EmptySearchedItems": true
+                        }
+                      ],
+                      "SoundPath": "Syllables/LMNRS/sa_lang.mp3"
+                    }
+                  ]
+                }
+              ]
             }
           ]
         }

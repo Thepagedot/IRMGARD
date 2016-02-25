@@ -18,8 +18,10 @@ namespace IRMGARD
         LinearLayout llSoundItems;
         FlowLayout flLetters;
         ImageView ivImagePopup;
+        ImageView ivDivider;
 
         SyllablesToLearn currentSyllablesToLearn;
+        bool imagePopupAlreadyShown;
 
         public BuildSyllableFragment(Lesson lesson) : base(lesson) {}
 
@@ -31,7 +33,8 @@ namespace IRMGARD
             llSoundItems = view.FindViewById<LinearLayout>(Resource.Id.llSoundItems);
             flLetters = view.FindViewById<FlowLayout> (Resource.Id.flLetters);
             ivImagePopup = view.FindViewById<ImageView>(Resource.Id.ivImagePopup);
-			
+            ivDivider = view.FindViewById<ImageView>(Resource.Id.ivDivider);
+
             // Initialize iteration
             InitIteration();
             return view;
@@ -172,7 +175,6 @@ namespace IRMGARD
             }
 
         }            
-
         void View_Drag (object sender, View.DragEventArgs e)
         {
             // React on different dragging events
@@ -233,24 +235,17 @@ namespace IRMGARD
 
                         FireUserInteracted(isReady);
                         BuildTaskLetters(taskItems);
-                        
-                        if (currentSyllablesToLearn.Media != null && isReady && IsSuccess())
-                        {
-                            if (SoundPlayer.IsPlaying)
-                                SoundPlayer.Stop();
-                            SoundPlayer.PlaySound(Activity.BaseContext, currentSyllablesToLearn.Media.SoundPath);
-                            ivImagePopup.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(1, Activity.BaseContext, currentSyllablesToLearn.Media.ImagePath));
-                            var animation = AnimationUtils.LoadAnimation(Activity.BaseContext, Resource.Animation.ShowPicturePopup);
-                            animation.AnimationEnd += (s, args) => ivImagePopup.Visibility = ViewStates.Gone;
-                            ivImagePopup.Visibility = ViewStates.Visible;
-                            ivImagePopup.StartAnimation(animation);
-                        }
                     }
 
                     break;
             }
         }
-        
+
+        void ImagePopup_Click (object sender, EventArgs e)
+        {
+            SoundPlayer.PlaySound(Activity.BaseContext, currentSyllablesToLearn.Media.SoundPath);
+        }
+
         bool IsSuccess()
         {
             var success = true;
@@ -271,7 +266,34 @@ namespace IRMGARD
 
         public override void CheckSolution()
         {
-            FinishIteration(IsSuccess());
+            if (IsSuccess() && currentSyllablesToLearn.Media != null && !imagePopupAlreadyShown)
+            {
+                // Hide views
+                ivDivider.Visibility = ViewStates.Gone;
+                flLetters.Visibility = ViewStates.Gone;
+
+                // Show image
+                ivImagePopup.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(1, Activity.BaseContext, currentSyllablesToLearn.Media.ImagePath));
+                ivImagePopup.Visibility = ViewStates.Visible;
+                ivImagePopup.Click += ImagePopup_Click;
+
+                // Play sound
+                SoundPlayer.PlaySound(Activity.BaseContext, currentSyllablesToLearn.Media.SoundPath);
+
+                imagePopupAlreadyShown = true;
+                FireUserInteracted(true);
+            }
+            else
+            {
+                // Reset resources for next iteration
+                imagePopupAlreadyShown = false;
+                ivImagePopup.Click -= ImagePopup_Click;
+                ivImagePopup.Visibility = ViewStates.Gone;
+                flLetters.Visibility = ViewStates.Visible;
+                ivDivider.Visibility = ViewStates.Visible;
+
+                FinishIteration(IsSuccess());
+            }
         }
     }
 }    
