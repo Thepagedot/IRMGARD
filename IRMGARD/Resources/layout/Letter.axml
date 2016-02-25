@@ -20,7 +20,7 @@
             android:gravity="center"
             android:layout_gravity="center"
             android:text=""
-            android:textSize="28dp"
+            android:textSize="26dp"
             android:textAlignment="center" />
         <View
             android:id="@+id/shortIndicator"

@@ -34,12 +34,12 @@
             android:background="@android:color/white"
             android:visibility="gone" />
         <ImageView
-            android:src="@drawable/divider"
+            android:id="@+id/ivDivider"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:adjustViewBounds="false"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
-            android:id="@+id/imageView1" />
+            android:adjustViewBounds="false"
+            android:src="@drawable/divider" />
         <IRMGARD.FlowLayout
             android:id="@+id/flLetters"
             android:layout_width="wrap_content"
