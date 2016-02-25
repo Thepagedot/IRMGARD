@@ -11,6 +11,8 @@ using Android.Runtime;
 using Android.Util;
 using Android.Views;
 using Android.Widget;
+using Android.Support.V7.Widget;
+using Android.Graphics;
 using IRMGARD.Models;
 
 //using Square.Picasso;
@@ -21,6 +23,7 @@ namespace IRMGARD
 	{
         private TextView letterToLearnView;
         private ImageView imageButtonView;
+        private CardView cardView;
         private TextView nameView;
 
         public HearMeFragment (Lesson lesson) : base(lesson) {}
@@ -33,6 +36,7 @@ namespace IRMGARD
             {
                 letterToLearnView = view.FindViewById<TextView>(Resource.Id.hearMeLetterToLearn);
                 imageButtonView = view.FindViewById<ImageView>(Resource.Id.hearMeImageView);
+                cardView = view.FindViewById<CardView>(Resource.Id.cardView);
                 nameView = view.FindViewById<TextView>(Resource.Id.hearMeName);
             }
 
@@ -48,7 +52,8 @@ namespace IRMGARD
             var currentIteration = GetCurrentIteration<HearMeIteration>();
             letterToLearnView.Text = string.Empty;
             nameView.Text = string.Empty;
-            imageButtonView.Click -= PlayImageSound;
+            cardView.SetCardBackgroundColor(Color.White);
+            imageButtonView.Click -= ImageButton_Click;
 
             if (currentIteration != null)
             {
@@ -58,18 +63,21 @@ namespace IRMGARD
                 }
 //                Picasso.With(Activity.BaseContext).Load("file:///android_asset/Images/"+currentIteration.Media.ImagePath).Into(imageButtonView);
                 imageButtonView.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(1, Activity.BaseContext, currentIteration.Media.ImagePath));
-                imageButtonView.Click += PlayImageSound;
+                imageButtonView.Click += ImageButton_Click;
 
                 nameView.Text = currentIteration.Name;
             }
         }
 
-        void PlayImageSound(object sender, EventArgs e)
+        void ImageButton_Click(object sender, EventArgs e)
         {
-            FireUserInteracted(true);
+            cardView.SetCardBackgroundColor(Resources.GetColor(Resource.Color.selected_background));
+
             if (SoundPlayer.IsPlaying)
                 SoundPlayer.Stop();
             SoundPlayer.PlaySound(Activity.BaseContext, GetCurrentIteration<HearMeIteration>().Media.SoundPath);
+
+            FireUserInteracted(true);
         }
 
         public override void CheckSolution()
