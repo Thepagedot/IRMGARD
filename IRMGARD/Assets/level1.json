@@ -2025,7 +2025,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_lang.mp3"
+                      "SoundPath": "Syllables/LMNRS/se_kurz.mp3"
                     }
                   ]
                 }
@@ -2093,7 +2093,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_lang.mp3"
+                      "SoundPath": "Syllables/LMNRS/se_kurz.mp3"
                     }
                   ]
                 }
@@ -3534,7 +3534,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_lang.mp3"
+                      "SoundPath": "Syllables/LMNRS/se_kurz.mp3"
                     }
                   ]
                 }
@@ -3602,7 +3602,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_lang.mp3"
+                      "SoundPath": "Syllables/LMNRS/se_kurz.mp3"
                     }
                   ]
                 }
@@ -3670,7 +3670,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/le_lang.mp3"
+                      "SoundPath": "Syllables/LMNRS/le_kurz.mp3"
                     }
                   ]
                 }
@@ -3738,7 +3738,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ne_lang.mp3"
+                      "SoundPath": "Syllables/LMNRS/ne_kurz.mp3"
                     }
                   ]
                 }
@@ -5486,7 +5486,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/me_lang.mp3"
+                      "SoundPath": "Syllables/LMNRS/me_kurz.mp3"
                     }
                   ]
                 }
@@ -5624,7 +5624,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/de_lang.mp3"
+                      "SoundPath": "Syllables/BDGKPT/de_kurz.mp3"
                     }
                   ]
                 }
@@ -5762,7 +5762,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/te_lang.mp3"
+                      "SoundPath": "Syllables/BDGKPT/te_kurz.mp3"
                     }
                   ]
                 }
@@ -6038,7 +6038,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_lang.mp3"
+                      "SoundPath": "Syllables/LMNRS/se_kurz.mp3"
                     }
                   ]
                 }

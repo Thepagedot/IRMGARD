@@ -804,6 +804,10 @@
     <AndroidAsset Include="Assets\Sounds\Alphabet\X.mp3" />
     <AndroidAsset Include="Assets\Sounds\Alphabet\Y.mp3" />
     <AndroidAsset Include="Assets\Sounds\Alphabet\Z.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Syllables\LMNRS\le_kurz.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Syllables\LMNRS\me_kurz.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Syllables\LMNRS\ne_kurz.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Syllables\LMNRS\se_kurz.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
