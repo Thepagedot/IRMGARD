@@ -39,11 +39,15 @@ namespace IRMGARD
             // Backup iterations loaded
             iterationsLoaded = Lesson.Iterations;
 
-            // Pick 5 random iterations for this game
-            List<Iteration> l = (List<Iteration>) Lesson.Iterations.PickRandomItems(5);
-            DataHolder.Current.CurrentLesson.Iterations = l;
-            Lesson.Iterations = l;
-            FireProgressListRefreshRequested(Lesson);
+            // Only for lesson 9
+            if (((BuildSyllableIteration) DataHolder.Current.CurrentLesson.Iterations.FirstOrDefault()).SyllablePool.FirstOrDefault().Syllables.Count > 1)
+            {
+                // Pick 5 random iterations for this game
+                List<Iteration> l = (List<Iteration>) Lesson.Iterations.PickRandomItems(5);
+                DataHolder.Current.CurrentLesson.Iterations = l;
+                Lesson.Iterations = l;
+                FireProgressListRefreshRequested(Lesson);
+            }
 
             // Initialize iteration
             InitIteration();
