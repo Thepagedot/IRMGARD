@@ -34,6 +34,12 @@ namespace IRMGARD
         public event UserInteractedEventHandler UserInteracted;
         public delegate void UserInteractedEventHandler(object sender, UserInteractedEventArgs e);
 
+        /// <summary>
+        /// Occurs when a refresh of progress list items is required
+        /// </summary>
+        public event ProgressListRefreshRequestedEventHandler ProgressListRefreshRequested;
+        public delegate void ProgressListRefreshRequestedEventHandler(object sender, ProgressListRefreshRequestedEventArgs e);
+
         protected void FireIterationFinished(Iteration iteration, bool success, bool showAnimation)
         {
             if (IterationFinished != null)
@@ -60,6 +66,12 @@ namespace IRMGARD
         {
             if (UserInteracted != null)
                 UserInteracted(this, new UserInteractedEventArgs(isReady));
+        }
+
+        protected void FireProgressListRefreshRequested(Lesson lesson)
+        {
+            if (ProgressListRefreshRequested != null)
+                ProgressListRefreshRequested(this, new ProgressListRefreshRequestedEventArgs(lesson));
         }
 
         public abstract void CheckSolution();
@@ -166,6 +178,16 @@ namespace IRMGARD
         public UserInteractedEventArgs(bool isReady) : base()
         {
             this.IsReady = isReady;
+        }
+    }
+
+    public class ProgressListRefreshRequestedEventArgs : EventArgs
+    {
+        public Lesson Lesson { get; set; }
+
+        public ProgressListRefreshRequestedEventArgs(Lesson lesson) : base()
+        {
+            this.Lesson = lesson;
         }
     }
 }

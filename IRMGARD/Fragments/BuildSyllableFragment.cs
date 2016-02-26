@@ -20,6 +20,7 @@ namespace IRMGARD
         ImageView ivImagePopup;
         ImageView ivDivider;
 
+        List<Iteration> iterationsLoaded;
         SyllablesToLearn currentSyllablesToLearn;
         bool imagePopupAlreadyShown;
 
@@ -34,6 +35,15 @@ namespace IRMGARD
             flLetters = view.FindViewById<FlowLayout> (Resource.Id.flLetters);
             ivImagePopup = view.FindViewById<ImageView>(Resource.Id.ivImagePopup);
             ivDivider = view.FindViewById<ImageView>(Resource.Id.ivDivider);
+
+            // Backup iterations loaded
+            iterationsLoaded = Lesson.Iterations;
+
+            // Pick 5 random iterations for this game
+            List<Iteration> l = (List<Iteration>) Lesson.Iterations.PickRandomItems(5);
+            DataHolder.Current.CurrentLesson.Iterations = l;
+            Lesson.Iterations = l;
+            FireProgressListRefreshRequested(Lesson);
 
             // Initialize iteration
             InitIteration();
@@ -294,6 +304,15 @@ namespace IRMGARD
 
                 FinishIteration(IsSuccess());
             }
+        }
+
+
+        public override void OnDestroy()
+        {
+            base.OnDestroy();
+
+            // Restore iterations loaded
+            Lesson.Iterations = iterationsLoaded;
         }
     }
 }    

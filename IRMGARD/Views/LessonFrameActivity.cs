@@ -109,12 +109,7 @@ namespace IRMGARD
             //hintButton.SetVisible(!string.IsNullOrEmpty(Lesson.Hint));
 
             // Progress
-            progressList.Clear();
-            for (var i = 0; i < lesson.Iterations.Count; i++)
-                progressList.Add(new Progress(lesson.Iterations[i].Status)); // Set iteration's status to the same as progess's staus
-            progressList[0].IsCurrent = true;
-
-            rvProgress.GetAdapter().NotifyDataSetChanged();
+            ProgressListRefresh(lesson);
 
             // ----------------------------------------------------------------------
             // Load Lesson fragment
@@ -125,7 +120,8 @@ namespace IRMGARD
             currentFragment = CreateFragmentForLesson(DataHolder.Current.CurrentLesson);
             if (currentFragment != null)
             {
-                // Handle finished events
+                // Handle LessonFragment events
+                currentFragment.ProgressListRefreshRequested += LessonFragment_ProgressListRefreshRequested;
                 currentFragment.LessonFinished += LessonFragment_LessonFinished;
                 currentFragment.IterationFinished += Fragment_IterationFinished;
                 currentFragment.IterationChanged += Fragment_IterationChanged;
@@ -158,6 +154,21 @@ namespace IRMGARD
                 }
             }
             SoundPlayer.PlaySound(this, waitForCompletion, DataHolder.Current.CurrentLesson.SoundPath);
+        }
+
+        private void ProgressListRefresh(Lesson lesson)
+        {
+            progressList.Clear();
+            for (var i = 0; i < lesson.Iterations.Count; i++)
+                progressList.Add(new Progress(lesson.Iterations[i].Status)); // Set iteration's status to the same as progess's staus
+            progressList[0].IsCurrent = true;
+
+            rvProgress.GetAdapter().NotifyDataSetChanged();
+        }
+
+        private void LessonFragment_ProgressListRefreshRequested(object sender, ProgressListRefreshRequestedEventArgs e)
+        {
+            ProgressListRefresh(e.Lesson);
         }
 
         private void CurrentFragment_UserInteracted (object sender, UserInteractedEventArgs e)
