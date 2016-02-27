@@ -76,12 +76,14 @@
         <TextView
             android:id="@+id/txtCapitalAlphabet"
             android:text="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:letterSpacing="0.1"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/txtLowerAlphabet"
             android:text="abcdefghijklmnopqrstuvwxyz"
+            android:letterSpacing="0.24"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
