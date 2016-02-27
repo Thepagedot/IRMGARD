@@ -878,6 +878,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_chat_bubble_outline_black_24dp.png" />
     <AndroidResource Include="Resources\layout\Video.axml" />
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\layout\ToolbarInit.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_play_arrow_white_24dp.png" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_play_arrow_white_24dp.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_play_arrow_white_24dp.png" />
