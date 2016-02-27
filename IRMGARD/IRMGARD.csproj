@@ -808,6 +808,7 @@
     <AndroidAsset Include="Assets\Sounds\Syllables\LMNRS\me_kurz.mp3" />
     <AndroidAsset Include="Assets\Sounds\Syllables\LMNRS\ne_kurz.mp3" />
     <AndroidAsset Include="Assets\Sounds\Syllables\LMNRS\se_kurz.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Application\Module_Not_Available.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -973,7 +974,6 @@
     <AndroidResource Include="Resources\drawable\vert_lines.xml" />
     <AndroidResource Include="Resources\drawable\vert_lines_inset.xml" />
     <AndroidResource Include="Resources\anim\ShowPicturePopup.xml" />
-    <AndroidResource Include="Resources\menu\levelFrame_menu_debug.xml" />
     <AndroidResource Include="Resources\layout\HearMeAbc.axml" />
     <AndroidResource Include="Resources\layout\HearMeAbcItem.axml" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_lightbulb_outline_white_24dp.png" />

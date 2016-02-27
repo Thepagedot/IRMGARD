@@ -65,7 +65,11 @@ namespace IRMGARD
                 // Check if module is available
                 if (e.Position > 0 && !DataHolder.Current.CurrentLevel.Modules.ElementAt(e.Position - 1).IsCompleted)
                 {
-                    Toast.MakeText(this, "This module is not available yet. Unlock this module by completing the previous ones.", ToastLength.Short).Show();
+                    if (SoundPlayer.IsPlaying)
+                    {
+                        SoundPlayer.Stop();
+                    }
+                    SoundPlayer.PlaySound(this, "Application/Module_Not_Available.mp3");                    
                     return;
                 }
             }
