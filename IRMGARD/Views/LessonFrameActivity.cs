@@ -319,7 +319,7 @@ namespace IRMGARD
 		public override bool OnCreateOptionsMenu (IMenu menu)
 		{
             topMenu = menu;
-            MenuInflater.Inflate(Env.Debug ? Resource.Menu.levelFrame_menu_debug : Resource.Menu.levelFrame_menu, topMenu);
+            MenuInflater.Inflate(Resource.Menu.levelFrame_menu, topMenu);
             CheckHintButton();
 
 			return base.OnCreateOptionsMenu (menu);
