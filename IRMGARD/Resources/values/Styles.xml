@@ -16,6 +16,7 @@
         <item name="colorAccent">@color/irmgard_red</item>
          <!-- You can also set colorControlNormal, colorControlActivated
              colorControlHighlight and colorSwitchThumbNormal. -->
+        <item name="android:colorBackground">@android:color/white</item>
     </style>
 
     <style name="IrmgardTheme" parent="IrmgardTheme.Base">
