@@ -6,9 +6,8 @@
     <color name="green">#83A25B</color>
     <color name="selected_background">#FFDDDDDD</color>
 
-    <color name="irmgard_init">#00FFFFFF</color>
-    <color name="irmgard_init_dark">#FFC9C9C9</color>
+    <color name="status_bar">#FFC9C9C9</color>
+    <color name="app_bar">#00FFFFFF</color>
 
-    <color name="irmgard_level1">#FFDEB800</color>
-    <color name="irmgard_level1_dark">#FFAF9101</color>
+    <color name="level1">#FFBE6E66</color>
 </resources>

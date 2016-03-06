@@ -6,18 +6,18 @@
 
     <item
         android:id="@+id/btnHint"
-        android:icon="@drawable/ic_lightbulb_outline_white_24dp"
+        android:icon="@drawable/ic_lightbulb_outline_black_24dp"
         android:title="@string/hint"
         app:showAsAction="always" />
 
     <item
         android:id="@+id/btnVoiceInstruction"
-        android:icon="@drawable/ic_hearing_white_24dp"
+        android:icon="@drawable/ic_hearing_black_24dp"
         android:title="@string/playVoiceInstruction"
         app:showAsAction="always" />
 
     <item
-        android:icon="@drawable/ic_more_vert_white_24dp"
+        android:icon="@drawable/ic_more_vert_black_24dp"
         android:title="Mehr..."
         app:showAsAction="always">
 

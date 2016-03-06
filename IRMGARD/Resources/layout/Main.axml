@@ -8,7 +8,7 @@
     android:minHeight="25px">
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbarInit" />
+        layout="@layout/toolbar" />
     <ImageView
         android:src="@drawable/splashscreen"
         android:layout_width="match_parent"

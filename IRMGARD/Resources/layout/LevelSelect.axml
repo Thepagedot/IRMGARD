@@ -7,7 +7,7 @@
     android:minHeight="25px">
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toolbarInit" />
+        layout="@layout/toolbar" />
     <ListView
         android:minWidth="25px"
         android:minHeight="25px"

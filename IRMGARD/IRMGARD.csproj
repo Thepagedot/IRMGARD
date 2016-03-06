@@ -878,7 +878,6 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_chat_bubble_outline_black_24dp.png" />
     <AndroidResource Include="Resources\layout\Video.axml" />
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
-    <AndroidResource Include="Resources\layout\ToolbarInit.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_play_arrow_white_24dp.png" />
     <AndroidResource Include="Resources\drawable-mdpi\ic_play_arrow_white_24dp.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\ic_play_arrow_white_24dp.png" />
@@ -990,6 +989,21 @@
     <AndroidResource Include="Resources\layout-h550dp\BuildSyllable.axml" />
     <AndroidResource Include="Resources\drawable\divider.png" />
     <AndroidResource Include="Resources\drawable\slider_background.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_hearing_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_lightbulb_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_more_vert_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_hearing_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_lightbulb_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_more_vert_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_hearing_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_lightbulb_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_more_vert_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_hearing_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_lightbulb_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_more_vert_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_hearing_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_lightbulb_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_more_vert_black_24dp.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">
