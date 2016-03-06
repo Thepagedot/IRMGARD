@@ -59,7 +59,9 @@ namespace IRMGARD
             btnNext.Click += BtnNext_Click;
             rvProgress = FindViewById<RecyclerView>(Resource.Id.rvProgress);
             rvProgress.SetLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.Horizontal, false));
-            rvProgress.SetAdapter(new ProgressAdapter(progressList));
+            rvProgress.SetAdapter(new ProgressAdapter(progressList,
+                Color.ParseColor(DataHolder.Current.CurrentModule.Color),
+                Resources.DisplayMetrics.Density));
 			txtCapitalAlphabet = FindViewById<TextView>(Resource.Id.txtCapitalAlphabet);
 			txtLowerAlphabet = FindViewById<TextView>(Resource.Id.txtLowerAlphabet);
 			fragmentContainer = FindViewById<FrameLayout> (Resource.Id.fragmentContainer);

@@ -1004,6 +1004,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_hearing_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_lightbulb_outline_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_more_vert_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\rectangle_level1.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">
