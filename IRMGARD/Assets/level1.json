@@ -6161,7 +6161,7 @@
         {
           "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
           "Id": 155,
-          "Title": "Vorne, Mitte oder hinten?",
+          "Title": "Wo?",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 5 Aufgabe 5.mp3",
           "Hint": "Hints/21_extra_Tip_wenn_etwas_nicht_auf_anhieb_klappt_nicht_verzagen.mp3",
