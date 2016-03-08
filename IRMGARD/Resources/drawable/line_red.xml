@@ -4,6 +4,6 @@
     android:shape="line">
 
     <stroke
-        android:color="@color/irmgard_red"
+        android:color="@color/level1"
         android:width="4dp" />
 </shape>

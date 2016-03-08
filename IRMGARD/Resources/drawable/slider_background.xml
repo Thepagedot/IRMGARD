@@ -8,6 +8,6 @@
     <solid
         android:color="@color/light_gray" />
     <stroke
-        android:color="@color/irmgard_red_dark"
+        android:color="@color/level1"
         android:width="1dp" />
 </shape>

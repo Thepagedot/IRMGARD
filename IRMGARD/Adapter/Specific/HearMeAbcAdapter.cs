@@ -37,7 +37,7 @@ namespace IRMGARD
                 {
                     if (String.IsNullOrEmpty(item.Prepend) && String.IsNullOrEmpty(item.Append))
                     {
-                        tvHearMeAbc.Append(GetTextColorized(item.Letter, Color.Red));
+                        tvHearMeAbc.Append(GetTextColorized(item.Letter, Color.ParseColor(DataHolder.Current.CurrentLevel.Color)));
                     }
                     else
                     {
