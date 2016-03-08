@@ -43,6 +43,8 @@ namespace IRMGARD
             {
                 PlayTaskDesc();
             }
+
+            FireUserInteracted(true);
         }
 
         void PlayTaskDesc()
@@ -56,17 +58,14 @@ namespace IRMGARD
         {
             var hearMeAbcLetter = GetCurrentIteration<HearMeAbcIteration>().Letters.ElementAt(e.Position);
 
-            hearMeAbcLetter.HasVisited = true;
             if (SoundPlayer.IsPlaying)
                 SoundPlayer.Stop();
             SoundPlayer.PlaySound(Activity.BaseContext, hearMeAbcLetter.Media.SoundPath);
-
-            FireUserInteracted(true);
         }
 
         public override void CheckSolution()
         {
-            FinishIteration(GetCurrentIteration<HearMeAbcIteration>().Letters.All(letter => letter.HasVisited));
+            FinishIteration(true, false);
         }
     }
 }

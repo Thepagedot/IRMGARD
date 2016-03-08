@@ -32,16 +32,12 @@ namespace IRMGARD.Models
         public string Append { get; set; }
         public Media Media { get; set; }
 
-        public bool HasVisited { get; set; }
-        
         public HearMeAbcLetter(int id, string letter, string prepend, string append, Media media)
         {
             Letter = letter;
             Prepend = prepend;
             Append = append;
             Media = media;
-
-            HasVisited = false;
         }
     }
 }

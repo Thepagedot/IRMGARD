@@ -216,7 +216,7 @@ namespace IRMGARD
             rvProgress.GetAdapter().NotifyItemChanged(iterationIndex);
 
             // Show success animation
-            if (e.ShowAnimation)
+            if (e.ProvideFeedback)
             {
                 if (e.Success)
                     ivBadge.SetImageResource(Resource.Drawable.ic_irmgard_icon_spiel_richtig_neu);
@@ -241,16 +241,15 @@ namespace IRMGARD
 		/// </summary>
 		/// <param name="sender">sender.</param>
 		/// <param name="e">event args.</param>
-        async void LessonFragment_LessonFinished(object sender, EventArgs e)
+        async void LessonFragment_LessonFinished(object sender, LessonFinishedEventArgs e)
 		{
             if (SoundPlayer.IsPlaying)
                 SoundPlayer.Stop();
 
             var success = DataHolder.Current.CurrentLesson.Iterations.All(i => i.Status == IterationStatus.Success);
-            bool giveFeedback = !DataHolder.Current.CurrentLesson.TypeOfLevel.Equals(LevelType.HearMe);
 
-            // Play random praise or criticism audio depending on lesson success status excluding lesson HearMe
-            if (giveFeedback)
+            // Play random praise or criticism audio depending on lesson success status
+            if (e.ProvideFeedback)
             {
                 isPlayingPraiseOrCriticism = true;
                 SoundPlayer.PlaySound(this,
@@ -264,7 +263,7 @@ namespace IRMGARD
             }
             isPlayingPraiseOrCriticism = false;
 
-            NextLesson(success, giveFeedback);
+            NextLesson(success, e.ProvideFeedback);
 		}
 
 		/// <summary>
@@ -457,11 +456,12 @@ namespace IRMGARD
             if (markedLetters == null)
                 return new SpannableString(alphabet);
 
+            var levelColor = Color.ParseColor(DataHolder.Current.CurrentLevel.Color);
             var spannable = new SpannableString(alphabet);
             foreach (var letter in markedLetters)
             {
                 var index = Alphabet.Letters.IndexOf(letter.ToUpper());
-                spannable.SetSpan(new ForegroundColorSpan(Color.Red), index, index + 1, SpanTypes.ExclusiveExclusive);
+                spannable.SetSpan(new ForegroundColorSpan(levelColor), index, index + 1, SpanTypes.ExclusiveExclusive);
             }
 
             return spannable;
