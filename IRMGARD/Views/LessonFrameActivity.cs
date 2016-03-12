@@ -146,6 +146,7 @@ namespace IRMGARD
             }
 
             // Play instruction
+            SoundPlayer.Stop();
             bool waitForCompletion = false;
             if (DataHolder.Current.CurrentLesson.IsRecurringTask)
             {

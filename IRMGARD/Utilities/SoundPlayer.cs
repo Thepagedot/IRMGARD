@@ -93,6 +93,7 @@ namespace IRMGARD
         /// </summary>
         public static void Stop()
         {
+            waitForCompletionActive = false;
             if (player.IsPlaying)
             {
                 player.Stop();
