@@ -6296,6 +6296,7 @@
           "Id": 161,
           "Title": "Von A-Z",
           "SoundPath": "Level-1/Level 1 Modul 6 Aufgabe 1.mp3",
+          "SoundPathABC": "Tasks/6-1/ABC_Song.mp3",
           "Hint": "Hints/19_extra_Tip_wenn_du_bishierhin_alle_aufgaben_geloest_hast_kannst_du_stolz_auf_dich_sein.mp3",
           "TypeOfLevel": "HearMeAbc",
           "Iterations": [

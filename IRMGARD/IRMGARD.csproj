@@ -809,6 +809,7 @@
     <AndroidAsset Include="Assets\Sounds\Syllables\LMNRS\ne_kurz.mp3" />
     <AndroidAsset Include="Assets\Sounds\Syllables\LMNRS\se_kurz.mp3" />
     <AndroidAsset Include="Assets\Sounds\Application\Module_Not_Available.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Tasks\6-1\ABC_Song.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -1005,6 +1006,12 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_lightbulb_outline_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_more_vert_black_24dp.png" />
     <AndroidResource Include="Resources\drawable\rectangle_level1.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\lightbulb.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\lightbulb.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\lightbulb.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\lightbulb.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\lightbulb.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\lightbulb.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">

@@ -12,6 +12,7 @@ namespace IRMGARD
 {
     public class HearMeAbcFragment : LessonFragment<HearMeAbc>
     {
+        ImageButton ibSpeakerABC;
         ImageButton ibSpeaker;
         GridView gridView;
 
@@ -21,6 +22,8 @@ namespace IRMGARD
         {
             // Prepare view
             var view = inflater.Inflate(Resource.Layout.HearMeAbc, container, false);
+            ibSpeakerABC = view.FindViewById<ImageButton>(Resource.Id.ibSpeakerABC);
+            ibSpeakerABC.Click += ((e, sender) => PlayABCSong());
             ibSpeaker = view.FindViewById<ImageButton>(Resource.Id.ibSpeaker);
             ibSpeaker.Click += ((e, sender) => PlayTaskDesc());
             gridView = view.FindViewById<GridView>(Resource.Id.gridview);
@@ -45,6 +48,13 @@ namespace IRMGARD
             }
 
             FireUserInteracted(true);
+        }
+
+        void PlayABCSong()
+        {
+            if (SoundPlayer.IsPlaying)
+                SoundPlayer.Stop();
+            SoundPlayer.PlaySound(Activity.BaseContext, Lesson.SoundPathABC);
         }
 
         void PlayTaskDesc()

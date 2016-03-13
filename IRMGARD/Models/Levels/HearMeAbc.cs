@@ -5,11 +5,14 @@ namespace IRMGARD.Models
 {
     public class HearMeAbc : Lesson
     {
+        public string SoundPathABC { get; set; }
+
         public HearMeAbc() { }
 
-        public HearMeAbc(int id, string title, bool isRecurringTask, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations)
+        public HearMeAbc(int id, string title, bool isRecurringTask, string soundPath, string soundPathABC, string hint, LevelType typeOfLevel, List<Iteration> iterations)
             : base (id, title, isRecurringTask, soundPath, hint, typeOfLevel, iterations)
         {
+            SoundPathABC = soundPathABC;
         }
     }
 
