@@ -4,7 +4,7 @@
     android:shape="oval">
 
     <solid
-        android:color="@color/irmgard_red_dark" />
+        android:color="@color/level1" />
     <size
         android:height="30dp"
         android:width="30dp" />

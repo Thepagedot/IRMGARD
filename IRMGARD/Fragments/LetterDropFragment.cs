@@ -123,9 +123,8 @@ namespace IRMGARD
                 var view = taskItemAdapter.GetView(i, null, null);
 
                 // Use different text size
-                var tvLetter = view.FindViewById<TextView>(Resource.Id.letter);
-                letterTextSize = 32f;
-                tvLetter.TextSize = letterTextSize;
+                var letter = view.FindViewById<TextView>(Resource.Id.letter);
+                letterTextSize = letter.TextSize / Resources.DisplayMetrics.ScaledDensity;
 
                 // Define searched letters as drop zone
                 if (taskItems.ElementAt(i).IsSearched)
@@ -151,7 +150,7 @@ namespace IRMGARD
             {
                 var firstChild = llTaskItems.GetChildAt(0);
                 var lastChild = llTaskItems.GetChildAt(llTaskItems.ChildCount - 1);
-                if (lastChild.Height > firstChild.Height)
+                if (lastChild.Height > firstChild.Height || lastChild.Width < firstChild.Width / 2)
                 {
                     letterTextSize -= 2f;
                     for (int i = 0; i < llTaskItems.ChildCount; i++)

@@ -25,6 +25,7 @@
                 card_view:cardUseCompatPadding="true"
                 card_view:cardCornerRadius="4dp"
                 card_view:contentPadding="10dp"
+                card_view:cardElevation="0dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
@@ -40,6 +41,7 @@
                 card_view:cardUseCompatPadding="true"
                 card_view:cardCornerRadius="4dp"
                 card_view:contentPadding="10dp"
+                card_view:cardElevation="0dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
@@ -64,6 +66,7 @@
                 card_view:cardUseCompatPadding="true"
                 card_view:cardCornerRadius="4dp"
                 card_view:contentPadding="10dp"
+                card_view:cardElevation="0dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1">
@@ -79,6 +82,7 @@
                 card_view:cardUseCompatPadding="true"
                 card_view:cardCornerRadius="4dp"
                 card_view:contentPadding="10dp"
+                card_view:cardElevation="0dp"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_weight="1">

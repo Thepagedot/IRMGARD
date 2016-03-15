@@ -18,8 +18,11 @@ namespace IRMGARD
         LinearLayout llSoundItems;
         FlowLayout flLetters;
         ImageView ivImagePopup;
+        ImageView ivDivider;
 
+        List<Iteration> iterationsLoaded;
         SyllablesToLearn currentSyllablesToLearn;
+        bool imagePopupAlreadyShown;
 
         public BuildSyllableFragment(Lesson lesson) : base(lesson) {}
 
@@ -31,6 +34,20 @@ namespace IRMGARD
             llSoundItems = view.FindViewById<LinearLayout>(Resource.Id.llSoundItems);
             flLetters = view.FindViewById<FlowLayout> (Resource.Id.flLetters);
             ivImagePopup = view.FindViewById<ImageView>(Resource.Id.ivImagePopup);
+            ivDivider = view.FindViewById<ImageView>(Resource.Id.ivDivider);
+
+            // Backup iterations loaded
+            iterationsLoaded = Lesson.Iterations;
+
+            // Only for lesson 9
+            if (((BuildSyllableIteration) DataHolder.Current.CurrentLesson.Iterations.FirstOrDefault()).SyllablePool.FirstOrDefault().Syllables.Count > 1)
+            {
+                // Pick 5 random iterations for this game
+                List<Iteration> l = (List<Iteration>) Lesson.Iterations.PickRandomItems(5);
+                DataHolder.Current.CurrentLesson.Iterations = l;
+                Lesson.Iterations = l;
+                FireProgressListRefreshRequested(Lesson);
+            }
 
             // Initialize iteration
             InitIteration();
@@ -123,7 +140,7 @@ namespace IRMGARD
                     view.Drag += View_Drag;
 
                     view.FindViewById<TextView>(Resource.Id.letter).SetTextColor(Resources.GetColor(
-                        (i % 2 == 0) ? Resource.Color.irmgard_red_dark : Resource.Color.irmgard_red));
+                        (i % 2 == 0) ? Resource.Color.level1 : Resource.Color.green));
 
                     // Add letter to view
                     llTaskItems.AddView(view);
@@ -170,7 +187,6 @@ namespace IRMGARD
                 view.FindViewById<ImageButton>(Resource.Id.ibSpeaker).Click += (sender, e) => ImageButton_Click(sender, e, index);
                 llSoundItems.AddView(view);
             }
-
         }
 
         void View_Drag (object sender, View.DragEventArgs e)
@@ -233,22 +249,15 @@ namespace IRMGARD
 
                         FireUserInteracted(isReady);
                         BuildTaskLetters(taskItems);
-
-                        if (currentSyllablesToLearn.Media != null && isReady && IsSuccess())
-                        {
-                            if (SoundPlayer.IsPlaying)
-                                SoundPlayer.Stop();
-                            SoundPlayer.PlaySound(Activity.BaseContext, currentSyllablesToLearn.Media.SoundPath);
-                            ivImagePopup.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(1, Activity.BaseContext, currentSyllablesToLearn.Media.ImagePath));
-                            var animation = AnimationUtils.LoadAnimation(Activity.BaseContext, Resource.Animation.ShowPicturePopup);
-                            animation.AnimationEnd += (s, args) => ivImagePopup.Visibility = ViewStates.Gone;
-                            ivImagePopup.Visibility = ViewStates.Visible;
-                            ivImagePopup.StartAnimation(animation);
-                        }
                     }
 
                     break;
             }
+        }
+
+        void ImagePopup_Click (object sender, EventArgs e)
+        {
+            SoundPlayer.PlaySound(Activity.BaseContext, currentSyllablesToLearn.Media.SoundPath);
         }
 
         bool IsSuccess()
@@ -271,7 +280,43 @@ namespace IRMGARD
 
         public override void CheckSolution()
         {
-            FinishIteration(IsSuccess());
+            if (IsSuccess() && currentSyllablesToLearn.Media != null && !imagePopupAlreadyShown)
+            {
+                // Hide views
+                ivDivider.Visibility = ViewStates.Gone;
+                flLetters.Visibility = ViewStates.Gone;
+
+                // Show image
+                ivImagePopup.SetImageBitmap(BitmapLoader.Instance.LoadBitmap(1, Activity.BaseContext, currentSyllablesToLearn.Media.ImagePath));
+                ivImagePopup.Visibility = ViewStates.Visible;
+                ivImagePopup.Click += ImagePopup_Click;
+
+                // Play sound
+                SoundPlayer.PlaySound(Activity.BaseContext, currentSyllablesToLearn.Media.SoundPath);
+
+                imagePopupAlreadyShown = true;
+                FireUserInteracted(true);
+            }
+            else
+            {
+                // Reset resources for next iteration
+                imagePopupAlreadyShown = false;
+                ivImagePopup.Click -= ImagePopup_Click;
+                ivImagePopup.Visibility = ViewStates.Gone;
+                flLetters.Visibility = ViewStates.Visible;
+                ivDivider.Visibility = ViewStates.Visible;
+
+                FinishIteration(IsSuccess());
+            }
+        }
+
+
+        public override void OnDestroy()
+        {
+            base.OnDestroy();
+
+            // Restore iterations loaded
+            Lesson.Iterations = iterationsLoaded;
         }
     }
 }

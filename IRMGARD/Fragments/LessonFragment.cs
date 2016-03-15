@@ -26,7 +26,7 @@ namespace IRMGARD
         /// Occurs when a Lesson has finished all its iterations
         /// </summary>
         public event LessonFinishedEventHandler LessonFinished;
-        public delegate void LessonFinishedEventHandler(object sender, EventArgs e);
+        public delegate void LessonFinishedEventHandler(object sender, LessonFinishedEventArgs e);
 
         /// <summary>
         /// Occurs when a user interacted with the fragment
@@ -34,10 +34,16 @@ namespace IRMGARD
         public event UserInteractedEventHandler UserInteracted;
         public delegate void UserInteractedEventHandler(object sender, UserInteractedEventArgs e);
 
-        protected void FireIterationFinished(Iteration iteration, bool success, bool showAnimation)
+        /// <summary>
+        /// Occurs when a refresh of progress list items is required
+        /// </summary>
+        public event ProgressListRefreshRequestedEventHandler ProgressListRefreshRequested;
+        public delegate void ProgressListRefreshRequestedEventHandler(object sender, ProgressListRefreshRequestedEventArgs e);
+
+        protected void FireIterationFinished(Iteration iteration, bool success, bool provideFeedback)
         {
             if (IterationFinished != null)
-                IterationFinished(this, new IterationFinishedEventArgs(iteration, success, showAnimation));
+                IterationFinished(this, new IterationFinishedEventArgs(iteration, success, provideFeedback));
         }
 
         protected void FireIterationChanged(Iteration iteration)
@@ -46,10 +52,10 @@ namespace IRMGARD
                 IterationChanged(this, new IterationChangedEventArgs(iteration));
         }
 
-        protected void FireLessonFinished()
+        protected void FireLessonFinished(bool provideFeedback)
         {
             if (LessonFinished != null)
-                LessonFinished(this, null);
+                LessonFinished(this, new LessonFinishedEventArgs(provideFeedback));
         }
 
         /// <summary>
@@ -60,6 +66,12 @@ namespace IRMGARD
         {
             if (UserInteracted != null)
                 UserInteracted(this, new UserInteractedEventArgs(isReady));
+        }
+
+        protected void FireProgressListRefreshRequested(Lesson lesson)
+        {
+            if (ProgressListRefreshRequested != null)
+                ProgressListRefreshRequested(this, new ProgressListRefreshRequestedEventArgs(lesson));
         }
 
         public abstract void CheckSolution();
@@ -97,7 +109,7 @@ namespace IRMGARD
         /// <summary>
         /// Finishes the iteration and initiates the next one when available or finishes the Lesson.
         /// </summary>
-        protected void FinishIteration(bool success, bool showAnimation)
+        protected void FinishIteration(bool success, bool provideFeedback)
         {
             if (SoundPlayer.IsPlaying)
                 SoundPlayer.Stop();
@@ -105,12 +117,12 @@ namespace IRMGARD
             var iteration = Lesson.Iterations.ElementAt(currentIterationIndex);
             iteration.Status = success ? IterationStatus.Success : IterationStatus.Failed;
 
-            FireIterationFinished(iteration, success, showAnimation);
+            FireIterationFinished(iteration, success, provideFeedback);
 
             if (currentIterationIndex == Lesson.Iterations.Count - 1)
             {
                 // All iterations done. Finish Lesson
-                FireLessonFinished();
+                FireLessonFinished(provideFeedback);
             }
             else
             {
@@ -145,17 +157,27 @@ namespace IRMGARD
         }
     }
 
+    public class LessonFinishedEventArgs : EventArgs
+    {
+        public bool ProvideFeedback { get; set; }
+
+        public LessonFinishedEventArgs(bool provideFeedback) : base()
+        {
+            this.ProvideFeedback = provideFeedback;
+        }
+    }
+
     public class IterationFinishedEventArgs : EventArgs
     {
         public Iteration Iteration { get; set; }
         public bool Success { get; set; }
-        public bool ShowAnimation { get; set; }
+        public bool ProvideFeedback { get; set; }
 
-        public IterationFinishedEventArgs(Iteration iteration, bool success, bool showAnimation) : base()
+        public IterationFinishedEventArgs(Iteration iteration, bool success, bool provideFeedback) : base()
         {
             this.Iteration = iteration;
             this.Success = success;
-            this.ShowAnimation = showAnimation;
+            this.ProvideFeedback = provideFeedback;
         }
     }
 
@@ -166,6 +188,16 @@ namespace IRMGARD
         public UserInteractedEventArgs(bool isReady) : base()
         {
             this.IsReady = isReady;
+        }
+    }
+
+    public class ProgressListRefreshRequestedEventArgs : EventArgs
+    {
+        public Lesson Lesson { get; set; }
+
+        public ProgressListRefreshRequestedEventArgs(Lesson lesson) : base()
+        {
+            this.Lesson = lesson;
         }
     }
 }

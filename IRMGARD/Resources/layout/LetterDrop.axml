@@ -8,8 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <FrameLayout
-            style="@style/result_zone"
-            android:padding="4dp">
+            style="@style/result_zone">
             <LinearLayout
                 android:id="@+id/llTaskItems"
                 android:layout_width="wrap_content"
@@ -21,6 +20,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </FrameLayout>
+        <ImageView
+            android:src="@drawable/divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="false"
+            android:layout_marginBottom="@dimen/activity_vertical_margin" />
         <IRMGARD.FlowLayout
             android:id="@+id/flLetters"
             android:layout_width="wrap_content"

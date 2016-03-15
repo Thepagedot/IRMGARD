@@ -28,6 +28,8 @@ namespace IRMGARD
 		private const string lessonFragmentTag = "current-Lesson-fragment";
 
 		IMenu topMenu;
+        ImageView ivGoBack;
+        ImageView ivGoFwd;
         FloatingActionButton btnNext;
         TextView txtCapitalAlphabet;
         TextView txtLowerAlphabet;
@@ -35,7 +37,7 @@ namespace IRMGARD
         RecyclerView rvProgress;
         List<Progress> progressList;
         LessonFragment currentFragment;
-        ImageView ivSuccess;
+        ImageView ivBadge;
         ImageView ivIrmgard;
 
         List<string> praiseFilesAvail;
@@ -46,6 +48,7 @@ namespace IRMGARD
 
 		protected override void OnCreate (Bundle bundle)
 		{
+            ApplyLevelColors();
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.LessonFrame);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
@@ -54,25 +57,30 @@ namespace IRMGARD
             progressList = new List<Progress>();
             this.CompatMode();
 
+            ivGoBack = FindViewById<ImageView>(Resource.Id.ivGoBack);
+            ivGoBack.Click += ((sender, e) => PreviousLesson());
+            ivGoFwd = FindViewById<ImageView>(Resource.Id.ivGoFwd);
+            ivGoFwd.Click += ((sender, e) => NextLesson(true, false));
             btnNext = FindViewById<FloatingActionButton>(Resource.Id.btnNext);
             btnNext.Click += BtnNext_Click;
+
             rvProgress = FindViewById<RecyclerView>(Resource.Id.rvProgress);
             rvProgress.SetLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.Horizontal, false));
-            rvProgress.SetAdapter(new ProgressAdapter(progressList));
+            rvProgress.SetAdapter(new ProgressAdapter(progressList,
+                Color.ParseColor(DataHolder.Current.CurrentModule.Color),
+                Resources.DisplayMetrics.Density));
 			txtCapitalAlphabet = FindViewById<TextView>(Resource.Id.txtCapitalAlphabet);
 			txtLowerAlphabet = FindViewById<TextView>(Resource.Id.txtLowerAlphabet);
 			fragmentContainer = FindViewById<FrameLayout> (Resource.Id.fragmentContainer);
-            ivSuccess = FindViewById<ImageView>(Resource.Id.ivSuccess);
+            ivBadge = FindViewById<ImageView>(Resource.Id.ivBadge);
             ivIrmgard = FindViewById<ImageView>(Resource.Id.ivIrmgard);
             ivIrmgard.Click += (s, e) => PlayOrStopInstruction();
 
             // Initially hide success image
-            ivSuccess.Visibility = ViewStates.Gone;
+            ivBadge.Visibility = ViewStates.Gone;
 
-            praiseFilesAvail = Assets.List(Path.Combine(Common.AssetSoundDir, Common.AssetPraiseDir))
-                .Select(s => Path.Combine(Common.AssetPraiseDir, s)).ToList();
-            criticismFilesAvail = Assets.List(Path.Combine(Common.AssetSoundDir, Common.AssetCriticismDir))
-                .Select(s => Path.Combine(Common.AssetCriticismDir, s)).ToList();
+            praiseFilesAvail = Assets.List(Path.Combine(Common.AssetSoundDir, Common.AssetPraiseDir)).Select(s => Path.Combine(Common.AssetPraiseDir, s)).ToList();
+            criticismFilesAvail = Assets.List(Path.Combine(Common.AssetSoundDir, Common.AssetCriticismDir)).Select(s => Path.Combine(Common.AssetCriticismDir, s)).ToList();
         }
 
 		protected override void OnStart()
@@ -111,12 +119,7 @@ namespace IRMGARD
             //hintButton.SetVisible(!string.IsNullOrEmpty(Lesson.Hint));
 
             // Progress
-            progressList.Clear();
-            for (var i = 0; i < lesson.Iterations.Count; i++)
-                progressList.Add(new Progress(lesson.Iterations[i].Status)); // Set iteration's status to the same as progess's staus
-            progressList[0].IsCurrent = true;
-
-            rvProgress.GetAdapter().NotifyDataSetChanged();
+            ProgressListRefresh(lesson);
 
             // ----------------------------------------------------------------------
             // Load Lesson fragment
@@ -127,7 +130,8 @@ namespace IRMGARD
             currentFragment = CreateFragmentForLesson(DataHolder.Current.CurrentLesson);
             if (currentFragment != null)
             {
-                // Handle finished events
+                // Handle LessonFragment events
+                currentFragment.ProgressListRefreshRequested += LessonFragment_ProgressListRefreshRequested;
                 currentFragment.LessonFinished += LessonFragment_LessonFinished;
                 currentFragment.IterationFinished += Fragment_IterationFinished;
                 currentFragment.IterationChanged += Fragment_IterationChanged;
@@ -149,6 +153,7 @@ namespace IRMGARD
             }
 
             // Play instruction
+            SoundPlayer.Stop();
             bool waitForCompletion = false;
             if (DataHolder.Current.CurrentLesson.IsRecurringTask)
             {
@@ -162,11 +167,27 @@ namespace IRMGARD
             SoundPlayer.PlaySound(this, waitForCompletion, DataHolder.Current.CurrentLesson.SoundPath);
         }
 
+        private void ProgressListRefresh(Lesson lesson)
+        {
+            progressList.Clear();
+            for (var i = 0; i < lesson.Iterations.Count; i++)
+                progressList.Add(new Progress(lesson.Iterations[i].Status)); // Set iteration's status to the same as progess's staus
+            progressList[0].IsCurrent = true;
+
+            rvProgress.GetAdapter().NotifyDataSetChanged();
+        }
+
+        private void LessonFragment_ProgressListRefreshRequested(object sender, ProgressListRefreshRequestedEventArgs e)
+        {
+            ProgressListRefresh(e.Lesson);
+        }
+
         private void CurrentFragment_UserInteracted (object sender, UserInteractedEventArgs e)
         {
             if (e.IsReady)
             {
                 btnNext.Enabled = true;
+                btnNext.Clickable = true;
                 btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.ShowNextButton));
             }
 		}
@@ -180,6 +201,7 @@ namespace IRMGARD
             rvProgress.GetAdapter().NotifyItemChanged(iterationIndex);
 
             // Disable check button
+            btnNext.Clickable = false;
             btnNext.Enabled = false;
             btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.HideNextButton));
 
@@ -202,17 +224,17 @@ namespace IRMGARD
             rvProgress.GetAdapter().NotifyItemChanged(iterationIndex);
 
             // Show success animation
-            if (e.ShowAnimation)
+            if (e.ProvideFeedback)
             {
                 if (e.Success)
-                    ivSuccess.SetImageResource(Resource.Drawable.irmgard_icon_spiel_supergemacht);
+                    ivBadge.SetImageResource(Resource.Drawable.ic_irmgard_icon_spiel_richtig_neu);
                 else
-                    ivSuccess.SetImageResource(Resource.Drawable.irmgard_icon_spiel_nochmal);
+                    ivBadge.SetImageResource(Resource.Drawable.ic_irmgard_icon_spiel_falsch);
 
                 var animation = AnimationUtils.LoadAnimation(this, Resource.Animation.ShowFeedbackIcon);
-                animation.AnimationEnd += (s, args) => ivSuccess.Visibility = ViewStates.Gone;
-                ivSuccess.Visibility = ViewStates.Visible;
-                ivSuccess.StartAnimation(animation);
+                animation.AnimationEnd += (s, args) => ivBadge.Visibility = ViewStates.Gone;
+                ivBadge.Visibility = ViewStates.Visible;
+                ivBadge.StartAnimation(animation);
             }
 
             // Stop Player
@@ -227,17 +249,19 @@ namespace IRMGARD
 		/// </summary>
 		/// <param name="sender">sender.</param>
 		/// <param name="e">event args.</param>
-        async void LessonFragment_LessonFinished(object sender, EventArgs e)
+        async void LessonFragment_LessonFinished(object sender, LessonFinishedEventArgs e)
 		{
             if (SoundPlayer.IsPlaying)
                 SoundPlayer.Stop();
 
-            // Play random praise or criticism audio depending on lesson success status excluding lesson HearMe
-            if (!DataHolder.Current.CurrentLesson.TypeOfLevel.Equals(LevelType.HearMe))
+            var success = DataHolder.Current.CurrentLesson.Iterations.All(i => i.Status == IterationStatus.Success);
+
+            // Play random praise or criticism audio depending on lesson success status
+            if (e.ProvideFeedback)
             {
                 isPlayingPraiseOrCriticism = true;
                 SoundPlayer.PlaySound(this,
-                    DataHolder.Current.CurrentLesson.Iterations.All(i => i.Status == IterationStatus.Success)
+                    success
                     ? praiseFilesAvail.PickRandomItems(1).FirstOrDefault()
                     : criticismFilesAvail.PickRandomItems(1).FirstOrDefault());
             }
@@ -247,7 +271,7 @@ namespace IRMGARD
             }
             isPlayingPraiseOrCriticism = false;
 
-            NextLesson();
+            NextLesson(success, e.ProvideFeedback);
 		}
 
 		/// <summary>
@@ -294,6 +318,12 @@ namespace IRMGARD
             }
             else
             {
+                // Diable button to prevent double click
+                btnNext.Enabled = false;
+                btnNext.Clickable = false;
+                btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.HideNextButton));
+
+                // Check soution
                 currentFragment.CheckSolution();
             }
         }
@@ -301,9 +331,7 @@ namespace IRMGARD
 		public override bool OnCreateOptionsMenu (IMenu menu)
 		{
             topMenu = menu;
-            MenuInflater.Inflate(Env.Debug
-                ? Resource.Menu.levelFrame_menu_debug
-                : Resource.Menu.levelFrame_menu, topMenu);
+            MenuInflater.Inflate(Resource.Menu.levelFrame_menu, topMenu);
             CheckHintButton();
 
 			return base.OnCreateOptionsMenu (menu);
@@ -328,12 +356,6 @@ namespace IRMGARD
                         SoundPlayer.PlaySound(this, DataHolder.Current.CurrentLesson.Hint);
                     }
 					break;
-				case Resource.Id.btnNextLesson:
-					NextLesson();
-					break;
-				case Resource.Id.btnPreviousLesson:
-					PreviousLesson();
-					break;
 			}
 
 			return base.OnOptionsItemSelected (item);
@@ -356,35 +378,55 @@ namespace IRMGARD
         /// <summary>
         /// Switches to the next Lesson if available
         /// </summary>
-        private void NextLesson()
+        private void NextLesson(bool success, bool showFeedbackBadge = true)
 		{
-            // TODO: Check success
-            var success = false;
+            if (success)
+                ivBadge.SetImageResource(Resource.Drawable.irmgard_icon_spiel_supergemacht);
+            else
+                ivBadge.SetImageResource(Resource.Drawable.irmgard_icon_spiel_nochmal);
 
             // Out Animation
             var outAnimation = AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeOutLeft);
             outAnimation.AnimationEnd += (s, args) =>
             {
-                // Show success or failure badge
-                // regarding to success variable
-
-                var nextLesson = DataHolder.Current.CurrentModule.GetNextLesson(DataHolder.Current.CurrentLesson);
-                if (nextLesson != null)
+                if (!showFeedbackBadge)
                 {
-                    DataHolder.Current.CurrentLesson = nextLesson;
-                    DataHolder.Current.CurrentIteration = nextLesson.Iterations.First();
-                    InitLesson();
+                    Next();
+                    fragmentContainer.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeInRight));
                 }
                 else
                 {
-                    Finish();
-                }
+                    // Show success or failure badge
+                    var badgeAnimation = AnimationUtils.LoadAnimation(this, Resource.Animation.ShowFeedbackIcon);
+                    badgeAnimation.AnimationEnd += (s2, args2) =>
+                    {
+                        ivBadge.Visibility = ViewStates.Gone;
+                        Next();
+                        fragmentContainer.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeInRight));
+                    };
 
-                fragmentContainer.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeInRight));
+                    ivBadge.Visibility = ViewStates.Visible;
+                    ivBadge.StartAnimation(badgeAnimation);
+                }
             };
 
             fragmentContainer.StartAnimation(outAnimation);
 		}
+
+        private void Next()
+        {
+            var nextLesson = DataHolder.Current.CurrentModule.GetNextLesson(DataHolder.Current.CurrentLesson);
+            if (nextLesson != null)
+            {
+                DataHolder.Current.CurrentLesson = nextLesson;
+                DataHolder.Current.CurrentIteration = nextLesson.Iterations.First();
+                InitLesson();
+            }
+            else
+            {
+                Finish();
+            }
+        }
 
         /// <summary>
         /// Swtiches to the previous Lesson if available.
@@ -418,14 +460,28 @@ namespace IRMGARD
             if (markedLetters == null)
                 return new SpannableString(alphabet);
 
+            var levelColor = Color.ParseColor(DataHolder.Current.CurrentLevel.Color);
             var spannable = new SpannableString(alphabet);
             foreach (var letter in markedLetters)
             {
                 var index = Alphabet.Letters.IndexOf(letter.ToUpper());
-                spannable.SetSpan(new ForegroundColorSpan(Android.Graphics.Color.Red), index, index + 1, SpanTypes.ExclusiveExclusive);
+                spannable.SetSpan(new ForegroundColorSpan(levelColor), index, index + 1, SpanTypes.ExclusiveExclusive);
             }
 
             return spannable;
+        }
+
+        private void ApplyLevelColors()
+        {
+            var levelNumber = DataHolder.Current.Levels.IndexOf(DataHolder.Current.CurrentLevel) + 1;
+            switch (levelNumber)
+            {
+                case 1:
+                    Theme.ApplyStyle(Resource.Style.Level1Colors, true);
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void CheckHintButton()

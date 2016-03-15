@@ -80,6 +80,12 @@ namespace IRMGARD
 				Toast.MakeText(context, context.GetString(Resource.String.error_soundfileNotFound), ToastLength.Short);
 				System.Console.WriteLine("Error: Soundfile '" + fileName + "' could not be found.");
 			}
+            catch (Java.Lang.IllegalStateException)
+            {
+                System.Console.WriteLine("Error: Player is in an invalid state - trying to play '" + fileName + "'");
+                player.Stop();
+                player.Reset();
+            }
 		}
 
         /// <summary>
@@ -87,6 +93,7 @@ namespace IRMGARD
         /// </summary>
         public static void Stop()
         {
+            waitForCompletionActive = false;
             if (player.IsPlaying)
             {
                 player.Stop();

@@ -4,6 +4,7 @@
     android:id="@+id/cardView"
     card_view:cardUseCompatPadding="true"
     card_view:cardCornerRadius="4dp"
+    card_view:cardElevation="0dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content">
     <LinearLayout

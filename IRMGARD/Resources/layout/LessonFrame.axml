@@ -1,39 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:minWidth="25px"
     android:minHeight="25px">
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
-    <LinearLayout
+    <RelativeLayout
         android:id="@+id/llHeader"
-        android:layout_below="@id/toolbar"
         android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/toolbar">
         <ImageView
             android:src="@drawable/irmgard_picture"
             android:layout_width="wrap_content"
-            android:layout_height="60dip"
+            android:layout_height="wrap_content"
             android:id="@+id/ivIrmgard"
             android:layout_gravity="start"
             android:scaleType="fitStart"
-            android:adjustViewBounds="true" />
+            android:adjustViewBounds="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true" />
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rvProgress"
             android:scrollbars="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="fill_parent"
-            android:paddingLeft="@dimen/margin_default" />
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/margin_default"
+            android:layout_toRightOf="@id/ivIrmgard" />
+        <RelativeLayout
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:paddingRight="@dimen/margin_default"
+            android:layout_centerInParent="true"
+            android:layout_alignParentRight="true">
+            <ImageView
+                android:id="@+id/ivGoBack"
+                android:src="@drawable/ic_skip_previous_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true" />
+            <ImageView
+                android:id="@+id/ivGoFwd"
+                android:src="@drawable/ic_skip_next_black_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+        </RelativeLayout>
+    </RelativeLayout>
     <RelativeLayout
         android:id="@+id/fragmentFrame"
-        android:layout_below="@id/llHeader"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/llHeader"
         android:layout_above="@+id/llAlphabetContainer">
         <FrameLayout
             android:minWidth="25px"
@@ -48,7 +70,7 @@
             android:layout_height="match_parent"
             android:layout_marginBottom="@dimen/activity_horizontal_margin" />
         <ImageView
-            android:id="@+id/ivSuccess"
+            android:id="@+id/ivBadge"
             android:src="@drawable/irmgard_icon_spiel_supergemacht"
             android:layout_width="150dip"
             android:layout_height="150dip"
@@ -60,10 +82,10 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:src="@drawable/ic_arrow_forward_white_24dp"
-        android:layout_alignBottom="@id/fragmentFrame"
         android:layout_marginBottom="-16dp"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="@dimen/activity_horizontal_margin" />
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_alignBottom="@id/fragmentFrame"
+        android:layout_alignParentRight="true" />
     <LinearLayout
         android:orientation="vertical"
         android:minWidth="25px"
@@ -71,17 +93,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@id/llAlphabetContainer"
-        android:layout_alignParentBottom="true"
-        android:padding="@dimen/activity_horizontal_margin">
+        android:padding="@dimen/activity_horizontal_margin"
+        android:layout_alignParentBottom="true">
         <TextView
             android:id="@+id/txtCapitalAlphabet"
             android:text="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:textColor="@color/light_gray"
+            android:letterSpacing="0.1"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/txtLowerAlphabet"
             android:text="abcdefghijklmnopqrstuvwxyz"
+            android:textColor="@color/light_gray"
+            android:letterSpacing="0.24"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />

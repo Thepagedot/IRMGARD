@@ -17,8 +17,8 @@ namespace IRMGARD
             if (Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop) 
             {
                 // Set status bar color
-                activity.Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
-                activity.Window.SetStatusBarColor(activity.Resources.GetColor(Resource.Color.irmgard_red_dark));
+                //activity.Window.AddFlags(WindowManagerFlags.DrawsSystemBarBackgrounds);
+                //activity.Window.SetStatusBarColor(activity.Resources.GetColor(Resource.Color.irmgard_red_dark));
             }
         }
     }

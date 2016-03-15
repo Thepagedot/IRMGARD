@@ -1,6 +1,6 @@
 {
   "Name": "Level 1",
-  "Color": "#DEB803",
+  "Color": "#BE6E66",
   "IsEnabled": true,
   "IsCompleted": false,
   "VideoPath": "Videos/Handy_Level1_720p.mp4",
@@ -2197,7 +2197,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_lang.mp3"
+                      "SoundPath": "Syllables/LMNRS/se_kurz.mp3"
                     }
                   ]
                 }
@@ -2265,7 +2265,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_lang.mp3"
+                      "SoundPath": "Syllables/LMNRS/se_kurz.mp3"
                     }
                   ]
                 }
@@ -3791,7 +3791,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_lang.mp3"
+                      "SoundPath": "Syllables/LMNRS/se_kurz.mp3"
                     }
                   ]
                 }
@@ -3859,7 +3859,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_lang.mp3"
+                      "SoundPath": "Syllables/LMNRS/se_kurz.mp3"
                     }
                   ]
                 }
@@ -3927,7 +3927,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/le_lang.mp3"
+                      "SoundPath": "Syllables/LMNRS/le_kurz.mp3"
                     }
                   ]
                 }
@@ -3995,7 +3995,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ne_lang.mp3"
+                      "SoundPath": "Syllables/LMNRS/ne_kurz.mp3"
                     }
                   ]
                 }
@@ -5843,7 +5843,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/me_lang.mp3"
+                      "SoundPath": "Syllables/LMNRS/me_kurz.mp3"
                     }
                   ]
                 }
@@ -5981,7 +5981,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/de_lang.mp3"
+                      "SoundPath": "Syllables/BDGKPT/de_kurz.mp3"
                     }
                   ]
                 }
@@ -6119,7 +6119,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/te_lang.mp3"
+                      "SoundPath": "Syllables/BDGKPT/te_kurz.mp3"
                     }
                   ]
                 }
@@ -6395,7 +6395,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_lang.mp3"
+                      "SoundPath": "Syllables/LMNRS/se_kurz.mp3"
                     }
                   ]
                 }
@@ -6603,7 +6603,7 @@
         {
           "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
           "Id": 155,
-          "Title": "Vorne, Mitte oder hinten?",
+          "Title": "Wo?",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 5 Aufgabe 5.mp3",
           "Hint": "Hints/21_extra_Tip_wenn_etwas_nicht_auf_anhieb_klappt_nicht_verzagen.mp3",
@@ -6738,6 +6738,7 @@
           "Id": 161,
           "Title": "Von A-Z",
           "SoundPath": "Level-1/Level 1 Modul 6 Aufgabe 1.mp3",
+          "SoundPathABC": "Tasks/6-1/ABC_Song.mp3",
           "Hint": "Hints/19_extra_Tip_wenn_du_bishierhin_alle_aufgaben_geloest_hast_kannst_du_stolz_auf_dich_sein.mp3",
           "TypeOfLevel": "HearMeAbc",
           "Iterations": [
@@ -6751,39 +6752,39 @@
                 "D",
                 "E"
               ],
-              "SoundPath": "Tasks/6-1/ABCDE.mp3",
+              "SoundPath": "Tasks/6-1/A-E.mp3",
               "Letters": [
                 {
                   "Letter": "A",
                   "Media": {
-                    "SoundPath": "Letters/AAal.mp3"
+                    "SoundPath": "Alphabet/A.mp3"
                   }
                 },
                 {
                   "Letter": "B",
                   "Append": "e",
                   "Media": {
-                    "SoundPath": "Letters/BBoot.mp3"
+                    "SoundPath": "Alphabet/B.mp3"
                   }
                 },
                 {
                   "Letter": "C",
                   "Append": "e",
                   "Media": {
-                    "SoundPath": "Letters/CClown.mp3"
+                    "SoundPath": "Alphabet/C.mp3"
                   }
                 },
                 {
                   "Letter": "D",
                   "Append": "e",
                   "Media": {
-                    "SoundPath": "Letters/DDusche.mp3"
+                    "SoundPath": "Alphabet/D.mp3"
                   }
                 },
                 {
                   "Letter": "E",
                   "Media": {
-                    "SoundPath": "Letters/EElefant.mp3"
+                    "SoundPath": "Alphabet/E.mp3"
                   }
                 }
               ]
@@ -6798,40 +6799,40 @@
                 "I",
                 "J"
               ],
-              "SoundPath": "Tasks/6-1/FGHIJ.mp3",
+              "SoundPath": "Tasks/6-1/F-J.mp3",
               "Letters": [
                 {
                   "Prepend": "e",
                   "Letter": "F",
                   "Media": {
-                    "SoundPath": "Letters/FFisch.mp3"
+                    "SoundPath": "Alphabet/F.mp3"
                   }
                 },
                 {
                   "Letter": "G",
                   "Append": "e",
                   "Media": {
-                    "SoundPath": "Letters/GGabel.mp3"
+                    "SoundPath": "Alphabet/G.mp3"
                   }
                 },
                 {
                   "Letter": "H",
                   "Append": "a",
                   "Media": {
-                    "SoundPath": "Letters/HHose.mp3"
+                    "SoundPath": "Alphabet/H.mp3"
                   }
                 },
                 {
                   "Letter": "I",
                   "Media": {
-                    "SoundPath": "Letters/IIgel.mp3"
+                    "SoundPath": "Alphabet/I.mp3"
                   }
                 },
                 {
                   "Letter": "J",
                   "Append": "ott",
                   "Media": {
-                    "SoundPath": "Letters/JJacke.mp3"
+                    "SoundPath": "Alphabet/J.mp3"
                   }
                 }
               ]
@@ -6846,40 +6847,40 @@
                 "N",
                 "O"
               ],
-              "SoundPath": "Tasks/6-1/KLMNO.mp3",
+              "SoundPath": "Tasks/6-1/K-O.mp3",
               "Letters": [
                 {
                   "Letter": "K",
                   "Append": "a",
                   "Media": {
-                    "SoundPath": "Letters/KKatze.mp3"
+                    "SoundPath": "Alphabet/K.mp3"
                   }
                 },
                 {
                   "Prepend": "e",
                   "Letter": "L",
                   "Media": {
-                    "SoundPath": "Letters/LLos.mp3"
+                    "SoundPath": "Alphabet/L.mp3"
                   }
                 },
                 {
                   "Prepend": "e",
                   "Letter": "M",
                   "Media": {
-                    "SoundPath": "Letters/MMond.mp3"
+                    "SoundPath": "Alphabet/M.mp3"
                   }
                 },
                 {
                   "Prepend": "e",
                   "Letter": "N",
                   "Media": {
-                    "SoundPath": "Letters/NNase.mp3"
+                    "SoundPath": "Alphabet/N.mp3"
                   }
                 },
                 {
                   "Letter": "O",
                   "Media": {
-                    "SoundPath": "Letters/OOfen.mp3"
+                    "SoundPath": "Alphabet/O.mp3"
                   }
                 }
               ]
@@ -6894,41 +6895,41 @@
                 "S",
                 "T"
               ],
-              "SoundPath": "Tasks/6-1/PQRST.mp3",
+              "SoundPath": "Tasks/6-1/P-T.mp3",
               "Letters": [
                 {
                   "Letter": "P",
                   "Append": "e",
                   "Media": {
-                    "SoundPath": "Letters/PPo.mp3"
+                    "SoundPath": "Alphabet/P.mp3"
                   }
                 },
                 {
                   "Letter": "Q",
                   "Append": "u",
                   "Media": {
-                    "SoundPath": "Letters/QQualle.mp3"
+                    "SoundPath": "Alphabet/Q.mp3"
                   }
                 },
                 {
                   "Prepend": "e",
                   "Letter": "R",
                   "Media": {
-                    "SoundPath": "Letters/RRegen.mp3"
+                    "SoundPath": "Alphabet/R.mp3"
                   }
                 },
                 {
                   "Prepend": "e",
                   "Letter": "S",
                   "Media": {
-                    "SoundPath": "Letters/SSonne.mp3"
+                    "SoundPath": "Alphabet/S.mp3"
                   }
                 },
                 {
                   "Letter": "T",
                   "Append": "e",
                   "Media": {
-                    "SoundPath": "Letters/TTomate.mp3"
+                    "SoundPath": "Alphabet/T.mp3"
                   }
                 }
               ]
@@ -6944,47 +6945,47 @@
                 "Y",
                 "Z"
               ],
-              "SoundPath": "Tasks/6-1/UVWXYZ.mp3",
+              "SoundPath": "Tasks/6-1/U-Z.mp3",
               "Letters": [
                 {
                   "Letter": "U",
                   "Media": {
-                    "SoundPath": "Letters/UUhu.mp3"
+                    "SoundPath": "Alphabet/U.mp3"
                   }
                 },
                 {
                   "Letter": "V",
                   "Append": "au",
                   "Media": {
-                    "SoundPath": "Letters/VVogel.mp3"
+                    "SoundPath": "Alphabet/V.mp3"
                   }
                 },
                 {
                   "Letter": "W",
                   "Append": "e",
                   "Media": {
-                    "SoundPath": "Letters/WWald.mp3"
+                    "SoundPath": "Alphabet/W.mp3"
                   }
                 },
                 {
                   "Prepend": "i",
                   "Letter": "X",
                   "Media": {
-                    "SoundPath": "Letters/XHexe.mp3"
+                    "SoundPath": "Alphabet/X.mp3"
                   }
                 },
                 {
                   "Letter": "Y",
                   "Append": "psilon",
                   "Media": {
-                    "SoundPath": "Letters/YBaby.mp3"
+                    "SoundPath": "Alphabet/Y.mp3"
                   }
                 },
                 {
                   "Letter": "Z",
                   "Append": "ett",
                   "Media": {
-                    "SoundPath": "Letters/ZZelt.mp3"
+                    "SoundPath": "Alphabet/Z.mp3"
                   }
                 }
               ]

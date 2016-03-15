@@ -1,28 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <menu
-  xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  android:id="@+id/topMenu">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topMenu">
 
-	<item android:id="@+id/btnVoiceInstruction"
-		  android:icon="@drawable/ic_hearing_white_24dp"
-		  android:title="@string/playVoiceInstruction"
-		  app:showAsAction="always" />
+    <item
+        android:id="@+id/btnHint"
+        android:icon="@drawable/ic_lightbulb_outline_black_24dp"
+        android:title="@string/hint"
+        app:showAsAction="always" />
 
-    <item android:id="@+id/btnHint"
-		  android:icon="@drawable/ic_lightbulb_outline_white_24dp"
-		  android:title="@string/hint"
-		android:showAsAction="always" />
-
-  <item
-    android:id="@+id/btnNextLesson"
-		android:icon="@drawable/ic_skip_next_black_24dp"
-    android:title="Weiter"
-    android:showAsAction="never"/>
-
-  <item
-    android:id="@+id/btnPreviousLesson"
-    android:icon="@drawable/ic_skip_previous_black_24dp"
-    android:title="Zurück"
-    android:showAsAction="never"/>
+    <item
+        android:id="@+id/btnVoiceInstruction"
+        android:icon="@drawable/ic_hearing_black_24dp"
+        android:title="@string/playVoiceInstruction"
+        app:showAsAction="always" />
 </menu>

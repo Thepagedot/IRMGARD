@@ -3,7 +3,7 @@
 <item android:top="-3dp" android:bottom="-3dp">
     <shape android:shape="rectangle">
         <solid android:color="#00000000" />
-        <stroke android:width="2dp" android:color="@color/irmgard_red"
+        <stroke android:width="2dp" android:color="@color/level1"
             android:dashWidth="2dp" android:dashGap="2dp" />
     </shape>
 </item>

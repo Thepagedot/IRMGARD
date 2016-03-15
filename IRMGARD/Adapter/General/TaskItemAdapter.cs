@@ -49,7 +49,7 @@ namespace IRMGARD
                         view.FindViewById<CardView>(Resource.Id.cardView).SetCardBackgroundColor(Color.White);
                         if (Env.LollipopSupport)
                         {
-                            view.FindViewById<CardView>(Resource.Id.cardView).Elevation = 8f;
+                            view.FindViewById<CardView>(Resource.Id.cardView).Elevation = 0;
                         }
                         view.FindViewById<RelativeLayout>(Resource.Id.llLayout).Background = null;
                         view.FindViewById<View>(Resource.Id.underscore).Visibility = ViewStates.Invisible;

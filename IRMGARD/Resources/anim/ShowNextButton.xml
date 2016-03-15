@@ -4,6 +4,6 @@
     android:fillEnabled="true"
     android:fillAfter="true">
     <translate
-        android:fromXDelta="200"
+        android:fromXDelta="500"
         android:duration="300" />
 </set>
