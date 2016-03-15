@@ -28,6 +28,8 @@ namespace IRMGARD
 		private const string lessonFragmentTag = "current-Lesson-fragment";
 
 		IMenu topMenu;
+        ImageView ivGoBack;
+        ImageView ivGoFwd;
         FloatingActionButton btnNext;
         TextView txtCapitalAlphabet;
         TextView txtLowerAlphabet;
@@ -55,8 +57,13 @@ namespace IRMGARD
             progressList = new List<Progress>();
             this.CompatMode();
 
+            ivGoBack = FindViewById<ImageView>(Resource.Id.ivGoBack);
+            ivGoBack.Click += ((sender, e) => PreviousLesson());
+            ivGoFwd = FindViewById<ImageView>(Resource.Id.ivGoFwd);
+            ivGoFwd.Click += ((sender, e) => NextLesson(true, false));
             btnNext = FindViewById<FloatingActionButton>(Resource.Id.btnNext);
             btnNext.Click += BtnNext_Click;
+
             rvProgress = FindViewById<RecyclerView>(Resource.Id.rvProgress);
             rvProgress.SetLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.Horizontal, false));
             rvProgress.SetAdapter(new ProgressAdapter(progressList,
@@ -346,12 +353,6 @@ namespace IRMGARD
                         }
                         SoundPlayer.PlaySound(this, DataHolder.Current.CurrentLesson.Hint);
                     }
-					break;
-				case Resource.Id.btnNextLesson:
-					NextLesson(true, false);
-					break;
-				case Resource.Id.btnPreviousLesson:
-					PreviousLesson();
 					break;
 			}
 

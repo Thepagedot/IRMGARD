@@ -15,24 +15,4 @@
         android:icon="@drawable/ic_hearing_black_24dp"
         android:title="@string/playVoiceInstruction"
         app:showAsAction="always" />
-
-    <item
-        android:icon="@drawable/ic_more_vert_black_24dp"
-        android:title="Mehr..."
-        app:showAsAction="always">
-
-        <menu>
-            <item
-                android:id="@+id/btnNextLesson"
-                android:icon="@drawable/ic_skip_next_black_24dp"
-                android:title="Weiter"
-                app:showAsAction="never" />
-
-            <item
-                android:id="@+id/btnPreviousLesson"
-                android:icon="@drawable/ic_skip_previous_black_24dp"
-                android:title="Zurück"
-                app:showAsAction="never" />
-        </menu>
-    </item>
 </menu>
