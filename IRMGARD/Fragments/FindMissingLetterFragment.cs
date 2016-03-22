@@ -22,8 +22,6 @@ namespace IRMGARD
         private FlowLayout flLetters;
         private Case fontCase;
 
-        public FindMissingLetterFragment(Lesson lesson) : base(lesson) {}
-
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Prepare view

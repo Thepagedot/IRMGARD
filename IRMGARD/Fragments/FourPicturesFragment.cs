@@ -24,8 +24,6 @@ namespace IRMGARD
         private List<CardView> cards;
         private int selectedPosition = -1;
 
-        public FourPicturesFragment (Lesson lesson) : base(lesson) {}
-
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
             // Prepare view

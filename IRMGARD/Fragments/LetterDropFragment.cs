@@ -18,8 +18,6 @@ namespace IRMGARD
         private bool useAlternateView;
         private float letterTextSize;
 
-        public LetterDropFragment(Lesson lesson) : base(lesson) {}
-
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Android.OS.Bundle savedInstanceState)
         {
             // Prepare view

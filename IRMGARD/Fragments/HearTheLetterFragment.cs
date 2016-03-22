@@ -15,8 +15,6 @@ namespace IRMGARD
         HearTheLetterOption currentOption;
         int selectedLocation;
 
-        public HearTheLetterFragment(Lesson lesson) : base(lesson) {}
-
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.HearTheLetter, container, false);

@@ -24,8 +24,6 @@ namespace IRMGARD
         SyllablesToLearn currentSyllablesToLearn;
         bool imagePopupAlreadyShown;
 
-        public BuildSyllableFragment(Lesson lesson) : base(lesson) {}
-
         public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Prepare view

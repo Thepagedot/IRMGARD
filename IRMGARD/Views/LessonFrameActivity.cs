@@ -282,25 +282,25 @@ namespace IRMGARD
 		private LessonFragment CreateFragmentForLesson(Lesson lesson)
 		{
 			if (lesson is HearMe)
-				return new HearMeFragment(lesson);
+				return new HearMeFragment();
 			if (lesson is FourPictures)
-				return new FourPicturesFragment(lesson);
+				return new FourPicturesFragment();
             if (lesson is PickSyllable)
-                return new PickSyllableFragment(lesson);
+                return new PickSyllableFragment();
             if (lesson is BuildSyllable)
-                return new BuildSyllableFragment(lesson);
+                return new BuildSyllableFragment();
             if (lesson is FindMissingLetter)
-                return new FindMissingLetterFragment(lesson);
+                return new FindMissingLetterFragment();
             if (lesson is AbcRank)
-                return new AbcRankFragment(lesson);
+                return new AbcRankFragment();
             if (lesson is LetterDrop)
-                return new LetterDropFragment(lesson);
+                return new LetterDropFragment();
             if (lesson is HearTheLetter)
-                return new HearTheLetterFragment(lesson);
+                return new HearTheLetterFragment();
             if (lesson is HearMeAbc)
-                return new HearMeAbcFragment(lesson);
+                return new HearMeAbcFragment();
             if (lesson is Memory)
-                return new MemoryFragment(lesson);
+                return new MemoryFragment();
 
             return null;
 		}

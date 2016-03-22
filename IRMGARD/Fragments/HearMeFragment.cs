@@ -26,8 +26,6 @@ namespace IRMGARD
         private CardView cardView;
         private TextView nameView;
 
-        public HearMeFragment (Lesson lesson) : base(lesson) {}
-
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
             View view = inflater.Inflate(Resource.Layout.HearMe, container, false);
