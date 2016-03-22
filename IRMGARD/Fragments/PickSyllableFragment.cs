@@ -29,9 +29,6 @@ namespace IRMGARD
         private int correctPosition = -1;
         private bool isSoundPlayedForSelectedItem = false;
 
-        public PickSyllableFragment(Lesson lesson) : base(lesson) {}
-
-
         public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Prepare view

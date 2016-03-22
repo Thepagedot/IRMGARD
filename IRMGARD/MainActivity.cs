@@ -21,6 +21,8 @@ namespace IRMGARD
 		protected override async void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
+            FontHelper.ReplaceDefaultFont(this, "SERIF", FontHelper.Font.Sen);
+            FontHelper.ReplaceDefaultFont(this, "MONOSPACE", FontHelper.Font.Sen);
 			SetContentView (Resource.Layout.Main);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
             RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;

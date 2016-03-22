@@ -15,8 +15,6 @@ namespace IRMGARD
         private FlowLayout flOptions;
         private LinearLayout llTaskItems;
 
-        public AbcRankFragment(Lesson lesson) : base(lesson) {}
-
         public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.AbcRank, container, false);

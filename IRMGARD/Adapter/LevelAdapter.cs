@@ -35,8 +35,9 @@ namespace IRMGARD
 			var view = convertView ?? context.LayoutInflater.Inflate (Android.Resource.Layout.SimpleListItem1, null);
 
             var text1 = view.FindViewById<TextView>(Android.Resource.Id.Text1);
-            text1.Text = items[position].Name.ToUpper();
-            text1.Typeface = Typeface.CreateFromAsset(context.Assets, "Fonts/Garaje_53_Uni_Black.otf");
+            text1.Text = items[position].Name;
+            text1.TextSize = 18;
+            text1.Typeface = FontHelper.Get(context, FontHelper.Font.SenBold);
 
 			view.SetBackgroundColor(Android.Graphics.Color.ParseColor (items [position].Color));
             if (!items[position].IsEnabled)

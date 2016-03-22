@@ -141,6 +141,7 @@
     <Compile Include="Fragments\LetterWriteFragment.cs" />
     <Compile Include="Models\Levels\LetterWrite.cs" />
     <Compile Include="Adapter\Specific\LetterWriteAdapter.cs" />
+    <Compile Include="Utilities\FontHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\level4.json" />
@@ -156,7 +157,6 @@
     <AndroidAsset Include="Assets\Sounds\Objects\Uhu.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Igel.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\U-Boot.mp3" />
-    <AndroidAsset Include="Assets\Fonts\Garaje_53_Uni_Black.otf" />
     <AndroidAsset Include="Assets\Sounds\Level-1\Level 1 Modul 5 Aufgabe 5.mp3" />
     <AndroidAsset Include="Assets\Sounds\Tasks\5-5\wo_hoerst_du_A_in_Ina.mp3" />
     <AndroidAsset Include="Assets\Sounds\Tasks\5-5\wo_hoerst_du_B_in_Eber.mp3" />
@@ -868,6 +868,8 @@
     <AndroidAsset Include="Assets\Sounds\Syllables\LMNRS\se_kurz.mp3" />
     <AndroidAsset Include="Assets\Sounds\Application\Module_Not_Available.mp3" />
     <AndroidAsset Include="Assets\Sounds\Tasks\6-1\ABC_Song.mp3" />
+    <AndroidAsset Include="Assets\Fonts\sen-regular.otf" />
+    <AndroidAsset Include="Assets\Fonts\sen-bold.otf" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />

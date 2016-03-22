@@ -32,7 +32,7 @@ namespace IRMGARD
                 else
                 {
                     var textView = view.FindViewById<TextView>(Resource.Id.tvCardTextFront);
-                    if (item.Name.Length > 5)
+                    if (item.Name.Length > 4)
                     {
                         textView.SetTextAppearance(Context, Android.Resource.Style.TextAppearanceDeviceDefaultSmall);
                         textView.SetTextColor(Android.Graphics.Color.Black);

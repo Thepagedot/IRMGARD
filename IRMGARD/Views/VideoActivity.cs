@@ -30,6 +30,7 @@ namespace IRMGARD
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+            RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
             SetContentView(Resource.Layout.Video);
             this.CompatMode();
 

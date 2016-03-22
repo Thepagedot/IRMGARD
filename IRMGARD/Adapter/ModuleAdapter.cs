@@ -36,8 +36,8 @@ namespace IRMGARD
             // Set name
             var tvName = view.FindViewById<TextView>(Resource.Id.tvName);
             tvName.Text = items[position].Name.ToUpper();
-            var font = Typeface.CreateFromAsset(context.Assets, "Fonts/Garaje_53_Uni_Black.otf");
-            tvName.Typeface = font;
+            tvName.TextSize = 18;
+            tvName.Typeface = FontHelper.Get(context, FontHelper.Font.SenBold);
 
             // Set background color
             view.SetBackgroundColor(Android.Graphics.Color.ParseColor (items [position].Color));

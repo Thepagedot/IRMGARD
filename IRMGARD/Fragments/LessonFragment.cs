@@ -82,10 +82,10 @@ namespace IRMGARD
         protected T Lesson;
         private int currentIterationIndex;
 
-        protected LessonFragment(Lesson lesson)
+        protected LessonFragment()
         {
             this.currentIterationIndex = 0;
-            this.Lesson = (T)lesson;
+            this.Lesson = (T)(DataHolder.Current.CurrentLesson);
         }
 
         /// <summary>

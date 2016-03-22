@@ -24,8 +24,6 @@ namespace IRMGARD
         private IList<FrameLayout> memoryCardsMarked = new List<FrameLayout>();
         private int countOfPairsMatched;
 
-        public MemoryFragment (Lesson lesson) : base(lesson) {}
-
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Prepare view

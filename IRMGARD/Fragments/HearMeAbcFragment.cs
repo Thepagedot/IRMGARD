@@ -16,8 +16,6 @@ namespace IRMGARD
         ImageButton ibSpeaker;
         GridView gridView;
 
-        public HearMeAbcFragment(Lesson lesson) : base(lesson) {}
-
         public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             // Prepare view
