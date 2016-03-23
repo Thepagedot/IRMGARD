@@ -870,6 +870,13 @@
     <AndroidAsset Include="Assets\Sounds\Tasks\6-1\ABC_Song.mp3" />
     <AndroidAsset Include="Assets\Fonts\sen-regular.otf" />
     <AndroidAsset Include="Assets\Fonts\sen-bold.otf" />
+    <AndroidAsset Include="Assets\Videos\Handy_Level1_720p.mp4" />
+    <AndroidAsset Include="Assets\Videos\Handy_Modul1_720p.mp4" />
+    <AndroidAsset Include="Assets\Videos\Handy_Modul2_720p.mp4" />
+    <AndroidAsset Include="Assets\Videos\Handy_Modul3_720p.mp4" />
+    <AndroidAsset Include="Assets\Videos\Handy_Modul4_720p.mp4" />
+    <AndroidAsset Include="Assets\Videos\Handy_Modul5_720p.mp4" />
+    <AndroidAsset Include="Assets\Videos\Handy_Modul6_720p.mp4" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -1197,27 +1204,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\anim\SwipeOutRight.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Videos\Handy_Modul1_720p.mp4" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Videos\Handy_Modul2_720p.mp4" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Videos\Handy_Modul3_720p.mp4" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Videos\Handy_Modul4_720p.mp4" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Videos\Handy_Modul5_720p.mp4" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Videos\Handy_Modul6_720p.mp4" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidAsset Include="Assets\Videos\Handy_Level1_720p.mp4" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\ic_irmgard_icon_spiel_richtig_neu.png" />
