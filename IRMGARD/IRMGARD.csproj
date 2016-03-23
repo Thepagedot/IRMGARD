@@ -53,9 +53,6 @@
     <Reference Include="Square.OkIO">
       <HintPath>..\packages\Square.OkIO.1.6.0.0\lib\MonoAndroid\Square.OkIO.dll</HintPath>
     </Reference>
-    <Reference Include="Square.OkHttp">
-      <HintPath>..\packages\Square.OkHttp.2.5.0.0\lib\MonoAndroid\Square.OkHttp.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Android.Support.v4">
       <HintPath>..\packages\Xamarin.Android.Support.v4.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
@@ -71,8 +68,14 @@
     <Reference Include="Xamarin.Android.Support.Design">
       <HintPath>..\packages\Xamarin.Android.Support.Design.23.1.1.0\lib\MonoAndroid403\Xamarin.Android.Support.Design.dll</HintPath>
     </Reference>
+    <Reference Include="Square.OkHttp">
+      <HintPath>..\packages\Square.OkHttp.2.7.4.0\lib\MonoAndroid\Square.OkHttp.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.1\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\portable-net40+sl5+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.GifImageView">
+      <HintPath>..\packages\Refractored.GifImageView.2.0.0\lib\monoandroid\Refractored.GifImageView.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -135,6 +138,9 @@
     <Compile Include="Fragments\HearMeAbcFragment.cs" />
     <Compile Include="Adapter\Specific\HearMeAbcAdapter.cs" />
     <Compile Include="Models\Common.cs" />
+    <Compile Include="Fragments\LetterWriteFragment.cs" />
+    <Compile Include="Models\Levels\LetterWrite.cs" />
+    <Compile Include="Adapter\Specific\LetterWriteAdapter.cs" />
     <Compile Include="Utilities\FontHelper.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -778,6 +784,58 @@
     <AndroidAsset Include="Assets\Sounds\Criticism\zwar_hast_du_nicht1.mp3" />
     <AndroidAsset Include="Assets\Sounds\Criticism\zwar_hast_du_nicht2.mp3" />
     <AndroidAsset Include="Assets\Sounds\Criticism\zwar_hast_du_nicht3.mp3" />
+    <AndroidAsset Include="Assets\Gif\a_1.gif" />
+    <AndroidAsset Include="Assets\Gif\A.gif" />
+    <AndroidAsset Include="Assets\Gif\e_1.gif" />
+    <AndroidAsset Include="Assets\Gif\E.gif" />
+    <AndroidAsset Include="Assets\Gif\i_1.gif" />
+    <AndroidAsset Include="Assets\Gif\I.gif" />
+    <AndroidAsset Include="Assets\Gif\o_1.gif" />
+    <AndroidAsset Include="Assets\Gif\O.gif" />
+    <AndroidAsset Include="Assets\Gif\u_1.gif" />
+    <AndroidAsset Include="Assets\Gif\U.gif" />
+    <AndroidAsset Include="Assets\Gif\l_1.gif" />
+    <AndroidAsset Include="Assets\Gif\L.gif" />
+    <AndroidAsset Include="Assets\Gif\m_1.gif" />
+    <AndroidAsset Include="Assets\Gif\M.gif" />
+    <AndroidAsset Include="Assets\Gif\n_1.gif" />
+    <AndroidAsset Include="Assets\Gif\N.gif" />
+    <AndroidAsset Include="Assets\Gif\r_1.gif" />
+    <AndroidAsset Include="Assets\Gif\R.gif" />
+    <AndroidAsset Include="Assets\Gif\s_1.gif" />
+    <AndroidAsset Include="Assets\Gif\S.gif" />
+    <AndroidAsset Include="Assets\Gif\w_1.gif" />
+    <AndroidAsset Include="Assets\Gif\W.gif" />
+    <AndroidAsset Include="Assets\Gif\z_1.gif" />
+    <AndroidAsset Include="Assets\Gif\Z.gif" />
+    <AndroidAsset Include="Assets\Gif\j_1.gif" />
+    <AndroidAsset Include="Assets\Gif\J.gif" />
+    <AndroidAsset Include="Assets\Gif\f_1.gif" />
+    <AndroidAsset Include="Assets\Gif\F.gif" />
+    <AndroidAsset Include="Assets\Gif\h_1.gif" />
+    <AndroidAsset Include="Assets\Gif\H.gif" />
+    <AndroidAsset Include="Assets\Gif\b_1.gif" />
+    <AndroidAsset Include="Assets\Gif\B.gif" />
+    <AndroidAsset Include="Assets\Gif\d_1.gif" />
+    <AndroidAsset Include="Assets\Gif\D.gif" />
+    <AndroidAsset Include="Assets\Gif\g_1.gif" />
+    <AndroidAsset Include="Assets\Gif\G.gif" />
+    <AndroidAsset Include="Assets\Gif\k_1.gif" />
+    <AndroidAsset Include="Assets\Gif\K.gif" />
+    <AndroidAsset Include="Assets\Gif\t_1.gif" />
+    <AndroidAsset Include="Assets\Gif\T.gif" />
+    <AndroidAsset Include="Assets\Gif\p_1.gif" />
+    <AndroidAsset Include="Assets\Gif\P.gif" />
+    <AndroidAsset Include="Assets\Gif\c_1.gif" />
+    <AndroidAsset Include="Assets\Gif\C.gif" />
+    <AndroidAsset Include="Assets\Gif\q_1.gif" />
+    <AndroidAsset Include="Assets\Gif\Q.gif" />
+    <AndroidAsset Include="Assets\Gif\v_1.gif" />
+    <AndroidAsset Include="Assets\Gif\V.gif" />
+    <AndroidAsset Include="Assets\Gif\x_1.gif" />
+    <AndroidAsset Include="Assets\Gif\X.gif" />
+    <AndroidAsset Include="Assets\Gif\y_1.gif" />
+    <AndroidAsset Include="Assets\Gif\Y.gif" />
     <AndroidAsset Include="Assets\Sounds\Alphabet\A.mp3" />
     <AndroidAsset Include="Assets\Sounds\Alphabet\B.mp3" />
     <AndroidAsset Include="Assets\Sounds\Alphabet\C.mp3" />
@@ -985,6 +1043,8 @@
     <AndroidResource Include="Resources\drawable-mdpi\ic_lightbulb_outline_white_24dp.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_lightbulb_outline_white_24dp.png" />
     <AndroidResource Include="Resources\layout\SpeakerElement.axml" />
+    <AndroidResource Include="Resources\layout\GifAnimation.axml" />
+    <AndroidResource Include="Resources\layout\GifTask.axml" />
     <AndroidResource Include="Resources\layout-h550dp\Memory.axml" />
     <AndroidResource Include="Resources\layout-h550dp\MemoryCard.axml" />
     <AndroidResource Include="Resources\layout-h550dp\Letter.axml" />

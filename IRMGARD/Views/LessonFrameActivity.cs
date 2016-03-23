@@ -301,6 +301,8 @@ namespace IRMGARD
                 return new HearMeAbcFragment();
             if (lesson is Memory)
                 return new MemoryFragment();
+            if (lesson is LetterWrite)
+                return new LetterWriteFragment();
 
             return null;
 		}
