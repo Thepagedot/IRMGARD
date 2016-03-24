@@ -100,10 +100,16 @@ namespace IRMGARD
                 {
                     BitmapFactory.DecodeStream(stream, null, options);
                 }
+
+                // Due to a bug in SDKs below Kitkat a scaled down version of a bitmap cannot be decoded into an existing bitmap
+                var ratio = (Env.KitkatSupport) ? 2 : 1;
+
+                options.OutWidth = options.OutWidth / ratio;
+                options.OutHeight = options.OutHeight / ratio;
                 Bitmap bitmap = Bitmap.CreateBitmap(options.OutWidth, options.OutHeight, options.InPreferredConfig);
                 options.InJustDecodeBounds = false;
                 options.InBitmap = bitmap;
-                options.InSampleSize = 1;
+                options.InSampleSize = ratio;
             }
 
             // Decode bitmap with inSampleSize set
