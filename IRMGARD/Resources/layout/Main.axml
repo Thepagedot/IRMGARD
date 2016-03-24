@@ -10,10 +10,9 @@
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
     <ImageView
-        android:src="@drawable/splashscreen"
+        android:id="@+id/ivSplashscreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/imageView1"
         android:layout_below="@id/toolbar"
         android:layout_gravity="bottom"
         android:adjustViewBounds="true"

@@ -925,7 +925,6 @@
     <AndroidResource Include="Resources\drawable-mdpi\Text.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\Text.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\Text.png" />
-    <AndroidResource Include="Resources\drawable\splashscreen.png" />
     <AndroidResource Include="Resources\values\Styles.xml" />
     <AndroidResource Include="Resources\values-v21\Styles.xml" />
     <AndroidResource Include="Resources\layout\LevelSponsor.axml" />
@@ -1081,6 +1080,12 @@
     <AndroidResource Include="Resources\drawable-xhdpi\lightbulb.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\lightbulb.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\lightbulb.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\splashscreen.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">

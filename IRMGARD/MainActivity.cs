@@ -12,18 +12,23 @@ using Newtonsoft.Json;
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.Design.Widget;
+using Android.Graphics;
 
 namespace IRMGARD
 {
 	[Activity (Label = "IRMGARD", MainLauncher = true, Icon = "@drawable/icon")]
 	public class MainActivity : AppCompatActivity
 	{
+        ImageView ivSplashscreen;
+        Bitmap bmpSplashscreen;
+
 		protected override async void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
             FontHelper.ReplaceDefaultFont(this, "SERIF", FontHelper.Font.Sen);
             FontHelper.ReplaceDefaultFont(this, "MONOSPACE", FontHelper.Font.Sen);
 			SetContentView (Resource.Layout.Main);
+            ivSplashscreen = FindViewById<ImageView>(Resource.Id.ivSplashscreen);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
             RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
             this.CompatMode();
@@ -55,7 +60,24 @@ namespace IRMGARD
 			startButton.Click += StartButton_Click;
 		}
 
-		void StartButton_Click (object sender, EventArgs e)
+        protected override void OnResume()
+        {
+            base.OnResume();
+
+            bmpSplashscreen = BitmapFactory.DecodeResource(Resources, Resource.Drawable.splashscreen);
+            ivSplashscreen.SetImageBitmap(bmpSplashscreen);
+        }
+
+        protected override void OnPause()
+        {
+            base.OnPause();
+
+            ivSplashscreen.SetImageBitmap(null);
+            bmpSplashscreen.Dispose();
+            bmpSplashscreen = null;
+        }
+
+        void StartButton_Click (object sender, EventArgs e)
 		{
             var intent = new Intent (this, typeof(LevelSelectActivity));
 			StartActivity(intent);
