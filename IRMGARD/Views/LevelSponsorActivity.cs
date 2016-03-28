@@ -13,7 +13,6 @@ using Android.Widget;
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.Design.Widget;
-using Square.Picasso;
 
 namespace IRMGARD
 {
@@ -26,7 +25,6 @@ namespace IRMGARD
             SetContentView(Resource.Layout.LevelSponsor);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
-            this.CompatMode();
 
             // Set title
             Title = DataHolder.Current.CurrentLevel.Name;

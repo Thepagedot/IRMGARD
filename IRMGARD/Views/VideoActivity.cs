@@ -32,7 +32,6 @@ namespace IRMGARD
             base.OnCreate(bundle);
             RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
             SetContentView(Resource.Layout.Video);
-            this.CompatMode();
 
             // Read context
             nextView = Intent.Extras.GetString("nextView");

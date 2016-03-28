@@ -31,7 +31,6 @@ namespace IRMGARD
             ivSplashscreen = FindViewById<ImageView>(Resource.Id.ivSplashscreen);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
             RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
-            this.CompatMode();
 
 			// Initialize DataHolder if needed
 			if (DataHolder.Current == null)

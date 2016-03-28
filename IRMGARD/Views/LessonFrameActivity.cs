@@ -55,7 +55,6 @@ namespace IRMGARD
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
             progressList = new List<Progress>();
-            this.CompatMode();
 
             ivGoBack = FindViewById<ImageView>(Resource.Id.ivGoBack);
             ivGoBack.Click += ((sender, e) => PreviousLesson());
