@@ -16,8 +16,9 @@
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>IRMGARD</AssemblyName>
     <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
-    <ReleaseVersion>0.4</ReleaseVersion>
+    <ReleaseVersion>0.9.0</ReleaseVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
+    <Description>Hilft Erwachsenen Lesen und Schreiben zu lernen.</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -40,7 +41,6 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <AndroidLinkMode>Full</AndroidLinkMode>
     <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
-    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
