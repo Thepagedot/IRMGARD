@@ -87,11 +87,21 @@ namespace IRMGARD
 			InitLesson();
 			base.OnStart();
 		}
+        
+        protected override void OnPause()
+        {
+            base.OnPause();
+            
+            if (SoundPlayer.IsPlaying)
+            {
+                SoundPlayer.Stop();
+            }
+        }
 
-		/// <summary>
-		/// Initiates the view with the current lession.
-		/// </summary>
-		private void InitLesson()
+        /// <summary>
+        /// Initiates the view with the current lession.
+        /// </summary>
+        private void InitLesson()
         {
             var module = DataHolder.Current.CurrentModule;
             var lesson = DataHolder.Current.CurrentLesson;
