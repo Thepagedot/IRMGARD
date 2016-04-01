@@ -1,41 +1,35 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 using Android.App;
 using Android.Content;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
+using Android.Graphics;
 using Android.OS;
-using IRMGARD.Models;
-using System.Collections.Generic;
-using Newtonsoft.Json;
+using Android.Widget;
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
-using Android.Support.Design.Widget;
-using Android.Graphics;
 
 namespace IRMGARD
 {
-	[Activity (Label = "IRMGARD", MainLauncher = true, Icon = "@drawable/icon")]
-	public class MainActivity : AppCompatActivity
-	{
+    [Activity (Label = "IRMGARD", MainLauncher = true, Icon = "@drawable/icon")]
+    public class MainActivity : AppCompatActivity
+    {
         ImageView ivSplashscreen;
         Bitmap bmpSplashscreen;
 
-		protected override async void OnCreate (Bundle bundle)
-		{
-			base.OnCreate (bundle);
-            FontHelper.ReplaceDefaultFont(this, "SERIF", FontHelper.Font.Sen);
+        protected override async void OnCreate (Bundle bundle)
+        {
+            base.OnCreate (bundle);
             FontHelper.ReplaceDefaultFont(this, "MONOSPACE", FontHelper.Font.Sen);
-			SetContentView (Resource.Layout.Main);
+            SetContentView (Resource.Layout.Main);
             ivSplashscreen = FindViewById<ImageView>(Resource.Id.ivSplashscreen);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
             RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
 
-			// Initialize DataHolder if needed
-			if (DataHolder.Current == null)
+            // Initialize DataHolder if needed
+            if (DataHolder.Current == null)
             {
-				DataHolder.Current = new DataHolder();
+                DataHolder.Current = new DataHolder();
                 await DataHolder.Current.LoadCommonAsync();
 
                 // Load levels from JSON
@@ -53,18 +47,30 @@ namespace IRMGARD
 
                 // Load progress
                 await DataHolder.Current.LoadProgressAsync();
-			}
+            }
+        }
 
-			var startButton = FindViewById<FloatingActionButton> (Resource.Id.btnStart);
-			startButton.Click += StartButton_Click;
-		}
+        public override void OnBackPressed() {
+            // Disable back button navigation on first screen
+        }
 
-        protected override void OnResume()
+        protected override async void OnResume()
         {
             base.OnResume();
 
             bmpSplashscreen = BitmapFactory.DecodeResource(Resources, Resource.Drawable.splashscreen);
             ivSplashscreen.SetImageBitmap(bmpSplashscreen);
+
+            // Show splashscreen for a second
+            await Task.Delay(2000);
+
+            // Navigate to video player
+            var extras = new Bundle();
+            extras.PutString("nextView", "LevelSelectActivity");
+            extras.PutString("videoPath", DataHolder.Current.Common.IntroVideoPath);
+            var intent = new Intent(this, typeof(VideoActivity));
+            intent.PutExtras(extras);
+            StartActivity(intent);
         }
 
         protected override void OnPause()
@@ -75,11 +81,5 @@ namespace IRMGARD
             bmpSplashscreen.Dispose();
             bmpSplashscreen = null;
         }
-
-        void StartButton_Click (object sender, EventArgs e)
-		{
-            var intent = new Intent (this, typeof(LevelSelectActivity));
-			StartActivity(intent);
-		}
-	}
+    }
 }

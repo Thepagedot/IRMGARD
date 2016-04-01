@@ -102,6 +102,8 @@ namespace IRMGARD
             Intent intent = null;
             if (nextView.Equals("LessonFrameActivity"))
                 intent = new Intent(this, typeof(LessonFameActivity));
+            else if (nextView.Equals("LevelSelectActivity"))
+                intent = new Intent(this, typeof(LevelSelectActivity));
             else if (nextView.Equals("ModuleSelectActivity"))
                 intent = new Intent(this, typeof(ModuleSelectActivity));
 

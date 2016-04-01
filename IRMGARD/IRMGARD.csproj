@@ -16,7 +16,7 @@
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>IRMGARD</AssemblyName>
     <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
-    <ReleaseVersion>0.9.0</ReleaseVersion>
+    <ReleaseVersion>0.9.1</ReleaseVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
     <Description>Hilft Erwachsenen Lesen und Schreiben zu lernen.</Description>
   </PropertyGroup>
@@ -30,9 +30,9 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
@@ -41,6 +41,7 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <AndroidLinkMode>Full</AndroidLinkMode>
     <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -856,8 +857,6 @@
     <AndroidAsset Include="Assets\Sounds\Syllables\LMNRS\se_kurz.mp3" />
     <AndroidAsset Include="Assets\Sounds\Application\Module_Not_Available.mp3" />
     <AndroidAsset Include="Assets\Sounds\Tasks\6-1\ABC_Song.mp3" />
-    <AndroidAsset Include="Assets\Fonts\sen-regular.otf" />
-    <AndroidAsset Include="Assets\Fonts\sen-bold.otf" />
     <AndroidAsset Include="Assets\Videos\Handy_Level1_720p.mp4" />
     <AndroidAsset Include="Assets\Videos\Handy_Modul1_720p.mp4" />
     <AndroidAsset Include="Assets\Videos\Handy_Modul2_720p.mp4" />
@@ -865,6 +864,8 @@
     <AndroidAsset Include="Assets\Videos\Handy_Modul4_720p.mp4" />
     <AndroidAsset Include="Assets\Videos\Handy_Modul5_720p.mp4" />
     <AndroidAsset Include="Assets\Videos\Handy_Modul6_720p.mp4" />
+    <AndroidAsset Include="Assets\Fonts\sen-bold.otf" />
+    <AndroidAsset Include="Assets\Fonts\sen-regular.otf" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -985,6 +986,7 @@
     <AndroidResource Include="Resources\layout\TaskItem.axml" />
     <AndroidResource Include="Resources\layout\BuildSyllableMediaElement.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_01.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_01.png" />
     <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_01.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_01.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_01.png" />

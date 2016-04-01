@@ -3,7 +3,7 @@
   "Color": "#BE6E66",
   "IsEnabled": true,
   "IsCompleted": false,
-  "VideoPath": "Videos/Handy_Level1_720p.mp4",
+  "VideoPath": null,
   "Modules": [
     {
       "Name": "1: AEIOU",

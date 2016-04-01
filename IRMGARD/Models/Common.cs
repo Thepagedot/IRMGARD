@@ -9,6 +9,7 @@ namespace IRMGARD.Models
         public string AssetSoundDir { get; set; }
         public string AssetPraiseDir { get; set; }
         public string AssetCriticismDir { get; set; }
+        public string IntroVideoPath { get; set; }
         public List<string> RecurringTaskSoundFiles { get; set; }
     }
 }

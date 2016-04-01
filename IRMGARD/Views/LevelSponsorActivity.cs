@@ -1,40 +1,45 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System;
+using System.Threading.Tasks;
 
 using Android.App;
 using Android.Content;
+using Android.Graphics;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
-using Android.Support.Design.Widget;
 
 namespace IRMGARD
 {
     [Activity(Label = "Danke", ParentActivity = typeof(LevelSelectActivity), NoHistory = true)]
     public class LevelSponsorActivity : AppCompatActivity
     {
+        ImageView ivSplashscreen;
+        Bitmap bmpSplashscreen;
+
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.LevelSponsor);
+            ivSplashscreen = FindViewById<ImageView>(Resource.Id.ivSplashscreen);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
 
             // Set title
             Title = DataHolder.Current.CurrentLevel.Name;
-
-            var closeButton = FindViewById<FloatingActionButton>(Resource.Id.btnClose);
-            closeButton.Click += CloseButton_Click;
         }
 
-        void CloseButton_Click (object sender, EventArgs e)
+        protected override async void OnResume()
         {
+            base.OnResume();
+
+            bmpSplashscreen = BitmapFactory.DecodeResource(Resources, Resource.Drawable.irmgard_danke_01);
+            ivSplashscreen.SetImageBitmap(bmpSplashscreen);
+
+            // Show splashscreen for a second
+            await Task.Delay(2000);
+
             if (String.IsNullOrEmpty(DataHolder.Current.CurrentLevel.VideoPath))
             {
                 StartActivity(new Intent(this, typeof(ModuleSelectActivity)));
@@ -42,13 +47,22 @@ namespace IRMGARD
             else
             {
                 // Navigate to video player
+                var extras = new Bundle();
+                extras.PutString("nextView", "ModuleSelectActivity");
+                extras.PutString("videoPath", DataHolder.Current.CurrentLevel.VideoPath);
                 var intent = new Intent(this, typeof(VideoActivity));
-                var bundle = new Bundle();
-                bundle.PutString("nextView", "ModuleSelectActivity");
-                bundle.PutString("videoPath", DataHolder.Current.CurrentLevel.VideoPath);
-                intent.PutExtras(bundle);
+                intent.PutExtras(extras);
                 StartActivity(intent);
             }
+        }
+
+        protected override void OnPause()
+        {
+            base.OnPause();
+
+            ivSplashscreen.SetImageBitmap(null);
+            bmpSplashscreen.Dispose();
+            bmpSplashscreen = null;
         }
     }
 }

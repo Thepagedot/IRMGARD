@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:id="@+id/mainLayout"
-    android:minWidth="25px"
-    android:minHeight="25px">
+    android:layout_height="match_parent">
     <include
         android:id="@+id/toolbar"
         layout="@layout/toolbar" />
@@ -13,19 +10,6 @@
         android:id="@+id/ivSplashscreen"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/toolbar"
-        android:layout_gravity="bottom"
         android:adjustViewBounds="true"
-        android:scaleType="fitXY"
-        android:layout_alignParentBottom="true" />
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btnStart"
-        android:layout_below="@id/toolbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dip"
-        android:clickable="true"
-        android:src="@drawable/ic_play_arrow_white_24dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_centerHorizontal="true" />
-</RelativeLayout>
+        android:scaleType="fitXY" />
+</LinearLayout>
