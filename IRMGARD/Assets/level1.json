@@ -88,7 +88,7 @@
           "Title": "Schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 2.mp3",
-          "Hint": "Hints/02_extra_Tip_arbeite_nicht_mit_losen_zetteln.mp3",
+          "Hint": "Hints/15_extra_Tip_schoen_waere_es_wenn_du_dir_ein_Heft_und_einen_stift_anschaffen_wuerdest.mp3",
           "TypeOfLevel": "LetterWrite",
           "Iterations": [
             {
@@ -752,7 +752,7 @@
           "Title": "Schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2-5 Aufgabe 2.mp3",
-          "Hint": "Hints/03_extra_Tip_du_kannst_mit_deinem_finger_im_sand_oder_schnee_schreiben.mp3",
+          "Hint": "Hints/02_extra_Tip_arbeite_nicht_mit_losen_zetteln.mp3",
           "TypeOfLevel": "LetterWrite",
           "Iterations": [
             {
@@ -2485,6 +2485,7 @@
           "Title": "Schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2-5 Aufgabe 2.mp3",
+          "Hint": "Hints/03_extra_Tip_du_kannst_mit_deinem_finger_im_sand_oder_schnee_schreiben.mp3",
           "TypeOfLevel": "LetterWrite",
           "Iterations": [
             {
@@ -6488,6 +6489,7 @@
           "Title": "Schreiben",
           "IsCompleted": false,
           "SoundPath": "Level-1/Level 1 Modul 2-5 Aufgabe 2.mp3",
+          "Hint": "Hints/12_extra_Tip_kannst_du_deinen_namen_schrieben.mp3",
           "TypeOfLevel": "LetterWrite",
           "Iterations": [
             {
@@ -6574,6 +6576,7 @@
           "IsCompleted": false,
           "IsRecurringTask": true,
           "SoundPath": "Level-1/Level 1 Modul 2-5 Aufgabe 4.mp3",
+          "Hint": "Hints/16_extra_Tip_super_du_hast_echt_durchhaltevermoegen.mp3",
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
             {
@@ -6739,7 +6742,6 @@
           "Title": "Von A-Z",
           "SoundPath": "Level-1/Level 1 Modul 6 Aufgabe 1.mp3",
           "SoundPathABC": "Tasks/6-1/ABC_Song.mp3",
-          "Hint": "Hints/19_extra_Tip_wenn_du_bishierhin_alle_aufgaben_geloest_hast_kannst_du_stolz_auf_dich_sein.mp3",
           "TypeOfLevel": "HearMeAbc",
           "Iterations": [
             {
