@@ -89,12 +89,18 @@ namespace IRMGARD
             // Add correct options
             var options = iteration.LettersToLearn.Select(letter => new LetterBase(letter.ToNegativeCase(fontCase))).ToList();
 
+            // Do not use upper case i and lower case L as options (similarity issue)
+            var UCI = "I";
+            var LCL = "l";
+
             // Add false options with random cases
             while (options.Count < numberOfOptions)
             {
                 var letter = Alphabet.GetRandomLetter().ToCase((Case)(random.Next(2) + 1));
-                while (options.FirstOrDefault(o => o.Letter.Equals(letter)) != null)
+                while (options.FirstOrDefault(o => o.Letter.Equals(letter)) != null || letter.Equals(UCI) || letter.Equals(LCL))
+                {
                     letter = Alphabet.GetRandomLetter().ToCase((Case)(random.Next(2) + 1));
+                }
 
                 options.Add(new LetterBase(letter));
             }
