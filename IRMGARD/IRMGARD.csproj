@@ -16,7 +16,7 @@
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>IRMGARD</AssemblyName>
     <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
-    <ReleaseVersion>0.9.1</ReleaseVersion>
+    <ReleaseVersion>1.0.0</ReleaseVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
     <Description>Hilft Erwachsenen Lesen und Schreiben zu lernen.</Description>
   </PropertyGroup>
@@ -33,6 +33,7 @@
     <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType> 
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
