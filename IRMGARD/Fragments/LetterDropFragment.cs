@@ -114,7 +114,7 @@ namespace IRMGARD
             if (useAlternateView)
             {
                 flTaskItems.RemoveAllViews();
-                flTaskItems.HorizontalSpacing = (int) (5 * Resources.DisplayMetrics.Density);
+                flTaskItems.HorizontalSpacing = (int) (8 * Resources.DisplayMetrics.Density);
             }
             else
             {
@@ -138,7 +138,7 @@ namespace IRMGARD
                 if (useAlternateView)
                 {
                     var llLayout = view.FindViewById<RelativeLayout>(Resource.Id.llLayout);
-                    llLayout.SetMinimumWidth((int) (70 * Resources.DisplayMetrics.Density));
+                    llLayout.SetMinimumWidth((int) (80 * Resources.DisplayMetrics.Density));
                     flTaskItems.AddView(view);
                 }
                 else
