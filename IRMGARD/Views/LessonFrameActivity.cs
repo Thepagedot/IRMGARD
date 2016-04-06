@@ -22,12 +22,12 @@ using Android.Views.Animations;
 
 namespace IRMGARD
 {
-	[Activity (Label = "Lesson", ParentActivity = typeof(ModuleSelectActivity))]
+    [Activity(Label = "Lesson", ParentActivity = typeof(ModuleSelectActivity))]
     public class LessonFameActivity : AppCompatActivity
-	{
-		private const string lessonFragmentTag = "current-Lesson-fragment";
+    {
+        private const string lessonFragmentTag = "current-Lesson-fragment";
 
-		IMenu topMenu;
+        IMenu topMenu;
         ImageView ivGoBack;
         ImageView ivGoFwd;
         FloatingActionButton btnNext;
@@ -46,11 +46,11 @@ namespace IRMGARD
 
         Common Common { get { return DataHolder.Current.Common; } }
 
-		protected override void OnCreate (Bundle bundle)
-		{
+        protected override void OnCreate(Bundle bundle)
+        {
             ApplyLevelColors();
-			base.OnCreate (bundle);
-			SetContentView (Resource.Layout.LessonFrame);
+            base.OnCreate(bundle);
+            SetContentView(Resource.Layout.LessonFrame);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
@@ -68,9 +68,9 @@ namespace IRMGARD
             rvProgress.SetAdapter(new ProgressAdapter(progressList,
                 Color.ParseColor(DataHolder.Current.CurrentModule.Color),
                 Resources.DisplayMetrics.Density));
-			txtCapitalAlphabet = FindViewById<TextView>(Resource.Id.txtCapitalAlphabet);
-			txtLowerAlphabet = FindViewById<TextView>(Resource.Id.txtLowerAlphabet);
-			fragmentContainer = FindViewById<FrameLayout> (Resource.Id.fragmentContainer);
+            txtCapitalAlphabet = FindViewById<TextView>(Resource.Id.txtCapitalAlphabet);
+            txtLowerAlphabet = FindViewById<TextView>(Resource.Id.txtLowerAlphabet);
+            fragmentContainer = FindViewById<FrameLayout>(Resource.Id.fragmentContainer);
             ivBadge = FindViewById<ImageView>(Resource.Id.ivBadge);
             ivIrmgard = FindViewById<ImageView>(Resource.Id.ivIrmgard);
             ivIrmgard.Click += (s, e) => PlayOrStopInstruction();
@@ -82,16 +82,16 @@ namespace IRMGARD
             criticismFilesAvail = Assets.List(Path.Combine(Common.AssetSoundDir, Common.AssetCriticismDir)).Select(s => Path.Combine(Common.AssetCriticismDir, s)).ToList();
         }
 
-		protected override void OnStart()
-		{
-			InitLesson();
-			base.OnStart();
-		}
-        
+        protected override void OnStart()
+        {
+            InitLesson();
+            base.OnStart();
+        }
+
         protected override void OnPause()
         {
             base.OnPause();
-            
+
             if (SoundPlayer.IsPlaying)
             {
                 SoundPlayer.Stop();
@@ -191,7 +191,7 @@ namespace IRMGARD
             ProgressListRefresh(e.Lesson);
         }
 
-        private void CurrentFragment_UserInteracted (object sender, UserInteractedEventArgs e)
+        private void CurrentFragment_UserInteracted(object sender, UserInteractedEventArgs e)
         {
             if (e.IsReady)
             {
@@ -199,7 +199,7 @@ namespace IRMGARD
                 btnNext.Clickable = true;
                 btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.ShowNextButton));
             }
-		}
+        }
 
         void Fragment_IterationChanged(object sender, IterationChangedEventArgs e)
         {
@@ -253,13 +253,13 @@ namespace IRMGARD
             await DataHolder.Current.SaveProgressAsync();
         }
 
-		/// <summary>
-		/// Handles the Lesson fragment's Lesson finished event
-		/// </summary>
-		/// <param name="sender">sender.</param>
-		/// <param name="e">event args.</param>
+        /// <summary>
+        /// Handles the Lesson fragment's Lesson finished event
+        /// </summary>
+        /// <param name="sender">sender.</param>
+        /// <param name="e">event args.</param>
         async void LessonFragment_LessonFinished(object sender, LessonFinishedEventArgs e)
-		{
+        {
             if (SoundPlayer.IsPlaying)
                 SoundPlayer.Stop();
 
@@ -281,19 +281,19 @@ namespace IRMGARD
             isPlayingPraiseOrCriticism = false;
 
             NextLesson(success, e.ProvideFeedback);
-		}
+        }
 
-		/// <summary>
-		/// Returns a new instance of the fragment type according to the type of Lesson
-		/// </summary>
-		/// <returns>The fragment for the Lesson.</returns>
-		/// <param name="lesson">current Lesson.</param>
-		private LessonFragment CreateFragmentForLesson(Lesson lesson)
-		{
-			if (lesson is HearMe)
-				return new HearMeFragment();
-			if (lesson is FourPictures)
-				return new FourPicturesFragment();
+        /// <summary>
+        /// Returns a new instance of the fragment type according to the type of Lesson
+        /// </summary>
+        /// <returns>The fragment for the Lesson.</returns>
+        /// <param name="lesson">current Lesson.</param>
+        private LessonFragment CreateFragmentForLesson(Lesson lesson)
+        {
+            if (lesson is HearMe)
+                return new HearMeFragment();
+            if (lesson is FourPictures)
+                return new FourPicturesFragment();
             if (lesson is PickSyllable)
                 return new PickSyllableFragment();
             if (lesson is BuildSyllable)
@@ -314,11 +314,11 @@ namespace IRMGARD
                 return new LetterWriteFragment();
 
             return null;
-		}
+        }
 
-		#region UI Operations
+        #region UI Operations
 
-        private void BtnNext_Click (object sender, EventArgs e)
+        private void BtnNext_Click(object sender, EventArgs e)
         {
             if (isPlayingPraiseOrCriticism)
             {
@@ -337,24 +337,24 @@ namespace IRMGARD
             }
         }
 
-		public override bool OnCreateOptionsMenu (IMenu menu)
-		{
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
             topMenu = menu;
             MenuInflater.Inflate(Resource.Menu.levelFrame_menu, topMenu);
             CheckHintButton();
 
-			return base.OnCreateOptionsMenu (menu);
-		}
+            return base.OnCreateOptionsMenu(menu);
+        }
 
-		public override bool OnOptionsItemSelected (IMenuItem item)
-		{
-			switch (item.ItemId)
-			{
-				// Play voice instruction
-				case Resource.Id.btnVoiceInstruction:
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                // Play voice instruction
+                case Resource.Id.btnVoiceInstruction:
                     PlayOrStopInstruction();
-					break;
-				// Show hint
+                    break;
+                // Show hint
                 case Resource.Id.btnHint:
                     if (!string.IsNullOrEmpty(DataHolder.Current.CurrentLesson.Hint))
                     {
@@ -364,11 +364,11 @@ namespace IRMGARD
                         }
                         SoundPlayer.PlaySound(this, DataHolder.Current.CurrentLesson.Hint);
                     }
-					break;
-			}
+                    break;
+            }
 
-			return base.OnOptionsItemSelected (item);
-		}
+            return base.OnOptionsItemSelected(item);
+        }
 
         private void PlayOrStopInstruction()
         {
@@ -388,39 +388,32 @@ namespace IRMGARD
         /// Switches to the next Lesson if available
         /// </summary>
         private void NextLesson(bool success, bool showFeedbackBadge = true)
-		{
-            if (success)
-                ivBadge.SetImageResource(Resource.Drawable.irmgard_icon_spiel_supergemacht);
-            else
-                ivBadge.SetImageResource(Resource.Drawable.irmgard_icon_spiel_nochmal);
-
-            // Out Animation
-            var outAnimation = AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeOutLeft);
-            outAnimation.AnimationEnd += (s, args) =>
+        {
+            if (showFeedbackBadge)
             {
-                if (!showFeedbackBadge)
+                // Show success or failure badge
+                if (success)
+                    ivBadge.SetImageResource(Resource.Drawable.irmgard_icon_spiel_supergemacht);
+                else
+                    ivBadge.SetImageResource(Resource.Drawable.irmgard_icon_spiel_nochmal);
+
+                var badgeAnimation = AnimationUtils.LoadAnimation(this, Resource.Animation.ShowFeedbackIcon);
+                badgeAnimation.AnimationEnd += (s2, args2) =>
                 {
+                    ivBadge.Visibility = ViewStates.Gone;
                     Next();
                     fragmentContainer.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeInRight));
-                }
-                else
-                {
-                    // Show success or failure badge
-                    var badgeAnimation = AnimationUtils.LoadAnimation(this, Resource.Animation.ShowFeedbackIcon);
-                    badgeAnimation.AnimationEnd += (s2, args2) =>
-                    {
-                        ivBadge.Visibility = ViewStates.Gone;
-                        Next();
-                        fragmentContainer.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeInRight));
-                    };
+                };
 
-                    ivBadge.Visibility = ViewStates.Visible;
-                    ivBadge.StartAnimation(badgeAnimation);
-                }
-            };
-
-            fragmentContainer.StartAnimation(outAnimation);
-		}
+                ivBadge.Visibility = ViewStates.Visible;
+                ivBadge.StartAnimation(badgeAnimation);
+            }
+            else
+            {
+                Next();
+                fragmentContainer.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeInRight));
+            }
+        }
 
         private void Next()
         {
@@ -442,22 +435,15 @@ namespace IRMGARD
         /// </summary>
         private void PreviousLesson()
         {
-            // Out Animation
-            var outAnimation = AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeOutRight);
-            outAnimation.AnimationEnd += (s, args) =>
+            var previousLesson = DataHolder.Current.CurrentModule.GetPrevioustLesson(DataHolder.Current.CurrentLesson);
+            if (previousLesson != null)
             {
-                var previousLesson = DataHolder.Current.CurrentModule.GetPrevioustLesson(DataHolder.Current.CurrentLesson);
-                if (previousLesson != null)
-                {
-                    DataHolder.Current.CurrentLesson = previousLesson;
-                    DataHolder.Current.CurrentIteration = previousLesson.Iterations.First();
-                    InitLesson();
-                }
+                DataHolder.Current.CurrentLesson = previousLesson;
+                DataHolder.Current.CurrentIteration = previousLesson.Iterations.First();
+                InitLesson();
+            }
 
-                fragmentContainer.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeInLeft));
-            };
-
-            fragmentContainer.StartAnimation(outAnimation);
+            fragmentContainer.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeInLeft));
         }
 
         public static SpannableString GetLettersMarked(List<string> markedLetters, bool capitalize)

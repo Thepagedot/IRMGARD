@@ -33,7 +33,7 @@
     <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>full</DebugType> 
+    <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
@@ -1186,16 +1186,10 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_skip_next_black_24dp.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\anim\SwipeOutLeft.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\anim\SwipeInRight.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\anim\SwipeInLeft.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\anim\SwipeOutRight.xml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-hdpi\ic_irmgard_icon_spiel_richtig_neu.png" />

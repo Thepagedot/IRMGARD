@@ -5,5 +5,5 @@
     android:fillAfter="true">
   <translate
       android:fromXDelta="-1000"
-      android:duration="300" />
+      android:duration="400" />
 </set>
