@@ -62,7 +62,7 @@ namespace IRMGARD
             ivSplashscreen.SetImageBitmap(bmpSplashscreen);
 
             // Show splashscreen for a second
-            await Task.Delay(2000);
+            await Task.Delay(1000);
 
             // Navigate to video player
             var extras = new Bundle();

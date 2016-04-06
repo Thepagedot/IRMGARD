@@ -38,7 +38,7 @@ namespace IRMGARD
             ivSplashscreen.SetImageBitmap(bmpSplashscreen);
 
             // Show splashscreen for a second
-            await Task.Delay(2000);
+            await Task.Delay(1000);
 
             if (String.IsNullOrEmpty(DataHolder.Current.CurrentLevel.VideoPath))
             {
