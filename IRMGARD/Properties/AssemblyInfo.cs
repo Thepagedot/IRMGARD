@@ -6,11 +6,11 @@ using Android.App;
 // Change them to the values specific to your project.
 
 [assembly: AssemblyTitle ("IRMGARD")]
-[assembly: AssemblyDescription ("")]
+[assembly: AssemblyDescription ("Hilft Erwachsenen Lesen und Schreiben zu lernen")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("")]
-[assembly: AssemblyProduct ("")]
-[assembly: AssemblyCopyright ("Robin-Manuel")]
+[assembly: AssemblyCompany ("Kopf, Hand und Fuss gGmbh")]
+[assembly: AssemblyProduct ("IRMGARD-App")]
+[assembly: AssemblyCopyright ("© 2016 KOPF, HAND und FUSS")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 

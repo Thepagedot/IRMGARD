@@ -4,7 +4,11 @@ namespace IRMGARD
 {
     public static class Env
     {
+#if DEBUG
         public const bool Debug = true;
+#else
+        public const bool Debug = false;
+#endif
         public const bool Release = !Debug;
 
         public static bool LollipopSupport

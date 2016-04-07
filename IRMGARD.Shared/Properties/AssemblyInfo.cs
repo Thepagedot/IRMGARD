@@ -7,11 +7,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("IRMGARD.Shared")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Hilft Erwachsenen Lesen und Schreiben zu lernen")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("IRMGARD.Shared")]
-[assembly: AssemblyCopyright("Copyright ©  2015")]
+[assembly: AssemblyCompany("Kopf, Hand und Fuss gGmbh")]
+[assembly: AssemblyProduct("IRMGARD-App")]
+[assembly: AssemblyCopyright("© 2016 KOPF, HAND und FUSS")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 [assembly: NeutralResourcesLanguage("en")]
