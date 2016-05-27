@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="legalnotice">Kontakt</string>
+    <string name="legalnotice_content">
+        <![CDATA[
+<h2>Impressum</h2>
+<b>KOPF, HAND + FUSS gemeinnützige Gesellschaft für Bildung mbH</b><br>Ludwigkirchstr. 2<br>10719 Berlin
+<p>
+<b>Geschäftsführerin:</b><br>Stefanie Trzecinski
+<p>
+<b>Kontakt:</b><br>Tel: 030 / 8 321 66 40<br>Fax: 030 / 8 321 66 41<br>E-Mail: info@kopfhandundfuss.de<br>Internet: www.kopfhandundfuss.de
+<p>
+<b>Registereintrag:</b><br>Handelsregister Amtsgericht Berlin (Charlottenburg)<br>HR B 128577 B<br>Steuernummer: 27/613/02219
+<p>
+<b>Inhaltlich Verantwortliche gemäß § 55 Abs. 2 RStV (V.i.S.d.M.):</b><br>Stefanie Trzecinski (Anschrift wie oben)
+<p>
+<br>
+<h2>Rechtliche Hinweise</h2>
+<b>1. Haftungsbeschränkung</b><br>
+Die Inhalte dieser App wurden mit größtmöglicher Sorgfalt erstellt. Die KOPF, HAND + FUSS gGmbH übernimmt jedoch keine Gewähr für die Richtigkeit, Vollständigkeit und Aktualität der bereitgestellten Inhalte. Die Nutzung der App erfolgt auf eigene Gefahr des Nutzers. Mit der reinen Nutzung der App von KOPF, HAND + FUSS gGmbH kommt keinerlei Vertragsverhältnis zwischen dem Nutzer und der KOPF, HAND + FUSS gGmbH zustande. 
+<p>
+<b>2. Urheber- und Leistungsschutzrechte</b><br>
+Die in dieser App veröffentlichten Inhalte unterliegen dem deutschen Urheber- und Leistungsschutzrecht. Jede vom deutschen Urheber- und Leistungsschutzrecht nicht zugelassene Verwertung bedarf der vorherigen schriftlichen Zustimmung der KOPF, HAND + FUSS gGmbH oder des jeweiligen Rechteinhabers. Dies gilt insbesondere für Vervielfältigung, Bearbeitung, Übersetzung, Einspeicherung, Verarbeitung bzw. Wiedergabe von Inhalten in Datenbanken oder anderen elektronischen Medien und Systemen. Inhalte und Rechte Dritter sind dabei als solche gekennzeichnet. Die unerlaubte Vervielfältigung oder Weitergabe einzelner Inhalte oder der kompletten App ist nicht gestattet und strafbar. 
+<p>
+<b>3. Datenschutz</b><br>
+Die App sammelt oder speichert keine personenbezogenen Daten. Auch für andere Zwecke werden keine Daten des Nutzers verwendet.<br><br>
+Die Verwendung der Kontaktdaten des Impressums zur gewerblichen Werbung ist ausdrücklich nicht erwünscht, es sei denn die KOPF, HAND + FUSS gGmbH hatte zuvor seine schriftliche Einwilligung erteilt oder es besteht bereits eine Geschäftsbeziehung. Die KOPF, HAND + FUSS gGmbH und alle auf dieser Website genannten Personen widersprechen hiermit jeder kommerziellen Verwendung und Weitergabe ihrer Daten. 
+<p>
+<b>4. Besondere Nutzungsbedingungen</b><br>
+Soweit besondere Bedingungen für einzelne Nutzungen dieser App von den vorgenannten Nummern 1. bis 3. abweichen, wird an entsprechender Stelle ausdrücklich darauf hingewiesen. In diesem Falle gelten im jeweiligen Einzelfall die besonderen Nutzungsbedingungen.
+<p>
+<i>Quelle: Disclaimer von <b>www.Juraforum.de</b> - Rechtsportal. Angepasst für die Veröffentlichung der App IRMGARD.</i>
+]]>
+    </string>
+</resources>

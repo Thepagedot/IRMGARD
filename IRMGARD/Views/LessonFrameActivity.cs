@@ -19,6 +19,7 @@ using AlertDialog = Android.Support.V7.App.AlertDialog;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.Design.Widget;
 using Android.Views.Animations;
+using Android.Content;
 
 namespace IRMGARD
 {
@@ -350,6 +351,10 @@ namespace IRMGARD
         {
             switch (item.ItemId)
             {
+                // Navigate to legal notice
+                case Resource.Id.btnLegalNotice:
+                    StartActivity(new Intent(this, typeof(LegalNoticeActivity)));
+                    break;
                 // Play voice instruction
                 case Resource.Id.btnVoiceInstruction:
                     PlayOrStopInstruction();

@@ -37,8 +37,8 @@ namespace IRMGARD
             bmpSplashscreen = BitmapFactory.DecodeResource(Resources, Resource.Drawable.irmgard_danke_01);
             ivSplashscreen.SetImageBitmap(bmpSplashscreen);
 
-            // Show splashscreen for a second
-            await Task.Delay(1000);
+            // Show splashscreen for two seconds
+            await Task.Delay(Env.Debug ? 100 : 2000);
 
             if (String.IsNullOrEmpty(DataHolder.Current.CurrentLevel.VideoPath))
             {

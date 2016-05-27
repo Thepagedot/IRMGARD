@@ -15,4 +15,16 @@
         android:icon="@drawable/ic_hearing_black_24dp"
         android:title="@string/playVoiceInstruction"
         app:showAsAction="always" />
+
+    <item
+        android:icon="@drawable/ic_more_vert_black_24dp"
+        app:showAsAction="always">
+        
+        <menu>
+          <item
+              android:id="@+id/btnLegalNotice"
+              android:title="@string/legalnotice"
+              app:showAsAction="always" />
+        </menu>
+    </item>
 </menu>
