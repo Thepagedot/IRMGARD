@@ -1017,6 +1017,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\splashscreen.png" />
     <AndroidResource Include="Resources\values\LegalNotice.xml" />
     <AndroidResource Include="Resources\layout\LegalNotice.axml" />
+    <AndroidResource Include="Resources\menu\legal_notice_menu.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">

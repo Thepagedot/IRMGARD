@@ -93,5 +93,25 @@ namespace IRMGARD
                 StartActivity(intent);
             }
 		}
-	}
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.legal_notice_menu, menu);
+
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                // Navigate to legal notice
+                case Resource.Id.btnLegalNotice:
+                    StartActivity(new Intent(this, typeof(LegalNoticeActivity)));
+                    break;
+            }
+
+            return base.OnOptionsItemSelected(item);
+        }
+    }
 }

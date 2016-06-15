@@ -4,6 +4,7 @@ using Android.App;
 using Android.Content;
 using Android.Graphics;
 using Android.OS;
+using Android.Views;
 using Android.Widget;
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
@@ -84,6 +85,26 @@ namespace IRMGARD
             ivSplashscreen.SetImageBitmap(null);
             bmpSplashscreen.Dispose();
             bmpSplashscreen = null;
+        }
+
+        public override bool OnCreateOptionsMenu(IMenu menu)
+        {
+            MenuInflater.Inflate(Resource.Menu.legal_notice_menu, menu);
+
+            return base.OnCreateOptionsMenu(menu);
+        }
+
+        public override bool OnOptionsItemSelected(IMenuItem item)
+        {
+            switch (item.ItemId)
+            {
+                // Navigate to legal notice
+                case Resource.Id.btnLegalNotice:
+                    StartActivity(new Intent(this, typeof(LegalNoticeActivity)));
+                    break;
+            }
+
+            return base.OnOptionsItemSelected(item);
         }
     }
 }
