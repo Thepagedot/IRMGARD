@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading.Tasks;
 
 using Android.App;
 using Android.Content;
@@ -8,6 +7,7 @@ using Android.OS;
 using Android.Widget;
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
+using Android.Support.Design.Widget;
 
 namespace IRMGARD
 {
@@ -48,22 +48,13 @@ namespace IRMGARD
                 // Load progress
                 await DataHolder.Current.LoadProgressAsync();
             }
+
+            var startButton = FindViewById<FloatingActionButton>(Resource.Id.btnStart);
+            startButton.Click += StartButton_Click;
         }
 
-        public override void OnBackPressed() {
-            // Disable back button navigation on first screen
-        }
-
-        protected override async void OnResume()
+        void NavigateToNextScreen()
         {
-            base.OnResume();
-
-            bmpSplashscreen = BitmapFactory.DecodeResource(Resources, Resource.Drawable.splashscreen);
-            ivSplashscreen.SetImageBitmap(bmpSplashscreen);
-
-            // Show splashscreen for two seconds
-            await Task.Delay(Env.Debug ? 100 : 2000);
-
             // Navigate to video player
             var extras = new Bundle();
             extras.PutString("nextView", "LevelSelectActivity");
@@ -71,6 +62,19 @@ namespace IRMGARD
             var intent = new Intent(this, typeof(VideoActivity));
             intent.PutExtras(extras);
             StartActivity(intent);
+        }
+
+        void StartButton_Click(object sender, EventArgs e)
+        {
+            NavigateToNextScreen();
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+
+            bmpSplashscreen = BitmapFactory.DecodeResource(Resources, Resource.Drawable.splashscreen);
+            ivSplashscreen.SetImageBitmap(bmpSplashscreen);
         }
 
         protected override void OnPause()
