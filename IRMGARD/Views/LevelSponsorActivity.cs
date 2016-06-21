@@ -66,9 +66,9 @@ namespace IRMGARD
             bmpSplashscreen = BitmapFactory.DecodeResource(Resources, Resource.Drawable.irmgard_danke_01);
             ivSplashscreen.SetImageBitmap(bmpSplashscreen);
 
-            // Show splashscreen for three seconds
+            // Show splashscreen for five seconds (three seconds is too short)
             navButtonClicked = false;
-            await Task.Delay(3000);
+            await Task.Delay(5000);
 
             if (!navButtonClicked)
             {
