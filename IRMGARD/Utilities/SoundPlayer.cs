@@ -49,8 +49,8 @@ namespace IRMGARD
 		{
 			try
 			{
-				// Describe sound file from Assets properly
-                var descriptor = context.Assets.OpenFd(folderName ?? DataHolder.Current.Common.AssetSoundDir + "/" +  fileName);
+                // Describe sound file from Assets properly
+                var descriptor = AssetHelper.Instance.OpenFd(folderName ?? DataHolder.Current.Common.AssetSoundDir + "/" + fileName);
 
                 // Mark as active
                 waitForCompletionActive = waitForCompletion;
@@ -70,9 +70,9 @@ namespace IRMGARD
                 // Reset player if still playing
                 Stop();
 
-				// Play sound file
-				player.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
-				player.Prepare();
+                // Play sound file
+                player.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
+                player.Prepare();
 				player.Start();
 			}
 			catch (FileNotFoundException)

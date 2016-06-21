@@ -6,8 +6,10 @@ namespace IRMGARD
     {
 #if DEBUG
         public const bool Debug = true;
+        public const bool UseOBB = false;
 #else
         public const bool Debug = false;
+        public const bool UseOBB = true;
 #endif
         public const bool Release = !Debug;
 

@@ -768,7 +768,7 @@
                 {
                   "Path": "Gif/l_1.gif"
                 }
-             ]
+              ]
             },
             {
               "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
@@ -783,7 +783,7 @@
                 {
                   "Path": "Gif/m_1.gif"
                 }
-             ]
+              ]
             },
             {
               "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
@@ -798,7 +798,7 @@
                 {
                   "Path": "Gif/n_1.gif"
                 }
-             ]
+              ]
             },
             {
               "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
@@ -813,7 +813,7 @@
                 {
                   "Path": "Gif/r_1.gif"
                 }
-             ]
+              ]
             },
             {
               "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
@@ -828,7 +828,7 @@
                 {
                   "Path": "Gif/s_1.gif"
                 }
-             ]
+              ]
             }
           ]
         },
@@ -2501,7 +2501,7 @@
                 {
                   "Path": "Gif/f_1.gif"
                 }
-             ]
+              ]
             },
             {
               "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
@@ -2516,7 +2516,7 @@
                 {
                   "Path": "Gif/h_1.gif"
                 }
-             ]
+              ]
             },
             {
               "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
@@ -2531,7 +2531,7 @@
                 {
                   "Path": "Gif/j_1.gif"
                 }
-             ]
+              ]
             },
             {
               "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
@@ -2546,7 +2546,7 @@
                 {
                   "Path": "Gif/w_1.gif"
                 }
-             ]
+              ]
             },
             {
               "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
@@ -2561,7 +2561,7 @@
                 {
                   "Path": "Gif/z_1.gif"
                 }
-             ]
+              ]
             }
           ]
         },
@@ -4320,7 +4320,7 @@
                 {
                   "Path": "Gif/b_1.gif"
                 }
-             ]
+              ]
             },
             {
               "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
@@ -4335,7 +4335,7 @@
                 {
                   "Path": "Gif/p_1.gif"
                 }
-             ]
+              ]
             },
             {
               "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
@@ -4350,7 +4350,7 @@
                 {
                   "Path": "Gif/g_1.gif"
                 }
-             ]
+              ]
             },
             {
               "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
@@ -4365,7 +4365,7 @@
                 {
                   "Path": "Gif/k_1.gif"
                 }
-             ]
+              ]
             },
             {
               "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
@@ -4380,7 +4380,7 @@
                 {
                   "Path": "Gif/d_1.gif"
                 }
-             ]
+              ]
             },
             {
               "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
@@ -4395,7 +4395,7 @@
                 {
                   "Path": "Gif/t_1.gif"
                 }
-             ]
+              ]
             }
           ]
         },
@@ -6505,7 +6505,7 @@
                 {
                   "Path": "Gif/c_1.gif"
                 }
-             ]
+              ]
             },
             {
               "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
@@ -6520,7 +6520,7 @@
                 {
                   "Path": "Gif/q_1.gif"
                 }
-             ]
+              ]
             },
             {
               "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
@@ -6535,7 +6535,7 @@
                 {
                   "Path": "Gif/v_1.gif"
                 }
-             ]
+              ]
             },
             {
               "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
@@ -6550,7 +6550,7 @@
                 {
                   "Path": "Gif/x_1.gif"
                 }
-             ]
+              ]
             },
             {
               "$type": "IRMGARD.Models.LetterWriteIteration, IRMGARD",
@@ -6565,7 +6565,7 @@
                 {
                   "Path": "Gif/y_1.gif"
                 }
-             ]
+              ]
             }
           ]
         },

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/topMenu">
+
+    <item
+        android:id="@+id/btnLegalNotice"
+        android:title="@string/legalnotice_start"
+        app:showAsAction="always">
+    </item>
+</menu>

@@ -96,7 +96,7 @@ namespace IRMGARD
             {
                 // First decode with inJustDecodeBounds=true to check dimensions
                 options.InJustDecodeBounds = true;
-                using (var stream = context.Assets.Open(filePath))
+                using (var stream = AssetHelper.Instance.Open(filePath))
                 {
                     BitmapFactory.DecodeStream(stream, null, options);
                 }
@@ -113,7 +113,7 @@ namespace IRMGARD
             }
 
             // Decode bitmap with inSampleSize set
-            using (var stream = context.Assets.Open(filePath))
+            using (var stream = AssetHelper.Instance.Open(filePath))
             {
                 var bitmap = BitmapFactory.DecodeStream(stream, null, options);
                 TimeProfiler.StopAndLog(TAG, "Decode Stream", started);

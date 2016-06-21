@@ -1,17 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="hello">Hello World, Click Me!</string>
-  <string name="app_name">IRMGARD</string>
-  <string name="hint">Hinweis</string>
-  <string name="playVoiceInstruction">Anleitung</string>
-  <string name="error_soundfileNotFound">Ups, dieser Sound konnte leider nicht geladen werden!</string>
-  <string name="close">Schließen</string>
-  <string name="sponsor_welcome">{0} wird unterstützt von:</string>
-  <string name="video_replay">Wiederholen</string>
-  <string name="lesson_finished">Aufgabe erledigt</string>
-  <string name="lesson_finished_message">Herzlichen Glückwunsch, du bist fertig und hast die Aufgabe geschafft!</string>
-  <string name="module_finished">Modul erledigt</string>
-  <string name="module_finished_message">Super, du hast alle Aufgaben in diesem Modul erledigt!</string>
-  <string name="menu_next">Nächste Übung</string>
-  <string name="menu_previous">Vorherige Übung</string>
+    <string name="hello">Hello World, Click Me!</string>
+    <string name="app_name">IRMGARD</string>
+    <string name="hint">Hinweis</string>
+    <string name="playVoiceInstruction">Anleitung</string>
+    <string name="error_soundfileNotFound">Ups, dieser Sound konnte leider nicht geladen werden!</string>
+    <string name="close">Schließen</string>
+    <string name="sponsor_welcome">{0} wird unterstützt von:</string>
+    <string name="video_replay">Wiederholen</string>
+    <string name="lesson_finished">Aufgabe erledigt</string>
+    <string name="lesson_finished_message">Herzlichen Glückwunsch, du bist fertig und hast die Aufgabe geschafft!</string>
+    <string name="module_finished">Modul erledigt</string>
+    <string name="module_finished_message">Super, du hast alle Aufgaben in diesem Modul erledigt!</string>
+    <string name="menu_next">Nächste Übung</string>
+    <string name="menu_previous">Vorherige Übung</string>
+    <string name="text_app_startup">Starte IRMGARD...</string>
+    <string name="text_app_check_obb">Prüfe vorhandenes Lernmaterial...</string>
+    <string name="text_app_download">Download des Lernmaterials...</string>
+
+    <!-- Text strings for media download -->
+    <string name="text_paused_cellular">Möchten Sie den Download über Ihre Mobilfunkverbindung durchführen? Je nach Mobilfunkdatentarif kann dies zusätzliche Kosten verursachen.</string>
+    <string name="text_paused_cellular_2">Wenn Sie nicht die Mobilfunkverbindung für den Download nutzen wollen, wird der Download wieder aufgenommen wenn Wi-Fi wieder zur Verfügung steht.</string>
+    <string name="text_button_resume_cellular">Nutze Mobilfunk</string>
+    <string name="text_button_wifi_settings">Wi-Fi Einstellungen</string>
+    <string name="text_verifying_download">Heruntergeladene Dateien werden überprüft</string>
+    <string name="text_validation_complete">Überprüfung abgschlossen. Klicken Sie zur Bestätigung auf OK.</string>
+    <string name="text_validation_failed">Überprüfung fehlgeschlagen.</string>
+    <string name="text_button_pause">Download anhalten</string>
+    <string name="text_button_resume">Download fortsetzen</string>
+    <string name="text_button_cancel">Abbrechen</string>
+    <string name="text_button_cancel_verify">Überprüfung abbrechen</string>
 </resources>

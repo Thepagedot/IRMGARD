@@ -78,7 +78,7 @@ namespace IRMGARD
         {
             if (!String.IsNullOrEmpty(videoPath) && !mediaPlayer.IsPlaying)
             {
-                var descriptor = Assets.OpenFd(videoPath);
+                var descriptor = AssetHelper.Instance.OpenFd(videoPath);
                 mediaPlayer.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
                 mediaPlayer.Prepare();
                 mediaPlayer.Start();

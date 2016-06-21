@@ -22,28 +22,31 @@ namespace IRMGARD
             var item = GetItem(position);
             var view = convertView;
             if (view == null)
-                view = LayoutInflater.From(Context).Inflate(Resource.Layout.GifTask, null);
-            /*else
-                ((BitmapDrawable)view.FindViewById<ImageView>(Resource.Id.image).Drawable).Bitmap.Recycle();*/
-
-            if (item.Path != null)
             {
-                var gifImageView = view.FindViewById<GifImageView>(Resource.Id.gifImageView);
-                using (var stream = Context.Assets.Open(item.Path))
-                {
-                    var streamReader = new StreamReader(stream);
-                    var bytes = default(byte[]);
-                    using (var memoryStream = new MemoryStream())
-                    {
-                        streamReader.BaseStream.CopyTo(memoryStream);
-                        bytes = memoryStream.ToArray();
+                view = LayoutInflater.From(Context).Inflate(Resource.Layout.GifTask, null);
+            }
 
-                        if (gifImageView != null)
+            var gifImageView = view.FindViewById<GifImageView>(Resource.Id.gifImageView);
+            if (item.Path != null && gifImageView != null)
+            {
+                using (var stream = AssetHelper.Instance.Open(item.Path))
+                {
+                    if (Env.UseOBB)
+                    {
+                        // TODO Verify memory dealloc of gifBytes
+                        byte[] gifBytes = new byte[stream.Length];
+                        stream.Read(gifBytes, 0, gifBytes.Length);
+                        gifImageView.SetBytes(gifBytes);
+                    }
+                    else
+                    {
+                        var streamReader = new StreamReader(stream);
+                        var bytes = default(byte[]);
+                        using (var memoryStream = new MemoryStream())
                         {
+                            streamReader.BaseStream.CopyTo(memoryStream);
+                            bytes = memoryStream.ToArray();
                             gifImageView.SetBytes(bytes);
-                            //gifImageView.StartAnimation();
-                            //await Task.Delay(50);
-                            //gifImageView.StopAnimation();
                         }
                     }
                 }

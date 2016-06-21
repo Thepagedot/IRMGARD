@@ -28,16 +28,14 @@ namespace IRMGARD.Utilities
             if (levelNumber == -1)
                 fileName = "sandbox.json";
 
-            using (var reader = new StreamReader(Application.Context.Assets.Open(fileName)))
+            using (var stream = AssetHelper.Instance.Open(fileName))
+            using (var reader = new StreamReader(stream))
             {
                 try
                 {
                     var jsonContent = await reader.ReadToEndAsync();
-                    var json = JObject.Parse(jsonContent);
-
-                    //TODO: Try to do this async
-                    var level = JsonConvert.DeserializeObject<Level>(json.ToString(), _JsonSettings);
-                    return level;
+                    var json = JObject.Parse(normalizeContent(jsonContent));
+                    return JsonConvert.DeserializeObject<Level>(json.ToString(), _JsonSettings);
                 }
                 catch (Exception ex)
                 {
@@ -52,12 +50,14 @@ namespace IRMGARD.Utilities
         public static async Task<Common> LoadCommonAsync()
         {
             var fileName = "common.json";
-            using (var reader = new StreamReader(Application.Context.Assets.Open(fileName)))
+
+            using (var stream = AssetHelper.Instance.Open(fileName))
+            using (var reader = new StreamReader(stream))
             {
                 try
                 {
                     var jsonContent = await reader.ReadToEndAsync();
-                    var json = JObject.Parse(jsonContent);
+                    var json = JObject.Parse(normalizeContent(jsonContent));
                     return JsonConvert.DeserializeObject<Common>(json.ToString(), _JsonSettings);
                 }
                 catch (Exception ex)
@@ -68,6 +68,16 @@ namespace IRMGARD.Utilities
 
                 return null;
             }
+        }
+
+        private static string normalizeContent(string jsonContent)
+        {
+            string PKZipHeader = Encoding.UTF8.GetString(new byte[] { 0x50, 0x4B, 0x03, 0x04, 0x14 });
+            string PKZipHeader2 = Encoding.UTF8.GetString(new byte[] { 0x50, 0x4B, 0x01, 0x02, 0x2D });
+
+            var idx = jsonContent.IndexOf(PKZipHeader);
+            idx = (idx == -1) ? jsonContent.IndexOf(PKZipHeader2) : idx;
+            return (idx > -1) ? jsonContent.Substring(0, idx) : jsonContent;
         }
 
         public static async Task SaveToFileAsync(string fileName, object content)

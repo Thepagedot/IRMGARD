@@ -1,14 +1,13 @@
-﻿
-{
+﻿{
   "AssetImageDir": "Images",
   "AssetSoundDir": "Sounds",
   "AssetPraiseDir": "Praise",
   "AssetCriticismDir": "Criticism",
   "IntroVideoPath": "Videos/Handy_Level1_720p.mp4",
   "RecurringTaskSoundFiles": [
-        null,
-        "Tasks/Diese_Uebung_kennst_du_schon.mp3",
-        "Tasks/Diese_Uebung_kommt_dir_sicher_bekannt_vor.mp3",
-        "Tasks/Erinnerst_du_dich_an_die_Uebung.mp3"
+    null,
+    "Tasks/Diese_Uebung_kennst_du_schon.mp3",
+    "Tasks/Diese_Uebung_kommt_dir_sicher_bekannt_vor.mp3",
+    "Tasks/Erinnerst_du_dich_an_die_Uebung.mp3"
   ]
 }

@@ -35,7 +35,7 @@ namespace IRMGARD
             {
                 try
                 {
-                    tf = Typeface.CreateFromAsset(context.Assets, fontFiles[font]);
+                    tf = GetTypeface(context, fontFiles[font]);
                 }
                 catch (Exception e)
                 {
@@ -43,10 +43,19 @@ namespace IRMGARD
                     {
                         Log.Debug(TAG, "Cannot load font {0} ({1})!", fontFiles[font], e.Message);
                     }
-                    return Typeface.Default;
+                    tf = Typeface.Default;
                 }
                 fontCache[font] = tf;
             }
+
+            return tf;
+        }
+
+        private static Typeface GetTypeface(Context context, string fontPath)
+        {
+            string tempFilePath = AssetHelper.Instance.GetExtractedTempFilePath(fontPath);
+            var tf = Typeface.CreateFromFile(tempFilePath);
+            AssetHelper.Instance.DeleteExtractedTempFile(fontPath);
 
             return tf;
         }
