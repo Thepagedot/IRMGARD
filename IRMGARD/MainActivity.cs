@@ -21,6 +21,8 @@ using ExpansionDownloader.Client;
 using ExpansionDownloader.Database;
 using ExpansionDownloader.Service;
 using Android.Support.Design.Widget;
+using HockeyApp.Android;
+using HockeyApp.Android.Metrics;
 
 namespace IRMGARD
 {
@@ -123,7 +125,7 @@ namespace IRMGARD
         }
 
         /// <summary>
-        /// Called when the activity is first created; we wouldn't create a 
+        /// Called when the activity is first created; we wouldn't create a
         /// layout in the case where we have the file and are moving to another
         /// activity without downloading.
         /// </summary>
@@ -133,6 +135,13 @@ namespace IRMGARD
         protected override async void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+
+            if (Env.Release)
+            {
+                // Register HockeyApp
+                CrashManager.Register(this, "089a6ee65f4242b89c51eab36a4e0ed2");
+                MetricsManager.Register(this, Application, "089a6ee65f4242b89c51eab36a4e0ed2");
+            }
 
             RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
 
@@ -148,9 +157,9 @@ namespace IRMGARD
 
             if (Env.Release)
             {
-                // Before we do anything, are the files we expect already here and 
-                // delivered (presumably by Market) 
-                // For free titles, this is probably worth doing. (so no Market 
+                // Before we do anything, are the files we expect already here and
+                // delivered (presumably by Market)
+                // For free titles, this is probably worth doing. (so no Market
                 // request is necessary)
                 initText.SetText(Resource.String.text_app_check_obb);
                 initText.Visibility = ViewStates.Visible;
@@ -190,9 +199,6 @@ namespace IRMGARD
         protected override void OnResume()
         {
             base.OnResume();
-
-            bmpSplashscreen = BitmapFactory.DecodeResource(Resources, Resource.Drawable.splashscreen);
-            ivSplashscreen.SetImageBitmap(bmpSplashscreen);
 
             /// Re-connect the stub to our service on resume.
             if (Env.Release && this.downloaderServiceConnection != null)
@@ -236,7 +242,7 @@ namespace IRMGARD
         #region IDownloaderClient Methods
 
         /// <summary>
-        /// Sets the state of the various controls based on the progressinfo 
+        /// Sets the state of the various controls based on the progressinfo
         /// object sent from the downloader service.
         /// </summary>
         /// <param name="progress">
@@ -257,7 +263,7 @@ namespace IRMGARD
 
         /// <summary>
         /// The download state should trigger changes in the UI.
-        /// It may be useful to show the state as being indeterminate at times.  
+        /// It may be useful to show the state as being indeterminate at times.
         /// </summary>
         /// <param name="newState">
         /// The new state.
@@ -329,8 +335,8 @@ namespace IRMGARD
         /// Create the remote service and marshaler.
         /// </summary>
         /// <remarks>
-        /// This is how we pass the client information back to the service so 
-        /// the client can be properly notified of changes. 
+        /// This is how we pass the client information back to the service so
+        /// the client can be properly notified of changes.
         /// Do this every time we reconnect to the service.
         /// </remarks>
         /// <param name="m">
@@ -347,14 +353,14 @@ namespace IRMGARD
         #region Expansion Files Download Methods
 
         /// <summary>
-        /// Go through each of the Expansion APK files defined in the project 
-        /// and determine if the files are present and match the required size. 
+        /// Go through each of the Expansion APK files defined in the project
+        /// and determine if the files are present and match the required size.
         /// </summary>
         /// <remarks>
-        /// Free applications should definitely consider doing this, as this 
+        /// Free applications should definitely consider doing this, as this
         /// allows the application to be launched for the first time without
         /// having a network connection present.
-        /// Paid applications that use LVL should probably do at least one LVL 
+        /// Paid applications that use LVL should probably do at least one LVL
         /// check that requires the network to be present, so this is not as
         /// necessary.
         /// </remarks>
@@ -435,7 +441,7 @@ namespace IRMGARD
                     }
                 }
 
-                // Build PendingIntent used to open this activity when user 
+                // Build PendingIntent used to open this activity when user
                 // taps the notification.
                 PendingIntent pendingIntent = PendingIntent.GetActivity(
                     this, 0, intent, PendingIntentFlags.UpdateCurrent);
@@ -444,8 +450,8 @@ namespace IRMGARD
                 DownloadServiceRequirement startResult = DownloaderService.StartDownloadServiceIfRequired(
                     this, pendingIntent, typeof(MediaDownloadService));
 
-                // The DownloaderService has started downloading the files, 
-                // show progress otherwise, the download is not needed so  we 
+                // The DownloaderService has started downloading the files,
+                // show progress otherwise, the download is not needed so  we
                 // fall through to starting the actual app.
                 if (startResult != DownloadServiceRequirement.NoDownloadRequired)
                 {
