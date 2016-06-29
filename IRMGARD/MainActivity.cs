@@ -251,9 +251,9 @@ namespace IRMGARD
         /// </param>
         public void OnDownloadProgress(DownloadProgressInfo progress)
         {
-            this.averageSpeedTextView.Text = string.Format("{0} Kb/s", Helpers.GetSpeedString(progress.CurrentSpeed));
-            this.timeRemainingTextView.Text = string.Format(
-                "Verbleibende Zeit: {0}", Helpers.GetTimeRemaining(progress.TimeRemaining));
+            // this.averageSpeedTextView.Text = string.Format("{0} Kb/s", Helpers.GetSpeedString(progress.CurrentSpeed));
+            // this.timeRemainingTextView.Text = string.Format(
+            //    "Verbleibende Zeit: {0}", Helpers.GetTimeRemaining(progress.TimeRemaining));
             this.progressBar.Max = (int)(progress.OverallTotal >> 8);
             this.progressBar.Progress = (int)(progress.OverallProgress >> 8);
             this.progressPercentTextView.Text = string.Format(

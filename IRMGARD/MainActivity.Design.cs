@@ -26,7 +26,7 @@ namespace IRMGARD
         /// <summary>
         /// The average speed text view.
         /// </summary>
-        private TextView averageSpeedTextView;
+        // private TextView averageSpeedTextView;
 
         /// <summary>
         /// The dashboard view.
@@ -71,7 +71,7 @@ namespace IRMGARD
         /// <summary>
         /// The time remaining text view.
         /// </summary>
-        private TextView timeRemainingTextView;
+        // private TextView timeRemainingTextView;
 
         /// <summary>
         /// The use cell data view.
@@ -92,8 +92,8 @@ namespace IRMGARD
             this.statusTextView = this.FindViewById<TextView>(Resource.Id.statusText);
             this.progressFractionTextView = this.FindViewById<TextView>(Resource.Id.progressAsFraction);
             this.progressPercentTextView = this.FindViewById<TextView>(Resource.Id.progressAsPercentage);
-            this.averageSpeedTextView = this.FindViewById<TextView>(Resource.Id.progressAverageSpeed);
-            this.timeRemainingTextView = this.FindViewById<TextView>(Resource.Id.progressTimeRemaining);
+            // this.averageSpeedTextView = this.FindViewById<TextView>(Resource.Id.progressAverageSpeed);
+            // this.timeRemainingTextView = this.FindViewById<TextView>(Resource.Id.progressTimeRemaining);
             this.dashboardView = this.FindViewById(Resource.Id.downloaderDashboard);
             this.useCellDataView = this.FindViewById(Resource.Id.approveCellular);
             this.pauseButton = this.FindViewById<Button>(Resource.Id.pauseButton);

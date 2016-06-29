@@ -11,7 +11,7 @@
         android:layout_height="match_parent"
         android:layout_marginTop="56dp"
         android:adjustViewBounds="true"
-        android:scaleType="fitStart"
+        android:scaleType="fitXY"
         android:src="@drawable/splashscreen" />
     <TextView
         android:id="@+id/initText"
@@ -85,6 +85,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1" />
+<!--
                 <TextView
                     android:id="@+id/progressAverageSpeed"
                     style="@android:style/TextAppearance.Small"
@@ -100,6 +101,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignRight="@+id/progressBar"
                     android:layout_below="@+id/progressBar" />
+-->
             </RelativeLayout>
             <LinearLayout
                 android:id="@+id/downloaderDashboard"
