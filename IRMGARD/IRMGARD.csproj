@@ -16,9 +16,11 @@
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>IRMGARD</AssemblyName>
     <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
+    <!-- TODO Release: Update ReleaseVersion -->
     <ReleaseVersion>1.1.0</ReleaseVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
     <Description>Hilft Erwachsenen Lesen und Schreiben zu lernen.</Description>
+    <!-- TODO Release: Set ZipAssets to 1 to generate expansion files -->
     <ZipAssets>0</ZipAssets>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

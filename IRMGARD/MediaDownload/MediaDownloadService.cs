@@ -16,7 +16,13 @@ namespace IRMGARD
         {
             get
             {
+                // TODO Release: Switch between "IRMGARD" and "IRMGARD Preview" app configuration
+
+                // IRMGARD
                 return "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAieZl7lCwRPcjbixc0pNl7EVCS6lj/JpFm8RHSb7G3ER95R7TQREPBrFFiCBcgF6zozCCNbKUOtum9J++DNS78k9g1TrpIYLRQU1YolFA65uAENcSqMmxazZQReXkMtQmXw3hidX5J3db+psE9k0IiKZ2B7ROHWBkBlc7Cgrj9nabmMZOFXoOMOPg6xL8hCvbd/4Af5zIBZP2FYeYWaoLb+fKt8dn2OqiZEnKMCjtQWOYv12bqmjuyd4WPD7AjbH9I3bSzrkZvIrh26qXDMmGCBLLIknKMbyocESuac9diew/yMkCnVtxnQHY8aAiO937vkP4D3u5MbQLi6go73pIyQIDAQAB";
+
+                // IRMGARD Preview
+                // return "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiizOn/iHw6H3AuNg0TQG1qQv0lT2SsCiY1GdfDoYXKzIrLRoxYw1ozehxR2cb3VrglChUK+/4mV0I2lAkh3yAedT6pyRdPcWk4Nev5Tak3w8aXN6UjkZj/BgxgVVQZtYrFbx5vikx9nT1TNoUlkylXAXAKRmbGP1Kxc7FXakZJvflsd1rlJSx9bsFtHyeUBeuZGmEbB8k6qNdgsr4xy4BNrfKSnn/mJ64GmJR+YiH5SK0SHWpITATtzWRLBaMD/LPDRYFf6jvAClkFHJdm3tCjGIAS0uhIbCotfmEFNCzzhs0EN11iEv40uIMUMAQP1jlduPoxNb/WVulq21QQ0D8QIDAQAB";
             }
         }
 
