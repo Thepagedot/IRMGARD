@@ -38,6 +38,7 @@ namespace IRMGARD
             text1.Text = items[position].Name;
             text1.TextSize = 18;
             text1.Typeface = FontHelper.Get(context, FontHelper.Font.SenBold);
+            text1.SetPadding(text1.PaddingLeft, 38, text1.PaddingRight, 38);
 
 			view.SetBackgroundColor(Android.Graphics.Color.ParseColor (items [position].Color));
             if (!items[position].IsEnabled)

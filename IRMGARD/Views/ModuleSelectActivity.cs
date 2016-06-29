@@ -13,6 +13,7 @@ using Android.Widget;
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using IRMGARD.Models;
+using Android.Graphics;
 
 namespace IRMGARD
 {
@@ -27,6 +28,7 @@ namespace IRMGARD
 			SetContentView (Resource.Layout.ModuleSelect);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            //this.SetSystemBarBackground (Color.ParseColor (DataHolder.Current.CurrentLevel.Color));
 
             moduleAdapter = new ModuleAdapter(this, DataHolder.Current.CurrentLevel.Modules.ToArray());
 			var moduleListView = FindViewById<ListView> (Resource.Id.lvModules);

@@ -150,6 +150,7 @@ namespace IRMGARD
             Title = "";
             SetSupportActionBar(this.FindViewById<Toolbar>(Resource.Id.toolbar));
 
+
             ivSplashscreen = this.FindViewById<ImageView>(Resource.Id.ivSplashscreen);
             initText = this.FindViewById<TextView>(Resource.Id.initText);
             startButton = this.FindViewById<FloatingActionButton>(Resource.Id.btnStart);
@@ -211,9 +212,9 @@ namespace IRMGARD
         {
             base.OnPause();
 
-            ivSplashscreen.SetImageBitmap(null);
-            bmpSplashscreen.Dispose();
-            bmpSplashscreen = null;
+            //ivSplashscreen.SetImageBitmap(null);
+            //bmpSplashscreen.Dispose();
+            //bmpSplashscreen = null;
         }
 
         protected override void OnStop()
@@ -607,7 +608,7 @@ namespace IRMGARD
 
         public override bool OnCreateOptionsMenu(IMenu menu)
         {
-            MenuInflater.Inflate(Resource.Menu.legal_notice_contact_menu, menu);
+            MenuInflater.Inflate(Resource.Menu.legal_notice_menu, menu);
 
             return base.OnCreateOptionsMenu(menu);
         }

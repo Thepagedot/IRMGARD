@@ -53,6 +53,7 @@ namespace IRMGARD
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.LessonFrame);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
+            //this.SetSystemBarBackground (Color.ParseColor (DataHolder.Current.CurrentModule.Color));
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
             progressList = new List<Progress>();

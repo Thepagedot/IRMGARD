@@ -15,7 +15,7 @@ using Android.Media;
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.Design.Widget;
-using System.Drawing;
+using Android.Graphics;
 
 namespace IRMGARD
 {
@@ -32,6 +32,7 @@ namespace IRMGARD
             base.OnCreate(bundle);
             RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
             SetContentView(Resource.Layout.Video);
+            this.SetSystemBarBackground (Color.Black);
 
             // Read context
             nextView = Intent.Extras.GetString("nextView");

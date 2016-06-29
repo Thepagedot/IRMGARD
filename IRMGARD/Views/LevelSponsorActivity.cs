@@ -26,6 +26,7 @@ namespace IRMGARD
             ivSplashscreen = FindViewById<ImageView>(Resource.Id.ivSplashscreen);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
+            //this.SetSystemBarBackground (Color.ParseColor (DataHolder.Current.CurrentLevel.Color));
             RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
 
             // Set title

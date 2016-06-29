@@ -163,6 +163,7 @@
     <Compile Include="Models\Levels\LetterWrite.cs" />
     <Compile Include="Adapter\Specific\LetterWriteAdapter.cs" />
     <Compile Include="Utilities\FontHelper.cs" />
+    <Compile Include="Utilities\ActivityHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="MainAssets\Sounds\Objects\Elefant.mp3" />

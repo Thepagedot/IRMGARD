@@ -15,5 +15,7 @@
         android:id="@+id/llLessons"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginLeft="-3dip" />
+        android:layout_marginLeft="-3dip"
+        android:layout_marginTop="10dip"
+        android:layout_marginBottom="2dip" />
 </LinearLayout>
