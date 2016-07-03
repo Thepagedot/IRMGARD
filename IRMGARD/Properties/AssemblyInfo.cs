@@ -34,10 +34,15 @@ using LicenseVerificationLibrary;
 [assembly: Application(Debuggable=false)]
 #endif
 
-// Add some common permissions, these can be removed if not needed
-[assembly: UsesPermission(Manifest.Permission.Internet)]
-[assembly: UsesPermission(Manifest.Permission.WriteExternalStorage)]
-[assembly: UsesPermission(Manifest.Permission.AccessNetworkState)]
-[assembly: UsesPermission(Manifest.Permission.WakeLock)]
-[assembly: UsesPermission(Manifest.Permission.AccessWifiState)]
+// Required to access Google Play Licensing (com.android.vending.CHECK_LICENSE)
 [assembly: UsesPermission(LicenseChecker.Manifest.Permission.CheckLicense)]
+// Required to download files from Google Play
+[assembly: UsesPermission(Manifest.Permission.Internet)]
+// Required to keep CPU alive while downloading files(NOT to keep screen awake)
+[assembly: UsesPermission(Manifest.Permission.WakeLock)]
+// Required to poll the state of the network connection and respond to changes
+[assembly: UsesPermission(Manifest.Permission.AccessNetworkState)]
+// Required to check whether Wi-Fi is enabled
+[assembly: UsesPermission(Manifest.Permission.AccessWifiState)]
+// Required to read and write the expansion files on shared storage
+[assembly: UsesPermission(Manifest.Permission.WriteExternalStorage)]

@@ -87,12 +87,28 @@ namespace IRMGARD
 
         private async Task InitApp()
         {
+            if (useObbDownloader != null)
+            {
+                useObbDownloader.Visibility = ViewStates.Gone;
+            }
             initText.SetText(Resource.String.text_app_startup);
             initText.Visibility = ViewStates.Visible;
 
             // Create and initialize asset manager instance for accessing asset files from obbs or apks
             ApplicationInfo ai = ApplicationContext.PackageManager.GetApplicationInfo(ApplicationContext.PackageName, PackageInfoFlags.MetaData);
             AssetHelper.CreateInstance(BaseContext, ai.MetaData.GetInt("obbMainVersionCode"), ai.MetaData.GetInt("obbPatchVersionCode"));
+            if (!AssetHelper.Instance.IsValid())
+            {
+                if (Env.Release)
+                {
+                    DoGetExpansionFiles();
+                    return;
+                }
+                else
+                {
+                    throw new FileNotFoundException("Expansion file(s) not valid!");
+                }
+            }
 
             // Initialize DataHolder if needed
             if (DataHolder.Current == null)
@@ -150,7 +166,6 @@ namespace IRMGARD
             Title = "";
             SetSupportActionBar(this.FindViewById<Toolbar>(Resource.Id.toolbar));
 
-
             ivSplashscreen = this.FindViewById<ImageView>(Resource.Id.ivSplashscreen);
             initText = this.FindViewById<TextView>(Resource.Id.initText);
             startButton = this.FindViewById<FloatingActionButton>(Resource.Id.btnStart);
@@ -164,37 +179,46 @@ namespace IRMGARD
                 // request is necessary)
                 initText.SetText(Resource.String.text_app_check_obb);
                 initText.Visibility = ViewStates.Visible;
-                if (!this.AreExpansionFilesDelivered() && !this.GetExpansionFiles())
+
+                if (AreExpansionFilesDelivered())
                 {
-                    initText.SetText(Resource.String.text_app_download);
-                    initText.Visibility = ViewStates.Visible;
-                    this.InitializeDownloadUi();
+                    await InitApp();
+                }
+                else
+                {
+                    initText.Visibility = ViewStates.Gone;
+                    DoGetExpansionFiles();
                 }
             }
-            /* download simulation
             else
             {
-                initText.SetText(Resource.String.text_app_check_obb);
-                initText.Visibility = ViewStates.Visible;
-                await Task.Delay(4000);
-                this.InitializeControls();
-                this.useObbDownloader.Visibility = ViewStates.Visible;
+                //download simulation
+                //initText.SetText(Resource.String.text_app_check_obb);
+                //initText.Visibility = ViewStates.Visible;
+                //await Task.Delay(4000);
+                //this.InitializeControls();
+                //this.useObbDownloader.Visibility = ViewStates.Visible;
 
-                initText.SetText(Resource.String.text_app_download);
-                initText.Visibility = ViewStates.Visible;
+                //initText.SetText(Resource.String.text_app_download);
+                //initText.Visibility = ViewStates.Visible;
 
-                for (int i = 1; i < 10; i++)
-                {
-                    this.RunOnUiThread(() => this.OnDownloadProgress(new DownloadProgressInfo(10000000, i*1000000, i*100, i*500)));
-                    await Task.Delay(1000);
-                }
-                this.useObbDownloader.Visibility = ViewStates.Gone;
+                //for (int i = 1; i < 10; i++)
+                //{
+                //    this.RunOnUiThread(() => this.OnDownloadProgress(new DownloadProgressInfo(10000000, i*1000000, i*100, i*500)));
+                //    await Task.Delay(1000);
+                //}
+                //this.useObbDownloader.Visibility = ViewStates.Gone;
+
+                await InitApp();
             }
-            */
+        }
 
-            //var extStore = Android.OS.Environment.ExternalStorageDirectory.AbsolutePath;
-
-            await InitApp();
+        private void DoGetExpansionFiles()
+        {
+            if (!this.GetExpansionFiles())
+            {
+                this.InitializeDownloadUi();
+            }
         }
 
         protected override void OnResume()
@@ -269,7 +293,7 @@ namespace IRMGARD
         /// <param name="newState">
         /// The new state.
         /// </param>
-        public void OnDownloadStateChanged(DownloaderState newState)
+        public async void OnDownloadStateChanged(DownloaderState newState)
         {
             if (this.downloaderState != newState)
             {
@@ -328,7 +352,8 @@ namespace IRMGARD
             }
             else
             {
-                this.ValidateExpansionFiles();
+                await InitApp();
+                // this.ValidateExpansionFiles();
             }
         }
 
@@ -372,7 +397,7 @@ namespace IRMGARD
         {
             var downloads = DownloadsDatabase.GetDownloads();
 
-            return downloads.Any() && downloads.All(x => Helpers.DoesFileExist(this, x.FileName, x.TotalBytes, false));
+            return downloads.Any() && downloads.All(x => Helpers.DoesFileExist(this, x.FileName, x.TotalBytes, true));
         }
 
         /// <summary>
@@ -390,14 +415,13 @@ namespace IRMGARD
             this.RunOnUiThread(
                 delegate
                 {
-                    this.pauseButton.Click += async delegate
+                    this.pauseButton.Click += delegate
                     {
-                        //Finish();
+                        // Finish();
                         if (this.useObbDownloader != null)
                         {
                             this.useObbDownloader.Visibility = ViewStates.Gone;
                         }
-                        await InitApp();
                     };
 
                     this.dashboardView.Visibility = ViewStates.Visible;
@@ -474,11 +498,11 @@ namespace IRMGARD
         /// </summary>
         private void InitializeDownloadUi()
         {
-            this.InitializeControls();
-            this.useObbDownloader.Visibility = ViewStates.Visible;
+            InitializeControls();
+            initText.Visibility = ViewStates.Gone;
+            useObbDownloader.Visibility = ViewStates.Visible;
 
-            this.downloaderServiceConnection = ClientMarshaller.CreateStub(
-                this, typeof(MediaDownloadService));
+            downloaderServiceConnection = ClientMarshaller.CreateStub(this, typeof(MediaDownloadService));
         }
 
         /// <summary>
@@ -535,9 +559,9 @@ namespace IRMGARD
         private void OnCellDataResume(object sender, EventArgs args)
         {
             this.StartActivity(new Intent(Settings.ActionWifiSettings));
-            //this.downloaderService.SetDownloadFlags(ServiceFlags.FlagsDownloadOverCellular);
-            //this.downloaderService.RequestContinueDownload();
-            //this.useCellDataView.Visibility = ViewStates.Gone;
+            this.downloaderService.SetDownloadFlags(ServiceFlags.FlagsDownloadOverCellular);
+            this.downloaderService.RequestContinueDownload();
+            this.useCellDataView.Visibility = ViewStates.Gone;
         }
 
         /// <summary>

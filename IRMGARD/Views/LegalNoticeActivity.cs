@@ -19,7 +19,8 @@ namespace IRMGARD
             SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             //RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
 
-            FindViewById<TextView>(Resource.Id.tvLegalNotice).TextFormatted = Html.FromHtml(Resources.GetString(Resource.String.legalnotice_content));
+            var version = PackageManager.GetPackageInfo(PackageName, 0).VersionName;
+            FindViewById<TextView>(Resource.Id.tvLegalNotice).TextFormatted = Html.FromHtml(string.Format(Resources.GetString(Resource.String.legalnotice_content), version));
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)

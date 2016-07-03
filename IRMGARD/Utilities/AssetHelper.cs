@@ -75,6 +75,11 @@ namespace IRMGARD
             File.Delete(GetTempFilePath(path));
         }
 
+        public bool IsValid()
+        {
+            return List("Images").Contains("Aal.png") && List("Fonts").Contains("sen-bold.otf");
+        }
+
         public abstract Stream Open(string path);
         public abstract List<string> List(string path);
         public abstract AssetFileDescriptor OpenFd(string path);
@@ -98,6 +103,10 @@ namespace IRMGARD
             public override Stream Open(string path)
             {
                 var zipFileEntry = expansionZipFile.GetEntry(path);
+                if (zipFileEntry == null)
+                {
+                    throw new FileNotFoundException("Open: zipFileEntry is null", path);
+                }
                 var zip = new ZipFile(zipFileEntry.ZipFileName);
 
                 return zip.ReadFile(zipFileEntry);
@@ -111,6 +120,10 @@ namespace IRMGARD
             public override AssetFileDescriptor OpenFd(string path)
             {
                 var zipFileEntry = expansionZipFile.GetEntry(path);
+                if (zipFileEntry == null)
+                {
+                    throw new FileNotFoundException("OpenFd: zipFileEntry is null", path);
+                }
                 var pfd = ParcelFileDescriptor.Open(new Java.IO.File(zipFileEntry.ZipFileName), ParcelFileMode.ReadOnly);
                 return new AssetFileDescriptor(pfd, zipFileEntry.FileOffset, zipFileEntry.FileSize);
             }

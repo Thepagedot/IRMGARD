@@ -17,17 +17,4 @@
     <string name="text_app_startup">Starte IRMGARD...</string>
     <string name="text_app_check_obb">Prüfe vorhandenes Lernmaterial...</string>
     <string name="text_app_download">Download des Lernmaterials...</string>
-
-    <!-- Text strings for media download -->
-    <string name="text_paused_cellular">Möchten Sie den Download über Ihre Mobilfunkverbindung durchführen? Je nach Mobilfunkdatentarif kann dies zusätzliche Kosten verursachen.</string>
-    <string name="text_paused_cellular_2">Wenn Sie nicht die Mobilfunkverbindung für den Download nutzen wollen, wird der Download wieder aufgenommen wenn Wi-Fi wieder zur Verfügung steht.</string>
-    <string name="text_button_resume_cellular">Nutze Mobilfunk</string>
-    <string name="text_button_wifi_settings">Wi-Fi Einstellungen</string>
-    <string name="text_verifying_download">Heruntergeladene Dateien werden überprüft</string>
-    <string name="text_validation_complete">Überprüfung abgschlossen. Klicken Sie zur Bestätigung auf OK.</string>
-    <string name="text_validation_failed">Überprüfung fehlgeschlagen.</string>
-    <string name="text_button_pause">Download anhalten</string>
-    <string name="text_button_resume">Download fortsetzen</string>
-    <string name="text_button_cancel">Abbrechen</string>
-    <string name="text_button_cancel_verify">Überprüfung abbrechen</string>
 </resources>

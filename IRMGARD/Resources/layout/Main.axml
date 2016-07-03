@@ -66,7 +66,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:layout_marginLeft="20dp"
-                    android:text="0 MB / 0 MB" />
+                    android:text="0 MB" />
                 <TextView
                     android:id="@+id/progressAsPercentage"
                     style="@android:style/TextAppearance.Small"
@@ -85,7 +85,7 @@
                     android:layout_marginRight="20dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1" />
-<!--
+            <!--
                 <TextView
                     android:id="@+id/progressAverageSpeed"
                     style="@android:style/TextAppearance.Small"

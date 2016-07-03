@@ -15,13 +15,11 @@
     <MonoAndroidAssetsPrefix>Assets;MainAssets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>IRMGARD</AssemblyName>
-    <TargetFrameworkVersion>v5.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <!-- TODO Release: Update ReleaseVersion -->
     <ReleaseVersion>1.1.0</ReleaseVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
     <Description>Hilft Erwachsenen Lesen und Schreiben zu lernen.</Description>
-    <!-- TODO Release: Set ZipAssets to 1 to generate expansion files -->
-    <ZipAssets>0</ZipAssets>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,6 +32,7 @@
     <ConsolePause>false</ConsolePause>
     <AndroidLinkMode>None</AndroidLinkMode>
     <RunCodeAnalysis>false</RunCodeAnalysis>
+    <ZipAssets>0</ZipAssets>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -46,6 +45,7 @@
     <AndroidLinkMode>Full</AndroidLinkMode>
     <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
     <RunCodeAnalysis>false</RunCodeAnalysis>
+    <ZipAssets>1</ZipAssets>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ExpansionDownloader, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
@@ -1090,6 +1090,7 @@
     <AndroidResource Include="Resources\layout\LegalNotice.axml" />
     <AndroidResource Include="Resources\menu\legal_notice_menu.xml" />
     <AndroidResource Include="Resources\menu\legal_notice_contact_menu.xml" />
+    <AndroidResource Include="Resources\values\ExpansionDownloader.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -1182,13 +1183,14 @@
     <XmlRead Prefix="n" Namespace="http://schemas.android.com/apk/res/android" XPath="/manifest/application/meta-data[@n:name='obbMainVersionCode']/@n:value" XmlFileName="Properties\AndroidManifest.xml">
       <Output TaskParameter="Value" PropertyName="OBBMainVersionCode" />
     </XmlRead>
-    <Message Text="OBBMainVersionCode: $(OBBMainVersionCode)" />
     <XmlRead Prefix="n" Namespace="http://schemas.android.com/apk/res/android" XPath="/manifest/application/meta-data[@n:name='obbPatchVersionCode']/@n:value" XmlFileName="Properties\AndroidManifest.xml">
       <Output TaskParameter="Value" PropertyName="OBBPatchVersionCode" />
     </XmlRead>
-    <Message Text="OBBPatchVersionCode: $(OBBPatchVersionCode)" />
-    <Zip Files="@(MainAssetsFiles)" WorkingDirectory="$(ProjectDir)MainAssets" ZipFileName="main.$(OBBMainVersionCode).com.thepagedot.irmgard.obb" ZipLevel="0" />
-    <Zip Files="@(PatchAssetsFiles)" WorkingDirectory="$(ProjectDir)Assets" ZipFileName="patch.$(OBBPatchVersionCode).com.thepagedot.irmgard.obb" ZipLevel="0" />
+    <XmlRead Prefix="n" Namespace="http://schemas.android.com/apk/res/android" XPath="/manifest/@package" XmlFileName="Properties\AndroidManifest.xml">
+      <Output TaskParameter="Value" PropertyName="ManifestPackage" />
+    </XmlRead>
+    <Zip Files="@(MainAssetsFiles)" WorkingDirectory="$(ProjectDir)MainAssets" ZipFileName="main.$(OBBMainVersionCode).$(ManifestPackage).obb" ZipLevel="0" />
+    <Zip Files="@(PatchAssetsFiles)" WorkingDirectory="$(ProjectDir)Assets" ZipFileName="patch.$(OBBPatchVersionCode).$(ManifestPackage).obb" ZipLevel="0" />
   </Target>
   <!-- END: Create OBBs -->
 </Project>
