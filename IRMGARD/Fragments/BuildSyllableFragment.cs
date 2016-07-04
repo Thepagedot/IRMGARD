@@ -20,7 +20,7 @@ namespace IRMGARD
         ImageView ivImagePopup;
         ImageView ivDivider;
 
-        List<Iteration> iterationsLoaded;
+        List<Iteration> iterationsBackup;
         SyllablesToLearn currentSyllablesToLearn;
         bool imagePopupAlreadyShown;
 
@@ -35,17 +35,16 @@ namespace IRMGARD
             ivDivider = view.FindViewById<ImageView>(Resource.Id.ivDivider);
 
             // Backup iterations loaded
-            iterationsLoaded = Lesson.Iterations;
+            iterationsBackup = new List<Iteration>(Lesson.Iterations);
 
+            /* Iteration picking does not work well with lesson's completion check
             // Only for lesson 9
-            if (((BuildSyllableIteration) DataHolder.Current.CurrentLesson.Iterations.FirstOrDefault()).SyllablePool.FirstOrDefault().Syllables.Count > 1)
+            if (((BuildSyllableIteration) Lesson.Iterations.FirstOrDefault()).SyllablePool.FirstOrDefault().Syllables.Count > 1)
             {
                 // Pick 5 random iterations for this game
-                List<Iteration> l = (List<Iteration>) Lesson.Iterations.PickRandomItems(5);
-                DataHolder.Current.CurrentLesson.Iterations = l;
-                Lesson.Iterations = l;
-                FireProgressListRefreshRequested(Lesson);
+                Lesson.Iterations = (List<Iteration>) Lesson.Iterations.PickRandomItems(5);
             }
+            */
 
             // Initialize iteration
             InitIteration();
@@ -308,13 +307,12 @@ namespace IRMGARD
             }
         }
 
-
         public override void OnDestroy()
         {
             base.OnDestroy();
 
             // Restore iterations loaded
-            Lesson.Iterations = iterationsLoaded;
+            Lesson.Iterations = iterationsBackup;
         }
     }
 }
