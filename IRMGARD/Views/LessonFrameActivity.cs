@@ -105,10 +105,6 @@ namespace IRMGARD
         /// </summary>
         private void InitLesson()
         {
-            var module = DataHolder.Current.CurrentModule;
-            var lesson = DataHolder.Current.CurrentLesson;
-            var iteration = DataHolder.Current.CurrentIteration;
-
             CheckHintButton();
 
             // ----------------------------------------------------------------------
@@ -116,21 +112,14 @@ namespace IRMGARD
             // ----------------------------------------------------------------------
 
             // Set playground background color
-            fragmentContainer.SetBackgroundColor(Color.ParseColor(module.Color));
+            fragmentContainer.SetBackgroundColor(Color.ParseColor(DataHolder.Current.CurrentModule.Color));
 
             // ----------------------------------------------------------------------
             // Lesson specifics
             // ----------------------------------------------------------------------
 
             // Set the name of the current Lesson as page title
-            Title = lesson.Title;
-
-            // Hide hint button, if no hint is available
-            //if (hintButton != null)
-            //hintButton.SetVisible(!string.IsNullOrEmpty(Lesson.Hint));
-
-            // Progress
-            ProgressListRefresh(lesson);
+            Title = DataHolder.Current.CurrentLesson.Title;
 
             // ----------------------------------------------------------------------
             // Load Lesson fragment
@@ -138,7 +127,7 @@ namespace IRMGARD
 
             // Create an instance of the fragment according to the current type of level
             var transaction = FragmentManager.BeginTransaction();
-            currentFragment = CreateFragmentForLesson(DataHolder.Current.CurrentLesson);
+            currentFragment = CreateFragmentForLesson();
             if (currentFragment != null)
             {
                 // Handle LessonFragment events
@@ -178,19 +167,14 @@ namespace IRMGARD
             SoundPlayer.PlaySound(this, waitForCompletion, DataHolder.Current.CurrentLesson.SoundPath);
         }
 
-        private void ProgressListRefresh(Lesson lesson)
-        {
-            progressList.Clear();
-            for (var i = 0; i < lesson.Iterations.Count; i++)
-                progressList.Add(new Progress(lesson.Iterations[i].Status)); // Set iteration's status to the same as progess's staus
-            progressList[0].IsCurrent = true;
-
-            rvProgress.GetAdapter().NotifyDataSetChanged();
-        }
-
         private void LessonFragment_ProgressListRefreshRequested(object sender, ProgressListRefreshRequestedEventArgs e)
         {
-            ProgressListRefresh(e.Lesson);
+            progressList.Clear();
+            foreach (var iteration in e.Lesson.Iterations)
+            {
+                progressList.Add(new Progress(iteration.Status)); // Set iteration's status to the same as progess's staus
+            }
+            rvProgress.GetAdapter().NotifyDataSetChanged();
         }
 
         private void CurrentFragment_UserInteracted(object sender, UserInteractedEventArgs e)
@@ -289,9 +273,9 @@ namespace IRMGARD
         /// Returns a new instance of the fragment type according to the type of Lesson
         /// </summary>
         /// <returns>The fragment for the Lesson.</returns>
-        /// <param name="lesson">current Lesson.</param>
-        private LessonFragment CreateFragmentForLesson(Lesson lesson)
+        private LessonFragment CreateFragmentForLesson()
         {
+            var lesson = DataHolder.Current.CurrentLesson;
             if (lesson is HearMe)
                 return new HearMeFragment();
             if (lesson is FourPictures)

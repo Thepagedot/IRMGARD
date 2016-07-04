@@ -44,7 +44,7 @@ namespace IRMGARD
             var currentIteration = GetCurrentIteration<HearTheLetterIteration>();
             currentOption = currentIteration.LetterLocations.PickRandomItems(1)[0];
 
-            if (DataHolder.Current.CurrentLesson.Iterations.IndexOf(currentIteration) > 0)
+            if (Lesson.Iterations.IndexOf(currentIteration) > 0)
             {
                 PlayTaskDesc();
             }

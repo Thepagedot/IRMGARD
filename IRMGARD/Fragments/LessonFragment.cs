@@ -136,6 +136,8 @@ namespace IRMGARD
         /// </summary>
         protected virtual void InitIteration()
         {
+            // Fire progress list refresh event to react to Lesson.Iterations modifications in OnCreateView or InitIteration
+            FireProgressListRefreshRequested(Lesson);
             // Fire iteration changed event
             FireIterationChanged(Lesson.Iterations.ElementAt(currentIterationIndex));
         }

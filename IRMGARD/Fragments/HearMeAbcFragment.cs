@@ -40,7 +40,7 @@ namespace IRMGARD
             var currentIteration = GetCurrentIteration<HearMeAbcIteration>();
             gridView.Adapter = new HearMeAbcAdapter(Activity.BaseContext, 0, currentIteration.Letters);
 
-            if (DataHolder.Current.CurrentLesson.Iterations.IndexOf(currentIteration) > 0)
+            if (Lesson.Iterations.IndexOf(currentIteration) > 0)
             {
                 PlayTaskDesc();
             }
