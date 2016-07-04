@@ -21,6 +21,7 @@ namespace IRMGARD
         private LinearLayout llTaskItems;
         private FlowLayout flLetters;
         private Case fontCase;
+        List<Iteration> iterationsBackup;
 
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
@@ -29,8 +30,11 @@ namespace IRMGARD
             llTaskItems = view.FindViewById<LinearLayout>(Resource.Id.llTaskItems);
             flLetters = view.FindViewById<FlowLayout>(Resource.Id.flLetters);
 
+            // Backup iterations loaded
+            iterationsBackup = new List<Iteration>(Lesson.Iterations);
+
             // Shuffle Iterations
-            DataHolder.Current.CurrentLesson.Iterations.Shuffle();
+            Lesson.Iterations.Shuffle();
 
             // Initialize iteration
             InitIteration();
@@ -52,6 +56,7 @@ namespace IRMGARD
             }
 
             // Create task letters
+            ResetCorrectTaskLetter(currentIteration.TaskItems);
             BuildTaskLetters(currentIteration.TaskItems, fontCase);
 
             // Generate options
@@ -105,6 +110,18 @@ namespace IRMGARD
 
             options.Shuffle();
             return options;
+        }
+
+        private void ResetCorrectTaskLetter(List<TaskItem> taskItems)
+        {
+            foreach (var taskItem in taskItems)
+            {
+                if (taskItem.IsSearched)
+                {
+                    taskItem.TaskLetter.Letter = "";
+                    taskItem.IsDirty = false;
+                }
+            }
         }
 
         private void BuildTaskLetters(List<TaskItem> taskItems, Case fontCase)
@@ -186,6 +203,14 @@ namespace IRMGARD
             }
 
             FinishIteration(isCorrect);
+        }
+
+        public override void OnDestroy()
+        {
+            base.OnDestroy();
+
+            // Restore iterations loaded
+            Lesson.Iterations = iterationsBackup;
         }
     }
 }
