@@ -10,17 +10,17 @@ using Android.Content;
 using Android.Content.PM;
 using Android.Graphics;
 using Android.OS;
+using Android.Provider;
 using Android.Views;
 using Android.Widget;
+using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Toolbar = Android.Support.V7.Widget.Toolbar;
-using Android.Provider;
 
 using ExpansionDownloader;
 using ExpansionDownloader.Client;
 using ExpansionDownloader.Database;
 using ExpansionDownloader.Service;
-using Android.Support.Design.Widget;
 using HockeyApp.Android;
 using HockeyApp.Android.Metrics;
 
@@ -30,6 +30,8 @@ namespace IRMGARD
     public partial class MainActivity : AppCompatActivity, IDownloaderClient
     {
         #region Constants and Fields
+
+        const string TAG = "MainActivity";
 
         /// <summary>
         /// The background image.
@@ -140,37 +142,8 @@ namespace IRMGARD
             startButton.Visibility = ViewStates.Visible;
         }
 
-        /// <summary>
-        /// Called when the activity is first created; we wouldn't create a
-        /// layout in the case where we have the file and are moving to another
-        /// activity without downloading.
-        /// </summary>
-        /// <param name="savedInstanceState">
-        /// The saved instance state.
-        /// </param>
-        protected override async void OnCreate(Bundle savedInstanceState)
+        private async Task CreateApp()
         {
-            base.OnCreate(savedInstanceState);
-
-            if (Env.Release)
-            {
-                // Register HockeyApp
-                CrashManager.Register(this, "089a6ee65f4242b89c51eab36a4e0ed2");
-                MetricsManager.Register(this, Application, "089a6ee65f4242b89c51eab36a4e0ed2");
-            }
-
-            RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
-
-            // Init start screen
-            SetContentView(Resource.Layout.Main);
-            Title = "";
-            SetSupportActionBar(this.FindViewById<Toolbar>(Resource.Id.toolbar));
-
-            ivSplashscreen = this.FindViewById<ImageView>(Resource.Id.ivSplashscreen);
-            initText = this.FindViewById<TextView>(Resource.Id.initText);
-            startButton = this.FindViewById<FloatingActionButton>(Resource.Id.btnStart);
-            startButton.Click += StartButton_Click;
-
             if (Env.Release)
             {
                 // Before we do anything, are the files we expect already here and
@@ -211,6 +184,41 @@ namespace IRMGARD
 
                 await InitApp();
             }
+        }
+
+        /// <summary>
+        /// Called when the activity is first created; we wouldn't create a
+        /// layout in the case where we have the file and are moving to another
+        /// activity without downloading.
+        /// </summary>
+        /// <param name="savedInstanceState">
+        /// The saved instance state.
+        /// </param>
+        protected override async void OnCreate(Bundle savedInstanceState)
+        {
+            base.OnCreate(savedInstanceState);
+
+            if (Env.Release)
+            {
+                // Register HockeyApp
+                CrashManager.Register(this, "089a6ee65f4242b89c51eab36a4e0ed2");
+                MetricsManager.Register(this, Application, "089a6ee65f4242b89c51eab36a4e0ed2");
+            }
+
+            RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
+
+            // Init start screen
+            SetContentView(Resource.Layout.Main);
+            Title = "";
+            SetSupportActionBar(this.FindViewById<Toolbar>(Resource.Id.toolbar));
+
+            ivSplashscreen = this.FindViewById<ImageView>(Resource.Id.ivSplashscreen);
+            mainLayout = this.FindViewById<FrameLayout>(Resource.Id.mainLayout);
+            initText = this.FindViewById<TextView>(Resource.Id.initText);
+            startButton = this.FindViewById<FloatingActionButton>(Resource.Id.btnStart);
+            startButton.Click += StartButton_Click;
+
+            await TryCreateAppAsync();
         }
 
         private void DoGetExpansionFiles()

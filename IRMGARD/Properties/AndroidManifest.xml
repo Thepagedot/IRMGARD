@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<!-- TODO Release: Switch between "IRMGARD" (package="com.thepagedot.irmgard") and "IRMGARD Preview" (package="de.kopfhandundfuss.irmgard") app configuration -->
+<!-- TODO Release: Switch between "IRMGARD" (package="de.kopfhandundfuss.irmgard") and "IRMGARD Prerelease" (package="com.thepagedot.irmgard") app configuration -->
 <!-- TODO Release: Update versionName and versionCode -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.thepagedot.irmgard" android:versionName="1.1.0" android:versionCode="17" android:installLocation="auto">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="de.kopfhandundfuss.irmgard" android:versionName="1.1.0" android:versionCode="17" android:installLocation="auto">
 	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23" />
 	<application android:label="IRMGARD" android:theme="@style/IrmgardTheme" android:icon="@drawable/Icon">
 		<!-- TODO Release: Update obbMainVersionCode and obbPatchVersionCode -->

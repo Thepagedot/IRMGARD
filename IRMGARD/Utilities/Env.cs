@@ -13,6 +13,11 @@ namespace IRMGARD
 #endif
         public const bool Release = !Debug;
 
+        public static bool MarshmallowSupport
+        {
+            get { return Build.VERSION.SdkInt >= BuildVersionCodes.M; }
+        }
+
         public static bool LollipopSupport
         {
             get { return Build.VERSION.SdkInt >= BuildVersionCodes.Lollipop; }

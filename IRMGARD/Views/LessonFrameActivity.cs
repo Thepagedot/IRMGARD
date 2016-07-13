@@ -90,6 +90,12 @@ namespace IRMGARD
             base.OnStart();
         }
 
+        protected override void OnResume()
+        {
+            base.OnResume();
+            if (MainActivity.CheckStoragePermission(this)) { Finish(); }
+        }
+
         protected override void OnPause()
         {
             base.OnPause();

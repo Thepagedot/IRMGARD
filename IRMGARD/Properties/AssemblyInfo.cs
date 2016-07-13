@@ -45,4 +45,5 @@ using LicenseVerificationLibrary;
 // Required to check whether Wi-Fi is enabled
 [assembly: UsesPermission(Manifest.Permission.AccessWifiState)]
 // Required to read and write the expansion files on shared storage
+[assembly: UsesPermission(Manifest.Permission.ReadExternalStorage)]
 [assembly: UsesPermission(Manifest.Permission.WriteExternalStorage)]
