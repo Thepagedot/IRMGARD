@@ -113,23 +113,35 @@ namespace IRMGARD
         {
             if (Env.LollipopSupport)
             {
-                mediaPlayer.Stop();
-                mediaPlayer.Prepare();
-                mediaPlayer.Start();
+                try
+                {
+                    mediaPlayer.Stop();
+                    mediaPlayer.Prepare();
+                    mediaPlayer.Start();
+                }
+                catch (Java.Lang.IllegalStateException)
+                {
+                    RenavigateToVideoPlayer();
+                }
             }
             else
             {
-                // Re-navigate to video player
-                var bundle = new Bundle();
-                bundle.PutString("nextView", nextView);
-                bundle.PutString("videoPath", videoPath);
-
-                var intent = new Intent(this, typeof(VideoActivity));
-                intent.PutExtras(bundle);
-
-                Finish();
-                StartActivity(intent);
+                RenavigateToVideoPlayer();
             }
+        }
+
+        private void RenavigateToVideoPlayer()
+        {
+            // Re-navigate to video player
+            var bundle = new Bundle();
+            bundle.PutString("nextView", nextView);
+            bundle.PutString("videoPath", videoPath);
+
+            var intent = new Intent(this, typeof(VideoActivity));
+            intent.PutExtras(bundle);
+
+            Finish();
+            StartActivity(intent);
         }
 
         public void SurfaceCreated(ISurfaceHolder holder)
