@@ -1,19 +1,13 @@
 ﻿
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Content.Res;
 using Android.Media;
 using Android.Support.V7.App;
-using Toolbar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.Design.Widget;
 using Android.Graphics;
 
@@ -117,9 +111,25 @@ namespace IRMGARD
 
         void BtnRepeat_Click (object sender, EventArgs e)
         {
-            mediaPlayer.Stop();
-            mediaPlayer.Prepare();
-            mediaPlayer.Start();
+            if (Env.LollipopSupport)
+            {
+                mediaPlayer.Stop();
+                mediaPlayer.Prepare();
+                mediaPlayer.Start();
+            }
+            else
+            {
+                // Re-navigate to video player
+                var bundle = new Bundle();
+                bundle.PutString("nextView", nextView);
+                bundle.PutString("videoPath", videoPath);
+
+                var intent = new Intent(this, typeof(VideoActivity));
+                intent.PutExtras(bundle);
+
+                Finish();
+                StartActivity(intent);
+            }
         }
 
         public void SurfaceCreated(ISurfaceHolder holder)
