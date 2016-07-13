@@ -456,7 +456,10 @@ namespace IRMGARD
             foreach (var letter in markedLetters)
             {
                 var index = Alphabet.Letters.IndexOf(letter.ToUpper());
-                spannable.SetSpan(new ForegroundColorSpan(levelColor), index, index + 1, SpanTypes.ExclusiveExclusive);
+                if (index > -1)
+                {
+                    spannable.SetSpan(new ForegroundColorSpan(levelColor), index, index + 1, SpanTypes.ExclusiveExclusive);
+                }
             }
 
             return spannable;
