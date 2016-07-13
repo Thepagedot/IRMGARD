@@ -100,7 +100,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainActivity.Design.cs" />
+    <Compile Include="MainActivity.Downloader.cs" />
     <Compile Include="MainActivity.Permission.cs" />
     <Compile Include="MediaDownload\MediaDownloadAlarmReceiver.cs" />
     <Compile Include="MediaDownload\MediaDownloadService.cs" />
