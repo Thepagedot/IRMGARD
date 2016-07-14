@@ -36,7 +36,7 @@ namespace IRMGARD
                 initText.Visibility = ViewStates.Visible;
 
                 // Check if the Storage permissions are already available.
-                Log.Info(TAG, "Check Storage permissions...");
+                // Log.Info(TAG, "Check Storage permissions...");
                 if (CheckStoragePermission(this))
                 {
                     // Storage permissions have not been granted
@@ -46,20 +46,20 @@ namespace IRMGARD
                 else
                 {
                     // Storage permissions are already available
-                    Log.Info(TAG, "Storage permissions has already been granted.");
+                    // Log.Info(TAG, "Storage permissions has already been granted.");
                     await CreateApp();
                 }
             }
             else
             {
-                Log.Info(TAG, "Pre 23-SDK");
+                // Log.Info(TAG, "Pre 23-SDK");
                 await CreateApp();
             }
         }
 
         private void RequestStoragePermissions()
         {
-            Log.Info(TAG, "Storage permissions have NOT been granted. Requesting permissions.");
+            // Log.Info(TAG, "Storage permissions have NOT been granted. Requesting permissions.");
 
             if (ActivityCompat.ShouldShowRequestPermissionRationale(this, Android.Manifest.Permission.ReadExternalStorage)
                 || ActivityCompat.ShouldShowRequestPermissionRationale(this, Android.Manifest.Permission.WriteExternalStorage))
@@ -67,7 +67,7 @@ namespace IRMGARD
                 // Provide an additional rationale to the user if the permission was not granted
                 // and the user would benefit from additional context for the use of the permission.
                 // For example if the user has previously denied the permission.
-                Log.Info(TAG, "Displaying Storage permissions rationale to provide additional context.");
+                // Log.Info(TAG, "Displaying Storage permissions rationale to provide additional context.");
                 new PermissionRationaleDialogFragment().Show(FragmentManager, "PermissionRationaleDialogFragmentTag");
             }
             else
@@ -100,18 +100,18 @@ namespace IRMGARD
             if (requestCode == REQUEST_STORAGE)
             {
                 // Received permission result for Storage permission.
-                Log.Info(TAG, "Received response for Storage permission request.");
+                // Log.Info(TAG, "Received response for Storage permission request.");
 
                 // Check if all required permissions has been granted
                 if (VerifyPermissions(grantResults))
                 {
                     // Storage permissions has been granted
-                    Log.Info(TAG, "Storage permissions have now been granted.");
+                    // Log.Info(TAG, "Storage permissions have now been granted.");
                     await CreateApp();
                 }
                 else
                 {
-                    Log.Info(TAG, "Storage permissions were NOT granted.");
+                    // Log.Info(TAG, "Storage permissions were NOT granted.");
                     new PermissionRationaleDialogFragment().Show(FragmentManager, "PermissionRationaleDialogFragmentTag");
                 }
             }
