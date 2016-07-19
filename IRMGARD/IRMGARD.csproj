@@ -1092,6 +1092,12 @@
     <AndroidResource Include="Resources\menu\legal_notice_menu.xml" />
     <AndroidResource Include="Resources\menu\legal_notice_contact_menu.xml" />
     <AndroidResource Include="Resources\values\ExpansionDownloader.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_02.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_02.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_02.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_02.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_02.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_02.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -1113,6 +1119,14 @@
     <AndroidAsset Include="Assets\level9.json" />
     <AndroidAsset Include="Assets\sandbox.json" />
     <AndroidAsset Include="Assets\test.json" />
+    <AndroidAsset Include="Assets\Videos\L2_Modul_1_720p.mp4" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 1 Aufgabe 1.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 1 Aufgabe 2.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 1 Aufgabe 3.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 1 Aufgabe 4.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 1 Aufgabe 5.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 1 Aufgabe 6.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 1 Aufgabe 7.mp3" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="hockeyappandroid">
