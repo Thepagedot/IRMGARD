@@ -1,8 +1,346 @@
 ﻿{
+  "Id": 2,
   "Name": "Level 2",
   "Color": "#6b91a3",
-  "IsEnabled": false,
+  "IsEnabled": true,
   "IsCompleted": false,
   "VideoPath": null,
-  "Modules": [ ]
+  "Modules": [
+    {
+      "Name": "1: BAD?",
+      "Color": "#e5c8c4",
+      "VideoPath": "Videos/L2_Modul_1_720p.mp4",
+      "NumberOfLessonsDone": 0,
+      "Lessons": [
+        {
+          "$type": "IRMGARD.Models.AbcRank, IRMGARD",
+          "Id": 211,
+          "Title": "BAD?",
+          "SoundPath": "Intros/Level 2 Modul 1 Aufgabe 1.mp3",
+          "TypeOfLevel": "AbcRank",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.AbcRankIteration, IRMGARD",
+              "Id": 2111,
+              "Options": [
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "C",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "D",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "E",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "F",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "G",
+                  "Media": null
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.AbcRankIteration, IRMGARD",
+              "Id": 2112,
+              "Options": [
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "M",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "N",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "O",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "P",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "Q",
+                  "Media": null
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.AbcRankIteration, IRMGARD",
+              "Id": 2113,
+              "Options": [
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "E",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "F",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "G",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "H",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "I",
+                  "Media": null
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.AbcRankIteration, IRMGARD",
+              "Id": 2114,
+              "Options": [
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "S",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "T",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "U",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "V",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "W",
+                  "Media": null
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.AbcRankIteration, IRMGARD",
+              "Id": 2115,
+              "Options": [
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "J",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "K",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "L",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "M",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "N",
+                  "Media": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.AbcRank, IRMGARD",
+          "Id": 212,
+          "Title": "A-Z?",
+          "SoundPath": "Intros/Level 2 Modul 1 Aufgabe 2.mp3",
+          "TypeOfLevel": "AbcRank",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.AbcRankIteration, IRMGARD",
+              "Id": 2121,
+              "Options": [
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "A",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "C",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "H",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "M",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "Z",
+                  "Media": null
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.AbcRankIteration, IRMGARD",
+              "Id": 2122,
+              "Options": [
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "D",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "N",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "S",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "V",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "X",
+                  "Media": null
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.AbcRankIteration, IRMGARD",
+              "Id": 2123,
+              "Options": [
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "E",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "I",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "N",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "O",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "Q",
+                  "Media": null
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.AbcRankIteration, IRMGARD",
+              "Id": 2124,
+              "Options": [
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "K",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "P",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "T",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "W",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "Y",
+                  "Media": null
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.AbcRankIteration, IRMGARD",
+              "Id": 2125,
+              "Options": [
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "F",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "I",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "L",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "R",
+                  "Media": null
+                },
+                {
+                  "$type": "IRMGARD.Models.AbcRankOption, IRMGARD",
+                  "Name": "U",
+                  "Media": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
