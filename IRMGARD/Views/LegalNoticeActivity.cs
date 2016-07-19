@@ -20,7 +20,8 @@ namespace IRMGARD
             //RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
 
             var version = PackageManager.GetPackageInfo(PackageName, 0).VersionName;
-            FindViewById<TextView>(Resource.Id.tvLegalNotice).TextFormatted = Html.FromHtml(string.Format(Resources.GetString(Resource.String.legalnotice_content), version));
+            FindViewById<TextView>(Resource.Id.tvVersionInfo).TextFormatted = Html.FromHtml(string.Format(Resources.GetString(Resource.String.version_info), version));
+            FindViewById<TextView>(Resource.Id.tvLegalNotice).TextFormatted = Html.FromHtml(Resources.GetString(Resource.String.legalnotice_content));
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)

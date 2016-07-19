@@ -12,9 +12,32 @@
         android:layout_margin="@dimen/margin_default"
         android:scrollbars="vertical"
         android:fillViewport="true">
-        <TextView
-            android:id="@+id/tvLegalNotice"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp">
+                <ImageView
+                    android:id="@+id/ivIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:src="@drawable/icon" />
+                <TextView
+                    android:id="@+id/tvVersionInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="15dp"
+                    android:paddingLeft="10dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvLegalNotice"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
     </ScrollView>
 </LinearLayout>
