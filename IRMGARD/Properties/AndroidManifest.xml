@@ -6,6 +6,6 @@
 	<application android:label="IRMGARD" android:theme="@style/IrmgardTheme" android:icon="@drawable/Icon">
 		<!-- TODO Release: Update obbMainVersionCode and obbPatchVersionCode -->
 		<meta-data android:name="obbMainVersionCode" android:value="12" />
-		<meta-data android:name="obbPatchVersionCode" android:value="13" />
+		<meta-data android:name="obbPatchVersionCode" android:value="19" />
 	</application>
 </manifest>
