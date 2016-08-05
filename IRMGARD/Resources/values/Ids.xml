@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <item type="id" name="concept_tag_key"/>
+  <item type="id" name="flConceptContainer"/>
+  <item type="id" name="flOptionContainer"/>
+</resources>

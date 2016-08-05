@@ -187,9 +187,20 @@ namespace IRMGARD
         {
             if (e.IsReady)
             {
+                // Enable check button
                 btnNext.Enabled = true;
                 btnNext.Clickable = true;
                 btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.ShowNextButton));
+            }
+            else
+            {
+                if (btnNext.Enabled)
+                {
+                    // Disable check button
+                    btnNext.Clickable = false;
+                    btnNext.Enabled = false;
+                    btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.HideNextButton));
+                }
             }
         }
 
@@ -304,6 +315,8 @@ namespace IRMGARD
                 return new MemoryFragment();
             if (lesson is LetterWrite)
                 return new LetterWriteFragment();
+            if (lesson is DragIntoGap)
+                return new DragIntoGapFragment();
 
             return null;
         }

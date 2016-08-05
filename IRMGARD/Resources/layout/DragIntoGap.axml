@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+  <FrameLayout
+      style="@style/result_zone">
+    <LinearLayout
+        android:id="@+id/llTaskItemRows"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+  </FrameLayout>
+  <FrameLayout
+      style="@style/result_zone">
+    <IRMGARD.FlowLayout
+        android:id="@+id/flOptionItems"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center" />
+  </FrameLayout>
+</LinearLayout>

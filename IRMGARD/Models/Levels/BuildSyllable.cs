@@ -25,12 +25,12 @@ namespace IRMGARD.Models
 
 	public class SyllablesToLearn
 	{
-		public List<Syllable> Syllables { get; set; }
+		public List<SyllableAggregate> Syllables { get; set; }
 		public List<LetterBase> Options { get; set; }
         public bool HasLongAndShortLetters { get; set; }
         public Media Media { get; set; }
         
-        public SyllablesToLearn(List<Syllable> syllables, bool hasLongAndShortLetters, Media media)
+        public SyllablesToLearn(List<SyllableAggregate> syllables, bool hasLongAndShortLetters, Media media)
 	    {
 	        this.Syllables = syllables;
             this.HasLongAndShortLetters = hasLongAndShortLetters;
@@ -38,14 +38,14 @@ namespace IRMGARD.Models
 	    }
 	}
 
-	public class Syllable
+	public class SyllableAggregate
 	{
         public List<TaskItem> SyllableParts { get; set; }
 		public string SoundPath { get; set; }
 
-		public Syllable () {}
+		public SyllableAggregate () {}
 
-        public Syllable (List<TaskItem> syllableParts, string soundPath)
+        public SyllableAggregate (List<TaskItem> syllableParts, string soundPath)
 		{
 			this.SyllableParts = syllableParts;
 			this.SoundPath = soundPath;
