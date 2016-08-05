@@ -9,13 +9,13 @@ using Android.Graphics.Drawables;
 
 namespace IRMGARD
 {
-    public class BuildSyllableMediaElementAdapter : ArrayAdapter<Syllable>
+    public class BuildSyllableMediaElementAdapter : ArrayAdapter<SyllableAggregate>
     {
         private LayoutInflater layoutInflater;
         private Boolean addMultiIcon;
-        private List<Syllable> items;
+        private List<SyllableAggregate> items;
 
-        public BuildSyllableMediaElementAdapter(Context context, int resourceId, List<Syllable> items, Boolean addMultiIcon) : base (context, resourceId, items)
+        public BuildSyllableMediaElementAdapter(Context context, int resourceId, List<SyllableAggregate> items, Boolean addMultiIcon) : base (context, resourceId, items)
         {
             layoutInflater = LayoutInflater.From(context);
             this.addMultiIcon = addMultiIcon;
