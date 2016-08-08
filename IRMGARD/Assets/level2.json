@@ -8,9 +8,8 @@
   "Modules": [
     {
       "Name": "1: A-Z?",
-      "Color": "#e5c8c4",
+      "Color": "#d3caaf",
       "VideoPath": "Videos/L2_Modul_1_720p.mp4",
-      "NumberOfLessonsDone": 0,
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
@@ -939,6 +938,238 @@
                     "$type": "IRMGARD.Models.Word, IRMGARD",
                     "Text": "Fass",
                     "SoundPath": "Objects/Fass.mp3"
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "2: Punkt oder Strich?",
+      "Color": "#aec2c4",
+      "VideoPath": "Videos/L2_Modul_2_720p.mp4",
+      "Lessons": [
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 221,
+          "Title": "A-Z?",
+          "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 1.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2211,
+              "TaskItems": [
+                [
+                  {
+                    "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                    "fixed": true,
+                    "SoundPath": "Objects/Mut.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "M",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "U",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "T",
+                    "LetterTags": [ 1 ]
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                    "fixed": true,
+                    "SoundPath": "Objects/Wut.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "W",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "U",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "T",
+                    "LetterTags": [ 1 ]
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                    "fixed": true,
+                    "SoundPath": "Objects/Hut.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "H",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "U",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "T",
+                    "LetterTags": [ 1 ]
+                  }
+                ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2212,
+              "TaskItems": [
+                [
+                  {
+                    "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                    "fixed": true,
+                    "SoundPath": "Objects/Wir.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "W",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "I",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "R",
+                    "LetterTags": [ 2 ]
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                    "fixed": true,
+                    "SoundPath": "Objects/Dir.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "D",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "I",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "R",
+                    "LetterTags": [ 2 ]
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                    "fixed": true,
+                    "SoundPath": "Objects/Mir.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "M",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "I",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "R",
+                    "LetterTags": [ 2 ]
+                  }
+                ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2213,
+              "TaskItems": [
+                [
+                  {
+                    "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                    "fixed": true,
+                    "SoundPath": "Objects/Rot.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "R",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "O",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "T",
+                    "LetterTags": [ 1 ]
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                    "fixed": true,
+                    "SoundPath": "Objects/Not.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "N",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "O",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "T",
+                    "LetterTags": [ 1 ]
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                    "fixed": true,
+                    "SoundPath": "Objects/Lot.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "L",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "O",
+                    "LetterTags": [ 2 ]
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "T",
+                    "LetterTags": [ 1 ]
                   }
                 ]
               ]

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace IRMGARD.Models
 {
@@ -33,16 +34,23 @@ namespace IRMGARD.Models
         string SoundPath { get; set; }
     }
 
+    public enum LetterTag { None, Short, Long };
+
     // the base for all text based concepts
     public abstract class BaseText : Concept, ISound
     {
         public string Text { get; set; }
+        public List<LetterTag> LetterTags { get; set; }
         public string SoundPath { get; set; }
 
         public override Concept DeepCopy()
         {
             BaseText clone = (BaseText)base.DeepCopy();
             clone.Text = Text != null ? String.Copy(Text) : null;
+            if (LetterTags != null && LetterTags.Count > 0)
+            {
+                clone.LetterTags = new List<LetterTag>(LetterTags);
+            }
             clone.SoundPath = SoundPath != null ? String.Copy(SoundPath) : null;
             return clone;
         }
@@ -51,12 +59,18 @@ namespace IRMGARD.Models
         {
             if (obj == null || obj as BaseText == null) { return false; }
             var other = obj as BaseText;
-            return base.Equals(obj) && (Text == other.Text) && (SoundPath == other.SoundPath);
+            return base.Equals(obj)
+                && (Text == other.Text)
+                && (Enumerable.SequenceEqual(LetterTags, other.LetterTags))
+                && (SoundPath == other.SoundPath);
         }
 
         public override int GetHashCode()
         {
-            return base.GetHashCode() ^ (Text == null ? 0 : Text.GetHashCode()) ^ (SoundPath == null ? 0 : SoundPath.GetHashCode());
+            return base.GetHashCode()
+                ^ (Text == null ? 0 : Text.GetHashCode())
+                ^ (LetterTags == null ? 0 : LetterTags.GetHashCode())
+                ^ (SoundPath == null ? 0 : SoundPath.GetHashCode());
         }
     }
 
@@ -94,39 +108,16 @@ namespace IRMGARD.Models
         }
     }
 
-    // An helper image (not embedded in a card view)
-    public class Image : Concept
+    // A picture
+    public class Picture : Concept, ISound
     {
         public string ImagePath { get; set; }
-
-        public override Concept DeepCopy()
-        {
-            Image clone = (Image)base.DeepCopy();
-            clone.ImagePath = ImagePath != null ? String.Copy(ImagePath) : null;
-            return clone;
-        }
-
-        public override bool Equals(object obj)
-        {
-            if (obj == null || obj as Image == null) { return false; }
-            var other = obj as Image;
-            return base.Equals(obj) && (ImagePath == other.ImagePath);
-        }
-
-        public override int GetHashCode()
-        {
-            return base.GetHashCode() ^ (ImagePath == null ? 0 : ImagePath.GetHashCode());
-        }
-    }
-
-    // A picture as a required part of the solution (embedded in a card view)
-    public class Picture : Image, ISound
-    {
         public string SoundPath { get; set; }
 
         public override Concept DeepCopy()
         {
             Picture clone = (Picture)base.DeepCopy();
+            clone.ImagePath = ImagePath != null ? String.Copy(ImagePath) : null;
             clone.SoundPath = SoundPath != null ? String.Copy(SoundPath) : null;
             return clone;
         }
@@ -135,12 +126,16 @@ namespace IRMGARD.Models
         {
             if (obj == null || obj as Picture == null) { return false; }
             var other = obj as Picture;
-            return base.Equals(obj) && (SoundPath == other.SoundPath);
+            return base.Equals(obj)
+                && (ImagePath == other.ImagePath)
+                && (SoundPath == other.SoundPath);
         }
 
         public override int GetHashCode()
         {
-            return base.GetHashCode() ^ (SoundPath == null ? 0 : SoundPath.GetHashCode());
+            return base.GetHashCode()
+                ^ (ImagePath == null ? 0 : ImagePath.GetHashCode())
+                ^ (SoundPath == null ? 0 : SoundPath.GetHashCode());
         }
     }
 

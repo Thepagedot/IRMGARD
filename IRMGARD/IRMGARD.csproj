@@ -906,7 +906,7 @@
     <AndroidResource Include="Resources\layout\FindMissingLetter.axml" />
     <AndroidResource Include="Resources\drawable\underscore.xml" />
     <AndroidResource Include="Resources\values\Attrs.xml" />
-    <AndroidResource Include="Resources\layout\Letter.axml" />
+    <AndroidResource Include="Resources\layout\LetterComposite.axml" />
     <AndroidResource Include="Resources\drawable\dotted.xml" />
     <AndroidResource Include="Resources\layout\BuildSyllable.axml" />
     <AndroidResource Include="Resources\layout\AbcRank.axml" />
@@ -1028,7 +1028,7 @@
     <AndroidResource Include="Resources\layout\GifTask.axml" />
     <AndroidResource Include="Resources\layout-h550dp\Memory.axml" />
     <AndroidResource Include="Resources\layout-h550dp\MemoryCard.axml" />
-    <AndroidResource Include="Resources\layout-h550dp\Letter.axml" />
+    <AndroidResource Include="Resources\layout-h550dp\LetterComposite.axml" />
     <AndroidResource Include="Resources\layout-h550dp\TaskItem.axml" />
     <AndroidResource Include="Resources\layout-h550dp\BuildSyllable.axml" />
     <AndroidResource Include="Resources\drawable\divider.png" />
@@ -1105,11 +1105,18 @@
     <AndroidResource Include="Resources\values\Ids.xml" />
     <AndroidResource Include="Resources\layout\DragIntoGap.axml" />
     <AndroidResource Include="Resources\layout\Blank.axml" />
-    <AndroidResource Include="Resources\layout\LetterConcept.axml" />
+    <AndroidResource Include="Resources\layout\Letter.axml" />
     <AndroidResource Include="Resources\layout\Syllable.axml" />
     <AndroidResource Include="Resources\layout\Word.axml" />
     <AndroidResource Include="Resources\layout\Picture.axml" />
     <AndroidResource Include="Resources\layout\Speaker.axml" />
+    <AndroidResource Include="Resources\layout\LetterCard.axml" />
+    <AndroidResource Include="Resources\layout\SyllableCard.axml" />
+    <AndroidResource Include="Resources\layout\WordCard.axml" />
+    <AndroidResource Include="Resources\layout\PictureCard.axml" />
+    <AndroidResource Include="Resources\layout\SpeakerCard.axml" />
+    <AndroidResource Include="Resources\drawable\letter_long.xml" />
+    <AndroidResource Include="Resources\drawable\letter_short.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -1132,6 +1139,11 @@
     <AndroidAsset Include="Assets\sandbox.json" />
     <AndroidAsset Include="Assets\test.json" />
     <AndroidAsset Include="Assets\Videos\L2_Modul_1_720p.mp4" />
+    <AndroidAsset Include="Assets\Videos\L2_Modul_2_720p.mp4" />
+    <AndroidAsset Include="Assets\Videos\L2_Modul_3_720p.mp4" />
+    <AndroidAsset Include="Assets\Videos\L2_Modul_4_720p.mp4" />
+    <AndroidAsset Include="Assets\Videos\L2_Modul_5_720p.mp4" />
+    <AndroidAsset Include="Assets\Videos\L2_Modul_6_720p.mp4" />
     <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 1 Aufgabe 1.mp3" />
     <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 1 Aufgabe 2.mp3" />
     <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 1 Aufgabe 3.mp3" />
@@ -1139,6 +1151,37 @@
     <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 1 Aufgabe 5.mp3" />
     <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 1 Aufgabe 6.mp3" />
     <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 1 Aufgabe 7.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 2 Aufgabe 1.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 2 Aufgabe 2.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 2 Aufgabe 3.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 2 Aufgabe 4.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 2 Aufgabe 5.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 2 Aufgabe 6.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 2 Aufgabe 7.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 2 Aufgabe 8.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 3 Aufgabe 1.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 3 Aufgabe 2.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 3 Aufgabe 3.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 3 Aufgabe 4.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 4 Aufgabe 1.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 4 Aufgabe 2.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 4 Aufgabe 3.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 4 Aufgabe 4.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 4 Aufgabe 5.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 4 Aufgabe 6.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 4 Aufgabe 7.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 5 Aufgabe 1.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 5 Aufgabe 2.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 5 Aufgabe 3.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 5 Aufgabe 4.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 5 Aufgabe 5.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 5 Aufgabe 6.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 6 Aufgabe 1.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 6 Aufgabe 2.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 6 Aufgabe 3.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 6 Aufgabe 4.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 6 Aufgabe 5.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 6 Aufgabe 6.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Bett.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Orgel.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Tafel.mp3" />
@@ -1152,6 +1195,14 @@
     <AndroidAsset Include="Assets\Sounds\Objects\Nagel.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Narbe.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Parade.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Mut.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Wut.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Dir.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Mir.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Wir.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Lot.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Not.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Rot.mp3" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="hockeyappandroid">

@@ -190,17 +190,19 @@ namespace IRMGARD
 
             if (concept is BaseText)
             {
+                var c = (concept as BaseText);
                 view = LayoutInflater.From(Activity.BaseContext).Inflate(GetTextResource(concept as BaseText), null);
                 var tvText = view.FindViewById<TextView>(Resource.Id.tvText);
-                tvText.Text = (concept as BaseText).Text;
+                tvText.Text = c.Text;
+                ApplyLetterTags(view, c);
             }
             else if (concept is Speaker)
             {
-                view = LayoutInflater.From(Activity.BaseContext).Inflate(Resource.Layout.Speaker, null);
+                view = LayoutInflater.From(Activity.BaseContext).Inflate(concept.Fixed ? Resource.Layout.Speaker : Resource.Layout.SpeakerCard, null);
             }
             else if (concept is Picture)
             {
-                view = LayoutInflater.From(Activity.BaseContext).Inflate(Resource.Layout.Picture, null);
+                view = LayoutInflater.From(Activity.BaseContext).Inflate(concept.Fixed ? Resource.Layout.Picture : Resource.Layout.PictureCard, null);
                 if (!string.IsNullOrEmpty((concept as Picture).ImagePath))
                 {
                     var bitmap = BitmapLoader.Instance.LoadBitmap(conceptsCount, Activity.BaseContext, (concept as Picture).ImagePath);
@@ -239,19 +241,37 @@ namespace IRMGARD
             return view;
         }
 
+        private static void ApplyLetterTags(View view, BaseText c)
+        {
+            if (c.LetterTags != null && c.LetterTags.Count > 0)
+            {
+                if (c is Letter)
+                {
+                    if (c.LetterTags.First() == LetterTag.Short)
+                    {
+                        view.FindViewById<View>(Resource.Id.shortIndicator).Visibility = ViewStates.Visible;
+                    }
+                    else if (c.LetterTags.First() == LetterTag.Long)
+                    {
+                        view.FindViewById<View>(Resource.Id.longIndicator).Visibility = ViewStates.Visible;
+                    }
+                }
+            }
+        }
+
         int GetTextResource(BaseText concept)
         {
             if (concept is Word)
             {
-                return Resource.Layout.Word;
+                return concept.Fixed ? Resource.Layout.Word : Resource.Layout.WordCard;
             }
             else if (concept is Syllable)
             {
-                return Resource.Layout.Syllable;
+                return concept.Fixed ? Resource.Layout.Syllable : Resource.Layout.SyllableCard;
             }
             else if (concept is Letter)
             {
-                return Resource.Layout.LetterConcept;
+                return concept.Fixed ? Resource.Layout.Letter : Resource.Layout.LetterCard;
             }
             else
             {
