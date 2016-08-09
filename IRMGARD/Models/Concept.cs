@@ -61,7 +61,11 @@ namespace IRMGARD.Models
             var other = obj as BaseText;
             return base.Equals(obj)
                 && (Text == other.Text)
-                && (Enumerable.SequenceEqual(LetterTags, other.LetterTags))
+                && (LetterTags == null && other.LetterTags == null
+                    ? true
+                    : (LetterTags != null && other.LetterTags != null
+                        ? Enumerable.SequenceEqual(LetterTags, other.LetterTags)
+                        : false))
                 && (SoundPath == other.SoundPath);
         }
 

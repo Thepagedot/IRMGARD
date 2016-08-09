@@ -12,6 +12,7 @@ namespace IRMGARD.Models
     {
         public List<List<Concept>> TaskItems { get; set; }
         public List<Concept> OptionItems { get; set; }
+        public int NumberOfTaskItemsToShow { get; set; }
     }
 }
 

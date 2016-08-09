@@ -954,7 +954,7 @@
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 221,
-          "Title": "A-Z?",
+          "Title": "Punkt oder Strich?",
           "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 1.mp3",
           "TypeOfLevel": "DragIntoGap",
           "Iterations": [
@@ -1170,6 +1170,608 @@
                     "$type": "IRMGARD.Models.Letter, IRMGARD",
                     "Text": "T",
                     "LetterTags": [ 1 ]
+                  }
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 222,
+          "Title": "Punkt oder Strich?",
+          "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 2.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2221,
+              "NumberOfTaskItemsToShow": 1,
+              "TaskItems": [
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Dame.png",
+                    "SoundPath": "Objects/Dame.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "D"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "A"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "M"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "E"
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Degen.png",
+                    "SoundPath": "Objects/Degen.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "D"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "E"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "G"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "E"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "N"
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Dose.png",
+                    "SoundPath": "Objects/Dose.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "D"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "O"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "S"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "E"
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Elefant.png",
+                    "SoundPath": "Objects/Elefant.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "E"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "L"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "E"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "F"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "A"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "N"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "T"
+                  }
+                ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2222,
+              "NumberOfTaskItemsToShow": 1,
+              "TaskItems": [
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Esel.png",
+                    "SoundPath": "Objects/Esel.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "E"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "S"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "E"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "L"
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Foto.png",
+                    "SoundPath": "Objects/Foto.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "F"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "O"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "T"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "O"
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Gabel.png",
+                    "SoundPath": "Objects/Gabel.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "G"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "A"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "B"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "E"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "L"
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Giraffe.png",
+                    "SoundPath": "Objects/Giraffe.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "G"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "I"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "R"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "A"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "F"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "F"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "E"
+                  }
+                ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2223,
+              "NumberOfTaskItemsToShow": 1,
+              "TaskItems": [
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Hase.png",
+                    "SoundPath": "Objects/Hase.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "H"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "A"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "S"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "E"
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Hose.png",
+                    "SoundPath": "Objects/Hose.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "H"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "O"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "S"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "E"
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Jade.png",
+                    "SoundPath": "Objects/Jade.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "J"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "A"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "D"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "E"
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Lama.png",
+                    "SoundPath": "Objects/Lama.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "L"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "A"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "M"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "A"
+                  }
+                ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2224,
+              "NumberOfTaskItemsToShow": 1,
+              "TaskItems": [
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Lupe.png",
+                    "SoundPath": "Objects/Lupe.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "L"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "U"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "P"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "E"
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Mofa.png",
+                    "SoundPath": "Objects/Mofa.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "M"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "O"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "F"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "A"
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Nase.png",
+                    "SoundPath": "Objects/Nase.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "N"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "A"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "S"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "E"
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Note.png",
+                    "SoundPath": "Objects/Note.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "N"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "O"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "T"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "E"
+                  }
+                ]
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2225,
+              "NumberOfTaskItemsToShow": 1,
+              "TaskItems": [
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Regen.png",
+                    "SoundPath": "Objects/Regen.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "R"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "E"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "G"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "E"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "N"
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Rose.png",
+                    "SoundPath": "Objects/Rose.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "R"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "O"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "S"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "E"
+                  }
+                ],
+                [
+                  {
+                    "$type": "IRMGARD.Models.Picture, IRMGARD",
+                    "fixed": true,
+                    "ImagePath": "Sofa.png",
+                    "SoundPath": "Objects/Sofa.mp3"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "S"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "Text": "O"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "F"
+                  },
+                  {
+                    "$type": "IRMGARD.Models.Letter, IRMGARD",
+                    "fixed": true,
+                    "Text": "A"
                   }
                 ]
               ]

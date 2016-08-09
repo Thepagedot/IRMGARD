@@ -1117,6 +1117,8 @@
     <AndroidResource Include="Resources\layout\SpeakerCard.axml" />
     <AndroidResource Include="Resources\drawable\letter_long.xml" />
     <AndroidResource Include="Resources\drawable\letter_short.xml" />
+    <AndroidResource Include="Resources\layout\ContentContainer.axml" />
+    <AndroidResource Include="Resources\layout\TaskItemRow.axml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

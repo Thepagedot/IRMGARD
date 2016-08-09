@@ -17,6 +17,8 @@ namespace IRMGARD
         LinearLayout llTaskItemRows;
         FlowLayout flOptionItems;
 
+        List<List<Concept>> currentTaskItems;
+
         bool dragActionDropHandled;
         bool dragActionStartedHandled;
         bool dragActionEndedHandled;
@@ -38,8 +40,13 @@ namespace IRMGARD
 
             var currentIteration = GetCurrentIteration<DragIntoGapIteration>();
 
+            // (Random) select task items to display in this iteration
+            currentTaskItems = currentIteration.NumberOfTaskItemsToShow > 0
+                ? (List<List<Concept>>)currentIteration.TaskItems.PickRandomItems(currentIteration.NumberOfTaskItemsToShow)
+                : currentIteration.TaskItems;
+
             // Build task items
-            BuildTaskItems(currentIteration.TaskItems);
+            BuildTaskItems(currentTaskItems);
 
             // Accumulate and build option items
             var accOptionItems = new List<Concept>();
@@ -63,7 +70,7 @@ namespace IRMGARD
             llTaskItemRows.RemoveAllViews();
             foreach (var taskItemRow in taskItems)
             {
-                var llTaskItemRow = CreateTaskItemRow();
+                var llTaskItemRow = (LinearLayout)LayoutInflater.From(Activity.BaseContext).Inflate(Resource.Layout.TaskItemRow, null);
                 foreach (var item in taskItemRow)
                 {
                     // Init container
@@ -109,23 +116,11 @@ namespace IRMGARD
 
         ViewGroup CreateContentContainer(int resId, View child)
         {
-            FrameLayout container = new FrameLayout(Activity.BaseContext);
+            var container = (ViewGroup)LayoutInflater.From(Activity.BaseContext).Inflate(Resource.Layout.ContentContainer, null);
             container.Id = resId;
-            container.LayoutParameters = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
-            container.SetPadding(6, 6, 6, 6);
             container.AddView(child);
 
             return container;
-        }
-
-        LinearLayout CreateTaskItemRow()
-        {
-            LinearLayout row = new LinearLayout(Activity.BaseContext);
-            row.LayoutParameters = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
-            row.Orientation = Orientation.Horizontal;
-            row.SetPadding(4, 4, 4, 4);
-
-            return row;
         }
 
         int CalcSizeOfBlanks(List<List<Concept>> conceptItems)
@@ -413,11 +408,9 @@ namespace IRMGARD
         public override void CheckSolution()
         {
             var counter = 0;
-            var currentIteration = GetCurrentIteration<DragIntoGapIteration>();
-
-            for (int i = 0; i < currentIteration.TaskItems.Count; i++)
+            for (int i = 0; i < currentTaskItems.Count; i++)
             {
-                var row = currentIteration.TaskItems[i];
+                var row = currentTaskItems[i];
                 var llTaskItemRow = (ViewGroup)llTaskItemRows.GetChildAt(i);
                 for (int k = 0; k < row.Count; k++)
                 {
@@ -436,7 +429,7 @@ namespace IRMGARD
                 }
             }
 
-            FinishIteration(CountConceptItems(currentIteration.TaskItems) == counter);
+            FinishIteration(CountConceptItems(currentTaskItems) == counter);
         }
     }
 }
