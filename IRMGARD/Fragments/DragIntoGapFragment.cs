@@ -16,8 +16,10 @@ namespace IRMGARD
     {
         LinearLayout llTaskItemRows;
         FlowLayout flOptionItems;
+        LinearLayout llSolutionItems;
 
         List<List<Concept>> currentTaskItems;
+        bool inReview;
 
         bool dragActionDropHandled;
         bool dragActionStartedHandled;
@@ -28,6 +30,7 @@ namespace IRMGARD
             View view = inflater.Inflate(Resource.Layout.DragIntoGap, container, false);
             llTaskItemRows = view.FindViewById<LinearLayout>(Resource.Id.llTaskItemRows);
             flOptionItems = view.FindViewById<FlowLayout>(Resource.Id.flOptionItems);
+            llSolutionItems = view.FindViewById<LinearLayout>(Resource.Id.llSolutionItems);
 
             InitIteration();
 
@@ -46,39 +49,50 @@ namespace IRMGARD
                 : currentIteration.TaskItems;
 
             // Build task items
-            BuildTaskItems(currentTaskItems);
+            BuildTaskItems();
 
             // Accumulate and build option items
             var accOptionItems = new List<Concept>();
             foreach (var taskItemRow in currentIteration.TaskItems)
             {
-                accOptionItems.AddRange(taskItemRow.Where(ti => !ti.Fixed).Select(ti => ti.DeepCopy()));
+                accOptionItems.AddRange(taskItemRow.Where(ti => ti.IsBlank).Select(ti => {
+                    var c = ti.DeepCopy();
+                    c.IsBlank = false;
+                    return c;
+                }));
             }
             if (currentIteration.OptionItems != null && currentIteration.OptionItems.Count > 0)
             {
                 accOptionItems.AddRange(currentIteration.OptionItems);
             }
+            if (Lesson.OptionItems != null && Lesson.OptionItems.Count > 0)
+            {
+                accOptionItems.AddRange(Lesson.OptionItems);
+            }
             BuildOptionItems(accOptionItems);
         }
 
-        void BuildTaskItems(List<List<Concept>> taskItems)
+        void BuildTaskItems()
         {
-            int blankSize = CalcSizeOfBlanks(taskItems);
-            int taskItemCount = CountConceptItems(taskItems);
-
             // Add task items to view and attach Drag and Drop handler
             llTaskItemRows.RemoveAllViews();
-            foreach (var taskItemRow in taskItems)
+            foreach (var taskItemRow in currentTaskItems)
             {
-                var llTaskItemRow = (LinearLayout)LayoutInflater.From(Activity.BaseContext).Inflate(Resource.Layout.TaskItemRow, null);
+                var llTaskItemRowRoot = LayoutInflater.From(Activity.BaseContext).Inflate(Resource.Layout.TaskItemRow, null);
+                var llTaskItemRow = llTaskItemRowRoot.FindViewById<LinearLayout>(Resource.Id.llTaskItemRow);
                 foreach (var item in taskItemRow)
                 {
+                    // Exclude special case concepts
+                    if (item.ActivateOnSuccess || item.ActivateOnMistake) { continue; }
+
                     // Init container
                     var container = CreateContentContainer(Resource.Id.flConceptContainer,
-                        (item.Fixed) ? CreateConceptView(item, taskItemCount, true) : CreateBlankView(item, blankSize, taskItemCount));
+                        (item.IsBlank)
+                            ? CreateBlankView(item)
+                            : CreateConceptView(item, CountPictureItems(currentTaskItems)));
 
                     // Add drop handler
-                    if (!item.Fixed)
+                    if (item.IsBlank)
                     {
                         container.Drag += View_Drag;
                     }
@@ -86,7 +100,7 @@ namespace IRMGARD
                     // Add container to task items
                     llTaskItemRow.AddView(container);
                 }
-                llTaskItemRows.AddView(llTaskItemRow);
+                llTaskItemRows.AddView(llTaskItemRowRoot);
             }
         }
 
@@ -99,25 +113,61 @@ namespace IRMGARD
             flOptionItems.RemoveAllViews();
             foreach (var item in optionItems)
             {
+                // Flag item as an option
+                item.IsOption = true;
+
                 // Init container (the additional container is used only to define a padding for IRMGARD.FlowLayout elements)
-                var container = CreateContentContainer(Resource.Id.flOptionContainer, CreateConceptView(item, optionItems.Count, true));
+                var container = CreateContentContainer(Resource.Id.flOptionContainer, CreateConceptView(item, optionItems.Count));
 
                 // Add drag handler
-                container.GetChildAt(0).Touch += (sender, e) =>
-                {
-                    var v = (View)sender;
-                    v.StartDrag(ClipData.NewPlainText("", ""), new View.DragShadowBuilder(v), v, 0);
-                };
+                container.GetChildAt(0).Touch += ConceptView_Touch;
 
                 // Add view to option items
                 flOptionItems.AddView(container);
             }
         }
 
+        bool BuildSolutionItems(List<Concept> solutionItems)
+        {
+            bool itemsCreated = false;
+
+            // Add solution items to view
+            llSolutionItems.RemoveAllViews();
+            foreach (var item in solutionItems)
+            {
+                // Init container
+                var container = CreateContentContainer(Resource.Id.flConceptContainer, CreateConceptView(item, CountPictureItems(currentTaskItems)));
+
+                // Play sound
+                if (item is ISound)
+                {
+                    if (!string.IsNullOrEmpty((item as ISound).SoundPath))
+                    {
+                        SoundPlayer.PlaySound(Activity.BaseContext, (item as ISound).SoundPath);
+                    }
+                }
+
+                // Add view to solution items
+                llSolutionItems.AddView(container);
+                itemsCreated = true;
+            }
+
+            return itemsCreated;
+        }
+
+        void ConceptView_Touch(object sender, EventArgs e)
+        {
+            var v = (View)sender;
+            v.StartDrag(ClipData.NewPlainText("", ""), new View.DragShadowBuilder(v), v, 0);
+        }
+
         ViewGroup CreateContentContainer(int resId, View child)
         {
             var container = (ViewGroup)LayoutInflater.From(Activity.BaseContext).Inflate(Resource.Layout.ContentContainer, null);
             container.Id = resId;
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
+            layoutParams.SetMargins(4, 0, 4, 0);
+            container.LayoutParameters = layoutParams;
             container.AddView(child);
 
             return container;
@@ -132,45 +182,48 @@ namespace IRMGARD
             {
                 foreach (var item in conceptItemRow)
                 {
+                    // Exclude special case concepts
+                    if (item.ActivateOnSuccess || item.ActivateOnMistake) { continue; }
+
                     if (item is BaseText)
                     {
                         blankSize += (item as BaseText).Text.Length;
+                        conceptItemCounter++;
                     }
-                    conceptItemCounter++;
                 }
             }
 
             return blankSize / conceptItemCounter;
         }
 
-        int CountConceptItems(List<List<Concept>> conceptItems)
+        int CountPictureItems(List<List<Concept>> conceptItems)
         {
-            int conceptItemCounter = 0;
+            int pictureItemCounter = 0;
 
             foreach (var conceptItemRow in conceptItems)
             {
                 foreach (var item in conceptItemRow)
                 {
-                    conceptItemCounter++;
+                    if (item is Picture)
+                    {
+                        pictureItemCounter++;
+                    }
                 }
             }
 
-            return conceptItemCounter;
+            return pictureItemCounter;
         }
 
-        View CreateBlankView(Concept concept, int blankSize, int conceptsCount)
+        string GetBlankText(Concept concept)
         {
-            View view = CreateConceptView(concept, conceptsCount, false);
-            if (concept is Word)
-            {
-                var tvText = view.FindViewById<TextView>(Resource.Id.tvText);
-                tvText.Text = string.Concat(Enumerable.Repeat("a", blankSize));
-            }
-            else if (concept is Letter)
-            {
-                var tvText = view.FindViewById<TextView>(Resource.Id.tvText);
-                tvText.Text = "E";
-            }
+            if (concept is Letter) { return "E"; }
+            else if (concept is Syllable) { return string.Concat(Enumerable.Repeat("E", CalcSizeOfBlanks(currentTaskItems))); }
+            else { return string.Concat(Enumerable.Repeat("a", CalcSizeOfBlanks(currentTaskItems))); }
+        }
+
+        View CreateBlankView(Concept concept)
+        {
+            View view = CreateConceptView(concept, CountPictureItems(currentTaskItems));
             view.Visibility = ViewStates.Invisible;
 
             var blankView = (FrameLayout)LayoutInflater.From(Activity.BaseContext).Inflate(Resource.Layout.Blank, null);
@@ -179,25 +232,63 @@ namespace IRMGARD
             return blankView;
         }
 
-        View CreateConceptView(Concept concept, int conceptsCount, bool initView)
+        View CreateConceptView(Concept concept, int conceptsCount)
         {
             View view;
 
+            var inflater = LayoutInflater.From(Activity.BaseContext);
             if (concept is BaseText)
             {
-                var c = (concept as BaseText);
-                view = LayoutInflater.From(Activity.BaseContext).Inflate(GetTextResource(concept as BaseText), null);
-                var tvText = view.FindViewById<TextView>(Resource.Id.tvText);
-                tvText.Text = c.Text;
-                ApplyLetterTags(view, c);
+                var baseText = (concept as BaseText);
+                if (baseText.LetterTags != null && baseText.LetterTags.Count > 0)
+                {
+                    view = ApplyLetterTags(inflater, baseText);
+                }
+                else
+                {
+                    view = inflater.Inflate(Resource.Layout.BaseText, null);
+                    var tvText = view.FindViewById<TextView>(Resource.Id.tvText);
+                    tvText.Text = (baseText.IsBlank) ? GetBlankText(baseText) : baseText.Text;
+                    SetTextColor(tvText, baseText);
+                    AdjustTextSize(tvText, baseText);
+                }
+
+                if (baseText is ISound && baseText.SoundPath != null)
+                {
+                    var speakerDecorator = (ViewGroup)inflater.Inflate(Resource.Layout.BaseTextSpeaker, null);
+                    speakerDecorator.AddView(view);
+                    view = speakerDecorator;
+                }
+
+                if (baseText.IsBlank || baseText.IsOption || concept.ActivateOnSuccess || concept.ActivateOnMistake)
+                {
+                    var cardView = (FrameLayout)inflater.Inflate(Resource.Layout.BaseTextCard, null);
+                    cardView.AddView(view);
+                    view = cardView;
+                }
+                else
+                {
+                    if (!baseText.ShowAsPlainText)
+                    {
+                        view.SetBackgroundResource(Resource.Drawable.concept_gray);
+                    }
+                }
             }
             else if (concept is Speaker)
             {
-                view = LayoutInflater.From(Activity.BaseContext).Inflate(concept.Fixed ? Resource.Layout.Speaker : Resource.Layout.SpeakerCard, null);
+                view = inflater.Inflate(concept.IsBlank || concept.IsOption ? Resource.Layout.SpeakerCard : Resource.Layout.Speaker, null);
             }
             else if (concept is Picture)
             {
-                view = LayoutInflater.From(Activity.BaseContext).Inflate(concept.Fixed ? Resource.Layout.Picture : Resource.Layout.PictureCard, null);
+                view = inflater.Inflate((concept.IsBlank || concept.IsOption
+                        || concept.ActivateOnSuccess || concept.ActivateOnMistake)
+                    ? Resource.Layout.PictureCard : Resource.Layout.Picture, null);
+
+                if (concept.ActivateOnSuccess || concept.ActivateOnMistake)
+                {
+                    (view as ViewGroup).GetChildAt(0).LayoutParameters = new FrameLayout.LayoutParams(ToDp(150), ToDp(150));
+                }
+
                 if (!string.IsNullOrEmpty((concept as Picture).ImagePath))
                 {
                     var bitmap = BitmapLoader.Instance.LoadBitmap(conceptsCount, Activity.BaseContext, (concept as Picture).ImagePath);
@@ -208,14 +299,22 @@ namespace IRMGARD
                     }
                 }
             }
+            else if (concept is Models.Space)
+            {
+                view = new Android.Widget.Space(Activity.BaseContext);
+                view.LayoutParameters = new LinearLayout.LayoutParams(ToDp((concept as Models.Space).Width), ViewGroup.LayoutParams.MatchParent);
+            }
             else
             {
-                view = LayoutInflater.From(Activity.BaseContext).Inflate(Resource.Layout.Word, null);
+                view = inflater.Inflate(Resource.Layout.BaseText, null);
                 var tvText = view.FindViewById<TextView>(Resource.Id.tvText);
                 tvText.Text = string.Format("Concept type {0} does not exist!", concept.GetType().ToString());
             }
 
-            if (initView)
+            // Attach concept object to view
+            view.SetTag(Resource.Id.concept_tag_key, new JavaObjectWrapper<Concept>() { Obj = concept });
+
+            if (!concept.IsBlank)
             {
                 // Play sound on touch
                 if (concept is ISound)
@@ -228,55 +327,108 @@ namespace IRMGARD
                         };
                     }
                 }
-
-                // Attach concept object to view
-                view.SetTag(Resource.Id.concept_tag_key, new JavaObjectWrapper<Concept>() { Obj = concept });
             }
 
             return view;
         }
 
-        private static void ApplyLetterTags(View view, BaseText c)
+        int ToDp(int px)
         {
-            if (c.LetterTags != null && c.LetterTags.Count > 0)
-            {
-                if (c is Letter)
-                {
-                    if (c.LetterTags.First() == LetterTag.Short)
-                    {
-                        view.FindViewById<View>(Resource.Id.shortIndicator).Visibility = ViewStates.Visible;
-                    }
-                    else if (c.LetterTags.First() == LetterTag.Long)
-                    {
-                        view.FindViewById<View>(Resource.Id.longIndicator).Visibility = ViewStates.Visible;
-                    }
-                }
-            }
+            return (int)(px * Resources.DisplayMetrics.Density);
         }
 
-        int GetTextResource(BaseText concept)
+        void AdjustTextSize(TextView tvText, BaseText concept)
         {
-            if (concept is Word)
+            if (concept is Letter)
             {
-                return concept.Fixed ? Resource.Layout.Word : Resource.Layout.WordCard;
+                tvText.SetTextSize(Android.Util.ComplexUnitType.Sp, 32);
             }
             else if (concept is Syllable)
             {
-                return concept.Fixed ? Resource.Layout.Syllable : Resource.Layout.SyllableCard;
+                tvText.SetTextSize(Android.Util.ComplexUnitType.Sp, 24);
+            }
+            else if (concept is Word)
+            {
+                tvText.SetTextSize(Android.Util.ComplexUnitType.Sp, 18);
+            }
+        }
+
+        View ApplyLetterTags(LayoutInflater inflater, BaseText concept)
+        {
+            string text = concept.IsBlank ? GetBlankText(concept) : concept.Text;
+
+            if (concept is Word || concept is Syllable)
+            {
+                var viewGroup = (ViewGroup)inflater.Inflate(Resource.Layout.BaseTextGroup, null);
+                for (int i = 0; i < text.Length; i++)
+                {
+                    var view = inflater.Inflate(Resource.Layout.BaseText, null);
+                    view.SetPadding(0, 0, 0, 0);
+                    var tvText = view.FindViewById<TextView>(Resource.Id.tvText);
+                    tvText.Text = char.ToString(text[i]);
+                    SetTextColor(tvText, concept);
+                    AdjustTextSize(tvText, concept);
+                    EnableIndicator(view, concept, concept.LetterTags[i]);
+                    viewGroup.AddView(view);
+                }
+
+                return viewGroup;
             }
             else if (concept is Letter)
             {
-                return concept.Fixed ? Resource.Layout.Letter : Resource.Layout.LetterCard;
+                var view = inflater.Inflate(Resource.Layout.BaseText, null);
+                var tvText = view.FindViewById<TextView>(Resource.Id.tvText);
+                tvText.Text = text;
+                SetTextColor(tvText, concept);
+                AdjustTextSize(tvText, concept);
+                EnableIndicator(view, concept, concept.LetterTags.First());
+
+                return view;
             }
             else
             {
-                throw new ArgumentException("Cannot find resource for text based concept.");
+                throw new InvalidCastException("Unknown concept of type BaseText!");
+            }
+        }
+
+        void SetTextColor(TextView tvText, BaseText concept)
+        {
+            if (!string.IsNullOrEmpty(concept.Color))
+            {
+                tvText.SetTextColor(Android.Graphics.Color.ParseColor(concept.Color));
+            }
+        }
+
+        void EnableIndicator(View letterView, BaseText concept, LetterTag letterTag)
+        {
+            if (letterTag == LetterTag.Short)
+            {
+                var view = letterView.FindViewById<View>(Resource.Id.shortIndicator);
+                SetDrawableColor(view, concept);
+                view.Visibility = ViewStates.Visible;
+            }
+            else if (letterTag == LetterTag.Long)
+            {
+                var view = letterView.FindViewById<View>(Resource.Id.longIndicator);
+                SetDrawableColor(view, concept);
+                view.Visibility = ViewStates.Visible;
+            }
+        }
+
+        void SetDrawableColor(View view, BaseText concept)
+        {
+            if (!string.IsNullOrEmpty(concept.Color))
+            {
+                var background = view.Background as Android.Graphics.Drawables.GradientDrawable;
+                background.SetColor(Android.Graphics.Color.ParseColor(concept.Color).ToArgb());
             }
         }
 
         void View_Drag(object sender, View.DragEventArgs e)
         {
             var srcView = (View) e.Event.LocalState;
+            if (srcView == null || srcView.Parent == null) return;
+
             var srcContainer = (srcView.Parent as ViewGroup);
             var destContainer = (FrameLayout) sender;
 
@@ -327,7 +479,7 @@ namespace IRMGARD
                                 flOptionItems.AddView(CreateContentContainer(Resource.Id.flOptionContainer, srcView));
                             }
                             srcView.Visibility = ViewStates.Visible;
-                            FireUserInteracted(false);
+                            FireUserInteracted(CheckUserInteracted());
                         }
                         dragActionDropHandled = false;
                         dragActionEndedHandled = true;
@@ -392,7 +544,8 @@ namespace IRMGARD
             // Check if the user is done
             for (int i = 0; i < llTaskItemRows.ChildCount; i++)
             {
-                var llTaskItemRow = (ViewGroup)llTaskItemRows.GetChildAt(i);
+                var view = (ViewGroup)llTaskItemRows.GetChildAt(i);
+                var llTaskItemRow = view.FindViewById<LinearLayout>(Resource.Id.llTaskItemRow);
                 for (int k = 0; k < llTaskItemRow.ChildCount; k++)
                 {
                     if (GetCCContent(llTaskItemRow.GetChildAt(k) as ViewGroup) == null)
@@ -405,31 +558,147 @@ namespace IRMGARD
             return true;
         }
 
-        public override void CheckSolution()
+        bool CheckAllTaskItems()
         {
-            var counter = 0;
-            for (int i = 0; i < currentTaskItems.Count; i++)
+            var correct = true;
+
+            for (int i = 0; i < llTaskItemRows.ChildCount; i++)
             {
-                var row = currentTaskItems[i];
-                var llTaskItemRow = (ViewGroup)llTaskItemRows.GetChildAt(i);
-                for (int k = 0; k < row.Count; k++)
+                var view = (ViewGroup)llTaskItemRows.GetChildAt(i);
+                var llTaskItemRow = view.FindViewById<LinearLayout>(Resource.Id.llTaskItemRow);
+
+                // Move divider to display success/failure bottom border of a concept view
+                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, LinearLayout.LayoutParams.MatchParent);
+                layoutParams.TopMargin = -3;
+                view.FindViewById<ImageView>(Resource.Id.ivDivider).LayoutParameters = layoutParams;
+                for (int k = 0; k < llTaskItemRow.ChildCount; k++)
                 {
-                    var contentView = GetCCContent(llTaskItemRow.GetChildAt(k) as ViewGroup);
-                    if (contentView != null)
+                    var conceptContainer = llTaskItemRow.GetChildAt(k) as ViewGroup;
+                    var blankView = conceptContainer.FindViewById<FrameLayout>(Resource.Id.flBlank);
+                    if (blankView != null)
                     {
-                        var wrapper = contentView.GetTag(Resource.Id.concept_tag_key) as JavaObjectWrapper<Concept>;
-                        if (wrapper != null && wrapper.Obj != null)
+                        var contentView = GetCCContent(conceptContainer);
+                        if (contentView != null)
                         {
-                            if (row[k].Equals(wrapper.Obj))
+                            // Remove drag handler
+                            contentView.Touch -= ConceptView_Touch;
+
+                            var contentViewConcept = (contentView.GetTag(Resource.Id.concept_tag_key) as JavaObjectWrapper<Concept>).Obj;
+                            var blankViewConcept = (blankView.GetChildAt(1).GetTag(Resource.Id.concept_tag_key) as JavaObjectWrapper<Concept>).Obj;
+                            if (contentViewConcept != null && blankViewConcept != null && contentViewConcept.Equals(blankViewConcept))
                             {
-                                counter++;
+                                conceptContainer.SetBackgroundResource(Resource.Drawable.rectangle_green);
+                            }
+                            else
+                            {
+                                conceptContainer.SetBackgroundResource(Resource.Drawable.rectangle_red);
+                                correct = false;
                             }
                         }
                     }
                 }
             }
 
-            FinishIteration(CountConceptItems(currentTaskItems) == counter);
+            return correct;
+        }
+
+        List<Concept> GetCorrectConcepts()
+        {
+            var concepts = new List<Concept>();
+            foreach (var conceptItemRow in currentTaskItems)
+            {
+                concepts.AddRange(conceptItemRow.Where(c => c.IsBlank));
+            }
+
+            return concepts;
+        }
+
+        void HighlightCorrectOptions(List<Concept> correctConcepts)
+        {
+            for (int i = 0; i < flOptionItems.ChildCount; i++)
+            {
+                var conceptContainer = flOptionItems.GetChildAt(i) as ViewGroup;
+                var optionView = conceptContainer.GetChildAt(0);
+                if (optionView != null)
+                {
+                    // Remove drag handler
+                    optionView.Touch -= ConceptView_Touch;
+
+                    var optionViewConcept = (optionView.GetTag(Resource.Id.concept_tag_key) as JavaObjectWrapper<Concept>).Obj;
+                    foreach (var correctConcept in correctConcepts)
+                    {
+                        if (correctConcept != null && optionViewConcept != null && correctConcept.Equals(optionViewConcept))
+                        {
+                            conceptContainer.SetBackgroundResource(Resource.Drawable.rectangle_green);
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        List<Concept> GetConceptsToActivateOnCheckSolution(bool success)
+        {
+            var concepts = new List<Concept>();
+            foreach (var taskItemRow in currentTaskItems)
+            {
+                concepts.AddRange(taskItemRow.Where(ti => (success) ? ti.ActivateOnSuccess : ti.ActivateOnMistake));
+            }
+
+            return concepts;
+        }
+
+        public override void CheckSolution()
+        {
+            if (inReview)
+            {
+                // User touched the next button for the second time
+                inReview = false;
+                flOptionItems.Visibility = ViewStates.Visible;
+                llSolutionItems.Visibility = ViewStates.Gone;
+
+                FinishIteration(CheckAllTaskItems());
+            }
+            else
+            {
+                // First time solution check
+                if (CheckAllTaskItems())
+                {
+                    // Build all concepts to activate on success
+                    if (BuildSolutionItems(GetConceptsToActivateOnCheckSolution(true)))
+                    {
+                        flOptionItems.Visibility = ViewStates.Gone;
+                        llSolutionItems.Visibility = ViewStates.Visible;
+                        inReview = true;
+                        FireUserInteracted(true);
+                    }
+                    else
+                    {
+                        FinishIteration(true);
+                    }
+                }
+                else
+                {
+                    // Build all concepts to activate on mistake
+                    if (BuildSolutionItems(GetConceptsToActivateOnCheckSolution(false)))
+                    {
+                        llSolutionItems.Visibility = ViewStates.Visible;
+                    }
+
+                    // Highlight correct options
+                    if (Lesson.HighlightCorrectOptionsOnMistake)
+                    {
+                        HighlightCorrectOptions(GetCorrectConcepts());
+                    }
+                    else
+                    {
+                        flOptionItems.Visibility = ViewStates.Gone;
+                    }
+
+                    inReview = true;
+                    FireUserInteracted(true);
+                }
+            }
         }
     }
 }

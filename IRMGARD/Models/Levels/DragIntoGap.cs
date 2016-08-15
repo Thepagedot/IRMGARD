@@ -6,6 +6,7 @@ namespace IRMGARD.Models
     public class DragIntoGap : Lesson
     {
         public List<Concept> OptionItems { get; set; }
+        public bool HighlightCorrectOptionsOnMistake { get; set; }
     }
 
     public class DragIntoGapIteration : Iteration

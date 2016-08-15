@@ -15,7 +15,7 @@ namespace IRMGARD
 
         public override View GetView(int position, Android.Views.View convertView, Android.Views.ViewGroup parent)
         {
-            var view = convertView ?? LayoutInflater.From(Context).Inflate(Resource.Layout.LetterComposite, null);
+            var view = convertView ?? LayoutInflater.From(Context).Inflate(Resource.Layout.Letter, null);
 
             view.FindViewById<TextView>(Resource.Id.tvLetter).Text = GetItem(position).Letter;
 
