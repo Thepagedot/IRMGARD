@@ -72,7 +72,12 @@ namespace IRMGARD
             }
             if (Lesson.OptionItems != null && Lesson.OptionItems.Count > 0)
             {
-                accOptionItems.AddRange(Lesson.OptionItems);
+                foreach (var item in Lesson.OptionItems)
+                {
+                    if (!accOptionItems.Contains(item)) {
+                        accOptionItems.Add(item);
+                    }
+                }
             }
             BuildOptionItems(accOptionItems);
         }
