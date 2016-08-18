@@ -1119,6 +1119,8 @@
     <AndroidResource Include="Resources\drawable\concept_gray.xml" />
     <AndroidResource Include="Resources\drawable\concept_light_gray.axml" />
     <AndroidResource Include="Resources\layout\BaseTextSpeaker.axml" />
+    <AndroidResource Include="Resources\layout-h550dp\BaseText.axml" />
+    <AndroidResource Include="Resources\layout-h550dp\BaseTextCard.axml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

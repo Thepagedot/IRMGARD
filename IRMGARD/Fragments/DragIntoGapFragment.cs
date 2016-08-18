@@ -18,7 +18,7 @@ namespace IRMGARD
         FlowLayout flOptionItems;
         LinearLayout llSolutionItems;
 
-        List<List<Concept>> currentTaskItems;
+        Exercise exercise;
         bool inReview;
 
         bool dragActionDropHandled;
@@ -43,27 +43,32 @@ namespace IRMGARD
 
             var currentIteration = GetCurrentIteration<DragIntoGapIteration>();
 
-            // (Random) select task items to display in this iteration
-            currentTaskItems = currentIteration.NumberOfTaskItemsToShow > 0
-                ? (List<List<Concept>>)currentIteration.TaskItems.PickRandomItems(currentIteration.NumberOfTaskItemsToShow)
-                : currentIteration.TaskItems;
+            // Random select an exercise from this iteration
+            exercise = currentIteration.Tasks.PickRandomItems(1).FirstOrDefault();
 
             // Build task items
             BuildTaskItems();
 
-            // Accumulate and build option items
+            // Accumulate and build option item collection
             var accOptionItems = new List<Concept>();
-            foreach (var taskItemRow in currentIteration.TaskItems)
+
+            // Add blank task items as options
+            if (Lesson.UseOptionItemsOnly)
             {
-                accOptionItems.AddRange(taskItemRow.Where(ti => ti.IsBlank).Select(ti => {
-                    var c = ti.DeepCopy();
-                    c.IsBlank = false;
-                    return c;
-                }));
+                AddBlankConcepts(accOptionItems, exercise);
             }
-            if (currentIteration.OptionItems != null && currentIteration.OptionItems.Count > 0)
+            else
             {
-                accOptionItems.AddRange(currentIteration.OptionItems);
+                foreach (var task in currentIteration.Tasks)
+                {
+                    AddBlankConcepts(accOptionItems, task);
+                }
+            }
+
+            // Add option items
+            if (exercise.OptionItems != null && exercise.OptionItems.Count > 0)
+            {
+                accOptionItems.AddRange(exercise.OptionItems);
             }
             if (Lesson.OptionItems != null && Lesson.OptionItems.Count > 0)
             {
@@ -72,11 +77,23 @@ namespace IRMGARD
             BuildOptionItems(accOptionItems);
         }
 
+        void AddBlankConcepts(List<Concept> optionItems, Exercise task)
+        {
+            foreach (var taskItemRow in task.TaskItems)
+            {
+                optionItems.AddRange(taskItemRow.Where(ti => ti.IsBlank).Select(ti => {
+                    var c = ti.DeepCopy();
+                    c.IsBlank = false;
+                    return c;
+                }));
+            }
+        }
+
         void BuildTaskItems()
         {
             // Add task items to view and attach Drag and Drop handler
             llTaskItemRows.RemoveAllViews();
-            foreach (var taskItemRow in currentTaskItems)
+            foreach (var taskItemRow in exercise.TaskItems)
             {
                 var llTaskItemRowRoot = LayoutInflater.From(Activity.BaseContext).Inflate(Resource.Layout.TaskItemRow, null);
                 var llTaskItemRow = llTaskItemRowRoot.FindViewById<LinearLayout>(Resource.Id.llTaskItemRow);
@@ -89,7 +106,7 @@ namespace IRMGARD
                     var container = CreateContentContainer(Resource.Id.flConceptContainer,
                         (item.IsBlank)
                             ? CreateBlankView(item)
-                            : CreateConceptView(item, CountPictureItems(currentTaskItems)));
+                            : CreateConceptView(item, CountPictureItems(exercise.TaskItems)));
 
                     // Add drop handler
                     if (item.IsBlank)
@@ -100,6 +117,12 @@ namespace IRMGARD
                     // Add container to task items
                     llTaskItemRow.AddView(container);
                 }
+
+                if (Lesson.HideRack)
+                {
+                    llTaskItemRowRoot.FindViewById<ImageView>(Resource.Id.ivDivider).Visibility = ViewStates.Invisible;
+                }
+
                 llTaskItemRows.AddView(llTaskItemRowRoot);
             }
         }
@@ -136,7 +159,7 @@ namespace IRMGARD
             foreach (var item in solutionItems)
             {
                 // Init container
-                var container = CreateContentContainer(Resource.Id.flConceptContainer, CreateConceptView(item, CountPictureItems(currentTaskItems)));
+                var container = CreateContentContainer(Resource.Id.flConceptContainer, CreateConceptView(item, CountPictureItems(exercise.TaskItems)));
 
                 // Play sound
                 if (item is ISound)
@@ -217,13 +240,13 @@ namespace IRMGARD
         string GetBlankText(Concept concept)
         {
             if (concept is Letter) { return "E"; }
-            else if (concept is Syllable) { return string.Concat(Enumerable.Repeat("E", CalcSizeOfBlanks(currentTaskItems))); }
-            else { return string.Concat(Enumerable.Repeat("a", CalcSizeOfBlanks(currentTaskItems))); }
+            else if (concept is Syllable) { return string.Concat(Enumerable.Repeat("E", CalcSizeOfBlanks(exercise.TaskItems))); }
+            else { return string.Concat(Enumerable.Repeat("a", CalcSizeOfBlanks(exercise.TaskItems))); }
         }
 
         View CreateBlankView(Concept concept)
         {
-            View view = CreateConceptView(concept, CountPictureItems(currentTaskItems));
+            View view = CreateConceptView(concept, CountPictureItems(exercise.TaskItems));
             view.Visibility = ViewStates.Invisible;
 
             var blankView = (FrameLayout)LayoutInflater.From(Activity.BaseContext).Inflate(Resource.Layout.Blank, null);
@@ -339,17 +362,24 @@ namespace IRMGARD
 
         void AdjustTextSize(TextView tvText, BaseText concept)
         {
-            if (concept is Letter)
+            if (concept.TextSize > 0)
             {
-                tvText.SetTextSize(Android.Util.ComplexUnitType.Sp, 32);
+                tvText.SetTextSize(Android.Util.ComplexUnitType.Sp, concept.TextSize);
             }
-            else if (concept is Syllable)
+            else
             {
-                tvText.SetTextSize(Android.Util.ComplexUnitType.Sp, 24);
-            }
-            else if (concept is Word)
-            {
-                tvText.SetTextSize(Android.Util.ComplexUnitType.Sp, 18);
+                if (concept is Letter)
+                {
+                    tvText.SetTextSize(Android.Util.ComplexUnitType.Sp, 32);
+                }
+                else if (concept is Syllable)
+                {
+                    tvText.SetTextSize(Android.Util.ComplexUnitType.Sp, 24);
+                }
+                else if (concept is Word)
+                {
+                    tvText.SetTextSize(Android.Util.ComplexUnitType.Sp, 18);
+                }
             }
         }
 
@@ -567,10 +597,14 @@ namespace IRMGARD
                 var view = (ViewGroup)llTaskItemRows.GetChildAt(i);
                 var llTaskItemRow = view.FindViewById<LinearLayout>(Resource.Id.llTaskItemRow);
 
-                // Move divider to display success/failure bottom border of a concept view
-                LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, LinearLayout.LayoutParams.MatchParent);
-                layoutParams.TopMargin = -3;
-                view.FindViewById<ImageView>(Resource.Id.ivDivider).LayoutParameters = layoutParams;
+                if (!Lesson.HideRack)
+                {
+                    // Move divider to display success/failure bottom border of a concept view
+                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, LinearLayout.LayoutParams.MatchParent);
+                    layoutParams.TopMargin = -2;
+                    view.FindViewById<ImageView>(Resource.Id.ivDivider).LayoutParameters = layoutParams;
+                }
+
                 for (int k = 0; k < llTaskItemRow.ChildCount; k++)
                 {
                     var conceptContainer = llTaskItemRow.GetChildAt(k) as ViewGroup;
@@ -605,7 +639,7 @@ namespace IRMGARD
         List<Concept> GetCorrectConcepts()
         {
             var concepts = new List<Concept>();
-            foreach (var conceptItemRow in currentTaskItems)
+            foreach (var conceptItemRow in exercise.TaskItems)
             {
                 concepts.AddRange(conceptItemRow.Where(c => c.IsBlank));
             }
@@ -640,7 +674,7 @@ namespace IRMGARD
         List<Concept> GetConceptsToActivateOnCheckSolution(bool success)
         {
             var concepts = new List<Concept>();
-            foreach (var taskItemRow in currentTaskItems)
+            foreach (var taskItemRow in exercise.TaskItems)
             {
                 concepts.AddRange(taskItemRow.Where(ti => (success) ? ti.ActivateOnSuccess : ti.ActivateOnMistake));
             }

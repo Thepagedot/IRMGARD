@@ -9,6 +9,7 @@ namespace IRMGARD.Models
     {
         // The following properies are excluded from comparison
         public bool IsBlank { get; set; }
+        public bool IsSingleBlank { get; set; }
         public bool IsOption { get; set; }
         public bool ActivateOnSuccess { get; set; }
         public bool ActivateOnMistake { get; set; }
@@ -17,6 +18,7 @@ namespace IRMGARD.Models
         {
             Concept clone = (Concept)this.MemberwiseClone();
             clone.IsBlank = IsBlank;
+            clone.IsSingleBlank = IsSingleBlank;
             clone.IsOption = IsOption;
             clone.ActivateOnSuccess = ActivateOnSuccess;
             clone.ActivateOnMistake = ActivateOnMistake;
@@ -55,6 +57,7 @@ namespace IRMGARD.Models
         // The following properies are excluded from comparison
         public string Color { get; set; }
         public bool ShowAsPlainText { get; set; }
+        public int TextSize { get; set; }
 
         public override Concept DeepCopy()
         {
@@ -67,6 +70,7 @@ namespace IRMGARD.Models
             clone.SoundPath = SoundPath != null ? String.Copy(SoundPath) : null;
             clone.Color = Color != null ? String.Copy(Color) : null;
             clone.ShowAsPlainText = ShowAsPlainText;
+            clone.TextSize = TextSize;
 
             return clone;
         }
