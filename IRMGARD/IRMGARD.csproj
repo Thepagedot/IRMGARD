@@ -1028,7 +1028,7 @@
     <AndroidResource Include="Resources\layout\GifTask.axml" />
     <AndroidResource Include="Resources\layout-h550dp\Memory.axml" />
     <AndroidResource Include="Resources\layout-h550dp\MemoryCard.axml" />
-    <AndroidResource Include="Resources\layout-h550dp\LetterComposite.axml" />
+    <AndroidResource Include="Resources\layout-h550dp\Letter.axml" />
     <AndroidResource Include="Resources\layout-h550dp\TaskItem.axml" />
     <AndroidResource Include="Resources\layout-h550dp\BuildSyllable.axml" />
     <AndroidResource Include="Resources\drawable\divider.png" />
@@ -1119,8 +1119,9 @@
     <AndroidResource Include="Resources\drawable\concept_gray.xml" />
     <AndroidResource Include="Resources\drawable\concept_light_gray.axml" />
     <AndroidResource Include="Resources\layout\BaseTextSpeaker.axml" />
-    <AndroidResource Include="Resources\layout-h550dp\BaseText.axml" />
+    <AndroidResource Include="Resources\layout\BaseTextBordered.axml" />
     <AndroidResource Include="Resources\layout-h550dp\BaseTextCard.axml" />
+    <AndroidResource Include="Resources\layout-h550dp\BaseTextBordered.axml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

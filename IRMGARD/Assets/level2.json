@@ -1192,6 +1192,7 @@
           "Title": "Punkt oder Strich?",
           "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 1.mp3",
           "TypeOfLevel": "DragIntoGap",
+          "TopMargins": [ 4, 4, 12 ],
           "Iterations": [
             {
               "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
@@ -1609,7 +1610,9 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "SoundPath": "Objects/Elefant.mp3"
-                      },
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
                         "Text": "E"
@@ -1796,7 +1799,9 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "SoundPath": "Objects/Giraffe.mp3"
-                      },
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
                         "Text": "G"
@@ -2602,7 +2607,9 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "SoundPath": "Objects/Giraffe.mp3"
-                      },
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
                         "Text": "G"
@@ -6438,6 +6445,7 @@
           "Title": "Im Supermarkt",
           "SoundPath": "Intros/Level 2 Modul 4 Aufgabe 1.mp3",
           "TypeOfLevel": "DragIntoGap",
+          "TopMargins": [ 16, 4 ], 
           "Iterations": [
             {
               "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
@@ -7956,7 +7964,7 @@
                         "SoundPath": "ObjectsWithDefArt/Der_Baer.mp3"
                       },
                       {
-                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
                         "Text": "Der"
                       },
@@ -7984,7 +7992,7 @@
                         "SoundPath": "ObjectsWithDefArt/Die_Tuer.mp3"
                       },
                       {
-                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
                         "Text": "Die"
                       },
@@ -8018,7 +8026,7 @@
                         "SoundPath": "ObjectsWithDefArt/Die_Huete.mp3"
                       },
                       {
-                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
                         "Text": "Die"
                       },
@@ -8050,7 +8058,7 @@
                         "SoundPath": "ObjectsWithDefArt/Die_Gaeste.mp3"
                       },
                       {
-                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
                         "Text": "Die"
                       },
@@ -8092,7 +8100,7 @@
                         "SoundPath": "ObjectsWithDefArt/Die_Aepfel.mp3"
                       },
                       {
-                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
                         "Text": "Die"
                       },
@@ -8128,7 +8136,7 @@
                         "SoundPath": "ObjectsWithDefArt/Die_Fluegel.mp3"
                       },
                       {
-                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
                         "Text": "Die"
                       },
@@ -8174,7 +8182,7 @@
                         "SoundPath": "ObjectsWithDefArt/Der_Huegel.mp3"
                       },
                       {
-                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
                         "Text": "Der"
                       },
@@ -8210,7 +8218,7 @@
                         "SoundPath": "ObjectsWithDefArt/Der_Buegel.mp3"
                       },
                       {
-                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
                         "Text": "Der"
                       },
@@ -8246,7 +8254,7 @@
                         "SoundPath": "ObjectsWithDefArt/Der_Koenig.mp3"
                       },
                       {
-                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
                         "Text": "Der"
                       },
@@ -8288,7 +8296,7 @@
                         "SoundPath": "ObjectsWithDefArt/Der_Loeffel.mp3"
                       },
                       {
-                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
                         "Text": "Der"
                       },
@@ -8328,7 +8336,7 @@
                         "SoundPath": "ObjectsWithDefArt/Die_Knoepfe.mp3"
                       },
                       {
-                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
                         "Text": "Die"
                       },
@@ -8368,7 +8376,7 @@
                         "SoundPath": "ObjectsWithDefArt/Der_Baecker.mp3"
                       },
                       {
-                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
                         "Text": "Der"
                       },
@@ -8408,14 +8416,9 @@
                         "SoundPath": "ObjectsWithDefArt/Die_Kaelte.mp3"
                       },
                       {
-                        "$type": "IRMGARD.Models.Space, IRMGARD"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
                         "Text": "Die"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Space, IRMGARD"
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
@@ -8943,14 +8946,14 @@
       ]
     },
     {
-      "Name": "6: AU / EU",
+      "Name": "6: AU, ÄU oder EU",
       "Color": "#e5c8c4",
       "VideoPath": "Videos/L2_Modul_6_720p.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 261,
-          "Title": "Umlaute",
+          "Title": "AU, ÄU oder EU",
           "SoundPath": "Intros/Level 2 Modul 6 Aufgabe 1.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
@@ -9383,7 +9386,7 @@
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 263,
-          "Title": "Umlaute",
+          "Title": "AU, ÄU oder EU",
           "SoundPath": "Intros/Level 2 Modul 6 Aufgabe 3.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,

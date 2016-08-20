@@ -13,4 +13,12 @@
     <color name="background">#FFFFFFFF</color>
 
     <color name="level1">#FFBE6E66</color>
+    <color name="level2">#FF6B91A3</color>
+    <color name="level3">#FF6B91A3</color>
+    <color name="level4">#FF6B91A3</color>
+    <color name="level5">#FF6B91A3</color>
+    <color name="level6">#FF6B91A3</color>
+    <color name="level7">#FF6B91A3</color>
+    <color name="level8">#FF6B91A3</color>
+    <color name="level9">#FF6B91A3</color>
 </resources>

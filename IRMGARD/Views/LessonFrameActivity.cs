@@ -481,14 +481,9 @@ namespace IRMGARD
         private void ApplyLevelColors()
         {
             var levelNumber = DataHolder.Current.Levels.IndexOf(DataHolder.Current.CurrentLevel) + 1;
-            switch (levelNumber)
-            {
-                case 1:
-                    Theme.ApplyStyle(Resource.Style.Level1Colors, true);
-                    break;
-                default:
-                    break;
-            }
+
+            // REFLECTION for fields like Level1Colors
+            Theme.ApplyStyle((int)(typeof(Resource.Style).GetField(string.Format("Level{0}Colors", levelNumber)).GetValue(null)), true);
         }
 
         private void CheckHintButton()

@@ -34,6 +34,30 @@
     <style name="Level1Colors">
         <item name="colorAccent">@color/level1</item>
     </style>
+    <style name="Level2Colors">
+        <item name="colorAccent">@color/level2</item>
+    </style>
+    <style name="Level3Colors">
+        <item name="colorAccent">@color/level3</item>
+    </style>
+    <style name="Level4Colors">
+        <item name="colorAccent">@color/level4</item>
+    </style>
+    <style name="Level5Colors">
+        <item name="colorAccent">@color/level5</item>
+    </style>
+    <style name="Level6Colors">
+        <item name="colorAccent">@color/level6</item>
+    </style>
+    <style name="Level7Colors">
+        <item name="colorAccent">@color/level7</item>
+    </style>
+    <style name="Level8Colors">
+        <item name="colorAccent">@color/level8</item>
+    </style>
+    <style name="Level9Colors">
+        <item name="colorAccent">@color/level9</item>
+    </style>
 
     <style name="result_zone">
         <item name="android:layout_margin">@dimen/margin_default</item>

@@ -6,7 +6,7 @@
     cardview:cardCornerRadius="4dp"
     cardview:cardUseCompatPadding="false"
     cardview:cardPreventCornerOverlap="true"
-    cardview:contentPadding="4dp"
+    cardview:contentPadding="6dp"
     cardview:cardElevation="0dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"

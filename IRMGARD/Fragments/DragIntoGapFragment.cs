@@ -96,6 +96,9 @@ namespace IRMGARD
 
         void BuildTaskItems()
         {
+            // Replace default top margin
+            SetTopMargin(0, (View)llTaskItemRows.Parent);
+
             // Add task items to view and attach Drag and Drop handler
             llTaskItemRows.RemoveAllViews();
             foreach (var taskItemRow in exercise.TaskItems)
@@ -123,6 +126,9 @@ namespace IRMGARD
                     llTaskItemRow.AddView(container);
                 }
 
+                // Replace top margin of task item rows
+                SetTopMargin(1, llTaskItemRow);
+
                 if (Lesson.HideRack)
                 {
                     llTaskItemRowRoot.FindViewById<ImageView>(Resource.Id.ivDivider).Visibility = ViewStates.Invisible;
@@ -134,6 +140,9 @@ namespace IRMGARD
 
         void BuildOptionItems(List<Concept> optionItems)
         {
+            // Replace top margin of option items
+            SetTopMargin(2, flOptionItems);
+
             // Shuffle options
             optionItems.Shuffle();
 
@@ -159,6 +168,9 @@ namespace IRMGARD
         {
             bool itemsCreated = false;
 
+            // Replace top margin of solution items
+            SetTopMargin(3, llSolutionItems);
+
             // Add solution items to view
             llSolutionItems.RemoveAllViews();
             foreach (var item in solutionItems)
@@ -183,6 +195,25 @@ namespace IRMGARD
             return itemsCreated;
         }
 
+        void SetTopMargin(int idx, View view)
+        {
+            bool isSmallHeight = (Resources.DisplayMetrics.HeightPixels / Resources.DisplayMetrics.Density) < 550;
+            int topMarginToSet = (Lesson.TopMargins != null && Lesson.TopMargins.Length >= idx + 1) ? Lesson.TopMargins[idx] : -1;
+
+            if (view.LayoutParameters is FrameLayout.LayoutParams)
+            {
+                var lp = (view.LayoutParameters as FrameLayout.LayoutParams);
+                var topMargin = (topMarginToSet > -1) ? topMarginToSet : lp.TopMargin;
+                lp.TopMargin = isSmallHeight ? topMargin / 2 : topMargin;
+            }
+            else
+            {
+                var lp = (view.LayoutParameters as LinearLayout.LayoutParams);
+                var topMargin = (topMarginToSet > -1) ? topMarginToSet : lp.TopMargin;
+                lp.TopMargin = isSmallHeight ? topMargin / 2 : topMargin;
+            }
+        }
+
         void ConceptView_Touch(object sender, EventArgs e)
         {
             var v = (View)sender;
@@ -193,9 +224,20 @@ namespace IRMGARD
         {
             var container = (ViewGroup)LayoutInflater.From(Activity.BaseContext).Inflate(Resource.Layout.ContentContainer, null);
             container.Id = resId;
-            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
-            layoutParams.SetMargins(4, 0, 4, 0);
-            container.LayoutParameters = layoutParams;
+            switch (resId)
+            {
+                case Resource.Id.flConceptContainer:
+                    LinearLayout.LayoutParams llLP = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
+                    llLP.SetMargins(4, 0, 4, 0);
+                    container.LayoutParameters = llLP;
+                    break;
+                case Resource.Id.flOptionContainer:
+                    FlowLayout.LayoutParams llFL = new FlowLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
+                    llFL.HorizontalSpacing = 8;
+                    llFL.VerticalSpacing = 8;
+                    container.LayoutParameters = llFL;
+                    break;
+            }
             container.AddView(child);
 
             return container;
@@ -244,8 +286,8 @@ namespace IRMGARD
 
         string GetBlankText(Concept concept)
         {
-            if (concept is Letter) { return "E"; }
-            else if (concept is Syllable) { return string.Concat(Enumerable.Repeat("E", CalcSizeOfBlanks(exercise.TaskItems))); }
+            if (concept is Letter) { return "M"; }
+            else if (concept is Syllable) { return string.Concat(Enumerable.Repeat("M", CalcSizeOfBlanks(exercise.TaskItems))); }
             else { return string.Concat(Enumerable.Repeat("a", CalcSizeOfBlanks(exercise.TaskItems))); }
         }
 
@@ -298,7 +340,9 @@ namespace IRMGARD
                 {
                     if (!baseText.ShowAsPlainText)
                     {
-                        view.SetBackgroundResource(Resource.Drawable.concept_gray);
+                        var borderedView = (FrameLayout)inflater.Inflate(Resource.Layout.BaseTextBordered, null);
+                        borderedView.AddView(view);
+                        view = borderedView;
                     }
                 }
             }
@@ -314,7 +358,7 @@ namespace IRMGARD
 
                 if (concept.ActivateOnSuccess || concept.ActivateOnMistake)
                 {
-                    (view as ViewGroup).GetChildAt(0).LayoutParameters = new FrameLayout.LayoutParams(ToDp(150), ToDp(150));
+                    (view as ViewGroup).GetChildAt(0).LayoutParameters = new FrameLayout.LayoutParams(ToPx(150), ToPx(150));
                 }
 
                 if (!string.IsNullOrEmpty((concept as Picture).ImagePath))
@@ -330,7 +374,7 @@ namespace IRMGARD
             else if (concept is Models.Space)
             {
                 view = new Android.Widget.Space(Activity.BaseContext);
-                view.LayoutParameters = new LinearLayout.LayoutParams(ToDp((concept as Models.Space).Width), ViewGroup.LayoutParams.MatchParent);
+                view.LayoutParameters = new LinearLayout.LayoutParams(ToPx((concept as Models.Space).Width), ViewGroup.LayoutParams.MatchParent);
             }
             else
             {
@@ -360,9 +404,9 @@ namespace IRMGARD
             return view;
         }
 
-        int ToDp(int px)
+        int ToPx(int dp)
         {
-            return (int)(px * Resources.DisplayMetrics.Density);
+            return (int)(dp * Resources.DisplayMetrics.Density);
         }
 
         void AdjustTextSize(TextView tvText, BaseText concept)
@@ -375,15 +419,15 @@ namespace IRMGARD
             {
                 if (concept is Letter)
                 {
-                    tvText.SetTextSize(Android.Util.ComplexUnitType.Sp, 32);
+                    tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, 28);
                 }
                 else if (concept is Syllable)
                 {
-                    tvText.SetTextSize(Android.Util.ComplexUnitType.Sp, 24);
+                    tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, 24);
                 }
                 else if (concept is Word)
                 {
-                    tvText.SetTextSize(Android.Util.ComplexUnitType.Sp, 18);
+                    tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, 18);
                 }
             }
         }
@@ -398,7 +442,6 @@ namespace IRMGARD
                 for (int i = 0; i < text.Length; i++)
                 {
                     var view = inflater.Inflate(Resource.Layout.BaseText, null);
-                    view.SetPadding(0, 0, 0, 0);
                     var tvText = view.FindViewById<TextView>(Resource.Id.tvText);
                     tvText.Text = char.ToString(text[i]);
                     SetTextColor(tvText, concept);
@@ -604,10 +647,9 @@ namespace IRMGARD
 
                 if (!Lesson.HideRack)
                 {
-                    // Move divider to display success/failure bottom border of a concept view
-                    LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MatchParent, LinearLayout.LayoutParams.MatchParent);
-                    layoutParams.TopMargin = -2;
-                    view.FindViewById<ImageView>(Resource.Id.ivDivider).LayoutParameters = layoutParams;
+                    // Move llTaskItemRow to display success/failure bottom border of a concept view
+                    var layoutParams = (LinearLayout.LayoutParams)llTaskItemRow.LayoutParameters;
+                    layoutParams.BottomMargin = ToPx(2);
                 }
 
                 for (int k = 0; k < llTaskItemRow.ChildCount; k++)
