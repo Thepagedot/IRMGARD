@@ -42,11 +42,23 @@ namespace IRMGARD.Utilities
             {
                 try
                 {
-                    // Since last Xamarin update the use of StreamReader for zipped files leads to performance issues
-                    byte[] bytes = new byte[stream.Length];
-                    await stream.ReadAsync(bytes, 0, bytes.Length);
-                    var json = JObject.Parse(System.Text.Encoding.UTF8.GetString(bytes));
-                    return JsonConvert.DeserializeObject<T>(json.ToString(), _JsonSettings);
+                    if (Env.UseOBB)
+                    {
+                        // Since last Xamarin update the use of StreamReader for zipped files leads to performance issues
+                        var bytes = new byte[stream.Length];
+                        await stream.ReadAsync(bytes, 0, bytes.Length);
+                        var json = JObject.Parse(System.Text.Encoding.UTF8.GetString(bytes));
+                        return JsonConvert.DeserializeObject<T>(json.ToString(), _JsonSettings);
+                    }
+                    else
+                    {
+                        using (var reader = new StreamReader(stream))
+                        {
+                            var jsonContent = await reader.ReadToEndAsync();
+                            var json = JObject.Parse(jsonContent);
+                            return JsonConvert.DeserializeObject<T>(json.ToString(), _JsonSettings);
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
