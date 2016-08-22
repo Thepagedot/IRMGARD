@@ -61,7 +61,7 @@ namespace IRMGARD
                 return;
             }
 
-            if (Env.Release)
+            if (Env.RestrictedModuleAccess)
             {
                 // Check if module is available
                 if (e.Position > 0 && !DataHolder.Current.CurrentLevel.Modules.ElementAt(e.Position - 1).IsCompleted)

@@ -6,10 +6,12 @@ namespace IRMGARD
     {
 #if DEBUG
         public const bool Debug = true;
-        public const bool UseOBB = false;
+        public const bool UseOBB = false;                   // Default: false
+        public const bool RestrictedModuleAccess = false;
 #else
         public const bool Debug = false;
         public const bool UseOBB = true;
+        public const bool RestrictedModuleAccess = true;    // Default: true
 #endif
         public const bool Release = !Debug;
 
