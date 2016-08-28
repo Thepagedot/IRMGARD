@@ -187,20 +187,23 @@ namespace IRMGARD
         {
             if (e.IsReady)
             {
+                if (!btnNext.Enabled)
+                {
+                    btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.ShowNextButton));
+                }
                 // Enable check button
                 btnNext.Enabled = true;
                 btnNext.Clickable = true;
-                btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.ShowNextButton));
             }
             else
             {
                 if (btnNext.Enabled)
                 {
-                    // Disable check button
-                    btnNext.Clickable = false;
-                    btnNext.Enabled = false;
                     btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.HideNextButton));
                 }
+                // Disable check button
+                btnNext.Clickable = false;
+                btnNext.Enabled = false;
             }
         }
 
@@ -317,6 +320,17 @@ namespace IRMGARD
                 return new LetterWriteFragment();
             if (lesson is DragIntoGap)
                 return new DragIntoGapFragment();
+            if (lesson is SelectConcept)
+            {
+                if (lesson.TypeOfLevel == LevelType.SelectConcept)
+                {
+                    return new SelectConceptFragment();
+                }
+                else if (lesson.TypeOfLevel == LevelType.SpeakerSelectConcept)
+                {
+                    return new SpeakerSelectConceptFragment();
+                }
+            }
 
             return null;
         }

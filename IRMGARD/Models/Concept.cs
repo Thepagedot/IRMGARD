@@ -8,8 +8,7 @@ namespace IRMGARD.Models
     public abstract class Concept
     {
         // The following properies are excluded from comparison
-        public bool IsBlank { get; set; }
-        public bool IsSingleBlank { get; set; }
+        public bool IsSolution { get; set; }
         public bool IsOption { get; set; }
         public bool ActivateOnSuccess { get; set; }
         public bool ActivateOnMistake { get; set; }
@@ -17,8 +16,7 @@ namespace IRMGARD.Models
         public virtual Concept DeepCopy()
         {
             Concept clone = (Concept)this.MemberwiseClone();
-            clone.IsBlank = IsBlank;
-            clone.IsSingleBlank = IsSingleBlank;
+            clone.IsSolution = IsSolution;
             clone.IsOption = IsOption;
             clone.ActivateOnSuccess = ActivateOnSuccess;
             clone.ActivateOnMistake = ActivateOnMistake;
@@ -55,6 +53,7 @@ namespace IRMGARD.Models
         public string SoundPath { get; set; }
 
         // The following properies are excluded from comparison
+        public List<List<int>> Highlights { get; set; }
         public string Color { get; set; }
         public bool ShowAsPlainText { get; set; }
         public int TextSize { get; set; }
@@ -68,6 +67,11 @@ namespace IRMGARD.Models
                 clone.LetterTags = new List<LetterTag>(LetterTags);
             }
             clone.SoundPath = SoundPath != null ? String.Copy(SoundPath) : null;
+
+            if (Highlights != null && Highlights.Count > 0)
+            {
+                clone.Highlights = new List<List<int>>(Highlights);
+            }
             clone.Color = Color != null ? String.Copy(Color) : null;
             clone.ShowAsPlainText = ShowAsPlainText;
             clone.TextSize = TextSize;
@@ -106,6 +110,9 @@ namespace IRMGARD.Models
 
     // A word item
     public class Word : BaseText { }
+
+    // A sentence item
+    public class Sentence : BaseText { }
 
     // A sound only item
     public class Speaker : Concept, ISound

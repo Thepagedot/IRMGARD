@@ -179,6 +179,11 @@
     <Compile Include="Fragments\DragIntoGapFragment.cs" />
     <Compile Include="Models\Concept.cs" />
     <Compile Include="Models\Levels\DragIntoGap.cs" />
+    <Compile Include="Fragments\SelectConceptFragment.cs" />
+    <Compile Include="Models\Levels\SelectConcept.cs" />
+    <Compile Include="Fragments\BaseConceptFragment.cs" />
+    <Compile Include="Models\Levels\BaseConcept.cs" />
+    <Compile Include="Fragments\SpeakerSelectConceptFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="MainAssets\Sounds\Objects\Elefant.mp3" />
@@ -1131,6 +1136,8 @@
     <AndroidResource Include="Resources\layout\BaseTextBordered.axml" />
     <AndroidResource Include="Resources\layout-h550dp\BaseTextCard.axml" />
     <AndroidResource Include="Resources\layout-h550dp\BaseTextBordered.axml" />
+    <AndroidResource Include="Resources\layout\SelectConcept.axml" />
+    <AndroidResource Include="Resources\drawable\selected_background.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -1340,6 +1347,36 @@
     <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Beute.mp3" />
     <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Meute.mp3" />
     <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Zaeune.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Das_Bett_ist_hart.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Das_Kamel_rennt.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Der_Junge_rennt.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Die_Zitronen_sind_gelb.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Ina_mag_Melone.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Leo_malt_Bilder.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Das_Feuer_brennt_im_Kamin.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Das_Haus_wird_gebaut.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Das_Unkraut_nervt.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Der_Automat_ist_kaputt.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Der_Junge_laeuft_in_den_Wald.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Die_Frau_isst_gerne_Schokolade.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Die_Haeuser_sind_nass.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Die_Leute_gehen_in_die_Oper.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Heute_regnet_es_viel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Ina_wartet_im_Auto.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Theo_und_Matthias_raufen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Sentences\Der_Zaun_ist_weisz.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Das_Auge.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Das_Auto.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Der_Astronaut.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Der_Auspuff.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Der_Automat.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Der_Pfau.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Der_Tau.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Frau.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Pflaume.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Raupe.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Sau.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Taube.mp3" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="hockeyappandroid">

@@ -15,6 +15,8 @@ namespace IRMGARD
         AbcRank,
         Memory,
         LetterWrite,
-        DragIntoGap
+        DragIntoGap,
+        SelectConcept,
+        SpeakerSelectConcept
     }
 }
