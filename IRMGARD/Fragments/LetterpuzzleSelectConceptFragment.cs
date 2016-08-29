@@ -49,7 +49,6 @@ namespace IRMGARD
                     if (row.Count == start)
                     {
                         row.AddRange(ToLetters(word.Text));
-
                     }
                     else
                     {
