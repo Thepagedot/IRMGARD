@@ -184,6 +184,7 @@
     <Compile Include="Fragments\BaseConceptFragment.cs" />
     <Compile Include="Models\Levels\BaseConcept.cs" />
     <Compile Include="Fragments\SpeakerSelectConceptFragment.cs" />
+    <Compile Include="Fragments\LetterpuzzleSelectConceptFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="MainAssets\Sounds\Objects\Elefant.mp3" />
@@ -1138,6 +1139,7 @@
     <AndroidResource Include="Resources\layout-h550dp\BaseTextBordered.axml" />
     <AndroidResource Include="Resources\layout\SelectConcept.axml" />
     <AndroidResource Include="Resources\drawable\selected_background.xml" />
+    <AndroidResource Include="Resources\drawable\highlighted_background.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

@@ -21,7 +21,7 @@ namespace IRMGARD
         protected BaseConceptExercise exercise;
         protected bool inReview;
 
-        protected void InitBaseLayoutView(View layoutView)
+        protected virtual void InitBaseLayoutView(View layoutView)
         {
             llTaskItemRows = layoutView.FindViewById<LinearLayout>(Resource.Id.llTaskItemRows);
             llSolutionItems = layoutView.FindViewById<LinearLayout>(Resource.Id.llSolutionItems);
@@ -97,22 +97,26 @@ namespace IRMGARD
             return itemsCreated;
         }
 
+        protected bool IsSmallHeight()
+        {
+            return (Resources.DisplayMetrics.HeightPixels / Resources.DisplayMetrics.Density) < 550;
+        }
+
         protected void SetTopMargin(int idx, View view)
         {
-            bool isSmallHeight = (Resources.DisplayMetrics.HeightPixels / Resources.DisplayMetrics.Density) < 550;
             int topMarginToSet = (Lesson.TopMargins != null && Lesson.TopMargins.Length >= idx + 1) ? Lesson.TopMargins[idx] : -1;
 
             if (view.LayoutParameters is FrameLayout.LayoutParams)
             {
                 var lp = (view.LayoutParameters as FrameLayout.LayoutParams);
                 var topMargin = (topMarginToSet > -1) ? topMarginToSet : lp.TopMargin;
-                lp.TopMargin = isSmallHeight ? topMargin / 2 : topMargin;
+                lp.TopMargin = IsSmallHeight() ? topMargin / 2 : topMargin;
             }
             else
             {
                 var lp = (view.LayoutParameters as LinearLayout.LayoutParams);
                 var topMargin = (topMarginToSet > -1) ? topMarginToSet : lp.TopMargin;
-                lp.TopMargin = isSmallHeight ? topMargin / 2 : topMargin;
+                lp.TopMargin = IsSmallHeight() ? topMargin / 2 : topMargin;
             }
         }
 
@@ -291,7 +295,7 @@ namespace IRMGARD
         {
             if (concept.TextSize > 0)
             {
-                tvText.SetTextSize(Android.Util.ComplexUnitType.Sp, concept.TextSize);
+                tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, concept.TextSize);
             }
             else
             {

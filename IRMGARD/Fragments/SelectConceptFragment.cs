@@ -95,7 +95,9 @@ namespace IRMGARD
             var drawable = GetTag<Drawable>(view, Resource.Id.selected_tag_key);
             if (drawable == null)
             {
-                SetTag(view, Resource.Id.selected_tag_key, view.Background);
+                SetTag(view, Resource.Id.selected_tag_key, view.Background != null
+                    ? view.Background
+                    : new ColorDrawable(Android.Graphics.Color.Transparent));
                 view.SetBackgroundResource(Resource.Drawable.selected_background);
             }
             else
@@ -107,10 +109,10 @@ namespace IRMGARD
                 else
                 {
                     var container = view.Parent as ViewGroup;
-                    container.RemoveViewAt(0);
-                    var conceptView = CreateConceptView(concept);
-                    AddSelectHandler(conceptView, concept);
-                    container.AddView(conceptView);
+                    var layout = container.Parent as ViewGroup;
+                    var idx = layout.IndexOfChild(container);
+                    layout.RemoveViewAt(idx);
+                    layout.AddView(CreateAndInitConceptView(concept), idx);
                 }
                 SetTag<Drawable>(view, Resource.Id.selected_tag_key, null);
             }
@@ -135,7 +137,7 @@ namespace IRMGARD
             }
         }
 
-        bool CheckUserInteracted()
+        protected virtual bool CheckUserInteracted()
         {
             // Check if the user is done
             for (int i = 0; i < llTaskItemRows.ChildCount; i++)

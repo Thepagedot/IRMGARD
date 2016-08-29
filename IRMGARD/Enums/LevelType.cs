@@ -17,6 +17,7 @@ namespace IRMGARD
         LetterWrite,
         DragIntoGap,
         SelectConcept,
-        SpeakerSelectConcept
+        SpeakerSelectConcept,
+        LetterpuzzleSelectConcept
     }
 }

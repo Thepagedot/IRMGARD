@@ -330,6 +330,10 @@ namespace IRMGARD
                 {
                     return new SpeakerSelectConceptFragment();
                 }
+                else if (lesson.TypeOfLevel == LevelType.LetterpuzzleSelectConcept)
+                {
+                    return new LetterpuzzleSelectConceptFragment();
+                }
             }
 
             return null;
