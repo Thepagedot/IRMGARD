@@ -1,4 +1,5 @@
-﻿using Android.OS;
+﻿using System;
+using Android.OS;
 using Android.Views;
 using Android.Widget;
 
@@ -7,10 +8,11 @@ using IRMGARD.Shared;
 
 namespace IRMGARD
 {
-    public class HearTheLetterFragment : LessonFragment<HearTheLetter>
+    public class HearTheLetterFragment : BaseConceptFragment<HearTheLetter>
     {
         ImageButton ibSpeaker;
         SeekBar sbLetterPos;
+        RelativeLayout rlSliderLabels;
 
         HearTheLetterOption currentOption;
         int selectedLocation;
@@ -22,9 +24,35 @@ namespace IRMGARD
             ibSpeaker.Click += ((e, sender) => PlayTaskDesc());
 
             sbLetterPos = view.FindViewById<SeekBar>(Resource.Id.sbLetterPos);
+            if (IsEven())
+            {
+                sbLetterPos.SetBackgroundResource(0);
+            }
             sbLetterPos.ProgressChanged += (object sender, SeekBar.ProgressChangedEventArgs e) => {
                 selectedLocation = ConvertProgressToLocation(e.Progress);
             };
+
+            rlSliderLabels = view.FindViewById<RelativeLayout>(Resource.Id.rlSliderLabels);
+            int align = 0;
+            foreach (var label in Lesson.SliderLabels)
+            {
+                var labelView = CreateConceptView(label);
+                rlSliderLabels.AddView(labelView);
+                var lp = (labelView.LayoutParameters as RelativeLayout.LayoutParams);
+                switch (align)
+                {
+                    case 0:
+                        lp.AddRule(LayoutRules.AlignParentLeft);
+                        break;
+                    case 1:
+                        lp.AddRule(LayoutRules.AlignParentRight);
+                        break;
+                    case 2:
+                        lp.AddRule(LayoutRules.CenterInParent);
+                        break;
+                }
+                align++;
+            }
 
             InitIteration();
 
@@ -33,7 +61,14 @@ namespace IRMGARD
 
         private int ConvertProgressToLocation(int p)
         {
-            return (p < 10) ? 0 : ((p <= 20) ? 1 : ((p <= 30) ? 2 : 0));
+            return IsEven()
+                ? (p <= 15) ? 0 : ((p <= 30) ? 1 : 0)
+                : (p < 10) ? 0 : ((p <= 20) ? 1 : ((p <= 30) ? 2 : 0));
+        }
+
+        bool IsEven()
+        {
+            return (Lesson.SliderLabels == null || Lesson.SliderLabels.Count % 2 == 0);
         }
 
         protected override void InitIteration()

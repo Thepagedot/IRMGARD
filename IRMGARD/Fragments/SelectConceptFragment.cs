@@ -11,7 +11,7 @@ using IRMGARD.Shared;
 
 namespace IRMGARD
 {
-    public class SelectConceptFragment : BaseConceptFragment<SelectConcept>
+    public class SelectConceptFragment : BaseConceptLayoutFragment<SelectConcept>
     {
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {

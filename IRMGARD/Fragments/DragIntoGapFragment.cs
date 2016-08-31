@@ -12,7 +12,7 @@ using IRMGARD.Shared;
 
 namespace IRMGARD
 {
-    public class DragIntoGapFragment : BaseConceptFragment<DragIntoGap>
+    public class DragIntoGapFragment : BaseConceptLayoutFragment<DragIntoGap>
     {
         FlowLayout flOptionItems;
         List<Concept> optionItems;

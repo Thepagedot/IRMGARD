@@ -6612,6 +6612,23 @@
           "SoundPath": "Level-1/Level 1 Modul 5 Aufgabe 5.mp3",
           "Hint": "Hints/21_extra_Tip_wenn_etwas_nicht_auf_anhieb_klappt_nicht_verzagen.mp3",
           "TypeOfLevel": "HearTheLetter",
+          "SliderLabels": [
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": " < ",
+              "ShowAsPlainText": true
+            },
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": " > ",
+              "ShowAsPlainText": true
+            },
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": " | ",
+              "ShowAsPlainText": true
+            }
+          ],
           "Iterations": [
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",

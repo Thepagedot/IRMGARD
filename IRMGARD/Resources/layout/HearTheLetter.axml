@@ -24,4 +24,11 @@
             android:progress="15"
             android:max="30" />
     </FrameLayout>
+    <RelativeLayout
+        android:id="@+id/rlSliderLabels"
+        android:orientation="horizontal"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-8dp"
+        android:layout_gravity="center" />
 </LinearLayout>

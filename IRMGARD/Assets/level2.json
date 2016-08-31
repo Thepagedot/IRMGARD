@@ -4710,6 +4710,128 @@
           ]
         },
         {
+          "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
+          "Id": 226,
+          "Title": "Kurz oder Lang?",
+          "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 6.mp3",
+          "TypeOfLevel": "HearTheLetter",
+          "SliderLabels": [
+            {
+              "$type": "IRMGARD.Models.Syllable, IRMGARD",
+              "Text": "AEIOU",
+              "ShowAsPlainText": true,
+              "LetterTags": [ 1, 1, 1, 1, 1 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Syllable, IRMGARD",
+              "Text": "AEIOU",
+              "ShowAsPlainText": true,
+              "LetterTags": [ 2, 2, 2, 2, 2 ]
+            }
+          ],
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 2261,
+              "LettersToLearn": [ "A", "E", "I", "O", "U" ],
+              "LetterLocations": [
+                {
+                  "Location": 0,
+                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_E_in_Riegel_kurz_oder_lang_gesprochen.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_I_in_Riss_kurz_oder_lang_gesprochen.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_O_in_Rolle_kurz_oder_lang_gesprochen.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 2262,
+              "LettersToLearn": [ "A", "E", "I", "O", "U" ],
+              "LetterLocations": [
+                {
+                  "Location": 1,
+                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_i_in_Siegel_kurz_oder_lang_gesprochen.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_O_in_Sonne_kurz_oder_lang_gesprochen.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_U_in_Kuss_kurz_oder_lang_gesprochen.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 2263,
+              "LettersToLearn": [ "A", "E", "I", "O", "U" ],
+              "LetterLocations": [
+                {
+                  "Location": 0,
+                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_E_in_Siegel_kurz_oder_lang_gesprochen.mp3"
+                },
+                {
+                  "Location": 1,
+                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_U_in_Rute_kurz_oder_lang_gesprochen.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_U_in_Kutter_kurz_oder_lang_gesprochen.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 2264,
+              "LettersToLearn": [ "A", "E", "I", "O", "U" ],
+              "LetterLocations": [
+                {
+                  "Location": 0,
+                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_I_in_Biss_kurz_oder_lang_gesprochen.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_O_in_Tonne_kurz_oder_lang_gesprochen.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_U_in_Mutter_kurz_oder_lang_gesprochen.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 2265,
+              "LettersToLearn": [ "A", "E", "I", "O", "U" ],
+              "LetterLocations": [
+                {
+                  "Location": 1,
+                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_I_in_Iltis_kurz_oder_lang_gesprochen.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_O_in_Wolle_kurz_oder_lang_gesprochen.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_U_in_Dutt_kurz_oder_lang_gesprochen.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_U_in_Nuss_kurz_oder_lang_gesprochen.mp3"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 228,
           "Title": "Kurz oder Lang?",
@@ -8944,6 +9066,97 @@
           ]
         },
         {
+          "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
+          "Id": 255,
+          "Title": "ÄÄÄÄÄÄÄÄ?",
+          "SoundPath": "Intros/Level 2 Modul 5 Aufgabe 5.mp3",
+          "TypeOfLevel": "HearTheLetter",
+          "SliderLabels": [
+            {
+              "$type": "IRMGARD.Models.Syllable, IRMGARD",
+              "Text": "E",
+              "ShowAsPlainText": true
+            },
+            {
+              "$type": "IRMGARD.Models.Syllable, IRMGARD",
+              "Text": "Ä",
+              "ShowAsPlainText": true
+            }
+          ],
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 2551,
+              "LetterLocations": [
+                {
+                  "Location": 1,
+                  "SoundPath": "ObjectsWithDefArt/Die_Aepfel.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "ObjectsWithDefArt/Die_Welpen.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 2552,
+              "LetterLocations": [
+                {
+                  "Location": 1,
+                  "SoundPath": "ObjectsWithDefArt/Die_Naehte.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "ObjectsWithDefArt/Die_Helden.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 2553,
+              "LetterLocations": [
+                {
+                  "Location": 1,
+                  "SoundPath": "ObjectsWithDefArt/Die_Faesser.mp3"
+                },
+                {
+                  "Location": 1,
+                  "SoundPath": "ObjectsWithDefArt/Die_Graeber.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 2554,
+              "LetterLocations": [
+                {
+                  "Location": 1,
+                  "SoundPath": "ObjectsWithDefArt/Die_Gaeste.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "ObjectsWithDefArt/Die_Gelder.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 2555,
+              "LetterLocations": [
+                {
+                  "Location": 1,
+                  "SoundPath": "ObjectsWithDefArt/Die_Vaeter.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "ObjectsWithDefArt/Die_Felder.mp3"
+                }
+              ]
+            }
+          ]
+        },
+        {
           "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
           "Id": 256,
           "Title": "A oder Ä?",
@@ -9601,6 +9814,114 @@
                       "Text": "Das Raum"
                     }
                   ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
+          "Id": 262,
+          "Title": "AU?",
+          "SoundPath": "Intros/Level 2 Modul 6 Aufgabe 2.mp3",
+          "TypeOfLevel": "HearTheLetter",
+          "SliderLabels": [
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": " < ",
+              "ShowAsPlainText": true
+            },
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": " > ",
+              "ShowAsPlainText": true
+            },
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": " | ",
+              "ShowAsPlainText": true
+            }
+          ],
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 2621,
+              "LetterLocations": [
+                {
+                  "Location": 2,
+                  "SoundPath": "ListenToTheAU/Wo_hoerst_du_das_AU_in_Pfau.mp3"
+                },
+                {
+                  "Location": 1,
+                  "SoundPath": "ListenToTheAU/Wo_hoerst_du_das_AU_in_Maus.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 2622,
+              "LetterLocations": [
+                {
+                  "Location": 1,
+                  "SoundPath": "ListenToTheAU/Wo_hoerst_du_das_AU_in_Baum.mp3"
+                },
+                {
+                  "Location": 2,
+                  "SoundPath": "ListenToTheAU/Wo_hoerst_du_das_AU_in_Frau.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 2623,
+              "LetterLocations": [
+                {
+                  "Location": 0,
+                  "SoundPath": "ListenToTheAU/Wo_hoerst_du_das_AU_in_Auspuff.mp3"
+                },
+                {
+                  "Location": 2,
+                  "SoundPath": "ListenToTheAU/Wo_hoerst_du_das_AU_in_Sau.mp3"
+                },
+                {
+                  "Location": 1,
+                  "SoundPath": "ListenToTheAU/Wo_hoerst_du_das_AU_in_Haus.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 2624,
+              "LetterLocations": [
+                {
+                  "Location": 1,
+                  "SoundPath": "ListenToTheAU/Wo_hoerst_du_das_AU_in_Raupe.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "ListenToTheAU/Wo_hoerst_du_das_AU_in_Auge.mp3"
+                },
+                {
+                  "Location": 2,
+                  "SoundPath": "ListenToTheAU/Wo_hoerst_du_das_AU_in_Tau.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 2625,
+              "LetterLocations": [
+                {
+                  "Location": 0,
+                  "SoundPath": "ListenToTheAU/Wo_hoerst_du_das_AU_in_Automat.mp3"
+                },
+                {
+                  "Location": 1,
+                  "SoundPath": "ListenToTheAU/Wo_hoerst_du_das_AU_in_Taube.mp3"
+                },
+                {
+                  "Location": 1,
+                  "SoundPath": "ListenToTheAU/Wo_hoerst_du_das_AU_in_Astronaut.mp3"
                 }
               ]
             }

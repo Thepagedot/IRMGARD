@@ -185,6 +185,7 @@
     <Compile Include="Models\Levels\BaseConcept.cs" />
     <Compile Include="Fragments\SpeakerSelectConceptFragment.cs" />
     <Compile Include="Fragments\LetterpuzzleSelectConceptFragment.cs" />
+    <Compile Include="Fragments\BaseConceptLayoutFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="MainAssets\Sounds\Objects\Elefant.mp3" />
@@ -1379,6 +1380,43 @@
     <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Raupe.mp3" />
     <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Sau.mp3" />
     <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Taube.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_E_in_Riegel_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_E_in_Siegel_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_I_in_Biss_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_I_in_Iltis_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_I_in_Riss_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_i_in_Siegel_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_O_in_Rolle_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_O_in_Sonne_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_O_in_Tonne_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_O_in_Wolle_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_U_in_Dutt_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_U_in_Kuss_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_U_in_Kutter_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_U_in_Mutter_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_U_in_Nuss_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_U_in_Rute_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Faesser.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Felder.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Gelder.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Graeber.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Helden.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Naehte.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Vaeter.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Welpen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Astronaut.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Auge.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Auspuff.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Automat.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Baum.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Frau.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Haus.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Maus.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Pfau.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Raupe.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Sau.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Tau.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Taube.mp3" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="hockeyappandroid">

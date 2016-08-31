@@ -5,6 +5,8 @@ namespace IRMGARD.Models
 {
     public class HearTheLetter : Lesson
     {
+        public List<Concept> SliderLabels { get; set; }
+
         public HearTheLetter () {}
 
         public HearTheLetter(int id, string title, bool isRecurringTask, string soundPath, string hint, LevelType typeOfLevel, List<Iteration> iterations)
