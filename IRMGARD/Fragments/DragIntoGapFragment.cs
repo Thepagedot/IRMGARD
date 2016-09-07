@@ -17,6 +17,9 @@ namespace IRMGARD
         FlowLayout flOptionItems;
         List<Concept> optionItems;
 
+        float touchDownX = 0;
+        float touchDownY = 0;
+
         bool dragActionDropHandled;
         bool dragActionStartedHandled;
         bool dragActionEndedHandled;
@@ -37,8 +40,14 @@ namespace IRMGARD
 
             var currentIteration = GetCurrentIteration<DragIntoGapIteration>();
 
-            // Random select an exercise from this iteration
-            exercise = currentIteration.Tasks.PickRandomItems(1).FirstOrDefault();
+            if (currentIteration.Tasks != null)
+            {
+                // Random select an exercise from this iteration
+                exercise = currentIteration.Tasks.PickRandomItems(1).FirstOrDefault();
+            }
+
+            // Transform stored task item configuration
+            TransformTaskItems();
 
             // Build task items
             BuildTaskItems();
@@ -55,9 +64,12 @@ namespace IRMGARD
             }
             else
             {
-                foreach (var task in currentIteration.Tasks)
+                if (currentIteration.Tasks != null)
                 {
-                    AddSolutionConcepts(task as DragIntoGapExercise);
+                    foreach (var task in currentIteration.Tasks)
+                    {
+                        AddSolutionConcepts(task as DragIntoGapExercise);
+                    }
                 }
             }
 
@@ -152,7 +164,32 @@ namespace IRMGARD
         void ConceptView_Touch_StartDrag(object sender, EventArgs e)
         {
             var v = sender as View;
-            v.StartDrag(ClipData.NewPlainText("", ""), new View.DragShadowBuilder(v), v, 0);
+            var motionEvent = (e as View.TouchEventArgs).Event;
+
+            switch (motionEvent.Action & MotionEventActions.Mask)
+            {
+                case MotionEventActions.Down:
+                    touchDownX = motionEvent.RawX;
+                    touchDownY = motionEvent.RawY;
+                    break;
+                case MotionEventActions.Move:
+                    float deltaX = motionEvent.RawX - touchDownX;
+                    float deltaY = motionEvent.RawY - touchDownY;
+                    int touchSlop = ViewConfiguration.Get(v.Context).ScaledTouchSlop / 4;
+                    if (Math.Abs(deltaX) > touchSlop || Math.Abs(deltaY) > touchSlop)
+                    {
+                        v.StartDrag(ClipData.NewPlainText("", ""), new View.DragShadowBuilder(v), v, 0);
+                    }
+                    break;
+                case MotionEventActions.Up:
+                    if (!dragActionStartedHandled)
+                    {
+                        v.PerformClick();
+                    }
+                    break;
+                default:
+                    break;
+            }
         }
 
         ViewGroup CreateContentContainer(int resId, View child)
@@ -381,13 +418,13 @@ namespace IRMGARD
                     var blankView = conceptContainer.FindViewById<FrameLayout>(Resource.Id.flBlank);
                     if (blankView != null)
                     {
-                        var contentView = GetCCContent(conceptContainer);
-                        if (contentView != null)
+                        var conceptView = GetCCContent(conceptContainer);
+                        if (conceptView != null)
                         {
                             // Remove drag handler
-                            contentView.Touch -= ConceptView_Touch_StartDrag;
+                            conceptView.Touch -= ConceptView_Touch_StartDrag;
 
-                            var contentViewConcept = GetTag<Concept>(contentView, Resource.Id.concept_tag_key);
+                            var contentViewConcept = GetTag<Concept>(conceptView, Resource.Id.concept_tag_key);
                             var blankViewConcept = GetTag<Concept>(blankView.GetChildAt(1), Resource.Id.concept_tag_key);
                             if (contentViewConcept != null && blankViewConcept != null && contentViewConcept.Equals(blankViewConcept))
                             {

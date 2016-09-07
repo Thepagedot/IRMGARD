@@ -321,20 +321,7 @@ namespace IRMGARD
             if (lesson is DragIntoGap)
                 return new DragIntoGapFragment();
             if (lesson is SelectConcept)
-            {
-                if (lesson.TypeOfLevel == LevelType.SelectConcept)
-                {
-                    return new SelectConceptFragment();
-                }
-                else if (lesson.TypeOfLevel == LevelType.SpeakerSelectConcept)
-                {
-                    return new SpeakerSelectConceptFragment();
-                }
-                else if (lesson.TypeOfLevel == LevelType.LetterpuzzleSelectConcept)
-                {
-                    return new LetterpuzzleSelectConceptFragment();
-                }
-            }
+                return SelectConceptFragmentFactory.Get(lesson.TypeOfLevel);
 
             return null;
         }

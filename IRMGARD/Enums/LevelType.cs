@@ -17,7 +17,10 @@ namespace IRMGARD
         LetterWrite,
         DragIntoGap,
         SelectConcept,
-        SpeakerSelectConcept,
-        LetterpuzzleSelectConcept
+        SpeakerSC,
+        LetterpuzzleSC,
+        FourPicturesSelectConcept,
+        ShortLongVowelFPSC,
+        DefArtFPSC
     }
 }

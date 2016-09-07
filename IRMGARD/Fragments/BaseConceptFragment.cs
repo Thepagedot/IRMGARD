@@ -44,7 +44,8 @@ namespace IRMGARD
 
                 if (IsTextCardCallback(concept as BaseText))
                 {
-                    var cardView = (FrameLayout)inflater.Inflate(Resource.Layout.BaseTextCard, null);
+                    view.SetPadding(ToPx(2), ToPx(2), ToPx(2), ToPx(2));
+                    var cardView = (FrameLayout)inflater.Inflate(Resource.Layout.CardConcept, null);
                     cardView.AddView(view);
                     view = cardView;
                 }
@@ -60,31 +61,58 @@ namespace IRMGARD
             }
             else if (concept is Speaker)
             {
-                view = inflater.Inflate(IsSpeakerCardCallback(concept as Speaker) ? Resource.Layout.SpeakerCard : Resource.Layout.Speaker, null);
+                view = inflater.Inflate(Resource.Layout.SpeakerConcept, null);
+
+                if (IsSpeakerCardCallback(concept as Speaker))
+                {
+                    var cardView = (FrameLayout)inflater.Inflate(Resource.Layout.CardConcept, null);
+                    cardView.AddView(view);
+                    view = cardView;
+                }
+                else
+                {
+                    view.SetBackgroundResource(Resource.Drawable.concept_light_gray);
+                }
             }
             else if (concept is Picture)
             {
-                view = inflater.Inflate(IsPictureCardCallback(concept as Picture) ? Resource.Layout.PictureCard : Resource.Layout.Picture, null);
+                var picture = concept as Picture;
+
+                view = inflater.Inflate(Resource.Layout.PictureConcept, null);
 
                 if (concept.ActivateOnSuccess || concept.ActivateOnMistake)
                 {
                     (view as ViewGroup).GetChildAt(0).LayoutParameters = new FrameLayout.LayoutParams(ToPx(150), ToPx(150));
                 }
 
-                if (!string.IsNullOrEmpty((concept as Picture).ImagePath))
+                if (picture.Size > 0)
                 {
-                    var bitmap = BitmapLoader.Instance.LoadBitmap(CountPictureItems(), Activity.BaseContext, (concept as Picture).ImagePath);
+                    (view as ViewGroup).GetChildAt(0).LayoutParameters = new FrameLayout.LayoutParams(
+                        picture.Size > 0 ? ToPx(picture.Size) : ViewGroup.LayoutParams.MatchParent,
+                        picture.Size > 0 ? ToPx(picture.Size) : ViewGroup.LayoutParams.MatchParent);
+                }
+
+                if (!string.IsNullOrEmpty(picture.ImagePath))
+                {
+                    var bitmap = BitmapLoader.Instance.LoadBitmap(CountPictureItems(), Activity.BaseContext, picture.ImagePath);
                     if (bitmap != null)
                     {
                         var ivPicture = view.FindViewById<ImageView>(Resource.Id.ivPicture);
                         ivPicture.SetImageBitmap(bitmap);
                     }
                 }
+
+                if (IsPictureCardCallback(picture))
+                {
+                    var cardView = (FrameLayout)inflater.Inflate(Resource.Layout.CardConcept, null);
+                    cardView.AddView(view);
+                    view = cardView;
+                }
             }
             else if (concept is Models.Space)
             {
                 view = new Android.Widget.Space(Activity.BaseContext);
-                view.LayoutParameters = new LinearLayout.LayoutParams(ToPx((concept as Models.Space).Width), ViewGroup.LayoutParams.MatchParent);
+                view.LayoutParameters = new LinearLayout.LayoutParams(ToPx((concept as Models.Space).Width), ToPx((concept as Models.Space).Height));
             }
             else
             {
@@ -190,7 +218,8 @@ namespace IRMGARD
             {
                 if (concept is Letter)
                 {
-                    tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, 28);
+                    // TODO! 28 for smaller screens?
+                    tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, 32);
                 }
                 else if (concept is Syllable)
                 {

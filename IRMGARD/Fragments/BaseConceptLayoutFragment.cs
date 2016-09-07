@@ -26,7 +26,9 @@ namespace IRMGARD
 
         protected abstract View CreateAndInitConceptView(Concept concept);
 
-        protected void BuildTaskItems()
+        protected virtual void TransformTaskItems() { }
+
+        protected virtual void BuildTaskItems()
         {
             // Replace default top margin
             SetTopMargin(0, (View)llTaskItemRows.Parent);

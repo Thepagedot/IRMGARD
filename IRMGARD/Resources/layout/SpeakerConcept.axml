@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ibSpeaker"
+<ImageView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ivSpeaker"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="bottom"
     android:padding="8dp"
-    android:background="@drawable/concept_light_gray"
     android:src="@drawable/ic_volume_up_black_24dp" />

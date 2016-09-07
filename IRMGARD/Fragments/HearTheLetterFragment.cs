@@ -10,7 +10,7 @@ namespace IRMGARD
 {
     public class HearTheLetterFragment : BaseConceptFragment<HearTheLetter>
     {
-        ImageButton ibSpeaker;
+        ImageView ivSpeaker;
         SeekBar sbLetterPos;
         RelativeLayout rlSliderLabels;
 
@@ -20,8 +20,8 @@ namespace IRMGARD
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.HearTheLetter, container, false);
-            ibSpeaker = view.FindViewById<ImageButton>(Resource.Id.ibSpeaker);
-            ibSpeaker.Click += ((e, sender) => PlayTaskDesc());
+            ivSpeaker = view.FindViewById<ImageView>(Resource.Id.ivSpeaker);
+            ivSpeaker.Click += ((e, sender) => PlayTaskDesc());
 
             sbLetterPos = view.FindViewById<SeekBar>(Resource.Id.sbLetterPos);
             if (IsEven())

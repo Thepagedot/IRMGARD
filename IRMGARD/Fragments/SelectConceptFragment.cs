@@ -8,11 +8,205 @@ using Android.Widget;
 
 using IRMGARD.Models;
 using IRMGARD.Shared;
+using System.Collections.Generic;
 
 namespace IRMGARD
 {
+    public static class SelectConceptFragmentFactory
+    {
+        public static SelectConceptFragment Get(LevelType levelType)
+        {
+            switch (levelType)
+            {
+                case LevelType.DefArtFPSC:
+                    return new DefArtFPSCFragment();
+                case LevelType.ShortLongVowelFPSC:
+                    return new ShortLongVowelFPSCFragment();
+                case LevelType.FourPicturesSelectConcept:
+                    return new FourPicturesSelectConceptFragment();
+                case LevelType.LetterpuzzleSC:
+                    return new LetterpuzzleSCFragment();
+                case LevelType.SpeakerSC:
+                    return new SpeakerSCFragment();
+                case LevelType.SelectConcept:
+                default:
+                    return new SelectConceptFragment();
+            }
+        }
+    }
+
+    public class LetterpuzzleSCFragment : SelectConceptFragment
+    {
+        const int Cols = 8;
+        const int Rows = 8;
+        const int Padding = 4;
+
+        List<Concept> words;
+
+        protected override void InitBaseLayoutView(View layoutView)
+        {
+            var llTaskItemRows = layoutView.FindViewById<LinearLayout>(Resource.Id.llTaskItemRows);
+            llTaskItemRows.SetPadding(ToPx(Padding), ToPx(Padding), ToPx(Padding), ToPx(Padding));
+            llTaskItemRows.SetBackgroundColor(Android.Graphics.Color.White);
+
+            base.InitBaseLayoutView(layoutView);
+        }
+
+        protected override void TransformTaskItems()
+        {
+            exercise = exercise.DeepCopy();
+
+            var random = new Random();
+
+            words = exercise.TaskItems[0];
+            words.Shuffle();
+
+            exercise.TaskItems = new List<List<Concept>>();
+            foreach (var concept in words)
+            {
+                var word = concept as Word;
+
+                var row = new List<Concept>();
+                var start = random.Next(0, (Cols - word.Text.Length) + 1);
+                while (row.Count < Cols)
+                {
+                    if (row.Count == start)
+                    {
+                        row.AddRange(ToLetters(word.Text));
+                    }
+                    else
+                    {
+                        row.Add(GetRandomLetter(random));
+                    }
+                }
+                exercise.TaskItems.Add(row);
+            }
+
+            for (int i = 0; i < (Rows - words.Count); i++)
+            {
+                exercise.TaskItems.Insert(random.Next(0, exercise.TaskItems.Count), CreateDummyRow(random));
+            }
+        }
+
+        Letter GetRandomLetter(Random random)
+        {
+            return CreateLetter(false, char.ToString((char)('A' + random.Next(0, 26))));
+        }
+
+        List<Concept> CreateDummyRow(Random random)
+        {
+            var letters = new List<Concept>();
+            for (int i = 0; i < Cols; i++)
+            {
+                letters.Add(GetRandomLetter(random));
+            }
+
+            return letters;
+        }
+
+        List<Concept> ToLetters(string word)
+        {
+            var letters = new List<Concept>();
+            foreach (var letter in word.AsEnumerable())
+            {
+                letters.Add(CreateLetter(true, char.ToString(letter)));
+            }
+
+            return letters;
+        }
+
+        Letter CreateLetter(bool isSolution, string text)
+        {
+            var letter = new Letter();
+            if (isSolution)
+            {
+                letter.IsSolution = true;
+            }
+            else
+            {
+                letter.IsOption = true;
+            }
+            letter.Text = text;
+            letter.ShowAsPlainText = true;
+            letter.TextSize = IsSmallHeight() ? 18 : 26;
+
+            return letter;
+        }
+
+        protected override View CreateAndInitConceptView(Concept concept)
+        {
+            var container = base.CreateAndInitConceptView(concept) as ViewGroup;
+
+            // Adjust padding for letter views rendered as plain text
+            container.GetChildAt(0).SetPadding(ToPx(Padding), 0, ToPx(Padding), 0);
+
+            return container;
+        }
+
+        protected override bool IsTextCardCallback(BaseText concept)
+        {
+            return false;
+        }
+
+        protected override bool CheckUserInteracted()
+        {
+            bool hasUserInteracted = false;
+
+            // Check if the user is done and for any words found
+            for (int i = 0; i < llTaskItemRows.ChildCount; i++)
+            {
+                var view = (ViewGroup)llTaskItemRows.GetChildAt(i);
+                var llTaskItemRow = view.FindViewById<LinearLayout>(Resource.Id.llTaskItemRow);
+                var chars = new List<char>();
+                var viewsFound = new List<View>();
+                for (int k = 0; k < llTaskItemRow.ChildCount; k++)
+                {
+                    var containerView = llTaskItemRow.GetChildAt(k) as ViewGroup;
+                    var contentView = containerView.GetChildAt(0);
+                    if (GetTag<Drawable>(contentView, Resource.Id.selected_tag_key) != null)
+                    {
+                        var concept = GetTag<Concept>(contentView, Resource.Id.concept_tag_key) as Letter;
+                        chars.Add(char.Parse(concept.Text));
+                        viewsFound.Add(contentView);
+
+                        hasUserInteracted = true;
+                    }
+                }
+
+                var word = new string(chars.ToArray());
+                if (words.Any(w => (w as Word).Text.Equals(word)))
+                {
+                    viewsFound.ForEach(v => v.SetBackgroundResource(Resource.Drawable.highlighted_background));
+                }
+            }
+
+            return hasUserInteracted;
+        }
+    }
+
+    public class SpeakerSCFragment : SelectConceptFragment
+    {
+        protected override void TransformTaskItems()
+        {
+            exercise = exercise.DeepCopy();
+
+            var concepts = new List<Concept>();
+            concepts.AddRange(exercise.TaskItems[0]);
+            concepts.AddRange(Lesson.OptionItems.PickRandomItems(4).Select(item => { item.IsOption = true; return item; }));
+            concepts.Shuffle();
+
+            exercise.TaskItems = new List<List<Concept>>();
+            exercise.TaskItems.Add(concepts.GetRange(0, 3));
+            exercise.TaskItems.Add(concepts.GetRange(3, 3));
+            exercise.TaskItems.Add(concepts.GetRange(6, 3));
+        }
+    }
+
     public class SelectConceptFragment : BaseConceptLayoutFragment<SelectConcept>
     {
+        // The current selected view item for SelectConcept.SingleChoice=true
+        View selectedItem;
+
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.SelectConcept, container, false);
@@ -25,10 +219,16 @@ namespace IRMGARD
         {
             base.InitIteration();
 
+            // Reset selected item
+            selectedItem = null;
+
             var currentIteration = GetCurrentIteration<SelectConceptIteration>();
 
-            // Random select an exercise from this iteration
-            exercise = currentIteration.Tasks.PickRandomItems(1).FirstOrDefault();
+            if (currentIteration.Tasks != null)
+            {
+                // Random select an exercise from this iteration
+                exercise = currentIteration.Tasks.PickRandomItems(1).FirstOrDefault();
+            }
 
             // Transform stored task item configuration
             TransformTaskItems();
@@ -36,8 +236,6 @@ namespace IRMGARD
             // Build task items
             BuildTaskItems();
         }
-
-        protected virtual void TransformTaskItems() { }
 
         ViewGroup CreateContentContainer(View child)
         {
@@ -52,55 +250,86 @@ namespace IRMGARD
 
         protected override View CreateAndInitConceptView(Concept concept)
         {
-            var container = CreateContentContainer(CreateConceptView(concept));
-            AddSelectHandler(container.GetChildAt(0), concept);
+            var conceptView = CreateConceptView(concept);
+            var container = CreateContentContainer(conceptView);
+            AddSelectHandler(conceptView);
 
             return container;
         }
 
-        void AddSelectHandler(View view, Concept concept)
+        void AddSelectHandler(View conceptView)
         {
-            if (concept.IsOption || concept.IsSolution)
+            var concept = GetTag<Concept>(conceptView, Resource.Id.concept_tag_key);
+            if (concept != null)
             {
-                if (concept is Speaker)
+                if (concept.IsOption || concept.IsSolution)
                 {
-                    view.Click -= ConceptView_Click_PlaySound;
-                    view.Click += ConceptView_Click_PlaySound_Click_SelectItem;
-                }
-                else
-                {
-                    view.Click += ConceptView_Click_SelectItem;
+                    if (concept is Speaker)
+                    {
+                        conceptView.Click -= ConceptView_Click_PlaySound;
+                        conceptView.Click += ConceptView_Click_PlaySound_Click_SelectItem;
+                    }
+                    else
+                    {
+                        conceptView.Click += ConceptView_Click_SelectItem;
+                    }
                 }
             }
         }
 
-        void RemoveSelectHandler(View view, Concept concept)
+        void RemoveSelectHandler(View conceptView)
         {
-            if (concept is Speaker)
+            var concept = GetTag<Concept>(conceptView, Resource.Id.concept_tag_key);
+            if (concept != null)
             {
-                view.Click -= ConceptView_Click_PlaySound_Click_SelectItem;
-                view.Click += ConceptView_Click_PlaySound;
-            }
-            else
-            {
-                view.Click -= ConceptView_Click_SelectItem;
+                if (concept is Speaker)
+                {
+                    conceptView.Click -= ConceptView_Click_PlaySound_Click_SelectItem;
+                    conceptView.Click += ConceptView_Click_PlaySound;
+                }
+                else
+                {
+                    conceptView.Click -= ConceptView_Click_SelectItem;
+                }
             }
         }
 
         void ConceptView_Click_SelectItem(object sender, EventArgs e)
         {
             var view = sender as View;
-            var concept = GetTag<Concept>(view, Resource.Id.concept_tag_key);
 
             var drawable = GetTag<Drawable>(view, Resource.Id.selected_tag_key);
             if (drawable == null)
             {
+                if (Lesson.SingleChoice)
+                {
+                    if (selectedItem != null)
+                    {
+                        UnselectItem(selectedItem);
+                    }
+                    selectedItem = view;
+                }
                 SetTag(view, Resource.Id.selected_tag_key, view.Background != null
                     ? view.Background
                     : new ColorDrawable(Android.Graphics.Color.Transparent));
                 view.SetBackgroundResource(Resource.Drawable.selected_background);
             }
             else
+            {
+                if (Lesson.SingleChoice)
+                {
+                    selectedItem = null;
+                }
+                UnselectItem(view);
+            }
+
+            FireUserInteracted(CheckUserInteracted());
+        }
+
+        void UnselectItem(View view)
+        {
+            var drawable = GetTag<Drawable>(view, Resource.Id.selected_tag_key);
+            if (drawable != null)
             {
                 if (Env.LollipopSupport)
                 {
@@ -112,18 +341,16 @@ namespace IRMGARD
                     var layout = container.Parent as ViewGroup;
                     var idx = layout.IndexOfChild(container);
                     layout.RemoveViewAt(idx);
+                    var concept = GetTag<Concept>(view, Resource.Id.concept_tag_key);
                     layout.AddView(CreateAndInitConceptView(concept), idx);
                 }
                 SetTag<Drawable>(view, Resource.Id.selected_tag_key, null);
             }
-
-            FireUserInteracted(CheckUserInteracted());
         }
 
         void ConceptView_Click_PlaySound_Click_SelectItem(object sender, EventArgs e)
         {
             var view = sender as View;
-            var concept = GetTag<Concept>(view, Resource.Id.concept_tag_key);
 
             if (GetTag<bool>(view, Resource.Id.clicked_once_tag_key))
             {
@@ -147,8 +374,8 @@ namespace IRMGARD
                 for (int k = 0; k < llTaskItemRow.ChildCount; k++)
                 {
                     var containerView = llTaskItemRow.GetChildAt(k) as ViewGroup;
-                    var contentView = containerView.GetChildAt(0);
-                    if (GetTag<Drawable>(contentView, Resource.Id.selected_tag_key) != null)
+                    var conceptView = containerView.GetChildAt(0);
+                    if (GetTag<Drawable>(conceptView, Resource.Id.selected_tag_key) != null)
                     {
                         return true;
                     }
@@ -177,14 +404,14 @@ namespace IRMGARD
                 for (int k = 0; k < llTaskItemRow.ChildCount; k++)
                 {
                     var containerView = llTaskItemRow.GetChildAt(k) as ViewGroup;
-                    var contentView = containerView.GetChildAt(0);
-                    if (contentView != null)
+                    var conceptView = containerView.GetChildAt(0);
+                    if (conceptView != null)
                     {
-                        var concept = GetTag<Concept>(contentView, Resource.Id.concept_tag_key);
+                        var concept = GetTag<Concept>(conceptView, Resource.Id.concept_tag_key);
                         if (concept.IsOption)
                         {
-                            RemoveSelectHandler(contentView, concept);
-                            if (GetTag<Drawable>(contentView, Resource.Id.selected_tag_key) != null)
+                            RemoveSelectHandler(conceptView);
+                            if (GetTag<Drawable>(conceptView, Resource.Id.selected_tag_key) != null)
                             {
                                 containerView.SetBackgroundResource(Resource.Drawable.rectangle_red);
                                 correct = false;
@@ -192,8 +419,8 @@ namespace IRMGARD
                         }
                         else if (concept.IsSolution)
                         {
-                            RemoveSelectHandler(contentView, concept);
-                            if (GetTag<Drawable>(contentView, Resource.Id.selected_tag_key) == null)
+                            RemoveSelectHandler(conceptView);
+                            if (GetTag<Drawable>(conceptView, Resource.Id.selected_tag_key) == null)
                             {
                                 correct = false;
                             }

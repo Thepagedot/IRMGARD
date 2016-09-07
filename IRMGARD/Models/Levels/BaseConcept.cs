@@ -5,9 +5,6 @@ namespace IRMGARD.Models
 {
     public class BaseConcept : Lesson
     {
-        // Global option items
-        public List<Concept> OptionItems { get; set; }
-
         // Do not show the wooden rack
         public bool HideRack { get; set; }
 
@@ -16,6 +13,45 @@ namespace IRMGARD.Models
         // Idx = 2: The margin between task and option items (optional)
         // Idx = 3: The margin between option and solution items (optional)
         public int[] TopMargins { get; set; }
+
+        // Global option items
+        public List<Concept> OptionItems { get; set; }
+
+        // Global concept items
+        public Dictionary<string, List<Concept>> NamedConcepts { get; set; }
+
+        public virtual BaseConcept DeepCopy()
+        {
+            BaseConcept clone = (BaseConcept)this.MemberwiseClone();
+            clone.HideRack = HideRack;
+            if (TopMargins != null && TopMargins.Length > 0)
+            {
+                clone.TopMargins = new int[TopMargins.Length];
+                Array.Copy(TopMargins, clone.TopMargins, TopMargins.Length);
+            }
+            if (OptionItems != null && OptionItems.Count > 0)
+            {
+                clone.OptionItems = new List<Concept>();
+                foreach (var concept in OptionItems)
+                {
+                    clone.OptionItems.Add(concept.DeepCopy());
+                }
+            }
+            if (NamedConcepts != null && NamedConcepts.Count > 0)
+            {
+                clone.NamedConcepts = new Dictionary<string, List<Concept>>();
+                foreach (var pair in NamedConcepts)
+                {
+                    clone.NamedConcepts[pair.Key] = new List<Concept>();
+                    foreach (var concept in pair.Value)
+                    {
+                        clone.NamedConcepts[pair.Key].Add(concept.DeepCopy());
+                    }
+                }
+            }
+
+            return clone;
+        }
     }
 
     public abstract class BaseConceptIteration : Iteration

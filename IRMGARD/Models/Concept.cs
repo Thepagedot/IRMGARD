@@ -147,11 +147,15 @@ namespace IRMGARD.Models
         public string ImagePath { get; set; }
         public string SoundPath { get; set; }
 
+        // The following properies are excluded from comparison
+        public int Size { get; set; }
+
         public override Concept DeepCopy()
         {
             Picture clone = (Picture)base.DeepCopy();
             clone.ImagePath = ImagePath != null ? String.Copy(ImagePath) : null;
             clone.SoundPath = SoundPath != null ? String.Copy(SoundPath) : null;
+            clone.Size = Size;
 
             return clone;
         }
@@ -178,11 +182,15 @@ namespace IRMGARD.Models
     public class Space : Concept
     {
         public int Width { get; set; }
+        public int Height { get; set; }
 
         public Space()
         {
             // Default Width: 15dp
             this.Width = 15;
+
+            // Default Height: 15dp
+            this.Height = 15;
         }
     }
 
