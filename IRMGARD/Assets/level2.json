@@ -7875,9 +7875,10 @@
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 244,
-          "Title": "Im Supermarkt",
+          "Title": "Ein oder eine?",
           "SoundPath": "Intros/Level 2 Modul 4 Aufgabe 4.mp3",
           "TypeOfLevel": "DragIntoGap",
+          "HighlightCorrectOptionsOnMistake": true,
           "UseOptionItemsOnly": true,
           "Iterations": [
             {
@@ -7889,49 +7890,24 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "ein"
+                        "Text": "Der"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Apfel"
-                      }
-                    ],
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "eine"
+                        "Text": "Junge"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Banane"
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "TaskItems": [
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "ein"
+                        "Text": "isst"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Apfel"
-                      }
-                    ],
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "eine"
+                        "Text": "einen"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Ananas"
+                        "Text": "Kuchen."
                       }
                     ]
                   ]
@@ -7947,29 +7923,21 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "ein"
+                        "Text": "Die"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Kuchen"
+                        "Text": "Frau"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "kauft"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "sich"
                       }
                     ],
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "eine"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Birne"
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "TaskItems": [
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -7978,18 +7946,11 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Kuchen"
-                      }
-                    ],
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "eine"
+                        "Text": "paar"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Kiwi"
+                        "Text": "Bananen."
                       }
                     ]
                   ]
@@ -8005,41 +7966,16 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "eine"
+                        "Text": "Das"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Tomate"
-                      }
-                    ],
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "ein"
+                        "Text": "Mädchen"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Fisch"
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "TaskItems": [
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "eine"
+                        "Text": "isst"
                       },
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Gurke"
-                      }
-                    ],
-                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
@@ -8047,7 +7983,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Salat"
+                        "Text": "Brot."
                       }
                     ]
                   ]
@@ -8063,41 +7999,12 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "eine"
+                        "Text": "Ina"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Butter"
-                      }
-                    ],
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "ein"
+                        "Text": "hat"
                       },
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Aal"
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "TaskItems": [
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "ein"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Brot"
-                      }
-                    ],
-                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
@@ -8105,7 +8012,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Marmelade"
+                        "Text": "Wurst."
                       }
                     ]
                   ]
@@ -8121,65 +8028,49 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "eine"
+                        "Text": "Oma"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Wurst"
+                        "Text": "kauft"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "eine"
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "eine"
+                        "Text": "Tube"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Bohne"
-                      }
-                    ],
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "ein"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Käse"
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "TaskItems": [
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "eine"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Zwiebel"
-                      }
-                    ],
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "ein"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Kaffee"
+                        "Text": "Zahnpasta."
                       }
                     ]
                   ]
                 }
               ]
+            }
+          ],
+          "OptionItems": [
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": "ein"
+            },
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": "eine"
+            },
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": "einen"
+            },
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": "einer"
             }
           ]
         },
