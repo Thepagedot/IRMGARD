@@ -43,7 +43,6 @@ namespace IRMGARD
 
         List<string> praiseFilesAvail;
         List<string> criticismFilesAvail;
-        bool isPlayingPraiseOrCriticism;
 
         Common Common { get { return DataHolder.Current.Common; } }
 
@@ -61,7 +60,7 @@ namespace IRMGARD
             ivGoBack = FindViewById<ImageView>(Resource.Id.ivGoBack);
             ivGoBack.Click += ((sender, e) => PreviousLesson());
             ivGoFwd = FindViewById<ImageView>(Resource.Id.ivGoFwd);
-            ivGoFwd.Click += ((sender, e) => NextLesson(true, false));
+            ivGoFwd.Click += ((sender, e) => NextLesson());
             btnNext = FindViewById<FloatingActionButton>(Resource.Id.btnNext);
             btnNext.Click += BtnNext_Click;
 
@@ -100,10 +99,7 @@ namespace IRMGARD
         {
             base.OnPause();
 
-            if (SoundPlayer.IsPlaying)
-            {
-                SoundPlayer.Stop();
-            }
+            SoundPlayer.Stop();
         }
 
         /// <summary>
@@ -111,6 +107,8 @@ namespace IRMGARD
         /// </summary>
         private void InitLesson()
         {
+            SoundPlayer.Stop();
+
             CheckHintButton();
 
             // ----------------------------------------------------------------------
@@ -159,7 +157,6 @@ namespace IRMGARD
             }
 
             // Play instruction
-            SoundPlayer.Stop();
             bool waitForCompletion = false;
             if (DataHolder.Current.CurrentLesson.IsRecurringTask)
             {
@@ -266,27 +263,43 @@ namespace IRMGARD
         /// <param name="e">event args.</param>
         async void LessonFragment_LessonFinished(object sender, LessonFinishedEventArgs e)
         {
-            if (SoundPlayer.IsPlaying)
-                SoundPlayer.Stop();
-
-            var success = DataHolder.Current.CurrentLesson.Iterations.All(i => i.Status == IterationStatus.Success);
-
-            // Play random praise or criticism audio depending on lesson success status
             if (e.ProvideFeedback)
             {
-                isPlayingPraiseOrCriticism = true;
+                var success = DataHolder.Current.CurrentLesson.Iterations.All(i => i.Status == IterationStatus.Success);
+
+                // Show success or failure badge
+                if (success)
+                    ivBadge.SetImageResource(Resource.Drawable.irmgard_icon_spiel_supergemacht);
+                else
+                    ivBadge.SetImageResource(Resource.Drawable.irmgard_icon_spiel_nochmal);
+
+                var badgeAnimation = AnimationUtils.LoadAnimation(this, Resource.Animation.ShowFeedbackIcon);
+                badgeAnimation.AnimationEnd += async (s2, args2) =>
+                {
+                    ivBadge.Visibility = ViewStates.Gone;
+                    while (SoundPlayer.IsPlaying)
+                    {
+                        await Task.Delay(500);
+                    }
+                    if (!SoundPlayer.WasStopped)
+                    {
+                        NextLesson();
+                    }
+                };
+
+                ivBadge.Visibility = ViewStates.Visible;
+                ivBadge.StartAnimation(badgeAnimation);
+
+                // Play random praise or criticism audio depending on lesson success status
                 SoundPlayer.PlaySound(this,
                     success
                     ? praiseFilesAvail.PickRandomItems(1).FirstOrDefault()
                     : criticismFilesAvail.PickRandomItems(1).FirstOrDefault());
             }
-            while (SoundPlayer.IsPlaying)
+            else
             {
-                await Task.Delay(500);
+                NextLesson();
             }
-            isPlayingPraiseOrCriticism = false;
-
-            NextLesson(success, e.ProvideFeedback);
         }
 
         /// <summary>
@@ -330,21 +343,15 @@ namespace IRMGARD
 
         private void BtnNext_Click(object sender, EventArgs e)
         {
-            if (isPlayingPraiseOrCriticism)
-            {
-                // User clicked on the next button to skip praise or criticism audio
-                SoundPlayer.Stop();
-            }
-            else
-            {
-                // Diable button to prevent double click
-                btnNext.Enabled = false;
-                btnNext.Clickable = false;
-                btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.HideNextButton));
+            SoundPlayer.Stop();
 
-                // Check soution
-                currentFragment.CheckSolution();
-            }
+            // Diable button to prevent double click
+            btnNext.Enabled = false;
+            btnNext.Clickable = false;
+            btnNext.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.HideNextButton));
+
+            // Check soution
+            currentFragment.CheckSolution();
         }
 
         public override bool OnCreateOptionsMenu(IMenu menu)
@@ -372,10 +379,6 @@ namespace IRMGARD
                 case Resource.Id.btnHint:
                     if (!string.IsNullOrEmpty(DataHolder.Current.CurrentLesson.Hint))
                     {
-                        if (SoundPlayer.IsPlaying)
-                        {
-                            SoundPlayer.Stop();
-                        }
                         SoundPlayer.PlaySound(this, DataHolder.Current.CurrentLesson.Hint);
                     }
                     break;
@@ -399,38 +402,12 @@ namespace IRMGARD
         #endregion
 
         /// <summary>
-        /// Switches to the next Lesson if available
+        /// Switch to the next lesson
         /// </summary>
-        private void NextLesson(bool success, bool showFeedbackBadge = true)
+        private void NextLesson()
         {
-            if (showFeedbackBadge)
-            {
-                // Show success or failure badge
-                if (success)
-                    ivBadge.SetImageResource(Resource.Drawable.irmgard_icon_spiel_supergemacht);
-                else
-                    ivBadge.SetImageResource(Resource.Drawable.irmgard_icon_spiel_nochmal);
+            SoundPlayer.Stop();
 
-                var badgeAnimation = AnimationUtils.LoadAnimation(this, Resource.Animation.ShowFeedbackIcon);
-                badgeAnimation.AnimationEnd += (s2, args2) =>
-                {
-                    ivBadge.Visibility = ViewStates.Gone;
-                    Next();
-                    fragmentContainer.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeInRight));
-                };
-
-                ivBadge.Visibility = ViewStates.Visible;
-                ivBadge.StartAnimation(badgeAnimation);
-            }
-            else
-            {
-                Next();
-                fragmentContainer.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeInRight));
-            }
-        }
-
-        private void Next()
-        {
             var nextLesson = DataHolder.Current.CurrentModule.GetNextLesson(DataHolder.Current.CurrentLesson);
             if (nextLesson != null)
             {
@@ -442,13 +419,17 @@ namespace IRMGARD
             {
                 Finish();
             }
+
+            fragmentContainer.StartAnimation(AnimationUtils.LoadAnimation(this, Resource.Animation.SwipeInRight));
         }
 
         /// <summary>
-        /// Swtiches to the previous Lesson if available.
+        /// Switch to the previous lesson or the first lesson of the module
         /// </summary>
         private void PreviousLesson()
         {
+            SoundPlayer.Stop();
+
             var previousLesson = DataHolder.Current.CurrentModule.GetPrevioustLesson(DataHolder.Current.CurrentLesson);
             if (previousLesson != null)
             {

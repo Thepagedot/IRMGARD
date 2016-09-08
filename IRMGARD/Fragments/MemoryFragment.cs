@@ -54,8 +54,6 @@ namespace IRMGARD
                     if (memoryCard.Media != null)
                     {
                         cardPictureFront.Visibility = ViewStates.Visible;
-                        if (SoundPlayer.IsPlaying)
-                            SoundPlayer.Stop();
                         SoundPlayer.PlaySound(Activity.BaseContext, memoryCard.Media.SoundPath);
                     }
                     else

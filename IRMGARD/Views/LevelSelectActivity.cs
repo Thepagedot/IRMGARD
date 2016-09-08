@@ -35,10 +35,6 @@ namespace IRMGARD
             // Check if level is enabled
             if (!DataHolder.Current.Levels.ElementAt(e.Position).IsEnabled)
             {
-                if (SoundPlayer.IsPlaying)
-                {
-                    SoundPlayer.Stop();
-                }
                 SoundPlayer.PlaySound(this, "Application/Level_Not_Available.mp3");
                 return;
             }

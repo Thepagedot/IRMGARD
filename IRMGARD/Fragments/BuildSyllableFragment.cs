@@ -161,8 +161,6 @@ namespace IRMGARD
         {
             if (index >= 0)
             {
-                if (SoundPlayer.IsPlaying)
-                    SoundPlayer.Stop();
                 SoundPlayer.PlaySound(Activity.BaseContext, currentSyllablesToLearn.Syllables.ElementAt(index).SoundPath);
             }
         }

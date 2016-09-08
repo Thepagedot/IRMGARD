@@ -89,8 +89,6 @@ namespace IRMGARD
 
         void PlayTaskDesc()
         {
-            if (SoundPlayer.IsPlaying)
-                SoundPlayer.Stop();
             SoundPlayer.PlaySound(Activity.BaseContext, currentOption.SoundPath);
         }
 

@@ -67,9 +67,6 @@ namespace IRMGARD
         void ImageButton_Click(object sender, EventArgs e)
         {
             cardView.SetCardBackgroundColor(Resources.GetColor(Resource.Color.selected_background));
-
-            if (SoundPlayer.IsPlaying)
-                SoundPlayer.Stop();
             SoundPlayer.PlaySound(Activity.BaseContext, GetCurrentIteration<HearMeIteration>().Media.SoundPath);
 
             FireUserInteracted(true);

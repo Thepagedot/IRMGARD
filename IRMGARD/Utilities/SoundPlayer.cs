@@ -13,6 +13,8 @@ namespace IRMGARD
 
         static bool waitForCompletionActive;
 
+        public static bool WasStopped { get; private set; }
+
         public static bool IsPlaying
         {
             get
@@ -49,6 +51,9 @@ namespace IRMGARD
 		{
 			try
 			{
+                // Reset stopped info state
+                WasStopped = false;
+
                 // Describe sound file from Assets properly
                 var descriptor = AssetHelper.Instance.OpenFd(folderName ?? DataHolder.Current.Common.AssetSoundDir + "/" + fileName);
 
@@ -67,10 +72,8 @@ namespace IRMGARD
                     return;
                 }
 
-                // Reset player if still playing
-                Stop();
-
-                // Play sound file
+                // Prepare to play sound file
+                EndPlayback();
                 player.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
                 player.Prepare();
 				player.Start();
@@ -79,12 +82,12 @@ namespace IRMGARD
 			{
 				Toast.MakeText(context, context.GetString(Resource.String.error_soundfileNotFound), ToastLength.Short);
 				System.Console.WriteLine("Error: Soundfile '" + fileName + "' could not be found.");
-			}
+                player.Reset();
+            }
             catch (Java.Lang.IllegalStateException)
             {
                 System.Console.WriteLine("Error: Player is in an invalid state - trying to play '" + fileName + "'");
-                player.Stop();
-                player.Reset();
+                Stop();
             }
 		}
 
@@ -94,18 +97,23 @@ namespace IRMGARD
         public static void Stop()
         {
             waitForCompletionActive = false;
-            if (player.IsPlaying)
-            {
-                player.Stop();
-                player.Reset();
-            }
+            WasStopped = true;
+            EndPlayback();
         }
 
         static void Player_Completion (object sender, EventArgs e)
         {
+            EndPlayback();
+        }
+
+        static void EndPlayback()
+        {
             // Reset player after playing a soundfile
-            player.Stop();
+            if (IsPlaying)
+            {
+                player.Stop();
+            }
             player.Reset();
         }
-	}
+    }
 }

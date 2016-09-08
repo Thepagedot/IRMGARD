@@ -79,8 +79,10 @@ namespace IRMGARD.Models
 				var index = Lessons.IndexOf(currentLesson) - 1;
 				return Lessons.ElementAt(index);
 			}
-
-			return null;
+            else
+            {
+                return Lessons.ElementAt(0);
+            }
 		}
 	}
 }
