@@ -26,7 +26,9 @@ namespace IRMGARD.Utilities
         {
             var fileName = "level" + levelNumber + ".json";
             if (levelNumber == -1)
-                fileName = "sandbox.json";
+                fileName = "sandbox.json";      // A single lesson to test separately
+            else if (levelNumber == -2)
+                fileName = "testlayout.json";   // Lessons to test for different display sizes
 
             return await LoadFromJsonAsync<Level>(fileName);
         }

@@ -44,7 +44,6 @@ namespace IRMGARD
 
                 if (IsTextCardCallback(concept as BaseText))
                 {
-                    view.SetPadding(ToPx(2), ToPx(2), ToPx(2), ToPx(2));
                     var cardView = (FrameLayout)inflater.Inflate(Resource.Layout.CardConcept, null);
                     cardView.AddView(view);
                     view = cardView;
@@ -82,7 +81,7 @@ namespace IRMGARD
 
                 if (concept.ActivateOnSuccess || concept.ActivateOnMistake)
                 {
-                    (view as ViewGroup).GetChildAt(0).LayoutParameters = new FrameLayout.LayoutParams(ToPx(150), ToPx(150));
+                    (view as ViewGroup).GetChildAt(0).LayoutParameters = new FrameLayout.LayoutParams(ToPx(120), ToPx(120));
                 }
 
                 if (picture.Size > 0)
@@ -128,6 +127,19 @@ namespace IRMGARD
             view.Click += ConceptView_Click_PlaySound;
 
             return view;
+        }
+
+        protected ViewGroup CreateConceptContainer(View child)
+        {
+            var container = new FrameLayout(Activity.BaseContext);
+            var llLP = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
+            llLP.Gravity = GravityFlags.Bottom;
+            llLP.SetMargins(ToPx(2), 0, ToPx(2), 0);                    // Set spacing
+            container.SetPadding(ToPx(2), ToPx(2), ToPx(2), ToPx(2));   // Set spacing
+            container.LayoutParameters = llLP;
+            container.AddView(child);
+
+            return container;
         }
 
         protected void ConceptView_Click_PlaySound(object sender, EventArgs e)
@@ -181,7 +193,7 @@ namespace IRMGARD
 
         protected bool IsSmallHeight()
         {
-            return (Resources.DisplayMetrics.HeightPixels / Resources.DisplayMetrics.Density) < 550;
+            return (Resources.DisplayMetrics.HeightPixels / Resources.DisplayMetrics.Density) < 575;
         }
 
         protected int ToPx(int dp)
@@ -210,33 +222,35 @@ namespace IRMGARD
 
         void AdjustTextSize(TextView tvText, BaseText concept)
         {
-            if (concept.TextSize > 0)
+            int textSize = 0;
+
+            if (concept is Letter)
             {
-                tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, concept.TextSize);
+                textSize = 32;
             }
-            else
+            else if (concept is Syllable)
             {
-                if (concept is Letter)
-                {
-                    // TODO! 28 for smaller screens?
-                    tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, 32);
-                }
-                else if (concept is Syllable)
-                {
-                    tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, 24);
-                }
-                else if (concept is Word)
-                {
-                    tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, 18);
-                }
+                textSize = 26;
             }
+            else if (concept is Word)
+            {
+                textSize = 18;
+            }
+            else if (concept is Sentence)
+            {
+                textSize = 20;
+            }
+
+            textSize = IsSmallHeight() ? textSize - 4 : textSize;
+
+            tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, (concept.AddToTextSize != 0) ? textSize + concept.AddToTextSize : textSize);
         }
 
         View ApplyLetterTags(LayoutInflater inflater, BaseText concept)
         {
             string text = GetTextCallback(concept);
 
-            if (concept is Word || concept is Syllable)
+            if (concept is Word || concept is Syllable || concept is Sentence)
             {
                 var viewGroup = (ViewGroup)inflater.Inflate(Resource.Layout.BaseTextGroup, null);
                 for (int i = 0; i < text.Length; i++)

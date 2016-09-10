@@ -194,23 +194,15 @@ namespace IRMGARD
 
         ViewGroup CreateContentContainer(int resId, View child)
         {
-            var container = (ViewGroup)LayoutInflater.From(Activity.BaseContext).Inflate(Resource.Layout.ContentContainer, null);
+            var container = CreateConceptContainer(child);
             container.Id = resId;
-            switch (resId)
+            if (resId == Resource.Id.flOptionContainer)
             {
-                case Resource.Id.flConceptContainer:
-                    LinearLayout.LayoutParams llLP = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
-                    llLP.SetMargins(4, 0, 4, 0);
-                    container.LayoutParameters = llLP;
-                    break;
-                case Resource.Id.flOptionContainer:
-                    FlowLayout.LayoutParams llFL = new FlowLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
-                    llFL.HorizontalSpacing = 8;
-                    llFL.VerticalSpacing = 8;
-                    container.LayoutParameters = llFL;
-                    break;
+                FlowLayout.LayoutParams llFL = new FlowLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
+                llFL.HorizontalSpacing = ToPx(4);    // Set spacing
+                llFL.VerticalSpacing = ToPx(2);    // Set spacing
+                container.LayoutParameters = llFL;
             }
-            container.AddView(child);
 
             return container;
         }
@@ -404,14 +396,6 @@ namespace IRMGARD
             {
                 var view = (ViewGroup)llTaskItemRows.GetChildAt(i);
                 var llTaskItemRow = view.FindViewById<LinearLayout>(Resource.Id.llTaskItemRow);
-
-                if (!Lesson.HideRack)
-                {
-                    // Move llTaskItemRow to display success/failure bottom border of a concept view
-                    var layoutParams = (LinearLayout.LayoutParams)llTaskItemRow.LayoutParameters;
-                    layoutParams.BottomMargin = ToPx(2);
-                }
-
                 for (int k = 0; k < llTaskItemRow.ChildCount; k++)
                 {
                     var conceptContainer = llTaskItemRow.GetChildAt(k) as ViewGroup;
@@ -428,10 +412,12 @@ namespace IRMGARD
                             var blankViewConcept = GetTag<Concept>(blankView.GetChildAt(1), Resource.Id.concept_tag_key);
                             if (contentViewConcept != null && blankViewConcept != null && contentViewConcept.Equals(blankViewConcept))
                             {
+                                MoveConceptContainer(conceptContainer);
                                 conceptContainer.SetBackgroundResource(Resource.Drawable.rectangle_green);
                             }
                             else
                             {
+                                MoveConceptContainer(conceptContainer);
                                 conceptContainer.SetBackgroundResource(Resource.Drawable.rectangle_red);
                                 correct = false;
                             }

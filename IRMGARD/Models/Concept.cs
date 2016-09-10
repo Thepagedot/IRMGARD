@@ -56,7 +56,7 @@ namespace IRMGARD.Models
         public List<List<int>> Highlights { get; set; }
         public string Color { get; set; }
         public bool ShowAsPlainText { get; set; }
-        public int TextSize { get; set; }
+        public int AddToTextSize { get; set; }
 
         public override Concept DeepCopy()
         {
@@ -74,7 +74,7 @@ namespace IRMGARD.Models
             }
             clone.Color = Color != null ? String.Copy(Color) : null;
             clone.ShowAsPlainText = ShowAsPlainText;
-            clone.TextSize = TextSize;
+            clone.AddToTextSize = AddToTextSize;
 
             return clone;
         }
@@ -184,13 +184,11 @@ namespace IRMGARD.Models
         public int Width { get; set; }
         public int Height { get; set; }
 
-        public Space()
+        // Default Width/Height: 15dp
+        public Space(int width = 15, int height = 15)
         {
-            // Default Width: 15dp
-            this.Width = 15;
-
-            // Default Height: 15dp
-            this.Height = 15;
+            this.Width = width;
+            this.Height = height;
         }
     }
 

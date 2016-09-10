@@ -46,7 +46,7 @@ namespace IRMGARD
         protected override void InitBaseLayoutView(View layoutView)
         {
             var llTaskItemRows = layoutView.FindViewById<LinearLayout>(Resource.Id.llTaskItemRows);
-            llTaskItemRows.SetPadding(ToPx(Padding), ToPx(Padding), ToPx(Padding), ToPx(Padding));
+            llTaskItemRows.SetPadding(ToPx(Padding), ToPx(Padding), ToPx(Padding), ToPx(Padding));    // Set spacing
             llTaskItemRows.SetBackgroundColor(Android.Graphics.Color.White);
 
             base.InitBaseLayoutView(layoutView);
@@ -128,7 +128,7 @@ namespace IRMGARD
             }
             letter.Text = text;
             letter.ShowAsPlainText = true;
-            letter.TextSize = IsSmallHeight() ? 18 : 26;
+            letter.AddToTextSize = -6;
 
             return letter;
         }
@@ -138,7 +138,7 @@ namespace IRMGARD
             var container = base.CreateAndInitConceptView(concept) as ViewGroup;
 
             // Adjust padding for letter views rendered as plain text
-            container.GetChildAt(0).SetPadding(ToPx(Padding), 0, ToPx(Padding), 0);
+            container.GetChildAt(0).SetPadding(ToPx(Padding), 0, ToPx(Padding), 0);    // Set spacing
 
             return container;
         }
@@ -237,21 +237,10 @@ namespace IRMGARD
             BuildTaskItems();
         }
 
-        ViewGroup CreateContentContainer(View child)
-        {
-            var container = (ViewGroup)LayoutInflater.From(Activity.BaseContext).Inflate(Resource.Layout.ContentContainer, null);
-            LinearLayout.LayoutParams llLP = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WrapContent, ViewGroup.LayoutParams.WrapContent);
-            llLP.SetMargins(ToPx(2), 0, ToPx(2), 0);
-            container.LayoutParameters = llLP;
-            container.AddView(child);
-
-            return container;
-        }
-
         protected override View CreateAndInitConceptView(Concept concept)
         {
             var conceptView = CreateConceptView(concept);
-            var container = CreateContentContainer(conceptView);
+            var container = CreateConceptContainer(conceptView);
             AddSelectHandler(conceptView);
 
             return container;
@@ -393,18 +382,10 @@ namespace IRMGARD
             {
                 var view = (ViewGroup)llTaskItemRows.GetChildAt(i);
                 var llTaskItemRow = view.FindViewById<LinearLayout>(Resource.Id.llTaskItemRow);
-
-                if (!Lesson.HideRack)
-                {
-                    // Move llTaskItemRow to display success/failure bottom border of a concept view
-                    var layoutParams = (LinearLayout.LayoutParams)llTaskItemRow.LayoutParameters;
-                    layoutParams.BottomMargin = ToPx(2);
-                }
-
                 for (int k = 0; k < llTaskItemRow.ChildCount; k++)
                 {
-                    var containerView = llTaskItemRow.GetChildAt(k) as ViewGroup;
-                    var conceptView = containerView.GetChildAt(0);
+                    var conceptContainer = llTaskItemRow.GetChildAt(k) as ViewGroup;
+                    var conceptView = conceptContainer.GetChildAt(0);
                     if (conceptView != null)
                     {
                         var concept = GetTag<Concept>(conceptView, Resource.Id.concept_tag_key);
@@ -413,7 +394,8 @@ namespace IRMGARD
                             RemoveSelectHandler(conceptView);
                             if (GetTag<Drawable>(conceptView, Resource.Id.selected_tag_key) != null)
                             {
-                                containerView.SetBackgroundResource(Resource.Drawable.rectangle_red);
+                                MoveConceptContainer(conceptContainer);
+                                conceptContainer.SetBackgroundResource(Resource.Drawable.rectangle_red);
                                 correct = false;
                             }
                         }
@@ -424,7 +406,8 @@ namespace IRMGARD
                             {
                                 correct = false;
                             }
-                            containerView.SetBackgroundResource(Resource.Drawable.rectangle_green);
+                            MoveConceptContainer(conceptContainer);
+                            conceptContainer.SetBackgroundResource(Resource.Drawable.rectangle_green);
                         }
                     }
                 }

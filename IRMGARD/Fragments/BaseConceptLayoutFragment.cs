@@ -140,6 +140,16 @@ namespace IRMGARD
                 lp.TopMargin = IsSmallHeight() ? topMargin / 2 : topMargin;
             }
         }
+
+        protected void MoveConceptContainer(ViewGroup conceptContainer)
+        {
+            if (!Lesson.HideRack)
+            {
+                // Move view up to fully display its success/failure decoration border
+                var layoutParams = conceptContainer.LayoutParameters as LinearLayout.LayoutParams;
+                layoutParams.BottomMargin = ToPx(2);  // Set spacing
+            }
+        }
     }
 }
 

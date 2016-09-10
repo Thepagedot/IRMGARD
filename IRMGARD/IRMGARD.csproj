@@ -1126,15 +1126,13 @@
     <AndroidResource Include="Resources\layout\CardConcept.axml" />
     <AndroidResource Include="Resources\drawable\letter_long.xml" />
     <AndroidResource Include="Resources\drawable\letter_short.xml" />
-    <AndroidResource Include="Resources\layout\ContentContainer.axml" />
     <AndroidResource Include="Resources\layout\TaskItemRow.axml" />
     <AndroidResource Include="Resources\layout\BaseTextGroup.axml" />
     <AndroidResource Include="Resources\drawable\concept_gray.xml" />
     <AndroidResource Include="Resources\drawable\concept_light_gray.axml" />
     <AndroidResource Include="Resources\layout\BaseTextSpeaker.axml" />
     <AndroidResource Include="Resources\layout\BaseTextBordered.axml" />
-    <AndroidResource Include="Resources\layout-h550dp\BaseTextCard.axml" />
-    <AndroidResource Include="Resources\layout-h550dp\BaseTextBordered.axml" />
+    <AndroidResource Include="Resources\layout-h550dp\CardConcept.axml" />
     <AndroidResource Include="Resources\layout\SelectConcept.axml" />
     <AndroidResource Include="Resources\drawable\selected_background.xml" />
     <AndroidResource Include="Resources\drawable\highlighted_background.xml" />
@@ -1158,7 +1156,7 @@
     <AndroidAsset Include="Assets\level8.json" />
     <AndroidAsset Include="Assets\level9.json" />
     <AndroidAsset Include="Assets\sandbox.json" />
-    <AndroidAsset Include="Assets\test.json" />
+    <AndroidAsset Include="Assets\testlayout.json" />
     <AndroidAsset Include="Assets\Videos\L2_Modul_1_720p.mp4" />
     <AndroidAsset Include="Assets\Videos\L2_Modul_2_720p.mp4" />
     <AndroidAsset Include="Assets\Videos\L2_Modul_3_720p.mp4" />

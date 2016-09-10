@@ -7,7 +7,7 @@
     cardview:cardUseCompatPadding="false"
     cardview:cardPreventCornerOverlap="true"
     cardview:cardElevation="0dp"
-    cardview:contentPadding="2dp"
+    cardview:contentPadding="4dp"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_gravity="bottom"

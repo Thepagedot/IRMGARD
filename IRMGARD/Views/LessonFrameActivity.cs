@@ -63,6 +63,11 @@ namespace IRMGARD
             ivGoFwd.Click += ((sender, e) => NextLesson());
             btnNext = FindViewById<FloatingActionButton>(Resource.Id.btnNext);
             btnNext.Click += BtnNext_Click;
+            if (!Env.LollipopSupport)
+            {
+                var layoutParams = btnNext.LayoutParameters as RelativeLayout.LayoutParams;
+                layoutParams.BottomMargin = (int)(-46 * Resources.DisplayMetrics.Density);
+            }
 
             rvProgress = FindViewById<RecyclerView>(Resource.Id.rvProgress);
             rvProgress.SetLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.Horizontal, false));
@@ -157,17 +162,23 @@ namespace IRMGARD
             }
 
             // Play instruction
-            bool waitForCompletion = false;
             if (DataHolder.Current.CurrentLesson.IsRecurringTask)
             {
                 var recurringTaskSoundFile = Common.RecurringTaskSoundFiles.PickRandomItems(1).FirstOrDefault();
                 if (recurringTaskSoundFile != null)
                 {
                     SoundPlayer.PlaySound(this, recurringTaskSoundFile);
-                    waitForCompletion = true;
+                    SoundPlayer.Completion += (sender, e) => { SoundPlayer.PlaySound(this, DataHolder.Current.CurrentLesson.SoundPath); };
+                }
+                else
+                {
+                    SoundPlayer.PlaySound(this, DataHolder.Current.CurrentLesson.SoundPath);
                 }
             }
-            SoundPlayer.PlaySound(this, waitForCompletion, DataHolder.Current.CurrentLesson.SoundPath);
+            else
+            {
+                SoundPlayer.PlaySound(this, DataHolder.Current.CurrentLesson.SoundPath);
+            }
         }
 
         private void LessonFragment_ProgressListRefreshRequested(object sender, ProgressListRefreshRequestedEventArgs e)
@@ -261,7 +272,7 @@ namespace IRMGARD
         /// </summary>
         /// <param name="sender">sender.</param>
         /// <param name="e">event args.</param>
-        async void LessonFragment_LessonFinished(object sender, LessonFinishedEventArgs e)
+        void LessonFragment_LessonFinished(object sender, LessonFinishedEventArgs e)
         {
             if (e.ProvideFeedback)
             {
@@ -274,17 +285,9 @@ namespace IRMGARD
                     ivBadge.SetImageResource(Resource.Drawable.irmgard_icon_spiel_nochmal);
 
                 var badgeAnimation = AnimationUtils.LoadAnimation(this, Resource.Animation.ShowFeedbackIcon);
-                badgeAnimation.AnimationEnd += async (s2, args2) =>
+                badgeAnimation.AnimationEnd += (s2, args2) =>
                 {
                     ivBadge.Visibility = ViewStates.Gone;
-                    while (SoundPlayer.IsPlaying)
-                    {
-                        await Task.Delay(500);
-                    }
-                    if (!SoundPlayer.WasStopped)
-                    {
-                        NextLesson();
-                    }
                 };
 
                 ivBadge.Visibility = ViewStates.Visible;
@@ -295,6 +298,7 @@ namespace IRMGARD
                     success
                     ? praiseFilesAvail.PickRandomItems(1).FirstOrDefault()
                     : criticismFilesAvail.PickRandomItems(1).FirstOrDefault());
+                SoundPlayer.Completion += (sender2, e2) => { NextLesson(); };
             }
             else
             {
