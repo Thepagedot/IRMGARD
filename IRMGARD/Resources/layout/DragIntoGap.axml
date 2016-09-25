@@ -1,37 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fillViewport="true">
+<LinearLayout
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  android:layout_marginTop="40dp">
   <LinearLayout
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginTop="40dp">
-    <LinearLayout
-        android:id="@+id/llTaskItemRows"
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center" />
-    <IRMGARD.FlowLayout
-        android:id="@+id/flOptionItems"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="@dimen/margin_default"
-        android:layout_marginRight="@dimen/margin_default"
-        android:gravity="center" />
-    <LinearLayout
-        android:id="@+id/llSolutionItems"
-        android:orientation="horizontal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:visibility="gone" />
-  </LinearLayout>
-</ScrollView>
+      android:id="@+id/llTaskItemRows"
+      android:orientation="vertical"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:gravity="center" />
+  <IRMGARD.FlowLayout
+      android:id="@+id/flOptionItems"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginTop="20dp"
+      android:layout_marginLeft="@dimen/margin_default"
+      android:layout_marginRight="@dimen/margin_default"
+      android:gravity="center" />
+  <LinearLayout
+      android:id="@+id/llSolutionItems"
+      android:orientation="horizontal"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginTop="20dp"
+      android:gravity="center"
+      android:visibility="gone" />
+</LinearLayout>
