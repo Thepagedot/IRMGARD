@@ -70,11 +70,13 @@
       <HintPath>..\packages\Refractored.GifImageView.2.0.0\lib\monoandroid\Refractored.GifImageView.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="HockeySDK.AndroidBindings">
-      <HintPath>..\Components\hockeyappandroid-4.1.0.2\lib\android\HockeySDK.AndroidBindings.dll</HintPath>
+    <Reference Include="HockeySDK, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HockeySDK.Xamarin.4.1.0\lib\MonoAndroid403\HockeySDK.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="HockeySDK">
-      <HintPath>..\Components\hockeyappandroid-4.1.0.2\lib\android\HockeySDK.dll</HintPath>
+    <Reference Include="HockeySDK.AndroidBindings, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HockeySDK.Xamarin.4.1.0\lib\MonoAndroid403\HockeySDK.AndroidBindings.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
