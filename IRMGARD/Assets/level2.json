@@ -9,7 +9,7 @@
     {
       "Name": "1: A-Z?",
       "Color": "#d3caaf",
-      "VideoPath": "Videos/L2_Modul_1_720p.mp4",
+      "VideoPath": "Videos/L2M1.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
@@ -1186,7 +1186,7 @@
     {
       "Name": "2: Punkt oder Strich?",
       "Color": "#aec2c4",
-      "VideoPath": "Videos/L2_Modul_2_720p.mp4",
+      "VideoPath": "Videos/L2M2.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
@@ -5828,7 +5828,7 @@
     {
       "Name": "3: Reimen",
       "Color": "#d8cad0",
-      "VideoPath": "Videos/L2_Modul_3_720p.mp4",
+      "VideoPath": "Videos/L2M3.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
@@ -7188,7 +7188,7 @@
     {
       "Name": "4: Einkaufen",
       "Color": "#c1caad",
-      "VideoPath": "Videos/L2_Modul_4_720p.mp4",
+      "VideoPath": "Videos/L2M4.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
@@ -9156,7 +9156,7 @@
     {
       "Name": "5: Umlaute",
       "Color": "#dbcf93",
-      "VideoPath": "Videos/L2_Modul_5_720p.mp4",
+      "VideoPath": "Videos/L2M5.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.HearMe, IRMGARD",
@@ -10818,7 +10818,7 @@
     {
       "Name": "6: AU, ÄU oder EU",
       "Color": "#e5c8c4",
-      "VideoPath": "Videos/L2_Modul_6_720p.mp4",
+      "VideoPath": "Videos/L2M6.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
