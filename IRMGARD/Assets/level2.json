@@ -563,6 +563,7 @@
           "Id": 214,
           "Title": "A-Z?",
           "SoundPath": "Intros/Level 2 Modul 1 Aufgabe 4.mp3",
+          "Hint": "Hints/Extra_tip_vergiss_nicht_zu_trinken.mp3",
           "TypeOfLevel": "DragIntoGap",
           "Iterations": [
             {
@@ -1025,6 +1026,7 @@
           "Id": 217,
           "Title": "A-Z?",
           "SoundPath": "Intros/Level 2 Modul 1 Aufgabe 7.mp3",
+          "Hint": "Hints/Extra_tip_verlier_nicht_den_Mut.mp3",
           "TypeOfLevel": "DragIntoGap",
           "Iterations": [
             {
@@ -1191,6 +1193,7 @@
           "Id": 221,
           "Title": "Punkt oder Strich?",
           "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 1.mp3",
+          "Hint": "Hints/Extra_tip_ich_brauchte_oft_Hilfe_in_Mathe.mp3",
           "TypeOfLevel": "DragIntoGap",
           "TopMargins": [ 4, 4, 12 ],
           "Iterations": [
@@ -1456,6 +1459,7 @@
           "Id": 222,
           "Title": "Punkt oder Strich?",
           "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 2.mp3",
+          "Hint": "Hints/Extra_tip_ich_wuerde_so_gern_wissen.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
           "Iterations": [
@@ -4842,6 +4846,7 @@
           "Id": 227,
           "Title": "Kurz oder Lang?",
           "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 7.mp3",
+          "Hint": "Hints/Extra_tip_wenn_du_dir_nicht_sicher_bist.mp3",
           "TypeOfLevel": "ShortLongVowelFPSC",
           "Iterations": [
             {
@@ -5256,6 +5261,7 @@
           "Id": 228,
           "Title": "Kurz oder Lang?",
           "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 8.mp3",
+          "Hint": "Hints/Extra_tip_hast_du_manchmal_spass.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
           "Iterations": [
@@ -6145,6 +6151,7 @@
           "Id": 232,
           "Title": "Silben lesen und schreiben",
           "SoundPath": "Intros/Level 2 Modul 3 Aufgabe 2.mp3",
+          "Hint": "Hints/Extra_tip_reim_doch_mal.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
           "Iterations": [
@@ -7363,6 +7370,7 @@
           "Id": 242,
           "Title": "Im Supermarkt",
           "SoundPath": "Intros/Level 2 Modul 4 Aufgabe 1.mp3",
+          "Hint": "Hints/Extra_tip_wer_viel_lernt.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
           "UseOptionItemsOnly": true,
@@ -8437,6 +8445,7 @@
           "Id": 246,
           "Title": "Im Supermarkt",
           "SoundPath": "Intros/Level 2 Modul 4 Aufgabe 6.mp3",
+          "Hint": "Hints/Extra_tip_uebst_du_auch_das_Schreiben_mit_dem_Stift.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HideRack": true,
           "Iterations": [
@@ -8723,6 +8732,7 @@
           "Id": 247,
           "Title": "Der, die oder das?",
           "SoundPath": "Intros/Level 2 Modul 4 Aufgabe 7.mp3",
+          "Hint": "Hints/Extra_tip_hast_du_einen_freund.mp3",
           "TypeOfLevel": "FourPicturesSelectConcept",
           "Iterations": [
             {
@@ -9153,6 +9163,7 @@
           "Id": 251,
           "Title": "ÄÖU",
           "SoundPath": "Intros/Level 2 Modul 5 Aufgabe 1.mp3",
+          "Hint": "Hints/Extra_tip_wie_schoen_dass_du_wieder_mit_mir_uebst.mp3",
           "TypeOfLevel": "HearMe",
           "Iterations": [
             {
@@ -10490,6 +10501,7 @@
           "Id": 255,
           "Title": "ÄÄÄÄÄÄÄÄ?",
           "SoundPath": "Intros/Level 2 Modul 5 Aufgabe 5.mp3",
+          "Hint": "Hints/Extra_tip_denkst_du_ans_aufschreiben.mp3",
           "TypeOfLevel": "HearTheLetter",
           "SliderLabels": [
             {
@@ -10581,6 +10593,7 @@
           "Id": 256,
           "Title": "A oder Ä?",
           "SoundPath": "Intros/Level 2 Modul 5 Aufgabe 6.mp3",
+          "Hint": "Hints/Extra_tip_ich_trinke_jeden_Tag_Schwarzen_Tee.mp3",
           "TypeOfLevel": "SelectConcept",
           "SingleChoice": true,
           "Iterations": [
@@ -11245,6 +11258,7 @@
           "Id": 262,
           "Title": "AU?",
           "SoundPath": "Intros/Level 2 Modul 6 Aufgabe 2.mp3",
+          "Hint": "Hints/Extra_tip_ueberlege_dir_Woerter_mit_AU.mp3",
           "TypeOfLevel": "HearTheLetter",
           "SliderLabels": [
             {
@@ -12091,6 +12105,7 @@
           "Id": 265,
           "Title": "AU, ÄU oder EU?",
           "SoundPath": "Intros/Level 2 Modul 6 Aufgabe 5.mp3",
+          "Hint": "Hints/Extra_tip_wichtig_ist_dass_du_taeglich_mit_mir_lernst.mp3",
           "TypeOfLevel": "SelectConcept",
           "Iterations": [
             {
@@ -12541,6 +12556,7 @@
           "Id": 266,
           "Title": "Wortsalat",
           "SoundPath": "Intros/Level 2 Modul 6 Aufgabe 6.mp3",
+          "Hint": "Hints/Extra_tip_keine_Panik_auf_der_Titanik.mp3",
           "TypeOfLevel": "LetterpuzzleSC",
           "HideRack": true,
           "TopMargins": [ 10, 4 ],

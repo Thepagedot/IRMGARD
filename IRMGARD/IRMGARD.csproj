@@ -1535,6 +1535,22 @@
     <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Leute.mp3" />
     <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Schlaeuche.mp3" />
     <AndroidAsset Include="Assets\Sounds\RhymingWords\Hase_Nase.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_denkst_du_ans_aufschreiben.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_hast_du_einen_freund.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_hast_du_manchmal_spass.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_ich_brauchte_oft_Hilfe_in_Mathe.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_ich_trinke_jeden_Tag_Schwarzen_Tee.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_ich_wuerde_so_gern_wissen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_keine_Panik_auf_der_Titanik.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_reim_doch_mal.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_ueberlege_dir_Woerter_mit_AU.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_uebst_du_auch_das_Schreiben_mit_dem_Stift.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_vergiss_nicht_zu_trinken.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_verlier_nicht_den_Mut.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_wenn_du_dir_nicht_sicher_bist.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_wer_viel_lernt.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_wichtig_ist_dass_du_taeglich_mit_mir_lernst.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_wie_schoen_dass_du_wieder_mit_mir_uebst.mp3" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="hockeyappandroid">
