@@ -1462,6 +1462,7 @@
           "Hint": "Hints/Extra_tip_ich_wuerde_so_gern_wissen.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
+          "UseOptionItemsOnly": true,
           "Iterations": [
             {
               "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
@@ -2351,6 +2352,31 @@
               "$type": "IRMGARD.Models.Letter, IRMGARD",
               "Text": "U",
               "LetterTags": [ 1 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "A",
+              "LetterTags": [ 2 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "E",
+              "LetterTags": [ 2 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "I",
+              "LetterTags": [ 2 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "O",
+              "LetterTags": [ 2 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "U",
+              "LetterTags": [ 2 ]
             }
           ]
         },

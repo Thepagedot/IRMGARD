@@ -76,7 +76,13 @@ namespace IRMGARD
             // Add option items
             if (dragIntoGapExercise.OptionItems != null && dragIntoGapExercise.OptionItems.Count > 0)
             {
-                optionItems.AddRange(dragIntoGapExercise.OptionItems);
+                foreach (var item in dragIntoGapExercise.OptionItems)
+                {
+                    if (!optionItems.Contains(item))
+                    {
+                        optionItems.Add(item);
+                    }
+                }
             }
             if (Lesson.OptionItems != null && Lesson.OptionItems.Count > 0)
             {
