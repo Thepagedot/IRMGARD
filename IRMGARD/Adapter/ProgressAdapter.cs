@@ -14,12 +14,14 @@ namespace IRMGARD
     public class ProgressAdapter : RecyclerView.Adapter
     {
         readonly List<Progress> items;
+        readonly Color levelColor;
         readonly Color moduleColor;
         readonly float displayDensity;
 
-        public ProgressAdapter(List<Progress> items, Color moduleColor, float displayDensity)
+        public ProgressAdapter(List<Progress> items, Color levelColor, Color moduleColor, float displayDensity)
         {
             this.items = items;
+            this.levelColor = levelColor;
             this.moduleColor = moduleColor;
             this.displayDensity = displayDensity;
         }
@@ -35,7 +37,7 @@ namespace IRMGARD
         public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
         {
             var view = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.ProgressItem, parent, false);
-            return new ProgressViewHolder(view, moduleColor, displayDensity);
+            return new ProgressViewHolder(view, levelColor, moduleColor, displayDensity);
         }
 
         public override int ItemCount
@@ -51,15 +53,25 @@ namespace IRMGARD
 
     public class ProgressViewHolder : RecyclerView.ViewHolder
     {
-        readonly Drawable shapeLevelColor;
+        readonly Drawable shapeProgress;
+        readonly Color levelColor;
         readonly Bitmap shapeModuleColor;
+
+        readonly int dp2;
+        readonly int dp3;
+        readonly int dp24;
 
         private ImageView ImageViewStatus { get; set; }
 
-        public ProgressViewHolder(View view, Color moduleColor, float displayDensity) : base(view)
+        public ProgressViewHolder(View view, Color levelColor, Color moduleColor, float displayDensity) : base(view)
         {
-            shapeLevelColor = GetDrawable(view, Resource.Drawable.rectangle_level1);
-            shapeModuleColor = CreateRect(moduleColor, displayDensity);
+            dp2 = (int)(2 * displayDensity);
+            dp3 = (int)(3 * displayDensity);
+            dp24 = (int)(24 * displayDensity);
+
+            shapeProgress = GetDrawable(view, Resource.Drawable.rectangle_progress);
+            this.levelColor = levelColor;
+            shapeModuleColor = CreateRect(moduleColor);
 
             ImageViewStatus = view.FindViewById<ImageView>(Resource.Id.ivStatus);
         }
@@ -70,24 +82,29 @@ namespace IRMGARD
             {
                 case IterationStatus.Success:
                     ImageViewStatus.SetImageResource(Resource.Drawable.ic_check_box_black_24dp);
-                    ImageViewStatus.Background = progress.IsCurrent ? shapeLevelColor : null;
                     break;
                 case IterationStatus.Failed:
                     ImageViewStatus.SetImageResource(Resource.Drawable.ic_indeterminate_check_box_black_24dp);
-                    ImageViewStatus.Background = progress.IsCurrent ? shapeLevelColor : null;
                     break;
                 case IterationStatus.Pending:
                     ImageViewStatus.SetImageBitmap(shapeModuleColor);
-                    ImageViewStatus.Background = progress.IsCurrent ? shapeLevelColor : null;
                     break;
+            }
+
+            if (progress.IsCurrent)
+            {
+                ImageViewStatus.Background = shapeProgress;
+                GradientDrawable backgroundGradient = (GradientDrawable)ImageViewStatus.Background;
+                backgroundGradient.SetStroke(dp2, levelColor);
+            }
+            else
+            {
+                ImageViewStatus.Background = null;
             }
         }
 
-        Bitmap CreateRect(Color color, float displayDensity)
+        Bitmap CreateRect(Color color)
         {
-            var dp3 = (int) (3 * displayDensity);
-            var dp24 = (int) (24 * displayDensity);
-
             var bitmap = Bitmap.CreateBitmap(dp24, dp24, Bitmap.Config.Argb8888);
             var canvas = new Canvas(bitmap); 
 

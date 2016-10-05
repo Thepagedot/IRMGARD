@@ -1065,7 +1065,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_hearing_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_lightbulb_outline_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_more_vert_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable\rectangle_level1.xml" />
+    <AndroidResource Include="Resources\drawable\rectangle_progress.xml" />
     <AndroidResource Include="Resources\drawable-hdpi\lightbulb.png" />
     <AndroidResource Include="Resources\drawable-ldpi\lightbulb.png" />
     <AndroidResource Include="Resources\drawable-mdpi\lightbulb.png" />
@@ -1130,8 +1130,7 @@
     <AndroidResource Include="Resources\drawable\letter_short.xml" />
     <AndroidResource Include="Resources\layout\TaskItemRow.axml" />
     <AndroidResource Include="Resources\layout\BaseTextGroup.axml" />
-    <AndroidResource Include="Resources\drawable\concept_gray.xml" />
-    <AndroidResource Include="Resources\drawable\concept_light_gray.axml" />
+    <AndroidResource Include="Resources\drawable\concept_bordered.xml" />
     <AndroidResource Include="Resources\layout\BaseTextSpeaker.axml" />
     <AndroidResource Include="Resources\layout\BaseTextBordered.axml" />
     <AndroidResource Include="Resources\layout-h550dp\CardConcept.axml" />

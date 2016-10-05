@@ -72,6 +72,7 @@ namespace IRMGARD
             rvProgress = FindViewById<RecyclerView>(Resource.Id.rvProgress);
             rvProgress.SetLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.Horizontal, false));
             rvProgress.SetAdapter(new ProgressAdapter(progressList,
+                Color.ParseColor(DataHolder.Current.CurrentLevel.Color),
                 Color.ParseColor(DataHolder.Current.CurrentModule.Color),
                 Resources.DisplayMetrics.Density));
             txtCapitalAlphabet = FindViewById<TextView>(Resource.Id.txtCapitalAlphabet);

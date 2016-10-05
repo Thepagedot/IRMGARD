@@ -70,7 +70,7 @@ namespace IRMGARD
                 }
                 else
                 {
-                    view.SetBackgroundResource(Resource.Drawable.concept_light_gray);
+                    view.SetBackgroundResource(Resource.Drawable.concept_bordered);
                 }
             }
             else if (concept is Picture)
