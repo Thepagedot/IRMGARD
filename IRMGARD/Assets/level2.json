@@ -4803,7 +4803,6 @@
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
               "Id": 2261,
-              "LettersToLearn": [ "A", "E", "I", "O", "U" ],
               "LetterLocations": [
                 {
                   "Location": 0,
@@ -4822,7 +4821,6 @@
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
               "Id": 2262,
-              "LettersToLearn": [ "A", "E", "I", "O", "U" ],
               "LetterLocations": [
                 {
                   "Location": 1,
@@ -4841,7 +4839,6 @@
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
               "Id": 2263,
-              "LettersToLearn": [ "A", "E", "I", "O", "U" ],
               "LetterLocations": [
                 {
                   "Location": 0,
@@ -4860,7 +4857,6 @@
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
               "Id": 2264,
-              "LettersToLearn": [ "A", "E", "I", "O", "U" ],
               "LetterLocations": [
                 {
                   "Location": 0,
@@ -4879,7 +4875,6 @@
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
               "Id": 2265,
-              "LettersToLearn": [ "A", "E", "I", "O", "U" ],
               "LetterLocations": [
                 {
                   "Location": 1,
@@ -5324,6 +5319,7 @@
           "Hint": "Hints/Extra_tip_hast_du_manchmal_spass.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
+          "UseOptionItemsOnly": true,
           "Iterations": [
             {
               "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
@@ -5353,6 +5349,18 @@
                         "LetterTags": [ 0, 1 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "MA",
+                      "LetterTags": [ 0, 2 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "MA",
+                      "LetterTags": [ 0, 2 ]
+                    }
                   ]
                 },
                 {
@@ -5379,6 +5387,18 @@
                         "LetterTags": [ 0, 2 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "LA",
+                      "LetterTags": [ 0, 1 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "MA",
+                      "LetterTags": [ 0, 1 ]
+                    }
                   ]
                 },
                 {
@@ -5405,6 +5425,18 @@
                         "LetterTags": [ 0, 2 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "SO",
+                      "LetterTags": [ 0, 1 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "FA",
+                      "LetterTags": [ 0, 1 ]
+                    }
                   ]
                 },
                 {
@@ -5431,6 +5463,18 @@
                         "LetterTags": [ 0, 1 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "PA",
+                      "LetterTags": [ 0, 2 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "PA",
+                      "LetterTags": [ 0, 2 ]
+                    }
                   ]
                 }
               ]
@@ -5463,6 +5507,18 @@
                         "LetterTags": [ 0, 1 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "MO",
+                      "LetterTags": [ 0, 1 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "FA",
+                      "LetterTags": [ 0, 2 ]
+                    }
                   ]
                 },
                 {
@@ -5489,6 +5545,18 @@
                         "LetterTags": [ 0, 2 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "PAN",
+                      "LetterTags": [ 0, 2, 0 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "DA",
+                      "LetterTags": [ 0, 1 ]
+                    }
                   ]
                 },
                 {
@@ -5515,6 +5583,18 @@
                         "LetterTags": [ 0, 2 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "LI",
+                      "LetterTags": [ 0, 1 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "SA",
+                      "LetterTags": [ 0, 1 ]
+                    }
                   ]
                 },
                 {
@@ -5541,6 +5621,18 @@
                         "LetterTags": [ 0, 1 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "O",
+                      "LetterTags": [ 1 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "PA",
+                      "LetterTags": [ 0, 2 ]
+                    }
                   ]
                 }
               ]
@@ -5573,6 +5665,18 @@
                         "LetterTags": [ 0, 1 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "O",
+                      "LetterTags": [ 1 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "MA",
+                      "LetterTags": [ 0, 2 ]
+                    }
                   ]
                 },
                 {
@@ -5599,6 +5703,18 @@
                         "LetterTags": [ 0, 1 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "RO",
+                      "LetterTags": [ 0, 1 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "SE",
+                      "LetterTags": [ 0, 2 ]
+                    }
                   ]
                 },
                 {
@@ -5625,6 +5741,18 @@
                         "LetterTags": [ 0, 1, 0 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "RE",
+                      "LetterTags": [ 0, 1 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "GEN",
+                      "LetterTags": [ 0, 2, 0 ]
+                    }
                   ]
                 },
                 {
@@ -5651,6 +5779,18 @@
                         "LetterTags": [ 0, 1 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "HO",
+                      "LetterTags": [ 0, 1 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "SE",
+                      "LetterTags": [ 0, 2 ]
+                    }
                   ]
                 }
               ]
@@ -5683,6 +5823,18 @@
                         "LetterTags": [ 0, 1 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "DO",
+                      "LetterTags": [ 0, 1 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "SE",
+                      "LetterTags": [ 0, 2 ]
+                    }
                   ]
                 },
                 {
@@ -5709,6 +5861,18 @@
                         "LetterTags": [ 0, 1 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "HA",
+                      "LetterTags": [ 0, 1 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "SE",
+                      "LetterTags": [ 0, 2 ]
+                    }
                   ]
                 },
                 {
@@ -5735,6 +5899,18 @@
                         "LetterTags": [ 0, 1 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "NA",
+                      "LetterTags": [ 0, 1 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "SE",
+                      "LetterTags": [ 0, 2 ]
+                    }
                   ]
                 },
                 {
@@ -5761,6 +5937,18 @@
                         "LetterTags": [ 0, 2 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "U",
+                      "LetterTags": [ 1 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "FO",
+                      "LetterTags": [ 0, 1 ]
+                    }
                   ]
                 }
               ]
@@ -5793,6 +5981,18 @@
                         "LetterTags": [ 0, 2 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "KI",
+                      "LetterTags": [ 0, 1 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "LO",
+                      "LetterTags": [ 0, 1 ]
+                    }
                   ]
                 },
                 {
@@ -5825,6 +6025,23 @@
                         "LetterTags": [ 0, 1 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "TO",
+                      "LetterTags": [ 0, 1 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "MA",
+                      "LetterTags": [ 0, 1 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "TE",
+                      "LetterTags": [ 0, 2 ]
+                    }
                   ]
                 },
                 {
@@ -5851,6 +6068,18 @@
                         "LetterTags": [ 0, 1 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "EN",
+                      "LetterTags": [ 2, 0 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "TE",
+                      "LetterTags": [ 0, 2 ]
+                    }
                   ]
                 },
                 {
@@ -5877,6 +6106,18 @@
                         "LetterTags": [ 0, 1 ]
                       }
                     ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "AF",
+                      "LetterTags": [ 2, 0 ]
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                      "Text": "FE",
+                      "LetterTags": [ 0, 2 ]
+                    }
                   ]
                 }
               ]
