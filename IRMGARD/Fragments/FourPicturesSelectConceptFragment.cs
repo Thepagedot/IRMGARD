@@ -100,7 +100,7 @@ namespace IRMGARD
 
         protected void BuildFourPictures(List<Concept> headerItems, List<Concept> fourPictureItems, List<Concept> footerItems)
         {
-            if (exercise.OptionItems != null && exercise.OptionItems.Count > 0 && fourPictureItems.Count < 4)
+            if (exercise != null && exercise.OptionItems != null && exercise.OptionItems.Count > 0 && fourPictureItems.Count < 4)
             {
                 fourPictureItems.AddRange(exercise.OptionItems.PickRandomItems(4 - fourPictureItems.Count).Select(item => { item.IsOption = true; return item; }));
             }

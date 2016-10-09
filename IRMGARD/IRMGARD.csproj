@@ -1414,7 +1414,6 @@
     <AndroidAsset Include="Assets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Tau.mp3" />
     <AndroidAsset Include="Assets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Taube.mp3" />
     <AndroidAsset Include="Assets\Images\X_Ananas.png" />
-    <AndroidAsset Include="Assets\Images\X_Apfel.png" />
     <AndroidAsset Include="Assets\Images\X_Baecker.png" />
     <AndroidAsset Include="Assets\Images\X_Banane.png" />
     <AndroidAsset Include="Assets\Images\X_Bett.png" />
@@ -1447,9 +1446,7 @@
     <AndroidAsset Include="Assets\Images\X_Salat.png" />
     <AndroidAsset Include="Assets\Images\X_Salz.png" />
     <AndroidAsset Include="Assets\Images\X_Siegel.png" />
-    <AndroidAsset Include="Assets\Images\X_Tuer.png" />
     <AndroidAsset Include="Assets\Images\X_Wille.png" />
-    <AndroidAsset Include="Assets\Images\X_Wonne.png" />
     <AndroidAsset Include="Assets\Images\X_Wurst.png" />
     <AndroidAsset Include="Assets\Images\X_Wut.png" />
     <AndroidAsset Include="Assets\Images\X_Zucker.png" />
@@ -1551,6 +1548,27 @@
     <AndroidAsset Include="Assets\Images\Tonne.png" />
     <AndroidAsset Include="Assets\Images\Wolle.png" />
     <AndroidAsset Include="Assets\Images\Welle.png" />
+    <AndroidAsset Include="Assets\Images\Aermel.png" />
+    <AndroidAsset Include="Assets\Images\Apfel.png" />
+    <AndroidAsset Include="Assets\Images\Koenig.png" />
+    <AndroidAsset Include="Assets\Images\Tuer.png" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\2-5-1\Das_ist_ein_Aermel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\2-5-1\Der_Koenig_setzt_sich_auf_sein_O_in_seinem_Namen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\2-5-1\Die_Tuer_hat_in_der_Mitte.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Das_Bad.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Das_Kilo.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Das_Mofa.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Der_Degen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Der_Elefant.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Der_Hase.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Der_Ofen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Ameise.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Birne.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Dose.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Hand.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Insel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Katze.mp3" />
+    <AndroidAsset Include="Assets\Sounds\ObjectsWithDefArt\Die_Lupe.mp3" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="hockeyappandroid">

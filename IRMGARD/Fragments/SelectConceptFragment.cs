@@ -192,7 +192,7 @@ namespace IRMGARD
 
             var concepts = new List<Concept>();
             concepts.AddRange(exercise.TaskItems[0]);
-            concepts.AddRange(Lesson.OptionItems.PickRandomItems(4).Select(item => { item.IsOption = true; return item; }));
+            concepts.AddRange(Lesson.OptionItems.PickRandomItems(7).Select(item => { item.IsOption = true; return item; }));
             concepts.Shuffle();
 
             exercise.TaskItems = new List<List<Concept>>();
