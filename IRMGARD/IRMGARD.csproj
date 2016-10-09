@@ -1549,6 +1549,34 @@
     <AndroidAsset Include="Assets\Sounds\Objects\Riegel.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Rute.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Siegel.mp3" />
+    <AndroidAsset Include="Assets\Images\Apfel_blau.png" />
+    <AndroidAsset Include="Assets\Images\Apfel_braun.png" />
+    <AndroidAsset Include="Assets\Images\Apfel_gruen.png" />
+    <AndroidAsset Include="Assets\Images\Apfel_rosa.png" />
+    <AndroidAsset Include="Assets\Images\Banane_blau.png" />
+    <AndroidAsset Include="Assets\Images\Banane_braun.png" />
+    <AndroidAsset Include="Assets\Images\Banane_gelb.png" />
+    <AndroidAsset Include="Assets\Images\Banane_gruen.png" />
+    <AndroidAsset Include="Assets\Images\Blume_blau.png" />
+    <AndroidAsset Include="Assets\Images\Blume_gruen.png" />
+    <AndroidAsset Include="Assets\Images\Blume_lila.png" />
+    <AndroidAsset Include="Assets\Images\Blume_rosa.png" />
+    <AndroidAsset Include="Assets\Images\Bohne_braun.png" />
+    <AndroidAsset Include="Assets\Images\Bohne_gelb.png" />
+    <AndroidAsset Include="Assets\Images\Bohne_gruen.png" />
+    <AndroidAsset Include="Assets\Images\Bohne_rosa.png" />
+    <AndroidAsset Include="Assets\Images\Melone_blau.png" />
+    <AndroidAsset Include="Assets\Images\Melone_gelb.png" />
+    <AndroidAsset Include="Assets\Images\Melone_gruen.png" />
+    <AndroidAsset Include="Assets\Images\Melone_rot.png" />
+    <AndroidAsset Include="Assets\Images\Salat_blau.png" />
+    <AndroidAsset Include="Assets\Images\Salat_gelb.png" />
+    <AndroidAsset Include="Assets\Images\Salat_gruen.png" />
+    <AndroidAsset Include="Assets\Images\Salat_rot.png" />
+    <AndroidAsset Include="Assets\Images\Tomate_gelb.png" />
+    <AndroidAsset Include="Assets\Images\Tomate_gruen.png" />
+    <AndroidAsset Include="Assets\Images\Tomate_rosa.png" />
+    <AndroidAsset Include="Assets\Images\Tomate_rot.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="hockeyappandroid">

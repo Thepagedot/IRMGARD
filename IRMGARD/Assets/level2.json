@@ -8809,26 +8809,22 @@
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsSolution": true,
-                        "ImagePath": "Tomate.png",
-                        "SoundPath": "Objects/Tomate.mp3"
+                        "ImagePath": "Tomate_rot.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Dose.png",
-                        "SoundPath": "Objects/Dose.mp3"
+                        "ImagePath": "Tomate_rosa.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Rose.png",
-                        "SoundPath": "Objects/Rose.mp3"
+                        "ImagePath": "Tomate_gruen.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Mund.png",
-                        "SoundPath": "Objects/Mund.mp3"
+                        "ImagePath": "Tomate_gelb.png"
                       }
                     ],
                     [
@@ -8845,68 +8841,28 @@
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsSolution": true,
-                        "ImagePath": "Tomate.png",
-                        "SoundPath": "Objects/Tomate.mp3"
+                        "ImagePath": "Banane_gelb.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Dose.png",
-                        "SoundPath": "Objects/Dose.mp3"
+                        "ImagePath": "Banane_blau.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Rose.png",
-                        "SoundPath": "Objects/Rose.mp3"
+                        "ImagePath": "Banane_braun.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Mund.png",
-                        "SoundPath": "Objects/Mund.mp3"
+                        "ImagePath": "Banane_gruen.png"
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
                         "Text": "Die Banane ist gelb."
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "TaskItems": [
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsSolution": true,
-                        "ImagePath": "Tomate.png",
-                        "SoundPath": "Objects/Tomate.mp3"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsOption": true,
-                        "ImagePath": "Dose.png",
-                        "SoundPath": "Objects/Dose.mp3"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsOption": true,
-                        "ImagePath": "Rose.png",
-                        "SoundPath": "Objects/Rose.mp3"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsOption": true,
-                        "ImagePath": "Mund.png",
-                        "SoundPath": "Objects/Mund.mp3"
-                      }
-                    ],
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Die Melone ist gelb."
                       }
                     ]
                   ]
@@ -8923,140 +8879,60 @@
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsSolution": true,
-                        "ImagePath": "Tomate.png",
-                        "SoundPath": "Objects/Tomate.mp3"
+                        "ImagePath": "Melone_gelb.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Dose.png",
-                        "SoundPath": "Objects/Dose.mp3"
+                        "ImagePath": "Melone_blau.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Rose.png",
-                        "SoundPath": "Objects/Rose.mp3"
+                        "ImagePath": "Melone_rot.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Mund.png",
-                        "SoundPath": "Objects/Mund.mp3"
+                        "ImagePath": "Melone_gruen.png"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                        "Text": "Die Melone ist gelb."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "IsSolution": true,
+                        "ImagePath": "Blume_rosa.png"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "IsOption": true,
+                        "ImagePath": "Blume_blau.png"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "IsOption": true,
+                        "ImagePath": "Blume_lila.png"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "IsOption": true,
+                        "ImagePath": "Blume_gruen.png"
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
                         "Text": "Die Blume ist rosa."
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "TaskItems": [
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsSolution": true,
-                        "ImagePath": "Tomate.png",
-                        "SoundPath": "Objects/Tomate.mp3"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsOption": true,
-                        "ImagePath": "Dose.png",
-                        "SoundPath": "Objects/Dose.mp3"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsOption": true,
-                        "ImagePath": "Rose.png",
-                        "SoundPath": "Objects/Rose.mp3"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsOption": true,
-                        "ImagePath": "Mund.png",
-                        "SoundPath": "Objects/Mund.mp3"
-                      }
-                    ],
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Der Apfel ist rot."
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "TaskItems": [
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsSolution": true,
-                        "ImagePath": "Tomate.png",
-                        "SoundPath": "Objects/Tomate.mp3"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsOption": true,
-                        "ImagePath": "Dose.png",
-                        "SoundPath": "Objects/Dose.mp3"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsOption": true,
-                        "ImagePath": "Rose.png",
-                        "SoundPath": "Objects/Rose.mp3"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsOption": true,
-                        "ImagePath": "Mund.png",
-                        "SoundPath": "Objects/Mund.mp3"
-                      }
-                    ],
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Die Bohne ist gelb."
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "TaskItems": [
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsSolution": true,
-                        "ImagePath": "Tomate.png",
-                        "SoundPath": "Objects/Tomate.mp3"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsOption": true,
-                        "ImagePath": "Dose.png",
-                        "SoundPath": "Objects/Dose.mp3"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsOption": true,
-                        "ImagePath": "Rose.png",
-                        "SoundPath": "Objects/Rose.mp3"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsOption": true,
-                        "ImagePath": "Mund.png",
-                        "SoundPath": "Objects/Mund.mp3"
-                      }
-                    ],
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Der Salat ist gelb."
                       }
                     ]
                   ]
@@ -9073,32 +8949,28 @@
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsSolution": true,
-                        "ImagePath": "Tomate.png",
-                        "SoundPath": "Objects/Tomate.mp3"
+                        "ImagePath": "Apfel_gruen.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Dose.png",
-                        "SoundPath": "Objects/Dose.mp3"
+                        "ImagePath": "Apfel_blau.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Rose.png",
-                        "SoundPath": "Objects/Rose.mp3"
+                        "ImagePath": "Apfel_braun.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Mund.png",
-                        "SoundPath": "Objects/Mund.mp3"
+                        "ImagePath": "Apfel_rosa.png"
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Das Bild ist bunt."
+                        "Text": "Der Apfel ist grün."
                       }
                     ]
                   ]
@@ -9109,32 +8981,28 @@
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsSolution": true,
-                        "ImagePath": "Tomate.png",
-                        "SoundPath": "Objects/Tomate.mp3"
+                        "ImagePath": "Bohne_gelb.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Dose.png",
-                        "SoundPath": "Objects/Dose.mp3"
+                        "ImagePath": "Bohne_rosa.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Rose.png",
-                        "SoundPath": "Objects/Rose.mp3"
+                        "ImagePath": "Bohne_braun.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Mund.png",
-                        "SoundPath": "Objects/Mund.mp3"
+                        "ImagePath": "Bohne_gruen.png"
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Die Hose ist lila."
+                        "Text": "Die Bohne ist gelb."
                       }
                     ]
                   ]
@@ -9145,68 +9013,28 @@
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsSolution": true,
-                        "ImagePath": "Tomate.png",
-                        "SoundPath": "Objects/Tomate.mp3"
+                        "ImagePath": "Salat_gelb.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Dose.png",
-                        "SoundPath": "Objects/Dose.mp3"
+                        "ImagePath": "Salat_blau.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Rose.png",
-                        "SoundPath": "Objects/Rose.mp3"
+                        "ImagePath": "Salat_rot.png"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsOption": true,
-                        "ImagePath": "Mund.png",
-                        "SoundPath": "Objects/Mund.mp3"
+                        "ImagePath": "Salat_gruen.png"
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Der Hut ist bunt."
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "TaskItems": [
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsSolution": true,
-                        "ImagePath": "Tomate.png",
-                        "SoundPath": "Objects/Tomate.mp3"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsOption": true,
-                        "ImagePath": "Dose.png",
-                        "SoundPath": "Objects/Dose.mp3"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsOption": true,
-                        "ImagePath": "Rose.png",
-                        "SoundPath": "Objects/Rose.mp3"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsOption": true,
-                        "ImagePath": "Mund.png",
-                        "SoundPath": "Objects/Mund.mp3"
-                      }
-                    ],
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Die Bluse ist lila."
+                        "Text": "Der Salat ist gelb."
                       }
                     ]
                   ]
