@@ -1432,7 +1432,6 @@
     <AndroidAsset Include="Assets\Images\X_Knoepfe.png" />
     <AndroidAsset Include="Assets\Images\X_Koenig.png" />
     <AndroidAsset Include="Assets\Images\X_Kuehe.png" />
-    <AndroidAsset Include="Assets\Images\X_Kuss.png" />
     <AndroidAsset Include="Assets\Images\X_Kutter.png" />
     <AndroidAsset Include="Assets\Images\X_Marmelade.png" />
     <AndroidAsset Include="Assets\Images\X_Mutter.png" />
@@ -1443,17 +1442,13 @@
     <AndroidAsset Include="Assets\Images\X_Rasen.png" />
     <AndroidAsset Include="Assets\Images\X_Riegel.png" />
     <AndroidAsset Include="Assets\Images\X_Rille.png" />
-    <AndroidAsset Include="Assets\Images\X_Rolle.png" />
     <AndroidAsset Include="Assets\Images\X_Ruecken.png" />
     <AndroidAsset Include="Assets\Images\X_Rute.png" />
     <AndroidAsset Include="Assets\Images\X_Salat.png" />
     <AndroidAsset Include="Assets\Images\X_Salz.png" />
     <AndroidAsset Include="Assets\Images\X_Siegel.png" />
-    <AndroidAsset Include="Assets\Images\X_Tonne.png" />
     <AndroidAsset Include="Assets\Images\X_Tuer.png" />
-    <AndroidAsset Include="Assets\Images\X_Welle.png" />
     <AndroidAsset Include="Assets\Images\X_Wille.png" />
-    <AndroidAsset Include="Assets\Images\X_Wolle.png" />
     <AndroidAsset Include="Assets\Images\X_Wonne.png" />
     <AndroidAsset Include="Assets\Images\X_Wurst.png" />
     <AndroidAsset Include="Assets\Images\X_Wut.png" />
@@ -1550,6 +1545,12 @@
     <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_wer_viel_lernt.mp3" />
     <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_wichtig_ist_dass_du_taeglich_mit_mir_lernst.mp3" />
     <AndroidAsset Include="Assets\Sounds\Hints\Extra_tip_wie_schoen_dass_du_wieder_mit_mir_uebst.mp3" />
+    <AndroidAsset Include="Assets\Images\Lose.png" />
+    <AndroidAsset Include="Assets\Images\Kuss.png" />
+    <AndroidAsset Include="Assets\Images\Rolle.png" />
+    <AndroidAsset Include="Assets\Images\Tonne.png" />
+    <AndroidAsset Include="Assets\Images\Wolle.png" />
+    <AndroidAsset Include="Assets\Images\Welle.png" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="hockeyappandroid">
