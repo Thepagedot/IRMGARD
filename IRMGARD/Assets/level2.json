@@ -5096,8 +5096,8 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "X_Biss.png",
-                        "SoundPath": "Objects/X_Biss.mp3"
+                        "ImagePath": "Biss.png",
+                        "SoundPath": "Objects/Biss.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
@@ -5129,13 +5129,13 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "X_Siegel.png",
-                        "SoundPath": "Objects/X_Siegel.mp3"
+                        "ImagePath": "Siegel.png",
+                        "SoundPath": "Objects/Siegel.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "X_Riegel.png",
-                        "SoundPath": "Objects/X_Riegel.mp3"
+                        "ImagePath": "Riegel.png",
+                        "SoundPath": "Objects/Riegel.mp3"
                       }
                     ]
                   ]
@@ -5248,23 +5248,23 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "X_Nuss.png",
+                        "ImagePath": "Nuss.png",
                         "SoundPath": "Objects/Nuss.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "X_Dutt.png",
-                        "SoundPath": "Objects/X_Dutt.mp3"
+                        "ImagePath": "Dutt.png",
+                        "SoundPath": "Objects/Dutt.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "X_Kutter.png",
-                        "SoundPath": "Objects/X_Kutter.mp3"
+                        "ImagePath": "Kutter.png",
+                        "SoundPath": "Objects/Kutter.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "X_Mutter.png",
-                        "SoundPath": "Objects/X_Mutter.mp3"
+                        "ImagePath": "Mutter.png",
+                        "SoundPath": "Objects/Mutter.mp3"
                       }
                     ],
                     [
@@ -5296,12 +5296,12 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "X_Rute.png",
-                        "SoundPath": "Objects/X_Rute.mp3"
+                        "ImagePath": "Rute.png",
+                        "SoundPath": "Objects/Rute.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "X_Wut.png",
+                        "ImagePath": "Wut.png",
                         "SoundPath": "Objects/Wut.mp3"
                       }
                     ]
@@ -7830,7 +7830,7 @@
             "Der": [
               {
                 "$type": "IRMGARD.Models.Picture, IRMGARD",
-                "ImagePath": "X_Apfel.png",
+                "ImagePath": "Apfel.png",
                 "SoundPath": "Objects/Apfel.mp3"
               },
               {
@@ -7850,24 +7850,24 @@
               },
               {
                 "$type": "IRMGARD.Models.Picture, IRMGARD",
-                "ImagePath": "X_Zucker.png",
+                "ImagePath": "Zucker.png",
                 "SoundPath": "Objects/Zucker.mp3"
               },
               {
                 "$type": "IRMGARD.Models.Picture, IRMGARD",
-                "ImagePath": "X_Salat.png",
+                "ImagePath": "Salat.png",
                 "SoundPath": "Objects/Salat.mp3"
               },
               {
                 "$type": "IRMGARD.Models.Picture, IRMGARD",
-                "ImagePath": "X_Kaffee.png",
+                "ImagePath": "Kaffee.png",
                 "SoundPath": "Objects/Kaffee.mp3"
               }
             ],
             "Die": [
               {
                 "$type": "IRMGARD.Models.Picture, IRMGARD",
-                "ImagePath": "X_Banane.png",
+                "ImagePath": "Banane.png",
                 "SoundPath": "Objects/Banane.mp3"
               },
               {
@@ -7877,7 +7877,7 @@
               },
               {
                 "$type": "IRMGARD.Models.Picture, IRMGARD",
-                "ImagePath": "X_Ananas.png",
+                "ImagePath": "Ananas.png",
                 "SoundPath": "Objects/Ananas.mp3"
               },
               {
@@ -7897,50 +7897,45 @@
               },
               {
                 "$type": "IRMGARD.Models.Picture, IRMGARD",
-                "ImagePath": "X_Kiwi.png",
+                "ImagePath": "Kiwi.png",
                 "SoundPath": "Objects/Kiwi.mp3"
               },
               {
                 "$type": "IRMGARD.Models.Picture, IRMGARD",
-                "ImagePath": "X_Gurke.png",
+                "ImagePath": "Gurke.png",
                 "SoundPath": "Objects/Gurke.mp3"
               },
               {
                 "$type": "IRMGARD.Models.Picture, IRMGARD",
-                "ImagePath": "X_Butter.png",
+                "ImagePath": "Butter.png",
                 "SoundPath": "Objects/Butter.mp3"
               },
               {
                 "$type": "IRMGARD.Models.Picture, IRMGARD",
-                "ImagePath": "X_Marmelade.png",
+                "ImagePath": "Marmelade.png",
                 "SoundPath": "Objects/Marmelade.mp3"
               },
               {
                 "$type": "IRMGARD.Models.Picture, IRMGARD",
-                "ImagePath": "X_Wurst.png",
+                "ImagePath": "Wurst.png",
                 "SoundPath": "Objects/Wurst.mp3"
               },
               {
                 "$type": "IRMGARD.Models.Picture, IRMGARD",
-                "ImagePath": "X_Zwiebel.png",
+                "ImagePath": "Zwiebel.png",
                 "SoundPath": "Objects/Zwiebel.mp3"
               }
             ],
             "Das": [
               {
                 "$type": "IRMGARD.Models.Picture, IRMGARD",
-                "ImagePath": "X_Brot.png",
+                "ImagePath": "Brot.png",
                 "SoundPath": "Objects/Brot.mp3"
               },
               {
                 "$type": "IRMGARD.Models.Picture, IRMGARD",
-                "ImagePath": "X_Salz.png",
+                "ImagePath": "Salz.png",
                 "SoundPath": "Objects/Salz.mp3"
-              },
-              {
-                "$type": "IRMGARD.Models.Picture, IRMGARD",
-                "ImagePath": "X_Fett.png",
-                "SoundPath": "Objects/Fett.mp3"
               }
             ]
           }
