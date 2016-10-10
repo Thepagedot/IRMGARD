@@ -48,7 +48,7 @@ namespace IRMGARD
 
         protected override void OnCreate(Bundle bundle)
         {
-            ApplyLevelColors();
+            ActivityHelper.ApplyLevelColors(Theme);
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.LessonFrame);
             SetSupportActionBar(FindViewById<Toolbar>(Resource.Id.toolbar));
@@ -467,14 +467,6 @@ namespace IRMGARD
             }
 
             return spannable;
-        }
-
-        private void ApplyLevelColors()
-        {
-            var levelNumber = DataHolder.Current.Levels.IndexOf(DataHolder.Current.CurrentLevel) + 1;
-
-            // REFLECTION for fields like Level1Colors
-            Theme.ApplyStyle((int)(typeof(Resource.Style).GetField(string.Format("Level{0}Colors", levelNumber)).GetValue(null)), true);
         }
 
         private void CheckHintButton()

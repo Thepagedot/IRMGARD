@@ -21,6 +21,7 @@ namespace IRMGARD
 
         protected override void OnCreate(Bundle bundle)
         {
+            ActivityHelper.ApplyLevelColors(Theme);
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.LevelSponsor);
             ivSplashscreen = FindViewById<ImageView>(Resource.Id.ivSplashscreen);

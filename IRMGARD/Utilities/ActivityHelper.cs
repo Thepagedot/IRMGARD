@@ -1,5 +1,6 @@
 ﻿using System;
 using Android.App;
+using Android.Content.Res;
 using Android.Graphics;
 using Android.Graphics.Drawables;
 using Android.OS;
@@ -36,6 +37,14 @@ namespace IRMGARD
         public static void SetActionBarBackground (this Activity activity, ActionBar actionBar, int colorResourceId)
         {
             actionBar.SetBackgroundDrawable(new ColorDrawable(activity.Resources.GetColor(colorResourceId)));
+        }
+
+        public static void ApplyLevelColors(Resources.Theme theme)
+        {
+            var levelNumber = DataHolder.Current.Levels.IndexOf(DataHolder.Current.CurrentLevel) + 1;
+
+            // REFLECTION for fields like Level1Colors
+            theme.ApplyStyle((int)(typeof(Resource.Style).GetField(string.Format("Level{0}Colors", levelNumber)).GetValue(null)), true);
         }
     }
 }

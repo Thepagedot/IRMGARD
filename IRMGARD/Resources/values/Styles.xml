@@ -31,6 +31,9 @@
     <style name="IrmgardTheme" parent="IrmgardTheme.Base">
     </style>
 
+    <style name="Level0Colors">
+        <item name="colorAccent">@color/irmgard_red</item>
+    </style>
     <style name="Level1Colors">
         <item name="colorAccent">@color/level1</item>
     </style>
