@@ -9,7 +9,7 @@
     {
       "Name": "1: AEIOU",
       "Color": "#DDD6BF",
-      "VideoPath": "Videos/Handy_Modul1_720p.mp4",
+      "VideoPath": "Videos/L1M1.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -674,7 +674,7 @@
     {
       "Name": "2: LMNRS",
       "Color": "#AFC3C4",
-      "VideoPath": "Videos/Handy_Modul2_720p.mp4",
+      "VideoPath": "Videos/L1M2.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -2406,7 +2406,7 @@
     {
       "Name": "3: FHJWZ",
       "Color": "#d8cbd1",
-      "VideoPath": "Videos/Handy_Modul3_720p.mp4",
+      "VideoPath": "Videos/L1M3.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -4214,7 +4214,7 @@
     {
       "Name": "4: BPGKDT",
       "Color": "#c1cbac",
-      "VideoPath": "Videos/Handy_Modul4_720p.mp4",
+      "VideoPath": "Videos/L1M4.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -6410,7 +6410,7 @@
     {
       "Name": "5: CQVXY",
       "Color": "#dcd08f",
-      "VideoPath": "Videos/Handy_Modul5_720p.mp4",
+      "VideoPath": "Videos/L1M5.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -6751,7 +6751,7 @@
     {
       "Name": "6: ABC",
       "Color": "#e5c8c4",
-      "VideoPath": "Videos/Handy_Modul6_720p.mp4",
+      "VideoPath": "Videos/L1M6.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {

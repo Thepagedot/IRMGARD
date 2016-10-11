@@ -841,13 +841,13 @@
     <AndroidAsset Include="MainAssets\Sounds\Syllables\LMNRS\se_kurz.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Application\Module_Not_Available.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Tasks\6-1\ABC_Song.mp3" />
-    <AndroidAsset Include="MainAssets\Videos\Handy_Level1_720p.mp4" />
-    <AndroidAsset Include="MainAssets\Videos\Handy_Modul1_720p.mp4" />
-    <AndroidAsset Include="MainAssets\Videos\Handy_Modul2_720p.mp4" />
-    <AndroidAsset Include="MainAssets\Videos\Handy_Modul3_720p.mp4" />
-    <AndroidAsset Include="MainAssets\Videos\Handy_Modul4_720p.mp4" />
-    <AndroidAsset Include="MainAssets\Videos\Handy_Modul5_720p.mp4" />
-    <AndroidAsset Include="MainAssets\Videos\Handy_Modul6_720p.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\IRMGARD_Intro.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L1M1.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L1M2.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L1M3.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L1M4.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L1M5.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L1M6.mp4" />
     <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 1.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 2.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 3.mp3" />
@@ -868,6 +868,12 @@
     <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 3.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 4.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 5.mp3" />
+    <AndroidAsset Include="MainAssets\Videos\L2M1.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L2M2.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L2M3.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L2M4.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L2M5.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L2M6.mp4" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -1159,12 +1165,6 @@
     <AndroidAsset Include="Assets\level9.json" />
     <AndroidAsset Include="Assets\sandbox.json" />
     <AndroidAsset Include="Assets\testlayout.json" />
-    <AndroidAsset Include="Assets\Videos\L2M1.mp4" />
-    <AndroidAsset Include="Assets\Videos\L2M2.mp4" />
-    <AndroidAsset Include="Assets\Videos\L2M3.mp4" />
-    <AndroidAsset Include="Assets\Videos\L2M4.mp4" />
-    <AndroidAsset Include="Assets\Videos\L2M5.mp4" />
-    <AndroidAsset Include="Assets\Videos\L2M6.mp4" />
     <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 1 Aufgabe 1.mp3" />
     <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 1 Aufgabe 2.mp3" />
     <AndroidAsset Include="Assets\Sounds\Intros\Level 2 Modul 1 Aufgabe 3.mp3" />

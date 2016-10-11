@@ -3,7 +3,7 @@
   "AssetSoundDir": "Sounds",
   "AssetPraiseDir": "Praise",
   "AssetCriticismDir": "Criticism",
-  "IntroVideoPath": "Videos/Handy_Level1_720p.mp4",
+  "IntroVideoPath": "Videos/IRMGARD_Intro.mp4",
   "RecurringTaskSoundFiles": [
     null,
     "Tasks/Diese_Uebung_kennst_du_schon.mp3",
