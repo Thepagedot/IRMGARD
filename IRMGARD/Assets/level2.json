@@ -7276,6 +7276,36 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Apfel.png",
+                        "SoundPath": "Objects/Apfel.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Apfel"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Banane.png",
+                        "SoundPath": "Objects/Banane.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Banane"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "ImagePath": "Tomate.png",
                         "SoundPath": "Objects/Tomate.mp3"
                       },
@@ -7287,12 +7317,16 @@
                         "IsSolution": true,
                         "Text": "Tomate"
                       }
-                    ],
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
                     [
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "Bohne.png",
-                        "SoundPath": "Objects/Bohne.mp3"
+                        "ImagePath": "Ananas.png",
+                        "SoundPath": "Objects/Ananas.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Space, IRMGARD"
@@ -7300,14 +7334,14 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "Bohne"
+                        "Text": "Ananas"
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "Kuchen.png",
-                        "SoundPath": "Objects/Kuchen.mp3"
+                        "ImagePath": "Bohnen.png",
+                        "SoundPath": "Objects/Bohnen.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Space, IRMGARD"
@@ -7315,7 +7349,22 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "Kuchen"
+                        "Text": "Bohnen"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Petersilie.png",
+                        "SoundPath": "Objects/Petersilie.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Petersilie"
                       }
                     ]
                   ]
@@ -7331,6 +7380,21 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Kuchen.png",
+                        "SoundPath": "Objects/Kuchen.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Kuchen"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "ImagePath": "Birne.png",
                         "SoundPath": "Objects/Birne.mp3"
                       },
@@ -7343,6 +7407,25 @@
                         "Text": "Birne"
                       }
                     ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Kiwi.png",
+                        "SoundPath": "Objects/Kiwi.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Kiwi"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
                     [
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
@@ -7372,6 +7455,21 @@
                         "IsSolution": true,
                         "Text": "Aal"
                       }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Zucker.png",
+                        "SoundPath": "Objects/Zucker.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Zucker"
+                      }
                     ]
                   ]
                 }
@@ -7386,8 +7484,8 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "Senf.png",
-                        "SoundPath": "Objects/Senf.mp3"
+                        "ImagePath": "Brot.png",
+                        "SoundPath": "Objects/Brot.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Space, IRMGARD"
@@ -7395,14 +7493,14 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "Senf"
+                        "Text": "Brot"
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "Sahne.png",
-                        "SoundPath": "Objects/Sahne.mp3"
+                        "ImagePath": "Salat.png",
+                        "SoundPath": "Objects/Salat.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Space, IRMGARD"
@@ -7410,14 +7508,14 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "Sahne"
+                        "Text": "Salat"
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "Petersilie.png",
-                        "SoundPath": "Objects/Petersilie.mp3"
+                        "ImagePath": "Gurke.png",
+                        "SoundPath": "Objects/Gurke.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Space, IRMGARD"
@@ -7425,7 +7523,105 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "Petersilie"
+                        "Text": "Gurke"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Butter.png",
+                        "SoundPath": "Objects/Butter.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Butter"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Marmelade.png",
+                        "SoundPath": "Objects/Marmelade.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Marmelade"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Wurst.png",
+                        "SoundPath": "Objects/Wurst.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Wurst"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Zwiebel.png",
+                        "SoundPath": "Objects/Zwiebel.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Zwiebel"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Kaffee.png",
+                        "SoundPath": "Objects/Kaffee.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Kaffee"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Salz.png",
+                        "SoundPath": "Objects/Salz.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Salz"
                       }
                     ]
                   ]
@@ -7882,8 +8078,8 @@
               },
               {
                 "$type": "IRMGARD.Models.Picture, IRMGARD",
-                "ImagePath": "Bohne.png",
-                "SoundPath": "Objects/Bohne.mp3"
+                "ImagePath": "Bohnen.png",
+                "SoundPath": "Objects/Bohnen.mp3"
               },
               {
                 "$type": "IRMGARD.Models.Picture, IRMGARD",
@@ -8527,8 +8723,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "Senf.png",
-                        "SoundPath": "Objects/Senf.mp3"
+                        "ImagePath": "Salat.png"
                       }
                     ],
                     [
@@ -8541,17 +8736,70 @@
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
                         "IsSolution": true,
-                        "Text": "E"
+                        "Text": "A"
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
                         "IsSolution": true,
-                        "Text": "N"
+                        "Text": "L"
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
                         "IsSolution": true,
-                        "Text": "F"
+                        "Text": "A"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "T"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "1x"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Wurst.png"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Color": "#B7160E",
+                        "Text": "S"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "A"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "L"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "A"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "M"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "I"
                       }
                     ]
                   ]
@@ -8572,8 +8820,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "Kuchen.png",
-                        "SoundPath": "Objects/Kuchen.mp3"
+                        "ImagePath": "Kuchen.png"
                       }
                     ],
                     [
@@ -8627,8 +8874,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "Fisch.png",
-                        "SoundPath": "Objects/Fisch.mp3"
+                        "ImagePath": "Fisch.png"
                       }
                     ],
                     [
@@ -8660,6 +8906,54 @@
                       }
                     ]
                   ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "1x"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Melone.png"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Color": "#B7160E",
+                        "Text": "M"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "E"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "L"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "O"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "N"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "E"
+                      }
+                    ]
+                  ]
                 }
               ]
             },
@@ -8677,7 +8971,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "Tomate.png"
+                        "ImagePath": "Tomaten.png"
                       }
                     ],
                     [
@@ -8726,6 +9020,60 @@
                       }
                     ]
                   ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "1x"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Nudeln.png"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Color": "#B7160E",
+                        "AddToTextSize": -4,
+                        "Text": "N"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "U"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "D"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "E"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "L"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "N"
+                      }
+                    ]
+                  ]
                 }
               ]
             },
@@ -8739,11 +9087,11 @@
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
                         "ShowAsPlainText": true,
-                        "Text": "6x"
+                        "Text": "2x"
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "Birne.png"
+                        "ImagePath": "Limonade.png"
                       }
                     ],
                     [
@@ -8751,38 +9099,93 @@
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
                         "IsSolution": true,
                         "Color": "#B7160E",
-                        "AddToTextSize": -4,
-                        "Text": "B"
+                        "AddToTextSize": -8,
+                        "Text": "L"
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
                         "IsSolution": true,
-                        "AddToTextSize": -4,
+                        "AddToTextSize": -8,
                         "Text": "I"
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
                         "IsSolution": true,
-                        "AddToTextSize": -4,
-                        "Text": "R"
+                        "AddToTextSize": -8,
+                        "Text": "M"
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
                         "IsSolution": true,
-                        "AddToTextSize": -4,
+                        "AddToTextSize": -8,
+                        "Text": "O"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -8,
                         "Text": "N"
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
                         "IsSolution": true,
-                        "AddToTextSize": -4,
+                        "AddToTextSize": -8,
+                        "Text": "A"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -8,
+                        "Text": "D"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -8,
                         "Text": "E"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "4x"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Kiwis.png"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Color": "#B7160E",
+                        "Text": "K"
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
                         "IsSolution": true,
-                        "AddToTextSize": -4,
-                        "Text": "N"
+                        "Text": "I"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "W"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "I"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "S"
                       }
                     ]
                   ]
@@ -10688,7 +11091,7 @@
       ]
     },
     {
-      "Name": "6: AU, ÄU oder EU",
+      "Name": "6: AU, ÄU oder EU?",
       "Color": "#e5c8c4",
       "VideoPath": "Videos/L2M6.mp4",
       "Lessons": [

@@ -1578,6 +1578,13 @@
     <AndroidAsset Include="Assets\Images\Tomate_gruen.png" />
     <AndroidAsset Include="Assets\Images\Tomate_rosa.png" />
     <AndroidAsset Include="Assets\Images\Tomate_rot.png" />
+    <AndroidAsset Include="Assets\Images\Bohnen.png" />
+    <AndroidAsset Include="Assets\Images\Kiwis.png" />
+    <AndroidAsset Include="Assets\Images\Limonade.png" />
+    <AndroidAsset Include="Assets\Images\Nudeln.png" />
+    <AndroidAsset Include="Assets\Images\Tomaten.png" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Bohnen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Limonade.mp3" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="hockeyappandroid">
