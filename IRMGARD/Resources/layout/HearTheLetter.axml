@@ -18,8 +18,8 @@
             android:id="@+id/sbLetterPos"
             android:layout_width="240dp"
             android:layout_height="wrap_content"
-            android:progressDrawable="@drawable/line_red"
-            android:thumb="@drawable/oval_red"
+            android:progressDrawable="@drawable/slider_bar"
+            android:thumb="@drawable/slider_thumb"
             android:background="@drawable/vert_lines_inset"
             android:progress="15"
             android:max="30" />

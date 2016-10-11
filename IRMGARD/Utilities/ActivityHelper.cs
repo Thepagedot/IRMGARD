@@ -5,6 +5,7 @@ using Android.Graphics;
 using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Views;
+using Android.Util;
 
 namespace IRMGARD
 {
@@ -45,6 +46,18 @@ namespace IRMGARD
 
             // REFLECTION for fields like Level1Colors
             theme.ApplyStyle((int)(typeof(Resource.Style).GetField(string.Format("Level{0}Colors", levelNumber)).GetValue(null)), true);
+        }
+
+        public static int GetAccentColor(this Activity activity)
+        {
+            TypedValue typedValue = new TypedValue();
+
+            TypedArray a = activity.ObtainStyledAttributes(typedValue.Data, new int[] { Resource.Attribute.colorAccent });
+            int color = a.GetColor(0, 0);
+
+            a.Recycle();
+
+            return color;
         }
     }
 }

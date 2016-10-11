@@ -1,4 +1,7 @@
 ﻿using System;
+
+using Android.Graphics;
+using Android.Graphics.Drawables;
 using Android.OS;
 using Android.Views;
 using Android.Widget;
@@ -24,6 +27,8 @@ namespace IRMGARD
             ivSpeaker.Click += ((e, sender) => PlayTaskDesc());
 
             sbLetterPos = view.FindViewById<SeekBar>(Resource.Id.sbLetterPos);
+            GradientDrawable gd = (GradientDrawable)sbLetterPos.Thumb;
+            gd.SetColor(Activity.GetAccentColor());
             if (IsEven())
             {
                 sbLetterPos.SetBackgroundResource(0);

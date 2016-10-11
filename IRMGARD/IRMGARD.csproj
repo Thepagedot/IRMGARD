@@ -1028,8 +1028,8 @@
     <AndroidResource Include="Resources\layout\MemoryCard.axml" />
     <AndroidResource Include="Resources\drawable\rectangle_green.xml" />
     <AndroidResource Include="Resources\drawable\rectangle_red.xml" />
-    <AndroidResource Include="Resources\drawable\line_red.xml" />
-    <AndroidResource Include="Resources\drawable\oval_red.xml" />
+    <AndroidResource Include="Resources\drawable\slider_bar.xml" />
+    <AndroidResource Include="Resources\drawable\slider_thumb.xml" />
     <AndroidResource Include="Resources\drawable\vert_lines.xml" />
     <AndroidResource Include="Resources\drawable\vert_lines_inset.xml" />
     <AndroidResource Include="Resources\anim\ShowPicturePopup.xml" />
@@ -1137,6 +1137,7 @@
     <AndroidResource Include="Resources\layout\SelectConcept.axml" />
     <AndroidResource Include="Resources\drawable\selected_background.xml" />
     <AndroidResource Include="Resources\drawable\highlighted_background.xml" />
+    <AndroidResource Include="Resources\drawable\selected_background_alternate.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
