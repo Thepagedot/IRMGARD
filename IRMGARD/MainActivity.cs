@@ -90,7 +90,7 @@ namespace IRMGARD
             }
 
             // Set apps global font
-            FontHelper.ReplaceDefaultFont(this, "MONOSPACE", FontHelper.Font.Sen);
+            FontHelper.ReplaceDefaultFont(this, "MONOSPACE", FontHelper.Font.StandardRegular);
 
             initText.Visibility = ViewStates.Gone;
             startButton.Visibility = ViewStates.Visible;

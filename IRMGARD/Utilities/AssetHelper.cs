@@ -77,7 +77,7 @@ namespace IRMGARD
 
         public bool IsValid()
         {
-            return List("Images").Contains("Aal.png") && List("Fonts").Contains("sen-bold.otf");
+            return List("Images").Contains("Aal.png") && List("Fonts").Contains("GlacialIndifference-Bold.otf");
         }
 
         public abstract Stream Open(string path);

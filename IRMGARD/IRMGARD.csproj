@@ -1568,8 +1568,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Fonts\sen-bold.otf" />
-    <AndroidAsset Include="Assets\Fonts\sen-regular.otf" />
+    <AndroidAsset Include="Assets\Fonts\GlacialIndifference-Bold.otf" />
+    <AndroidAsset Include="Assets\Fonts\GlacialIndifference-Regular.otf" />
+    <AndroidAsset Include="Assets\Fonts\SIL Open Font License.txt" />
     <AndroidAsset Include="Assets\common.json" />
     <AndroidAsset Include="Assets\level1.json" />
     <AndroidAsset Include="Assets\level2.json" />

@@ -37,7 +37,7 @@ namespace IRMGARD
             var tvName = view.FindViewById<TextView>(Resource.Id.tvName);
             tvName.Text = items[position].Name.ToUpper();
             tvName.TextSize = 18;
-            tvName.Typeface = FontHelper.Get(context, FontHelper.Font.SenBold);
+            tvName.Typeface = FontHelper.Get(context, FontHelper.Font.StandardBold);
 
             // Set background color
             view.SetBackgroundColor(Android.Graphics.Color.ParseColor (items [position].Color));
