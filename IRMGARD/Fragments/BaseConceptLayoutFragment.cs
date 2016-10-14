@@ -21,8 +21,12 @@ namespace IRMGARD
             llTaskItemRows = layoutView.FindViewById<LinearLayout>(Resource.Id.llTaskItemRows);
             llSolutionItems = layoutView.FindViewById<LinearLayout>(Resource.Id.llSolutionItems);
 
+            OnCreateViewConfig();
+
             InitIteration();
         }
+
+        protected virtual void OnCreateViewConfig() { }
 
         protected abstract View CreateAndInitConceptView(Concept concept);
 

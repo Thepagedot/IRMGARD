@@ -207,6 +207,8 @@ namespace IRMGARD
         // The current selected view item for SelectConcept.SingleChoice=true
         View selectedItem;
 
+        protected int SelectedBackgroundResourceId { get; set; }
+
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.SelectConcept, container, false);
@@ -301,7 +303,7 @@ namespace IRMGARD
                 SetTag(view, Resource.Id.selected_tag_key, view.Background != null
                     ? view.Background
                     : new ColorDrawable(Android.Graphics.Color.Transparent));
-                view.SetBackgroundResource(Resource.Drawable.selected_background);
+                view.SetBackgroundResource(SelectedBackgroundResourceId > 0 ? SelectedBackgroundResourceId : Resource.Drawable.selected_background);
             }
             else
             {
