@@ -1283,6 +1283,7 @@
     <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Insel.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Katze.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Lupe.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Kuehe.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Biss.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Dutt.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Kutter.mp3" />
@@ -1292,6 +1293,21 @@
     <AndroidAsset Include="MainAssets\Sounds\Objects\Siegel.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Bohnen.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Limonade.mp3" />
+    <AndroidAsset Include="MainAssets\Images\Aepfel.png" />
+    <AndroidAsset Include="MainAssets\Images\Gaense.png" />
+    <AndroidAsset Include="MainAssets\Images\Hasen.png" />
+    <AndroidAsset Include="MainAssets\Images\Huete.png" />
+    <AndroidAsset Include="MainAssets\Images\Kaese.png" />
+    <AndroidAsset Include="MainAssets\Images\Knoepfe.png" />
+    <AndroidAsset Include="MainAssets\Images\Kuehe.png" />
+    <AndroidAsset Include="MainAssets\Images\Mann.png" />
+    <AndroidAsset Include="MainAssets\Images\Melone.png" />
+    <AndroidAsset Include="MainAssets\Images\Muetze.png" />
+    <AndroidAsset Include="MainAssets\Images\Nasen.png" />
+    <AndroidAsset Include="MainAssets\Images\Rasen.png" />
+    <AndroidAsset Include="MainAssets\Images\Ruecken.png" />
+    <AndroidAsset Include="MainAssets\Images\Waelder.png" />
+    <AndroidAsset Include="MainAssets\Images\Wonne.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />

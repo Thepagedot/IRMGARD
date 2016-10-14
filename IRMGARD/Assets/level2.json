@@ -4913,7 +4913,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Alphabet/A.mp3"
+                        "SoundPath": "Solution/Vowels/Hier_haben_wir_das_kurz_gesprochene_A_gesucht.mp3"
                       }
                     ],
                     [
@@ -4956,7 +4956,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Alphabet/A.mp3"
+                        "SoundPath": "Solution/Vowels/Hier_haben_wir_das_lang_gesprochene_A_gesucht.mp3"
                       }
                     ],
                     [
@@ -4999,7 +4999,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Alphabet/E.mp3"
+                        "SoundPath": "Solution/Vowels/Hier_haben_wir_das_kurz_gesprochene_E_gesucht.mp3"
                       }
                     ],
                     [
@@ -5047,7 +5047,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Alphabet/E.mp3"
+                        "SoundPath": "Solution/Vowels/Hier_haben_wir_das_lang_gesprochene_E_gesucht.mp3"
                       }
                     ],
                     [
@@ -5085,7 +5085,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Alphabet/I.mp3"
+                        "SoundPath": "Solution/Vowels/Hier_haben_wir_das_kurz_gesprochene_I_gesucht.mp3"
                       }
                     ],
                     [
@@ -5108,7 +5108,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Alphabet/I.mp3"
+                        "SoundPath": "Solution/Vowels/Hier_haben_wir_das_lang_gesprochene_I_gesucht.mp3"
                       }
                     ],
                     [
@@ -5151,7 +5151,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Alphabet/O.mp3"
+                        "SoundPath": "Solution/Vowels/Hier_haben_wir_das_kurz_gesprochene_O_gesucht.mp3"
                       }
                     ],
                     [
@@ -5184,7 +5184,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Alphabet/O.mp3"
+                        "SoundPath": "Solution/Vowels/Hier_haben_wir_das_lang_gesprochene_O_gesucht.mp3"
                       }
                     ],
                     [
@@ -5237,7 +5237,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Alphabet/U.mp3"
+                        "SoundPath": "Solution/Vowels/Hier_haben_wir_das_kurz_gesprochene_U_gesucht.mp3"
                       }
                     ],
                     [
@@ -5270,7 +5270,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Alphabet/U.mp3"
+                        "SoundPath": "Solution/Vowels/Hier_haben_wir_das_lang_gesprochene_U_gesucht.mp3"
                       }
                     ],
                     [
@@ -6951,7 +6951,7 @@
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
                         "IsSolution": true,
                         "Color": "#B7160E",
-                        "Text": "L"
+                        "Text": "D"
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
@@ -6986,6 +6986,71 @@
                     {
                       "$type": "IRMGARD.Models.Letter, IRMGARD",
                       "Text": "N"
+                    }
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "RhymingWords/Super_Kann_Mann.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnMistake": true,
+                        "SoundPath": "RhymingWords/Mann_Kann.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Mann.png"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Color": "#B7160E",
+                        "Text": "K"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "A"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "N"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "N"
+                      }
+                    ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Letter, IRMGARD",
+                      "Text": "W"
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Letter, IRMGARD",
+                      "Text": "O"
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Letter, IRMGARD",
+                      "Text": "L"
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Letter, IRMGARD",
+                      "Text": "L"
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Letter, IRMGARD",
+                      "Text": "E"
                     }
                   ]
                 }
@@ -7245,6 +7310,68 @@
                     {
                       "$type": "IRMGARD.Models.Picture, IRMGARD",
                       "ImagePath": "Lose.png"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+              "Id": 2342,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "IsSolution": true,
+                        "ImagePath": "Waelder.png"
+                      }
+                    ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Picture, IRMGARD",
+                      "ImagePath": "Hasen.png"
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Picture, IRMGARD",
+                      "ImagePath": "Nasen.png"
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Picture, IRMGARD",
+                      "ImagePath": "Rasen.png"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+              "Id": 2343,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "IsSolution": true,
+                        "ImagePath": "Huete.png"
+                      }
+                    ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Picture, IRMGARD",
+                      "ImagePath": "Sonne.png"
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Picture, IRMGARD",
+                      "ImagePath": "Tonne.png"
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Picture, IRMGARD",
+                      "ImagePath": "Wonne.png"
                     }
                   ]
                 }
@@ -8707,6 +8834,7 @@
           "SoundPath": "Intros/Level 2 Modul 4 Aufgabe 6.mp3",
           "Hint": "Hints/Extra_tip_uebst_du_auch_das_Schreiben_mit_dem_Stift.mp3",
           "TypeOfLevel": "DragIntoGap",
+          "UseOptionItemsOnly": true,
           "HideRack": true,
           "Iterations": [
             {
@@ -8854,6 +8982,54 @@
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
                         "IsSolution": true,
                         "Text": "N"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "1x"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Butter.png"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Color": "#B7160E",
+                        "Text": "B"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "U"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "T"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "T"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "E"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "R"
                       }
                     ]
                   ]
@@ -10073,7 +10249,48 @@
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsSolution": true,
-                        "ImagePath": "Wald.png",
+                        "ImagePath": "Muetze.png"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "Ü"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "IsSolution": true,
+                        "ImagePath": "Huete.png",
+                        "SoundPath": "ObjectsWithDefArt/Die_Huete.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "Ü"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+              "Id": 2532,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "IsSolution": true,
+                        "ImagePath": "Wälder.png",
                         "SoundPath": "ObjectsWithDefArt/Die_Waelder.mp3"
                       }
                     ],
@@ -10085,30 +10302,6 @@
                     ]
                   ]
                 },
-                {
-                  "TaskItems": [
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "IsSolution": true,
-                        "ImagePath": "Apfel.png",
-                        "SoundPath": "ObjectsWithDefArt/Die_Aepfel.mp3"
-                      }
-                    ],
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Letter, IRMGARD",
-                        "Text": "Ä"
-                      }
-                    ]
-                  ]
-                }
-              ]
-            },
-            {
-              "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
-              "Id": 2532,
-              "Tasks": [
                 {
                   "TaskItems": [
                     [
@@ -10139,6 +10332,24 @@
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsSolution": true,
+                        "ImagePath": "Aepfel.png",
+                        "SoundPath": "ObjectsWithDefArt/Die_Aepfel.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "Ä"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "IsSolution": true,
                         "ImagePath": "Koenig.png",
                         "SoundPath": "ObjectsWithDefArt/Der_Koenig.mp3"
                       }
@@ -10157,6 +10368,24 @@
               "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
               "Id": 2534,
               "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "IsSolution": true,
+                        "ImagePath": "Knoepfe.png",
+                        "SoundPath": "ObjectsWithDefArt/Die_Knoepfe.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "Ö"
+                      }
+                    ]
+                  ]
+                },
                 {
                   "TaskItems": [
                     [
@@ -10187,7 +10416,7 @@
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsSolution": true,
-                        "ImagePath": "Gans.png",
+                        "ImagePath": "Gaense.png",
                         "SoundPath": "ObjectsWithDefArt/Die_Gaense.mp3"
                       }
                     ],
@@ -10195,6 +10424,24 @@
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
                         "Text": "Ä"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "IsSolution": true,
+                        "ImagePath": "Kuehe.png",
+                        "SoundPath": "ObjectsWithDefArt/Die_Kuehe.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "Ü"
                       }
                     ]
                   ]
