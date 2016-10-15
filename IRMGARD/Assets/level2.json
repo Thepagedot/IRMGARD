@@ -10305,7 +10305,7 @@
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsSolution": true,
-                        "ImagePath": "Wälder.png",
+                        "ImagePath": "Waelder.png",
                         "SoundPath": "ObjectsWithDefArt/Die_Waelder.mp3"
                       }
                     ],
@@ -10407,7 +10407,7 @@
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsSolution": true,
-                        "ImagePath": "Hand.png",
+                        "ImagePath": "Haende.png",
                         "SoundPath": "ObjectsWithDefArt/Die_Haende.mp3"
                       }
                     ],

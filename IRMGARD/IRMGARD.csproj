@@ -1309,6 +1309,7 @@
     <AndroidAsset Include="MainAssets\Images\Ruecken.png" />
     <AndroidAsset Include="MainAssets\Images\Waelder.png" />
     <AndroidAsset Include="MainAssets\Images\Wonne.png" />
+    <AndroidAsset Include="MainAssets\Images\Haende.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
