@@ -43,6 +43,11 @@ namespace IRMGARD
 
         List<Concept> words;
 
+        protected override void OnCreateViewConfig()
+        {
+            SelectedBackgroundResourceId = Resource.Drawable.letterpuzzle_marker;
+        }
+
         protected override void InitBaseLayoutView(View layoutView)
         {
             var llTaskItemRows = layoutView.FindViewById<LinearLayout>(Resource.Id.llTaskItemRows);

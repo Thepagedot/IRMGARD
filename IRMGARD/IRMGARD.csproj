@@ -1579,6 +1579,7 @@
     <AndroidResource Include="Resources\layout\SelectConcept.axml" />
     <AndroidResource Include="Resources\drawable\selected_background.xml" />
     <AndroidResource Include="Resources\drawable\highlighted_background.xml" />
+    <AndroidResource Include="Resources\drawable\letterpuzzle_marker.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />

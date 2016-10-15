@@ -80,11 +80,6 @@ namespace IRMGARD
 
     public class FourPicturesSelectConceptFragment : SelectConceptFragment
     {
-        protected override void OnCreateViewConfig()
-        {
-            SelectedBackgroundResourceId = Resource.Drawable.highlighted_background;
-        }
-
         protected override void TransformTaskItems()
         {
             exercise = exercise.DeepCopy();
