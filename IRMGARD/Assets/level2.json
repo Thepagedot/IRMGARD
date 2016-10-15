@@ -3375,7 +3375,8 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "FETT",
-                        "LetterTags": [ 0, 1, 0, 0 ]
+                        "LetterTags": [ 0, 1, 0, 0 ],
+                        "AddToTextSize": 8
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
@@ -3406,7 +3407,8 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "KAMM",
-                        "LetterTags": [ 0, 1, 0, 0 ]
+                        "LetterTags": [ 0, 1, 0, 0 ],
+                        "AddToTextSize": 8
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
@@ -3437,7 +3439,8 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "KANN",
-                        "LetterTags": [ 0, 1, 0, 0 ]
+                        "LetterTags": [ 0, 1, 0, 0 ],
+                        "AddToTextSize": 8
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
@@ -3506,7 +3509,8 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "MANN",
-                        "LetterTags": [ 0, 1, 0, 0 ]
+                        "LetterTags": [ 0, 1, 0, 0 ],
+                        "AddToTextSize": 8
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
@@ -3537,7 +3541,8 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "METT",
-                        "LetterTags": [ 0, 1, 0, 0 ]
+                        "LetterTags": [ 0, 1, 0, 0 ],
+                        "AddToTextSize": 8
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
@@ -3568,7 +3573,8 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "MULL",
-                        "LetterTags": [ 0, 1, 0, 0 ]
+                        "LetterTags": [ 0, 1, 0, 0 ],
+                        "AddToTextSize": 8
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
@@ -3637,7 +3643,8 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "NETT",
-                        "LetterTags": [ 0, 1, 0, 0 ]
+                        "LetterTags": [ 0, 1, 0, 0 ],
+                        "AddToTextSize": 8
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
@@ -3668,7 +3675,8 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "NUSS",
-                        "LetterTags": [ 0, 1, 0, 0 ]
+                        "LetterTags": [ 0, 1, 0, 0 ],
+                        "AddToTextSize": 8
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
@@ -3699,7 +3707,8 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "RITT",
-                        "LetterTags": [ 0, 1, 0, 0 ]
+                        "LetterTags": [ 0, 1, 0, 0 ],
+                        "AddToTextSize": 8
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
@@ -3730,7 +3739,8 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "ROLL",
-                        "LetterTags": [ 0, 1, 0, 0 ]
+                        "LetterTags": [ 0, 1, 0, 0 ],
+                        "AddToTextSize": 8
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
@@ -3799,7 +3809,8 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "TOLL",
-                        "LetterTags": [ 0, 1, 0, 0 ]
+                        "LetterTags": [ 0, 1, 0, 0 ],
+                        "AddToTextSize": 8
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
@@ -3830,7 +3841,8 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "VOLL",
-                        "LetterTags": [ 0, 1, 0, 0 ]
+                        "LetterTags": [ 0, 1, 0, 0 ],
+                        "AddToTextSize": 8
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
@@ -3861,7 +3873,8 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "WALL",
-                        "LetterTags": [ 0, 1, 0, 0 ]
+                        "LetterTags": [ 0, 1, 0, 0 ],
+                        "AddToTextSize": 8
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
@@ -3892,7 +3905,8 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "WILL",
-                        "LetterTags": [ 0, 1, 0, 0 ]
+                        "LetterTags": [ 0, 1, 0, 0 ],
+                        "AddToTextSize": 8
                       },
                       {
                         "$type": "IRMGARD.Models.Letter, IRMGARD",
