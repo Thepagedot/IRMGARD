@@ -10263,7 +10263,8 @@
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsSolution": true,
-                        "ImagePath": "Muetze.png"
+                        "ImagePath": "Muetze.png",
+                        "SoundPath": "ObjectsWithDefArt/Die_Muetze.mp3"
                       }
                     ],
                     [

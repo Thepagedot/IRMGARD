@@ -1284,6 +1284,7 @@
     <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Katze.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Lupe.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Kuehe.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Muetze.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Biss.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Dutt.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Kutter.mp3" />
