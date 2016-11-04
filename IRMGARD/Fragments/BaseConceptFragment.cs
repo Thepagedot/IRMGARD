@@ -45,6 +45,14 @@ namespace IRMGARD
                 if (IsTextCardCallback(concept as BaseText))
                 {
                     var cardView = (FrameLayout)inflater.Inflate(Resource.Layout.CardConcept, null);
+
+                    if (baseText.Size > 0)
+                    {
+                        cardView.LayoutParameters = new FrameLayout.LayoutParams(
+                            baseText.Size > 0 ? ToPx(baseText.Size) : ViewGroup.LayoutParams.MatchParent,
+                            baseText.Size > 0 ? ToPx(baseText.Size) : ViewGroup.LayoutParams.MatchParent);
+                    }
+
                     cardView.AddView(view);
                     view = cardView;
                 }
@@ -81,7 +89,8 @@ namespace IRMGARD
 
                 if (concept.ActivateOnSuccess || concept.ActivateOnMistake)
                 {
-                    (view as ViewGroup).GetChildAt(0).LayoutParameters = new FrameLayout.LayoutParams(ToPx(120), ToPx(120));
+                    int defaultSize = (IsSmallHeight() ? 100 : 120);
+                    (view as ViewGroup).GetChildAt(0).LayoutParameters = new FrameLayout.LayoutParams(ToPx(defaultSize), ToPx(defaultSize));
                 }
 
                 if (picture.Size > 0)

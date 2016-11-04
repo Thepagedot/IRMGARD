@@ -67,7 +67,7 @@ namespace IRMGARD
             {
                 case 1: return Resource.Drawable.irmgard_danke_01;
                 case 2: return Resource.Drawable.irmgard_danke_02;
-                //case 3: return Resource.Drawable.irmgard_danke_03;
+                case 3: return Resource.Drawable.irmgard_danke_03;
                 //case 4: return Resource.Drawable.irmgard_danke_04;
                 //case 5: return Resource.Drawable.irmgard_danke_05;
                 //case 6: return Resource.Drawable.irmgard_danke_06;

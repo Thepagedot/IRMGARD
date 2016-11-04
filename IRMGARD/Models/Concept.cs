@@ -43,10 +43,16 @@ namespace IRMGARD.Models
         string SoundPath { get; set; }
     }
 
+    // An resizeable item
+    public interface IResizeable
+    {
+        int Size { get; set; }
+    }
+
     public enum LetterTag { None, Short, Long };
 
     // The base for all text based concepts
-    public abstract class BaseText : Concept, ISound
+    public abstract class BaseText : Concept, ISound, IResizeable
     {
         public string Text { get; set; }
         public List<LetterTag> LetterTags { get; set; }
@@ -57,6 +63,7 @@ namespace IRMGARD.Models
         public string Color { get; set; }
         public bool ShowAsPlainText { get; set; }
         public int AddToTextSize { get; set; }
+        public int Size { get; set; }
 
         public override Concept DeepCopy()
         {
@@ -75,6 +82,7 @@ namespace IRMGARD.Models
             clone.Color = Color != null ? String.Copy(Color) : null;
             clone.ShowAsPlainText = ShowAsPlainText;
             clone.AddToTextSize = AddToTextSize;
+            clone.Size = Size;
 
             return clone;
         }
@@ -142,7 +150,7 @@ namespace IRMGARD.Models
     }
 
     // A picture
-    public class Picture : Concept, ISound
+    public class Picture : Concept, ISound, IResizeable
     {
         public string ImagePath { get; set; }
         public string SoundPath { get; set; }

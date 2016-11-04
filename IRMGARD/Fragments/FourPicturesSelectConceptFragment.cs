@@ -110,7 +110,13 @@ namespace IRMGARD
                 fourPictureItems.AddRange(Lesson.OptionItems.PickRandomItems(4 - fourPictureItems.Count).Select(item => { item.IsOption = true; return item; }));
             }
 
-            fourPictureItems.ForEach(c => (c as Picture).Size = IsSmallHeight() ? 100 : 120);
+            fourPictureItems.ForEach(c => {
+                if (c is IResizeable)
+                {
+                    (c as IResizeable).Size = (IsSmallHeight() ? 100 : 120);
+                }
+            });
+
             fourPictureItems.Shuffle();
 
             if (exercise == null)
@@ -137,7 +143,6 @@ namespace IRMGARD
             // Configurate layout for FourPictures
             Lesson.HideRack = true;
             Lesson.TopMargins = new int[] { 20, 8 };
-            Lesson.SingleChoice = true;
 
             base.BuildTaskItems();
         }

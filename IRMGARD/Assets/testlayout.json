@@ -766,6 +766,7 @@
           "Title": "Kurz oder Lang?",
           "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 7.mp3",
           "TypeOfLevel": "ShortLongVowelFPSC",
+          "SingleChoice": true,
           "Iterations": [
             {
               "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
@@ -1240,6 +1241,7 @@
           "Title": "Der, die oder das?",
           "SoundPath": "Intros/Level 2 Modul 4 Aufgabe 7.mp3",
           "TypeOfLevel": "FourPicturesSelectConcept",
+          "SingleChoice": true,
           "Iterations": [
             {
               "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
@@ -1440,6 +1442,7 @@
           "Title": "A oder Ä?",
           "SoundPath": "Intros/Level 2 Modul 5 Aufgabe 3.mp3",
           "TypeOfLevel": "FourPicturesSelectConcept",
+          "SingleChoice": true,
           "Iterations": [
             {
               "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",

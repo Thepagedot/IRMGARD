@@ -4917,6 +4917,7 @@
           "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 7.mp3",
           "Hint": "Hints/Extra_tip_wenn_du_dir_nicht_sicher_bist.mp3",
           "TypeOfLevel": "ShortLongVowelFPSC",
+          "SingleChoice": true,
           "Iterations": [
             {
               "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
@@ -7293,6 +7294,7 @@
           "Title": "Silben lesen und schreiben",
           "SoundPath": "Intros/Level 2 Modul 3 Aufgabe 4.mp3",
           "TypeOfLevel": "FourPicturesSelectConcept",
+          "SingleChoice": true,
           "Iterations": [
             {
               "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
@@ -8141,6 +8143,7 @@
           "Title": "Der, die, das?",
           "SoundPath": "Intros/Level 2 Modul 4 Aufgabe 3.mp3",
           "TypeOfLevel": "DefArtFPSC",
+          "SingleChoice": true,
           "Iterations": [
             {
               "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
@@ -9391,6 +9394,7 @@
           "SoundPath": "Intros/Level 2 Modul 4 Aufgabe 7.mp3",
           "Hint": "Hints/Extra_tip_hast_du_einen_freund.mp3",
           "TypeOfLevel": "FourPicturesSelectConcept",
+          "SingleChoice": true,
           "Iterations": [
             {
               "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
@@ -10252,6 +10256,7 @@
           "Title": "A oder Ä?",
           "SoundPath": "Intros/Level 2 Modul 5 Aufgabe 3.mp3",
           "TypeOfLevel": "FourPicturesSelectConcept",
+          "SingleChoice": true,
           "Iterations": [
             {
               "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
