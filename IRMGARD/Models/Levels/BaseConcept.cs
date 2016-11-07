@@ -14,6 +14,9 @@ namespace IRMGARD.Models
         // Idx = 3: The margin between option and solution items (optional)
         public int[] TopMargins { get; set; }
 
+        // Align task row items to the left rather than centered
+        public bool[] LeftAlignItems { get; set; }
+
         // Global option items
         public List<Concept> OptionItems { get; set; }
 

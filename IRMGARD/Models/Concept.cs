@@ -122,6 +122,9 @@ namespace IRMGARD.Models
     // A sentence item
     public class Sentence : BaseText { }
 
+    // A text input item
+    public class InputText : BaseText { }
+
     // A sound only item
     public class Speaker : Concept, ISound
     {

@@ -21,6 +21,7 @@ namespace IRMGARD
         LetterpuzzleSC,
         FourPicturesSelectConcept,
         ShortLongVowelFPSC,
-        DefArtFPSC
+        DefArtFPSC,
+        InputConcept
     }
 }

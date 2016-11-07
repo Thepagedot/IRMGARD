@@ -3430,6 +3430,1112 @@
           ]
         }
       ]
+    },
+    {
+      "Name": "3: Verben",
+      "Color": "#d8cad0",
+      "VideoPath": "Videos/L3M3.mp4",
+      "Lessons": [
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 331,
+          "Title": "Grundformen",
+          "SoundPath": "Intros/Level_3_Modul_3_Aufgabe_1.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "HighlightCorrectOptionsOnMistake": true,
+          "UseOptionItemsOnly": true,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 3311,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "tanz"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "en"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "rud"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "ern"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "lach"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "en"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "wein"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "en"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "arbeit"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "en"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 3312,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "säub"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "ern"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "würf"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "eln"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "strick"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "en"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "trink"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "en"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 3313,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "hump"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "eln"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "stolp"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "ern"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "lauf"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "en"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "schreib"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "en"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 3314,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "les"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "en"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "bett"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "eln"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "seg"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "eln"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "wick"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "eln"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 3315,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "kling"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "eln"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "meck"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "ern"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "ärg"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "ern"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "hämm"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "ern"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "OptionItems": [
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": "en"
+            },
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": "eln"
+            },
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": "ern"
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
+          "Id": 332,
+          "Title": "Verbendungen",
+          "SoundPath": "Intros/Level_3_Modul_3_Aufgabe_2.mp3",
+          "Hint": "Hints/Extra_tip_ueberlege_dir_Woerter_mit_AU.mp3",
+          "TypeOfLevel": "HearTheLetter",
+          "SliderLabels": [
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": "en",
+              "ShowAsPlainText": true
+            },
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": "ern",
+              "ShowAsPlainText": true
+            },
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": "eln",
+              "ShowAsPlainText": true
+            }
+          ],
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 3321,
+              "LetterLocations": [
+                {
+                  "Location": 0,
+                  "SoundPath": "Verbs/tanzen.mp3"
+                },
+                {
+                  "Location": 2,
+                  "SoundPath": "Verbs/rudern.mp3"
+                },
+                {
+                  "Location": 1,
+                  "SoundPath": "Verbs/klingeln.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "Verbs/weinen.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 3322,
+              "LetterLocations": [
+                {
+                  "Location": 0,
+                  "SoundPath": "Verbs/arbeiten.mp3"
+                },
+                {
+                  "Location": 2,
+                  "SoundPath": "Verbs/saeubern.mp3"
+                },
+                {
+                  "Location": 1,
+                  "SoundPath": "Verbs/wuerfeln.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 3323,
+              "LetterLocations": [
+                {
+                  "Location": 0,
+                  "SoundPath": "Verbs/stricken.mp3"
+                },
+                {
+                  "Location": 1,
+                  "SoundPath": "Verbs/humpeln.mp3"
+                },
+                {
+                  "Location": 1,
+                  "SoundPath": "Verbs/betteln.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 3324,
+              "LetterLocations": [
+                {
+                  "Location": 1,
+                  "SoundPath": "Verbs/segeln.mp3"
+                },
+                {
+                  "Location": 2,
+                  "SoundPath": "Verbs/aergern.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "Verbs/lachen.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 3325,
+              "LetterLocations": [
+                {
+                  "Location": 2,
+                  "SoundPath": "Verbs/meckern.mp3"
+                },
+                {
+                  "Location": 1,
+                  "SoundPath": "Verbs/wickeln.mp3"
+                },
+                {
+                  "Location": 2,
+                  "SoundPath": "Verbs/haemmern.mp3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 333,
+          "Title": "Grundformen",
+          "SoundPath": "Intros/Level_3_Modul_3_Aufgabe_3.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "HighlightCorrectOptionsOnMistake": true,
+          "UseOptionItemsOnly": true,
+          "HideRack": true,
+          "TopMargins": [ -1, 10, 40 ],
+          "LeftAlignItems": [ false, true, true, true, true ],
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 3331,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Verbs/tanzen.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Stamm:"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD",
+                        "Width": 145
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Endung:"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "t"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "a"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "n"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "z"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD",
+                        "Width": 30
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "e"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "n"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Verbs/weinen.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Stamm:"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD",
+                        "Width": 145
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Endung:"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "w"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "e"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "i"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "n"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD",
+                        "Width": 30
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "e"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "n"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 3332,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Verbs/rudern.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Stamm:"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD",
+                        "Width": 105
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Endung:"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "r"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "u"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "d"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD",
+                        "Width": 30
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "e"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "r"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "n"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 3333,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Verbs/lachen.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Stamm:"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD",
+                        "Width": 145
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Endung:"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "l"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "a"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "c"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "h"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD",
+                        "Width": 30
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "e"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "n"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 3334,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Verbs/arbeiten.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Stamm:"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "a"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "r"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "b"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "e"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "i"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "t"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Endung:"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "e"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "n"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 3335,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Verbs/saeubern.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Stamm:"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "s"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "ä"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "u"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "b"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Endung:"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "e"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "r"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "n"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.InputConcept, IRMGARD",
+          "Id": 334,
+          "Title": "Verbendiktat",
+          "SoundPath": "Intros/Level_3_Modul_3_Aufgabe_4.mp3",
+          "TypeOfLevel": "InputConcept",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+              "Id": 3341,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ActivateOnMistake": true,
+                        "Text": "tanzen"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Verbs/tanzen.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.InputText, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "tanzen"
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ActivateOnMistake": true,
+                        "Text": "lachen"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Verbs/lachen.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.InputText, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "lachen"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+              "Id": 3342,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ActivateOnMistake": true,
+                        "Text": "rudern"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Verbs/rudern.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.InputText, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "rudern"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+              "Id": 3343,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ActivateOnMistake": true,
+                        "Text": "weinen"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Verbs/weinen.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.InputText, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "weinen"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+              "Id": 3344,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ActivateOnMistake": true,
+                        "Text": "arbeiten"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Verbs/arbeiten.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.InputText, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "arbeiten"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+              "Id": 3345,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ActivateOnMistake": true,
+                        "Text": "säubern"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Verbs/saeubern.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.InputText, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "säubern"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

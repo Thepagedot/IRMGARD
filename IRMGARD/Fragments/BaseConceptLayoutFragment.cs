@@ -39,10 +39,22 @@ namespace IRMGARD
 
             // Add task items to view
             llTaskItemRows.RemoveAllViews();
+            int i = 0;
             foreach (var taskItemRow in exercise.TaskItems)
             {
                 var llTaskItemRowRoot = LayoutInflater.From(Activity.BaseContext).Inflate(Resource.Layout.TaskItemRow, null);
                 var llTaskItemRow = llTaskItemRowRoot.FindViewById<LinearLayout>(Resource.Id.llTaskItemRow);
+
+                // Align task row items to the left rather than centered
+                if (Lesson.LeftAlignItems != null && Lesson.LeftAlignItems.Length > 0)
+                {
+                    if (Lesson.LeftAlignItems.Length > i && Lesson.LeftAlignItems[i])
+                    {
+                        var lp = (llTaskItemRow.LayoutParameters as LinearLayout.LayoutParams);
+                        lp.Gravity = GravityFlags.Left;
+                    }
+                }
+
                 foreach (var item in taskItemRow)
                 {
                     // Exclude special case concepts
@@ -64,6 +76,7 @@ namespace IRMGARD
                 }
 
                 llTaskItemRows.AddView(llTaskItemRowRoot);
+                i++;
             }
         }
 

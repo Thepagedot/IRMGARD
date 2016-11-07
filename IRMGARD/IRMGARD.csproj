@@ -111,11 +111,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fragments\InputConceptFragment.cs" />
     <Compile Include="MainActivity.Downloader.cs" />
     <Compile Include="MainActivity.Permission.cs" />
     <Compile Include="MediaDownload\MediaDownloadAlarmReceiver.cs" />
     <Compile Include="MediaDownload\MediaDownloadService.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="Models\Levels\InputConcept.cs" />
     <Compile Include="Models\TaskItem.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1586,6 +1588,9 @@
     <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_03.png" />
     <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_03.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_03.png" />
+    <AndroidResource Include="Resources\layout\InputConcept.axml" />
+    <AndroidResource Include="Resources\layout\InputTextConcept.axml" />
+    <AndroidResource Include="Resources\drawable\input_dotted.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -1682,6 +1687,22 @@
     <AndroidAsset Include="Assets\Sounds\Objects\Hund.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Kamel.mp3" />
     <AndroidAsset Include="Assets\Sounds\Objects\Melone.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Verbs\aergern.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Verbs\arbeiten.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Verbs\betteln.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Verbs\haemmern.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Verbs\humpeln.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Verbs\klingeln.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Verbs\lachen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Verbs\meckern.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Verbs\rudern.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Verbs\saeubern.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Verbs\segeln.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Verbs\stricken.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Verbs\tanzen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Verbs\weinen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Verbs\wickeln.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Verbs\wuerfeln.mp3" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="hockeyappandroid">

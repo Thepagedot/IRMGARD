@@ -40,6 +40,12 @@ namespace IRMGARD
         public event ProgressListRefreshRequestedEventHandler ProgressListRefreshRequested;
         public delegate void ProgressListRefreshRequestedEventHandler(object sender, ProgressListRefreshRequestedEventArgs e);
 
+        /// <summary>
+        /// Occurs when a user is ready to check the solution
+        /// </summary>
+        public event CheckSolutionRequestedEventHandler CheckSolutionRequested;
+        public delegate void CheckSolutionRequestedEventHandler(object sender, EventArgs e);
+
         protected void FireIterationFinished(Iteration iteration, bool success, bool provideFeedback)
         {
             if (IterationFinished != null)
@@ -72,6 +78,12 @@ namespace IRMGARD
         {
             if (ProgressListRefreshRequested != null)
                 ProgressListRefreshRequested(this, new ProgressListRefreshRequestedEventArgs(lesson));
+        }
+
+        protected void FireCheckSolutionRequested()
+        {
+            if (CheckSolutionRequested != null)
+                CheckSolutionRequested(this, new EventArgs());
         }
 
         public abstract void CheckSolution();

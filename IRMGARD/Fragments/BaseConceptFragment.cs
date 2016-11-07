@@ -13,12 +13,19 @@ namespace IRMGARD
 {
     public abstract class BaseConceptFragment<T> : LessonFragment<T> where T : Lesson
     {
+        public enum TextDecorationType { Foreground, Background }
+
         protected View CreateConceptView(Concept concept)
         {
             View view;
 
             var inflater = LayoutInflater.From(Activity.BaseContext);
-            if (concept is BaseText)
+            if (concept is InputText)
+            {
+                view = inflater.Inflate(Resource.Layout.InputTextConcept, null);
+                (view as EditText).SetMinEms((concept as InputText).Text.Length);
+            }
+            else if (concept is BaseText)
             {
                 var baseText = (concept as BaseText);
                 if (baseText.LetterTags != null && baseText.LetterTags.Count > 0)
@@ -30,7 +37,8 @@ namespace IRMGARD
                     view = inflater.Inflate(Resource.Layout.BaseText, null);
                     var tvText = view.FindViewById<TextView>(Resource.Id.tvText);
                     DecorateText(tvText, baseText, new Android.Graphics.Color(
-                        ContextCompat.GetColor(Activity.BaseContext, Resource.Color.neon)));
+                        ContextCompat.GetColor(Activity.BaseContext, Resource.Color.neon)),
+                        TextDecorationType.Background);
                     SetTextColor(tvText, baseText);
                     AdjustTextSize(tvText, baseText);
                 }
@@ -210,7 +218,7 @@ namespace IRMGARD
             return (int)(dp * Resources.DisplayMetrics.Density);
         }
 
-        void DecorateText(TextView tv, BaseText baseText, Android.Graphics.Color color)
+        protected void DecorateText(TextView tv, BaseText baseText, Android.Graphics.Color color, TextDecorationType tdType)
         {
             string text = GetTextCallback(baseText);
 
@@ -219,7 +227,15 @@ namespace IRMGARD
                 var span = new SpannableString(text);
                 foreach (var highlight in baseText.Highlights)
                 {
-                    span.SetSpan(new BackgroundColorSpan(color), highlight[0], highlight[1], SpanTypes.ExclusiveExclusive);
+                    switch (tdType)
+                    {
+                        case TextDecorationType.Foreground:
+                            span.SetSpan(new ForegroundColorSpan(color), highlight[0], highlight[1], SpanTypes.ExclusiveExclusive);
+                            break;
+                        case TextDecorationType.Background:
+                            span.SetSpan(new BackgroundColorSpan(color), highlight[0], highlight[1], SpanTypes.ExclusiveExclusive);
+                            break;
+                    }
                 }
                 tv.Append(span);
             }
