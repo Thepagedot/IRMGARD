@@ -20,6 +20,8 @@ namespace IRMGARD.Models
         // Align task row items to the left rather than centered
         public bool[] LeftAlignItems { get; set; }
 
+        public int AddToTextSize { get; set; }
+
         // Global option items
         public List<Concept> OptionItems { get; set; }
 
@@ -30,11 +32,18 @@ namespace IRMGARD.Models
         {
             BaseConcept clone = (BaseConcept)this.MemberwiseClone();
             clone.HideRack = HideRack;
+            clone.TwoColumns = TwoColumns;
             if (TopMargins != null && TopMargins.Length > 0)
             {
                 clone.TopMargins = new int[TopMargins.Length];
                 Array.Copy(TopMargins, clone.TopMargins, TopMargins.Length);
             }
+            if (LeftAlignItems != null && LeftAlignItems.Length > 0)
+            {
+                clone.LeftAlignItems = new bool[LeftAlignItems.Length];
+                Array.Copy(LeftAlignItems, clone.LeftAlignItems, LeftAlignItems.Length);
+            }
+            clone.AddToTextSize = AddToTextSize;
             if (OptionItems != null && OptionItems.Count > 0)
             {
                 clone.OptionItems = new List<Concept>();

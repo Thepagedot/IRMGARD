@@ -1703,6 +1703,7 @@
     <AndroidAsset Include="Assets\Sounds\Verbs\weinen.mp3" />
     <AndroidAsset Include="Assets\Sounds\Verbs\wickeln.mp3" />
     <AndroidAsset Include="Assets\Sounds\Verbs\wuerfeln.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Verbs\arbeitest.mp3" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="hockeyappandroid">

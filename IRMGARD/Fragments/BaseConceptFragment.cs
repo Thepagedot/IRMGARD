@@ -269,7 +269,18 @@ namespace IRMGARD
 
             textSize = IsSmallHeight() ? textSize - 4 : textSize;
 
-            tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, (concept.AddToTextSize != 0) ? textSize + concept.AddToTextSize : textSize);
+            if (concept.AddToTextSize != 0)
+            {
+                tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, textSize + concept.AddToTextSize);
+            }
+            else if ((Lesson as BaseConcept).AddToTextSize != 0)
+            {
+                tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, textSize + (Lesson as BaseConcept).AddToTextSize);
+            }
+            else
+            {
+                tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, textSize);
+            }
         }
 
         View ApplyLetterTags(LayoutInflater inflater, BaseText concept)

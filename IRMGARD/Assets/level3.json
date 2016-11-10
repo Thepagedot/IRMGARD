@@ -4563,7 +4563,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
                         "Align": "Left",
-                        "Text": "Ich"
+                        "Text": "ich"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -4576,7 +4576,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
                         "Align": "Left",
-                        "Text": "Du"
+                        "Text": "du"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -4589,12 +4589,251 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
                         "Align": "Left",
-                        "Text": "Er, sie, es"
+                        "Text": "er, sie, es"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "geht"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 342,
+          "Title": "Wir, ihr, sie",
+          "SoundPath": "Intros/Level_3_Modul_4_Aufgabe_2.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "HighlightCorrectOptionsOnMistake": true,
+          "UseOptionItemsOnly": true,
+          "TwoColumns": 100,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 3421,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Align": "Left",
+                        "Text": "wir"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "laufen"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Align": "Left",
+                        "Text": "ihr"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "lauft"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Align": "Left",
+                        "Text": "sie"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "laufen"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
+          "Id": 343,
+          "Title": "Der, die, das?",
+          "SoundPath": "Intros/Level_3_Modul_4_Aufgabe_3.mp3",
+          "Hint": "Hints/Extra_tip_wichtig_ist_dass_du_taeglich_mit_mir_lernst.mp3",
+          "TypeOfLevel": "SelectConcept",
+          "HighlightCorrectOptionsOnMistake": true,
+          "UseOptionItemsOnly": true,
+          "HideRack": true,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+              "Id": 3431,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                        "IsOption": true,
+                        "Size": 75,
+                        "Text": "Ich"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                        "IsSolution": true,
+                        "Size": 75,
+                        "Text": "Du"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                        "IsOption": true,
+                        "Size": 75,
+                        "AddToTextSize": -8,
+                        "Text": "Er, Sie, Es"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                        "IsOption": true,
+                        "Size": 75,
+                        "Text": "Wir"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                        "IsOption": true,
+                        "Size": 75,
+                        "Text": "Ihr"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                        "IsOption": true,
+                        "Size": 75,
+                        "Text": "Sie"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "arbeitest",
+                        "SoundPath": "Verbs/arbeitest.mp3"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 344,
+          "Title": "Konjugieren",
+          "SoundPath": "Intros/Level_3_Modul_4_Aufgabe_4.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "HighlightCorrectOptionsOnMistake": true,
+          "UseOptionItemsOnly": true,
+          "TwoColumns": 100,
+          "TopMargins": [ 4, 4, 12 ],
+          "AddToTextSize": -4,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 3441,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Align": "Left",
+                        "Text": "ich"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "lache"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Align": "Left",
+                        "Text": "du"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "lachst"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Align": "Left",
+                        "Text": "er, sie, es"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "lacht"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Align": "Left",
+                        "Text": "wir"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "lachen"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Align": "Left",
+                        "Text": "ihr"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "lacht"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Align": "Left",
+                        "Text": "sie"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "lachen"
                       }
                     ]
                   ]
