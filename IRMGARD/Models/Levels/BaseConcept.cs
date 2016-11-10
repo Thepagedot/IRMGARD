@@ -8,6 +8,9 @@ namespace IRMGARD.Models
         // Do not show the wooden rack
         public bool HideRack { get; set; }
 
+        // Use two columns (value set width (in dpi) for the first column)
+        public int TwoColumns { get; set; }
+
         // Idx = 0: The top margin (as dp) of the first task item row
         // Idx = 1: The top margin of each task item row (incl. the first row)
         // Idx = 2: The margin between task and option items (optional)

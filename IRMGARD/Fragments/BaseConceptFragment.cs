@@ -39,6 +39,7 @@ namespace IRMGARD
                     DecorateText(tvText, baseText, new Android.Graphics.Color(
                         ContextCompat.GetColor(Activity.BaseContext, Resource.Color.neon)),
                         TextDecorationType.Background);
+                    SetTextAlign(tvText, baseText);
                     SetTextColor(tvText, baseText);
                     AdjustTextSize(tvText, baseText);
                 }
@@ -283,6 +284,7 @@ namespace IRMGARD
                     var view = inflater.Inflate(Resource.Layout.BaseText, null);
                     var tvText = view.FindViewById<TextView>(Resource.Id.tvText);
                     tvText.Text = char.ToString(text[i]);
+                    SetTextAlign(tvText, concept);
                     SetTextColor(tvText, concept);
                     AdjustTextSize(tvText, concept);
                     EnableIndicator(view, concept, concept.LetterTags[i]);
@@ -296,6 +298,7 @@ namespace IRMGARD
                 var view = inflater.Inflate(Resource.Layout.BaseText, null);
                 var tvText = view.FindViewById<TextView>(Resource.Id.tvText);
                 tvText.Text = text;
+                SetTextAlign(tvText, concept);
                 SetTextColor(tvText, concept);
                 AdjustTextSize(tvText, concept);
                 EnableIndicator(view, concept, concept.LetterTags.First());
@@ -305,6 +308,23 @@ namespace IRMGARD
             else
             {
                 throw new InvalidCastException("Unknown concept of type BaseText!");
+            }
+        }
+
+        void SetTextAlign(TextView tvText, BaseText concept)
+        {
+            var lp = (tvText.LayoutParameters as LinearLayout.LayoutParams);
+            switch (concept.Align)
+            {
+                case Models.TextAlignment.Center:
+                    lp.Gravity = GravityFlags.Center;
+                    break;
+                case Models.TextAlignment.Left:
+                    lp.Gravity = GravityFlags.Left;
+                    break;
+                case Models.TextAlignment.Right:
+                    lp.Gravity = GravityFlags.Right;
+                    break;
             }
         }
 

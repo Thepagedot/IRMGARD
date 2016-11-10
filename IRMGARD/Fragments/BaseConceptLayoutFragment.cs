@@ -55,6 +55,7 @@ namespace IRMGARD
                     }
                 }
 
+                int k = 0;
                 foreach (var item in taskItemRow)
                 {
                     // Exclude special case concepts
@@ -63,8 +64,16 @@ namespace IRMGARD
                     // Invoke callback
                     var view = CreateAndInitConceptView(item);
 
+                    // Apply two column layout rules
+                    if (Lesson.TwoColumns > 0 && k % 2 == 0)
+                    {
+                        var lp = (view.LayoutParameters as LinearLayout.LayoutParams);
+                        lp.Width = ToPx(Lesson.TwoColumns);
+                    }
+
                     // Add container to task items
                     llTaskItemRow.AddView(view);
+                    k++;
                 }
 
                 // Replace top margin of task item rows

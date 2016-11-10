@@ -4536,6 +4536,74 @@
           ]
         }
       ]
+    },
+    {
+      "Name": "4: Konjugieren",
+      "Color": "#c1caad",
+      "VideoPath": "Videos/L3M4.mp4",
+      "Lessons": [
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 341,
+          "Title": "Ich, du, er, sie, es",
+          "SoundPath": "Intros/Level_3_Modul_4_Aufgabe_1.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "HighlightCorrectOptionsOnMistake": true,
+          "UseOptionItemsOnly": true,
+          "TwoColumns": 100,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 3411,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Align": "Left",
+                        "Text": "Ich"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "gehe"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Align": "Left",
+                        "Text": "Du"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "gehst"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Align": "Left",
+                        "Text": "Er, sie, es"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "geht"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
   ]
 }

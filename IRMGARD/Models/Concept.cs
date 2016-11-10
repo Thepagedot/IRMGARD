@@ -50,6 +50,7 @@ namespace IRMGARD.Models
     }
 
     public enum LetterTag { None, Short, Long };
+    public enum TextAlignment { Center, Left, Right };
 
     // The base for all text based concepts
     public abstract class BaseText : Concept, ISound, IResizeable
@@ -59,9 +60,10 @@ namespace IRMGARD.Models
         public string SoundPath { get; set; }
 
         // The following properies are excluded from comparison
-        public List<List<int>> Highlights { get; set; }
-        public string Color { get; set; }
         public bool ShowAsPlainText { get; set; }
+        public List<List<int>> Highlights { get; set; }
+        public TextAlignment Align { get; set; }
+        public string Color { get; set; }
         public int AddToTextSize { get; set; }
         public int Size { get; set; }
 
@@ -75,12 +77,13 @@ namespace IRMGARD.Models
             }
             clone.SoundPath = SoundPath != null ? String.Copy(SoundPath) : null;
 
+            clone.ShowAsPlainText = ShowAsPlainText;
             if (Highlights != null && Highlights.Count > 0)
             {
                 clone.Highlights = new List<List<int>>(Highlights);
             }
+            clone.Align = Align;
             clone.Color = Color != null ? String.Copy(Color) : null;
-            clone.ShowAsPlainText = ShowAsPlainText;
             clone.AddToTextSize = AddToTextSize;
             clone.Size = Size;
 
