@@ -1704,6 +1704,9 @@
     <AndroidAsset Include="Assets\Sounds\Verbs\wickeln.mp3" />
     <AndroidAsset Include="Assets\Sounds\Verbs\wuerfeln.mp3" />
     <AndroidAsset Include="Assets\Sounds\Verbs\arbeitest.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-5-4\Verben_Gegenwart.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-5-4\Verben_Vergangenheit.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-5-4\Verben_Zukunft.mp3" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="hockeyappandroid">

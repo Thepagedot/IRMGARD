@@ -273,7 +273,7 @@ namespace IRMGARD
             {
                 tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, textSize + concept.AddToTextSize);
             }
-            else if ((Lesson as BaseConcept).AddToTextSize != 0)
+            else if (Lesson is BaseConcept && (Lesson as BaseConcept).AddToTextSize != 0)
             {
                 tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, textSize + (Lesson as BaseConcept).AddToTextSize);
             }

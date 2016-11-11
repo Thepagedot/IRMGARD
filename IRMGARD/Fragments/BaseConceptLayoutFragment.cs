@@ -101,7 +101,9 @@ namespace IRMGARD
             foreach (var item in solutionItems)
             {
                 // Init concept view
-                var view = CreateConceptView(item);
+                var conceptView = CreateConceptView(item);
+                var conceptContainer = CreateConceptContainer(conceptView);
+                conceptContainer.SetBackgroundResource(Resource.Drawable.rectangle_green);
 
                 // Play sound
                 if (item is ISound)
@@ -113,7 +115,7 @@ namespace IRMGARD
                 }
 
                 // Add view to solution items
-                llSolutionItems.AddView(view);
+                llSolutionItems.AddView(conceptContainer);
                 itemsCreated = true;
             }
 
