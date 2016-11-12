@@ -2004,6 +2004,11 @@
                   "TaskItems": [
                     [
                       {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Erbschaft.mp3"
+                      },
+                      {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Erb"
                       },
@@ -2019,6 +2024,11 @@
                 {
                   "TaskItems": [
                     [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Mehrheit.mp3"
+                      },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Mehr"
@@ -2036,6 +2046,11 @@
                   "TaskItems": [
                     [
                       {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Finsternis.mp3"
+                      },
+                      {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Finster"
                       },
@@ -2051,6 +2066,11 @@
                 {
                   "TaskItems": [
                     [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Erkenntnis.mp3"
+                      },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Erkennt"
@@ -2074,6 +2094,11 @@
                   "TaskItems": [
                     [
                       {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Bildung.mp3"
+                      },
+                      {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Bild"
                       },
@@ -2089,6 +2114,11 @@
                 {
                   "TaskItems": [
                     [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Warnung.mp3"
+                      },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Warn"
@@ -2106,6 +2136,11 @@
                   "TaskItems": [
                     [
                       {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Beamtentum.mp3"
+                      },
+                      {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Beamten"
                       },
@@ -2121,6 +2156,11 @@
                 {
                   "TaskItems": [
                     [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Reichtum.mp3"
+                      },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Reich"
@@ -2144,6 +2184,11 @@
                   "TaskItems": [
                     [
                       {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Freundschaft.mp3"
+                      },
+                      {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Freund"
                       },
@@ -2159,6 +2204,11 @@
                 {
                   "TaskItems": [
                     [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Haltung.mp3"
+                      },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Halt"
@@ -2176,6 +2226,11 @@
                   "TaskItems": [
                     [
                       {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Brandung.mp3"
+                      },
+                      {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Brand"
                       },
@@ -2191,6 +2246,11 @@
                 {
                   "TaskItems": [
                     [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Berichtigung.mp3"
+                      },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Berichtig"
@@ -2214,6 +2274,11 @@
                   "TaskItems": [
                     [
                       {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Feindschaft.mp3"
+                      },
+                      {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Feind"
                       },
@@ -2229,6 +2294,11 @@
                 {
                   "TaskItems": [
                     [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Erkenntnis.mp3"
+                      },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Erkennt"
@@ -2246,6 +2316,11 @@
                   "TaskItems": [
                     [
                       {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Verhaeltnis.mp3"
+                      },
+                      {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Verhält"
                       },
@@ -2261,6 +2336,11 @@
                 {
                   "TaskItems": [
                     [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Trunkenheit.mp3"
+                      },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Trunken"
@@ -2284,6 +2364,11 @@
                   "TaskItems": [
                     [
                       {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Bescheidenheit.mp3"
+                      },
+                      {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Bescheiden"
                       },
@@ -2299,6 +2384,11 @@
                 {
                   "TaskItems": [
                     [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Fluessigkeit.mp3"
+                      },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Flüssig"
@@ -2316,6 +2406,11 @@
                   "TaskItems": [
                     [
                       {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Freundlichkeit.mp3"
+                      },
+                      {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Freundlich"
                       },
@@ -2331,6 +2426,11 @@
                 {
                   "TaskItems": [
                     [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "Exercises/3-2-1/Fertigkeit.mp3"
+                      },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Fertig"

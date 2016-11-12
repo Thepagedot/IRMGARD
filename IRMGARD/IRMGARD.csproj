@@ -1738,6 +1738,25 @@
     <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\sein.mp3" />
     <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Zeit.mp3" />
     <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Zeitung.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Beamtentum.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Berichtigung.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Bescheidenheit.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Bildung.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Brandung.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Erbschaft.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Erkenntnis.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Feindschaft.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Fertigkeit.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Finsternis.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Fluessigkeit.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Freundlichkeit.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Freundschaft.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Haltung.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Mehrheit.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Reichtum.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Trunkenheit.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Verhaeltnis.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Warnung.mp3" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="hockeyappandroid">
