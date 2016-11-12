@@ -22,6 +22,7 @@ namespace IRMGARD
         FourPicturesSelectConcept,
         ShortLongVowelFPSC,
         DefArtFPSC,
-        InputConcept
+        InputConcept,
+        WordqueueSC
     }
 }

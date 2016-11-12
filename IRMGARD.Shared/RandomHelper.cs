@@ -31,15 +31,15 @@ namespace IRMGARD.Shared
         /// results in less type conversion work later.
         /// </returns>
         /// <param name="count">The count of items returned</param>
-        public static IList<T> PickRandomItems<T>(this IList<T> src, int count)
+        public static IList<T> PickRandomItems<T>(this IEnumerable<T> src, int count)
         {
-            List<int> idxItems = new List<int>(Enumerable.Range(0, src.Count));
+            List<int> idxItems = new List<int>(Enumerable.Range(0, src.Count()));
             var result = new List<T>();
 
             for (var i = 0; i < count; i++)
             {
                 int idx = Rand.Next(idxItems.Count);
-                result.Add(src[idxItems[idx]]);
+                result.Add(src.ElementAt(idxItems[idx]));
                 idxItems.RemoveAt(idx);
             }
 

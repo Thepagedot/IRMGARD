@@ -1707,6 +1707,37 @@
     <AndroidAsset Include="Assets\Sounds\Exercises\3-5-4\Verben_Gegenwart.mp3" />
     <AndroidAsset Include="Assets\Sounds\Exercises\3-5-4\Verben_Vergangenheit.mp3" />
     <AndroidAsset Include="Assets\Sounds\Exercises\3-5-4\Verben_Zukunft.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Objects\Eis.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_bestimmten_artikel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_nomen_einzahl.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_nomen_mehrzahl.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_persoenlichen_fuerwoerter_einzahl.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_persoenlichen_fuerwoerter_mehrzahl.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_unbestimmten_artikel.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_verben_gegenwart.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_verben_vergangenheit.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_verben_zukunft.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\beissen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Brei.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\dein.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Eier.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\einfach.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Einhorn.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\einsam.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Eintopf.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Einzahl.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Eis.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\heiss.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\leise.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\mein.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Reis.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\reisen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\reissen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\reiten.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Reiter.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\sein.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Zeit.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Zeitung.mp3" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="hockeyappandroid">

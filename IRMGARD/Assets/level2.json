@@ -12575,37 +12575,30 @@
             },
             {
               "$type": "IRMGARD.Models.Speaker, IRMGARD",
-              "IsSolution": true,
               "SoundPath": "Objects/Schlaeuche.mp3"
             },
             {
               "$type": "IRMGARD.Models.Speaker, IRMGARD",
-              "IsSolution": true,
               "SoundPath": "Objects/Baeume.mp3"
             },
             {
               "$type": "IRMGARD.Models.Speaker, IRMGARD",
-              "IsSolution": true,
               "SoundPath": "Objects/Kraeuter.mp3"
             },
             {
               "$type": "IRMGARD.Models.Speaker, IRMGARD",
-              "IsSolution": true,
               "SoundPath": "Objects/Haeuser.mp3"
             },
             {
               "$type": "IRMGARD.Models.Speaker, IRMGARD",
-              "IsSolution": true,
               "SoundPath": "Objects/Laeuse.mp3"
             },
             {
               "$type": "IRMGARD.Models.Speaker, IRMGARD",
-              "IsSolution": true,
               "SoundPath": "Objects/Traeume.mp3"
             },
             {
               "$type": "IRMGARD.Models.Speaker, IRMGARD",
-              "IsSolution": true,
               "SoundPath": "Objects/Zaeune.mp3"
             }
           ]

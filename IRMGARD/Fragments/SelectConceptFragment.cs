@@ -24,6 +24,8 @@ namespace IRMGARD
                     return new ShortLongVowelFPSCFragment();
                 case LevelType.FourPicturesSelectConcept:
                     return new FourPicturesSelectConceptFragment();
+                case LevelType.WordqueueSC:
+                    return new WordqueueSCFragment();
                 case LevelType.LetterpuzzleSC:
                     return new LetterpuzzleSCFragment();
                 case LevelType.SpeakerSC:
@@ -32,6 +34,146 @@ namespace IRMGARD
                 default:
                     return new SelectConceptFragment();
             }
+        }
+    }
+
+    public class WordqueueSCFragment : SelectConceptFragment
+    {
+        const int Padding = 4;
+
+        const int solutionWordCount = 3;
+        const int optionWordCount = 12;
+        const int LettersPerRow = 30;
+
+        LinearLayout llHeaderItems;
+
+        protected override void InitBaseLayoutView(View layoutView)
+        {
+            llHeaderItems = layoutView.FindViewById<LinearLayout>(Resource.Id.llHeaderItems);
+
+            var llTaskItemRows = layoutView.FindViewById<LinearLayout>(Resource.Id.llTaskItemRows);
+            llTaskItemRows.SetPadding(ToPx(Padding), ToPx(Padding), ToPx(Padding), ToPx(Padding));    // Set spacing
+            llTaskItemRows.SetBackgroundColor(Android.Graphics.Color.White);
+
+            base.InitBaseLayoutView(layoutView);
+        }
+
+        protected override void TransformTaskItems()
+        {
+            var selectConcept = Lesson.DeepCopy();
+
+            var artDef = selectConcept.NamedConcepts["ArtDef"];
+            var artUndef = selectConcept.NamedConcepts["ArtUndef"];
+            var persPronSing = selectConcept.NamedConcepts["PersPronSing"];
+            var persPronPlu = selectConcept.NamedConcepts["PersPronPlu"];
+            var nounSing = selectConcept.NamedConcepts["NounSing"];
+            var nounPlu = selectConcept.NamedConcepts["NounPlu"];
+            var verbPres = selectConcept.NamedConcepts["VerbPres"];
+            var verbPast = selectConcept.NamedConcepts["VerbPast"];
+
+            var concepts = new List<Concept>();
+
+            var random = new Random();
+            switch (random.Next(0, 8))
+            {
+                case 0:
+                    AddToConcepts(concepts, artDef, artUndef.Concat(persPronSing.Concat(nounSing)).ToList());
+                    break;
+                case 1:
+                    AddToConcepts(concepts, artUndef, artDef.Concat(persPronSing.Concat(nounPlu)).ToList());
+                    break;
+                case 2:
+                    AddToConcepts(concepts, persPronSing, artUndef.Concat(persPronPlu.Concat(nounSing)).ToList());
+                    break;
+                case 3:
+                    AddToConcepts(concepts, persPronPlu, artDef.Concat(persPronPlu.Concat(nounPlu)).ToList());
+                    break;
+                case 4:
+                    AddToConcepts(concepts, nounSing, verbPres.Concat(nounPlu.Concat(persPronSing)).ToList());
+                    break;
+                case 5:
+                    AddToConcepts(concepts, nounPlu, verbPast.Concat(nounSing.Concat(artUndef)).ToList());
+                    break;
+                case 6:
+                    AddToConcepts(concepts, verbPres, nounPlu.Concat(verbPast.Concat(persPronPlu)).ToList());
+                    break;
+                case 7:
+                    AddToConcepts(concepts, verbPast, nounSing.Concat(verbPres.Concat(artDef)).ToList());
+                    break;
+            }
+
+            if (exercise == null)
+            {
+                exercise = new SelectConceptExercise();
+            }
+            exercise.TaskItems = new List<List<Concept>>();
+            int letterCount = 0;
+            var row = new List<Concept>();
+            foreach (var concept in concepts)
+            {
+                var word = concept as Word;
+                word.ShowAsPlainText = true;
+                if (letterCount + word.Text.Length > LettersPerRow)
+                {
+                    exercise.TaskItems.Add(row);
+                    letterCount = 0;
+                    row = new List<Concept>();
+                }
+
+                letterCount += word.Text.Length;
+                row.Add(word);
+            }
+            exercise.TaskItems.Add(row);
+
+            Lesson.LeftAlignItems = Enumerable.Repeat<bool>(true, exercise.TaskItems.Count).ToArray();
+        }
+
+        void AddToConcepts(List<Concept> concepts, List<Concept> solutionConcepts, List<Concept> optionConcepts)
+        {
+            // Add speaker to header items row
+            llHeaderItems.RemoveAllViews();
+            llHeaderItems.AddView(CreateConceptView(solutionConcepts.FirstOrDefault()));
+            llHeaderItems.Visibility = ViewStates.Visible;
+
+            // Add solutions
+            concepts.AddRange(solutionConcepts.Where(item => item is Word).PickRandomItems(solutionWordCount).Select(item => { item.IsSolution = true; return item; }));
+
+            // Add options
+            concepts.AddRange(optionConcepts.Where(item => item is Word).PickRandomItems(optionWordCount).Select(item => { item.IsOption = true; return item; }));
+
+            concepts.Shuffle();
+        }
+
+        protected override View CreateAndInitConceptView(Concept concept)
+        {
+            var container = base.CreateAndInitConceptView(concept) as ViewGroup;
+            var lp = container.LayoutParameters as LinearLayout.LayoutParams;
+            lp.SetMargins(0, 0, 0, 0);           // Set spacing
+            container.SetPadding(0, 0, 0, 0);    // Set spacing
+
+            return container;
+        }
+
+        protected override bool IsTextCardCallback(BaseText concept)
+        {
+            return false;
+        }
+
+        public override void CheckSolution()
+        {
+            for (int i = 0; i < llTaskItemRows.ChildCount; i++)
+            {
+                var view = (ViewGroup)llTaskItemRows.GetChildAt(i);
+                var llTaskItemRow = view.FindViewById<LinearLayout>(Resource.Id.llTaskItemRow);
+                for (int k = 0; k < llTaskItemRow.ChildCount; k++)
+                {
+                    var conceptContainer = llTaskItemRow.GetChildAt(k) as ViewGroup;
+                    var lp = conceptContainer.LayoutParameters as LinearLayout.LayoutParams;
+                    conceptContainer.SetPadding(ToPx(2), ToPx(2), ToPx(2), ToPx(2));    // Set spacing
+                }
+            }
+
+            base.CheckSolution();
         }
     }
 
