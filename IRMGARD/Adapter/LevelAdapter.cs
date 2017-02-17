@@ -40,9 +40,23 @@ namespace IRMGARD
             text1.Typeface = FontHelper.Get(context, FontHelper.Font.StandardBold);
             text1.SetPadding(text1.PaddingLeft, 38, text1.PaddingRight, 38);
 
-			view.SetBackgroundColor(Android.Graphics.Color.ParseColor (items [position].Color));
+            // Reduce alpha when not available
+            if (!items[position].IsEnabled)
+            {
+                view.SetBackgroundColor(Android.Graphics.Color.WhiteSmoke);
+                view.Alpha = (float)0.5;
+            }
+            else
+            {
+                view.SetBackgroundColor(Android.Graphics.Color.ParseColor(items[position].Color));
+                view.Alpha = (float)1;
+            }
+
+            /*
+            view.SetBackgroundColor(Android.Graphics.Color.ParseColor (items [position].Color));
             if (!items[position].IsEnabled)
                 view.Alpha = (float)0.5;
+            */
 
 			return view;
 		}
