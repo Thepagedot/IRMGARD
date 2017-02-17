@@ -1595,7 +1595,6 @@
     <AndroidAsset Include="Assets\level2.json" />
     <AndroidAsset Include="Assets\level3.json" />
     <AndroidAsset Include="Assets\level4.json" />
-    <AndroidAsset Include="Assets\level9.json" />
     <AndroidAsset Include="Assets\level5.json" />
     <AndroidAsset Include="Assets\level6.json" />
     <AndroidAsset Include="Assets\level7.json" />
