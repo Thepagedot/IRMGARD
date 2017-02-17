@@ -1294,6 +1294,7 @@
     <AndroidAsset Include="MainAssets\Sounds\Objects\Siegel.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Bohnen.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Limonade.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Nasen.mp3" />
     <AndroidAsset Include="MainAssets\Images\Aepfel.png" />
     <AndroidAsset Include="MainAssets\Images\Gaense.png" />
     <AndroidAsset Include="MainAssets\Images\Hasen.png" />
