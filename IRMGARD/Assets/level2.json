@@ -8,7 +8,7 @@
   "Modules": [
     {
       "Name": "1: A-Z?",
-      "Color": "#d3caaf",
+      "Color": "#e1e9ed",
       "VideoPath": "Videos/L2M1.mp4",
       "Lessons": [
         {
@@ -1185,7 +1185,7 @@
     },
     {
       "Name": "2: Punkt oder Strich?",
-      "Color": "#aec2c4",
+      "Color": "#d3dee3",
       "VideoPath": "Videos/L2M2.mp4",
       "Lessons": [
         {
@@ -6142,7 +6142,7 @@
     },
     {
       "Name": "3: Reimen",
-      "Color": "#d8cad0",
+      "Color": "#c4d3da",
       "VideoPath": "Videos/L2M3.mp4",
       "Lessons": [
         {
@@ -7397,7 +7397,7 @@
     },
     {
       "Name": "4: Einkaufen",
-      "Color": "#c1caad",
+      "Color": "#b5c8d1",
       "VideoPath": "Videos/L2M4.mp4",
       "Lessons": [
         {
@@ -9640,7 +9640,7 @@
     },
     {
       "Name": "5: Umlaute",
-      "Color": "#dbcf93",
+      "Color": "#a6bdc8",
       "VideoPath": "Videos/L2M5.mp4",
       "Lessons": [
         {
@@ -11354,7 +11354,7 @@
     },
     {
       "Name": "6: AU, ÄU oder EU?",
-      "Color": "#e5c8c4",
+      "Color": "#98b2bf",
       "VideoPath": "Videos/L2M6.mp4",
       "Lessons": [
         {
