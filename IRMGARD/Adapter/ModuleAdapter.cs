@@ -70,8 +70,9 @@ namespace IRMGARD
             // Reduce alpha when not available
             if (!items[position].Lessons.Any() || (position > 0 && !items[position - 1].IsCompleted))
             {
-                view.SetBackgroundColor(Android.Graphics.Color.WhiteSmoke);
-                view.Alpha = (float)0.5;
+                //view.SetBackgroundColor(Android.Graphics.Color.WhiteSmoke);
+                view.SetBackgroundColor(Android.Graphics.Color.ParseColor(items[position].Color));
+                view.Alpha = (float)0.2;
             }
             else
             {
