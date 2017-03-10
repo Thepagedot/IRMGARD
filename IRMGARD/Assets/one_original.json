@@ -108,7 +108,7 @@
           },
           {
 		  "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
-          "Title": "Silben lesen und schreiben",
+          "Title": "Reime finden",
           "SoundPath": "soundpathModule2Lesson6.mp3",
           "Hint": "",
           "TypeOfLevel":"PickSyllable",
@@ -116,7 +116,7 @@
           },
           {
 		  "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
-          "Title": "Silben lesen und schreiben",
+          "Title": "Reime finden",
           "SoundPath": "soundpathModule2Lesson7.mp3",
           "Hint": "",
           "TypeOfLevel":"PickSyllable",
@@ -124,7 +124,7 @@
           },
           {
 		  "$type": "IRMGARD.Models.BuildSyllables, IRMGARD",
-          "Title": "Silben lesen und schreiben",
+          "Title": "Reime finden",
           "SoundPath": "soundpathModule2Lesson8.mp3",
           "Hint": "",
           "TypeOfLevel":"BuildSyllables",
@@ -132,7 +132,7 @@
           },
           {
 		  "$type": "IRMGARD.Models.BuildSyllables, IRMGARD",
-          "Title": "Silben lesen und schreiben",
+          "Title": "Reime finden",
           "SoundPath": "soundpathModule2Lesson9.mp3",
           "Hint": "",
           "TypeOfLevel":"BuildSyllables",
@@ -170,7 +170,7 @@
           },
           {
 		  "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
-          "Title": "Silben lesen und schreiben",
+          "Title": "Reime finden",
           "SoundPath": "soundpathModule3Lesson6.mp3",
           "Hint": "",
           "TypeOfLevel":"PickSyllable",
@@ -178,7 +178,7 @@
           },
           {
 		  "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
-          "Title": "Silben lesen und schreiben",
+          "Title": "Reime finden",
           "SoundPath": "soundpathModule3Lesson7.mp3",
           "Hint": "",
           "TypeOfLevel":"PickSyllable",
@@ -186,7 +186,7 @@
           },
           {
 		  "$type": "IRMGARD.Models.BuildSyllables, IRMGARD",
-          "Title": "Silben lesen und schreiben",
+          "Title": "Reime finden",
           "SoundPath": "soundpathModule3Lesson8.mp3",
           "Hint": "",
           "TypeOfLevel":"BuildSyllables",
@@ -194,7 +194,7 @@
           },
           {
 		  "$type": "IRMGARD.Models.BuildSyllables, IRMGARD",
-          "Title": "Silben lesen und schreiben",
+          "Title": "Reime finden",
           "SoundPath": "soundpathModule3Lesson9.mp3",
           "Hint": "",
           "TypeOfLevel":"BuildSyllables",
@@ -232,7 +232,7 @@
             },
             {
 		    "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
-            "Title": "Silben lesen und schreiben",
+            "Title": "Reime finden",
             "SoundPath": "soundpathModule4Lesson6.mp3",
             "Hint": "",
             "TypeOfLevel":"PickSyllable",
@@ -240,7 +240,7 @@
             },
             {
 		    "$type": "IRMGARD.Models.PickSyllable, IRMGARD",
-            "Title": "Silben lesen und schreiben",
+            "Title": "Reime finden",
             "SoundPath": "soundpathModule4Lesson7.mp3",
             "Hint": "",
             "TypeOfLevel":"PickSyllable",
@@ -248,7 +248,7 @@
             },
             {
 		    "$type": "IRMGARD.Models.BuildSyllables, IRMGARD",
-            "Title": "Silben lesen und schreiben",
+            "Title": "Reime finden",
             "SoundPath": "soundpathModule4Lesson8.mp3",
             "Hint": "",
             "TypeOfLevel":"BuildSyllables",
@@ -256,7 +256,7 @@
             },
             {
 		    "$type": "IRMGARD.Models.BuildSyllables, IRMGARD",
-            "Title": "Silben lesen und schreiben",
+            "Title": "Reime finden",
             "SoundPath": "soundpathModule4Lesson9.mp3",
             "Hint": "",
             "TypeOfLevel":"BuildSyllables",
@@ -332,7 +332,7 @@
             },
             {
 		    "$type": "IRMGARD.Models.Memory, IRMGARD",
-            "Title": "Silben lesen und schreiben",
+            "Title": "Reime finden",
             "SoundPath": "soundpathModule6Lesson5.mp3",
             "Hint": "",
             "TypeOfLevel":"Memory",
