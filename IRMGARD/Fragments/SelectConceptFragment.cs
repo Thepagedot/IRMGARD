@@ -37,10 +37,13 @@ namespace IRMGARD
 
     public class LetterpuzzleSCFragment : SelectConceptFragment
     {
+        const string RandChars = "WGRKBDRGPNFMRSWHFGWKMGCXOJGZRJDSLMFRJBQRFHNKJDWQKCGSHB";
         const int Cols = 8;
         const int Rows = 8;
         const int Padding = 4;
 
+        char[] randChars;
+        int randCharsIdx;
         List<Concept> words;
 
         protected override void OnCreateViewConfig()
@@ -62,6 +65,9 @@ namespace IRMGARD
             exercise = exercise.DeepCopy();
 
             var random = new Random();
+
+            randChars = RandChars.ToArray<char>();
+            randCharsIdx = random.Next(0, randChars.Length);
 
             words = exercise.TaskItems[0];
             words.Shuffle();
@@ -95,7 +101,10 @@ namespace IRMGARD
 
         Letter GetRandomLetter(Random random)
         {
-            return CreateLetter(false, char.ToString((char)('A' + random.Next(0, 26))));
+            // return CreateLetter(false, char.ToString((char)('A' + random.Next(0, 26))));
+
+            randCharsIdx = (randCharsIdx + 1 < randChars.Length) ? ++randCharsIdx : 0;
+            return CreateLetter(false, char.ToString(randChars[randCharsIdx]));
         }
 
         List<Concept> CreateDummyRow(Random random)
