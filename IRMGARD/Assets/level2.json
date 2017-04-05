@@ -8,7 +8,7 @@
   "Modules": [
     {
       "Name": "1: A-Z?",
-      "Color": "#d3caaf",
+      "Color": "#e1e9ed",
       "VideoPath": "Videos/L2M1.mp4",
       "Lessons": [
         {
@@ -1184,14 +1184,14 @@
       ]
     },
     {
-      "Name": "2: Punkt oder Strich?",
-      "Color": "#aec2c4",
+      "Name": "2: Selbstlaute",
+      "Color": "#d3dee3",
       "VideoPath": "Videos/L2M2.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 221,
-          "Title": "Punkt oder Strich?",
+          "Title": "Selbstlaute",
           "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 1.mp3",
           "Hint": "Hints/Extra_tip_ich_brauchte_oft_Hilfe_in_Mathe.mp3",
           "TypeOfLevel": "DragIntoGap",
@@ -1457,7 +1457,7 @@
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 222,
-          "Title": "Punkt oder Strich?",
+          "Title": "Selbstlaute",
           "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 2.mp3",
           "Hint": "Hints/Extra_tip_ich_wuerde_so_gern_wissen.mp3",
           "TypeOfLevel": "DragIntoGap",
@@ -2383,7 +2383,7 @@
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 223,
-          "Title": "Punkt oder Strich?",
+          "Title": "Selbstlaute",
           "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 3.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
@@ -3184,7 +3184,7 @@
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 224,
-          "Title": "Punkt oder Strich?",
+          "Title": "Selbstlaute",
           "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 4.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
@@ -3928,7 +3928,7 @@
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 225,
-          "Title": "Kurz oder Lang?",
+          "Title": "Selbstlaute",
           "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 5.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
@@ -4796,7 +4796,7 @@
         {
           "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
           "Id": 226,
-          "Title": "Kurz oder Lang?",
+          "Title": "Selbstlaute",
           "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 6.mp3",
           "TypeOfLevel": "HearTheLetter",
           "SliderLabels": [
@@ -4891,10 +4891,6 @@
               "Id": 2265,
               "LetterLocations": [
                 {
-                  "Location": 1,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_I_in_Iltis_kurz_oder_lang_gesprochen.mp3"
-                },
-                {
                   "Location": 0,
                   "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_O_in_Wolle_kurz_oder_lang_gesprochen.mp3"
                 },
@@ -4913,7 +4909,7 @@
         {
           "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
           "Id": 227,
-          "Title": "Kurz oder Lang?",
+          "Title": "Selbstlaute",
           "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 7.mp3",
           "Hint": "Hints/Extra_tip_wenn_du_dir_nicht_sicher_bist.mp3",
           "TypeOfLevel": "ShortLongVowelFPSC",
@@ -5329,7 +5325,7 @@
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 228,
-          "Title": "Kurz oder Lang?",
+          "Title": "Selbstlaute",
           "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 8.mp3",
           "Hint": "Hints/Extra_tip_hast_du_manchmal_spass.mp3",
           "TypeOfLevel": "DragIntoGap",
@@ -6143,13 +6139,13 @@
     },
     {
       "Name": "3: Reimen",
-      "Color": "#d8cad0",
+      "Color": "#c4d3da",
       "VideoPath": "Videos/L2M3.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 231,
-          "Title": "Silben lesen und schreiben",
+          "Title": "Reime finden",
           "SoundPath": "Intros/Level 2 Modul 3 Aufgabe 1.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
@@ -6465,7 +6461,7 @@
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 232,
-          "Title": "Silben lesen und schreiben",
+          "Title": "Reime finden",
           "SoundPath": "Intros/Level 2 Modul 3 Aufgabe 2.mp3",
           "Hint": "Hints/Extra_tip_reim_doch_mal.mp3",
           "TypeOfLevel": "DragIntoGap",
@@ -6806,7 +6802,7 @@
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 233,
-          "Title": "Silben lesen und schreiben",
+          "Title": "Reime finden",
           "SoundPath": "Intros/Level 2 Modul 3 Aufgabe 3.mp3",
           "TypeOfLevel": "DragIntoGap",
           "UseOptionItemsOnly": true,
@@ -6830,7 +6826,8 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "Hose.png"
+                        "ImagePath": "Hose.png",
+                        "SoundPath": "Objects/Hose.mp3"
                       }
                     ],
                     [
@@ -6891,7 +6888,8 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "Hase.png"
+                        "ImagePath": "Hase.png",
+                        "SoundPath": "Objects/Hase.mp3"
                       }
                     ],
                     [
@@ -6958,7 +6956,8 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "Lose.png"
+                        "ImagePath": "Lose.png",
+                        "SoundPath": "Objects/Lose.mp3"
                       }
                     ],
                     [
@@ -7019,7 +7018,8 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "Mann.png"
+                        "ImagePath": "Mann.png",
+                        "SoundPath": "Objects/Mann.mp3"
                       }
                     ],
                     [
@@ -7090,7 +7090,8 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "Sonne.png"
+                        "ImagePath": "Sonne.png",
+                        "SoundPath": "Objects/Sonne.mp3"
                       }
                     ],
                     [
@@ -7162,7 +7163,8 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "Rolle.png"
+                        "ImagePath": "Rolle.png",
+                        "SoundPath": "Objects/Rolle.mp3"
                       }
                     ],
                     [
@@ -7234,7 +7236,8 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
-                        "ImagePath": "Kuss.png"
+                        "ImagePath": "Kuss.png",
+                        "SoundPath": "Objects/Kuss.mp3"
                       }
                     ],
                     [
@@ -7291,7 +7294,7 @@
         {
           "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
           "Id": 234,
-          "Title": "Silben lesen und schreiben",
+          "Title": "Reime finden",
           "SoundPath": "Intros/Level 2 Modul 3 Aufgabe 4.mp3",
           "TypeOfLevel": "FourPicturesSelectConcept",
           "SingleChoice": true,
@@ -7306,26 +7309,31 @@
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsSolution": true,
-                        "ImagePath": "Sonne.png"
+                        "ImagePath": "Sonne.png",
+                        "SoundPath": "Objects/Sonne.mp3"
                       }
                     ]
                   ],
                   "OptionItems": [
                     {
                       "$type": "IRMGARD.Models.Picture, IRMGARD",
-                      "ImagePath": "Hose.png"
+                      "ImagePath": "Hose.png",
+                      "SoundPath": "Objects/Hose.mp3"
                     },
                     {
                       "$type": "IRMGARD.Models.Picture, IRMGARD",
-                      "ImagePath": "Rose.png"
+                      "ImagePath": "Rose.png",
+                      "SoundPath": "Objects/Rose.mp3"
                     },
                     {
                       "$type": "IRMGARD.Models.Picture, IRMGARD",
-                      "ImagePath": "Dose.png"
+                      "ImagePath": "Dose.png",
+                      "SoundPath": "Objects/Dose.mp3"
                     },
                     {
                       "$type": "IRMGARD.Models.Picture, IRMGARD",
-                      "ImagePath": "Lose.png"
+                      "ImagePath": "Lose.png",
+                      "SoundPath": "Objects/Lose.mp3"
                     }
                   ]
                 }
@@ -7341,22 +7349,26 @@
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsSolution": true,
-                        "ImagePath": "Waelder.png"
+                        "ImagePath": "Wald.png",
+                        "SoundPath": "Objects/Wald.mp3"
                       }
                     ]
                   ],
                   "OptionItems": [
                     {
                       "$type": "IRMGARD.Models.Picture, IRMGARD",
-                      "ImagePath": "Hasen.png"
+                      "ImagePath": "Hasen.png",
+                      "SoundPath": "Objects/Hasen.mp3"
                     },
                     {
                       "$type": "IRMGARD.Models.Picture, IRMGARD",
-                      "ImagePath": "Nasen.png"
+                      "ImagePath": "Nasen.png",
+                      "SoundPath": "Objects/Nasen.mp3"
                     },
                     {
                       "$type": "IRMGARD.Models.Picture, IRMGARD",
-                      "ImagePath": "Rasen.png"
+                      "ImagePath": "Rasen.png",
+                      "SoundPath": "Objects/Rasen.mp3"
                     }
                   ]
                 }
@@ -7372,22 +7384,26 @@
                       {
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsSolution": true,
-                        "ImagePath": "Huete.png"
+                        "ImagePath": "Hut.png",
+                        "SoundPath": "Objects/Hut.mp3"
                       }
                     ]
                   ],
                   "OptionItems": [
                     {
                       "$type": "IRMGARD.Models.Picture, IRMGARD",
-                      "ImagePath": "Sonne.png"
+                      "ImagePath": "Sonne.png",
+                      "SoundPath": "Objects/Sonne.mp3"
                     },
                     {
                       "$type": "IRMGARD.Models.Picture, IRMGARD",
-                      "ImagePath": "Tonne.png"
+                      "ImagePath": "Tonne.png",
+                      "SoundPath": "Objects/Tonne.mp3"
                     },
                     {
                       "$type": "IRMGARD.Models.Picture, IRMGARD",
-                      "ImagePath": "Wonne.png"
+                      "ImagePath": "Wonne.png",
+                      "SoundPath": "Objects/Wonne.mp3"
                     }
                   ]
                 }
@@ -7399,7 +7415,7 @@
     },
     {
       "Name": "4: Einkaufen",
-      "Color": "#c1caad",
+      "Color": "#b5c8d1",
       "VideoPath": "Videos/L2M4.mp4",
       "Lessons": [
         {
@@ -9644,7 +9660,7 @@
     },
     {
       "Name": "5: Umlaute",
-      "Color": "#dbcf93",
+      "Color": "#a6bdc8",
       "VideoPath": "Videos/L2M5.mp4",
       "Lessons": [
         {
@@ -11041,7 +11057,7 @@
         {
           "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
           "Id": 255,
-          "Title": "ÄÄÄÄÄÄÄÄ?",
+          "Title": "Ä oder E?",
           "SoundPath": "Intros/Level 2 Modul 5 Aufgabe 5.mp3",
           "Hint": "Hints/Extra_tip_denkst_du_ans_aufschreiben.mp3",
           "TypeOfLevel": "HearTheLetter",
@@ -11359,7 +11375,7 @@
     },
     {
       "Name": "6: AU, ÄU oder EU?",
-      "Color": "#e5c8c4",
+      "Color": "#98b2bf",
       "VideoPath": "Videos/L2M6.mp4",
       "Lessons": [
         {

@@ -25,7 +25,7 @@
     <style name="ToolbarTitle">
         <item name="android:textColor">@android:color/black</item>
         <item name="android:typeface">monospace</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">18dp</item>
     </style>
 
     <style name="IrmgardTheme" parent="IrmgardTheme.Base">

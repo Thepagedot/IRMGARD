@@ -16,8 +16,6 @@ namespace IRMGARD
         {
             get
             {
-                // TODO Release: Switch between "IRMGARD" and "IRMGARD Prerelease" app configuration
-
                 // IRMGARD
                 return "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAiizOn/iHw6H3AuNg0TQG1qQv0lT2SsCiY1GdfDoYXKzIrLRoxYw1ozehxR2cb3VrglChUK+/4mV0I2lAkh3yAedT6pyRdPcWk4Nev5Tak3w8aXN6UjkZj/BgxgVVQZtYrFbx5vikx9nT1TNoUlkylXAXAKRmbGP1Kxc7FXakZJvflsd1rlJSx9bsFtHyeUBeuZGmEbB8k6qNdgsr4xy4BNrfKSnn/mJ64GmJR+YiH5SK0SHWpITATtzWRLBaMD/LPDRYFf6jvAClkFHJdm3tCjGIAS0uhIbCotfmEFNCzzhs0EN11iEv40uIMUMAQP1jlduPoxNb/WVulq21QQ0D8QIDAQAB";
 

@@ -1,14 +1,14 @@
 {
-  "Id":  1,
+  "Id": 1,
   "Name": "Level 1",
-  "Color": "#BE6E66",
+  "Color": "#bf6f66",
   "IsEnabled": true,
   "IsCompleted": false,
   "VideoPath": null,
   "Modules": [
     {
       "Name": "1: AEIOU",
-      "Color": "#DDD6BF",
+      "Color": "#f2e2e0",
       "VideoPath": "Videos/L1M1.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
@@ -673,7 +673,7 @@
     },
     {
       "Name": "2: LMNRS",
-      "Color": "#AFC3C4",
+      "Color": "#ecd4d1",
       "VideoPath": "Videos/L1M2.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
@@ -2405,7 +2405,7 @@
     },
     {
       "Name": "3: FHJWZ",
-      "Color": "#d8cbd1",
+      "Color": "#e5c5c2",
       "VideoPath": "Videos/L1M3.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
@@ -4213,7 +4213,7 @@
     },
     {
       "Name": "4: BPGKDT",
-      "Color": "#c1cbac",
+      "Color": "#dfb7b3",
       "VideoPath": "Videos/L1M4.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
@@ -6409,7 +6409,7 @@
     },
     {
       "Name": "5: CQVXY",
-      "Color": "#dcd08f",
+      "Color": "#d8a9a3",
       "VideoPath": "Videos/L1M5.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
@@ -6750,7 +6750,7 @@
     },
     {
       "Name": "6: ABC",
-      "Color": "#e5c8c4",
+      "Color": "#d29a94",
       "VideoPath": "Videos/L1M6.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
