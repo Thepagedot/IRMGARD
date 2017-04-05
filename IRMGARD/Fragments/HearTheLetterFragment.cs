@@ -1,4 +1,8 @@
-﻿using Android.OS;
+﻿using System;
+
+using Android.Graphics;
+using Android.Graphics.Drawables;
+using Android.OS;
 using Android.Views;
 using Android.Widget;
 
@@ -7,10 +11,11 @@ using IRMGARD.Shared;
 
 namespace IRMGARD
 {
-    public class HearTheLetterFragment : LessonFragment<HearTheLetter>
+    public class HearTheLetterFragment : BaseConceptFragment<HearTheLetter>
     {
-        ImageButton ibSpeaker;
+        ImageView ivSpeaker;
         SeekBar sbLetterPos;
+        RelativeLayout rlSliderLabels;
 
         HearTheLetterOption currentOption;
         int selectedLocation;
@@ -18,13 +23,41 @@ namespace IRMGARD
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             View view = inflater.Inflate(Resource.Layout.HearTheLetter, container, false);
-            ibSpeaker = view.FindViewById<ImageButton>(Resource.Id.ibSpeaker);
-            ibSpeaker.Click += ((e, sender) => PlayTaskDesc());
+            ivSpeaker = view.FindViewById<ImageView>(Resource.Id.ivSpeaker);
+            ivSpeaker.Click += ((e, sender) => PlayTaskDesc());
 
             sbLetterPos = view.FindViewById<SeekBar>(Resource.Id.sbLetterPos);
+            GradientDrawable gd = (GradientDrawable)sbLetterPos.Thumb;
+            gd.SetColor(Activity.GetAccentColor());
+            if (IsEven())
+            {
+                sbLetterPos.SetBackgroundResource(0);
+            }
             sbLetterPos.ProgressChanged += (object sender, SeekBar.ProgressChangedEventArgs e) => {
                 selectedLocation = ConvertProgressToLocation(e.Progress);
             };
+
+            rlSliderLabels = view.FindViewById<RelativeLayout>(Resource.Id.rlSliderLabels);
+            int align = 0;
+            foreach (var label in Lesson.SliderLabels)
+            {
+                var labelView = CreateConceptView(label);
+                rlSliderLabels.AddView(labelView);
+                var lp = (labelView.LayoutParameters as RelativeLayout.LayoutParams);
+                switch (align)
+                {
+                    case 0:
+                        lp.AddRule(LayoutRules.AlignParentLeft);
+                        break;
+                    case 1:
+                        lp.AddRule(LayoutRules.AlignParentRight);
+                        break;
+                    case 2:
+                        lp.AddRule(LayoutRules.CenterInParent);
+                        break;
+                }
+                align++;
+            }
 
             InitIteration();
 
@@ -33,7 +66,14 @@ namespace IRMGARD
 
         private int ConvertProgressToLocation(int p)
         {
-            return (p < 10) ? 0 : ((p <= 20) ? 1 : ((p <= 30) ? 2 : 0));
+            return IsEven()
+                ? (p <= 15) ? 0 : ((p <= 30) ? 1 : 0)
+                : (p < 10) ? 0 : ((p <= 20) ? 1 : ((p <= 30) ? 2 : 0));
+        }
+
+        bool IsEven()
+        {
+            return (Lesson.SliderLabels == null || Lesson.SliderLabels.Count % 2 == 0);
         }
 
         protected override void InitIteration()
@@ -54,8 +94,6 @@ namespace IRMGARD
 
         void PlayTaskDesc()
         {
-            if (SoundPlayer.IsPlaying)
-                SoundPlayer.Stop();
             SoundPlayer.PlaySound(Activity.BaseContext, currentOption.SoundPath);
         }
 

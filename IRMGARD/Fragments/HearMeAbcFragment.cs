@@ -50,24 +50,17 @@ namespace IRMGARD
 
         void PlayABCSong()
         {
-            if (SoundPlayer.IsPlaying)
-                SoundPlayer.Stop();
             SoundPlayer.PlaySound(Activity.BaseContext, Lesson.SoundPathABC);
         }
 
         void PlayTaskDesc()
         {
-            if (SoundPlayer.IsPlaying)
-                SoundPlayer.Stop();
             SoundPlayer.PlaySound(Activity.BaseContext, GetCurrentIteration<HearMeAbcIteration>().SoundPath);
         }
 
         void GridView_ItemClick (object sender, AdapterView.ItemClickEventArgs e)
         {
             var hearMeAbcLetter = GetCurrentIteration<HearMeAbcIteration>().Letters.ElementAt(e.Position);
-
-            if (SoundPlayer.IsPlaying)
-                SoundPlayer.Stop();
             SoundPlayer.PlaySound(Activity.BaseContext, hearMeAbcLetter.Media.SoundPath);
         }
 

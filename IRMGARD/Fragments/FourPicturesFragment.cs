@@ -101,8 +101,6 @@ namespace IRMGARD
             
             cards[position].SetCardBackgroundColor(Resources.GetColor(Resource.Color.selected_background));
 
-            if (SoundPlayer.IsPlaying)
-                SoundPlayer.Stop();
             SoundPlayer.PlaySound(Activity.BaseContext, currentOptions.ElementAt(position).Media.SoundPath);           
 
             FireUserInteracted(true);

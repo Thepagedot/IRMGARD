@@ -1,14 +1,15 @@
 {
+  "Id": 1,
   "Name": "Level 1",
-  "Color": "#BE6E66",
+  "Color": "#bf6f66",
   "IsEnabled": true,
   "IsCompleted": false,
   "VideoPath": null,
   "Modules": [
     {
       "Name": "1: AEIOU",
-      "Color": "#DDD6BF",
-      "VideoPath": "Videos/Handy_Modul1_720p.mp4",
+      "Color": "#f2e2e0",
+      "VideoPath": "Videos/L1M1.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -16,7 +17,7 @@
           "Id": 111,
           "Title": "AEIOU",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 1.mp3",
+          "SoundPath": "Intros/Level 1 Modul 1 Aufgabe 1.mp3",
           "Hint": "Hints/05_extra_Tip_es_gibt_so_viele_erwachsene_in_dtschl.mp3",
           "TypeOfLevel": "HearMe",
           "Iterations": [
@@ -87,7 +88,7 @@
           "Id": 112,
           "Title": "Schreiben",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 2.mp3",
+          "SoundPath": "Intros/Level 1 Modul 1 Aufgabe 2.mp3",
           "Hint": "Hints/15_extra_Tip_schoen_waere_es_wenn_du_dir_ein_Heft_und_einen_stift_anschaffen_wuerdest.mp3",
           "TypeOfLevel": "LetterWrite",
           "Iterations": [
@@ -173,7 +174,7 @@
           "Id": 113,
           "Title": "AEIOU",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 3.mp3",
+          "SoundPath": "Intros/Level 1 Modul 1 Aufgabe 3.mp3",
           "TypeOfLevel": "FourPictures",
           "Options": [
             {
@@ -360,7 +361,7 @@
           "Id": 114,
           "Title": "A oder a?",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 4.mp3",
+          "SoundPath": "Intros/Level 1 Modul 1 Aufgabe 4.mp3",
           "Hint": "Hints/06_extra_Tip_es_ist_wichtig_moeglichst_taeglich_zu_ueben.mp3",
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
@@ -393,7 +394,7 @@
           "Id": 115,
           "Title": "A?IOU",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 1 Aufgabe 5.mp3",
+          "SoundPath": "Intros/Level 1 Modul 1 Aufgabe 5.mp3",
           "TypeOfLevel": "FindMissingLetter",
           "Iterations": [
             {
@@ -672,8 +673,8 @@
     },
     {
       "Name": "2: LMNRS",
-      "Color": "#AFC3C4",
-      "VideoPath": "Videos/Handy_Modul2_720p.mp4",
+      "Color": "#ecd4d1",
+      "VideoPath": "Videos/L1M2.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -681,7 +682,7 @@
           "Id": 121,
           "Title": "LMNRS",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 2-5 Aufgabe 1.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 1.mp3",
           "TypeOfLevel": "HearMe",
           "Iterations": [
             {
@@ -751,7 +752,7 @@
           "Id": 122,
           "Title": "Schreiben",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 2-5 Aufgabe 2.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 2.mp3",
           "Hint": "Hints/02_extra_Tip_arbeite_nicht_mit_losen_zetteln.mp3",
           "TypeOfLevel": "LetterWrite",
           "Iterations": [
@@ -837,7 +838,7 @@
           "Id": 123,
           "Title": "L wie ?",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 3.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 3.mp3",
           "Hint": "Hints/17_extra_Tip_trinkst_du_auch_genug_wasser.mp3",
           "TypeOfLevel": "FourPictures",
           "Options": [
@@ -1025,7 +1026,7 @@
           "Id": 124,
           "Title": "R oder r?",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 2-5 Aufgabe 4.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 4.mp3",
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
             {
@@ -1057,7 +1058,7 @@
           "Id": 126,
           "Title": "M+A=MA",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 6.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 6.mp3",
           "SyllablePath": "Syllables/LMNRS",
           "Hint": "Hints/07_extra_Tip_hast_du_freunde_zum_erzaehlen.mp3",
           "TypeOfLevel": "PickSyllable",
@@ -1139,7 +1140,7 @@
           "Id": 127,
           "Title": "A+M=AM",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 7.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 7.mp3",
           "SyllablePath": "Syllables/LMNRS",
           "TypeOfLevel": "PickSyllable",
           "Iterations": [
@@ -1240,7 +1241,7 @@
           "Id": 128,
           "Title": "Silben schreiben",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 8.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 8.mp3",
           "Hint": "Hints/20_extra_Tip_wenn_du_jeden_tag_ein_bisschen_mit_mir_uebst_wirst_du_bestimmt_bald_lesen_koennen.mp3",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
@@ -1996,7 +1997,7 @@
           "Id": 129,
           "Title": "Wörter schreiben",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 9.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 9.mp3",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
             {
@@ -2404,8 +2405,8 @@
     },
     {
       "Name": "3: FHJWZ",
-      "Color": "#d8cbd1",
-      "VideoPath": "Videos/Handy_Modul3_720p.mp4",
+      "Color": "#e5c5c2",
+      "VideoPath": "Videos/L1M3.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -2414,7 +2415,7 @@
           "Title": "FHJWZ",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Level-1/Level 1 Modul 2-5 Aufgabe 1.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 1.mp3",
           "TypeOfLevel": "HearMe",
           "Iterations": [
             {
@@ -2484,7 +2485,7 @@
           "Id": 132,
           "Title": "Schreiben",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 2-5 Aufgabe 2.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 2.mp3",
           "Hint": "Hints/03_extra_Tip_du_kannst_mit_deinem_finger_im_sand_oder_schnee_schreiben.mp3",
           "TypeOfLevel": "LetterWrite",
           "Iterations": [
@@ -2571,7 +2572,7 @@
           "Title": "F wie ?",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 3.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 3.mp3",
           "TypeOfLevel": "FourPictures",
           "Options": [
             {
@@ -2752,7 +2753,7 @@
           "Title": "F oder f?",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Level-1/Level 1 Modul 2-5 Aufgabe 4.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 4.mp3",
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
             {
@@ -2785,7 +2786,7 @@
           "Title": "W+O=WO",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 6.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 6.mp3",
           "SyllablePath": "Syllables/FHJWZ",
           "Hint": "Hints/08_extra_Tip_hole_dir_eine_Zeitung.mp3",
           "TypeOfLevel": "PickSyllable",
@@ -2868,7 +2869,7 @@
           "Title": "O+F=OF",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 7.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 7.mp3",
           "SyllablePath": "Syllables/FHJWZ",
           "TypeOfLevel": "PickSyllable",
           "Iterations": [
@@ -2970,7 +2971,7 @@
           "Title": "Silben schreiben",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 8.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 8.mp3",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
             {
@@ -3726,7 +3727,7 @@
           "Title": "Wörter schreiben",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 9.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 9.mp3",
           "Hint": "Hints/18_extra_Tip_vergisst_du_manchmal_was_du_schon_geuebt_hast.mp3",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
@@ -4212,8 +4213,8 @@
     },
     {
       "Name": "4: BPGKDT",
-      "Color": "#c1cbac",
-      "VideoPath": "Videos/Handy_Modul4_720p.mp4",
+      "Color": "#dfb7b3",
+      "VideoPath": "Videos/L1M4.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -4222,7 +4223,7 @@
           "Title": "BDGKPT",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Level-1/Level 1 Modul 2-5 Aufgabe 1.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 1.mp3",
           "TypeOfLevel": "HearMe",
           "Iterations": [
             {
@@ -4304,7 +4305,7 @@
           "Id": 142,
           "Title": "Schreiben",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 2-5 Aufgabe 2.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 2.mp3",
           "TypeOfLevel": "LetterWrite",
           "Iterations": [
             {
@@ -4405,7 +4406,7 @@
           "Title": "P wie ?",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 3.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 3.mp3",
           "Hint": "Hints/09_extra_Tip_ich_finde_es_toll_dass_du_immernoch_dabei_bist.mp3",
           "TypeOfLevel": "FourPictures",
           "Options": [
@@ -4629,7 +4630,7 @@
           "Title": "B oder b?",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Level-1/Level 1 Modul 2-5 Aufgabe 4.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 4.mp3",
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
             {
@@ -4664,7 +4665,7 @@
           "Title": "B+O=BO",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 6.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 6.mp3",
           "SyllablePath": "Syllables/BDGKPT",
           "TypeOfLevel": "PickSyllable",
           "Iterations": [
@@ -4760,7 +4761,7 @@
           "Title": "A+B=AB",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 7.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 7.mp3",
           "SyllablePath": "Syllables/BDGKPT",
           "TypeOfLevel": "PickSyllable",
           "Iterations": [
@@ -4872,7 +4873,7 @@
           "Title": "Silben schreiben",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 8.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 8.mp3",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
             {
@@ -5777,7 +5778,7 @@
           "Title": "Wörter schreiben",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 9.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 9.mp3",
           "Hint": "Hints/14_extra_Tip_schau_dich_doch_mal_um.mp3",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
@@ -6408,8 +6409,8 @@
     },
     {
       "Name": "5: CQVXY",
-      "Color": "#dcd08f",
-      "VideoPath": "Videos/Handy_Modul5_720p.mp4",
+      "Color": "#d8a9a3",
+      "VideoPath": "Videos/L1M5.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -6418,7 +6419,7 @@
           "Title": "CQVXY",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Level-1/Level 1 Modul 2-5 Aufgabe 1.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 1.mp3",
           "TypeOfLevel": "HearMe",
           "Iterations": [
             {
@@ -6488,7 +6489,7 @@
           "Id": 152,
           "Title": "Schreiben",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 2-5 Aufgabe 2.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 2.mp3",
           "Hint": "Hints/12_extra_Tip_kannst_du_deinen_namen_schrieben.mp3",
           "TypeOfLevel": "LetterWrite",
           "Iterations": [
@@ -6575,7 +6576,7 @@
           "Title": "X oder x?",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Level-1/Level 1 Modul 2-5 Aufgabe 4.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 4.mp3",
           "Hint": "Hints/16_extra_Tip_super_du_hast_echt_durchhaltevermoegen.mp3",
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
@@ -6608,9 +6609,26 @@
           "Id": 155,
           "Title": "Wo?",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 5 Aufgabe 5.mp3",
+          "SoundPath": "Intros/Level 1 Modul 5 Aufgabe 5.mp3",
           "Hint": "Hints/21_extra_Tip_wenn_etwas_nicht_auf_anhieb_klappt_nicht_verzagen.mp3",
           "TypeOfLevel": "HearTheLetter",
+          "SliderLabels": [
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": " < ",
+              "ShowAsPlainText": true
+            },
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": " > ",
+              "ShowAsPlainText": true
+            },
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": " | ",
+              "ShowAsPlainText": true
+            }
+          ],
           "Iterations": [
             {
               "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
@@ -6619,15 +6637,15 @@
               "LetterLocations": [
                 {
                   "Location": 2,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_A_in_Ina.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_A_in_Ina.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_B_in_Eber.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_B_in_Eber.mp3"
                 },
                 {
                   "Location": 2,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_D_in_Mond.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_D_in_Mond.mp3"
                 }
               ]
             },
@@ -6638,15 +6656,15 @@
               "LetterLocations": [
                 {
                   "Location": 2,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_E_in_Nase.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_E_in_Nase.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_F_in_Affe.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_F_in_Affe.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_G_in_Regen.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_G_in_Regen.mp3"
                 }
               ]
             },
@@ -6657,15 +6675,15 @@
               "LetterLocations": [
                 {
                   "Location": 0,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_I_in_Igel.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_I_in_Igel.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_K_in_Kuchen.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_K_in_Kuchen.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_L_in_Liege.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_L_in_Liege.mp3"
                 }
               ]
             },
@@ -6676,15 +6694,15 @@
               "LetterLocations": [
                 {
                   "Location": 0,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_M_in_Mund.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_M_in_Mund.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_N_in_Sonne.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_N_in_Sonne.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_O_in_Ofen.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_O_in_Ofen.mp3"
                 }
               ]
             },
@@ -6695,15 +6713,15 @@
               "LetterLocations": [
                 {
                   "Location": 1,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_P_in_Lupe.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_P_in_Lupe.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_R_in_Rose.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_R_in_Rose.mp3"
                 },
                 {
                   "Location": 2,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_T_in_Boot.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_T_in_Boot.mp3"
                 }
               ]
             },
@@ -6714,15 +6732,15 @@
               "LetterLocations": [
                 {
                   "Location": 0,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_U_in_Uhr.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_U_in_Uhr.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_W_in_Wald.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_W_in_Wald.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Tasks/5-5/wo_hoerst_du_Z_in_Zauberer.mp3"
+                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_Z_in_Zauberer.mp3"
                 }
               ]
             }
@@ -6732,16 +6750,16 @@
     },
     {
       "Name": "6: ABC",
-      "Color": "#e5c8c4",
-      "VideoPath": "Videos/Handy_Modul6_720p.mp4",
+      "Color": "#d29a94",
+      "VideoPath": "Videos/L1M6.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
           "$type": "IRMGARD.Models.HearMeAbc, IRMGARD",
           "Id": 161,
           "Title": "Von A-Z",
-          "SoundPath": "Level-1/Level 1 Modul 6 Aufgabe 1.mp3",
-          "SoundPathABC": "Tasks/6-1/ABC_Song.mp3",
+          "SoundPath": "Intros/Level 1 Modul 6 Aufgabe 1.mp3",
+          "SoundPathABC": "Exercises/1-6-1/ABC_Song.mp3",
           "TypeOfLevel": "HearMeAbc",
           "Iterations": [
             {
@@ -6754,7 +6772,7 @@
                 "D",
                 "E"
               ],
-              "SoundPath": "Tasks/6-1/A-E.mp3",
+              "SoundPath": "Exercises/1-6-1/A-E.mp3",
               "Letters": [
                 {
                   "Letter": "A",
@@ -6801,7 +6819,7 @@
                 "I",
                 "J"
               ],
-              "SoundPath": "Tasks/6-1/F-J.mp3",
+              "SoundPath": "Exercises/1-6-1/F-J.mp3",
               "Letters": [
                 {
                   "Prepend": "e",
@@ -6849,7 +6867,7 @@
                 "N",
                 "O"
               ],
-              "SoundPath": "Tasks/6-1/K-O.mp3",
+              "SoundPath": "Exercises/1-6-1/K-O.mp3",
               "Letters": [
                 {
                   "Letter": "K",
@@ -6897,7 +6915,7 @@
                 "S",
                 "T"
               ],
-              "SoundPath": "Tasks/6-1/P-T.mp3",
+              "SoundPath": "Exercises/1-6-1/P-T.mp3",
               "Letters": [
                 {
                   "Letter": "P",
@@ -6947,7 +6965,7 @@
                 "Y",
                 "Z"
               ],
-              "SoundPath": "Tasks/6-1/U-Z.mp3",
+              "SoundPath": "Exercises/1-6-1/U-Z.mp3",
               "Letters": [
                 {
                   "Letter": "U",
@@ -6998,7 +7016,7 @@
           "$type": "IRMGARD.Models.AbcRank, IRMGARD",
           "Id": 162,
           "Title": "ACB?",
-          "SoundPath": "Level-1/Level 1 Modul 6 Aufgabe 2.mp3",
+          "SoundPath": "Intros/Level 1 Modul 6 Aufgabe 2.mp3",
           "Hint": "Hints/01_extra_Tip_belohn_dich.mp3",
           "TypeOfLevel": "AbcRank",
           "Iterations": [
@@ -7163,7 +7181,7 @@
           "$type": "IRMGARD.Models.AbcRank, IRMGARD",
           "Id": 163,
           "Title": "ACB?",
-          "SoundPath": "Level-1/Level 1 Modul 6 Aufgabe 3.mp3",
+          "SoundPath": "Intros/Level 1 Modul 6 Aufgabe 3.mp3",
           "Hint": "Hints/11_extra_Tip_ich_freue_mich_dass_du_schon_so_weit_gekommen_bist.mp3",
           "TypeOfLevel": "AbcRank",
           "Iterations": [
@@ -7404,7 +7422,7 @@
           "Id": 165,
           "Title": "Memory",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 6 Aufgabe 5.mp3",
+          "SoundPath": "Intros/Level 1 Modul 6 Aufgabe 5.mp3",
           "Hint": "Hints/04_extra_Tip_ein_memoryspiel_selbst_erstellen.mp3",
           "TypeOfLevel": "Memory",
           "Iterations": [

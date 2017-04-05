@@ -1,4 +1,5 @@
 {
+  "Id": 1,
   "Name": "Level 1",
   "Color": "#DEB803",
   "IsEnabled": true,
@@ -7,7 +8,7 @@
     {
       "Name": "2: LMNRS",
       "Color": "#AFC3C4",
-      "VideoPath": "Videos/Handy_Modul2_720p.mp4",
+      "VideoPath": "Videos/L1M2.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -15,7 +16,7 @@
           "Id": 129,
           "Title": "Wörter schreiben",
           "IsCompleted": false,
-          "SoundPath": "Level-1/Level 1 Modul 2-4 Aufgabe 9.mp3",
+          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 9.mp3",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
             {

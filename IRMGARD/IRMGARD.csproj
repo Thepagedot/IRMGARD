@@ -3,51 +3,61 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{B0991947-64A8-4744-8EA5-0F827082F249}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>IRMGARD</RootNamespace>
+    <AssemblyName>IRMGARD</AssemblyName>
+    <FileAlignment>512</FileAlignment>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
-    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets;MainAssets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
-    <AssemblyName>IRMGARD</AssemblyName>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
     <!-- TODO Release: Update ReleaseVersion -->
-    <ReleaseVersion>1.1.0</ReleaseVersion>
-    <SynchReleaseVersion>false</SynchReleaseVersion>
+    <ReleaseVersion>1.2</ReleaseVersion>
     <Description>Hilft Erwachsenen Lesen und Schreiben zu lernen.</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug</OutputPath>
-    <DefineConstants>DEBUG;</DefineConstants>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
     <ZipAssets>0</ZipAssets>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release</OutputPath>
+    <DebugType>PdbOnly</DebugType>
+    <Optimize>True</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <ConsolePause>false</ConsolePause>
-    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-    <AndroidLinkMode>Full</AndroidLinkMode>
-    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;arm64-v8a;x86_64</AndroidSupportedAbis>
-    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+    <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
+    <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
+    <RunCodeAnalysis>False</RunCodeAnalysis>
     <ZipAssets>1</ZipAssets>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml" />
     <Reference Include="ExpansionDownloader, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DotNetDevAddict.Android.ExpansionDownloader.1.1.1\lib\MonoAndroid4.0\ExpansionDownloader.dll</HintPath>
       <Private>True</Private>
@@ -56,47 +66,40 @@
       <HintPath>..\packages\DotNetDevAddict.Android.LicenseVerificationLibrary.1.1.1\lib\MonoAndroid2.3\LicenseVerificationLibrary.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System" />
     <Reference Include="System.IO.Compression.Zip, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\DotNetDevAddict.Android.ExpansionDownloader.1.1.1\lib\MonoAndroid4.0\System.IO.Compression.Zip.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Core" />
-    <Reference Include="Mono.Android" />
+    <Reference Include="HockeySDK, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HockeySDK.Xamarin.4.1.0\lib\MonoAndroid403\HockeySDK.dll</HintPath>
+    </Reference>
+    <Reference Include="HockeySDK.AndroidBindings, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\HockeySDK.Xamarin.4.1.0\lib\MonoAndroid403\HockeySDK.AndroidBindings.dll</HintPath>
+    </Reference>
     <Reference Include="Refractored.GifImageView">
       <HintPath>..\packages\Refractored.GifImageView.2.0.0\lib\monoandroid\Refractored.GifImageView.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="HockeySDK.AndroidBindings">
-      <HintPath>..\Components\hockeyappandroid-4.1.0.2\lib\android\HockeySDK.AndroidBindings.dll</HintPath>
-    </Reference>
-    <Reference Include="HockeySDK">
-      <HintPath>..\Components\hockeyappandroid-4.1.0.2\lib\android\HockeySDK.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.CardView">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.23.4.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v4">
-      <HintPath>..\packages\Xamarin.Android.Support.v4.23.4.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.Vector.Drawable">
-      <HintPath>..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0\lib\MonoAndroid403\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
-      <HintPath>..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.23.4.0\lib\MonoAndroid403\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.4.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.23.4.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.Design">
-      <HintPath>..\packages\Xamarin.Android.Support.Design.23.4.0\lib\MonoAndroid43\Xamarin.Android.Support.Design.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.Design.23.4.0.1\lib\MonoAndroid43\Xamarin.Android.Support.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Vector.Drawable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -167,6 +170,15 @@
     <Compile Include="Adapter\Specific\LetterWriteAdapter.cs" />
     <Compile Include="Utilities\FontHelper.cs" />
     <Compile Include="Utilities\ActivityHelper.cs" />
+    <Compile Include="Fragments\DragIntoGapFragment.cs" />
+    <Compile Include="Models\Concept.cs" />
+    <Compile Include="Models\Levels\DragIntoGap.cs" />
+    <Compile Include="Fragments\SelectConceptFragment.cs" />
+    <Compile Include="Models\Levels\SelectConcept.cs" />
+    <Compile Include="Fragments\BaseConceptFragment.cs" />
+    <Compile Include="Models\Levels\BaseConcept.cs" />
+    <Compile Include="Fragments\BaseConceptLayoutFragment.cs" />
+    <Compile Include="Fragments\FourPicturesSelectConceptFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="MainAssets\Sounds\Objects\Elefant.mp3" />
@@ -174,25 +186,24 @@
     <AndroidAsset Include="MainAssets\Sounds\Objects\Uhu.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Igel.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\U-Boot.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 5 Aufgabe 5.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_A_in_Ina.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_B_in_Eber.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_D_in_Mond.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_E_in_Nase.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_F_in_Affe.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_G_in_Regen.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_I_in_Igel.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_K_in_Kuchen.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_L_in_Liege.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_M_in_Mund.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_N_in_Sonne.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_O_in_Ofen.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_P_in_Lupe.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_R_in_Rose.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_T_in_Boot.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_U_in_Uhr.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_W_in_Wald.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\5-5\wo_hoerst_du_Z_in_Zauberer.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_A_in_Ina.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_B_in_Eber.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_D_in_Mond.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_E_in_Nase.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_F_in_Affe.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_G_in_Regen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_I_in_Igel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_K_in_Kuchen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_L_in_Liege.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_M_in_Mund.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_N_in_Sonne.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_O_in_Ofen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_P_in_Lupe.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_R_in_Rose.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_T_in_Boot.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_U_in_Uhr.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_W_in_Wald.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-5-5\wo_hoerst_du_Z_in_Zauberer.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Aal.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Affe.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Ahorn.mp3" />
@@ -246,7 +257,6 @@
     <AndroidAsset Include="MainAssets\Sounds\Objects\Los.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Lupe.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Mama.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Objects\Maus.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Mofa.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Mond.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Muehle.mp3" />
@@ -668,14 +678,14 @@
     <AndroidAsset Include="MainAssets\Sounds\Hints\18_extra_Tip_vergisst_du_manchmal_was_du_schon_geuebt_hast.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Hints\19_extra_Tip_wenn_du_bishierhin_alle_aufgaben_geloest_hast_kannst_du_stolz_auf_dich_sein.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Hints\20_extra_Tip_wenn_du_jeden_tag_ein_bisschen_mit_mir_uebst_wirst_du_bestimmt_bald_lesen_koennen.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\6-1\A-E.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\6-1\F-J.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\6-1\K-O.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\6-1\P-T.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\6-1\U-Z.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\Diese_Uebung_kennst_du_schon.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\Diese_Uebung_kommt_dir_sicher_bekannt_vor.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\Erinnerst_du_dich_an_die_Uebung.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-6-1\A-E.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-6-1\F-J.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-6-1\K-O.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-6-1\P-T.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-6-1\U-Z.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\Diese_Uebung_kennst_du_schon.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\Diese_Uebung_kommt_dir_sicher_bekannt_vor.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\Erinnerst_du_dich_an_die_Uebung.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Praise\ausgezeichnet1.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Praise\ausgezeichnet2.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Praise\ausgezeichnet3.mp3" />
@@ -820,34 +830,479 @@
     <AndroidAsset Include="MainAssets\Sounds\Syllables\LMNRS\ne_kurz.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Syllables\LMNRS\se_kurz.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Application\Module_Not_Available.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Tasks\6-1\ABC_Song.mp3" />
-    <AndroidAsset Include="MainAssets\Videos\Handy_Level1_720p.mp4" />
-    <AndroidAsset Include="MainAssets\Videos\Handy_Modul1_720p.mp4" />
-    <AndroidAsset Include="MainAssets\Videos\Handy_Modul2_720p.mp4" />
-    <AndroidAsset Include="MainAssets\Videos\Handy_Modul3_720p.mp4" />
-    <AndroidAsset Include="MainAssets\Videos\Handy_Modul4_720p.mp4" />
-    <AndroidAsset Include="MainAssets\Videos\Handy_Modul5_720p.mp4" />
-    <AndroidAsset Include="MainAssets\Videos\Handy_Modul6_720p.mp4" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 1.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 2.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 3.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 4.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 5.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 1 Aufgabe 6.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 2-5 Aufgabe 1.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 2-5 Aufgabe 2.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 2-4 Aufgabe 3.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 2-5 Aufgabe 4.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 2-4 Aufgabe 5.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 2-4 Aufgabe 6.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 2-4 Aufgabe 7.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 2-4 Aufgabe 8.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 2-4 Aufgabe 9.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 1.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 2.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 3.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 4.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\Level-1\Level 1 Modul 6 Aufgabe 5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\1-6-1\ABC_Song.mp3" />
+    <AndroidAsset Include="MainAssets\Videos\IRMGARD_Intro.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L1M1.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L1M2.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L1M3.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L1M4.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L1M5.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L1M6.mp4" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 1 Aufgabe 1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 1 Aufgabe 2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 1 Aufgabe 3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 1 Aufgabe 4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 1 Aufgabe 5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 1 Aufgabe 6.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 2-5 Aufgabe 1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 2-5 Aufgabe 2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 2-4 Aufgabe 3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 2-5 Aufgabe 4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 2-4 Aufgabe 5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 2-4 Aufgabe 6.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 2-4 Aufgabe 7.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 2-4 Aufgabe 8.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 2-4 Aufgabe 9.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 5 Aufgabe 5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 6 Aufgabe 1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 6 Aufgabe 2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 6 Aufgabe 3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 6 Aufgabe 4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 1 Modul 6 Aufgabe 5.mp3" />
+    <AndroidAsset Include="MainAssets\Videos\L2M1.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L2M2.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L2M3.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L2M4.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L2M5.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L2M6.mp4" />
+    <AndroidAsset Include="MainAssets\Images\Lose.png" />
+    <AndroidAsset Include="MainAssets\Images\Kuss.png" />
+    <AndroidAsset Include="MainAssets\Images\Rolle.png" />
+    <AndroidAsset Include="MainAssets\Images\Tonne.png" />
+    <AndroidAsset Include="MainAssets\Images\Wolle.png" />
+    <AndroidAsset Include="MainAssets\Images\Welle.png" />
+    <AndroidAsset Include="MainAssets\Images\Aermel.png" />
+    <AndroidAsset Include="MainAssets\Images\Apfel.png" />
+    <AndroidAsset Include="MainAssets\Images\Koenig.png" />
+    <AndroidAsset Include="MainAssets\Images\Tuer.png" />
+    <AndroidAsset Include="MainAssets\Images\Ananas.png" />
+    <AndroidAsset Include="MainAssets\Images\Banane.png" />
+    <AndroidAsset Include="MainAssets\Images\Biss.png" />
+    <AndroidAsset Include="MainAssets\Images\Brot.png" />
+    <AndroidAsset Include="MainAssets\Images\Butter.png" />
+    <AndroidAsset Include="MainAssets\Images\Dutt.png" />
+    <AndroidAsset Include="MainAssets\Images\Gurke.png" />
+    <AndroidAsset Include="MainAssets\Images\Kaffee.png" />
+    <AndroidAsset Include="MainAssets\Images\Kiwi.png" />
+    <AndroidAsset Include="MainAssets\Images\Kutter.png" />
+    <AndroidAsset Include="MainAssets\Images\Marmelade.png" />
+    <AndroidAsset Include="MainAssets\Images\Mutter.png" />
+    <AndroidAsset Include="MainAssets\Images\Nuss.png" />
+    <AndroidAsset Include="MainAssets\Images\Pille.png" />
+    <AndroidAsset Include="MainAssets\Images\Riegel.png" />
+    <AndroidAsset Include="MainAssets\Images\Rute.png" />
+    <AndroidAsset Include="MainAssets\Images\Salat.png" />
+    <AndroidAsset Include="MainAssets\Images\Salz.png" />
+    <AndroidAsset Include="MainAssets\Images\Siegel.png" />
+    <AndroidAsset Include="MainAssets\Images\Wurst.png" />
+    <AndroidAsset Include="MainAssets\Images\Wut.png" />
+    <AndroidAsset Include="MainAssets\Images\Zucker.png" />
+    <AndroidAsset Include="MainAssets\Images\Zwiebel.png" />
+    <AndroidAsset Include="MainAssets\Images\Apfel_blau.png" />
+    <AndroidAsset Include="MainAssets\Images\Apfel_braun.png" />
+    <AndroidAsset Include="MainAssets\Images\Apfel_gruen.png" />
+    <AndroidAsset Include="MainAssets\Images\Apfel_rosa.png" />
+    <AndroidAsset Include="MainAssets\Images\Banane_blau.png" />
+    <AndroidAsset Include="MainAssets\Images\Banane_braun.png" />
+    <AndroidAsset Include="MainAssets\Images\Banane_gelb.png" />
+    <AndroidAsset Include="MainAssets\Images\Banane_gruen.png" />
+    <AndroidAsset Include="MainAssets\Images\Blume_blau.png" />
+    <AndroidAsset Include="MainAssets\Images\Blume_gruen.png" />
+    <AndroidAsset Include="MainAssets\Images\Blume_lila.png" />
+    <AndroidAsset Include="MainAssets\Images\Blume_rosa.png" />
+    <AndroidAsset Include="MainAssets\Images\Bohne_braun.png" />
+    <AndroidAsset Include="MainAssets\Images\Bohne_gelb.png" />
+    <AndroidAsset Include="MainAssets\Images\Bohne_gruen.png" />
+    <AndroidAsset Include="MainAssets\Images\Bohne_rosa.png" />
+    <AndroidAsset Include="MainAssets\Images\Melone_blau.png" />
+    <AndroidAsset Include="MainAssets\Images\Melone_gelb.png" />
+    <AndroidAsset Include="MainAssets\Images\Melone_gruen.png" />
+    <AndroidAsset Include="MainAssets\Images\Melone_rot.png" />
+    <AndroidAsset Include="MainAssets\Images\Salat_blau.png" />
+    <AndroidAsset Include="MainAssets\Images\Salat_gelb.png" />
+    <AndroidAsset Include="MainAssets\Images\Salat_gruen.png" />
+    <AndroidAsset Include="MainAssets\Images\Salat_rot.png" />
+    <AndroidAsset Include="MainAssets\Images\Tomate_gelb.png" />
+    <AndroidAsset Include="MainAssets\Images\Tomate_gruen.png" />
+    <AndroidAsset Include="MainAssets\Images\Tomate_rosa.png" />
+    <AndroidAsset Include="MainAssets\Images\Tomate_rot.png" />
+    <AndroidAsset Include="MainAssets\Images\Bohnen.png" />
+    <AndroidAsset Include="MainAssets\Images\Kiwis.png" />
+    <AndroidAsset Include="MainAssets\Images\Limonade.png" />
+    <AndroidAsset Include="MainAssets\Images\Nudeln.png" />
+    <AndroidAsset Include="MainAssets\Images\Tomaten.png" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 1 Aufgabe 1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 1 Aufgabe 2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 1 Aufgabe 3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 1 Aufgabe 4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 1 Aufgabe 5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 1 Aufgabe 6.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 1 Aufgabe 7.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 2 Aufgabe 1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 2 Aufgabe 2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 2 Aufgabe 3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 2 Aufgabe 4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 2 Aufgabe 5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 2 Aufgabe 6.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 2 Aufgabe 7.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 2 Aufgabe 8.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 3 Aufgabe 1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 3 Aufgabe 2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 3 Aufgabe 3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 3 Aufgabe 4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 4 Aufgabe 1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 4 Aufgabe 2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 4 Aufgabe 3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 4 Aufgabe 4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 4 Aufgabe 5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 4 Aufgabe 6.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 4 Aufgabe 7.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 5 Aufgabe 1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 5 Aufgabe 2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 5 Aufgabe 3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 5 Aufgabe 4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 5 Aufgabe 5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 5 Aufgabe 6.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 6 Aufgabe 1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 6 Aufgabe 2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 6 Aufgabe 3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 6 Aufgabe 4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 6 Aufgabe 5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level 2 Modul 6 Aufgabe 6.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\2-5-1\Das_ist_ein_Aermel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\2-5-1\Der_Koenig_setzt_sich_auf_sein_O_in_seinem_Namen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\2-5-1\Die_Tuer_hat_in_der_Mitte.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Bett.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Orgel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Tafel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Tee.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Tier.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Bank.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Elfe.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Elvis.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Farbe.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Fass.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Narbe.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Parade.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Mut.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Wut.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Dir.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Mir.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Wir.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Lot.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Not.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Rot.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Ba_Ball.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Be_Bett.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Da_Dann.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Do_Doll.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Du_Dutt.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Fe_Fett.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Ka_Kamm.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Ka_Kann.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Ku_Kuss.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Ma_Mann.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Me_Mett.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Mu_Mull.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Mu_Muss.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Ne_Nett.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Nu_Nuss.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Ri_Ritt.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Ro_Roll.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\So_Soll.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\To_Toll.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Vo_Voll.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Wa_Wall.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SyllableWord\Wi_Will.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Solution\Vowels\Hier_haben_wir_das_kurz_gesprochene_A_gesucht.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Solution\Vowels\Hier_haben_wir_das_kurz_gesprochene_E_gesucht.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Solution\Vowels\Hier_haben_wir_das_kurz_gesprochene_I_gesucht.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Solution\Vowels\Hier_haben_wir_das_kurz_gesprochene_O_gesucht.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Solution\Vowels\Hier_haben_wir_das_kurz_gesprochene_U_gesucht.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Solution\Vowels\Hier_haben_wir_das_lang_gesprochene_A_gesucht.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Solution\Vowels\Hier_haben_wir_das_lang_gesprochene_E_gesucht.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Solution\Vowels\Hier_haben_wir_das_lang_gesprochene_I_gesucht.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Solution\Vowels\Hier_haben_wir_das_lang_gesprochene_O_gesucht.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Solution\Vowels\Hier_haben_wir_das_lang_gesprochene_U_gesucht.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Lose.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Felle.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Fett.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Hasen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Kann.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Kuss.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Mann.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Milz.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Nett.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Nuss.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Pille.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Pilz.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Rasen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Rolle.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Tonne.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Welle.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Wille.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Wolle.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\MissingInitial\ann.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\MissingInitial\ase.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\MissingInitial\asen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\MissingInitial\elle.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\MissingInitial\ett.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\MissingInitial\ille.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\MissingInitial\ilz.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\MissingInitial\olle.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\MissingInitial\onne.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\MissingInitial\ose.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\MissingInitial\uss.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Super_Hase_Nase.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Super_Hose_Rose.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Hose_Rose.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Lose_Dose.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Super_Lose_Dose.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Mann_Kann.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Super_Kann_Mann.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Felle_Welle.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Kuss_Nuss.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Nett_Fett.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Rolle_Wolle.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Sonne_Tonne.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Super_Felle_Welle.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Super_Kuss_Nuss.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Super_Nett_Fett.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Super_Rolle_Wolle.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Super_Sonne_Tonne.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Super_Wille_Pille.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Wille_Pille.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Baecker.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Baer.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Buegel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Huegel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Koenig.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Loeffel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Aepfel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Fluegel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Gaeste.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Huete.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Kaelte.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Knoepfe.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Tuer.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Das_Glas.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Apfel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Faden.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Hut.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Kamm.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Lohn.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Sohn.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Ton.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Vogel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Zahn.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SingPluWithDefArt\Das_Haus_Die_Haeuser.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SingPluWithDefArt\Das_Kraut_Die_Kraeuter.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SingPluWithDefArt\Der_Baum_Die_Baeume.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SingPluWithDefArt\Der_Raum_Die_Raeume.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SingPluWithDefArt\Der_Traum_Die_Traeume.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SingPluWithDefArt\Die_Faust_Die_Faeuste.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SingPluWithDefArt\Die_Laus_Die_Laeuse.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\SingPluWithDefArt\Die_Maus_Die_Maeuse.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Baeume.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Faeuste.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Haeuser.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Kraeuter.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Laeuse.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Maeuse.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Raeume.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Traeume.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Das_Feuer.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Beute.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Meute.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Zaeune.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Das_Bett_ist_hart.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Das_Kamel_rennt.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Der_Junge_rennt.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Die_Zitronen_sind_gelb.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Ina_mag_Melone.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Leo_malt_Bilder.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Das_Feuer_brennt_im_Kamin.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Das_Haus_wird_gebaut.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Das_Unkraut_nervt.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Der_Automat_ist_kaputt.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Der_Junge_laeuft_in_den_Wald.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Die_Frau_isst_gerne_Schokolade.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Die_Haeuser_sind_nass.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Die_Leute_gehen_in_die_Oper.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Heute_regnet_es_viel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Ina_wartet_im_Auto.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Theo_und_Matthias_raufen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Sentences\Der_Zaun_ist_weisz.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Das_Auge.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Das_Auto.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Astronaut.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Auspuff.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Automat.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Pfau.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Tau.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Frau.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Pflaume.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Raupe.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Sau.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Taube.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_E_in_Riegel_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_E_in_Siegel_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_I_in_Biss_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_I_in_Iltis_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_I_in_Riss_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_i_in_Siegel_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_O_in_Rolle_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_O_in_Sonne_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_O_in_Tonne_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_O_in_Wolle_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_U_in_Dutt_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_U_in_Kuss_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_U_in_Kutter_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_U_in_Mutter_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_U_in_Nuss_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ShortLongVowels\Wird_der_Selbstlaut_U_in_Rute_kurz_oder_lang_gesprochen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Faesser.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Felder.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Gelder.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Graeber.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Helden.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Naehte.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Vaeter.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Welpen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Astronaut.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Auge.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Auspuff.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Automat.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Baum.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Frau.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Haus.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Maus.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Pfau.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Raupe.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Sau.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Tau.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ListenToTheAU\Wo_hoerst_du_das_AU_in_Taube.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Ananas.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Apfel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Banane.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Brot.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Butter.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Gurke.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Kaffee.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Kiwi.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Marmelade.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Salat.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Salz.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Wonne.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Wurst.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Zucker.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Zwiebel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Gaense.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Haende.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Waelder.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Aepfel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Astronaut.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Auge.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Auspuff.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Auto.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Automat.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Baeume.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Baum.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Beute.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Faesser.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Felder.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Feuer.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Frau.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Freude.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Gaeste.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Gelder.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Graeber.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Haeuser.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Haus.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Helden.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Heute.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Kraeuter.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Laeuse.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Laus.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Leute.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Maus.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Meute.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Naehte.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Pfau.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Pflaume.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Raeume.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Raupe.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Sau.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Schlaeuche.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Tau.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Taube.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Traeume.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Vaeter.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Welpen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Zaeune.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Das_Heute.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Freude.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Leute.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Schlaeuche.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\RhymingWords\Hase_Nase.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Hints\Extra_tip_denkst_du_ans_aufschreiben.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Hints\Extra_tip_hast_du_einen_freund.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Hints\Extra_tip_hast_du_manchmal_spass.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Hints\Extra_tip_ich_brauchte_oft_Hilfe_in_Mathe.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Hints\Extra_tip_ich_trinke_jeden_Tag_Schwarzen_Tee.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Hints\Extra_tip_ich_wuerde_so_gern_wissen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Hints\Extra_tip_keine_Panik_auf_der_Titanik.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Hints\Extra_tip_reim_doch_mal.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Hints\Extra_tip_ueberlege_dir_Woerter_mit_AU.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Hints\Extra_tip_uebst_du_auch_das_Schreiben_mit_dem_Stift.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Hints\Extra_tip_vergiss_nicht_zu_trinken.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Hints\Extra_tip_verlier_nicht_den_Mut.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Hints\Extra_tip_wenn_du_dir_nicht_sicher_bist.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Hints\Extra_tip_wer_viel_lernt.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Hints\Extra_tip_wichtig_ist_dass_du_taeglich_mit_mir_lernst.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Hints\Extra_tip_wie_schoen_dass_du_wieder_mit_mir_uebst.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Das_Bad.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Das_Kilo.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Das_Mofa.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Degen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Elefant.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Hase.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Der_Ofen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Ameise.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Birne.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Dose.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Hand.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Insel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Katze.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Lupe.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Kuehe.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\ObjectsWithDefArt\Die_Muetze.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Biss.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Dutt.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Kutter.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Mutter.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Riegel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Rute.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Siegel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Bohnen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Limonade.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Nasen.mp3" />
+    <AndroidAsset Include="MainAssets\Images\Aepfel.png" />
+    <AndroidAsset Include="MainAssets\Images\Gaense.png" />
+    <AndroidAsset Include="MainAssets\Images\Hasen.png" />
+    <AndroidAsset Include="MainAssets\Images\Huete.png" />
+    <AndroidAsset Include="MainAssets\Images\Kaese.png" />
+    <AndroidAsset Include="MainAssets\Images\Knoepfe.png" />
+    <AndroidAsset Include="MainAssets\Images\Kuehe.png" />
+    <AndroidAsset Include="MainAssets\Images\Mann.png" />
+    <AndroidAsset Include="MainAssets\Images\Melone.png" />
+    <AndroidAsset Include="MainAssets\Images\Muetze.png" />
+    <AndroidAsset Include="MainAssets\Images\Nasen.png" />
+    <AndroidAsset Include="MainAssets\Images\Rasen.png" />
+    <AndroidAsset Include="MainAssets\Images\Ruecken.png" />
+    <AndroidAsset Include="MainAssets\Images\Waelder.png" />
+    <AndroidAsset Include="MainAssets\Images\Wonne.png" />
+    <AndroidAsset Include="MainAssets\Images\Haende.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\Main.axml" />
@@ -1008,8 +1463,8 @@
     <AndroidResource Include="Resources\layout\MemoryCard.axml" />
     <AndroidResource Include="Resources\drawable\rectangle_green.xml" />
     <AndroidResource Include="Resources\drawable\rectangle_red.xml" />
-    <AndroidResource Include="Resources\drawable\line_red.xml" />
-    <AndroidResource Include="Resources\drawable\oval_red.xml" />
+    <AndroidResource Include="Resources\drawable\slider_bar.xml" />
+    <AndroidResource Include="Resources\drawable\slider_thumb.xml" />
     <AndroidResource Include="Resources\drawable\vert_lines.xml" />
     <AndroidResource Include="Resources\drawable\vert_lines_inset.xml" />
     <AndroidResource Include="Resources\anim\ShowPicturePopup.xml" />
@@ -1045,7 +1500,7 @@
     <AndroidResource Include="Resources\drawable-hdpi\ic_hearing_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_lightbulb_outline_black_24dp.png" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_more_vert_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable\rectangle_level1.xml" />
+    <AndroidResource Include="Resources\drawable\rectangle_progress.xml" />
     <AndroidResource Include="Resources\drawable-hdpi\lightbulb.png" />
     <AndroidResource Include="Resources\drawable-ldpi\lightbulb.png" />
     <AndroidResource Include="Resources\drawable-mdpi\lightbulb.png" />
@@ -1092,27 +1547,53 @@
     <AndroidResource Include="Resources\menu\legal_notice_menu.xml" />
     <AndroidResource Include="Resources\menu\legal_notice_contact_menu.xml" />
     <AndroidResource Include="Resources\values\ExpansionDownloader.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_02.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_02.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_02.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_02.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_02.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_02.png" />
+    <AndroidResource Include="Resources\drawable\rectangle_gray.xml" />
+    <AndroidResource Include="Resources\values\Ids.xml" />
+    <AndroidResource Include="Resources\layout\DragIntoGap.axml" />
+    <AndroidResource Include="Resources\layout\Blank.axml" />
+    <AndroidResource Include="Resources\layout\BaseText.axml" />
+    <AndroidResource Include="Resources\layout\PictureConcept.axml" />
+    <AndroidResource Include="Resources\layout\SpeakerConcept.axml" />
+    <AndroidResource Include="Resources\layout\CardConcept.axml" />
+    <AndroidResource Include="Resources\drawable\letter_long.xml" />
+    <AndroidResource Include="Resources\drawable\letter_short.xml" />
+    <AndroidResource Include="Resources\layout\TaskItemRow.axml" />
+    <AndroidResource Include="Resources\layout\BaseTextGroup.axml" />
+    <AndroidResource Include="Resources\drawable\concept_bordered.xml" />
+    <AndroidResource Include="Resources\layout\BaseTextSpeaker.axml" />
+    <AndroidResource Include="Resources\layout\BaseTextBordered.axml" />
+    <AndroidResource Include="Resources\layout-h550dp\CardConcept.axml" />
+    <AndroidResource Include="Resources\layout\SelectConcept.axml" />
+    <AndroidResource Include="Resources\drawable\selected_background.xml" />
+    <AndroidResource Include="Resources\drawable\highlighted_background.xml" />
+    <AndroidResource Include="Resources\drawable\letterpuzzle_marker.xml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\Fonts\sen-bold.otf" />
-    <AndroidAsset Include="Assets\Fonts\sen-regular.otf" />
+    <AndroidAsset Include="Assets\Fonts\GlacialIndifference-Bold.otf" />
+    <AndroidAsset Include="Assets\Fonts\GlacialIndifference-Regular.otf" />
+    <AndroidAsset Include="Assets\Fonts\SIL Open Font License.txt" />
     <AndroidAsset Include="Assets\common.json" />
     <AndroidAsset Include="Assets\level1.json" />
     <AndroidAsset Include="Assets\level2.json" />
     <AndroidAsset Include="Assets\level3.json" />
     <AndroidAsset Include="Assets\level4.json" />
-    <AndroidAsset Include="Assets\level9.json" />
     <AndroidAsset Include="Assets\level5.json" />
     <AndroidAsset Include="Assets\level6.json" />
     <AndroidAsset Include="Assets\level7.json" />
     <AndroidAsset Include="Assets\level8.json" />
     <AndroidAsset Include="Assets\level9.json" />
     <AndroidAsset Include="Assets\sandbox.json" />
-    <AndroidAsset Include="Assets\test.json" />
+    <AndroidAsset Include="Assets\testlayout.json" />
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="hockeyappandroid">
@@ -1121,19 +1602,19 @@
     </XamarinComponentReference>
     <XamarinComponentReference Include="xamandroidsupportdesign">
       <Visible>False</Visible>
-      <Version>23.2.1</Version>
+      <Version>23.4.0.1</Version>
     </XamarinComponentReference>
     <XamarinComponentReference Include="xamandroidsupportv7appcompat">
       <Visible>False</Visible>
-      <Version>23.2.1</Version>
+      <Version>23.4.0.1</Version>
     </XamarinComponentReference>
     <XamarinComponentReference Include="xamandroidsupportv7cardview">
       <Visible>False</Visible>
-      <Version>23.2.1</Version>
+      <Version>23.4.0.1</Version>
     </XamarinComponentReference>
     <XamarinComponentReference Include="xamandroidsupportv7recyclerview">
       <Visible>False</Visible>
-      <Version>23.2.1</Version>
+      <Version>23.4.0.1</Version>
     </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>
@@ -1155,7 +1636,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- BEGIN: Create OBBs -->
   <!-- Import MSBuildTasks -->
-  <Import Project="..\packages\MSBuildTasks.1.5.0.196\build\MSBuildTasks.targets" Condition="Exists('..\packages\MSBuildTasks.1.5.0.196\build\MSBuildTasks.targets')" />
+  <Import Project="..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets" Condition="Exists('..\packages\MSBuildTasks.1.5.0.235\build\MSBuildTasks.targets')" />
   <Choose>
     <When Condition="$(ZipAssets) == '1'">
       <PropertyGroup>
@@ -1178,7 +1659,7 @@
   <Target Name="CreateOBBs">
     <ItemGroup>
       <MainAssetsFiles Include="MainAssets\**\*.*" />
-      <PatchAssetsFiles Include="Assets\**\*.*" Exclude="Assets\AboutAssets.txt;Assets\one_original.json;Assets\sandbox.json;Assets\test.json" />
+      <PatchAssetsFiles Include="Assets\**\*.*" Exclude="Assets\AboutAssets.txt;Assets\one_original.json;Assets\sandbox.json;Assets\testlayout.json" />
     </ItemGroup>
     <Message Text="Creating OBBs..." />
     <XmlRead Prefix="n" Namespace="http://schemas.android.com/apk/res/android" XPath="/manifest/application/meta-data[@n:name='obbMainVersionCode']/@n:value" XmlFileName="Properties\AndroidManifest.xml">

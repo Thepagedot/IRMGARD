@@ -18,14 +18,14 @@ namespace IRMGARD
 
         public enum Font
         {
-            Sen,
-            SenBold
+            StandardRegular,
+            StandardBold
         };
 
         static FontHelper()
         {
-            fontFiles.Add(Font.Sen, "Fonts/sen-regular.otf");
-            fontFiles.Add(Font.SenBold, "Fonts/sen-bold.otf");
+            fontFiles.Add(Font.StandardRegular, "Fonts/GlacialIndifference-Regular.otf");
+            fontFiles.Add(Font.StandardBold, "Fonts/GlacialIndifference-Bold.otf");
         }
 
         public static Typeface Get(Context context, Font font)

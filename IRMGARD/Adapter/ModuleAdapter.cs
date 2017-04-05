@@ -37,10 +37,7 @@ namespace IRMGARD
             var tvName = view.FindViewById<TextView>(Resource.Id.tvName);
             tvName.Text = items[position].Name.ToUpper();
             tvName.TextSize = 18;
-            tvName.Typeface = FontHelper.Get(context, FontHelper.Font.SenBold);
-
-            // Set background color
-            view.SetBackgroundColor(Android.Graphics.Color.ParseColor (items [position].Color));
+            tvName.Typeface = FontHelper.Get(context, FontHelper.Font.StandardBold);
 
             // Set lesson indicators
             var llLessons = view.FindViewById<LinearLayout>(Resource.Id.llLessons);
@@ -72,11 +69,18 @@ namespace IRMGARD
 
             // Reduce alpha when not available
             if (!items[position].Lessons.Any() || (position > 0 && !items[position - 1].IsCompleted))
-                view.Alpha = (float)0.5;
+            {
+                //view.SetBackgroundColor(Android.Graphics.Color.WhiteSmoke);
+                view.SetBackgroundColor(Android.Graphics.Color.ParseColor(items[position].Color));
+                view.Alpha = (float)0.2;
+            }
             else
+            {
+                view.SetBackgroundColor(Android.Graphics.Color.ParseColor(items[position].Color));
                 view.Alpha = (float)1;
+            }
 
-			return view;
+            return view;
 		}
 
 		public override int Count {

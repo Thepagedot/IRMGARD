@@ -37,12 +37,27 @@ namespace IRMGARD
             var text1 = view.FindViewById<TextView>(Android.Resource.Id.Text1);
             text1.Text = items[position].Name;
             text1.TextSize = 18;
-            text1.Typeface = FontHelper.Get(context, FontHelper.Font.SenBold);
+            text1.Typeface = FontHelper.Get(context, FontHelper.Font.StandardBold);
             text1.SetPadding(text1.PaddingLeft, 38, text1.PaddingRight, 38);
 
-			view.SetBackgroundColor(Android.Graphics.Color.ParseColor (items [position].Color));
+            // Reduce alpha when not available
+            if (!items[position].IsEnabled)
+            {
+                //view.SetBackgroundColor(Android.Graphics.Color.WhiteSmoke);
+                view.SetBackgroundColor(Android.Graphics.Color.ParseColor(items[position].Color));
+                view.Alpha = (float)0.2;
+            }
+            else
+            {
+                view.SetBackgroundColor(Android.Graphics.Color.ParseColor(items[position].Color));
+                view.Alpha = (float)1;
+            }
+
+            /*
+            view.SetBackgroundColor(Android.Graphics.Color.ParseColor (items [position].Color));
             if (!items[position].IsEnabled)
                 view.Alpha = (float)0.5;
+            */
 
 			return view;
 		}

@@ -23,6 +23,7 @@ namespace IRMGARD
 
         protected override void OnCreate(Bundle bundle)
         {
+            ActivityHelper.ApplyLevelColors(Theme);
             base.OnCreate(bundle);
             RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
             SetContentView(Resource.Layout.Video);

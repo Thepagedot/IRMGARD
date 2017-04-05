@@ -123,7 +123,7 @@ namespace IRMGARD
             }
         }
 
-        private void BuildTaskLetters(List<Syllable> syllables)
+        private void BuildTaskLetters(List<SyllableAggregate> syllables)
         {
             llTaskItems.RemoveAllViews();
             for (var i = 0; i < syllables.Count(); i++)
@@ -161,13 +161,11 @@ namespace IRMGARD
         {
             if (index >= 0)
             {
-                if (SoundPlayer.IsPlaying)
-                    SoundPlayer.Stop();
                 SoundPlayer.PlaySound(Activity.BaseContext, currentSyllablesToLearn.Syllables.ElementAt(index).SoundPath);
             }
         }
 
-        private void BuildSyllableSoundElements(List<Syllable> syllables)
+        private void BuildSyllableSoundElements(List<SyllableAggregate> syllables)
         {
             llSoundItems.RemoveAllViews();
             foreach (var syllable in syllables)

@@ -1,8 +1,9 @@
-﻿{
+{
+  "Id": 7,
   "Name": "Level 7",
-  "Color": "#8ca9b8",
+  "Color": "#a25054",
   "IsEnabled": false,
   "IsCompleted": false,
   "VideoPath": null,
-  "Modules": [ ]
+  "Modules": []
 }

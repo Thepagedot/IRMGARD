@@ -6,11 +6,21 @@
 	
     <color name="green">#83A25B</color>
     <color name="selected_background">#FFDDDDDD</color>
+    <color name="highlighted_background">#B1CBCC</color>
+    <color name="neon">#FFFD01</color>
+    <color name="beige">#DDB700</color>
 
-	<!-- Common app colors -->
     <color name="status_bar">#FF333333</color>
     <color name="app_bar">#FFFFFFFF</color>
     <color name="background">#FFFFFFFF</color>
 
-    <color name="level1">#FFBE6E66</color>
+    <color name="level1">#ffbf6f66</color>
+    <color name="level2">#ff6b91a3</color>
+    <color name="level3">#ff84a25a</color>
+    <color name="level4">#ffb89d0b</color>
+    <color name="level5">#ffa48592</color>
+    <color name="level6">#ff4d8e85</color>
+    <color name="level7">#ffa25054</color>
+    <color name="level8">#ffd3954a</color>
+    <color name="level9">#ff718544</color>
 </resources>

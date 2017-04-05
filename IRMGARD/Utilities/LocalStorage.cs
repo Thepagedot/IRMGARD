@@ -26,39 +26,41 @@ namespace IRMGARD.Utilities
         {
             var fileName = "level" + levelNumber + ".json";
             if (levelNumber == -1)
-                fileName = "sandbox.json";
+                fileName = "sandbox.json";      // A single lesson to test separately
+            else if (levelNumber == -2)
+                fileName = "testlayout.json";   // Lessons to test for different display sizes
 
-            using (var stream = AssetHelper.Instance.Open(fileName))
-            using (var reader = new StreamReader(stream))
-            {
-                try
-                {
-                    var jsonContent = await reader.ReadToEndAsync();
-                    var json = JObject.Parse(normalizeContent(jsonContent));
-                    return JsonConvert.DeserializeObject<Level>(json.ToString(), _JsonSettings);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("JSON reader Exception on reading level {0}", levelNumber);
-                    Console.WriteLine("Message: {0}", ex.Message);
-                }
-
-                return null;
-            }
+            return await LoadFromJsonAsync<Level>(fileName);
         }
 
         public static async Task<Common> LoadCommonAsync()
         {
-            var fileName = "common.json";
+            return await LoadFromJsonAsync<Common>("common.json");
+        }
 
+        static async Task<T> LoadFromJsonAsync<T>(string fileName)
+        {
             using (var stream = AssetHelper.Instance.Open(fileName))
-            using (var reader = new StreamReader(stream))
             {
                 try
                 {
-                    var jsonContent = await reader.ReadToEndAsync();
-                    var json = JObject.Parse(normalizeContent(jsonContent));
-                    return JsonConvert.DeserializeObject<Common>(json.ToString(), _JsonSettings);
+                    if (Env.UseOBB)
+                    {
+                        // Since last Xamarin update the use of StreamReader for zipped files leads to performance issues
+                        var bytes = new byte[stream.Length];
+                        await stream.ReadAsync(bytes, 0, bytes.Length);
+                        var json = JObject.Parse(System.Text.Encoding.UTF8.GetString(bytes));
+                        return JsonConvert.DeserializeObject<T>(json.ToString(), _JsonSettings);
+                    }
+                    else
+                    {
+                        using (var reader = new StreamReader(stream))
+                        {
+                            var jsonContent = await reader.ReadToEndAsync();
+                            var json = JObject.Parse(jsonContent);
+                            return JsonConvert.DeserializeObject<T>(json.ToString(), _JsonSettings);
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -66,18 +68,8 @@ namespace IRMGARD.Utilities
                     Console.WriteLine("Message: {0}", ex.Message);
                 }
 
-                return null;
+                return default(T);
             }
-        }
-
-        private static string normalizeContent(string jsonContent)
-        {
-            string PKZipHeader = Encoding.UTF8.GetString(new byte[] { 0x50, 0x4B, 0x03, 0x04, 0x14 });
-            string PKZipHeader2 = Encoding.UTF8.GetString(new byte[] { 0x50, 0x4B, 0x01, 0x02, 0x2D });
-
-            var idx = jsonContent.IndexOf(PKZipHeader);
-            idx = (idx == -1) ? jsonContent.IndexOf(PKZipHeader2) : idx;
-            return (idx > -1) ? jsonContent.Substring(0, idx) : jsonContent;
         }
 
         public static async Task SaveToFileAsync(string fileName, object content)

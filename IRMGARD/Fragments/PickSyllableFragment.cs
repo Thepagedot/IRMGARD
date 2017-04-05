@@ -133,8 +133,6 @@ namespace IRMGARD
 
         void imageClickedForSound (PickSyllableOption item)
         {
-            if (SoundPlayer.IsPlaying)
-                SoundPlayer.Stop();
             SoundPlayer.PlaySound(Activity.BaseContext, item.Media.SoundPath);
         }
 
@@ -181,8 +179,6 @@ namespace IRMGARD
         {
             if (selectedIndex >= 0 && selectedIndex < currentOptions.Count)
             {
-                if (SoundPlayer.IsPlaying)
-                    SoundPlayer.Stop();
                 SoundPlayer.PlaySound(Activity.BaseContext, currentOptions.ElementAt(selectedIndex).Media.SoundPath);
             }
         }

@@ -39,8 +39,8 @@ namespace IRMGARD
         protected override void OnResume()
         {
             base.OnResume();
-            if (SoundPlayer.IsPlaying)
-                SoundPlayer.Stop();
+
+            SoundPlayer.Stop();
 
             if (moduleAdapter != null)
             {
@@ -61,15 +61,11 @@ namespace IRMGARD
                 return;
             }
 
-            if (Env.Release)
+            if (Env.RestrictedModuleAccess)
             {
                 // Check if module is available
                 if (e.Position > 0 && !DataHolder.Current.CurrentLevel.Modules.ElementAt(e.Position - 1).IsCompleted)
                 {
-                    if (SoundPlayer.IsPlaying)
-                    {
-                        SoundPlayer.Stop();
-                    }
                     SoundPlayer.PlaySound(this, "Application/Module_Not_Available.mp3");                    
                     return;
                 }

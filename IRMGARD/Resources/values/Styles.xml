@@ -25,14 +25,41 @@
     <style name="ToolbarTitle">
         <item name="android:textColor">@android:color/black</item>
         <item name="android:typeface">monospace</item>
-        <item name="android:textSize">20dp</item>
+        <item name="android:textSize">18dp</item>
     </style>
 
     <style name="IrmgardTheme" parent="IrmgardTheme.Base">
     </style>
 
+    <style name="Level0Colors">
+        <item name="colorAccent">@color/irmgard_red</item>
+    </style>
     <style name="Level1Colors">
         <item name="colorAccent">@color/level1</item>
+    </style>
+    <style name="Level2Colors">
+        <item name="colorAccent">@color/level2</item>
+    </style>
+    <style name="Level3Colors">
+        <item name="colorAccent">@color/level3</item>
+    </style>
+    <style name="Level4Colors">
+        <item name="colorAccent">@color/level4</item>
+    </style>
+    <style name="Level5Colors">
+        <item name="colorAccent">@color/level5</item>
+    </style>
+    <style name="Level6Colors">
+        <item name="colorAccent">@color/level6</item>
+    </style>
+    <style name="Level7Colors">
+        <item name="colorAccent">@color/level7</item>
+    </style>
+    <style name="Level8Colors">
+        <item name="colorAccent">@color/level8</item>
+    </style>
+    <style name="Level9Colors">
+        <item name="colorAccent">@color/level9</item>
     </style>
 
     <style name="result_zone">
@@ -44,7 +71,8 @@
     </style>
 
     <style name="slider_background">
-        <item name="android:layout_margin">@dimen/margin_default</item>
+        <item name="android:layout_marginTop">40dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>

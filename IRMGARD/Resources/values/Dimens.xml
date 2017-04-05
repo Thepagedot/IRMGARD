@@ -3,11 +3,11 @@
     <dimen name="activity_vertical_margin">12dip</dimen>
     <dimen name="activity_horizontal_margin">12dip</dimen>
     <dimen name="margin_default">12dip</dimen>
+    <dimen name="margin_half">6dip</dimen>
 
     <dimen name="letter_card_width">30dip</dimen>
     <dimen name="letter_card_height">0dip</dimen>
 
     <dimen name="card_contentPadding">10dip</dimen>
     <dimen name="fourPicturesImageViewHeight">100dip</dimen>
-    
 </resources>

@@ -67,8 +67,7 @@
             android:paddingBottom="@dimen/activity_vertical_margin"
             android:paddingRight="@dimen/activity_horizontal_margin"
             android:paddingTop="@dimen/activity_vertical_margin"
-            android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/activity_horizontal_margin" />
+            android:layout_height="match_parent" />
         <ImageView
             android:id="@+id/ivBadge"
             android:src="@drawable/irmgard_icon_spiel_supergemacht"
@@ -76,28 +75,17 @@
             android:layout_height="150dip"
             android:layout_centerInParent="true" />
     </RelativeLayout>
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/btnNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:src="@drawable/ic_arrow_forward_white_24dp"
-        android:layout_marginBottom="-16dp"
-        android:layout_marginRight="@dimen/activity_horizontal_margin"
-        android:layout_alignBottom="@id/fragmentFrame"
-        android:layout_alignParentRight="true" />
     <LinearLayout
         android:orientation="vertical"
-        android:minWidth="25px"
-        android:minHeight="25px"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@id/llAlphabetContainer"
-        android:padding="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/margin_half"
+        android:paddingBottom="@dimen/margin_half"
         android:layout_alignParentBottom="true">
         <TextView
             android:id="@+id/txtCapitalAlphabet"
-            android:text="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:text="ABC"
             android:textColor="@color/light_gray"
             android:letterSpacing="0.1"
             android:gravity="center"
@@ -105,11 +93,21 @@
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/txtLowerAlphabet"
-            android:text="abcdefghijklmnopqrstuvwxyz"
+            android:text="abc"
             android:textColor="@color/light_gray"
             android:letterSpacing="0.24"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-28dp"
+        android:layout_marginRight="20dp"
+        android:clickable="true"
+        android:src="@drawable/ic_arrow_forward_white_24dp"
+        android:layout_alignBottom="@id/fragmentFrame"
+        android:layout_alignParentRight="true" />
 </RelativeLayout>

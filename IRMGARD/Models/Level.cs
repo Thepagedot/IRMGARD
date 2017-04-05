@@ -7,6 +7,7 @@ namespace IRMGARD.Models
 {
 	public class Level
 	{
+        public int Id { get; set; }
 		public string Name { get; set; }
 		public string Color { get; set; }
         public bool IsEnabled { get; set; }
@@ -16,9 +17,10 @@ namespace IRMGARD.Models
 
 		public Level () {}
 
-        public Level (string name, string color, bool isEnabled, bool isCompleted, string videoPath, List<Module> modules)
+        public Level (int id, string name, string color, bool isEnabled, bool isCompleted, string videoPath, List<Module> modules)
 		{
-			this.Name = name;
+            this.Id = id;
+            this.Name = name;
 			this.Color = color;
             this.IsEnabled = isEnabled;
             this.IsCompleted = isCompleted;
