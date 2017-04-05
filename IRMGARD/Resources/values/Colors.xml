@@ -14,13 +14,13 @@
     <color name="app_bar">#FFFFFFFF</color>
     <color name="background">#FFFFFFFF</color>
 
-    <color name="level1">#FFA02B1D</color>
-    <color name="level2">#FF6B91A3</color>
-    <color name="level3">#FF84A25B</color>
-    <color name="level4">#FF6B91A3</color>
-    <color name="level5">#FF6B91A3</color>
-    <color name="level6">#FF6B91A3</color>
-    <color name="level7">#FF6B91A3</color>
-    <color name="level8">#FF6B91A3</color>
-    <color name="level9">#FF6B91A3</color>
+    <color name="level1">#ffbf6f66</color>
+    <color name="level2">#ff6b91a3</color>
+    <color name="level3">#ff84a25a</color>
+    <color name="level4">#ffb89d0b</color>
+    <color name="level5">#ffa48592</color>
+    <color name="level6">#ff4d8e85</color>
+    <color name="level7">#ffa25054</color>
+    <color name="level8">#ffd3954a</color>
+    <color name="level9">#ff718544</color>
 </resources>
