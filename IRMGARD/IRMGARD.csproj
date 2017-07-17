@@ -22,7 +22,7 @@
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets;MainAssets</MonoAndroidAssetsPrefix>
     <!-- TODO Release: Update ReleaseVersion -->
-    <ReleaseVersion>1.2</ReleaseVersion>
+    <ReleaseVersion>1.3</ReleaseVersion>
     <Description>Hilft Erwachsenen Lesen und Schreiben zu lernen.</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
