@@ -16,13 +16,12 @@
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v6.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidResgenClass>Resource</AndroidResgenClass>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets;MainAssets</MonoAndroidAssetsPrefix>
     <!-- TODO Release: Update ReleaseVersion -->
-    <ReleaseVersion>1.3</ReleaseVersion>
     <Description>Hilft Erwachsenen Lesen und Schreiben zu lernen.</Description>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -35,8 +34,7 @@
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <EmbedAssembliesIntoApk>False</EmbedAssembliesIntoApk>
-    <RunCodeAnalysis>False</RunCodeAnalysis>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <ZipAssets>0</ZipAssets>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -49,7 +47,6 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AndroidSupportedAbis>armeabi;armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
     <EmbedAssembliesIntoApk>True</EmbedAssembliesIntoApk>
-    <RunCodeAnalysis>False</RunCodeAnalysis>
     <ZipAssets>1</ZipAssets>
   </PropertyGroup>
   <ItemGroup>
@@ -70,36 +67,69 @@
       <HintPath>..\packages\DotNetDevAddict.Android.ExpansionDownloader.1.1.1\lib\MonoAndroid4.0\System.IO.Compression.Zip.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="HockeySDK, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\HockeySDK.Xamarin.4.1.0\lib\MonoAndroid403\HockeySDK.dll</HintPath>
-    </Reference>
-    <Reference Include="HockeySDK.AndroidBindings, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\HockeySDK.Xamarin.4.1.0\lib\MonoAndroid403\HockeySDK.AndroidBindings.dll</HintPath>
-    </Reference>
     <Reference Include="Refractored.GifImageView">
       <HintPath>..\packages\Refractored.GifImageView.2.0.0\lib\monoandroid\Refractored.GifImageView.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="HockeySDK.AndroidBindings">
+      <HintPath>..\packages\HockeySDK.Xamarin.5.1.2\lib\MonoAndroid403\HockeySDK.AndroidBindings.dll</HintPath>
+    </Reference>
+    <Reference Include="HockeySDK">
+      <HintPath>..\packages\HockeySDK.Xamarin.5.1.2\lib\MonoAndroid403\HockeySDK.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Android.Support.Design.23.4.0.1\lib\MonoAndroid43\Xamarin.Android.Support.Design.dll</HintPath>
+    <Reference Include="Xamarin.Android.Support.Annotations">
+      <HintPath>..\packages\Xamarin.Android.Support.Annotations.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Annotations.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Android.Support.v4.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+    <Reference Include="Xamarin.Android.Arch.Core.Common">
+      <HintPath>..\packages\Xamarin.Android.Arch.Core.Common.1.0.0\lib\MonoAndroid80\Xamarin.Android.Arch.Core.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.AppCompat, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    <Reference Include="Xamarin.Android.Arch.Lifecycle.Common">
+      <HintPath>..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3\lib\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.CardView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    <Reference Include="Xamarin.Android.Arch.Lifecycle.Runtime">
+      <HintPath>..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3\lib\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.RecyclerView, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    <Reference Include="Xamarin.Android.Support.Compat">
+      <HintPath>..\packages\Xamarin.Android.Support.Compat.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Compat.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.Vector.Drawable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Xamarin.Android.Support.Vector.Drawable.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+    <Reference Include="Xamarin.Android.Support.Core.UI">
+      <HintPath>..\packages\Xamarin.Android.Support.Core.UI.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Core.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.Utils">
+      <HintPath>..\packages\Xamarin.Android.Support.Core.Utils.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Core.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Fragment">
+      <HintPath>..\packages\Xamarin.Android.Support.Fragment.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Fragment.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Media.Compat">
+      <HintPath>..\packages\Xamarin.Android.Support.Media.Compat.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Media.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Transition">
+      <HintPath>..\packages\Xamarin.Android.Support.Transition.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Transition.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Vector.Drawable">
+      <HintPath>..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
+      <HintPath>..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Design">
+      <HintPath>..\packages\Xamarin.Android.Support.Design.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Design.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -181,6 +211,289 @@
     <Compile Include="Models\Levels\BaseConcept.cs" />
     <Compile Include="Fragments\BaseConceptLayoutFragment.cs" />
     <Compile Include="Fragments\FourPicturesSelectConceptFragment.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\layout\LevelSelect.axml" />
+    <AndroidResource Include="Resources\layout\LessonFrame.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_help_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_help_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_help_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_help_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_help_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_volume_up_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_volume_up_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_volume_up_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_volume_up_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_volume_up_black_24dp.png" />
+    <AndroidResource Include="Resources\menu\levelFrame_menu.xml" />
+    <AndroidResource Include="Resources\values\Dimens.xml" />
+    <AndroidResource Include="Resources\layout\HearMe.axml" />
+    <AndroidResource Include="Resources\layout\FourPictures.axml" />
+    <AndroidResource Include="Resources\layout\ModuleSelect.axml" />
+    <AndroidResource Include="Resources\drawable\list_selector.xml" />
+    <AndroidResource Include="Resources\values\Colors.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_forward_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_arrow_forward_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_forward_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow_forward_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_arrow_forward_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_play_arrow_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_play_arrow_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_play_arrow_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_play_arrow_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_play_arrow_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_read_out_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_read_out_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_read_out_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_read_out_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_read_out_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\irmgard_picture.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\Text.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\Text.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\Text.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\Text.png" />
+    <AndroidResource Include="Resources\values\Styles.xml" />
+    <AndroidResource Include="Resources\values-v21\Styles.xml" />
+    <AndroidResource Include="Resources\layout\LevelSponsor.axml" />
+    <AndroidResource Include="Resources\layout\PickSyllable.axml" />
+    <AndroidResource Include="Resources\layout\FindMissingLetter.axml" />
+    <AndroidResource Include="Resources\drawable\underscore.xml" />
+    <AndroidResource Include="Resources\values\Attrs.xml" />
+    <AndroidResource Include="Resources\layout\Letter.axml" />
+    <AndroidResource Include="Resources\drawable\dotted.xml" />
+    <AndroidResource Include="Resources\layout\BuildSyllable.axml" />
+    <AndroidResource Include="Resources\layout\AbcRank.axml" />
+    <AndroidResource Include="Resources\layout\LetterTaskItem.axml" />
+    <AndroidResource Include="Resources\layout\LetterDrop.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_chat_bubble_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_chat_bubble_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_chat_bubble_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_chat_bubble_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_chat_bubble_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\layout\Video.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_play_arrow_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_play_arrow_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_play_arrow_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_play_arrow_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_play_arrow_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_hearing_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_hearing_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_hearing_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_hearing_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_hearing_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_done_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_done_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_done_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_done_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_done_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_replay_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_replay_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_replay_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_replay_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_replay_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_navigate_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_navigate_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_navigate_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_navigate_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_navigate_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_forward_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_arrow_forward_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_forward_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow_forward_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_arrow_forward_white_24dp.png" />
+    <AndroidResource Include="Resources\menu\video_menu.xml" />
+    <AndroidResource Include="Resources\layout\ProgressItem.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_check_box_outline_blank_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_check_box_outline_blank_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_check_box_outline_blank_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_check_box_outline_blank_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_check_box_outline_blank_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_check_box_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_check_box_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_check_box_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_check_box_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_check_box_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_indeterminate_check_box_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_indeterminate_check_box_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_indeterminate_check_box_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_indeterminate_check_box_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_indeterminate_check_box_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\empty_photo.png" />
+    <AndroidResource Include="Resources\layout\AbcRankOptionItem.axml" />
+    <AndroidResource Include="Resources\layout\TaskItem.axml" />
+    <AndroidResource Include="Resources\layout\BuildSyllableMediaElement.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_01.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_01.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_01.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_01.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_01.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_01.png" />
+    <AndroidResource Include="Resources\anim\ShowFeedbackIcon.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_icon_spiel_supergemacht.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\irmgard_icon_spiel_supergemacht.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_icon_spiel_supergemacht.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_icon_spiel_supergemacht.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_icon_spiel_supergemacht.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_icon_spiel_nochmal.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_icon_spiel_nochmal.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_icon_spiel_nochmal.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_icon_spiel_nochmal.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_icon_spiel_nochmal.png" />
+    <AndroidResource Include="Resources\anim\ShowNextButton.xml" />
+    <AndroidResource Include="Resources\anim\HideNextButton.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_drop_up_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_arrow_drop_up_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_drop_up_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow_drop_up_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_arrow_drop_up_black_24dp.png" />
+    <AndroidResource Include="Resources\layout\ModuleItem.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_skip_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_skip_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_skip_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_skip_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_skip_next_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_skip_previous_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_skip_previous_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_skip_previous_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_skip_previous_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_skip_previous_white_24dp.png" />
+    <AndroidResource Include="Resources\layout\ModuleProgressItem.axml" />
+    <AndroidResource Include="Resources\layout\HearTheLetter.axml" />
+    <AndroidResource Include="Resources\layout\Memory.axml" />
+    <AndroidResource Include="Resources\layout\MemoryCard.axml" />
+    <AndroidResource Include="Resources\drawable\rectangle_green.xml" />
+    <AndroidResource Include="Resources\drawable\rectangle_red.xml" />
+    <AndroidResource Include="Resources\drawable\slider_bar.xml" />
+    <AndroidResource Include="Resources\drawable\slider_thumb.xml" />
+    <AndroidResource Include="Resources\drawable\vert_lines.xml" />
+    <AndroidResource Include="Resources\drawable\vert_lines_inset.xml" />
+    <AndroidResource Include="Resources\anim\ShowPicturePopup.xml" />
+    <AndroidResource Include="Resources\layout\HearMeAbc.axml" />
+    <AndroidResource Include="Resources\layout\HearMeAbcItem.axml" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_lightbulb_outline_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_lightbulb_outline_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_lightbulb_outline_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_lightbulb_outline_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_lightbulb_outline_white_24dp.png" />
+    <AndroidResource Include="Resources\layout\SpeakerElement.axml" />
+    <AndroidResource Include="Resources\layout\GifAnimation.axml" />
+    <AndroidResource Include="Resources\layout\GifTask.axml" />
+    <AndroidResource Include="Resources\layout-h550dp\Memory.axml" />
+    <AndroidResource Include="Resources\layout-h550dp\MemoryCard.axml" />
+    <AndroidResource Include="Resources\layout-h550dp\Letter.axml" />
+    <AndroidResource Include="Resources\layout-h550dp\TaskItem.axml" />
+    <AndroidResource Include="Resources\layout-h550dp\BuildSyllable.axml" />
+    <AndroidResource Include="Resources\drawable\divider.png" />
+    <AndroidResource Include="Resources\drawable\slider_background.xml" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_hearing_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_lightbulb_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_more_vert_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_hearing_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_lightbulb_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_more_vert_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_hearing_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_lightbulb_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_more_vert_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_hearing_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_lightbulb_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_more_vert_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_hearing_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_lightbulb_outline_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_more_vert_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable\rectangle_progress.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\lightbulb.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\lightbulb.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\lightbulb.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\lightbulb.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\lightbulb.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\lightbulb.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\splashscreen.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_more_vert_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_more_vert_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_more_vert_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_more_vert_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_more_vert_white_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_skip_previous_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_skip_previous_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_skip_previous_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_skip_previous_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_skip_previous_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_skip_next_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_skip_next_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_skip_next_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_skip_next_black_24dp.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_skip_next_black_24dp.png" />
+    <AndroidResource Include="Resources\anim\SwipeInRight.xml" />
+    <AndroidResource Include="Resources\anim\SwipeInLeft.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_irmgard_icon_spiel_richtig_neu.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_irmgard_icon_spiel_richtig_neu.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_irmgard_icon_spiel_richtig_neu.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_irmgard_icon_spiel_richtig_neu.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_irmgard_icon_spiel_richtig_neu.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_irmgard_icon_spiel_falsch.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\ic_irmgard_icon_spiel_falsch.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_irmgard_icon_spiel_falsch.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_irmgard_icon_spiel_falsch.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_irmgard_icon_spiel_falsch.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_irmgard_icon_spiel_falsch.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\ic_irmgard_icon_spiel_richtig_neu.png" />
+    <AndroidResource Include="Resources\values\LegalNotice.xml" />
+    <AndroidResource Include="Resources\layout\LegalNotice.axml" />
+    <AndroidResource Include="Resources\menu\legal_notice_menu.xml" />
+    <AndroidResource Include="Resources\menu\legal_notice_contact_menu.xml" />
+    <AndroidResource Include="Resources\values\ExpansionDownloader.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_02.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_02.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_02.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_02.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_02.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_02.png" />
+    <AndroidResource Include="Resources\drawable\rectangle_gray.xml" />
+    <AndroidResource Include="Resources\values\Ids.xml" />
+    <AndroidResource Include="Resources\layout\DragIntoGap.axml" />
+    <AndroidResource Include="Resources\layout\Blank.axml" />
+    <AndroidResource Include="Resources\layout\BaseText.axml" />
+    <AndroidResource Include="Resources\layout\PictureConcept.axml" />
+    <AndroidResource Include="Resources\layout\SpeakerConcept.axml" />
+    <AndroidResource Include="Resources\layout\CardConcept.axml" />
+    <AndroidResource Include="Resources\drawable\letter_long.xml" />
+    <AndroidResource Include="Resources\drawable\letter_short.xml" />
+    <AndroidResource Include="Resources\layout\TaskItemRow.axml" />
+    <AndroidResource Include="Resources\layout\BaseTextGroup.axml" />
+    <AndroidResource Include="Resources\drawable\concept_bordered.xml" />
+    <AndroidResource Include="Resources\layout\BaseTextSpeaker.axml" />
+    <AndroidResource Include="Resources\layout\BaseTextBordered.axml" />
+    <AndroidResource Include="Resources\layout-h550dp\CardConcept.axml" />
+    <AndroidResource Include="Resources\layout\SelectConcept.axml" />
+    <AndroidResource Include="Resources\drawable\selected_background.xml" />
+    <AndroidResource Include="Resources\drawable\highlighted_background.xml" />
+    <AndroidResource Include="Resources\drawable\letterpuzzle_marker.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_03.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_03.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_03.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_03.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_03.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_03.png" />
+    <AndroidResource Include="Resources\layout\InputConcept.axml" />
+    <AndroidResource Include="Resources\layout\InputTextConcept.axml" />
+    <AndroidResource Include="Resources\drawable\input_dotted.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="MainAssets\Sounds\Objects\Elefant.mp3" />
@@ -1305,289 +1618,179 @@
     <AndroidAsset Include="MainAssets\Images\Waelder.png" />
     <AndroidAsset Include="MainAssets\Images\Wonne.png" />
     <AndroidAsset Include="MainAssets\Images\Haende.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\layout\Main.axml" />
-    <AndroidResource Include="Resources\values\Strings.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\Icon.png" />
-    <AndroidResource Include="Resources\layout\LevelSelect.axml" />
-    <AndroidResource Include="Resources\layout\LessonFrame.axml" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_help_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_help_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_help_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_help_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_help_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_volume_up_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_volume_up_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_volume_up_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_volume_up_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_volume_up_black_24dp.png" />
-    <AndroidResource Include="Resources\menu\levelFrame_menu.xml" />
-    <AndroidResource Include="Resources\values\Dimens.xml" />
-    <AndroidResource Include="Resources\layout\HearMe.axml" />
-    <AndroidResource Include="Resources\layout\FourPictures.axml" />
-    <AndroidResource Include="Resources\layout\ModuleSelect.axml" />
-    <AndroidResource Include="Resources\drawable\list_selector.xml" />
-    <AndroidResource Include="Resources\values\Colors.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_forward_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_arrow_forward_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_forward_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow_forward_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_arrow_forward_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_play_arrow_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_play_arrow_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_play_arrow_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_play_arrow_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_play_arrow_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_read_out_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_read_out_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_read_out_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_read_out_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_read_out_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable\irmgard_picture.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\Text.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\Text.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\Text.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\Text.png" />
-    <AndroidResource Include="Resources\values\Styles.xml" />
-    <AndroidResource Include="Resources\values-v21\Styles.xml" />
-    <AndroidResource Include="Resources\layout\LevelSponsor.axml" />
-    <AndroidResource Include="Resources\layout\PickSyllable.axml" />
-    <AndroidResource Include="Resources\layout\FindMissingLetter.axml" />
-    <AndroidResource Include="Resources\drawable\underscore.xml" />
-    <AndroidResource Include="Resources\values\Attrs.xml" />
-    <AndroidResource Include="Resources\layout\Letter.axml" />
-    <AndroidResource Include="Resources\drawable\dotted.xml" />
-    <AndroidResource Include="Resources\layout\BuildSyllable.axml" />
-    <AndroidResource Include="Resources\layout\AbcRank.axml" />
-    <AndroidResource Include="Resources\layout\LetterTaskItem.axml" />
-    <AndroidResource Include="Resources\layout\LetterDrop.axml" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_chat_bubble_outline_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_chat_bubble_outline_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_chat_bubble_outline_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_chat_bubble_outline_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_chat_bubble_outline_black_24dp.png" />
-    <AndroidResource Include="Resources\layout\Video.axml" />
-    <AndroidResource Include="Resources\layout\Toolbar.axml" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_play_arrow_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_play_arrow_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_play_arrow_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_play_arrow_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_play_arrow_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_hearing_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_hearing_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_hearing_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_hearing_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_hearing_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_done_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_done_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_done_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_done_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_done_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_replay_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_replay_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_replay_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_replay_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_replay_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_navigate_next_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_navigate_next_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_navigate_next_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_navigate_next_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_navigate_next_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_forward_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_arrow_forward_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_forward_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow_forward_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_arrow_forward_white_24dp.png" />
-    <AndroidResource Include="Resources\menu\video_menu.xml" />
-    <AndroidResource Include="Resources\layout\ProgressItem.axml" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_check_box_outline_blank_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_check_box_outline_blank_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_check_box_outline_blank_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_check_box_outline_blank_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_check_box_outline_blank_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_check_box_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_check_box_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_check_box_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_check_box_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_check_box_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_indeterminate_check_box_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_indeterminate_check_box_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_indeterminate_check_box_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_indeterminate_check_box_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_indeterminate_check_box_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable\empty_photo.png" />
-    <AndroidResource Include="Resources\layout\AbcRankOptionItem.axml" />
-    <AndroidResource Include="Resources\layout\TaskItem.axml" />
-    <AndroidResource Include="Resources\layout\BuildSyllableMediaElement.axml" />
-    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_01.png" />
-    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_01.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_01.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_01.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_01.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_01.png" />
-    <AndroidResource Include="Resources\anim\ShowFeedbackIcon.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\irmgard_icon_spiel_supergemacht.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\irmgard_icon_spiel_supergemacht.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_icon_spiel_supergemacht.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_icon_spiel_supergemacht.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_icon_spiel_supergemacht.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\irmgard_icon_spiel_nochmal.png" />
-    <AndroidResource Include="Resources\drawable-ldpi\irmgard_icon_spiel_nochmal.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_icon_spiel_nochmal.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_icon_spiel_nochmal.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_icon_spiel_nochmal.png" />
-    <AndroidResource Include="Resources\anim\ShowNextButton.xml" />
-    <AndroidResource Include="Resources\anim\HideNextButton.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_arrow_drop_up_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_arrow_drop_up_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_arrow_drop_up_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_arrow_drop_up_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_arrow_drop_up_black_24dp.png" />
-    <AndroidResource Include="Resources\layout\ModuleItem.axml" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_skip_next_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_skip_next_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_skip_next_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_skip_next_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_skip_next_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_skip_previous_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_skip_previous_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_skip_previous_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_skip_previous_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_skip_previous_white_24dp.png" />
-    <AndroidResource Include="Resources\layout\ModuleProgressItem.axml" />
-    <AndroidResource Include="Resources\layout\HearTheLetter.axml" />
-    <AndroidResource Include="Resources\layout\Memory.axml" />
-    <AndroidResource Include="Resources\layout\MemoryCard.axml" />
-    <AndroidResource Include="Resources\drawable\rectangle_green.xml" />
-    <AndroidResource Include="Resources\drawable\rectangle_red.xml" />
-    <AndroidResource Include="Resources\drawable\slider_bar.xml" />
-    <AndroidResource Include="Resources\drawable\slider_thumb.xml" />
-    <AndroidResource Include="Resources\drawable\vert_lines.xml" />
-    <AndroidResource Include="Resources\drawable\vert_lines_inset.xml" />
-    <AndroidResource Include="Resources\anim\ShowPicturePopup.xml" />
-    <AndroidResource Include="Resources\layout\HearMeAbc.axml" />
-    <AndroidResource Include="Resources\layout\HearMeAbcItem.axml" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_lightbulb_outline_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_lightbulb_outline_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_lightbulb_outline_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_lightbulb_outline_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_lightbulb_outline_white_24dp.png" />
-    <AndroidResource Include="Resources\layout\SpeakerElement.axml" />
-    <AndroidResource Include="Resources\layout\GifAnimation.axml" />
-    <AndroidResource Include="Resources\layout\GifTask.axml" />
-    <AndroidResource Include="Resources\layout-h550dp\Memory.axml" />
-    <AndroidResource Include="Resources\layout-h550dp\MemoryCard.axml" />
-    <AndroidResource Include="Resources\layout-h550dp\Letter.axml" />
-    <AndroidResource Include="Resources\layout-h550dp\TaskItem.axml" />
-    <AndroidResource Include="Resources\layout-h550dp\BuildSyllable.axml" />
-    <AndroidResource Include="Resources\drawable\divider.png" />
-    <AndroidResource Include="Resources\drawable\slider_background.xml" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_hearing_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_lightbulb_outline_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_more_vert_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_hearing_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_lightbulb_outline_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_more_vert_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_hearing_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_lightbulb_outline_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_more_vert_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_hearing_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_lightbulb_outline_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_more_vert_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_hearing_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_lightbulb_outline_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_more_vert_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable\rectangle_progress.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\lightbulb.png" />
-    <AndroidResource Include="Resources\drawable-ldpi\lightbulb.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\lightbulb.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\lightbulb.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\lightbulb.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\lightbulb.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\splashscreen.png" />
-    <AndroidResource Include="Resources\drawable-ldpi\splashscreen.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\splashscreen.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\splashscreen.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\splashscreen.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\splashscreen.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_more_vert_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_more_vert_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_more_vert_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_more_vert_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_more_vert_white_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_skip_previous_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_skip_previous_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_skip_previous_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_skip_previous_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_skip_previous_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_skip_next_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_skip_next_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_skip_next_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_skip_next_black_24dp.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_skip_next_black_24dp.png" />
-    <AndroidResource Include="Resources\anim\SwipeInRight.xml" />
-    <AndroidResource Include="Resources\anim\SwipeInLeft.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_irmgard_icon_spiel_richtig_neu.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_irmgard_icon_spiel_richtig_neu.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_irmgard_icon_spiel_richtig_neu.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_irmgard_icon_spiel_richtig_neu.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_irmgard_icon_spiel_richtig_neu.png" />
-    <AndroidResource Include="Resources\drawable-hdpi\ic_irmgard_icon_spiel_falsch.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\ic_irmgard_icon_spiel_falsch.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\ic_irmgard_icon_spiel_falsch.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\ic_irmgard_icon_spiel_falsch.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\ic_irmgard_icon_spiel_falsch.png" />
-    <AndroidResource Include="Resources\drawable-ldpi\ic_irmgard_icon_spiel_falsch.png" />
-    <AndroidResource Include="Resources\drawable-ldpi\ic_irmgard_icon_spiel_richtig_neu.png" />
-    <AndroidResource Include="Resources\values\LegalNotice.xml" />
-    <AndroidResource Include="Resources\layout\LegalNotice.axml" />
-    <AndroidResource Include="Resources\menu\legal_notice_menu.xml" />
-    <AndroidResource Include="Resources\menu\legal_notice_contact_menu.xml" />
-    <AndroidResource Include="Resources\values\ExpansionDownloader.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_02.png" />
-    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_02.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_02.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_02.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_02.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_02.png" />
-    <AndroidResource Include="Resources\drawable\rectangle_gray.xml" />
-    <AndroidResource Include="Resources\values\Ids.xml" />
-    <AndroidResource Include="Resources\layout\DragIntoGap.axml" />
-    <AndroidResource Include="Resources\layout\Blank.axml" />
-    <AndroidResource Include="Resources\layout\BaseText.axml" />
-    <AndroidResource Include="Resources\layout\PictureConcept.axml" />
-    <AndroidResource Include="Resources\layout\SpeakerConcept.axml" />
-    <AndroidResource Include="Resources\layout\CardConcept.axml" />
-    <AndroidResource Include="Resources\drawable\letter_long.xml" />
-    <AndroidResource Include="Resources\drawable\letter_short.xml" />
-    <AndroidResource Include="Resources\layout\TaskItemRow.axml" />
-    <AndroidResource Include="Resources\layout\BaseTextGroup.axml" />
-    <AndroidResource Include="Resources\drawable\concept_bordered.xml" />
-    <AndroidResource Include="Resources\layout\BaseTextSpeaker.axml" />
-    <AndroidResource Include="Resources\layout\BaseTextBordered.axml" />
-    <AndroidResource Include="Resources\layout-h550dp\CardConcept.axml" />
-    <AndroidResource Include="Resources\layout\SelectConcept.axml" />
-    <AndroidResource Include="Resources\drawable\selected_background.xml" />
-    <AndroidResource Include="Resources\drawable\highlighted_background.xml" />
-    <AndroidResource Include="Resources\drawable\letterpuzzle_marker.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_03.png" />
-    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_03.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_03.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_03.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_03.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_03.png" />
-    <AndroidResource Include="Resources\layout\InputConcept.axml" />
-    <AndroidResource Include="Resources\layout\InputTextConcept.axml" />
-    <AndroidResource Include="Resources\drawable\input_dotted.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\AndroidManifest.xml" />
-    <None Include="packages.config" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Beamtentum.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Berichtigung.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Bescheidenheit.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Bildung.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Brandung.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Erbschaft.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Erkenntnis.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Feindschaft.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Fertigkeit.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Finsternis.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Fluessigkeit.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Freundlichkeit.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Freundschaft.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Haltung.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Mehrheit.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Reichtum.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Trunkenheit.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Verhaeltnis.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-1\Warnung.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-2\durstig.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-2\essen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-2\gelb.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-2\gruen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-2\lernen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-2\lesen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-2\lieb.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-2\rot.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-2\rufen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-2\satt.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-2\schlafen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-2\schoen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-2\schreiben.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-2\traurig.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-4\Das_Katzenklo.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-4\Das_Nasenbein.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-4\Das_Tischtuch.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-4\Der_Baumstamm.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-4\Der_Holzschrank.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-4\Der_Hundehaufen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-4\Der_Lampenschirm.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-4\Der_Vogelkaefig.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-4\Die_Hausmusik.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-4\Die_Hauswand.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-4\Die_Milchkanne.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-2-4\Die_Telefonstimme.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-5-4\Verben_Gegenwart.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-5-4\Verben_Vergangenheit.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-5-4\Verben_Zukunft.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\beissen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\Brei.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\dein.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\Eier.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\einfach.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\Einhorn.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\einsam.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\Eintopf.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\Einzahl.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\Eis.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\heiss.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\leise.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\mein.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\Reis.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\reisen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\reissen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\reiten.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\Reiter.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\sein.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\Zeit.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-3\Zeitung.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-5\klicke_alle_bestimmten_artikel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-5\klicke_alle_nomen_einzahl.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-5\klicke_alle_nomen_mehrzahl.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-5\klicke_alle_persoenlichen_fuerwoerter_einzahl.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-5\klicke_alle_persoenlichen_fuerwoerter_mehrzahl.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-5\klicke_alle_unbestimmten_artikel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-5\klicke_alle_verben_gegenwart.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-5\klicke_alle_verben_vergangenheit.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Exercises\3-6-5\klicke_alle_verben_zukunft.mp3" />
+    <AndroidAsset Include="MainAssets\Videos\L3M1.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L3M2.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L3M3.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L3M4.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L3M5.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L3M6.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L4M1.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L4M2.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L4M3.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L4M4.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L4M5.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L4M6.mp4" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_1_Aufgabe_1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_1_Aufgabe_2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_1_Aufgabe_3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_1_Aufgabe_4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_1_Aufgabe_5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_1_Aufgabe_6.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_2_Aufgabe_1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_2_Aufgabe_2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_2_Aufgabe_3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_2_Aufgabe_4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_3_Aufgabe_1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_3_Aufgabe_2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_3_Aufgabe_3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_3_Aufgabe_4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_4_Aufgabe_1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_4_Aufgabe_2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_4_Aufgabe_3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_4_Aufgabe_4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_5_Aufgabe_1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_5_Aufgabe_2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_5_Aufgabe_3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_5_Aufgabe_4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_5_Aufgabe_5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_5_Aufgabe_6.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_6_Aufgabe_1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_6_Aufgabe_2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_6_Aufgabe_3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_6_Aufgabe_4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\Level_3_Modul_6_Aufgabe_5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\NounSuffix\heit.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\NounSuffix\keit.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\NounSuffix\nis.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\NounSuffix\schaft.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\NounSuffix\tum.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\NounSuffix\ung.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Verbs\aergern.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Verbs\arbeiten.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Verbs\arbeitest.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Verbs\betteln.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Verbs\haemmern.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Verbs\humpeln.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Verbs\klingeln.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Verbs\lachen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Verbs\meckern.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Verbs\rudern.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Verbs\saeubern.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Verbs\segeln.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Verbs\stricken.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Verbs\tanzen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Verbs\weinen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Verbs\wickeln.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Verbs\wuerfeln.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Bild.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Blume.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Buch.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Eis.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Haar.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Hund.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Kamel.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Objects\Melone.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M2A1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M2A2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M2A3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M2A4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M2A5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M3A1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M3A2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M3A3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M3A4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M3A5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M3A6.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M4A1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M4A2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M4A3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M4A4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M5A1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M5A2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M5A3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M5A4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M5A5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M6A1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M6A2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Intros\L4M6A3.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Fonts\GlacialIndifference-Bold.otf" />
@@ -1605,172 +1808,6 @@
     <AndroidAsset Include="Assets\level9.json" />
     <AndroidAsset Include="Assets\sandbox.json" />
     <AndroidAsset Include="Assets\testlayout.json" />
-    <AndroidAsset Include="Assets\Videos\L3M1.mp4" />
-    <AndroidAsset Include="Assets\Videos\L3M2.mp4" />
-    <AndroidAsset Include="Assets\Videos\L3M3.mp4" />
-    <AndroidAsset Include="Assets\Videos\L3M4.mp4" />
-    <AndroidAsset Include="Assets\Videos\L3M5.mp4" />
-    <AndroidAsset Include="Assets\Videos\L3M6.mp4" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_1_Aufgabe_1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_1_Aufgabe_2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_1_Aufgabe_3.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_1_Aufgabe_4.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_1_Aufgabe_5.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_1_Aufgabe_6.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_2_Aufgabe_1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_2_Aufgabe_2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_2_Aufgabe_3.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_2_Aufgabe_4.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_3_Aufgabe_1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_3_Aufgabe_2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_3_Aufgabe_3.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_3_Aufgabe_4.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_4_Aufgabe_1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_4_Aufgabe_2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_4_Aufgabe_3.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_4_Aufgabe_4.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_5_Aufgabe_1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_5_Aufgabe_2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_5_Aufgabe_3.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_5_Aufgabe_4.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_5_Aufgabe_5.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_5_Aufgabe_6.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_6_Aufgabe_1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_6_Aufgabe_2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_6_Aufgabe_3.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_6_Aufgabe_4.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Intros\Level_3_Modul_6_Aufgabe_5.mp3" />
-    <AndroidAsset Include="Assets\Sounds\NounSuffix\heit.mp3" />
-    <AndroidAsset Include="Assets\Sounds\NounSuffix\keit.mp3" />
-    <AndroidAsset Include="Assets\Sounds\NounSuffix\nis.mp3" />
-    <AndroidAsset Include="Assets\Sounds\NounSuffix\schaft.mp3" />
-    <AndroidAsset Include="Assets\Sounds\NounSuffix\tum.mp3" />
-    <AndroidAsset Include="Assets\Sounds\NounSuffix\ung.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-2\durstig.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-2\essen.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-2\gelb.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-2\gruen.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-2\lernen.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-2\lesen.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-2\lieb.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-2\rot.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-2\rufen.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-2\satt.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-2\schlafen.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-2\schoen.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-2\schreiben.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-2\traurig.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-4\Das_Katzenklo.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-4\Das_Nasenbein.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-4\Das_Tischtuch.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-4\Der_Baumstamm.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-4\Der_Holzschrank.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-4\Der_Hundehaufen.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-4\Der_Lampenschirm.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-4\Der_Vogelkaefig.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-4\Die_Hausmusik.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-4\Die_Hauswand.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-4\Die_Milchkanne.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-4\Die_Telefonstimme.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Bild.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Blume.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Buch.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Haar.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Hund.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Kamel.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Melone.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Verbs\aergern.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Verbs\arbeiten.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Verbs\betteln.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Verbs\haemmern.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Verbs\humpeln.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Verbs\klingeln.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Verbs\lachen.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Verbs\meckern.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Verbs\rudern.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Verbs\saeubern.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Verbs\segeln.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Verbs\stricken.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Verbs\tanzen.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Verbs\weinen.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Verbs\wickeln.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Verbs\wuerfeln.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Verbs\arbeitest.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-5-4\Verben_Gegenwart.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-5-4\Verben_Vergangenheit.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-5-4\Verben_Zukunft.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Objects\Eis.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_bestimmten_artikel.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_nomen_einzahl.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_nomen_mehrzahl.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_persoenlichen_fuerwoerter_einzahl.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_persoenlichen_fuerwoerter_mehrzahl.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_unbestimmten_artikel.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_verben_gegenwart.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_verben_vergangenheit.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-5\klicke_alle_verben_zukunft.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\beissen.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Brei.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\dein.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Eier.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\einfach.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Einhorn.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\einsam.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Eintopf.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Einzahl.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Eis.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\heiss.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\leise.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\mein.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Reis.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\reisen.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\reissen.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\reiten.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Reiter.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\sein.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Zeit.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-6-3\Zeitung.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Beamtentum.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Berichtigung.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Bescheidenheit.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Bildung.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Brandung.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Erbschaft.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Erkenntnis.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Feindschaft.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Fertigkeit.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Finsternis.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Fluessigkeit.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Freundlichkeit.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Freundschaft.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Haltung.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Mehrheit.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Reichtum.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Trunkenheit.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Verhaeltnis.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Exercises\3-2-1\Warnung.mp3" />
-  </ItemGroup>
-  <ItemGroup>
-    <XamarinComponentReference Include="hockeyappandroid">
-      <Visible>False</Visible>
-      <Version>4.1.0.2</Version>
-    </XamarinComponentReference>
-    <XamarinComponentReference Include="xamandroidsupportdesign">
-      <Visible>False</Visible>
-      <Version>23.4.0.1</Version>
-    </XamarinComponentReference>
-    <XamarinComponentReference Include="xamandroidsupportv7appcompat">
-      <Visible>False</Visible>
-      <Version>23.4.0.1</Version>
-    </XamarinComponentReference>
-    <XamarinComponentReference Include="xamandroidsupportv7cardview">
-      <Visible>False</Visible>
-      <Version>23.4.0.1</Version>
-    </XamarinComponentReference>
-    <XamarinComponentReference Include="xamandroidsupportv7recyclerview">
-      <Visible>False</Visible>
-      <Version>23.4.0.1</Version>
-    </XamarinComponentReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">
@@ -1782,8 +1819,7 @@
     <MonoDevelop>
       <Properties>
         <Policies>
-          <TextStylePolicy inheritsSet="VisualStudio" inheritsScope="text/plain" scope="text/plain" />
-          <CSharpFormattingPolicy inheritsSet="Mono" inheritsScope="text/x-csharp" scope="text/x-csharp" />
+          <TextStylePolicy TabWidth="4" IndentWidth="4" RemoveTrailingWhitespace="True" NoTabsAfterNonTabs="False" EolMarker="Native" FileWidth="80" TabsToSpaces="True" scope="text/plain" />
         </Policies>
       </Properties>
     </MonoDevelop>
@@ -1830,4 +1866,21 @@
     <Zip Files="@(PatchAssetsFiles)" WorkingDirectory="$(ProjectDir)Assets" ZipFileName="patch.$(OBBPatchVersionCode).$(ManifestPackage).obb" ZipLevel="0" />
   </Target>
   <!-- END: Create OBBs -->
+  <Import Project="..\packages\Xamarin.Android.Support.Annotations.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Core.Common.1.0.0\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Core.Common.1.0.0\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Compat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Compat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Core.UI.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Core.UI.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Core.UI.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Core.UI.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Core.Utils.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Core.Utils.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Core.Utils.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Core.Utils.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Fragment.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Fragment.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Fragment.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Fragment.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Media.Compat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Media.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Media.Compat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Media.Compat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Transition.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Transition.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Transition.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Transition.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v4.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v4.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v4.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v4.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.CardView.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.CardView.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.CardView.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.CardView.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Design.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Design.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Design.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Design.targets')" />
 </Project>

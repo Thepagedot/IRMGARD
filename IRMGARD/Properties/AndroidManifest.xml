@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <!-- Switch between "IRMGARD" (package="de.kopfhandundfuss.irmgard") and "IRMGARD Prerelease" (package="com.thepagedot.irmgard") app configuration -->
 <!-- TODO Release: Update versionName and versionCode -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="de.kopfhandundfuss.irmgard" android:versionName="1.3-beta2" android:versionCode="33" android:installLocation="auto">
-	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="23" />
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="de.kopfhandundfuss.irmgard" android:versionName="1.4-alpha1" android:versionCode="34" android:installLocation="preferExternal">
+	<uses-sdk android:minSdkVersion="16" android:targetSdkVersion="26" />
 	<application android:label="IRMGARD" android:theme="@style/IrmgardTheme" android:icon="@drawable/Icon">
 		<!-- TODO Release: Update obbMainVersionCode and obbPatchVersionCode -->
-		<meta-data android:name="obbMainVersionCode" android:value="29" />
-		<meta-data android:name="obbPatchVersionCode" android:value="33" />
+		<meta-data android:name="obbMainVersionCode" android:value="34" />
+		<meta-data android:name="obbPatchVersionCode" android:value="34" />
 	</application>
 </manifest>

@@ -1,9 +1,2078 @@
-{
+﻿{
   "Id": 4,
   "Name": "Level 4",
   "Color": "#b89d0b",
-  "IsEnabled": false,
+  "IsEnabled": true,
   "IsCompleted": false,
   "VideoPath": null,
-  "Modules": []
+  "Modules": [
+    {
+        "Name": "1: Wiederholungen",
+        "Color": "#f0ebd1",
+        "VideoPath": "Videos/L4M1.mp4",
+        "Lessons": [
+            {
+                "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
+                "Id": 411,
+                "Title": "Hauptwort?",
+                "SoundPath": "Intros/Level_3_Modul_2_Aufgabe_2.mp3",
+                "Hint": "Hints/Extra_tip_denkst_du_ans_aufschreiben.mp3",
+                "TypeOfLevel": "HearTheLetter",
+                "SliderLabels": [
+                    {
+                        "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                        "Text": "Ja",
+                        "ShowAsPlainText": true
+                    },
+                    {
+                        "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                        "Text": "Nein",
+                        "ShowAsPlainText": true
+                    }
+                ],
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4111,
+                        "LetterLocations": [
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/3-2-2/durstig.mp3"
+                            },
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/3-2-2/essen.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/3-2-2/gelb.mp3"
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4112,
+                        "LetterLocations": [
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/3-2-2/gruen.mp3"
+                            },
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/3-2-2/lernen.mp3"
+                            },
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/3-2-2/lesen.mp3"
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4113,
+                        "LetterLocations": [
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/3-2-2/lieb.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/3-2-2/rot.mp3"
+                            },
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/3-2-2/rufen.mp3"
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4114,
+                        "LetterLocations": [
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/3-2-2/satt.mp3"
+                            },
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/3-2-2/schlafen.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/3-2-2/schoen.mp3"
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4115,
+                        "LetterLocations": [
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/3-2-2/schreiben.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/3-2-2/traurig.mp3"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
+                "Id": 412,
+                "Title": "Verbendungen",
+                "SoundPath": "Intros/Level_3_Modul_3_Aufgabe_2.mp3",
+                "Hint": "Hints/Extra_tip_ueberlege_dir_Woerter_mit_AU.mp3",
+                "TypeOfLevel": "HearTheLetter",
+                "SliderLabels": [
+                    {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "en",
+                        "ShowAsPlainText": true
+                    },
+                    {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "ern",
+                        "ShowAsPlainText": true
+                    },
+                    {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "eln",
+                        "ShowAsPlainText": true
+                    }
+                ],
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4121,
+                        "LetterLocations": [
+                            {
+                                "Location": 0,
+                                "SoundPath": "Verbs/tanzen.mp3"
+                            },
+                            {
+                                "Location": 2,
+                                "SoundPath": "Verbs/rudern.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Verbs/klingeln.mp3"
+                            },
+                            {
+                                "Location": 0,
+                                "SoundPath": "Verbs/weinen.mp3"
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4122,
+                        "LetterLocations": [
+                            {
+                                "Location": 0,
+                                "SoundPath": "Verbs/arbeiten.mp3"
+                            },
+                            {
+                                "Location": 2,
+                                "SoundPath": "Verbs/saeubern.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Verbs/wuerfeln.mp3"
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4123,
+                        "LetterLocations": [
+                            {
+                                "Location": 0,
+                                "SoundPath": "Verbs/stricken.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Verbs/humpeln.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Verbs/betteln.mp3"
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4124,
+                        "LetterLocations": [
+                            {
+                                "Location": 1,
+                                "SoundPath": "Verbs/segeln.mp3"
+                            },
+                            {
+                                "Location": 2,
+                                "SoundPath": "Verbs/aergern.mp3"
+                            },
+                            {
+                                "Location": 0,
+                                "SoundPath": "Verbs/lachen.mp3"
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4125,
+                        "LetterLocations": [
+                            {
+                                "Location": 2,
+                                "SoundPath": "Verbs/meckern.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Verbs/wickeln.mp3"
+                            },
+                            {
+                                "Location": 2,
+                                "SoundPath": "Verbs/haemmern.mp3"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
+                "Id": 413,
+                "Title": "Der, die, das?",
+                "SoundPath": "Intros/Level_3_Modul_4_Aufgabe_3.mp3",
+                "Hint": "Hints/Extra_tip_wichtig_ist_dass_du_taeglich_mit_mir_lernst.mp3",
+                "TypeOfLevel": "SelectConcept",
+                "HighlightCorrectOptionsOnMistake": true,
+                "UseOptionItemsOnly": true,
+                "HideRack": true,
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4131,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 100,
+                                            "Text": "Ich"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 100,
+                                            "Text": "Du"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 100,
+                                            "AddToTextSize": -4,
+                                            "Text": "Er, Sie, Es"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 100,
+                                            "Text": "Wir"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 100,
+                                            "Text": "Ihr"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 100,
+                                            "Text": "Sie"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Space, IRMGARD"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "arbeitest",
+                                            "SoundPath": "Verbs/arbeitest.mp3"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
+                "Id": 414,
+                "Title": "Zeiten",
+                "SoundPath": "Intros/Level_3_Modul_5_Aufgabe_6.mp3",
+                "Hint": "Hints/Extra_tip_wichtig_ist_dass_du_taeglich_mit_mir_lernst.mp3",
+                "TypeOfLevel": "SelectConcept",
+                "HighlightCorrectOptionsOnMistake": true,
+                "HideRack": true,
+                "TopMargins": [ -1, 60 ],
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4141,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "Text": "Der Junge spielt mit dem Hund."
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 100,
+                                            "Text": "Vergangenheit",
+                                            "AddToTextSize": -6
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 100,
+                                            "Text": "Gegenwart",
+                                            "AddToTextSize": -6
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 100,
+                                            "Text": "Zukunft",
+                                            "AddToTextSize": -6
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "Text": "Das Mädchen weinte gestern."
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 100,
+                                            "Text": "Vergangenheit",
+                                            "AddToTextSize": -6
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 100,
+                                            "Text": "Gegenwart",
+                                            "AddToTextSize": -6
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 100,
+                                            "Text": "Zukunft",
+                                            "AddToTextSize": -6
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4142,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "Text": "Der Zahn schmerzt."
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 100,
+                                            "Text": "Vergangenheit",
+                                            "AddToTextSize": -6
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 100,
+                                            "Text": "Gegenwart",
+                                            "AddToTextSize": -6
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 100,
+                                            "Text": "Zukunft",
+                                            "AddToTextSize": -6
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4143,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "Text": "Der Hahn tropft."
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 100,
+                                            "Text": "Vergangenheit",
+                                            "AddToTextSize": -6
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 100,
+                                            "Text": "Gegenwart",
+                                            "AddToTextSize": -6
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 100,
+                                            "Text": "Zukunft",
+                                            "AddToTextSize": -6
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4144,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "Text": "Die Melone schmeckte gut."
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 100,
+                                            "Text": "Vergangenheit",
+                                            "AddToTextSize": -6
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 100,
+                                            "Text": "Gegenwart",
+                                            "AddToTextSize": -6
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 100,
+                                            "Text": "Zukunft",
+                                            "AddToTextSize": -6
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4145,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "Text": "Die Katze jammert."
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 100,
+                                            "Text": "Vergangenheit",
+                                            "AddToTextSize": -6
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 100,
+                                            "Text": "Gegenwart",
+                                            "AddToTextSize": -6
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 100,
+                                            "Text": "Zukunft",
+                                            "AddToTextSize": -6
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
+                "Id": 415,
+                "Title": "Grundformen",
+                "SoundPath": "Intros/Level_3_Modul_6_Aufgabe_4.mp3",
+                "Hint": "Hints/Extra_tip_wichtig_ist_dass_du_taeglich_mit_mir_lernst.mp3",
+                "TypeOfLevel": "SelectConcept",
+                "HighlightCorrectOptionsOnMistake": true,
+                "HideRack": true,
+                "TopMargins": [ 10, 60 ],
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4151,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Kauf kein Fahrrad vom Restposten.\nEs könnte wie die Pest rosten."
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "Text": "Wer kann rosten?"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 120,
+                                            "Text": "Das Fahrrad"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Size": 120,
+                                            "Text": "Die Pest"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Name": "2: Einführung Adjektive",
+        "Color": "#e9e2bb",
+        "VideoPath": "Videos/L4M2.mp4",
+        "Lessons": [
+            {
+                "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
+                "Id": 421,
+                "Title": "Wie?",
+                "SoundPath": "Intros/L4M2A1.mp3",
+                "Hint": "Hints/Extra_tip_wichtig_ist_dass_du_taeglich_mit_mir_lernst.mp3",
+                "TypeOfLevel": "SelectConcept",
+                "HighlightCorrectOptionsOnMistake": true,
+                "HideRack": true,
+                "TopMargins": [ -1, 60 ],
+                "SingleChoice": true,
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4211,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "Apfel"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "rot"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "lieb"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "tief"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "Himmel"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "sauer"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "kalt"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "bewölkt"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4212,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "Mann"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "kalt"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "spannend"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "dünn"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "Film"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "spannend"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "rot"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "kalt"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4213,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "Ball"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "rund"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "eckig"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "tief"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "Mutter"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "lieb"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "hell"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "schlecht"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4214,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "Blume"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "rot"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "nass"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "hoch"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "Dreieck"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "kalt"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "bunt"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "dünn"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4215,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "Baum"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "grün"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "dreieckig"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "weinend"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "Tiger"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "gefährlich"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "freundlich"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "lustig"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+
+                ]
+            },
+            {
+                "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
+                "Id": 422,
+                "Title": "Beschreiben",
+                "SoundPath": "Intros/L4M2A2.mp3",
+                "Hint": "Hints/Extra_tip_wichtig_ist_dass_du_taeglich_mit_mir_lernst.mp3",
+                "TypeOfLevel": "SelectConcept",
+                "HighlightCorrectOptionsOnMistake": true,
+                "HideRack": true,
+                "TopMargins": [ -1, 60 ],
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4221,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "Size": 100,
+                                            "ImagePath": "Elefant.png"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "grau"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "groß"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "dickhäutig"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "bunt"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "kurz"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "lustig"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4222,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "Size": 100,
+                                            "ImagePath": "Wald.png"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "lustig"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "grün"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "verzweifelt"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "hoch"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "blättrig"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "kurz"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4223,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "Size": 100,
+                                            "ImagePath": "Blume_rosa.png"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "blau"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "grob"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "hart"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "rosa"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "blättrig"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "kurz"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4224,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "Size": 100,
+                                            "ImagePath": "Degen.png"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "grün"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "blau"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "kurz"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "leicht"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "spitz"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "gerade"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4225,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "Size": 100,
+                                            "ImagePath": "Hut.png"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "weich"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "gelb"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "spitz"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "eckig"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "kalt"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "austauschbar"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
+                "Id": 423,
+                "Title": "Gegensätze",
+                "SoundPath": "Intros/L4M2A3.mp3",
+                "Hint": "Hints/Extra_tip_hast_du_einen_freund.mp3",
+                "TypeOfLevel": "FourPicturesSelectConcept",
+                "SingleChoice": true,
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4231,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "dick"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "dunkel"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "trocken"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "alt"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "hell"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "klein"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "starr"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "dünn"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "eng"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "dick"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4232,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "laufen"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "schnell"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "kalt"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "hell"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "langsam"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "lustig"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "schlecht"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "verfault"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "träge"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "gut"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4233,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "nass"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "trocken"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "kalt"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "dunkel"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "warm"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "alt"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "rissig"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "neu"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "nass"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "trocken"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4234,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "gebraucht"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "jung"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "grün"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "hell"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "alt"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4235,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "eckig"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "schmal"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "klein"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "kurz"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "lang"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$type": "IRMGARD.Models.InputConcept, IRMGARD",
+                "Id": 424,
+                "Title": "Sätze mit Adjektiven",
+                "SoundPath": "Intros/L4M2A4.mp3",
+                "TypeOfLevel": "InputConcept",
+                "HighlightCorrectOptionsOnMistake": true,
+                "HideRack": true,
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4241,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "kalte"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Die"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "kalte"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Suppe."
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "LUSTIGE"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "KALTE"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "LANGE"
+                                        }                                        
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4242,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "runde"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Der"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "runde"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Ball."
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "BAUCHIGE"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "RUNDE"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "ECKIGE"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4243,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "dicke"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Das"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "dicke"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Buch."
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "DICKE"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "GROßE"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "KALTE"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4244,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "spannende"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Der"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "spannende"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Film."
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "GROßE"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "RUNDE"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "SPANNENDE"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4245,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "tiefe"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Das"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "tiefe"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Meer."
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "GRÜNE"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "TIEFE"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "Text": "HARTE"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+                "Id": 425,
+                "Title": "Sätze mit Adjektiven",
+                "SoundPath": "Intros/L4M2A5.mp3",
+                "TypeOfLevel": "DragIntoGap",
+                "HighlightCorrectOptionsOnMistake": true,
+                "HideRack": true,
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+                        "Id": 4251,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "kalte"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Die"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "k"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "alte Suppe."
+                                        }
+                                    ]
+                                ],
+                                "OptionItems": [
+                                    {
+                                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                        "Text": "k"
+                                    },
+                                    {
+                                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                        "Text": "K"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+                        "Id": 4252,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Fischiges"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Der Hund frisst nichts"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "F"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "ischiges."
+                                        }
+                                    ]
+                                ],
+                                "OptionItems": [
+                                    {
+                                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                        "Text": "f"
+                                    },
+                                    {
+                                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                        "Text": "F"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Name": "3: Adjektive in Sätzen",
+        "Color": "#e1d8a4",
+        "VideoPath": "Videos/L4M3.mp4",
+        "Lessons": [
+            {
+                "$type": "IRMGARD.Models.InputConcept, IRMGARD",
+                "Id": 431,
+                "Title": "UN",
+                "SoundPath": "Intros/L4M3A1.mp3",
+                "TypeOfLevel": "InputConcept",
+                "HighlightCorrectOptionsOnMistake": true,
+                "HideRack": true,
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4311,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "unhöflich"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Der Nachbar ist nicht höflich,"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "sondern er ist"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "unhöflich"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "."
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Name": "4: Einführung ß",
+        "Color": "#dace8e",
+        "VideoPath": "Videos/L4M4.mp4",
+        "Lessons": [
+            {
+                "$type": "IRMGARD.Models.InputConcept, IRMGARD",
+                "Id": 441,
+                "Title": "UN",
+                "SoundPath": "Intros/L4M3A1.mp3",
+                "TypeOfLevel": "InputConcept",
+                "HighlightCorrectOptionsOnMistake": true,
+                "HideRack": true,
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4411,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "unhöflich"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Der Nachbar ist nicht höflich,"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "sondern er ist"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "unhöflich"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "."
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Name": "5: Steigerungen",
+        "Color": "#d2c479",
+        "VideoPath": "Videos/L4M5.mp4",
+        "Lessons": [
+            {
+                "$type": "IRMGARD.Models.InputConcept, IRMGARD",
+                "Id": 451,
+                "Title": "UN",
+                "SoundPath": "Intros/L4M3A1.mp3",
+                "TypeOfLevel": "InputConcept",
+                "HighlightCorrectOptionsOnMistake": true,
+                "HideRack": true,
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4511,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "unhöflich"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Der Nachbar ist nicht höflich,"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "sondern er ist"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "unhöflich"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "."
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "Name": "6: Zusammengesetzte Adjektive",
+        "Color": "#cbba64",
+        "VideoPath": "Videos/L4M6.mp4",
+        "Lessons": [
+            {
+                "$type": "IRMGARD.Models.InputConcept, IRMGARD",
+                "Id": 461,
+                "Title": "UN",
+                "SoundPath": "Intros/L4M3A1.mp3",
+                "TypeOfLevel": "InputConcept",
+                "HighlightCorrectOptionsOnMistake": true,
+                "HideRack": true,
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4611,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "unhöflich"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Der Nachbar ist nicht höflich,"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "sondern er ist"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "unhöflich"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "."
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+  ]
 }

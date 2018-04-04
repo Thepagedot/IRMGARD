@@ -9,9 +9,9 @@ using LicenseVerificationLibrary;
 [assembly: AssemblyTitle ("IRMGARD")]
 [assembly: AssemblyDescription ("Hilft Erwachsenen Lesen und Schreiben zu lernen")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("Kopf, Hand und Fuss gGmbh")]
+[assembly: AssemblyCompany ("KOPF, HAND + FUSS gGmbH")]
 [assembly: AssemblyProduct ("IRMGARD-App")]
-[assembly: AssemblyCopyright ("© 2016 KOPF, HAND und FUSS")]
+[assembly: AssemblyCopyright ("© 2018 KOPF, HAND + FUSS")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 

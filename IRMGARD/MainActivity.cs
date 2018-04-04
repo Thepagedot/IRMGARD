@@ -140,7 +140,7 @@ namespace IRMGARD
             {
                 // Register HockeyApp
                 CrashManager.Register(this, "089a6ee65f4242b89c51eab36a4e0ed2");
-                MetricsManager.Register(this, Application, "089a6ee65f4242b89c51eab36a4e0ed2");
+                MetricsManager.Register(Application, "089a6ee65f4242b89c51eab36a4e0ed2");
             }
 
             RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
