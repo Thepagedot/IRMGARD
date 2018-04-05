@@ -77,9 +77,6 @@
     <Reference Include="HockeySDK">
       <HintPath>..\packages\HockeySDK.Xamarin.5.1.2\lib\MonoAndroid403\HockeySDK.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Android.Support.Annotations">
       <HintPath>..\packages\Xamarin.Android.Support.Annotations.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Annotations.dll</HintPath>
     </Reference>
@@ -130,6 +127,9 @@
     </Reference>
     <Reference Include="Xamarin.Android.Support.Design">
       <HintPath>..\packages\Xamarin.Android.Support.Design.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -496,6 +496,58 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\a_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\A.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\e_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\E.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\i_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\I.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\o_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\O.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\u_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\U.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\l_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\L.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\m_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\M.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\n_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\N.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\r_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\R.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\s_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\S.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\w_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\W.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\z_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\Z.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\j_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\J.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\f_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\F.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\h_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\H.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\b_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\B.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\d_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\D.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\g_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\G.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\k_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\K.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\t_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\T.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\p_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\P.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\c_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\C.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\q_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\Q.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\v_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\V.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\x_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\X.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\y_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\AnimLetters\Y.gif" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Elefant.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Ofen.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Uhu.mp3" />
@@ -1062,58 +1114,6 @@
     <AndroidAsset Include="MainAssets\Sounds\Criticism\zwar_hast_du_nicht1.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Criticism\zwar_hast_du_nicht2.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Criticism\zwar_hast_du_nicht3.mp3" />
-    <AndroidAsset Include="MainAssets\Gif\a_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\A.gif" />
-    <AndroidAsset Include="MainAssets\Gif\e_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\E.gif" />
-    <AndroidAsset Include="MainAssets\Gif\i_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\I.gif" />
-    <AndroidAsset Include="MainAssets\Gif\o_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\O.gif" />
-    <AndroidAsset Include="MainAssets\Gif\u_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\U.gif" />
-    <AndroidAsset Include="MainAssets\Gif\l_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\L.gif" />
-    <AndroidAsset Include="MainAssets\Gif\m_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\M.gif" />
-    <AndroidAsset Include="MainAssets\Gif\n_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\N.gif" />
-    <AndroidAsset Include="MainAssets\Gif\r_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\R.gif" />
-    <AndroidAsset Include="MainAssets\Gif\s_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\S.gif" />
-    <AndroidAsset Include="MainAssets\Gif\w_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\W.gif" />
-    <AndroidAsset Include="MainAssets\Gif\z_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\Z.gif" />
-    <AndroidAsset Include="MainAssets\Gif\j_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\J.gif" />
-    <AndroidAsset Include="MainAssets\Gif\f_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\F.gif" />
-    <AndroidAsset Include="MainAssets\Gif\h_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\H.gif" />
-    <AndroidAsset Include="MainAssets\Gif\b_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\B.gif" />
-    <AndroidAsset Include="MainAssets\Gif\d_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\D.gif" />
-    <AndroidAsset Include="MainAssets\Gif\g_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\G.gif" />
-    <AndroidAsset Include="MainAssets\Gif\k_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\K.gif" />
-    <AndroidAsset Include="MainAssets\Gif\t_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\T.gif" />
-    <AndroidAsset Include="MainAssets\Gif\p_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\P.gif" />
-    <AndroidAsset Include="MainAssets\Gif\c_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\C.gif" />
-    <AndroidAsset Include="MainAssets\Gif\q_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\Q.gif" />
-    <AndroidAsset Include="MainAssets\Gif\v_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\V.gif" />
-    <AndroidAsset Include="MainAssets\Gif\x_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\X.gif" />
-    <AndroidAsset Include="MainAssets\Gif\y_1.gif" />
-    <AndroidAsset Include="MainAssets\Gif\Y.gif" />
     <AndroidAsset Include="MainAssets\Sounds\Alphabet\A.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Alphabet\B.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Alphabet\C.mp3" />
