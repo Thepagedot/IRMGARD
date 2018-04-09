@@ -14,6 +14,7 @@ namespace IRMGARD
     public class HearTheLetterFragment : BaseConceptFragment<HearTheLetter>
     {
         ImageView ivSpeaker;
+        TextView tvText;
         SeekBar sbLetterPos;
         RelativeLayout rlSliderLabels;
 
@@ -25,6 +26,8 @@ namespace IRMGARD
             View view = inflater.Inflate(Resource.Layout.HearTheLetter, container, false);
             ivSpeaker = view.FindViewById<ImageView>(Resource.Id.ivSpeaker);
             ivSpeaker.Click += ((e, sender) => PlayTaskDesc());
+
+            tvText = view.FindViewById<TextView>(Resource.Id.tvText);
 
             sbLetterPos = view.FindViewById<SeekBar>(Resource.Id.sbLetterPos);
             GradientDrawable gd = (GradientDrawable)sbLetterPos.Thumb;
@@ -84,10 +87,20 @@ namespace IRMGARD
             var currentIteration = GetCurrentIteration<HearTheLetterIteration>();
             currentOption = currentIteration.LetterLocations.PickRandomItems(1)[0];
 
+            if (currentOption.Text == null) {
+                tvText.Visibility = ViewStates.Invisible;
+            } else {
+                tvText.Text = currentOption.Text;
+
+                if (currentOption.SoundPath == null) {
+                    ivSpeaker.Visibility = ViewStates.Invisible;
+                }
+            }
+
             if (Lesson.Iterations.IndexOf(currentIteration) > 0)
             {
                 PlayTaskDesc();
-            }
+            }                
 
             FireUserInteracted(true);
         }

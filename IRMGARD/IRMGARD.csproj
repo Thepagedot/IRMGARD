@@ -495,7 +495,7 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
+  <!-- <ItemGroup>
     <AndroidAsset Include="MainAssets\Sounds\Objects\Elefant.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Ofen.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Uhu.mp3" />
@@ -1524,7 +1524,7 @@
     <AndroidAsset Include="MainAssets\Sounds\Objects\Hund.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Kamel.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Melone.mp3" />
-  </ItemGroup>
+  </ItemGroup> -->
   <ItemGroup>
     <AndroidAsset Include="Assets\Images\Aal.png" />
     <AndroidAsset Include="Assets\Images\Aepfel.png" />
@@ -1793,11 +1793,28 @@
     <AndroidAsset Include="Assets\Videos\L4M4.mp4" />
     <AndroidAsset Include="Assets\Videos\L4M5.mp4" />
     <AndroidAsset Include="Assets\Videos\L4M6.mp4" />
+    <AndroidAsset Include="Assets\Sounds\Adjectives\dreieckig.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Adjectives\fleissig.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Adjectives\freundlich.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Adjectives\gefaehrlich.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Adjectives\hoeflich.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Adjectives\kinderlos.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Adjectives\lustig.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Adjectives\nett.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Adjectives\rund.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Adjectives\schoen.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Adjectives\schriftlich.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Adjectives\schwanger.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Adjectives\stumm.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Adjectives\tot.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Adjectives\traurig.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Adjectives\viereckig.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Fonts\GlacialIndifference-Bold.otf" />
     <AndroidAsset Include="Assets\Fonts\GlacialIndifference-Regular.otf" />
     <AndroidAsset Include="Assets\Fonts\SIL Open Font License.txt" />
+    <AndroidAsset Include="Assets\Sounds\dummy.mp3" />
     <AndroidAsset Include="Assets\common.json" />
     <AndroidAsset Include="Assets\level1.json" />
     <AndroidAsset Include="Assets\level2.json" />
