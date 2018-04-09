@@ -1809,6 +1809,17 @@
     <AndroidAsset Include="Assets\Sounds\Adjectives\tot.mp3" />
     <AndroidAsset Include="Assets\Sounds\Adjectives\traurig.mp3" />
     <AndroidAsset Include="Assets\Sounds\Adjectives\viereckig.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\4-4-4\Hast.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\4-4-4\Kasse.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\4-4-4\Last.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\4-4-4\List.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\4-4-4\Masse.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\4-4-4\Mast.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\4-4-4\Mist.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\4-4-4\Rasse.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\4-4-4\Rast.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\4-4-4\Russe.mp3" />
+    <AndroidAsset Include="Assets\Sounds\Exercises\4-4-4\Tasse.mp3" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Fonts\GlacialIndifference-Bold.otf" />

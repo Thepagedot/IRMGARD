@@ -3202,17 +3202,247 @@
         "VideoPath": "Videos/L4M4.mp4",
         "Lessons": [
             {
-                "$type": "IRMGARD.Models.InputConcept, IRMGARD",
+                "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
                 "Id": 441,
-                "Title": "UN",
-                "SoundPath": "Intros/L4M3A1.mp3",
+                "Title": "Einführung ß",
+                "SoundPath": "Intros/L4M4A1.mp3",
+                "TypeOfLevel": "DragIntoGap",
+                "HighlightCorrectOptionsOnMistake": true,
+                "UseOptionItemsOnly": true,
+                "HideRack": true,
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+                        "Id": 4411,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Le"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "s"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "en"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Wa"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "ss"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "er"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+                        "Id": 4412,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Strau"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "ß"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Mu"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "ß"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "e"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+                        "Id": 4413,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Hei"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "ß"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Fu"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "ß"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+                        "Id": 4414,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Sü"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "ß"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "e"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "La"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "ss"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "o"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+                        "Id": 4415,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Va"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "s"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "e"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ],
+                "OptionItems": [
+                    {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "s"
+                    },
+                    {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "ss"
+                    },
+                    {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "ß"
+                    }
+                ]
+            },
+            {
+                "$type": "IRMGARD.Models.InputConcept, IRMGARD",
+                "Id": 442,
+                "Title": "Schreibe richtig",
+                "SoundPath": "Intros/L4M4A2.mp3",
                 "TypeOfLevel": "InputConcept",
                 "HighlightCorrectOptionsOnMistake": true,
                 "HideRack": true,
                 "Iterations": [
                     {
                         "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
-                        "Id": 4411,
+                        "Id": 4421,
                         "Tasks": [
                             {
                                 "TaskItems": [
@@ -3220,32 +3450,550 @@
                                         {
                                             "$type": "IRMGARD.Models.Word, IRMGARD",
                                             "ActivateOnMistake": true,
-                                            "Text": "unhöflich"
-                                        },
-                                        {
-                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                                            "ShowAsPlainText": true,
-                                            "Text": "Der Nachbar ist nicht höflich,"
+                                            "Text": "Spaß"
                                         }
                                     ],
                                     [
                                         {
-                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
                                             "ShowAsPlainText": true,
-                                            "Text": "sondern er ist"
+                                            "Align": "Left",
+                                            "Text": "Falsch:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "Spass"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Richtig:"
                                         },
                                         {
                                             "$type": "IRMGARD.Models.InputText, IRMGARD",
                                             "IsSolution": true,
-                                            "Text": "unhöflich"
-                                        },
-                                        {
-                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                                            "ShowAsPlainText": true,
-                                            "Text": "."
+                                            "Text": "Spaß"
                                         }
                                     ]
                                 ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4422,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Schluß"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Falsch:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "Schluss"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Richtig:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "Schluß"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4423,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Wasser"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Falsch:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "Waser"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Richtig:"
+                                        },
+ {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "Wasser"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4424,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Muße"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Falsch:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "Musse"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Richtig:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "Muße"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4425,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Fuß"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Falsch:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "Fuss"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Richtig:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "Fuß"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$type": "IRMGARD.Models.InputConcept, IRMGARD",
+                "Id": 443,
+                "Title": "Gestern und heute",
+                "SoundPath": "Intros/L4M4A3.mp3",
+                "TypeOfLevel": "InputConcept",
+                "HighlightCorrectOptionsOnMistake": true,
+                "HideRack": true,
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4431,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "goss"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Gegenwart:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "gießen"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Vergangenheit:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "goss"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4432,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "floss"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Gegenwart:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "fließen"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Vergangenheit:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "floss"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4433,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "schloss"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Gegenwart:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "schließen"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Vergangenheit:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "schloss"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4434,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "genoss"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Gegenwart:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "genießen"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Vergangenheit:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "genoss"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4435,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "riss"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Gegenwart:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "reißen"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Vergangenheit:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "riss"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
+                "Id": 444,
+                "Title": "Ausnahmeregel",
+                "SoundPath": "Intros/L4M4A4.mp3",
+                "Hint": "Hints/Extra_tip_denkst_du_ans_aufschreiben.mp3",
+                "TypeOfLevel": "HearTheLetter",
+                "SliderLabels": [
+                    {
+                        "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                        "Text": "s",
+                        "ShowAsPlainText": true
+                    },
+                    {
+                        "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                        "Text": "ss",
+                        "ShowAsPlainText": true
+                    }
+                ],
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4441,
+                        "LetterLocations": [
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/4-4-4/Last.mp3"
+                            },
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/4-4-4/Mast.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/4-4-4/Russe.mp3"
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4442,
+                        "LetterLocations": [
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/4-4-4/Rast.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/4-4-4/Rasse.mp3"
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4443,
+                        "LetterLocations": [
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/4-4-4/Hast.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/4-4-4/Masse.mp3"
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4444,
+                        "LetterLocations": [
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/4-4-4/Mist.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/4-4-4/Tasse.mp3"
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4445,
+                        "LetterLocations": [
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/4-4-4/List.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/4-4-4/Kasse.mp3"
                             }
                         ]
                     }
