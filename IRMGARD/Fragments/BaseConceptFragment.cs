@@ -28,6 +28,10 @@ namespace IRMGARD
                 } else {
                     (view as EditText).SetMinEms((concept as InputText).Text.Length - ((concept as InputText).Text.Length / 2));
                 }
+
+                if ((concept as InputText).Size > 0) {
+                    (view as EditText).SetTextSize(Android.Util.ComplexUnitType.Dip, (concept as InputText).Size);
+                }
             }
             else if (concept is BaseText)
             {

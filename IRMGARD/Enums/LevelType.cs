@@ -23,6 +23,7 @@ namespace IRMGARD
         ShortLongVowelFPSC,
         DefArtFPSC,
         InputConcept,
-        WordqueueSC
+        Level3WordqueueSC,
+        Level4WordqueueSC
     }
 }

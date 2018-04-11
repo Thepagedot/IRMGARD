@@ -6069,7 +6069,7 @@
           "Title": "Wortschlange",
           "SoundPath": "Intros/Level_3_Modul_6_Aufgabe_5.mp3",
           "Hint": "Hints/Extra_tip_keine_Panik_auf_der_Titanik.mp3",
-          "TypeOfLevel": "WordqueueSC",
+          "TypeOfLevel": "Level3WordqueueSC",
           "HideRack": true,
           "TopMargins": [ -1, 4 ],
           "Iterations": [

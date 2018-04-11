@@ -495,7 +495,7 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="packages.config" />
   </ItemGroup>
-  <!-- <ItemGroup>
+  <ItemGroup>
     <AndroidAsset Include="MainAssets\Sounds\Objects\Elefant.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Ofen.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Uhu.mp3" />
@@ -1463,7 +1463,7 @@
     <AndroidAsset Include="MainAssets\Sounds\Objects\Hund.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Kamel.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Melone.mp3" />
-  </ItemGroup> -->
+  </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Images\Aal.png" />
     <AndroidAsset Include="Assets\Images\Aepfel.png" />
@@ -1773,11 +1773,16 @@
     <AndroidAsset Include="Assets\Sounds\Exercises\4-5-5\tot.mp3" />
     <AndroidAsset Include="Assets\Sounds\Exercises\4-5-5\traurig.mp3" />
     <AndroidAsset Include="Assets\Sounds\Exercises\4-5-5\viereckig.mp3" />
+    <AndroidAsset Include="Assets\Images\braun.png" />
+    <AndroidAsset Include="Assets\Images\blau.png" />
+    <AndroidAsset Include="Assets\Images\gruen.png" />
+    <AndroidAsset Include="Assets\Images\weiss.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Fonts\GlacialIndifference-Bold.otf" />
     <AndroidAsset Include="Assets\Fonts\GlacialIndifference-Regular.otf" />
     <AndroidAsset Include="Assets\Fonts\SIL Open Font License.txt" />
+    <AndroidAsset Include="Assets\Images\dummy.png" />
     <AndroidAsset Include="Assets\Sounds\dummy.mp3" />
     <AndroidAsset Include="Assets\Sounds\Praise\ausgezeichnet1.mp3" />
     <AndroidAsset Include="Assets\Sounds\Praise\ausgezeichnet2.mp3" />

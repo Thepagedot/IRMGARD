@@ -5628,8 +5628,8 @@
             {
                 "$type": "IRMGARD.Models.InputConcept, IRMGARD",
                 "Id": 461,
-                "Title": "UN",
-                "SoundPath": "Intros/L4M3A1.mp3",
+                "Title": "Aus 1 mach 2",
+                "SoundPath": "Intros/L4M6A1.mp3",
                 "TypeOfLevel": "InputConcept",
                 "HighlightCorrectOptionsOnMistake": true,
                 "HideRack": true,
@@ -5644,29 +5644,312 @@
                                         {
                                             "$type": "IRMGARD.Models.Word, IRMGARD",
                                             "ActivateOnMistake": true,
-                                            "Text": "unhöflich"
+                                            "Text": "Kaffee"
                                         },
                                         {
-                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                                            "ShowAsPlainText": true,
-                                            "Text": "Der Nachbar ist nicht höflich,"
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "braun"
                                         }
                                     ],
                                     [
                                         {
-                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
                                             "ShowAsPlainText": true,
-                                            "Text": "sondern er ist"
+                                            "AddToTextSize": 10,
+                                            "Text": "kaffeebraun"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 5,
+                                            "Text": "Kaffee"
                                         },
                                         {
                                             "$type": "IRMGARD.Models.InputText, IRMGARD",
                                             "IsSolution": true,
-                                            "Text": "unhöflich"
+                                            "LetterCount": 5,
+                                            "Text": "braun"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Messer"
                                         },
                                         {
-                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "scharf"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
                                             "ShowAsPlainText": true,
-                                            "Text": "."
+                                            "AddToTextSize": 10,
+                                            "Text": "messerscharf"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 5,
+                                            "Text": "Messer"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 5,
+                                            "Text": "scharf"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Stein"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "hart"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Text": "steinhart"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 5,
+                                            "Text": "Stein"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 5,
+                                            "Text": "hart"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4612,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Gras"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "grün"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Text": "grasgrün"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 5,
+                                            "Text": "Gras"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 5,
+                                            "Text": "grün"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Himmel"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "blau"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Text": "himmelblau"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 5,
+                                            "Text": "Himmel"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 5,
+                                            "Text": "blau"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Schnee"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "weiß"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Text": "schneeweiß"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 5,
+                                            "Text": "Schnee"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 5,
+                                            "Text": "weiß"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4613,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Wunder"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "schön"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Text": "wunderschön"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 5,
+                                            "Text": "Wunder"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 5,
+                                            "Text": "schön"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Eis"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "kalt"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Text": "eiskalt"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 5,
+                                            "Text": "Eis"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 5,
+                                            "Text": "kalt"
                                         }
                                     ]
                                 ]
@@ -5674,6 +5957,922 @@
                         ]
                     }
                 ]
+            },
+            {
+                "$type": "IRMGARD.Models.InputConcept, IRMGARD",
+                "Id": 462,
+                "Title": "Aus 2 mach 1",
+                "SoundPath": "Intros/L4M6A2.mp3",
+                "TypeOfLevel": "InputConcept",
+                "HighlightCorrectOptionsOnMistake": true,
+                "HideRack": true,
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4621,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Kaffee"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "braun"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "ImagePath": "Kaffee.png"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "ImagePath": "braun.png"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Space, IRMGARD"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "K"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "a"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "f"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "f"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "e"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "e"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "-"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "b"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "r"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "a"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "u"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "n"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Messer"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "scharf"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "ImagePath": "Kaffee.png"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "ImagePath": "braun.png"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Space, IRMGARD"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "M"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "e"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "s"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "s"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "e"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "r"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "-"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "s"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "c"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "h"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "a"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "r"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "f"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Stein"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "hart"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "ImagePath": "Kaffee.png"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "ImagePath": "braun.png"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Space, IRMGARD"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "S"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "t"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "e"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "i"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "n"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "-"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "h"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "a"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "r"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "t"
+                                        }
+                                    ]
+                                ]
+                            }
+                       ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4622,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Gras"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "grün"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "ImagePath": "Rasen.png"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "ImagePath": "gruen.png"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Space, IRMGARD"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "G"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "r"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "a"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "s"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "-"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "g"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "r"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "ü"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "n"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Himmel"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "blau"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "ImagePath": "dummy.png"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "ImagePath": "blau.png"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Space, IRMGARD"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "H"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "i"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "m"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "m"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "e"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "l"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "-"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "b"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "l"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "a"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "u"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Schnee"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "weiß"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "ImagePath": "dummy.png"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "ImagePath": "weiss.png"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Space, IRMGARD"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "S"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "c"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "h"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "n"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "e"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "e"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "-"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "w"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "e"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "i"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "ß"
+                                        }
+                                    ]
+                                ]
+                            }
+                       ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4623,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Wunder"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "schön"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "ImagePath": "dummy.png"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "ImagePath": "dummy.png"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Space, IRMGARD"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "W"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "u"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "n"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "d"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "e"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "r"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "-"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "s"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "c"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "h"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "ö"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "n"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "Eis"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "kalt"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "ImagePath": "dummy.png"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                                            "ImagePath": "dummy.png"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Space, IRMGARD"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "E"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "i"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "s"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "-"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Letter, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "k"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "a"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "l"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Size": 18,
+                                            "Text": "t"
+                                        }
+                                    ]
+                                ]
+                            }
+                       ]
+                    }
+                ]
+            },
+            {
+                "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
+                "Id": 463,
+                "Title": "Spiel",
+                "SoundPath": "Intros/L4M6A3.mp3",
+                "Hint": "Hints/Extra_tip_keine_Panik_auf_der_Titanik.mp3",
+                "TypeOfLevel": "Level4WordqueueSC",
+                "SingleChoice": true,
+                "HideRack": true,
+                "TopMargins": [
+                    -1,
+                    4
+                ],
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4631
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4632
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4633
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4634
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4635
+                    }
+                ],
+                "NamedConcepts": {
+                    "fröhlich": [
+                        {
+                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                            "Size": 100,
+                            "ImagePath": "Wut.png"
+                        },
+                        {
+                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                            "Text": "fröhlich"
+                        }
+                    ],
+                    "traurig": [
+                        {
+                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                            "Size": 100,
+                            "ImagePath": "Wut.png"
+                        },
+                        {
+                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                            "Text": "traurig"
+                        }
+                    ],
+                    "weinend": [
+                        {
+                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                            "Size": 100,
+                            "ImagePath": "Wut.png"
+                        },
+                        {
+                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                            "Text": "weinend"
+                        }
+                    ],
+                    "wütend": [
+                        {
+                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                            "Size": 100,
+                            "ImagePath": "Wut.png"
+                        },
+                        {
+                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                            "Text": "wütend"
+                        }
+                    ],
+                    "angeekelt": [
+                        {
+                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                            "Size": 100,
+                            "ImagePath": "Wut.png"
+                        },
+                        {
+                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                            "Text": "angeekelt"
+                        }
+                    ],
+                    "lachend": [
+                        {
+                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                            "Size": 100,
+                            "ImagePath": "Wut.png"
+                        },
+                        {
+                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                            "Text": "lachend"
+                        }
+                    ],
+                    "zufrieden": [
+                        {
+                            "$type": "IRMGARD.Models.Picture, IRMGARD",
+                            "Size": 100,
+                            "ImagePath": "Wut.png"
+                        },
+                        {
+                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                            "Text": "zufrieden"
+                        }
+                    ]
+                }
             }
         ]
     }

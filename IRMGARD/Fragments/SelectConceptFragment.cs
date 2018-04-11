@@ -24,8 +24,10 @@ namespace IRMGARD
                     return new ShortLongVowelFPSCFragment();
                 case LevelType.FourPicturesSelectConcept:
                     return new FourPicturesSelectConceptFragment();
-                case LevelType.WordqueueSC:
-                    return new WordqueueSCFragment();
+                case LevelType.Level3WordqueueSC:
+                    return new Level3WordqueueSCFragment();
+                case LevelType.Level4WordqueueSC:
+                    return new Level4WordqueueSCFragment();
                 case LevelType.LetterpuzzleSC:
                     return new LetterpuzzleSCFragment();
                 case LevelType.SpeakerSC:
@@ -37,25 +39,96 @@ namespace IRMGARD
         }
     }
 
-    public class WordqueueSCFragment : SelectConceptFragment
+    public class Level4WordqueueSCFragment : WordqueueSCFragment
     {
-        const int Padding = 4;
-
-        const int solutionWordCount = 3;
-        const int optionWordCount = 12;
         const int LettersPerRow = 30;
 
-        LinearLayout llHeaderItems;
-
-        protected override void InitBaseLayoutView(View layoutView)
+        protected override void OnCreateViewConfig()
         {
-            llHeaderItems = layoutView.FindViewById<LinearLayout>(Resource.Id.llHeaderItems);
+            Padding = 4;
+            SolutionWordCount = 1;
+            OptionWordCount = 3;
+            BackgroundColor = Android.Graphics.Color.ParseColor(
+                DataHolder.Current.CurrentModule.Color);
+        }
 
-            var llTaskItemRows = layoutView.FindViewById<LinearLayout>(Resource.Id.llTaskItemRows);
-            llTaskItemRows.SetPadding(ToPx(Padding), ToPx(Padding), ToPx(Padding), ToPx(Padding));    // Set spacing
-            llTaskItemRows.SetBackgroundColor(Android.Graphics.Color.White);
+        protected override void TransformTaskItems()
+        {
+            var selectConcept = Lesson.DeepCopy();
 
-            base.InitBaseLayoutView(layoutView);
+            var fröhlich = selectConcept.NamedConcepts["fröhlich"];
+            var traurig = selectConcept.NamedConcepts["traurig"];
+            var weinend = selectConcept.NamedConcepts["weinend"];
+            var wütend = selectConcept.NamedConcepts["wütend"];
+            var angeekelt = selectConcept.NamedConcepts["angeekelt"];
+            var lachend = selectConcept.NamedConcepts["lachend"];
+            var zufrieden = selectConcept.NamedConcepts["zufrieden"];
+
+            var concepts = new List<Concept>();
+
+            var random = new Random();
+            switch (random.Next(0, 7))
+            {
+                case 0:
+                    AddToConcepts(concepts, fröhlich, traurig.Concat(angeekelt.Concat(weinend)).ToList());
+                    break;
+                case 1:
+                    AddToConcepts(concepts, traurig, wütend.Concat(angeekelt.Concat(lachend)).ToList());
+                    break;
+                case 2:
+                    AddToConcepts(concepts, weinend, zufrieden.Concat(lachend.Concat(fröhlich)).ToList());
+                    break;
+                case 3:
+                    AddToConcepts(concepts, wütend, traurig.Concat(fröhlich.Concat(lachend)).ToList());
+                    break;
+                case 4:
+                    AddToConcepts(concepts, angeekelt, wütend.Concat(zufrieden.Concat(weinend)).ToList());
+                    break;
+                case 5:
+                    AddToConcepts(concepts, lachend, traurig.Concat(wütend.Concat(zufrieden)).ToList());
+                    break;
+                case 6:
+                    AddToConcepts(concepts, zufrieden, weinend.Concat(fröhlich.Concat(angeekelt)).ToList());
+                    break;
+            }
+
+            if (exercise == null)
+            {
+                exercise = new SelectConceptExercise();
+            }
+            exercise.TaskItems = new List<List<Concept>>();
+            int letterCount = 0;
+            var row = new List<Concept>();
+            foreach (var concept in concepts)
+            {
+                var word = concept as Word;
+                word.ShowAsPlainText = true;
+                if (letterCount + word.Text.Length > LettersPerRow)
+                {
+                    exercise.TaskItems.Add(row);
+                    letterCount = 0;
+                    row = new List<Concept>();
+                }
+
+                letterCount += word.Text.Length;
+                row.Add(word);
+            }
+            exercise.TaskItems.Add(row);
+
+            Lesson.LeftAlignItems = Enumerable.Repeat<bool>(true, exercise.TaskItems.Count).ToArray();
+        }
+    }
+
+    public class Level3WordqueueSCFragment : WordqueueSCFragment
+    {
+        const int LettersPerRow = 30;
+
+        protected override void OnCreateViewConfig()
+        {
+            Padding = 4;
+            SolutionWordCount = 3;
+            OptionWordCount = 12;
+            BackgroundColor = Android.Graphics.Color.White;
         }
 
         protected override void TransformTaskItems()
@@ -127,19 +200,40 @@ namespace IRMGARD
 
             Lesson.LeftAlignItems = Enumerable.Repeat<bool>(true, exercise.TaskItems.Count).ToArray();
         }
+    }
 
-        void AddToConcepts(List<Concept> concepts, List<Concept> solutionConcepts, List<Concept> optionConcepts)
+    public class WordqueueSCFragment : SelectConceptFragment
+    {
+        protected int Padding { get; set; }
+        protected int SolutionWordCount { get; set; }
+        protected int OptionWordCount { get; set; }
+        protected Android.Graphics.Color BackgroundColor { get; set; }
+
+        LinearLayout llHeaderItems;
+
+        protected override void InitBaseLayoutView(View layoutView)
         {
-            // Add speaker to header items row
+            llHeaderItems = layoutView.FindViewById<LinearLayout>(Resource.Id.llHeaderItems);
+
+            var llTaskItemRows = layoutView.FindViewById<LinearLayout>(Resource.Id.llTaskItemRows);
+            llTaskItemRows.SetPadding(ToPx(Padding), ToPx(Padding), ToPx(Padding), ToPx(Padding));    // Set spacing
+            llTaskItemRows.SetBackgroundColor(BackgroundColor);
+
+            base.InitBaseLayoutView(layoutView);
+        }
+
+        protected void AddToConcepts(List<Concept> concepts, List<Concept> solutionConcepts, List<Concept> optionConcepts)
+        {
+            // Add only the first item of solutionConcepts to header item row
             llHeaderItems.RemoveAllViews();
             llHeaderItems.AddView(CreateConceptView(solutionConcepts.FirstOrDefault()));
             llHeaderItems.Visibility = ViewStates.Visible;
 
             // Add solutions
-            concepts.AddRange(solutionConcepts.Where(item => item is Word).PickRandomItems(solutionWordCount).Select(item => { item.IsSolution = true; return item; }));
+            concepts.AddRange(solutionConcepts.Where(item => item is Word).PickRandomItems(SolutionWordCount).Select(item => { item.IsSolution = true; return item; }));
 
             // Add options
-            concepts.AddRange(optionConcepts.Where(item => item is Word).PickRandomItems(optionWordCount).Select(item => { item.IsOption = true; return item; }));
+            concepts.AddRange(optionConcepts.Where(item => item is Word).PickRandomItems(OptionWordCount).Select(item => { item.IsOption = true; return item; }));
 
             concepts.Shuffle();
         }

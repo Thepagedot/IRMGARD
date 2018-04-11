@@ -135,6 +135,11 @@ namespace IRMGARD
 
         protected override int CountPictureItems()
         {
+            if (exercise == null || exercise.TaskItems == null)
+            {
+                return 1;
+            }
+
             int pictureItemCounter = 0;
 
             foreach (var conceptItemRow in exercise.TaskItems)
