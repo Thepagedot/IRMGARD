@@ -126,7 +126,29 @@ namespace IRMGARD.Models
     public class Sentence : BaseText { }
 
     // A text input item
-    public class InputText : BaseText { }
+    public class InputText : BaseText {
+        public int LetterCount { get; set; }
+
+        public override Concept DeepCopy()
+        {
+            InputText clone = (InputText)base.DeepCopy();
+            clone.LetterCount = LetterCount;
+
+            return clone;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || obj as InputText == null) { return false; }
+            var other = obj as InputText;
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }        
+    }
 
     // A sound only item
     public class Speaker : Concept, ISound

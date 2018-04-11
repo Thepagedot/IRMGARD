@@ -1877,7 +1877,6 @@
                                         {
                                             "$type": "IRMGARD.Models.Sentence, IRMGARD",
                                             "ShowAsPlainText": true,
-                                            "Align": "Left",
                                             "Text": "Der Nachbar ist nicht höflich,"
                                         }
                                     ],
@@ -1885,22 +1884,18 @@
                                         {
                                             "$type": "IRMGARD.Models.Sentence, IRMGARD",
                                             "ShowAsPlainText": true,
-                                            "Align": "Left",
                                             "Text": "sondern er ist"
-                                        }
-                                    ],
-                                    [
+                                        },
                                         {
                                             "$type": "IRMGARD.Models.InputText, IRMGARD",
                                             "IsSolution": true,
-                                            "Align": "Left",
+                                            "LetterCount": 4,
                                             "Text": "unhöflich"
                                         },
                                         {
                                             "$type": "IRMGARD.Models.Sentence, IRMGARD",
                                             "ShowAsPlainText": true,
-                                            "Align": "Left",
-                                            "Text": " ."
+                                            "Text": "."
                                         }
                                     ]
                                 ]
@@ -1924,7 +1919,6 @@
                                         {
                                             "$type": "IRMGARD.Models.Sentence, IRMGARD",
                                             "ShowAsPlainText": true,
-                                            "Align": "Left",
                                             "Text": "Ist es möglich, innerhalb von"
                                         }
                                     ],
@@ -1932,7 +1926,6 @@
                                         {
                                             "$type": "IRMGARD.Models.Sentence, IRMGARD",
                                             "ShowAsPlainText": true,
-                                            "Align": "Left",
                                             "Text": "24 Stunden zum Mond zu fliegen?"
                                         }
                                     ],
@@ -1940,20 +1933,18 @@
                                         {
                                             "$type": "IRMGARD.Models.Sentence, IRMGARD",
                                             "ShowAsPlainText": true,
-                                            "Align": "Left",
                                             "Text": "Nein, das ist"
-                                        }
-                                    ],
-                                    [
+                                        },
                                         {
                                             "$type": "IRMGARD.Models.InputText, IRMGARD",
                                             "IsSolution": true,
+                                            "LetterCount": 4,
                                             "Text": "unmöglich"
                                         },
                                         {
                                             "$type": "IRMGARD.Models.Sentence, IRMGARD",
                                             "ShowAsPlainText": true,
-                                            "Text": " ."
+                                            "Text": "."
                                         }
                                     ]
                                 ]
@@ -1995,9 +1986,7 @@
                                             "IsSolution": true,
                                             "Align": "Left",
                                             "Text": "gekürzt"
-                                        }
-                                    ],
-                                    [
+                                        },
                                         {
                                             "$type": "IRMGARD.Models.Sentence, IRMGARD",
                                             "ShowAsPlainText": true,
@@ -2057,7 +2046,7 @@
                                             "$type": "IRMGARD.Models.Sentence, IRMGARD",
                                             "ShowAsPlainText": true,
                                             "Align": "Left",
-                                            "Text": " ."
+                                            "Text": "."
                                         }
                                     ]
                                 ]
@@ -2118,7 +2107,7 @@
                                         {
                                             "$type": "IRMGARD.Models.Sentence, IRMGARD",
                                             "ShowAsPlainText": true,
-                                            "Text": " ."
+                                            "Text": "."
                                         }
                                     ]
                                 ]
@@ -4009,8 +3998,8 @@
             {
                 "$type": "IRMGARD.Models.InputConcept, IRMGARD",
                 "Id": 451,
-                "Title": "UN",
-                "SoundPath": "Intros/L4M3A1.mp3",
+                "Title": "Steigerungsformen",
+                "SoundPath": "Intros/L4M5A1.mp3",
                 "TypeOfLevel": "InputConcept",
                 "HighlightCorrectOptionsOnMistake": true,
                 "HideRack": true,
@@ -4025,24 +4014,682 @@
                                         {
                                             "$type": "IRMGARD.Models.Word, IRMGARD",
                                             "ActivateOnMistake": true,
-                                            "Text": "unhöflich"
+                                            "Text": "schneller"
                                         },
                                         {
-                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am schnellsten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
                                             "ShowAsPlainText": true,
-                                            "Text": "Der Nachbar ist nicht höflich,"
+                                            "Align": "Left",
+                                            "Text": "Grundstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "schnell"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höherstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "schneller"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höchststufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am schnellsten"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "netter"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am nettesten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Grundstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "nett"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höherstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "netter"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höchststufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am nettesten"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4512,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "lauter"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am lautesten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Grundstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "laut"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höherstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "lauter"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höchststufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am lautesten"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "bunter"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am buntesten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Grundstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "bunt"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höherstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "bunter"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höchststufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am buntesten"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4513,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "schöner"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am schönsten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Grundstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "schön"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höherstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "schöner"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höchststufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am schönsten"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "toller"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am tollsten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Grundstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "toll"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höherstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "toller"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höchststufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am tollsten"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4514,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "runder"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am rundesten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Grundstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "rund"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höherstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "runder"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höchststufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am rundesten"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "trauriger"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am traurigsten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Grundstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "traurig"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höherstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "trauriger"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höchststufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am traurigsten"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4515,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "voller"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am vollsten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Grundstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "voll"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höherstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "voller"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höchststufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am vollsten"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$type": "IRMGARD.Models.InputConcept, IRMGARD",
+                "Id": 452,
+                "Title": "Steigerungsformen",
+                "SoundPath": "Intros/L4M5A2.mp3",
+                "TypeOfLevel": "InputConcept",
+                "HighlightCorrectOptionsOnMistake": true,
+                "HideRack": true,
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4521,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "günstiger"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am günstigsten"
                                         }
                                     ],
                                     [
                                         {
                                             "$type": "IRMGARD.Models.Sentence, IRMGARD",
                                             "ShowAsPlainText": true,
-                                            "Text": "sondern er ist"
+                                            "Text": "Die Apfelsinen sind günstig."
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Doch die Mandarinen sind noch"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "günstiger"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "."
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Am aller"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "günstigsten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "sind jedoch die Pflaumen."
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4522,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "langweiliger"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am langweiligsten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Das Buch von Schmitt ist langweilig."
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Das Buch von Bert ist jedoch noch"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "viel"
                                         },
                                         {
                                             "$type": "IRMGARD.Models.InputText, IRMGARD",
                                             "IsSolution": true,
-                                            "Text": "unhöflich"
+                                            "LetterCount": 5,
+                                            "Text": "langweiliger"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "."
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Hermanns ist jedoch"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 6,
+                                            "Text": "am langweiligsten"
                                         },
                                         {
                                             "$type": "IRMGARD.Models.Sentence, IRMGARD",
@@ -4051,6 +4698,921 @@
                                         }
                                     ]
                                 ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4523,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "größer"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am größten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "3 Brüder stellen sich der Reihe nach auf."
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Martin ist groß,"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Frank ist"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 3,
+                                            "Text": "größer"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": ","
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Jan ist aber"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 5,
+                                            "Text": "am größten"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "."
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4524,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "härter"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am härtesten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "Sitzen auf dem Holzstuhl ist hart,"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "auf dem Fußboden ist"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 3,
+                                            "Text": "härter"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": ","
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "auf dem Stein ist"
+                                         }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 6,
+                                            "Text": "am härtesten"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Text": "."
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
+                "Id": 453,
+                "Title": "Ausnahme",
+                "SoundPath": "Intros/L4M5A3.mp3",
+                "Hint": "Hints/Extra_tip_hast_du_einen_freund.mp3",
+                "TypeOfLevel": "FourPicturesSelectConcept",
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4531,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "nah"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "näher"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am nähsten"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "naher"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4532,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "hoch"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "höher"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am höchsten"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "am hochsten"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4533,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "viel"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "mehr"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am meisten"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "am mehrsten"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4534,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "gut"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "besser"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am besten"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "guter"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+                        "Id": 4535,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "kalt"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "kälter"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am kältesten"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "IsOption": true,
+                                            "Text": "kalter"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$type": "IRMGARD.Models.InputConcept, IRMGARD",
+                "Id": 454,
+                "Title": "Steigerung mit Umlauten",
+                "SoundPath": "Intros/L4M5A4.mp3",
+                "TypeOfLevel": "InputConcept",
+                "HighlightCorrectOptionsOnMistake": true,
+                "HideRack": true,
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4541,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "ärmer"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am ärmsten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Grundstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "arm"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höherstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "ärmer"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höchststufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am ärmsten"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "größer"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am größten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Grundstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "groß"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höherstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "größer"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höchststufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am größten"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4542,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "dumm"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am dümmsten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Grundstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "LetterCount": 4,
+                                            "Text": "dumm"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höherstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "dümmer"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höchststufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am dümmsten"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4543,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "hart"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am härtesten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Grundstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "hart"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höherstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "härter"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höchststufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am härtesten"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "kalt"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am kältesten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Grundstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "kalt"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höherstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "kälter"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höchststufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am kältesten"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4544,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "jung"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "jünger"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Grundstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "jung"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höherstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "jünger"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höchststufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "am jüngsten"
+                                        }
+                                    ]
+                                ]
+                            },
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "alt"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "älter"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Grundstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "alt"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höherstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "älter"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höchststufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "am ältesten"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.InputConceptIteration, IRMGARD",
+                        "Id": 4545,
+                        "Tasks": [
+                            {
+                                "TaskItems": [
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "grob"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ActivateOnMistake": true,
+                                            "Text": "am gröbsten"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Grundstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "grob"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höherstufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "AddToTextSize": 10,
+                                            "Align": "Left",
+                                            "Text": "gröber"
+                                        }
+                                    ],
+                                    [
+                                        {
+                                            "$type": "IRMGARD.Models.Word, IRMGARD",
+                                            "ShowAsPlainText": true,
+                                            "Align": "Left",
+                                            "Text": "Höchststufe:"
+                                        },
+                                        {
+                                            "$type": "IRMGARD.Models.InputText, IRMGARD",
+                                            "IsSolution": true,
+                                            "Text": "am gröbsten"
+                                        }
+                                    ]
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
+                "Id": 455,
+                "Title": "Zeitformen",
+                "SoundPath": "Intros/L4M5A5.mp3",
+                "Hint": "Hints/Extra_tip_denkst_du_ans_aufschreiben.mp3",
+                "TypeOfLevel": "HearTheLetter",
+                "SliderLabels": [
+                    {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Ja",
+                        "ShowAsPlainText": true
+                    },
+                    {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Nein",
+                        "ShowAsPlainText": true
+                    }
+                ],
+                "Iterations": [
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4551,
+                        "LetterLocations": [
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/4-5-5/fleissig.mp3"
+                            },
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/4-5-5/freundlich.mp3"
+                            },
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/4-5-5/hoeflich.mp3"
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4552,
+                        "LetterLocations": [
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/4-5-5/lustig.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/4-5-5/stumm.mp3"
+                            },
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/4-5-5/nett.mp3"
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4553,
+                        "LetterLocations": [
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/4-5-5/kinderlos.mp3"
+                            },
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/4-5-5/rund.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/4-5-5/schriftlich.mp3"
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4554,
+                        "LetterLocations": [
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/4-5-5/schwanger.mp3"
+                            },
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/4-5-5/traurig.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/4-5-5/tot.mp3"
+                            }
+                        ]
+                    },
+                    {
+                        "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+                        "Id": 4555,
+                        "LetterLocations": [
+                            {
+                                "Location": 0,
+                                "SoundPath": "Exercises/4-5-5/schoen.mp3"
+                            },
+                            {
+                                "Location": 1,
+                                "SoundPath": "Exercises/4-5-5/viereckig.mp3"
                             }
                         ]
                     }

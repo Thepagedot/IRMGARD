@@ -23,7 +23,11 @@ namespace IRMGARD
             if (concept is InputText)
             {
                 view = inflater.Inflate(Resource.Layout.InputTextConcept, null);
-                (view as EditText).SetMinEms((concept as InputText).Text.Length);
+                if ((concept as InputText).LetterCount > 0) {
+                    (view as EditText).SetMinEms((concept as InputText).LetterCount);
+                } else {
+                    (view as EditText).SetMinEms((concept as InputText).Text.Length - ((concept as InputText).Text.Length / 2));
+                }
             }
             else if (concept is BaseText)
             {
