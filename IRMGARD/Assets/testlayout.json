@@ -1,4 +1,4 @@
-{
+﻿{
   "Id": 2,
   "Name": "Level 2",
   "Color": "#6b91a3",
@@ -9,13 +9,13 @@
     {
       "Name": "1: A-Z?",
       "Color": "#d3caaf",
-      "VideoPath": "Videos/L2M1.mp4",
+      "VideoPath": "Videos/L2/L2M1.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 217,
           "Title": "A-Z?",
-          "SoundPath": "Intros/Level 2 Modul 1 Aufgabe 7.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 1 Aufgabe 7.mp3",
           "TypeOfLevel": "DragIntoGap",
           "Iterations": [
             {
@@ -55,13 +55,13 @@
     {
       "Name": "2: Selbstlaute",
       "Color": "#aec2c4",
-      "VideoPath": "Videos/L2M2.mp4",
+      "VideoPath": "Videos/L2/L2M2.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 221,
           "Title": "Selbstlaute",
-          "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 1.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 2 Aufgabe 1.mp3",
           "TypeOfLevel": "DragIntoGap",
           "TopMargins": [ 4, 4, 12 ],
           "Iterations": [
@@ -156,7 +156,7 @@
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 222,
           "Title": "Selbstlaute",
-          "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 2.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 2 Aufgabe 2.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
           "Iterations": [
@@ -176,7 +176,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnMistake": true,
-                        "SoundPath": "Solution/Vowels/Hier_haben_wir_das_lang_gesprochene_E_gesucht.mp3"
+                        "SoundPath": "L2/Solution/Vowels/Hier_haben_wir_das_lang_gesprochene_E_gesucht.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
@@ -235,7 +235,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnMistake": true,
-                        "SoundPath": "Solution/Vowels/Hier_haben_wir_das_lang_gesprochene_I_gesucht.mp3"
+                        "SoundPath": "L2/Solution/Vowels/Hier_haben_wir_das_lang_gesprochene_I_gesucht.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
@@ -311,7 +311,7 @@
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 223,
           "Title": "Selbstlaute",
-          "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 3.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 2 Aufgabe 3.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
           "Iterations": [
@@ -331,7 +331,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnMistake": true,
-                        "SoundPath": "Solution/Vowels/Hier_haben_wir_das_kurz_gesprochene_O_gesucht.mp3"
+                        "SoundPath": "L2/Solution/Vowels/Hier_haben_wir_das_kurz_gesprochene_O_gesucht.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
@@ -387,7 +387,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnMistake": true,
-                        "SoundPath": "Solution/Vowels/Hier_haben_wir_das_kurz_gesprochene_A_gesucht.mp3"
+                        "SoundPath": "L2/Solution/Vowels/Hier_haben_wir_das_kurz_gesprochene_A_gesucht.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
@@ -446,7 +446,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnMistake": true,
-                        "SoundPath": "Solution/Vowels/Hier_haben_wir_das_kurz_gesprochene_E_gesucht.mp3"
+                        "SoundPath": "L2/Solution/Vowels/Hier_haben_wir_das_kurz_gesprochene_E_gesucht.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
@@ -526,7 +526,7 @@
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 224,
           "Title": "Selbstlaute",
-          "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 4.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 2 Aufgabe 4.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
           "Iterations": [
@@ -560,7 +560,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "SyllableWord/Wa_Wall.mp3"
+                        "SoundPath": "L2/SyllableWord/Wa_Wall.mp3"
                       }
                     ]
                   ]
@@ -573,7 +573,7 @@
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 225,
           "Title": "Selbstlaute",
-          "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 5.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 2 Aufgabe 5.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
           "Iterations": [
@@ -722,7 +722,7 @@
           "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
           "Id": 226,
           "Title": "Selbstlaute",
-          "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 6.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 2 Aufgabe 6.mp3",
           "TypeOfLevel": "HearTheLetter",
           "SliderLabels": [
             {
@@ -746,15 +746,15 @@
               "LetterLocations": [
                 {
                   "Location": 0,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_E_in_Riegel_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_E_in_Riegel_kurz_oder_lang_gesprochen.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_I_in_Riss_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_I_in_Riss_kurz_oder_lang_gesprochen.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_O_in_Rolle_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_O_in_Rolle_kurz_oder_lang_gesprochen.mp3"
                 }
               ]
             }
@@ -764,7 +764,7 @@
           "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
           "Id": 227,
           "Title": "Selbstlaute",
-          "SoundPath": "Intros/Level 2 Modul 2 Aufgabe 7.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 2 Aufgabe 7.mp3",
           "TypeOfLevel": "ShortLongVowelFPSC",
           "SingleChoice": true,
           "Iterations": [
@@ -777,7 +777,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Alphabet/A.mp3"
+                        "SoundPath": "L1/Alphabet/A.mp3"
                       }
                     ],
                     [
@@ -820,7 +820,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Alphabet/A.mp3"
+                        "SoundPath": "L1/Alphabet/A.mp3"
                       }
                     ],
                     [
@@ -861,13 +861,13 @@
     {
       "Name": "3: Reimen",
       "Color": "#d8cad0",
-      "VideoPath": "Videos/L2M3.mp4",
+      "VideoPath": "Videos/L2/L2M3.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 233,
           "Title": "Reime finden",
-          "SoundPath": "Intros/Level 2 Modul 3 Aufgabe 3.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 3 Aufgabe 3.mp3",
           "TypeOfLevel": "DragIntoGap",
           "Iterations": [
             {
@@ -880,16 +880,16 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "RhymingWords/Super_Rolle_Wolle.mp3"
+                        "SoundPath": "L2/RhymingWords/Super_Rolle_Wolle.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnMistake": true,
-                        "SoundPath": "RhymingWords/Rolle_Wolle.mp3"
+                        "SoundPath": "L2/RhymingWords/Rolle_Wolle.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "RhymingWords/Rolle_Wolle.mp3"
+                        "SoundPath": "L2/RhymingWords/Rolle_Wolle.mp3"
                       }
                     ],
                     [
@@ -931,13 +931,13 @@
     {
       "Name": "4: Einkaufen",
       "Color": "#c1caad",
-      "VideoPath": "Videos/L2M4.mp4",
+      "VideoPath": "Videos/L2/L2M4.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 241,
           "Title": "Im Supermarkt",
-          "SoundPath": "Intros/Level 2 Modul 4 Aufgabe 1.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 4 Aufgabe 1.mp3",
           "TypeOfLevel": "DragIntoGap",
           "TopMargins": [ 16, 4 ],
           "Iterations": [
@@ -1002,7 +1002,7 @@
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 244,
           "Title": "Ein oder eine?",
-          "SoundPath": "Intros/Level 2 Modul 4 Aufgabe 4.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 4 Aufgabe 4.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
           "UseOptionItemsOnly": true,
@@ -1109,7 +1109,7 @@
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 245,
           "Title": "Im Supermarkt",
-          "SoundPath": "Intros/Level 2 Modul 4 Aufgabe 5.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 4 Aufgabe 5.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
           "UseOptionItemsOnly": true,
@@ -1163,7 +1163,7 @@
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 246,
           "Title": "Im Supermarkt",
-          "SoundPath": "Intros/Level 2 Modul 4 Aufgabe 6.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 4 Aufgabe 6.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HideRack": true,
           "Iterations": [
@@ -1239,7 +1239,7 @@
           "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
           "Id": 247,
           "Title": "Der, die oder das?",
-          "SoundPath": "Intros/Level 2 Modul 4 Aufgabe 7.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 4 Aufgabe 7.mp3",
           "TypeOfLevel": "FourPicturesSelectConcept",
           "SingleChoice": true,
           "Iterations": [
@@ -1292,13 +1292,13 @@
     {
       "Name": "5: Umlaute",
       "Color": "#dbcf93",
-      "VideoPath": "Videos/L2M5.mp4",
+      "VideoPath": "Videos/L2/L2M5.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.HearMe, IRMGARD",
           "Id": 251,
           "Title": "ÄÖU",
-          "SoundPath": "Intros/Level 2 Modul 5 Aufgabe 1.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 5 Aufgabe 1.mp3",
           "TypeOfLevel": "HearMe",
           "Iterations": [
             {
@@ -1310,7 +1310,7 @@
               "Name": "Der Ärmel",
               "Media": {
                 "ImagePath": "Aermel.png",
-                "SoundPath": "ObjectsWithDefArt/Der_Aermel.mp3"
+                "SoundPath": "L2_3/ObjectsWithDefArt/Der_Aermel.mp3"
               }
             }
           ]
@@ -1319,7 +1319,7 @@
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 252,
           "Title": "Umlaute",
-          "SoundPath": "Intros/Level 2 Modul 5 Aufgabe 2.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 5 Aufgabe 2.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
           "UseOptionItemsOnly": true,
@@ -1333,7 +1333,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Die_Fluegel.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Fluegel.mp3"
                       }
                     ],
                     [
@@ -1381,7 +1381,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Die_Knoepfe.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Knoepfe.mp3"
                       }
                     ],
                     [
@@ -1440,7 +1440,7 @@
           "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
           "Id": 253,
           "Title": "A oder Ä?",
-          "SoundPath": "Intros/Level 2 Modul 5 Aufgabe 3.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 5 Aufgabe 3.mp3",
           "TypeOfLevel": "FourPicturesSelectConcept",
           "SingleChoice": true,
           "Iterations": [
@@ -1455,7 +1455,7 @@
                         "$type": "IRMGARD.Models.Picture, IRMGARD",
                         "IsSolution": true,
                         "ImagePath": "Hut.png",
-                        "SoundPath": "ObjectsWithDefArt/Die_Huete.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Huete.mp3"
                       }
                     ],
                     [
@@ -1521,7 +1521,7 @@
           "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
           "Id": 256,
           "Title": "A oder Ä?",
-          "SoundPath": "Intros/Level 2 Modul 5 Aufgabe 6.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 5 Aufgabe 6.mp3",
           "TypeOfLevel": "SelectConcept",
           "SingleChoice": true,
           "Iterations": [
@@ -1535,7 +1535,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Sentences/Die_Zitronen_sind_gelb.mp3"
+                        "SoundPath": "L2_3/Sentences/Die_Zitronen_sind_gelb.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -1574,13 +1574,13 @@
     {
       "Name": "6: AU, ÄU oder EU",
       "Color": "#e5c8c4",
-      "VideoPath": "Videos/L2M6.mp4",
+      "VideoPath": "Videos/L2/L2M6.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 261,
           "Title": "AU, ÄU oder EU?",
-          "SoundPath": "Intros/Level 2 Modul 6 Aufgabe 1.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 6 Aufgabe 1.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
           "UseOptionItemsOnly": true,
@@ -1596,11 +1596,11 @@
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
                         "ActivateOnMistake": true,
-                        "SoundPath": "SingPluWithDefArt/Das_Kraut_Die_Kraeuter.mp3"
+                        "SoundPath": "L2/SingPluWithDefArt/Das_Kraut_Die_Kraeuter.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Die_Kraeuter.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Kraeuter.mp3"
                       }
                     ],
                     [
@@ -1646,7 +1646,7 @@
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 263,
           "Title": "AU, ÄU oder EU?",
-          "SoundPath": "Intros/Level 2 Modul 6 Aufgabe 3.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 6 Aufgabe 3.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
           "UseOptionItemsOnly": true,
@@ -1660,7 +1660,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Die_Kraeuter.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Kraeuter.mp3"
                       }
                     ],
                     [
@@ -1709,7 +1709,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Die_Schlaeuche.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Schlaeuche.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -1782,7 +1782,7 @@
           "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
           "Id": 264,
           "Title": "AU, ÄU oder EU?",
-          "SoundPath": "Intros/Level 2 Modul 6 Aufgabe 4.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 6 Aufgabe 4.mp3",
           "TypeOfLevel": "SpeakerSC",
           "HideRack": true,
           "TopMargins": [ -1, 5 ],
@@ -1880,7 +1880,7 @@
           "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
           "Id": 265,
           "Title": "AU, ÄU oder EU?",
-          "SoundPath": "Intros/Level 2 Modul 6 Aufgabe 5.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 6 Aufgabe 5.mp3",
           "TypeOfLevel": "SelectConcept",
           "Iterations": [
             {
@@ -1899,7 +1899,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Sentences/Die_Frau_isst_gerne_Schokolade.mp3"
+                        "SoundPath": "L2_3/Sentences/Die_Frau_isst_gerne_Schokolade.mp3"
                       }
                     ],
                     [
@@ -1939,7 +1939,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Sentences/Theo_und_Matthias_raufen.mp3"
+                        "SoundPath": "L2_3/Sentences/Theo_und_Matthias_raufen.mp3"
                       }
                     ],
                     [
@@ -1969,7 +1969,7 @@
           "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
           "Id": 266,
           "Title": "Wortsalat",
-          "SoundPath": "Intros/Level 2 Modul 6 Aufgabe 6.mp3",
+          "SoundPath": "L2/Intros/Level 2 Modul 6 Aufgabe 6.mp3",
           "TypeOfLevel": "LetterpuzzleSC",
           "HideRack": true,
           "TopMargins": [ 10, 4 ],

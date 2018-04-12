@@ -8,7 +8,7 @@
     {
       "Name": "2: LMNRS",
       "Color": "#AFC3C4",
-      "VideoPath": "Videos/L1M2.mp4",
+      "VideoPath": "Videos/L1/L1M2.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -16,7 +16,7 @@
           "Id": 129,
           "Title": "Wörter schreiben",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 9.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-4 Aufgabe 9.mp3",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
             {
@@ -58,7 +58,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/la_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/la_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -81,7 +81,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ma_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ma_lang.mp3"
                     }
                   ]
                 }
@@ -126,7 +126,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ma_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ma_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -149,7 +149,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ma_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ma_lang.mp3"
                     }
                   ]
                 }
@@ -194,7 +194,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ro_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ro_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -217,7 +217,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/se_lang.mp3"
                     }
                   ]
                 }
@@ -262,7 +262,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/na_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/na_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -285,7 +285,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/se_lang.mp3"
                     }
                   ]
                 }
@@ -321,7 +321,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Letters/o_lang.mp3"
+                      "SoundPath": "L1/Letters/o_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -344,7 +344,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ma_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ma_lang.mp3"
                     }
                   ]
                 }
@@ -389,7 +389,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/li_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/li_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -412,7 +412,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/sa_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/sa_lang.mp3"
                     }
                   ]
                 }

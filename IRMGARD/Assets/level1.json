@@ -9,7 +9,7 @@
     {
       "Name": "1: AEIOU",
       "Color": "#f2e2e0",
-      "VideoPath": "Videos/L1M1.mp4",
+      "VideoPath": "Videos/L1/L1M1.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -17,7 +17,7 @@
           "Id": 111,
           "Title": "AEIOU",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 1 Aufgabe 1.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 1 Aufgabe 1.mp3",
           "Hint": "Hints/05_extra_Tip_es_gibt_so_viele_erwachsene_in_dtschl.mp3",
           "TypeOfLevel": "HearMe",
           "Iterations": [
@@ -30,7 +30,7 @@
               "Name": "Aal",
               "Media": {
                 "ImagePath": "Aal.png",
-                "SoundPath": "Letters/AAal.mp3"
+                "SoundPath": "L1/Letters/AAal.mp3"
               }
             },
             {
@@ -42,7 +42,7 @@
               "Name": "Elefant",
               "Media": {
                 "ImagePath": "Elefant.png",
-                "SoundPath": "Letters/EElefant.mp3"
+                "SoundPath": "L1/Letters/EElefant.mp3"
               }
             },
             {
@@ -54,7 +54,7 @@
               "Name": "Igel",
               "Media": {
                 "ImagePath": "Igel.png",
-                "SoundPath": "Letters/IIgel.mp3"
+                "SoundPath": "L1/Letters/IIgel.mp3"
               }
             },
             {
@@ -66,7 +66,7 @@
               "Name": "Ofen",
               "Media": {
                 "ImagePath": "Ofen.png",
-                "SoundPath": "Letters/OOfen.mp3"
+                "SoundPath": "L1/Letters/OOfen.mp3"
               }
             },
             {
@@ -78,7 +78,7 @@
               "Name": "Uhu",
               "Media": {
                 "ImagePath": "Uhu.png",
-                "SoundPath": "Letters/UUhu.mp3"
+                "SoundPath": "L1/Letters/UUhu.mp3"
               }
             }
           ]
@@ -88,7 +88,7 @@
           "Id": 112,
           "Title": "Schreiben",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 1 Aufgabe 2.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 1 Aufgabe 2.mp3",
           "Hint": "Hints/15_extra_Tip_schoen_waere_es_wenn_du_dir_ein_Heft_und_einen_stift_anschaffen_wuerdest.mp3",
           "TypeOfLevel": "LetterWrite",
           "Iterations": [
@@ -174,7 +174,7 @@
           "Id": 113,
           "Title": "AEIOU",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 1 Aufgabe 3.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 1 Aufgabe 3.mp3",
           "TypeOfLevel": "FourPictures",
           "Options": [
             {
@@ -361,7 +361,7 @@
           "Id": 114,
           "Title": "A oder a?",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 1 Aufgabe 4.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 1 Aufgabe 4.mp3",
           "Hint": "Hints/06_extra_Tip_es_ist_wichtig_moeglichst_taeglich_zu_ueben.mp3",
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
@@ -394,7 +394,7 @@
           "Id": 115,
           "Title": "A?IOU",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 1 Aufgabe 5.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 1 Aufgabe 5.mp3",
           "TypeOfLevel": "FindMissingLetter",
           "Iterations": [
             {
@@ -674,7 +674,7 @@
     {
       "Name": "2: LMNRS",
       "Color": "#ecd4d1",
-      "VideoPath": "Videos/L1M2.mp4",
+      "VideoPath": "Videos/L1/L1M2.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -682,7 +682,7 @@
           "Id": 121,
           "Title": "LMNRS",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 1.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-5 Aufgabe 1.mp3",
           "TypeOfLevel": "HearMe",
           "Iterations": [
             {
@@ -694,7 +694,7 @@
               "Name": "Los",
               "Media": {
                 "ImagePath": "Los.png",
-                "SoundPath": "Letters/LLos.mp3"
+                "SoundPath": "L1/Letters/LLos.mp3"
               }
             },
             {
@@ -706,7 +706,7 @@
               "Name": "Mond",
               "Media": {
                 "ImagePath": "Mond.png",
-                "SoundPath": "Letters/MMond.mp3"
+                "SoundPath": "L1/Letters/MMond.mp3"
               }
             },
             {
@@ -718,7 +718,7 @@
               "Name": "Nase",
               "Media": {
                 "ImagePath": "Nase.png",
-                "SoundPath": "Letters/NNase.mp3"
+                "SoundPath": "L1/Letters/NNase.mp3"
               }
             },
             {
@@ -730,7 +730,7 @@
               "Name": "Regen",
               "Media": {
                 "ImagePath": "Regen.png",
-                "SoundPath": "Letters/RRegen.mp3"
+                "SoundPath": "L1/Letters/RRegen.mp3"
               }
             },
             {
@@ -742,7 +742,7 @@
               "Name": "Sonne",
               "Media": {
                 "ImagePath": "Sonne.png",
-                "SoundPath": "Letters/SSonne.mp3"
+                "SoundPath": "L1/Letters/SSonne.mp3"
               }
             }
           ]
@@ -752,7 +752,7 @@
           "Id": 122,
           "Title": "Schreiben",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 2.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-5 Aufgabe 2.mp3",
           "Hint": "Hints/02_extra_Tip_arbeite_nicht_mit_losen_zetteln.mp3",
           "TypeOfLevel": "LetterWrite",
           "Iterations": [
@@ -838,7 +838,7 @@
           "Id": 123,
           "Title": "L wie ?",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 3.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-4 Aufgabe 3.mp3",
           "Hint": "Hints/17_extra_Tip_trinkst_du_auch_genug_wasser.mp3",
           "TypeOfLevel": "FourPictures",
           "Options": [
@@ -1026,7 +1026,7 @@
           "Id": 124,
           "Title": "R oder r?",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 4.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-5 Aufgabe 4.mp3",
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
             {
@@ -1058,8 +1058,8 @@
           "Id": 126,
           "Title": "M+A=MA",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 6.mp3",
-          "SyllablePath": "Syllables/LMNRS",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-4 Aufgabe 6.mp3",
+          "SyllablePath": "L1/Syllables/LMNRS",
           "Hint": "Hints/07_extra_Tip_hast_du_freunde_zum_erzaehlen.mp3",
           "TypeOfLevel": "PickSyllable",
           "Iterations": [
@@ -1140,8 +1140,8 @@
           "Id": 127,
           "Title": "A+M=AM",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 7.mp3",
-          "SyllablePath": "Syllables/LMNRS",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-4 Aufgabe 7.mp3",
+          "SyllablePath": "L1/Syllables/LMNRS",
           "TypeOfLevel": "PickSyllable",
           "Iterations": [
             {
@@ -1241,7 +1241,7 @@
           "Id": 128,
           "Title": "Silben schreiben",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 8.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-4 Aufgabe 8.mp3",
           "Hint": "Hints/20_extra_Tip_wenn_du_jeden_tag_ein_bisschen_mit_mir_uebst_wirst_du_bestimmt_bald_lesen_koennen.mp3",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
@@ -1276,7 +1276,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/la_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/la_lang.mp3"
                     }
                   ]
                 },
@@ -1304,7 +1304,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/le_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/le_lang.mp3"
                     }
                   ]
                 },
@@ -1332,7 +1332,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/li_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/li_lang.mp3"
                     }
                   ]
                 },
@@ -1360,7 +1360,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/lo_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/lo_lang.mp3"
                     }
                   ]
                 },
@@ -1388,7 +1388,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/lu_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/lu_lang.mp3"
                     }
                   ]
                 }
@@ -1425,7 +1425,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ma_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ma_lang.mp3"
                     }
                   ]
                 },
@@ -1453,7 +1453,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/me_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/me_lang.mp3"
                     }
                   ]
                 },
@@ -1481,7 +1481,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/mi_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/mi_lang.mp3"
                     }
                   ]
                 },
@@ -1509,7 +1509,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/mo_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/mo_lang.mp3"
                     }
                   ]
                 },
@@ -1537,7 +1537,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/mu_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/mu_lang.mp3"
                     }
                   ]
                 }
@@ -1574,7 +1574,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/na_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/na_lang.mp3"
                     }
                   ]
                 },
@@ -1602,7 +1602,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ne_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ne_lang.mp3"
                     }
                   ]
                 },
@@ -1630,7 +1630,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ni_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ni_lang.mp3"
                     }
                   ]
                 },
@@ -1658,7 +1658,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/no_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/no_lang.mp3"
                     }
                   ]
                 },
@@ -1686,7 +1686,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/nu_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/nu_lang.mp3"
                     }
                   ]
                 }
@@ -1723,7 +1723,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ra_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ra_lang.mp3"
                     }
                   ]
                 },
@@ -1751,7 +1751,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/re_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/re_lang.mp3"
                     }
                   ]
                 },
@@ -1779,7 +1779,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ri_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ri_lang.mp3"
                     }
                   ]
                 },
@@ -1807,7 +1807,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ro_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ro_lang.mp3"
                     }
                   ]
                 },
@@ -1835,7 +1835,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ru_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ru_lang.mp3"
                     }
                   ]
                 }
@@ -1872,7 +1872,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/sa_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/sa_lang.mp3"
                     }
                   ]
                 },
@@ -1900,7 +1900,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/se_lang.mp3"
                     }
                   ]
                 },
@@ -1928,7 +1928,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/si_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/si_lang.mp3"
                     }
                   ]
                 },
@@ -1956,7 +1956,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/so_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/so_lang.mp3"
                     }
                   ]
                 },
@@ -1984,7 +1984,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/su_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/su_lang.mp3"
                     }
                   ]
                 }
@@ -1997,7 +1997,7 @@
           "Id": 129,
           "Title": "Wörter schreiben",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 9.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-4 Aufgabe 9.mp3",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
             {
@@ -2039,7 +2039,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/la_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/la_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -2062,7 +2062,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ma_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ma_lang.mp3"
                     }
                   ]
                 }
@@ -2107,7 +2107,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ma_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ma_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -2130,7 +2130,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ma_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ma_lang.mp3"
                     }
                   ]
                 }
@@ -2175,7 +2175,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ro_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ro_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -2198,7 +2198,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_kurz.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/se_kurz.mp3"
                     }
                   ]
                 }
@@ -2243,7 +2243,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/na_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/na_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -2266,7 +2266,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_kurz.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/se_kurz.mp3"
                     }
                   ]
                 }
@@ -2302,7 +2302,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Letters/o_lang.mp3"
+                      "SoundPath": "L1/Letters/o_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -2325,7 +2325,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ma_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ma_lang.mp3"
                     }
                   ]
                 }
@@ -2370,7 +2370,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/li_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/li_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -2393,7 +2393,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/sa_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/sa_lang.mp3"
                     }
                   ]
                 }
@@ -2406,7 +2406,7 @@
     {
       "Name": "3: FHJWZ",
       "Color": "#e5c5c2",
-      "VideoPath": "Videos/L1M3.mp4",
+        "VideoPath": "Videos/L1/L1M3.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -2415,7 +2415,7 @@
           "Title": "FHJWZ",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 1.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-5 Aufgabe 1.mp3",
           "TypeOfLevel": "HearMe",
           "Iterations": [
             {
@@ -2427,7 +2427,7 @@
               "Name": "Fisch",
               "Media": {
                 "ImagePath": "Fisch.png",
-                "SoundPath": "Letters/FFisch.mp3"
+                "SoundPath": "L1/Letters/FFisch.mp3"
               }
             },
             {
@@ -2439,7 +2439,7 @@
               "Name": "Hose",
               "Media": {
                 "ImagePath": "Hose.png",
-                "SoundPath": "Letters/HHose.mp3"
+                "SoundPath": "L1/Letters/HHose.mp3"
               }
             },
             {
@@ -2451,7 +2451,7 @@
               "Name": "Jacke",
               "Media": {
                 "ImagePath": "Jacke.png",
-                "SoundPath": "Letters/JJacke.mp3"
+                "SoundPath": "L1/Letters/JJacke.mp3"
               }
             },
             {
@@ -2463,7 +2463,7 @@
               "Name": "Wald",
               "Media": {
                 "ImagePath": "Wald.png",
-                "SoundPath": "Letters/WWald.mp3"
+                "SoundPath": "L1/Letters/WWald.mp3"
               }
             },
             {
@@ -2475,7 +2475,7 @@
               "Name": "Zelt",
               "Media": {
                 "ImagePath": "Zelt.png",
-                "SoundPath": "Letters/ZZelt.mp3"
+                "SoundPath": "L1/Letters/ZZelt.mp3"
               }
             }
           ]
@@ -2485,7 +2485,7 @@
           "Id": 132,
           "Title": "Schreiben",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 2.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-5 Aufgabe 2.mp3",
           "Hint": "Hints/03_extra_Tip_du_kannst_mit_deinem_finger_im_sand_oder_schnee_schreiben.mp3",
           "TypeOfLevel": "LetterWrite",
           "Iterations": [
@@ -2572,7 +2572,7 @@
           "Title": "F wie ?",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 3.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-4 Aufgabe 3.mp3",
           "TypeOfLevel": "FourPictures",
           "Options": [
             {
@@ -2753,7 +2753,7 @@
           "Title": "F oder f?",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 4.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-5 Aufgabe 4.mp3",
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
             {
@@ -2786,8 +2786,8 @@
           "Title": "W+O=WO",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 6.mp3",
-          "SyllablePath": "Syllables/FHJWZ",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-4 Aufgabe 6.mp3",
+          "SyllablePath": "L1/Syllables/FHJWZ",
           "Hint": "Hints/08_extra_Tip_hole_dir_eine_Zeitung.mp3",
           "TypeOfLevel": "PickSyllable",
           "Iterations": [
@@ -2869,8 +2869,8 @@
           "Title": "O+F=OF",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 7.mp3",
-          "SyllablePath": "Syllables/FHJWZ",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-4 Aufgabe 7.mp3",
+          "SyllablePath": "L1/Syllables/FHJWZ",
           "TypeOfLevel": "PickSyllable",
           "Iterations": [
             {
@@ -2971,7 +2971,7 @@
           "Title": "Silben schreiben",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 8.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-4 Aufgabe 8.mp3",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
             {
@@ -3005,7 +3005,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/fa_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/fa_lang.mp3"
                     }
                   ]
                 },
@@ -3033,7 +3033,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/fe_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/fe_lang.mp3"
                     }
                   ]
                 },
@@ -3061,7 +3061,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/fi_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/fi_lang.mp3"
                     }
                   ]
                 },
@@ -3089,7 +3089,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/fo_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/fo_lang.mp3"
                     }
                   ]
                 },
@@ -3117,7 +3117,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/fu_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/fu_lang.mp3"
                     }
                   ]
                 }
@@ -3154,7 +3154,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/ha_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/ha_lang.mp3"
                     }
                   ]
                 },
@@ -3182,7 +3182,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/he_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/he_lang.mp3"
                     }
                   ]
                 },
@@ -3210,7 +3210,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/hi_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/hi_lang.mp3"
                     }
                   ]
                 },
@@ -3238,7 +3238,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/ho_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/ho_lang.mp3"
                     }
                   ]
                 },
@@ -3266,7 +3266,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/hu_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/hu_lang.mp3"
                     }
                   ]
                 }
@@ -3303,7 +3303,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/ja_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/ja_lang.mp3"
                     }
                   ]
                 },
@@ -3331,7 +3331,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/je_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/je_lang.mp3"
                     }
                   ]
                 },
@@ -3359,7 +3359,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/ji_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/ji_lang.mp3"
                     }
                   ]
                 },
@@ -3387,7 +3387,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/jo_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/jo_lang.mp3"
                     }
                   ]
                 },
@@ -3415,7 +3415,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/ju_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/ju_lang.mp3"
                     }
                   ]
                 }
@@ -3452,7 +3452,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/wa_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/wa_lang.mp3"
                     }
                   ]
                 },
@@ -3480,7 +3480,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/we_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/we_lang.mp3"
                     }
                   ]
                 },
@@ -3508,7 +3508,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/wi_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/wi_lang.mp3"
                     }
                   ]
                 },
@@ -3536,7 +3536,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/wo_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/wo_lang.mp3"
                     }
                   ]
                 },
@@ -3564,7 +3564,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/wu_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/wu_lang.mp3"
                     }
                   ]
                 }
@@ -3601,7 +3601,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/za_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/za_lang.mp3"
                     }
                   ]
                 },
@@ -3629,7 +3629,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/ze_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/ze_lang.mp3"
                     }
                   ]
                 },
@@ -3657,7 +3657,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/zi_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/zi_lang.mp3"
                     }
                   ]
                 },
@@ -3685,7 +3685,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/zo_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/zo_lang.mp3"
                     }
                   ]
                 },
@@ -3713,7 +3713,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/zu_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/zu_lang.mp3"
                     }
                   ]
                 }
@@ -3727,7 +3727,7 @@
           "Title": "Wörter schreiben",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 9.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-4 Aufgabe 9.mp3",
           "Hint": "Hints/18_extra_Tip_vergisst_du_manchmal_was_du_schon_geuebt_hast.mp3",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
@@ -3770,7 +3770,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/ho_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/ho_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -3793,7 +3793,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_kurz.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/se_kurz.mp3"
                     }
                   ]
                 }
@@ -3838,7 +3838,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/ha_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/ha_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -3861,7 +3861,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_kurz.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/se_kurz.mp3"
                     }
                   ]
                 }
@@ -3906,7 +3906,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/wa_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/wa_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -3929,7 +3929,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/le_kurz.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/le_kurz.mp3"
                     }
                   ]
                 }
@@ -3974,7 +3974,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/zo_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/zo_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -3997,7 +3997,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ne_kurz.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ne_kurz.mp3"
                     }
                   ]
                 }
@@ -4042,7 +4042,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/so_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/so_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -4065,7 +4065,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/fa_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/fa_lang.mp3"
                     }
                   ]
                 }
@@ -4110,7 +4110,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/af_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/af_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -4133,7 +4133,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/fe_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/fe_lang.mp3"
                     }
                   ]
                 }
@@ -4178,7 +4178,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/mo_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/mo_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -4201,7 +4201,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/fa_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/fa_lang.mp3"
                     }
                   ]
                 }
@@ -4214,7 +4214,7 @@
     {
       "Name": "4: BPGKDT",
       "Color": "#dfb7b3",
-      "VideoPath": "Videos/L1M4.mp4",
+      "VideoPath": "Videos/L1/L1M4.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -4223,7 +4223,7 @@
           "Title": "BDGKPT",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 1.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-5 Aufgabe 1.mp3",
           "TypeOfLevel": "HearMe",
           "Iterations": [
             {
@@ -4235,7 +4235,7 @@
               "Name": "Boot",
               "Media": {
                 "ImagePath": "Boot.png",
-                "SoundPath": "Letters/BBoot.mp3"
+                "SoundPath": "L1/Letters/BBoot.mp3"
               }
             },
             {
@@ -4247,7 +4247,7 @@
               "Name": "Dusche",
               "Media": {
                 "ImagePath": "Dusche.png",
-                "SoundPath": "Letters/DDusche.mp3"
+                "SoundPath": "L1/Letters/DDusche.mp3"
               }
             },
             {
@@ -4259,7 +4259,7 @@
               "Name": "Gabel",
               "Media": {
                 "ImagePath": "Gabel.png",
-                "SoundPath": "Letters/GGabel.mp3"
+                "SoundPath": "L1/Letters/GGabel.mp3"
               }
             },
             {
@@ -4271,7 +4271,7 @@
               "Name": "Katze",
               "Media": {
                 "ImagePath": "Katze.png",
-                "SoundPath": "Letters/KKatze.mp3"
+                "SoundPath": "L1/Letters/KKatze.mp3"
               }
             },
             {
@@ -4283,7 +4283,7 @@
               "Name": "Po",
               "Media": {
                 "ImagePath": "Po.png",
-                "SoundPath": "Letters/PPo.mp3"
+                "SoundPath": "L1/Letters/PPo.mp3"
               }
             },
             {
@@ -4295,7 +4295,7 @@
               "Name": "Tomate",
               "Media": {
                 "ImagePath": "Tomate.png",
-                "SoundPath": "Letters/TTomate.mp3"
+                "SoundPath": "L1/Letters/TTomate.mp3"
               }
             }
           ]
@@ -4305,7 +4305,7 @@
           "Id": 142,
           "Title": "Schreiben",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 2.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-5 Aufgabe 2.mp3",
           "TypeOfLevel": "LetterWrite",
           "Iterations": [
             {
@@ -4406,7 +4406,7 @@
           "Title": "P wie ?",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 3.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-4 Aufgabe 3.mp3",
           "Hint": "Hints/09_extra_Tip_ich_finde_es_toll_dass_du_immernoch_dabei_bist.mp3",
           "TypeOfLevel": "FourPictures",
           "Options": [
@@ -4630,7 +4630,7 @@
           "Title": "B oder b?",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 4.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-5 Aufgabe 4.mp3",
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
             {
@@ -4665,8 +4665,8 @@
           "Title": "B+O=BO",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 6.mp3",
-          "SyllablePath": "Syllables/BDGKPT",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-4 Aufgabe 6.mp3",
+          "SyllablePath": "L1/Syllables/BDGKPT",
           "TypeOfLevel": "PickSyllable",
           "Iterations": [
             {
@@ -4761,8 +4761,8 @@
           "Title": "A+B=AB",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 7.mp3",
-          "SyllablePath": "Syllables/BDGKPT",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-4 Aufgabe 7.mp3",
+          "SyllablePath": "L1/Syllables/BDGKPT",
           "TypeOfLevel": "PickSyllable",
           "Iterations": [
             {
@@ -4873,7 +4873,7 @@
           "Title": "Silben schreiben",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 8.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-4 Aufgabe 8.mp3",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
             {
@@ -4907,7 +4907,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/ba_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/ba_lang.mp3"
                     }
                   ]
                 },
@@ -4935,7 +4935,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/be_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/be_lang.mp3"
                     }
                   ]
                 },
@@ -4963,7 +4963,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/bi_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/bi_lang.mp3"
                     }
                   ]
                 },
@@ -4991,7 +4991,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/bo_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/bo_lang.mp3"
                     }
                   ]
                 },
@@ -5019,7 +5019,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/bu_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/bu_lang.mp3"
                     }
                   ]
                 }
@@ -5056,7 +5056,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/pa_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/pa_lang.mp3"
                     }
                   ]
                 },
@@ -5084,7 +5084,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/pe_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/pe_lang.mp3"
                     }
                   ]
                 },
@@ -5112,7 +5112,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/pi_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/pi_lang.mp3"
                     }
                   ]
                 },
@@ -5140,7 +5140,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/po_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/po_lang.mp3"
                     }
                   ]
                 },
@@ -5168,7 +5168,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/pu_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/pu_lang.mp3"
                     }
                   ]
                 }
@@ -5205,7 +5205,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/ga_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/ga_lang.mp3"
                     }
                   ]
                 },
@@ -5233,7 +5233,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/ge_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/ge_lang.mp3"
                     }
                   ]
                 },
@@ -5261,7 +5261,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/gi_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/gi_lang.mp3"
                     }
                   ]
                 },
@@ -5289,7 +5289,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/go_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/go_lang.mp3"
                     }
                   ]
                 },
@@ -5317,7 +5317,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/gu_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/gu_lang.mp3"
                     }
                   ]
                 }
@@ -5354,7 +5354,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/ka_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/ka_lang.mp3"
                     }
                   ]
                 },
@@ -5382,7 +5382,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/ke_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/ke_lang.mp3"
                     }
                   ]
                 },
@@ -5410,7 +5410,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/ki_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/ki_lang.mp3"
                     }
                   ]
                 },
@@ -5438,7 +5438,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/ko_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/ko_lang.mp3"
                     }
                   ]
                 },
@@ -5466,7 +5466,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/ku_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/ku_lang.mp3"
                     }
                   ]
                 }
@@ -5503,7 +5503,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/da_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/da_lang.mp3"
                     }
                   ]
                 },
@@ -5531,7 +5531,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/de_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/de_lang.mp3"
                     }
                   ]
                 },
@@ -5559,7 +5559,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/di_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/di_lang.mp3"
                     }
                   ]
                 },
@@ -5587,7 +5587,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/do_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/do_lang.mp3"
                     }
                   ]
                 },
@@ -5615,7 +5615,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/du_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/du_lang.mp3"
                     }
                   ]
                 }
@@ -5652,7 +5652,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/ta_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/ta_lang.mp3"
                     }
                   ]
                 },
@@ -5680,7 +5680,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/te_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/te_lang.mp3"
                     }
                   ]
                 },
@@ -5708,7 +5708,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/ti_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/ti_lang.mp3"
                     }
                   ]
                 },
@@ -5736,7 +5736,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/to_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/to_lang.mp3"
                     }
                   ]
                 },
@@ -5764,7 +5764,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/tu_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/tu_lang.mp3"
                     }
                   ]
                 }
@@ -5778,7 +5778,7 @@
           "Title": "Wörter schreiben",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Intros/Level 1 Modul 2-4 Aufgabe 9.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-4 Aufgabe 9.mp3",
           "Hint": "Hints/14_extra_Tip_schau_dich_doch_mal_um.mp3",
           "TypeOfLevel": "BuildSyllable",
           "Iterations": [
@@ -5822,7 +5822,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/da_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/da_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -5845,7 +5845,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/me_kurz.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/me_kurz.mp3"
                     }
                   ]
                 }
@@ -5891,7 +5891,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/pu_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/pu_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -5914,7 +5914,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/ma_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/ma_lang.mp3"
                     }
                   ]
                 }
@@ -5960,7 +5960,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/FHJWZ/ja_lang.mp3"
+                      "SoundPath": "L1/Syllables/FHJWZ/ja_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -5983,7 +5983,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/de_kurz.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/de_kurz.mp3"
                     }
                   ]
                 }
@@ -6029,7 +6029,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/pa_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/pa_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -6052,7 +6052,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/pa_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/pa_lang.mp3"
                     }
                   ]
                 }
@@ -6098,7 +6098,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/en_kurz.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/en_kurz.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -6121,7 +6121,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/te_kurz.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/te_kurz.mp3"
                     }
                   ]
                 }
@@ -6167,7 +6167,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/ki_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/ki_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -6190,7 +6190,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/lo_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/lo_lang.mp3"
                     }
                   ]
                 }
@@ -6236,7 +6236,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/po_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/po_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -6259,7 +6259,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/po_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/po_lang.mp3"
                     }
                   ]
                 }
@@ -6305,7 +6305,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/ki_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/ki_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -6328,7 +6328,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/no_lang.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/no_lang.mp3"
                     }
                   ]
                 }
@@ -6374,7 +6374,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/BDGKPT/do_lang.mp3"
+                      "SoundPath": "L1/Syllables/BDGKPT/do_lang.mp3"
                     },
                     {
                       "SyllableParts": [
@@ -6397,7 +6397,7 @@
                           "EmptySearchedItems": true
                         }
                       ],
-                      "SoundPath": "Syllables/LMNRS/se_kurz.mp3"
+                      "SoundPath": "L1/Syllables/LMNRS/se_kurz.mp3"
                     }
                   ]
                 }
@@ -6410,7 +6410,7 @@
     {
       "Name": "5: CQVXY",
       "Color": "#d8a9a3",
-      "VideoPath": "Videos/L1M5.mp4",
+      "VideoPath": "Videos/L1/L1M5.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
@@ -6419,7 +6419,7 @@
           "Title": "CQVXY",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 1.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-5 Aufgabe 1.mp3",
           "TypeOfLevel": "HearMe",
           "Iterations": [
             {
@@ -6431,7 +6431,7 @@
               "Name": "Clown",
               "Media": {
                 "ImagePath": "Clown.png",
-                "SoundPath": "Letters/CClown.mp3"
+                "SoundPath": "L1/Letters/CClown.mp3"
               }
             },
             {
@@ -6443,7 +6443,7 @@
               "Name": "Qualle",
               "Media": {
                 "ImagePath": "Qualle.png",
-                "SoundPath": "Letters/QQualle.mp3"
+                "SoundPath": "L1/Letters/QQualle.mp3"
               }
             },
             {
@@ -6455,7 +6455,7 @@
               "Name": "Vogel",
               "Media": {
                 "ImagePath": "Vogel.png",
-                "SoundPath": "Letters/VVogel.mp3"
+                "SoundPath": "L1/Letters/VVogel.mp3"
               }
             },
             {
@@ -6467,7 +6467,7 @@
               "Name": "Hexe",
               "Media": {
                 "ImagePath": "Hexe.png",
-                "SoundPath": "Letters/XHexe.mp3"
+                "SoundPath": "L1/Letters/XHexe.mp3"
               }
             },
             {
@@ -6479,7 +6479,7 @@
               "Name": "Baby",
               "Media": {
                 "ImagePath": "Baby.png",
-                "SoundPath": "Letters/YBaby.mp3"
+                "SoundPath": "L1/Letters/YBaby.mp3"
               }
             }
           ]
@@ -6489,7 +6489,7 @@
           "Id": 152,
           "Title": "Schreiben",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 2.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-5 Aufgabe 2.mp3",
           "Hint": "Hints/12_extra_Tip_kannst_du_deinen_namen_schrieben.mp3",
           "TypeOfLevel": "LetterWrite",
           "Iterations": [
@@ -6576,7 +6576,7 @@
           "Title": "X oder x?",
           "IsCompleted": false,
           "IsRecurringTask": true,
-          "SoundPath": "Intros/Level 1 Modul 2-5 Aufgabe 4.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 2-5 Aufgabe 4.mp3",
           "Hint": "Hints/16_extra_Tip_super_du_hast_echt_durchhaltevermoegen.mp3",
           "TypeOfLevel": "LetterDrop",
           "Iterations": [
@@ -6609,7 +6609,7 @@
           "Id": 155,
           "Title": "Wo?",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 5 Aufgabe 5.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 5 Aufgabe 5.mp3",
           "Hint": "Hints/21_extra_Tip_wenn_etwas_nicht_auf_anhieb_klappt_nicht_verzagen.mp3",
           "TypeOfLevel": "HearTheLetter",
           "SliderLabels": [
@@ -6637,15 +6637,15 @@
               "LetterLocations": [
                 {
                   "Location": 2,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_A_in_Ina.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_A_in_Ina.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_B_in_Eber.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_B_in_Eber.mp3"
                 },
                 {
                   "Location": 2,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_D_in_Mond.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_D_in_Mond.mp3"
                 }
               ]
             },
@@ -6656,15 +6656,15 @@
               "LetterLocations": [
                 {
                   "Location": 2,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_E_in_Nase.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_E_in_Nase.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_F_in_Affe.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_F_in_Affe.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_G_in_Regen.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_G_in_Regen.mp3"
                 }
               ]
             },
@@ -6675,15 +6675,15 @@
               "LetterLocations": [
                 {
                   "Location": 0,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_I_in_Igel.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_I_in_Igel.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_K_in_Kuchen.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_K_in_Kuchen.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_L_in_Liege.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_L_in_Liege.mp3"
                 }
               ]
             },
@@ -6694,15 +6694,15 @@
               "LetterLocations": [
                 {
                   "Location": 0,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_M_in_Mund.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_M_in_Mund.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_N_in_Sonne.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_N_in_Sonne.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_O_in_Ofen.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_O_in_Ofen.mp3"
                 }
               ]
             },
@@ -6713,15 +6713,15 @@
               "LetterLocations": [
                 {
                   "Location": 1,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_P_in_Lupe.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_P_in_Lupe.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_R_in_Rose.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_R_in_Rose.mp3"
                 },
                 {
                   "Location": 2,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_T_in_Boot.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_T_in_Boot.mp3"
                 }
               ]
             },
@@ -6732,15 +6732,15 @@
               "LetterLocations": [
                 {
                   "Location": 0,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_U_in_Uhr.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_U_in_Uhr.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_W_in_Wald.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_W_in_Wald.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Exercises/1-5-5/wo_hoerst_du_Z_in_Zauberer.mp3"
+                  "SoundPath": "L1/Exercises/1-5-5/wo_hoerst_du_Z_in_Zauberer.mp3"
                 }
               ]
             }
@@ -6751,15 +6751,15 @@
     {
       "Name": "6: ABC",
       "Color": "#d29a94",
-      "VideoPath": "Videos/L1M6.mp4",
+      "VideoPath": "Videos/L1/L1M6.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
         {
           "$type": "IRMGARD.Models.HearMeAbc, IRMGARD",
           "Id": 161,
           "Title": "Von A-Z",
-          "SoundPath": "Intros/Level 1 Modul 6 Aufgabe 1.mp3",
-          "SoundPathABC": "Exercises/1-6-1/ABC_Song.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 6 Aufgabe 1.mp3",
+          "SoundPathABC": "L1/Exercises/1-6-1/ABC_Song.mp3",
           "TypeOfLevel": "HearMeAbc",
           "Iterations": [
             {
@@ -6772,39 +6772,39 @@
                 "D",
                 "E"
               ],
-              "SoundPath": "Exercises/1-6-1/A-E.mp3",
+              "SoundPath": "L1/Exercises/1-6-1/A-E.mp3",
               "Letters": [
                 {
                   "Letter": "A",
                   "Media": {
-                    "SoundPath": "Alphabet/A.mp3"
+                    "SoundPath": "L1/Alphabet/A.mp3"
                   }
                 },
                 {
                   "Letter": "B",
                   "Append": "e",
                   "Media": {
-                    "SoundPath": "Alphabet/B.mp3"
+                    "SoundPath": "L1/Alphabet/B.mp3"
                   }
                 },
                 {
                   "Letter": "C",
                   "Append": "e",
                   "Media": {
-                    "SoundPath": "Alphabet/C.mp3"
+                    "SoundPath": "L1/Alphabet/C.mp3"
                   }
                 },
                 {
                   "Letter": "D",
                   "Append": "e",
                   "Media": {
-                    "SoundPath": "Alphabet/D.mp3"
+                    "SoundPath": "L1/Alphabet/D.mp3"
                   }
                 },
                 {
                   "Letter": "E",
                   "Media": {
-                    "SoundPath": "Alphabet/E.mp3"
+                    "SoundPath": "L1/Alphabet/E.mp3"
                   }
                 }
               ]
@@ -6819,40 +6819,40 @@
                 "I",
                 "J"
               ],
-              "SoundPath": "Exercises/1-6-1/F-J.mp3",
+              "SoundPath": "L1/Exercises/1-6-1/F-J.mp3",
               "Letters": [
                 {
                   "Prepend": "e",
                   "Letter": "F",
                   "Media": {
-                    "SoundPath": "Alphabet/F.mp3"
+                    "SoundPath": "L1/Alphabet/F.mp3"
                   }
                 },
                 {
                   "Letter": "G",
                   "Append": "e",
                   "Media": {
-                    "SoundPath": "Alphabet/G.mp3"
+                    "SoundPath": "L1/Alphabet/G.mp3"
                   }
                 },
                 {
                   "Letter": "H",
                   "Append": "a",
                   "Media": {
-                    "SoundPath": "Alphabet/H.mp3"
+                    "SoundPath": "L1/Alphabet/H.mp3"
                   }
                 },
                 {
                   "Letter": "I",
                   "Media": {
-                    "SoundPath": "Alphabet/I.mp3"
+                    "SoundPath": "L1/Alphabet/I.mp3"
                   }
                 },
                 {
                   "Letter": "J",
                   "Append": "ott",
                   "Media": {
-                    "SoundPath": "Alphabet/J.mp3"
+                    "SoundPath": "L1/Alphabet/J.mp3"
                   }
                 }
               ]
@@ -6867,40 +6867,40 @@
                 "N",
                 "O"
               ],
-              "SoundPath": "Exercises/1-6-1/K-O.mp3",
+              "SoundPath": "L1/Exercises/1-6-1/K-O.mp3",
               "Letters": [
                 {
                   "Letter": "K",
                   "Append": "a",
                   "Media": {
-                    "SoundPath": "Alphabet/K.mp3"
+                    "SoundPath": "L1/Alphabet/K.mp3"
                   }
                 },
                 {
                   "Prepend": "e",
                   "Letter": "L",
                   "Media": {
-                    "SoundPath": "Alphabet/L.mp3"
+                    "SoundPath": "L1/Alphabet/L.mp3"
                   }
                 },
                 {
                   "Prepend": "e",
                   "Letter": "M",
                   "Media": {
-                    "SoundPath": "Alphabet/M.mp3"
+                    "SoundPath": "L1/Alphabet/M.mp3"
                   }
                 },
                 {
                   "Prepend": "e",
                   "Letter": "N",
                   "Media": {
-                    "SoundPath": "Alphabet/N.mp3"
+                    "SoundPath": "L1/Alphabet/N.mp3"
                   }
                 },
                 {
                   "Letter": "O",
                   "Media": {
-                    "SoundPath": "Alphabet/O.mp3"
+                    "SoundPath": "L1/Alphabet/O.mp3"
                   }
                 }
               ]
@@ -6915,41 +6915,41 @@
                 "S",
                 "T"
               ],
-              "SoundPath": "Exercises/1-6-1/P-T.mp3",
+              "SoundPath": "L1/Exercises/1-6-1/P-T.mp3",
               "Letters": [
                 {
                   "Letter": "P",
                   "Append": "e",
                   "Media": {
-                    "SoundPath": "Alphabet/P.mp3"
+                    "SoundPath": "L1/Alphabet/P.mp3"
                   }
                 },
                 {
                   "Letter": "Q",
                   "Append": "u",
                   "Media": {
-                    "SoundPath": "Alphabet/Q.mp3"
+                    "SoundPath": "L1/Alphabet/Q.mp3"
                   }
                 },
                 {
                   "Prepend": "e",
                   "Letter": "R",
                   "Media": {
-                    "SoundPath": "Alphabet/R.mp3"
+                    "SoundPath": "L1/Alphabet/R.mp3"
                   }
                 },
                 {
                   "Prepend": "e",
                   "Letter": "S",
                   "Media": {
-                    "SoundPath": "Alphabet/S.mp3"
+                    "SoundPath": "L1/Alphabet/S.mp3"
                   }
                 },
                 {
                   "Letter": "T",
                   "Append": "e",
                   "Media": {
-                    "SoundPath": "Alphabet/T.mp3"
+                    "SoundPath": "L1/Alphabet/T.mp3"
                   }
                 }
               ]
@@ -6965,47 +6965,47 @@
                 "Y",
                 "Z"
               ],
-              "SoundPath": "Exercises/1-6-1/U-Z.mp3",
+              "SoundPath": "L1/Exercises/1-6-1/U-Z.mp3",
               "Letters": [
                 {
                   "Letter": "U",
                   "Media": {
-                    "SoundPath": "Alphabet/U.mp3"
+                    "SoundPath": "L1/Alphabet/U.mp3"
                   }
                 },
                 {
                   "Letter": "V",
                   "Append": "au",
                   "Media": {
-                    "SoundPath": "Alphabet/V.mp3"
+                    "SoundPath": "L1/Alphabet/V.mp3"
                   }
                 },
                 {
                   "Letter": "W",
                   "Append": "e",
                   "Media": {
-                    "SoundPath": "Alphabet/W.mp3"
+                    "SoundPath": "L1/Alphabet/W.mp3"
                   }
                 },
                 {
                   "Prepend": "i",
                   "Letter": "X",
                   "Media": {
-                    "SoundPath": "Alphabet/X.mp3"
+                    "SoundPath": "L1/Alphabet/X.mp3"
                   }
                 },
                 {
                   "Letter": "Y",
                   "Append": "psilon",
                   "Media": {
-                    "SoundPath": "Alphabet/Y.mp3"
+                    "SoundPath": "L1/Alphabet/Y.mp3"
                   }
                 },
                 {
                   "Letter": "Z",
                   "Append": "ett",
                   "Media": {
-                    "SoundPath": "Alphabet/Z.mp3"
+                    "SoundPath": "L1/Alphabet/Z.mp3"
                   }
                 }
               ]
@@ -7016,7 +7016,7 @@
           "$type": "IRMGARD.Models.AbcRank, IRMGARD",
           "Id": 162,
           "Title": "ACB?",
-          "SoundPath": "Intros/Level 1 Modul 6 Aufgabe 2.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 6 Aufgabe 2.mp3",
           "Hint": "Hints/01_extra_Tip_belohn_dich.mp3",
           "TypeOfLevel": "AbcRank",
           "Iterations": [
@@ -7181,7 +7181,7 @@
           "$type": "IRMGARD.Models.AbcRank, IRMGARD",
           "Id": 163,
           "Title": "ACB?",
-          "SoundPath": "Intros/Level 1 Modul 6 Aufgabe 3.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 6 Aufgabe 3.mp3",
           "Hint": "Hints/11_extra_Tip_ich_freue_mich_dass_du_schon_so_weit_gekommen_bist.mp3",
           "TypeOfLevel": "AbcRank",
           "Iterations": [
@@ -7422,7 +7422,7 @@
           "Id": 165,
           "Title": "Memory",
           "IsCompleted": false,
-          "SoundPath": "Intros/Level 1 Modul 6 Aufgabe 5.mp3",
+          "SoundPath": "L1/Intros/Level 1 Modul 6 Aufgabe 5.mp3",
           "Hint": "Hints/04_extra_Tip_ein_memoryspiel_selbst_erstellen.mp3",
           "TypeOfLevel": "Memory",
           "Iterations": [

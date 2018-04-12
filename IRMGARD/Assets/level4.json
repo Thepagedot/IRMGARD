@@ -9,7 +9,7 @@
     {
         "Name": "1: Wiederholungen",
         "Color": "#f0ebd1",
-        "VideoPath": "Videos/L4M1.mp4",
+        "VideoPath": "Videos/L4/L4M1.mp4",
         "Lessons": [
             {
                 "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
@@ -37,15 +37,15 @@
                         "LetterLocations": [
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/3-2-2/durstig.mp3"
+                                "SoundPath": "L3_4/Exercises/3-2-2/durstig.mp3"
                             },
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/3-2-2/essen.mp3"
+                                "SoundPath": "L3_4/Exercises/3-2-2/essen.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/3-2-2/gelb.mp3"
+                                "SoundPath": "L3_4/Exercises/3-2-2/gelb.mp3"
                             }
                         ]
                     },
@@ -55,15 +55,15 @@
                         "LetterLocations": [
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/3-2-2/gruen.mp3"
+                                "SoundPath": "L3_4/Exercises/3-2-2/gruen.mp3"
                             },
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/3-2-2/lernen.mp3"
+                                "SoundPath": "L3_4/Exercises/3-2-2/lernen.mp3"
                             },
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/3-2-2/lesen.mp3"
+                                "SoundPath": "L3_4/Exercises/3-2-2/lesen.mp3"
                             }
                         ]
                     },
@@ -73,15 +73,15 @@
                         "LetterLocations": [
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/3-2-2/lieb.mp3"
+                                "SoundPath": "L3_4/Exercises/3-2-2/lieb.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/3-2-2/rot.mp3"
+                                "SoundPath": "L3_4/Exercises/3-2-2/rot.mp3"
                             },
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/3-2-2/rufen.mp3"
+                                "SoundPath": "L3_4/Exercises/3-2-2/rufen.mp3"
                             }
                         ]
                     },
@@ -91,15 +91,15 @@
                         "LetterLocations": [
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/3-2-2/satt.mp3"
+                                "SoundPath": "L3_4/Exercises/3-2-2/satt.mp3"
                             },
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/3-2-2/schlafen.mp3"
+                                "SoundPath": "L3_4/Exercises/3-2-2/schlafen.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/3-2-2/schoen.mp3"
+                                "SoundPath": "L3_4/Exercises/3-2-2/schoen.mp3"
                             }
                         ]
                     },
@@ -109,11 +109,11 @@
                         "LetterLocations": [
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/3-2-2/schreiben.mp3"
+                                "SoundPath": "L3_4/Exercises/3-2-2/schreiben.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/3-2-2/traurig.mp3"
+                                "SoundPath": "L3_4/Exercises/3-2-2/traurig.mp3"
                             }
                         ]
                     }
@@ -150,19 +150,19 @@
                         "LetterLocations": [
                             {
                                 "Location": 0,
-                                "SoundPath": "Verbs/tanzen.mp3"
+                                "SoundPath": "L3_4/Verbs/tanzen.mp3"
                             },
                             {
                                 "Location": 2,
-                                "SoundPath": "Verbs/rudern.mp3"
+                                "SoundPath": "L3_4/Verbs/rudern.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Verbs/klingeln.mp3"
+                                "SoundPath": "L3_4/Verbs/klingeln.mp3"
                             },
                             {
                                 "Location": 0,
-                                "SoundPath": "Verbs/weinen.mp3"
+                                "SoundPath": "L3_4/Verbs/weinen.mp3"
                             }
                         ]
                     },
@@ -172,15 +172,15 @@
                         "LetterLocations": [
                             {
                                 "Location": 0,
-                                "SoundPath": "Verbs/arbeiten.mp3"
+                                "SoundPath": "L3_4/Verbs/arbeiten.mp3"
                             },
                             {
                                 "Location": 2,
-                                "SoundPath": "Verbs/saeubern.mp3"
+                                "SoundPath": "L3_4/Verbs/saeubern.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Verbs/wuerfeln.mp3"
+                                "SoundPath": "L3_4/Verbs/wuerfeln.mp3"
                             }
                         ]
                     },
@@ -190,15 +190,15 @@
                         "LetterLocations": [
                             {
                                 "Location": 0,
-                                "SoundPath": "Verbs/stricken.mp3"
+                                "SoundPath": "L3_4/Verbs/stricken.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Verbs/humpeln.mp3"
+                                "SoundPath": "L3_4/Verbs/humpeln.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Verbs/betteln.mp3"
+                                "SoundPath": "L3_4/Verbs/betteln.mp3"
                             }
                         ]
                     },
@@ -208,15 +208,15 @@
                         "LetterLocations": [
                             {
                                 "Location": 1,
-                                "SoundPath": "Verbs/segeln.mp3"
+                                "SoundPath": "L3_4/Verbs/segeln.mp3"
                             },
                             {
                                 "Location": 2,
-                                "SoundPath": "Verbs/aergern.mp3"
+                                "SoundPath": "L3_4/Verbs/aergern.mp3"
                             },
                             {
                                 "Location": 0,
-                                "SoundPath": "Verbs/lachen.mp3"
+                                "SoundPath": "L3_4/Verbs/lachen.mp3"
                             }
                         ]
                     },
@@ -226,15 +226,15 @@
                         "LetterLocations": [
                             {
                                 "Location": 2,
-                                "SoundPath": "Verbs/meckern.mp3"
+                                "SoundPath": "L3_4/Verbs/meckern.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Verbs/wickeln.mp3"
+                                "SoundPath": "L3_4/Verbs/wickeln.mp3"
                             },
                             {
                                 "Location": 2,
-                                "SoundPath": "Verbs/haemmern.mp3"
+                                "SoundPath": "L3_4/Verbs/haemmern.mp3"
                             }
                         ]
                     }
@@ -307,7 +307,7 @@
                                         {
                                             "$type": "IRMGARD.Models.Word, IRMGARD",
                                             "Text": "arbeitest",
-                                            "SoundPath": "Verbs/arbeitest.mp3"
+                                            "SoundPath": "L3_4/Verbs/arbeitest.mp3"
                                         }
                                     ]
                                 ]
@@ -612,13 +612,13 @@
     {
         "Name": "2: Einführung Adjektive",
         "Color": "#e9e2bb",
-        "VideoPath": "Videos/L4M2.mp4",
+        "VideoPath": "Videos/L4/L4M2.mp4",
         "Lessons": [
             {
                 "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
                 "Id": 421,
                 "Title": "Wie?",
-                "SoundPath": "Intros/L4M2A1.mp3",
+                "SoundPath": "L4/Intros/L4M2A1.mp3",
                 "Hint": "Hints/Extra_tip_wichtig_ist_dass_du_taeglich_mit_mir_lernst.mp3",
                 "TypeOfLevel": "SelectConcept",
                 "HighlightCorrectOptionsOnMistake": true,
@@ -933,7 +933,7 @@
                 "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
                 "Id": 422,
                 "Title": "Beschreiben",
-                "SoundPath": "Intros/L4M2A2.mp3",
+                "SoundPath": "L4/Intros/L4M2A2.mp3",
                 "Hint": "Hints/Extra_tip_wichtig_ist_dass_du_taeglich_mit_mir_lernst.mp3",
                 "TypeOfLevel": "SelectConcept",
                 "HighlightCorrectOptionsOnMistake": true,
@@ -1211,7 +1211,7 @@
                 "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
                 "Id": 423,
                 "Title": "Gegensätze",
-                "SoundPath": "Intros/L4M2A3.mp3",
+                "SoundPath": "L4/Intros/L4M2A3.mp3",
                 "Hint": "Hints/Extra_tip_hast_du_einen_freund.mp3",
                 "TypeOfLevel": "FourPicturesSelectConcept",
                 "SingleChoice": true,
@@ -1508,7 +1508,7 @@
                 "$type": "IRMGARD.Models.InputConcept, IRMGARD",
                 "Id": 424,
                 "Title": "Sätze mit Adjektiven",
-                "SoundPath": "Intros/L4M2A4.mp3",
+                "SoundPath": "L4/Intros/L4M2A4.mp3",
                 "TypeOfLevel": "InputConcept",
                 "HighlightCorrectOptionsOnMistake": true,
                 "HideRack": true,
@@ -1751,7 +1751,7 @@
                 "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
                 "Id": 425,
                 "Title": "Sätze mit Adjektiven",
-                "SoundPath": "Intros/L4M2A5.mp3",
+                "SoundPath": "L4/Intros/L4M2A5.mp3",
                 "TypeOfLevel": "DragIntoGap",
                 "HighlightCorrectOptionsOnMistake": true,
                 "HideRack": true,
@@ -1849,13 +1849,13 @@
     {
         "Name": "3: Adjektive in Sätzen",
         "Color": "#e1d8a4",
-        "VideoPath": "Videos/L4M3.mp4",
+        "VideoPath": "Videos/L4/L4M3.mp4",
         "Lessons": [
             {
                 "$type": "IRMGARD.Models.InputConcept, IRMGARD",
                 "Id": 431,
                 "Title": "UN",
-                "SoundPath": "Intros/L4M3A1.mp3",
+                "SoundPath": "L4/Intros/L4M3A1.mp3",
                 "TypeOfLevel": "InputConcept",
                 "HighlightCorrectOptionsOnMistake": true,
                 "HideRack": true,
@@ -2120,7 +2120,7 @@
                 "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
                 "Id": 432,
                 "Title": "Nomen zu Adjektiv",
-                "SoundPath": "Intros/L4M3A2.mp3",
+                "SoundPath": "L4/Intros/L4M3A2.mp3",
                 "Hint": "Hints/Extra_tip_hast_du_einen_freund.mp3",
                 "TypeOfLevel": "FourPicturesSelectConcept",
                 "SingleChoice": true,
@@ -2159,7 +2159,7 @@
                                             "ActivateOnSuccess": true,
                                             "ActivateOnMistake": true,
                                             "Text": "dreieckig",
-                                            "SoundPath": "Adjectives/dreieckig.mp3"
+                                            "SoundPath": "L4/Adjectives/dreieckig.mp3"
                                         }
                                     ]
                                 ]
@@ -2200,7 +2200,7 @@
                                             "ActivateOnSuccess": true,
                                             "ActivateOnMistake": true,
                                             "Text": "schriftlich",
-                                            "SoundPath": "Adjectives/schriftlich.mp3"
+                                            "SoundPath": "L4/Adjectives/schriftlich.mp3"
                                         }
                                     ]
                                 ]
@@ -2241,7 +2241,7 @@
                                             "ActivateOnSuccess": true,
                                             "ActivateOnMistake": true,
                                             "Text": "gefährlich",
-                                            "SoundPath": "Adjectives/gefaehrlich.mp3"
+                                            "SoundPath": "L4/Adjectives/gefaehrlich.mp3"
                                         }
                                     ]
                                 ]
@@ -2282,7 +2282,7 @@
                                             "ActivateOnSuccess": true,
                                             "ActivateOnMistake": true,
                                             "Text": "freundlich",
-                                            "SoundPath": "Adjectives/freundlich.mp3"
+                                            "SoundPath": "L4/Adjectives/freundlich.mp3"
                                         }
                                     ]
                                 ]
@@ -2323,7 +2323,7 @@
                                             "ActivateOnSuccess": true,
                                             "ActivateOnMistake": true,
                                             "Text": "traurig",
-                                            "SoundPath": "Adjectives/traurig.mp3"
+                                            "SoundPath": "L4/Adjectives/traurig.mp3"
                                         }
                                     ]
                                 ]
@@ -2336,7 +2336,7 @@
                 "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
                 "Id": 433,
                 "Title": "Nomen zu Adjektiv",
-                "SoundPath": "Intros/L4M3A3.mp3",
+                "SoundPath": "L4/Intros/L4M3A3.mp3",
                 "Hint": "Hints/Extra_tip_hast_du_einen_freund.mp3",
                 "TypeOfLevel": "FourPicturesSelectConcept",
                 "SingleChoice": true,
@@ -2552,7 +2552,7 @@
                 "$type": "IRMGARD.Models.InputConcept, IRMGARD",
                 "Id": 434,
                 "Title": "Adjektiv zu Nomen",
-                "SoundPath": "Intros/L4M3A4.mp3",
+                "SoundPath": "L4/Intros/L4M3A4.mp3",
                 "TypeOfLevel": "InputConcept",
                 "HighlightCorrectOptionsOnMistake": true,
                 "HideRack": true,
@@ -2818,7 +2818,7 @@
                 "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
                 "Id": 435,
                 "Title": "Adjektive zu Nomen",
-                "SoundPath": "Intros/L4M3A5.mp3",
+                "SoundPath": "L4/Intros/L4M3A5.mp3",
                 "TypeOfLevel": "DragIntoGap",
                 "HighlightCorrectOptionsOnMistake": true,
                 "UseOptionItemsOnly": true,
@@ -3107,7 +3107,7 @@
                 "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
                 "Id": 436,
                 "Title": "Vergleichen",
-                "SoundPath": "Intros/L4M3A6.mp3",
+                "SoundPath": "L4/Intros/L4M3A6.mp3",
                 "Hint": "Hints/Extra_tip_ueberlege_dir_Woerter_mit_AU.mp3",
                 "TypeOfLevel": "HearTheLetter",
                 "SliderLabels": [
@@ -3188,13 +3188,13 @@
     {
         "Name": "4: Einführung ß",
         "Color": "#dace8e",
-        "VideoPath": "Videos/L4M4.mp4",
+        "VideoPath": "Videos/L4/L4M4.mp4",
         "Lessons": [
             {
                 "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
                 "Id": 441,
                 "Title": "Einführung ß",
-                "SoundPath": "Intros/L4M4A1.mp3",
+                "SoundPath": "L4/Intros/L4M4A1.mp3",
                 "TypeOfLevel": "DragIntoGap",
                 "HighlightCorrectOptionsOnMistake": true,
                 "UseOptionItemsOnly": true,
@@ -3424,7 +3424,7 @@
                 "$type": "IRMGARD.Models.InputConcept, IRMGARD",
                 "Id": 442,
                 "Title": "Schreibe richtig",
-                "SoundPath": "Intros/L4M4A2.mp3",
+                "SoundPath": "L4/Intros/L4M4A2.mp3",
                 "TypeOfLevel": "InputConcept",
                 "HighlightCorrectOptionsOnMistake": true,
                 "HideRack": true,
@@ -3660,7 +3660,7 @@
                 "$type": "IRMGARD.Models.InputConcept, IRMGARD",
                 "Id": 443,
                 "Title": "Gestern und heute",
-                "SoundPath": "Intros/L4M4A3.mp3",
+                "SoundPath": "L4/Intros/L4M4A3.mp3",
                 "TypeOfLevel": "InputConcept",
                 "HighlightCorrectOptionsOnMistake": true,
                 "HideRack": true,
@@ -3896,7 +3896,7 @@
                 "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
                 "Id": 444,
                 "Title": "Ausnahmeregel",
-                "SoundPath": "Intros/L4M4A4.mp3",
+                "SoundPath": "L4/Intros/L4M4A4.mp3",
                 "Hint": "Hints/Extra_tip_denkst_du_ans_aufschreiben.mp3",
                 "TypeOfLevel": "HearTheLetter",
                 "SliderLabels": [
@@ -3918,15 +3918,15 @@
                         "LetterLocations": [
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/4-4-4/Last.mp3"
+                                "SoundPath": "L4/Exercises/4-4-4/Last.mp3"
                             },
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/4-4-4/Mast.mp3"
+                                "SoundPath": "L4/Exercises/4-4-4/Mast.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/4-4-4/Russe.mp3"
+                                "SoundPath": "L4/Exercises/4-4-4/Russe.mp3"
                             }
                         ]
                     },
@@ -3936,11 +3936,11 @@
                         "LetterLocations": [
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/4-4-4/Rast.mp3"
+                                "SoundPath": "L4/Exercises/4-4-4/Rast.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/4-4-4/Rasse.mp3"
+                                "SoundPath": "L4/Exercises/4-4-4/Rasse.mp3"
                             }
                         ]
                     },
@@ -3950,11 +3950,11 @@
                         "LetterLocations": [
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/4-4-4/Hast.mp3"
+                                "SoundPath": "L4/Exercises/4-4-4/Hast.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/4-4-4/Masse.mp3"
+                                "SoundPath": "L4/Exercises/4-4-4/Masse.mp3"
                             }
                         ]
                     },
@@ -3964,11 +3964,11 @@
                         "LetterLocations": [
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/4-4-4/Mist.mp3"
+                                "SoundPath": "L4/Exercises/4-4-4/Mist.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/4-4-4/Tasse.mp3"
+                                "SoundPath": "L4/Exercises/4-4-4/Tasse.mp3"
                             }
                         ]
                     },
@@ -3978,11 +3978,11 @@
                         "LetterLocations": [
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/4-4-4/List.mp3"
+                                "SoundPath": "L4/Exercises/4-4-4/List.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/4-4-4/Kasse.mp3"
+                                "SoundPath": "L4/Exercises/4-4-4/Kasse.mp3"
                             }
                         ]
                     }
@@ -3993,13 +3993,13 @@
     {
         "Name": "5: Steigerungen",
         "Color": "#d2c479",
-        "VideoPath": "Videos/L4M5.mp4",
+        "VideoPath": "Videos/L4/L4M5.mp4",
         "Lessons": [
             {
                 "$type": "IRMGARD.Models.InputConcept, IRMGARD",
                 "Id": 451,
                 "Title": "Steigerungsformen",
-                "SoundPath": "Intros/L4M5A1.mp3",
+                "SoundPath": "L4/Intros/L4M5A1.mp3",
                 "TypeOfLevel": "InputConcept",
                 "HighlightCorrectOptionsOnMistake": true,
                 "HideRack": true,
@@ -4553,7 +4553,7 @@
                 "$type": "IRMGARD.Models.InputConcept, IRMGARD",
                 "Id": 452,
                 "Title": "Steigerungsformen",
-                "SoundPath": "Intros/L4M5A2.mp3",
+                "SoundPath": "L4/Intros/L4M5A2.mp3",
                 "TypeOfLevel": "InputConcept",
                 "HighlightCorrectOptionsOnMistake": true,
                 "HideRack": true,
@@ -4846,7 +4846,7 @@
                 "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
                 "Id": 453,
                 "Title": "Ausnahme",
-                "SoundPath": "Intros/L4M5A3.mp3",
+                "SoundPath": "L4/Intros/L4M5A3.mp3",
                 "Hint": "Hints/Extra_tip_hast_du_einen_freund.mp3",
                 "TypeOfLevel": "FourPicturesSelectConcept",
                 "Iterations": [
@@ -5016,7 +5016,7 @@
                 "$type": "IRMGARD.Models.InputConcept, IRMGARD",
                 "Id": 454,
                 "Title": "Steigerung mit Umlauten",
-                "SoundPath": "Intros/L4M5A4.mp3",
+                "SoundPath": "L4/Intros/L4M5A4.mp3",
                 "TypeOfLevel": "InputConcept",
                 "HighlightCorrectOptionsOnMistake": true,
                 "HideRack": true,
@@ -5514,7 +5514,7 @@
                 "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
                 "Id": 455,
                 "Title": "Zeitformen",
-                "SoundPath": "Intros/L4M5A5.mp3",
+                "SoundPath": "L4/Intros/L4M5A5.mp3",
                 "Hint": "Hints/Extra_tip_denkst_du_ans_aufschreiben.mp3",
                 "TypeOfLevel": "HearTheLetter",
                 "SliderLabels": [
@@ -5536,15 +5536,15 @@
                         "LetterLocations": [
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/4-5-5/fleissig.mp3"
+                                "SoundPath": "L4/Exercises/4-5-5/fleissig.mp3"
                             },
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/4-5-5/freundlich.mp3"
+                                "SoundPath": "L4/Exercises/4-5-5/freundlich.mp3"
                             },
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/4-5-5/hoeflich.mp3"
+                                "SoundPath": "L4/Exercises/4-5-5/hoeflich.mp3"
                             }
                         ]
                     },
@@ -5554,15 +5554,15 @@
                         "LetterLocations": [
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/4-5-5/lustig.mp3"
+                                "SoundPath": "L4/Exercises/4-5-5/lustig.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/4-5-5/stumm.mp3"
+                                "SoundPath": "L4/Exercises/4-5-5/stumm.mp3"
                             },
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/4-5-5/nett.mp3"
+                                "SoundPath": "L4/Exercises/4-5-5/nett.mp3"
                             }
                         ]
                     },
@@ -5572,15 +5572,15 @@
                         "LetterLocations": [
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/4-5-5/kinderlos.mp3"
+                                "SoundPath": "L4/Exercises/4-5-5/kinderlos.mp3"
                             },
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/4-5-5/rund.mp3"
+                                "SoundPath": "L4/Exercises/4-5-5/rund.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/4-5-5/schriftlich.mp3"
+                                "SoundPath": "L4/Exercises/4-5-5/schriftlich.mp3"
                             }
                         ]
                     },
@@ -5590,15 +5590,15 @@
                         "LetterLocations": [
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/4-5-5/schwanger.mp3"
+                                "SoundPath": "L4/Exercises/4-5-5/schwanger.mp3"
                             },
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/4-5-5/traurig.mp3"
+                                "SoundPath": "L4/Exercises/4-5-5/traurig.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/4-5-5/tot.mp3"
+                                "SoundPath": "L4/Exercises/4-5-5/tot.mp3"
                             }
                         ]
                     },
@@ -5608,11 +5608,11 @@
                         "LetterLocations": [
                             {
                                 "Location": 0,
-                                "SoundPath": "Exercises/4-5-5/schoen.mp3"
+                                "SoundPath": "L4/Exercises/4-5-5/schoen.mp3"
                             },
                             {
                                 "Location": 1,
-                                "SoundPath": "Exercises/4-5-5/viereckig.mp3"
+                                "SoundPath": "L4/Exercises/4-5-5/viereckig.mp3"
                             }
                         ]
                     }
@@ -5623,13 +5623,13 @@
     {
         "Name": "6: Zusammengesetzte Adjektive",
         "Color": "#cbba64",
-        "VideoPath": "Videos/L4M6.mp4",
+        "VideoPath": "Videos/L4/L4M6.mp4",
         "Lessons": [
             {
                 "$type": "IRMGARD.Models.InputConcept, IRMGARD",
                 "Id": 461,
                 "Title": "Aus 1 mach 2",
-                "SoundPath": "Intros/L4M6A1.mp3",
+                "SoundPath": "L4/Intros/L4M6A1.mp3",
                 "TypeOfLevel": "InputConcept",
                 "HighlightCorrectOptionsOnMistake": true,
                 "HideRack": true,
@@ -5962,7 +5962,7 @@
                 "$type": "IRMGARD.Models.InputConcept, IRMGARD",
                 "Id": 462,
                 "Title": "Aus 2 mach 1",
-                "SoundPath": "Intros/L4M6A2.mp3",
+                "SoundPath": "L4/Intros/L4M6A2.mp3",
                 "TypeOfLevel": "InputConcept",
                 "HighlightCorrectOptionsOnMistake": true,
                 "HideRack": true,
@@ -6763,7 +6763,7 @@
                 "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
                 "Id": 463,
                 "Title": "Spiel",
-                "SoundPath": "Intros/L4M6A3.mp3",
+                "SoundPath": "L4/Intros/L4M6A3.mp3",
                 "Hint": "Hints/Extra_tip_keine_Panik_auf_der_Titanik.mp3",
                 "TypeOfLevel": "Level4WordqueueSC",
                 "SingleChoice": true,

@@ -9,7 +9,7 @@
     {
       "Name": "1: Wiederholungen",
       "Color": "#d3caaf",
-      "VideoPath": "Videos/L3M1.mp4",
+      "VideoPath": "Videos/L3/L3M1.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
@@ -38,15 +38,15 @@
               "LetterLocations": [
                 {
                   "Location": 1,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_E_in_Riegel_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_E_in_Riegel_kurz_oder_lang_gesprochen.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_I_in_Riss_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_I_in_Riss_kurz_oder_lang_gesprochen.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_O_in_Rolle_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_O_in_Rolle_kurz_oder_lang_gesprochen.mp3"
                 }
               ]
             },
@@ -56,15 +56,15 @@
               "LetterLocations": [
                 {
                   "Location": 0,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_i_in_Siegel_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_i_in_Siegel_kurz_oder_lang_gesprochen.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_O_in_Sonne_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_O_in_Sonne_kurz_oder_lang_gesprochen.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_U_in_Kuss_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_U_in_Kuss_kurz_oder_lang_gesprochen.mp3"
                 }
               ]
             },
@@ -74,15 +74,15 @@
               "LetterLocations": [
                 {
                   "Location": 1,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_E_in_Siegel_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_E_in_Siegel_kurz_oder_lang_gesprochen.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_U_in_Rute_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_U_in_Rute_kurz_oder_lang_gesprochen.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_U_in_Kutter_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_U_in_Kutter_kurz_oder_lang_gesprochen.mp3"
                 }
               ]
             },
@@ -92,15 +92,15 @@
               "LetterLocations": [
                 {
                   "Location": 1,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_I_in_Biss_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_I_in_Biss_kurz_oder_lang_gesprochen.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_O_in_Tonne_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_O_in_Tonne_kurz_oder_lang_gesprochen.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_U_in_Mutter_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_U_in_Mutter_kurz_oder_lang_gesprochen.mp3"
                 }
               ]
             },
@@ -110,19 +110,19 @@
               "LetterLocations": [
                 {
                   "Location": 0,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_I_in_Iltis_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_I_in_Iltis_kurz_oder_lang_gesprochen.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_O_in_Wolle_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_O_in_Wolle_kurz_oder_lang_gesprochen.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_U_in_Dutt_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_U_in_Dutt_kurz_oder_lang_gesprochen.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "ShortLongVowels/Wird_der_Selbstlaut_U_in_Nuss_kurz_oder_lang_gesprochen.mp3"
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_U_in_Nuss_kurz_oder_lang_gesprochen.mp3"
                 }
               ]
             }
@@ -146,7 +146,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Der_Baer.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Der_Baer.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Space, IRMGARD"
@@ -177,7 +177,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Die_Tuer.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Tuer.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Space, IRMGARD"
@@ -214,7 +214,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Die_Huete.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Huete.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Space, IRMGARD"
@@ -249,7 +249,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Die_Gaeste.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Gaeste.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Space, IRMGARD"
@@ -294,7 +294,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Die_Aepfel.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Aepfel.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Space, IRMGARD"
@@ -333,7 +333,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Die_Fluegel.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Fluegel.mp3"
                       }
                     ],
                     [
@@ -381,7 +381,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Der_Huegel.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Der_Huegel.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Space, IRMGARD"
@@ -420,11 +420,11 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Der_Buegel.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Der_Buegel.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Der_Huegel.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Der_Huegel.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -460,11 +460,11 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Der_Koenig.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Der_Koenig.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Der_Buegel.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Der_Buegel.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -506,7 +506,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Der_Loeffel.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Der_Loeffel.mp3"
                       }
                     ],
                     [
@@ -548,7 +548,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Die_Knoepfe.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Knoepfe.mp3"
                       }
                     ],
                     [
@@ -590,7 +590,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Der_Baecker.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Der_Baecker.mp3"
                       }
                     ],
                     [
@@ -632,11 +632,11 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Die_Kaelte.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Kaelte.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "ObjectsWithDefArt/Der_Koenig.mp3"
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Der_Koenig.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -711,7 +711,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Sentences/Der_Junge_laeuft_in_den_Wald.mp3"
+                        "SoundPath": "L2_3/Sentences/Der_Junge_laeuft_in_den_Wald.mp3"
                       }
                     ],
                     [
@@ -745,7 +745,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Sentences/Der_Automat_ist_kaputt.mp3"
+                        "SoundPath": "L2_3/Sentences/Der_Automat_ist_kaputt.mp3"
                       }
                     ],
                     [
@@ -785,7 +785,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Sentences/Die_Frau_isst_gerne_Schokolade.mp3"
+                        "SoundPath": "L2_3/Sentences/Die_Frau_isst_gerne_Schokolade.mp3"
                       }
                     ],
                     [
@@ -819,7 +819,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Sentences/Ina_wartet_im_Auto.mp3"
+                        "SoundPath": "L2_3/Sentences/Ina_wartet_im_Auto.mp3"
                       }
                     ],
                     [
@@ -859,7 +859,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Sentences/Heute_regnet_es_viel.mp3"
+                        "SoundPath": "L2_3/Sentences/Heute_regnet_es_viel.mp3"
                       }
                     ],
                     [
@@ -893,7 +893,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Sentences/Die_Leute_gehen_in_die_Oper.mp3"
+                        "SoundPath": "L2_3/Sentences/Die_Leute_gehen_in_die_Oper.mp3"
                       }
                     ],
                     [
@@ -933,7 +933,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Sentences/Die_Haeuser_sind_nass.mp3"
+                        "SoundPath": "L2_3/Sentences/Die_Haeuser_sind_nass.mp3"
                       }
                     ],
                     [
@@ -967,7 +967,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Sentences/Das_Feuer_brennt_im_Kamin.mp3"
+                        "SoundPath": "L2_3/Sentences/Das_Feuer_brennt_im_Kamin.mp3"
                       }
                     ],
                     [
@@ -1001,7 +1001,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Sentences/Der_Zaun_ist_weisz.mp3"
+                        "SoundPath": "L2_3/Sentences/Der_Zaun_ist_weisz.mp3"
                       }
                     ],
                     [
@@ -1041,7 +1041,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Sentences/Das_Unkraut_nervt.mp3"
+                        "SoundPath": "L2_3/Sentences/Das_Unkraut_nervt.mp3"
                       }
                     ],
                     [
@@ -1078,7 +1078,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Sentences/Das_Haus_wird_gebaut.mp3"
+                        "SoundPath": "L2_3/Sentences/Das_Haus_wird_gebaut.mp3"
                       }
                     ],
                     [
@@ -1112,7 +1112,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Sentences/Theo_und_Matthias_raufen.mp3"
+                        "SoundPath": "L2_3/Sentences/Theo_und_Matthias_raufen.mp3"
                       }
                     ],
                     [
@@ -1774,7 +1774,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Sentences/Der_Junge_rennt.mp3"
+                        "SoundPath": "L2_3/Sentences/Der_Junge_rennt.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -1805,7 +1805,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Sentences/Leo_malt_Bilder.mp3"
+                        "SoundPath": "L2_3/Sentences/Leo_malt_Bilder.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -1842,7 +1842,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Sentences/Ina_mag_Melone.mp3"
+                        "SoundPath": "L2_3/Sentences/Ina_mag_Melone.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -1873,7 +1873,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Sentences/Die_Zitronen_sind_gelb.mp3"
+                        "SoundPath": "L2_3/Sentences/Die_Zitronen_sind_gelb.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -1915,7 +1915,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Sentences/Das_Kamel_rennt.mp3"
+                        "SoundPath": "L2_3/Sentences/Das_Kamel_rennt.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -1946,7 +1946,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Sentences/Das_Bett_ist_hart.mp3"
+                        "SoundPath": "L2_3/Sentences/Das_Bett_ist_hart.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -1985,7 +1985,7 @@
     {
       "Name": "2: Nomen",
       "Color": "#aec2c4",
-      "VideoPath": "Videos/L3M2.mp4",
+      "VideoPath": "Videos/L3/L3M2.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
@@ -2006,7 +2006,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Erbschaft.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Erbschaft.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2016,7 +2016,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "schaft",
-                        "SoundPath": "NounSuffix/schaft.mp3"
+                        "SoundPath": "L3/NounSuffix/schaft.mp3"
                       }
                     ]
                   ]
@@ -2027,7 +2027,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Mehrheit.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Mehrheit.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2037,7 +2037,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "heit",
-                        "SoundPath": "NounSuffix/heit.mp3"
+                        "SoundPath": "L3/NounSuffix/heit.mp3"
                       }
                     ]
                   ]
@@ -2048,7 +2048,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Finsternis.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Finsternis.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2058,7 +2058,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "nis",
-                        "SoundPath": "NounSuffix/nis.mp3"
+                        "SoundPath": "L3/NounSuffix/nis.mp3"
                       }
                     ]
                   ]
@@ -2069,7 +2069,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Erkenntnis.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Erkenntnis.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2079,7 +2079,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "nis",
-                        "SoundPath": "NounSuffix/nis.mp3"
+                        "SoundPath": "L3/NounSuffix/nis.mp3"
                       }
                     ]
                   ]
@@ -2096,7 +2096,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Bildung.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Bildung.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2106,7 +2106,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "ung",
-                        "SoundPath": "NounSuffix/ung.mp3"
+                        "SoundPath": "L3/NounSuffix/ung.mp3"
                       }
                     ]
                   ]
@@ -2117,7 +2117,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Warnung.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Warnung.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2127,7 +2127,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "ung",
-                        "SoundPath": "NounSuffix/ung.mp3"
+                        "SoundPath": "L3/NounSuffix/ung.mp3"
                       }
                     ]
                   ]
@@ -2138,7 +2138,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Beamtentum.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Beamtentum.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2148,7 +2148,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "tum",
-                        "SoundPath": "NounSuffix/tum.mp3"
+                        "SoundPath": "L3/NounSuffix/tum.mp3"
                       }
                     ]
                   ]
@@ -2159,7 +2159,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Reichtum.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Reichtum.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2169,7 +2169,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "tum",
-                        "SoundPath": "NounSuffix/tum.mp3"
+                        "SoundPath": "L3/NounSuffix/tum.mp3"
                       }
                     ]
                   ]
@@ -2186,7 +2186,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Freundschaft.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Freundschaft.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2196,7 +2196,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "schaft",
-                        "SoundPath": "NounSuffix/schaft.mp3"
+                        "SoundPath": "L3/NounSuffix/schaft.mp3"
                       }
                     ]
                   ]
@@ -2207,7 +2207,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Haltung.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Haltung.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2217,7 +2217,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "ung",
-                        "SoundPath": "NounSuffix/ung.mp3"
+                        "SoundPath": "L3/NounSuffix/ung.mp3"
                       }
                     ]
                   ]
@@ -2228,7 +2228,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Brandung.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Brandung.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2238,7 +2238,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "ung",
-                        "SoundPath": "NounSuffix/ung.mp3"
+                        "SoundPath": "L3/NounSuffix/ung.mp3"
                       }
                     ]
                   ]
@@ -2249,7 +2249,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Berichtigung.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Berichtigung.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2259,7 +2259,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "ung",
-                        "SoundPath": "NounSuffix/ung.mp3"
+                        "SoundPath": "L3/NounSuffix/ung.mp3"
                       }
                     ]
                   ]
@@ -2276,7 +2276,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Feindschaft.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Feindschaft.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2286,7 +2286,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "schaft",
-                        "SoundPath": "NounSuffix/schaft.mp3"
+                        "SoundPath": "L3/NounSuffix/schaft.mp3"
                       }
                     ]
                   ]
@@ -2297,7 +2297,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Erkenntnis.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Erkenntnis.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2307,7 +2307,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "nis",
-                        "SoundPath": "NounSuffix/nis.mp3"
+                        "SoundPath": "L3/NounSuffix/nis.mp3"
                       }
                     ]
                   ]
@@ -2318,7 +2318,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Verhaeltnis.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Verhaeltnis.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2328,7 +2328,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "nis",
-                        "SoundPath": "NounSuffix/nis.mp3"
+                        "SoundPath": "L3/NounSuffix/nis.mp3"
                       }
                     ]
                   ]
@@ -2339,7 +2339,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Trunkenheit.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Trunkenheit.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2349,7 +2349,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "heit",
-                        "SoundPath": "NounSuffix/heit.mp3"
+                        "SoundPath": "L3/NounSuffix/heit.mp3"
                       }
                     ]
                   ]
@@ -2366,7 +2366,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Bescheidenheit.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Bescheidenheit.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2376,7 +2376,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "heit",
-                        "SoundPath": "NounSuffix/heit.mp3"
+                        "SoundPath": "L3/NounSuffix/heit.mp3"
                       }
                     ]
                   ]
@@ -2387,7 +2387,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Fluessigkeit.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Fluessigkeit.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2397,7 +2397,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "keit",
-                        "SoundPath": "NounSuffix/keit.mp3"
+                        "SoundPath": "L3/NounSuffix/keit.mp3"
                       }
                     ]
                   ]
@@ -2408,7 +2408,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Freundlichkeit.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Freundlichkeit.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2418,7 +2418,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "keit",
-                        "SoundPath": "NounSuffix/keit.mp3"
+                        "SoundPath": "L3/NounSuffix/keit.mp3"
                       }
                     ]
                   ]
@@ -2429,7 +2429,7 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
-                        "SoundPath": "Exercises/3-2-1/Fertigkeit.mp3"
+                        "SoundPath": "L3/Exercises/3-2-1/Fertigkeit.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -2439,7 +2439,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
                         "Text": "keit",
-                        "SoundPath": "NounSuffix/keit.mp3"
+                        "SoundPath": "L3/NounSuffix/keit.mp3"
                       }
                     ]
                   ]
@@ -2451,32 +2451,32 @@
             {
               "$type": "IRMGARD.Models.Word, IRMGARD",
               "Text": "heit",
-              "SoundPath": "NounSuffix/heit.mp3"
+              "SoundPath": "L3/NounSuffix/heit.mp3"
             },
             {
               "$type": "IRMGARD.Models.Word, IRMGARD",
               "Text": "keit",
-              "SoundPath": "NounSuffix/keit.mp3"
+              "SoundPath": "L3/NounSuffix/keit.mp3"
             },
             {
               "$type": "IRMGARD.Models.Word, IRMGARD",
               "Text": "nis",
-              "SoundPath": "NounSuffix/nis.mp3"
+              "SoundPath": "L3/NounSuffix/nis.mp3"
             },
             {
               "$type": "IRMGARD.Models.Word, IRMGARD",
               "Text": "schaft",
-              "SoundPath": "NounSuffix/schaft.mp3"
+              "SoundPath": "L3/NounSuffix/schaft.mp3"
             },
             {
               "$type": "IRMGARD.Models.Word, IRMGARD",
               "Text": "tum",
-              "SoundPath": "NounSuffix/tum.mp3"
+              "SoundPath": "L3/NounSuffix/tum.mp3"
             },
             {
               "$type": "IRMGARD.Models.Word, IRMGARD",
               "Text": "ung",
-              "SoundPath": "NounSuffix/ung.mp3"
+              "SoundPath": "L3/NounSuffix/ung.mp3"
             }
           ]
         },
@@ -2506,15 +2506,15 @@
               "LetterLocations": [
                 {
                   "Location": 1,
-                  "SoundPath": "Exercises/3-2-2/durstig.mp3"
+                  "SoundPath": "L3_4/Exercises/3-2-2/durstig.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Exercises/3-2-2/essen.mp3"
+                  "SoundPath": "L3_4/Exercises/3-2-2/essen.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "Exercises/3-2-2/gelb.mp3"
+                  "SoundPath": "L3_4/Exercises/3-2-2/gelb.mp3"
                 }
               ]
             },
@@ -2524,15 +2524,15 @@
               "LetterLocations": [
                 {
                   "Location": 1,
-                  "SoundPath": "Exercises/3-2-2/gruen.mp3"
+                  "SoundPath": "L3_4/Exercises/3-2-2/gruen.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Exercises/3-2-2/lernen.mp3"
+                  "SoundPath": "L3_4/Exercises/3-2-2/lernen.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Exercises/3-2-2/lesen.mp3"
+                  "SoundPath": "L3_4/Exercises/3-2-2/lesen.mp3"
                 }
               ]
             },
@@ -2542,15 +2542,15 @@
               "LetterLocations": [
                 {
                   "Location": 1,
-                  "SoundPath": "Exercises/3-2-2/lieb.mp3"
+                  "SoundPath": "L3_4/Exercises/3-2-2/lieb.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "Exercises/3-2-2/rot.mp3"
+                  "SoundPath": "L3_4/Exercises/3-2-2/rot.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Exercises/3-2-2/rufen.mp3"
+                  "SoundPath": "L3_4/Exercises/3-2-2/rufen.mp3"
                 }
               ]
             },
@@ -2560,15 +2560,15 @@
               "LetterLocations": [
                 {
                   "Location": 1,
-                  "SoundPath": "Exercises/3-2-2/satt.mp3"
+                  "SoundPath": "L3_4/Exercises/3-2-2/satt.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Exercises/3-2-2/schlafen.mp3"
+                  "SoundPath": "L3_4/Exercises/3-2-2/schlafen.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "Exercises/3-2-2/schoen.mp3"
+                  "SoundPath": "L3_4/Exercises/3-2-2/schoen.mp3"
                 }
               ]
             },
@@ -2578,11 +2578,11 @@
               "LetterLocations": [
                 {
                   "Location": 0,
-                  "SoundPath": "Exercises/3-2-2/schreiben.mp3"
+                  "SoundPath": "L3_4/Exercises/3-2-2/schreiben.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "Exercises/3-2-2/traurig.mp3"
+                  "SoundPath": "L3_4/Exercises/3-2-2/traurig.mp3"
                 }
               ]
             }
@@ -3021,7 +3021,7 @@
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
                         "ActivateOnMistake": true,
-                        "SoundPath": "Exercises/3-2-4/Das_Nasenbein.mp3"
+                        "SoundPath": "L3/Exercises/3-2-4/Das_Nasenbein.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3064,7 +3064,7 @@
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
                         "ActivateOnMistake": true,
-                        "SoundPath": "Exercises/3-2-4/Der_Vogelkaefig.mp3"
+                        "SoundPath": "L3/Exercises/3-2-4/Der_Vogelkaefig.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3113,7 +3113,7 @@
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
                         "ActivateOnMistake": true,
-                        "SoundPath": "Exercises/3-2-4/Die_Hauswand.mp3"
+                        "SoundPath": "L3/Exercises/3-2-4/Die_Hauswand.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3156,7 +3156,7 @@
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
                         "ActivateOnMistake": true,
-                        "SoundPath": "Exercises/3-2-4/Die_Telefonstimme.mp3"
+                        "SoundPath": "L3/Exercises/3-2-4/Die_Telefonstimme.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3199,7 +3199,7 @@
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
                         "ActivateOnMistake": true,
-                        "SoundPath": "Exercises/3-2-4/Die_Hausmusik.mp3"
+                        "SoundPath": "L3/Exercises/3-2-4/Die_Hausmusik.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3248,7 +3248,7 @@
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
                         "ActivateOnMistake": true,
-                        "SoundPath": "Exercises/3-2-4/Das_Katzenklo.mp3"
+                        "SoundPath": "L3/Exercises/3-2-4/Das_Katzenklo.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3291,7 +3291,7 @@
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
                         "ActivateOnMistake": true,
-                        "SoundPath": "Exercises/3-2-4/Der_Baumstamm.mp3"
+                        "SoundPath": "L3/Exercises/3-2-4/Der_Baumstamm.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3340,7 +3340,7 @@
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
                         "ActivateOnMistake": true,
-                        "SoundPath": "Exercises/3-2-4/Der_Lampenschirm.mp3"
+                        "SoundPath": "L3/Exercises/3-2-4/Der_Lampenschirm.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3383,7 +3383,7 @@
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
                         "ActivateOnMistake": true,
-                        "SoundPath": "Exercises/3-2-4/Der_Holzschrank.mp3"
+                        "SoundPath": "L3/Exercises/3-2-4/Der_Holzschrank.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3432,7 +3432,7 @@
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
                         "ActivateOnMistake": true,
-                        "SoundPath": "Exercises/3-2-4/Die_Milchkanne.mp3"
+                        "SoundPath": "L3/Exercises/3-2-4/Die_Milchkanne.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3475,7 +3475,7 @@
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "ActivateOnSuccess": true,
                         "ActivateOnMistake": true,
-                        "SoundPath": "Exercises/3-2-4/Das_Tischtuch.mp3"
+                        "SoundPath": "L3/Exercises/3-2-4/Das_Tischtuch.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3534,7 +3534,7 @@
     {
       "Name": "3: Verben",
       "Color": "#d8cad0",
-      "VideoPath": "Videos/L3M3.mp4",
+      "VideoPath": "Videos/L3/L3M3.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
@@ -3937,19 +3937,19 @@
               "LetterLocations": [
                 {
                   "Location": 0,
-                  "SoundPath": "Verbs/tanzen.mp3"
+                  "SoundPath": "L3_4/Verbs/tanzen.mp3"
                 },
                 {
                   "Location": 2,
-                  "SoundPath": "Verbs/rudern.mp3"
+                  "SoundPath": "L3_4/Verbs/rudern.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "Verbs/klingeln.mp3"
+                  "SoundPath": "L3_4/Verbs/klingeln.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Verbs/weinen.mp3"
+                  "SoundPath": "L3_4/Verbs/weinen.mp3"
                 }
               ]
             },
@@ -3959,15 +3959,15 @@
               "LetterLocations": [
                 {
                   "Location": 0,
-                  "SoundPath": "Verbs/arbeiten.mp3"
+                  "SoundPath": "L3_4/Verbs/arbeiten.mp3"
                 },
                 {
                   "Location": 2,
-                  "SoundPath": "Verbs/saeubern.mp3"
+                  "SoundPath": "L3_4/Verbs/saeubern.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "Verbs/wuerfeln.mp3"
+                  "SoundPath": "L3_4/Verbs/wuerfeln.mp3"
                 }
               ]
             },
@@ -3977,15 +3977,15 @@
               "LetterLocations": [
                 {
                   "Location": 0,
-                  "SoundPath": "Verbs/stricken.mp3"
+                  "SoundPath": "L3_4/Verbs/stricken.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "Verbs/humpeln.mp3"
+                  "SoundPath": "L3_4/Verbs/humpeln.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "Verbs/betteln.mp3"
+                  "SoundPath": "L3_4/Verbs/betteln.mp3"
                 }
               ]
             },
@@ -3995,15 +3995,15 @@
               "LetterLocations": [
                 {
                   "Location": 1,
-                  "SoundPath": "Verbs/segeln.mp3"
+                  "SoundPath": "L3_4/Verbs/segeln.mp3"
                 },
                 {
                   "Location": 2,
-                  "SoundPath": "Verbs/aergern.mp3"
+                  "SoundPath": "L3_4/Verbs/aergern.mp3"
                 },
                 {
                   "Location": 0,
-                  "SoundPath": "Verbs/lachen.mp3"
+                  "SoundPath": "L3_4/Verbs/lachen.mp3"
                 }
               ]
             },
@@ -4013,15 +4013,15 @@
               "LetterLocations": [
                 {
                   "Location": 2,
-                  "SoundPath": "Verbs/meckern.mp3"
+                  "SoundPath": "L3_4/Verbs/meckern.mp3"
                 },
                 {
                   "Location": 1,
-                  "SoundPath": "Verbs/wickeln.mp3"
+                  "SoundPath": "L3_4/Verbs/wickeln.mp3"
                 },
                 {
                   "Location": 2,
-                  "SoundPath": "Verbs/haemmern.mp3"
+                  "SoundPath": "L3_4/Verbs/haemmern.mp3"
                 }
               ]
             }
@@ -4048,7 +4048,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Verbs/tanzen.mp3"
+                        "SoundPath": "L3_4/Verbs/tanzen.mp3"
                       }
                     ],
                     [
@@ -4110,7 +4110,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Verbs/weinen.mp3"
+                        "SoundPath": "L3_4/Verbs/weinen.mp3"
                       }
                     ],
                     [
@@ -4178,7 +4178,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Verbs/rudern.mp3"
+                        "SoundPath": "L3_4/Verbs/rudern.mp3"
                       }
                     ],
                     [
@@ -4246,7 +4246,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Verbs/lachen.mp3"
+                        "SoundPath": "L3_4/Verbs/lachen.mp3"
                       }
                     ],
                     [
@@ -4314,7 +4314,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Verbs/arbeiten.mp3"
+                        "SoundPath": "L3_4/Verbs/arbeiten.mp3"
                       }
                     ],
                     [
@@ -4396,7 +4396,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Verbs/saeubern.mp3"
+                        "SoundPath": "L3_4/Verbs/saeubern.mp3"
                       }
                     ],
                     [
@@ -4479,7 +4479,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Verbs/tanzen.mp3"
+                        "SoundPath": "L3_4/Verbs/tanzen.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Space, IRMGARD"
@@ -4502,7 +4502,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Verbs/lachen.mp3"
+                        "SoundPath": "L3_4/Verbs/lachen.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Space, IRMGARD"
@@ -4531,7 +4531,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Verbs/rudern.mp3"
+                        "SoundPath": "L3_4/Verbs/rudern.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Space, IRMGARD"
@@ -4560,7 +4560,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Verbs/weinen.mp3"
+                        "SoundPath": "L3_4/Verbs/weinen.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Space, IRMGARD"
@@ -4589,7 +4589,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Verbs/arbeiten.mp3"
+                        "SoundPath": "L3_4/Verbs/arbeiten.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Space, IRMGARD"
@@ -4618,7 +4618,7 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "Verbs/saeubern.mp3"
+                        "SoundPath": "L3_4/Verbs/saeubern.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Space, IRMGARD"
@@ -4640,7 +4640,7 @@
     {
       "Name": "4: Konjugieren",
       "Color": "#c1caad",
-      "VideoPath": "Videos/L3M4.mp4",
+      "VideoPath": "Videos/L3/L3M4.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
@@ -4831,7 +4831,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "arbeitest",
-                        "SoundPath": "Verbs/arbeitest.mp3"
+                        "SoundPath": "L3_4/Verbs/arbeitest.mp3"
                       }
                     ]
                   ]
@@ -4947,7 +4947,7 @@
     {
       "Name": "5: Zeiten",
       "Color": "#dbcf93",
-      "VideoPath": "Videos/L3M5.mp4",
+      "VideoPath": "Videos/L3/L3M5.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.InputConcept, IRMGARD",
@@ -5310,7 +5310,7 @@
               "LetterLocations": [
                 {
                   "Location": 2,
-                  "SoundPath": "Verbs/lachen.mp3"
+                  "SoundPath": "L3_4/Verbs/lachen.mp3"
                 }
               ]
             }
@@ -5562,7 +5562,7 @@
     {
       "Name": "6: EI",
       "Color": "#e5c8c4",
-      "VideoPath": "Videos/L3M6.mp4",
+      "VideoPath": "Videos/L3/L3M6.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.HearMe, IRMGARD",
@@ -5782,12 +5782,12 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/Reis.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/Reis.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/Eis.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/Eis.mp3"
                       }
                     ]
                   ]
@@ -5798,17 +5798,17 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/Eier.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/Eier.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/beissen.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/beissen.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/reissen.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/reissen.mp3"
                       }
                     ]
                   ]
@@ -5825,12 +5825,12 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/reisen.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/reisen.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/leise.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/leise.mp3"
                       }
                     ]
                   ]
@@ -5841,12 +5841,12 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/einsam.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/einsam.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/mein.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/mein.mp3"
                       }
                     ]
                   ]
@@ -5857,17 +5857,17 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/dein.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/dein.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/sein.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/sein.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/einfach.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/einfach.mp3"
                       }
                     ]
                   ]
@@ -5884,12 +5884,12 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/Eintopf.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/Eintopf.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/Einhorn.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/Einhorn.mp3"
                       }
                     ]
                   ]
@@ -5900,12 +5900,12 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/Zeit.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/Zeit.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/Zeitung.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/Zeitung.mp3"
                       }
                     ]
                   ]
@@ -5916,17 +5916,17 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/reiten.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/reiten.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/Reiter.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/Reiter.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "IsSolution": true,
-                        "SoundPath": "Exercises/3-6-3/Einzahl.mp3"
+                        "SoundPath": "L3/Exercises/3-6-3/Einzahl.mp3"
                       }
                     ]
                   ]
@@ -6160,7 +6160,7 @@
             "PersPronPlu": [
               {
                 "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                "SoundPath": "Exercises/3-6-5/klicke_alle_persoenlichen_fuerwoerter_mehrzahl.mp3"
+                "SoundPath": "L3/Exercises/3-6-5/klicke_alle_persoenlichen_fuerwoerter_mehrzahl.mp3"
               },
               {
                 "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -6178,7 +6178,7 @@
             "NounSing": [
               {
                 "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                "SoundPath": "Exercises/3-6-5/klicke_alle_nomen_einzahl.mp3"
+                "SoundPath": "L3/Exercises/3-6-5/klicke_alle_nomen_einzahl.mp3"
               },
               {
                 "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -6212,7 +6212,7 @@
             "NounPlu": [
               {
                 "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                "SoundPath": "Exercises/3-6-5/klicke_alle_nomen_mehrzahl.mp3"
+                "SoundPath": "L3/Exercises/3-6-5/klicke_alle_nomen_mehrzahl.mp3"
               },
               {
                 "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -6242,7 +6242,7 @@
             "VerbPres": [
               {
                 "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                "SoundPath": "Exercises/3-6-5/klicke_alle_verben_gegenwart.mp3"
+                "SoundPath": "L3/Exercises/3-6-5/klicke_alle_verben_gegenwart.mp3"
               },
               {
                 "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -6268,7 +6268,7 @@
             "VerbPast": [
               {
                 "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                "SoundPath": "Exercises/3-6-5/klicke_alle_verben_vergangenheit.mp3"
+                "SoundPath": "L3/Exercises/3-6-5/klicke_alle_verben_vergangenheit.mp3"
               },
               {
                 "$type": "IRMGARD.Models.Word, IRMGARD",
