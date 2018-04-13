@@ -15,7 +15,7 @@
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
-    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v8.1</TargetFrameworkVersion>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -495,6 +495,8 @@
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="packages.config" />
   </ItemGroup>
+
+  <!-- BEGIN of section to be disabled for level-specific testing -->
   <ItemGroup>
     <AndroidAsset Include="MainAssets\Sounds\Objects\Elefant.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Ofen.mp3" />
@@ -752,8 +754,58 @@
     <AndroidAsset Include="MainAssets\Sounds\Objects\Hund.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Kamel.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\Objects\Melone.mp3" />
-  </ItemGroup>
-  <ItemGroup>
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\A.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\a_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\B.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\b_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\C.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\c_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\D.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\d_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\E.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\e_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\F.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\f_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\G.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\g_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\H.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\h_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\I.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\i_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\J.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\j_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\K.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\k_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\L.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\l_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\M.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\m_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\N.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\n_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\O.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\o_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\P.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\p_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\Q.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\q_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\R.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\r_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\S.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\s_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\T.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\t_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\U.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\u_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\V.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\v_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\W.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\w_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\X.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\x_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\Y.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\y_1.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\Z.gif" />
+    <AndroidAsset Include="MainAssets\Images\L1\AnimLetters\z_1.gif" />
     <AndroidAsset Include="MainAssets\Videos\L1\L1M1.mp4" />
     <AndroidAsset Include="MainAssets\Videos\L1\L1M2.mp4" />
     <AndroidAsset Include="MainAssets\Videos\L1\L1M3.mp4" />
@@ -1086,8 +1138,6 @@
     <AndroidAsset Include="MainAssets\Sounds\L1\Syllables\LMNRS\un_lang.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L1\Syllables\LMNRS\ur_lang.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L1\Syllables\LMNRS\us_lang.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="MainAssets\Videos\L2\L2M1.mp4" />
     <AndroidAsset Include="MainAssets\Videos\L2\L2M2.mp4" />
     <AndroidAsset Include="MainAssets\Videos\L2\L2M3.mp4" />
@@ -1219,8 +1269,6 @@
     <AndroidAsset Include="MainAssets\Sounds\L2\SyllableWord\Vo_Voll.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L2\SyllableWord\Wa_Wall.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L2\SyllableWord\Wi_Will.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="MainAssets\Sounds\L2_3\Sentences\Das_Bett_ist_hart.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L2_3\Sentences\Das_Feuer_brennt_im_Kamin.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L2_3\Sentences\Das_Haus_wird_gebaut.mp3" />
@@ -1333,8 +1381,6 @@
     <AndroidAsset Include="MainAssets\Sounds\L2_3\ShortLongVowels\Wird_der_Selbstlaut_U_in_Mutter_kurz_oder_lang_gesprochen.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L2_3\ShortLongVowels\Wird_der_Selbstlaut_U_in_Nuss_kurz_oder_lang_gesprochen.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L2_3\ShortLongVowels\Wird_der_Selbstlaut_U_in_Rute_kurz_oder_lang_gesprochen.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="MainAssets\Videos\L3\L3M1.mp4" />
     <AndroidAsset Include="MainAssets\Videos\L3\L3M2.mp4" />
     <AndroidAsset Include="MainAssets\Videos\L3\L3M3.mp4" />
@@ -1412,27 +1458,22 @@
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_1_Aufgabe_5.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_1_Aufgabe_6.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_2_Aufgabe_1.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_2_Aufgabe_2.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_2_Aufgabe_3.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_2_Aufgabe_4.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_3_Aufgabe_1.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_3_Aufgabe_2.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_3_Aufgabe_3.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_3_Aufgabe_4.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_4_Aufgabe_1.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_4_Aufgabe_2.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_4_Aufgabe_3.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_4_Aufgabe_4.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_5_Aufgabe_1.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_5_Aufgabe_2.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_5_Aufgabe_3.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_5_Aufgabe_4.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_5_Aufgabe_5.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_5_Aufgabe_6.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_6_Aufgabe_1.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_6_Aufgabe_2.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_6_Aufgabe_3.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_6_Aufgabe_4.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\Intros\Level_3_Modul_6_Aufgabe_5.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\NounSuffix\heit.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\NounSuffix\keit.mp3" />
@@ -1442,6 +1483,11 @@
     <AndroidAsset Include="MainAssets\Sounds\L3\NounSuffix\ung.mp3" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Intros\Level_3_Modul_2_Aufgabe_2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Intros\Level_3_Modul_3_Aufgabe_2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Intros\Level_3_Modul_4_Aufgabe_3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Intros\Level_3_Modul_5_Aufgabe_6.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Intros\Level_3_Modul_6_Aufgabe_4.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Exercises\3-2-2\durstig.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Exercises\3-2-2\essen.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Exercises\3-2-2\gelb.mp3" />
@@ -1473,8 +1519,6 @@
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\weinen.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\wickeln.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\wuerfeln.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="MainAssets\Videos\L4\L4M1.mp4" />
     <AndroidAsset Include="MainAssets\Videos\L4\L4M2.mp4" />
     <AndroidAsset Include="MainAssets\Videos\L4\L4M3.mp4" />
@@ -1546,6 +1590,73 @@
     <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M6A2.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M6A3.mp3" />
   </ItemGroup>
+  <!-- END of section to be disabled for level-specific testing -->
+  
+  <!-- BEGIN of minimal required set of assets for level-specific test deployments -->
+  <ItemGroup>
+    <AndroidAsset Include="MainAssets\Sounds\Criticism\da_warst_du_nicht_ganz_konzentriert.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Criticism\das_stimmt_nicht.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Criticism\hmmm_versuch_es_spaeter_nocheinmal.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Criticism\leider_falsch.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Criticism\leider_nicht_alle_aufgaben_geloest1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Criticism\leider_nicht_alle_aufgaben_geloest2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Criticism\nicht_ganz_richtig.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Criticism\nicht_ganz_richtig2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Criticism\nicht_ganz1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Criticism\nicht_ganz2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Criticism\schade_du_hast_nicht.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Criticism\schade_du_hast_nicht2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Criticism\um_zum_naechsten_Modul_zu_kommen1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Criticism\um_zum_naechsten_Modul_zu_kommen2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Criticism\zwar_hast_du_nicht1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Criticism\zwar_hast_du_nicht2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Criticism\zwar_hast_du_nicht3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\ausgezeichnet1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\ausgezeichnet2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\ausgezeichnet3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\beeindruckend.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\das_laeuft_ja_super1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\das_laeuft_ja_super2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\du_kommst_gut_voran.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\du_kommst_gut_voran2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\es_scheint_ja_gut_zu_laufen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\gut1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\gut2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\gut3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\gut4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\hervorragend1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\hervorragend2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\hervorragend3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\klasse1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\klasse2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\klasse3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\klasse4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\klasse5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\nicht_schlecht1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\nicht_schlecht2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\nicht_schlecht3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\perfekt.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\perfekt2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\perfekt3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\perfekt4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\richtig_gut1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\richtig_gut2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\richtig_gut3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\sehr_gut1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\sehr_gut2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\sehr_gut3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\sehr_schoen.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\sehr_schoen2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\super1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\super2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\super3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\toll1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\toll2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\toll3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\weiter_so1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\Praise\weiter_so2.mp3" />
+    <AndroidAsset Include="MainAssets\Videos\IRMGARD_Intro.mp4" />
+  </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Images\Aal.png" />
     <AndroidAsset Include="Assets\Images\Aepfel.png" />
@@ -1554,58 +1665,6 @@
     <AndroidAsset Include="Assets\Images\Ahorn.png" />
     <AndroidAsset Include="Assets\Images\Ameise.png" />
     <AndroidAsset Include="Assets\Images\Ananas.png" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\A.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\a_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\B.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\b_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\C.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\c_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\D.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\d_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\E.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\e_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\F.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\f_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\G.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\g_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\H.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\h_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\I.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\i_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\J.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\j_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\K.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\k_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\L.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\l_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\M.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\m_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\N.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\n_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\O.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\o_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\P.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\p_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\Q.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\q_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\R.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\r_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\S.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\s_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\T.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\t_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\U.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\u_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\V.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\v_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\W.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\w_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\X.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\x_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\Y.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\y_1.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\Z.gif" />
-    <AndroidAsset Include="Assets\Images\AnimLetters\z_1.gif" />
     <AndroidAsset Include="Assets\Images\Apfel.png" />
     <AndroidAsset Include="Assets\Images\Apfel_blau.png" />
     <AndroidAsset Include="Assets\Images\Apfel_braun.png" />
@@ -1784,7 +1843,6 @@
     <AndroidAsset Include="Assets\Images\Zucker.png" />
     <AndroidAsset Include="Assets\Images\Zwiebel.png" />
     <AndroidAsset Include="Assets\Images\Zylinder.png" />
-    <AndroidAsset Include="Assets\Videos\IRMGARD_Intro.mp4" />
     <AndroidAsset Include="Assets\Images\braun.png" />
     <AndroidAsset Include="Assets\Images\blau.png" />
     <AndroidAsset Include="Assets\Images\gruen.png" />
@@ -1796,67 +1854,6 @@
     <AndroidAsset Include="Assets\Fonts\SIL Open Font License.txt" />
     <AndroidAsset Include="Assets\Images\dummy.png" />
     <AndroidAsset Include="Assets\Sounds\dummy.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\ausgezeichnet1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\ausgezeichnet2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\ausgezeichnet3.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\beeindruckend.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\das_laeuft_ja_super1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\das_laeuft_ja_super2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\du_kommst_gut_voran.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\du_kommst_gut_voran2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\es_scheint_ja_gut_zu_laufen.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\gut1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\gut2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\gut3.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\gut4.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\hervorragend1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\hervorragend2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\hervorragend3.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\klasse1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\klasse2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\klasse3.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\klasse4.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\klasse5.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\nicht_schlecht1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\nicht_schlecht2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\nicht_schlecht3.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\perfekt.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\perfekt2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\perfekt3.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\perfekt4.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\richtig_gut1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\richtig_gut2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\richtig_gut3.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\sehr_gut1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\sehr_gut2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\sehr_gut3.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\sehr_schoen.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\sehr_schoen2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\super1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\super2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\super3.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\toll1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\toll2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\toll3.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\weiter_so1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Praise\weiter_so2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Criticism\da_warst_du_nicht_ganz_konzentriert.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Criticism\das_stimmt_nicht.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Criticism\hmmm_versuch_es_spaeter_nocheinmal.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Criticism\leider_falsch.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Criticism\leider_nicht_alle_aufgaben_geloest1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Criticism\leider_nicht_alle_aufgaben_geloest2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Criticism\nicht_ganz_richtig.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Criticism\nicht_ganz_richtig2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Criticism\nicht_ganz1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Criticism\nicht_ganz2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Criticism\schade_du_hast_nicht.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Criticism\schade_du_hast_nicht2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Criticism\um_zum_naechsten_Modul_zu_kommen1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Criticism\um_zum_naechsten_Modul_zu_kommen2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Criticism\zwar_hast_du_nicht1.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Criticism\zwar_hast_du_nicht2.mp3" />
-    <AndroidAsset Include="Assets\Sounds\Criticism\zwar_hast_du_nicht3.mp3" />
     <AndroidAsset Include="Assets\common.json" />
     <AndroidAsset Include="Assets\level1.json" />
     <AndroidAsset Include="Assets\level2.json" />
@@ -1870,6 +1867,8 @@
     <AndroidAsset Include="Assets\sandbox.json" />
     <AndroidAsset Include="Assets\testlayout.json" />
   </ItemGroup>
+  <!-- END of minimal required set of assets for level-specific test deployments -->
+
   <ItemGroup>
     <ProjectReference Include="..\IRMGARD.Shared\IRMGARD.Shared.csproj">
       <Project>{7F96B7FB-44BF-48BF-893F-C381525B7113}</Project>
