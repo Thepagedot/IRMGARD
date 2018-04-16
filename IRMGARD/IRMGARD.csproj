@@ -55,18 +55,6 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml" />
-    <Reference Include="ExpansionDownloader, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DotNetDevAddict.Android.ExpansionDownloader.1.1.1\lib\MonoAndroid4.0\ExpansionDownloader.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="LicenseVerificationLibrary, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DotNetDevAddict.Android.LicenseVerificationLibrary.1.1.1\lib\MonoAndroid2.3\LicenseVerificationLibrary.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="System.IO.Compression.Zip, Version=1.1.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DotNetDevAddict.Android.ExpansionDownloader.1.1.1\lib\MonoAndroid4.0\System.IO.Compression.Zip.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Refractored.GifImageView">
       <HintPath>..\packages\Refractored.GifImageView.2.0.0\lib\monoandroid\Refractored.GifImageView.dll</HintPath>
       <Private>True</Private>
@@ -130,6 +118,15 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Android.Vending.Licensing">
+      <HintPath>..\packages\Xamarin.Google.Android.Vending.Licensing.2.0.0\lib\MonoAndroid\Google.Android.Vending.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Android.Vending.Expansion.ZipFile">
+      <HintPath>..\packages\Xamarin.Google.Android.Vending.Expansion.ZipFile.2.0.0\lib\MonoAndroid\Google.Android.Vending.Expansion.ZipFile.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Android.Vending.Expansion.Downloader">
+      <HintPath>..\packages\Xamarin.Google.Android.Vending.Expansion.Downloader.2.0.0\lib\MonoAndroid\Google.Android.Vending.Expansion.Downloader.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
