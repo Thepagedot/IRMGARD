@@ -263,14 +263,6 @@ namespace IRMGARD
             this.useObbDownloader.Visibility = ViewStates.Gone;
         }
 
-        private void DoGetExpansionFiles()
-        {
-            if (!this.GetExpansionFiles())
-            {
-                this.InitializeDownloadUi();
-            }
-        }
-
         /// <summary>
         /// Go through each of the Expansion APK files defined in the project
         /// and determine if the files are present and match the required size.
@@ -480,13 +472,13 @@ namespace IRMGARD
         /// <param name="handler">
         /// The handler.
         /// </param>
-        private void OnUpdateValidationUi(ZipFileValidationHandler handler)
-        {
-            var info = new DownloadProgressInfo(
-                handler.TotalBytes, handler.CurrentBytes, handler.TimeRemaining, handler.AverageSpeed);
+        // private void OnUpdateValidationUi(ZipFileValidationHandler handler)
+        // {
+        //     var info = new DownloadProgressInfo(
+        //         handler.TotalBytes, handler.CurrentBytes, handler.TimeRemaining, handler.AverageSpeed);
 
-            this.RunOnUiThread(() => this.OnDownloadProgress(info));
-        }
+        //     this.RunOnUiThread(() => this.OnDownloadProgress(info));
+        // }
 
         /// <summary>
         /// Update the pause button.
@@ -529,7 +521,7 @@ namespace IRMGARD
         private void DownloaderOnResume()
         {
             /// Re-connect the stub to our service on resume.
-            if (Env.Release && this.downloaderServiceConnection != null)
+            if (Env.UseOBB && this.downloaderServiceConnection != null)
             {
                 this.downloaderServiceConnection.Connect(this);
             }
@@ -538,7 +530,7 @@ namespace IRMGARD
         private void DownloaderOnStop()
         {
             /// Disconnect the stub from our service on stop.
-            if (Env.Release && this.downloaderServiceConnection != null)
+            if (Env.UseOBB && this.downloaderServiceConnection != null)
             {
                 this.downloaderServiceConnection.Disconnect(this);
             }
@@ -546,7 +538,7 @@ namespace IRMGARD
 
         private void DownloaderOnDestroy()
         {
-            // if (Env.Release && this.zipFileValidationHandler != null)
+            // if (Env.UseOBB && this.zipFileValidationHandler != null)
             // {
             //     this.zipFileValidationHandler.ShouldCancel = true;
             // }

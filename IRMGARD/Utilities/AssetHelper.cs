@@ -96,7 +96,7 @@ namespace IRMGARD
                 filePaths = new List<string>();
                 foreach (var zipFileEntry in zipResourceFile.GetAllEntries())
                 {
-                    filePaths.Add(zipFileEntry.ZipFileName);
+                    filePaths.Add(zipFileEntry.MFileName);
                 }
             }
 

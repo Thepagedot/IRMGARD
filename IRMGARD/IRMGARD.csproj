@@ -1851,18 +1851,18 @@
     <AndroidAsset Include="Assets\Fonts\SIL Open Font License.txt" />
     <AndroidAsset Include="Assets\Images\dummy.png" />
     <AndroidAsset Include="Assets\Sounds\dummy.mp3" />
-    <AndroidAsset Include="Assets\common.json" />
-    <AndroidAsset Include="Assets\level1.json" />
-    <AndroidAsset Include="Assets\level2.json" />
-    <AndroidAsset Include="Assets\level3.json" />
-    <AndroidAsset Include="Assets\level4.json" />
-    <AndroidAsset Include="Assets\level5.json" />
-    <AndroidAsset Include="Assets\level6.json" />
-    <AndroidAsset Include="Assets\level7.json" />
-    <AndroidAsset Include="Assets\level8.json" />
-    <AndroidAsset Include="Assets\level9.json" />
-    <AndroidAsset Include="Assets\sandbox.json" />
-    <AndroidAsset Include="Assets\testlayout.json" />
+    <AndroidAsset Include="Assets\Config\common.json" />
+    <AndroidAsset Include="Assets\Config\level1.json" />
+    <AndroidAsset Include="Assets\Config\level2.json" />
+    <AndroidAsset Include="Assets\Config\level3.json" />
+    <AndroidAsset Include="Assets\Config\level4.json" />
+    <AndroidAsset Include="Assets\Config\level5.json" />
+    <AndroidAsset Include="Assets\Config\level6.json" />
+    <AndroidAsset Include="Assets\Config\level7.json" />
+    <AndroidAsset Include="Assets\Config\level8.json" />
+    <AndroidAsset Include="Assets\Config\level9.json" />
+    <AndroidAsset Include="Assets\Config\sandbox.json" />
+    <AndroidAsset Include="Assets\Config\testlayout.json" />
   </ItemGroup>
   <!-- END of minimal required set of assets for level-specific test deployments -->
 
@@ -1907,7 +1907,7 @@
   <Target Name="CreateOBBs">
     <ItemGroup>
       <MainAssetsFiles Include="MainAssets\**\*.*" />
-      <PatchAssetsFiles Include="Assets\**\*.*" Exclude="Assets\AboutAssets.txt;Assets\one_original.json;Assets\sandbox.json;Assets\testlayout.json" />
+      <PatchAssetsFiles Include="Assets\**\*.*" Exclude="Assets\AboutAssets.txt;Assets\Config\sandbox.json;Assets\Config\testlayout.json" />
     </ItemGroup>
     <Message Text="Creating OBBs..." />
     <XmlRead Prefix="n" Namespace="http://schemas.android.com/apk/res/android" XPath="/manifest/application/meta-data[@n:name='obbMainVersionCode']/@n:value" XmlFileName="Properties\AndroidManifest.xml">

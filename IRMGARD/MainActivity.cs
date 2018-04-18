@@ -55,14 +55,11 @@ namespace IRMGARD
             AssetHelper.CreateInstance(BaseContext, ai.MetaData.GetInt("obbMainVersionCode"), ai.MetaData.GetInt("obbPatchVersionCode"));
             if (!AssetHelper.Instance.IsValid())
             {
-                if (Env.Release)
+                if (Env.UseOBB)
                 {
-                    DoGetExpansionFiles();
-                    return;
-                }
-                else
-                {
-                    throw new FileNotFoundException("Expansion file(s) not valid!");
+                    if (this.GetExpansionFiles()) {
+                        return;
+                    }
                 }
             }
 
@@ -70,18 +67,18 @@ namespace IRMGARD
             if (DataHolder.Current == null)
             {
                 DataHolder.Current = new DataHolder();
-                await DataHolder.Current.LoadCommonAsync();
+                DataHolder.Current.LoadCommon();
 
                 // Load levels from JSON
-                await DataHolder.Current.LoadLevelAsync(1);
-                await DataHolder.Current.LoadLevelAsync(2);
-                await DataHolder.Current.LoadLevelAsync(3);
-                await DataHolder.Current.LoadLevelAsync(4);
-                await DataHolder.Current.LoadLevelAsync(5);
-                await DataHolder.Current.LoadLevelAsync(6);
-                await DataHolder.Current.LoadLevelAsync(7);
-                await DataHolder.Current.LoadLevelAsync(8);
-                await DataHolder.Current.LoadLevelAsync(9);
+                DataHolder.Current.LoadLevel(1);
+                DataHolder.Current.LoadLevel(2);
+                DataHolder.Current.LoadLevel(3);
+                DataHolder.Current.LoadLevel(4);
+                DataHolder.Current.LoadLevel(5);
+                DataHolder.Current.LoadLevel(6);
+                DataHolder.Current.LoadLevel(7);
+                DataHolder.Current.LoadLevel(8);
+                DataHolder.Current.LoadLevel(9);
 
                 //await DataHolder.Current.LoadLevelAsync(-1);
 
@@ -98,7 +95,7 @@ namespace IRMGARD
 
         private async Task CreateApp()
         {
-            if (Env.Release)
+            if (Env.UseOBB)
             {
                 // Before we do anything, are the files we expect already here and
                 // delivered (presumably by Market)
@@ -114,7 +111,7 @@ namespace IRMGARD
                 else
                 {
                     initText.Visibility = ViewStates.Gone;
-                    DoGetExpansionFiles();
+                    this.GetExpansionFiles();
                 }
             }
             else

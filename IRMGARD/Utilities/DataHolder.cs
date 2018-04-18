@@ -31,16 +31,16 @@ namespace IRMGARD
 			Current = this;
 		}
 
-		public async Task LoadLevelAsync(int levelNumber)
+		public void LoadLevel(int levelNumber)
 		{
-            var level = await LocalStorage.LoadLevelAsync(levelNumber);
+            var level = LocalStorage.LoadLevel(levelNumber);
             if (level != null)
                 Levels.Add(level);
 		}
 
-        public async Task LoadCommonAsync()
+        public void LoadCommon()
         {
-            Common = await LocalStorage.LoadCommonAsync();
+            Common = LocalStorage.LoadCommon();
         }
 
         public async Task SaveProgressAsync()

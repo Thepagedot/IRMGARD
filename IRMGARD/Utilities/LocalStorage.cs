@@ -18,48 +18,39 @@ namespace IRMGARD.Utilities
 {
     public static class LocalStorage
     {
+        public const string JSONConfigFilesDir = "Config/";
+
         private static JsonSerializerSettings _JsonSettings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All };
 
         public static object Levels { get; private set; }
 
-        public static async Task<Level> LoadLevelAsync(int levelNumber)
+        public static Level LoadLevel(int levelNumber)
         {
-            var fileName = "level" + levelNumber + ".json";
+            var fileName = JSONConfigFilesDir + "level" + levelNumber + ".json";
             if (levelNumber == -1)
-                fileName = "sandbox.json";      // A single lesson to test separately
+                fileName = JSONConfigFilesDir + "sandbox.json";      // A single lesson to test separately
             else if (levelNumber == -2)
-                fileName = "testlayout.json";   // Lessons to test for different display sizes
+                fileName = JSONConfigFilesDir + "testlayout.json";   // Lessons to test for different display sizes
 
-            return await LoadFromJsonAsync<Level>(fileName);
+            return LoadFromJson<Level>(fileName);
         }
 
-        public static async Task<Common> LoadCommonAsync()
+        public static Common LoadCommon()
         {
-            return await LoadFromJsonAsync<Common>("common.json");
+            return LoadFromJson<Common>(JSONConfigFilesDir + "common.json");
         }
 
-        static async Task<T> LoadFromJsonAsync<T>(string fileName)
+        static T LoadFromJson<T>(string fileName)
         {
             using (var stream = AssetHelper.Instance.Open(fileName))
             {
                 try
                 {
-                    if (Env.UseOBB)
+                    using (var reader = new StreamReader(stream))
                     {
-                        // Since last Xamarin update the use of StreamReader for zipped files leads to performance issues
-                        var bytes = new byte[stream.Length];
-                        await stream.ReadAsync(bytes, 0, bytes.Length);
-                        var json = JObject.Parse(System.Text.Encoding.UTF8.GetString(bytes));
+                        var jsonContent = reader.ReadToEnd();
+                        var json = JObject.Parse(jsonContent);
                         return JsonConvert.DeserializeObject<T>(json.ToString(), _JsonSettings);
-                    }
-                    else
-                    {
-                        using (var reader = new StreamReader(stream))
-                        {
-                            var jsonContent = await reader.ReadToEndAsync();
-                            var json = JObject.Parse(jsonContent);
-                            return JsonConvert.DeserializeObject<T>(json.ToString(), _JsonSettings);
-                        }
                     }
                 }
                 catch (Exception ex)
