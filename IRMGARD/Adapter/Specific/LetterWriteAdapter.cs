@@ -31,23 +31,23 @@ namespace IRMGARD
             {
                 using (var stream = AssetHelper.Instance.Open(item.Path))
                 {
-                    if (Env.UseOBB)
+                    try
                     {
-                        // TODO Verify memory dealloc of gifBytes
-                        byte[] gifBytes = new byte[stream.Length];
-                        stream.Read(gifBytes, 0, gifBytes.Length);
-                        gifImageView.SetBytes(gifBytes);
-                    }
-                    else
-                    {
-                        var streamReader = new StreamReader(stream);
-                        var bytes = default(byte[]);
-                        using (var memoryStream = new MemoryStream())
+                        using (var reader = new StreamReader(stream))
                         {
-                            streamReader.BaseStream.CopyTo(memoryStream);
-                            bytes = memoryStream.ToArray();
-                            gifImageView.SetBytes(bytes);
+                            var bytes = default(byte[]);
+                            using (var memoryStream = new MemoryStream())
+                            {
+                                reader.BaseStream.CopyTo(memoryStream);
+                                bytes = memoryStream.ToArray();
+                                gifImageView.SetBytes(bytes);
+                            }
                         }
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("JSON reader Exception on reading {0}!", item.Path);
+                        Console.WriteLine("Message: {0}", ex.Message);
                     }
                 }
             }
