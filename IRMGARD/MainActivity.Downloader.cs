@@ -1,6 +1,5 @@
 using System;
 using System.IO;
-using System.IO.Compression.Zip;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
@@ -13,10 +12,7 @@ using Android.Provider;
 using Android.Views;
 using Android.Widget;
 
-using ExpansionDownloader;
-using ExpansionDownloader.Client;
-using ExpansionDownloader.Database;
-using ExpansionDownloader.Service;
+using Google.Android.Vending.Expansion.Downloader;
 
 namespace IRMGARD
 {
@@ -37,17 +33,12 @@ namespace IRMGARD
         /// <summary>
         /// The downloader state.
         /// </summary>
-        private DownloaderState downloaderState;
+        private DownloaderClientState downloaderClientState;
 
         /// <summary>
         /// The is paused.
         /// </summary>
         private bool isPaused;
-
-        /// <summary>
-        /// The zip file validation handler.
-        /// </summary>
-        private ZipFileValidationHandler zipFileValidationHandler;
 
         #endregion
 
@@ -144,12 +135,12 @@ namespace IRMGARD
         /// <param name="newState">
         /// The new state.
         /// </param>
-        public async void OnDownloadStateChanged(DownloaderState newState)
+        public async void OnDownloadStateChanged(DownloaderClientState newState)
         {
-            if (this.downloaderState != newState)
+            if (this.downloaderClientState != newState)
             {
-                this.downloaderState = newState;
-                this.statusTextView.Text = this.GetString(Helpers.GetDownloaderStringFromState(newState));
+                this.downloaderClientState = newState;
+                this.statusTextView.Text = this.GetString(Helpers.GetDownloaderStringResourceIdFromState(newState));
             }
 
             bool showDashboard = true;
@@ -158,34 +149,34 @@ namespace IRMGARD
             bool indeterminate = true;
             switch (newState)
             {
-                case DownloaderState.Idle:
-                case DownloaderState.Connecting:
-                case DownloaderState.FetchingUrl:
+                case DownloaderClientState.Idle:
+                case DownloaderClientState.Connecting:
+                case DownloaderClientState.FetchingUrl:
                     break;
-                case DownloaderState.Downloading:
+                case DownloaderClientState.Downloading:
                     indeterminate = false;
                     break;
-                case DownloaderState.Failed:
-                case DownloaderState.FailedCanceled:
-                case DownloaderState.FailedFetchingUrl:
-                case DownloaderState.FailedUnlicensed:
+                case DownloaderClientState.Failed:
+                case DownloaderClientState.FailedCanceled:
+                case DownloaderClientState.FailedFetchingUrl:
+                case DownloaderClientState.FailedUnlicensed:
                     paused = true;
                     showDashboard = false;
                     indeterminate = false;
                     break;
-                case DownloaderState.PausedNeedCellularPermission:
-                case DownloaderState.PausedWifiDisabledNeedCellularPermission:
+                case DownloaderClientState.PausedNeedCellularPermission:
+                case DownloaderClientState.PausedWifiDisabledNeedCellularPermission:
                     showDashboard = false;
                     paused = true;
                     indeterminate = false;
                     showCellMessage = true;
                     break;
-                case DownloaderState.PausedByRequest:
+                case DownloaderClientState.PausedByRequest:
                     paused = true;
                     indeterminate = false;
                     break;
-                case DownloaderState.PausedRoaming:
-                case DownloaderState.PausedSdCardUnavailable:
+                case DownloaderClientState.PausedRoaming:
+                case DownloaderClientState.PausedSdCardUnavailable:
                     paused = true;
                     indeterminate = false;
                     break;
@@ -194,7 +185,7 @@ namespace IRMGARD
                     break;
             }
 
-            if (newState != DownloaderState.Completed)
+            if (newState != DownloaderClientState.Completed)
             {
                 this.dashboardView.Visibility = showDashboard ? ViewStates.Visible : ViewStates.Gone;
                 this.useCellDataView.Visibility = showCellMessage ? ViewStates.Visible : ViewStates.Gone;
@@ -221,7 +212,7 @@ namespace IRMGARD
         /// </param>
         public void OnServiceConnected(Messenger m)
         {
-            this.downloaderService = ServiceMarshaller.CreateProxy(m);
+            this.downloaderService = DownloaderServiceMarshaller.CreateProxy(m);
             this.downloaderService.OnClientUpdated(this.downloaderServiceConnection.GetMessenger());
         }
 
@@ -272,14 +263,6 @@ namespace IRMGARD
             this.useObbDownloader.Visibility = ViewStates.Gone;
         }
 
-        private void DoGetExpansionFiles()
-        {
-            if (!this.GetExpansionFiles())
-            {
-                this.InitializeDownloadUi();
-            }
-        }
-
         /// <summary>
         /// Go through each of the Expansion APK files defined in the project
         /// and determine if the files are present and match the required size.
@@ -297,9 +280,31 @@ namespace IRMGARD
         /// </returns>
         private bool AreExpansionFilesDelivered()
         {
-            var downloads = DownloadsDatabase.GetDownloads();
+            // flag to indicate if all downloads are complete
+            var downloadComplete = true;
 
-            return downloads.Any() && downloads.All(x => Helpers.DoesFileExist(this, x.FileName, x.TotalBytes, true));
+            // get a list of all the downloaded expansion files
+            var downloads = DownloadsDB.GetDB().GetDownloads();
+            if (downloads == null || !downloads.Any())
+            {
+                // start the download as nothing is here
+                downloadComplete = false;
+            }
+
+            if (downloads != null)
+            {
+                foreach (var file in downloads)
+                {
+                    if (!Helpers.DoesFileExist(this, file.FileName, file.TotalBytes, false))
+                    {
+                        // start the download as this file is incomplete
+                        downloadComplete = false;
+                        break;
+                    }
+                }
+            }
+
+            return downloadComplete;
         }
 
         /// <summary>
@@ -308,39 +313,39 @@ namespace IRMGARD
         /// <param name="state">
         /// The state.
         /// </param>
-        private void DoValidateZipFiles(object state)
-        {
-            var downloads = DownloadsDatabase.GetDownloads().Select(x => Helpers.GenerateSaveFileName(this, x.FileName)).ToArray();
+        // private void DoValidateZipFiles(object state)
+        // {
+        //     var downloads = DownloadsDB.GetDownloadsList().Select(x => Helpers.GenerateSaveFileName(this, x.FileName)).ToArray();
 
-            var result = downloads.Any() && downloads.All(this.IsValidZipFile);
+        //     var result = downloads != null && downloads.Any() && downloads.All(this.IsValidZipFile);
 
-            this.RunOnUiThread(
-                delegate
-                {
-                    this.pauseButton.Click += delegate
-                    {
-                        // Finish();
-                        if (this.useObbDownloader != null)
-                        {
-                            this.useObbDownloader.Visibility = ViewStates.Gone;
-                        }
-                    };
+        //     this.RunOnUiThread(
+        //         delegate
+        //         {
+        //             this.pauseButton.Click += delegate
+        //             {
+        //                 // Finish();
+        //                 if (this.useObbDownloader != null)
+        //                 {
+        //                     this.useObbDownloader.Visibility = ViewStates.Gone;
+        //                 }
+        //             };
 
-                    this.dashboardView.Visibility = ViewStates.Visible;
-                    this.useCellDataView.Visibility = ViewStates.Gone;
+        //             this.dashboardView.Visibility = ViewStates.Visible;
+        //             this.useCellDataView.Visibility = ViewStates.Gone;
 
-                    if (result)
-                    {
-                        this.statusTextView.SetText(Resource.String.text_validation_complete);
-                        this.pauseButton.SetText(Android.Resource.String.Ok);
-                    }
-                    else
-                    {
-                        this.statusTextView.SetText(Resource.String.text_validation_failed);
-                        this.pauseButton.SetText(Android.Resource.String.Cancel);
-                    }
-                });
-        }
+        //             if (result)
+        //             {
+        //                 this.statusTextView.SetText(Resource.String.text_validation_complete);
+        //                 this.pauseButton.SetText(Android.Resource.String.Ok);
+        //             }
+        //             else
+        //             {
+        //                 this.statusTextView.SetText(Resource.String.text_validation_failed);
+        //                 this.pauseButton.SetText(Android.Resource.String.Cancel);
+        //             }
+        //         });
+        // }
 
         /// <summary>
         /// The get expansion files.
@@ -370,17 +375,17 @@ namespace IRMGARD
 
                 // Build PendingIntent used to open this activity when user
                 // taps the notification.
-                PendingIntent pendingIntent = PendingIntent.GetActivity(
+                var pendingIntent = PendingIntent.GetActivity(
                     this, 0, intent, PendingIntentFlags.UpdateCurrent);
 
                 // Request to start the download
-                DownloadServiceRequirement startResult = DownloaderService.StartDownloadServiceIfRequired(
+                var startResult = DownloaderService.StartDownloadServiceIfRequired(
                     this, pendingIntent, typeof(MediaDownloadService));
 
                 // The DownloaderService has started downloading the files,
                 // show progress otherwise, the download is not needed so  we
                 // fall through to starting the actual app.
-                if (startResult != DownloadServiceRequirement.NoDownloadRequired)
+                if (startResult != DownloaderServiceRequirement.NoDownloadRequired)
                 {
                     this.InitializeDownloadUi();
                     result = true;
@@ -404,26 +409,7 @@ namespace IRMGARD
             initText.Visibility = ViewStates.Gone;
             useObbDownloader.Visibility = ViewStates.Visible;
 
-            downloaderServiceConnection = ClientMarshaller.CreateStub(this, typeof(MediaDownloadService));
-        }
-
-        /// <summary>
-        /// The is valid zip file.
-        /// </summary>
-        /// <param name="filename">
-        /// The filename.
-        /// </param>
-        /// <returns>
-        /// The is valid zip file.
-        /// </returns>
-        private bool IsValidZipFile(string filename)
-        {
-            this.zipFileValidationHandler = new ZipFileValidationHandler(filename)
-            {
-                UpdateUi = this.OnUpdateValidationUi
-            };
-
-            return File.Exists(filename) && ZipFile.Validate(this.zipFileValidationHandler);
+            downloaderServiceConnection = DownloaderClientMarshaller.CreateStub(this, typeof(MediaDownloadService));
         }
 
         /// <summary>
@@ -461,7 +447,7 @@ namespace IRMGARD
         private void OnCellDataResume(object sender, EventArgs args)
         {
             this.StartActivity(new Intent(Settings.ActionWifiSettings));
-            this.downloaderService.SetDownloadFlags(ServiceFlags.FlagsDownloadOverCellular);
+            this.downloaderService.SetDownloadFlags(DownloaderServiceFlags.DownloadOverCellular);
             this.downloaderService.RequestContinueDownload();
             this.useCellDataView.Visibility = ViewStates.Gone;
         }
@@ -486,13 +472,13 @@ namespace IRMGARD
         /// <param name="handler">
         /// The handler.
         /// </param>
-        private void OnUpdateValidationUi(ZipFileValidationHandler handler)
-        {
-            var info = new DownloadProgressInfo(
-                handler.TotalBytes, handler.CurrentBytes, handler.TimeRemaining, handler.AverageSpeed);
+        // private void OnUpdateValidationUi(ZipFileValidationHandler handler)
+        // {
+        //     var info = new DownloadProgressInfo(
+        //         handler.TotalBytes, handler.CurrentBytes, handler.TimeRemaining, handler.AverageSpeed);
 
-            this.RunOnUiThread(() => this.OnDownloadProgress(info));
-        }
+        //     this.RunOnUiThread(() => this.OnDownloadProgress(info));
+        // }
 
         /// <summary>
         /// Update the pause button.
@@ -510,23 +496,23 @@ namespace IRMGARD
         /// <summary>
         /// Perfom a check to see if the expansion files are valid zip files.
         /// </summary>
-        private void ValidateExpansionFiles()
-        {
-            // Pre execute
-            this.dashboardView.Visibility = ViewStates.Visible;
-            this.useCellDataView.Visibility = ViewStates.Gone;
-            this.statusTextView.SetText(Resource.String.text_verifying_download);
-            this.pauseButton.Click += delegate
-            {
-                if (this.zipFileValidationHandler != null)
-                {
-                    this.zipFileValidationHandler.ShouldCancel = true;
-                }
-            };
-            this.pauseButton.SetText(Resource.String.text_button_cancel_verify);
+        // private void ValidateExpansionFiles()
+        // {
+        //     // Pre execute
+        //     this.dashboardView.Visibility = ViewStates.Visible;
+        //     this.useCellDataView.Visibility = ViewStates.Gone;
+        //     this.statusTextView.SetText(Resource.String.text_verifying_download);
+        //     this.pauseButton.Click += delegate
+        //     {
+        //         if (this.zipFileValidationHandler != null)
+        //         {
+        //             this.zipFileValidationHandler.ShouldCancel = true;
+        //         }
+        //     };
+        //     this.pauseButton.SetText(Resource.String.text_button_cancel_verify);
 
-            ThreadPool.QueueUserWorkItem(this.DoValidateZipFiles);
-        }
+        //     ThreadPool.QueueUserWorkItem(this.DoValidateZipFiles);
+        // }
 
         #endregion
 
@@ -535,7 +521,7 @@ namespace IRMGARD
         private void DownloaderOnResume()
         {
             /// Re-connect the stub to our service on resume.
-            if (Env.Release && this.downloaderServiceConnection != null)
+            if (Env.UseOBB && this.downloaderServiceConnection != null)
             {
                 this.downloaderServiceConnection.Connect(this);
             }
@@ -544,7 +530,7 @@ namespace IRMGARD
         private void DownloaderOnStop()
         {
             /// Disconnect the stub from our service on stop.
-            if (Env.Release && this.downloaderServiceConnection != null)
+            if (Env.UseOBB && this.downloaderServiceConnection != null)
             {
                 this.downloaderServiceConnection.Disconnect(this);
             }
@@ -552,10 +538,10 @@ namespace IRMGARD
 
         private void DownloaderOnDestroy()
         {
-            if (Env.Release && this.zipFileValidationHandler != null)
-            {
-                this.zipFileValidationHandler.ShouldCancel = true;
-            }
+            // if (Env.UseOBB && this.zipFileValidationHandler != null)
+            // {
+            //     this.zipFileValidationHandler.ShouldCancel = true;
+            // }
         }
 
         #endregion

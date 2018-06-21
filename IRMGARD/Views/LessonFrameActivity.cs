@@ -62,7 +62,7 @@ namespace IRMGARD
             ivGoFwd = FindViewById<ImageView>(Resource.Id.ivGoFwd);
             ivGoFwd.Click += ((sender, e) => NextLesson());
             btnNext = FindViewById<FloatingActionButton>(Resource.Id.btnNext);
-            btnNext.Click += BtnNext_Click;
+            btnNext.Click += BtnNext_Click_CheckSolution;
             if (!Env.LollipopSupport)
             {
                 var layoutParams = btnNext.LayoutParameters as RelativeLayout.LayoutParams;
@@ -146,6 +146,7 @@ namespace IRMGARD
                 currentFragment.IterationFinished += Fragment_IterationFinished;
                 currentFragment.IterationChanged += Fragment_IterationChanged;
                 currentFragment.UserInteracted += CurrentFragment_UserInteracted;
+                currentFragment.CheckSolutionRequested += BtnNext_Click_CheckSolution;
 
                 // Add the fragment to the container
                 transaction.Replace(Resource.Id.fragmentContainer, currentFragment, lessonFragmentTag);
@@ -340,13 +341,15 @@ namespace IRMGARD
                 return new DragIntoGapFragment();
             if (lesson is SelectConcept)
                 return SelectConceptFragmentFactory.Get(lesson.TypeOfLevel);
+            if (lesson is InputConcept)
+                return new InputConceptFragment();
 
             return null;
         }
 
         #region UI Operations
 
-        private void BtnNext_Click(object sender, EventArgs e)
+        private void BtnNext_Click_CheckSolution(object sender, EventArgs e)
         {
             SoundPlayer.Stop();
 

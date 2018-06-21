@@ -1,13 +1,13 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.IO.Compression.Zip;
 using System.Linq;
 
 using Android.Content;
 using Android.Content.Res;
 using Android.OS;
 using Android.Util;
+using Google.Android.Vending.Expansion.ZipFile;
 
 namespace IRMGARD
 {
@@ -77,7 +77,7 @@ namespace IRMGARD
 
         public bool IsValid()
         {
-            return List("Images").Contains("Aal.png") && List("Fonts").Contains("GlacialIndifference-Bold.otf");
+            return List("Videos").Contains("IRMGARD_Intro.mp4") && List("Fonts").Contains("GlacialIndifference-Bold.otf");
         }
 
         public abstract Stream Open(string path);
@@ -86,30 +86,23 @@ namespace IRMGARD
 
         class OBBAssetHelper : AssetHelper
         {
-            readonly ExpansionZipFile expansionZipFile;
+            readonly ZipResourceFile zipResourceFile;
             readonly List<string> filePaths;
 
             protected internal OBBAssetHelper(Context ctx, int mainVersion, int patchVersion) : base(ctx)
             {
-                expansionZipFile = ApkExpansionSupport.GetApkExpansionZipFile(ctx, mainVersion, patchVersion);
+                zipResourceFile = APKExpansionSupport.GetAPKExpansionZipFile(ctx, mainVersion, patchVersion);
 
                 filePaths = new List<string>();
-                foreach (var zipFileEntry in expansionZipFile.GetAllEntries())
+                foreach (var zipFileEntry in zipResourceFile.GetAllEntries())
                 {
-                    filePaths.Add(zipFileEntry.FilenameInZip);
+                    filePaths.Add(zipFileEntry.MFileName);
                 }
             }
 
             public override Stream Open(string path)
             {
-                var zipFileEntry = expansionZipFile.GetEntry(path);
-                if (zipFileEntry == null)
-                {
-                    throw new FileNotFoundException("Open: zipFileEntry is null", path);
-                }
-                var zip = new ZipFile(zipFileEntry.ZipFileName);
-
-                return zip.ReadFile(zipFileEntry);
+                return zipResourceFile.GetInputStream(path);
             }
 
             public override List<string> List(string path)
@@ -119,13 +112,7 @@ namespace IRMGARD
 
             public override AssetFileDescriptor OpenFd(string path)
             {
-                var zipFileEntry = expansionZipFile.GetEntry(path);
-                if (zipFileEntry == null)
-                {
-                    throw new FileNotFoundException("OpenFd: zipFileEntry is null", path);
-                }
-                var pfd = ParcelFileDescriptor.Open(new Java.IO.File(zipFileEntry.ZipFileName), ParcelFileMode.ReadOnly);
-                return new AssetFileDescriptor(pfd, zipFileEntry.FileOffset, zipFileEntry.FileSize);
+                return zipResourceFile.GetAssetFileDescriptor(path);
             }
         }
 

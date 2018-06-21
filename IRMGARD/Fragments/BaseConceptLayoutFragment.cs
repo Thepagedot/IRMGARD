@@ -39,10 +39,23 @@ namespace IRMGARD
 
             // Add task items to view
             llTaskItemRows.RemoveAllViews();
+            int i = 0;
             foreach (var taskItemRow in exercise.TaskItems)
             {
                 var llTaskItemRowRoot = LayoutInflater.From(Activity.BaseContext).Inflate(Resource.Layout.TaskItemRow, null);
                 var llTaskItemRow = llTaskItemRowRoot.FindViewById<LinearLayout>(Resource.Id.llTaskItemRow);
+
+                // Align task row items to the left rather than centered
+                if (Lesson.LeftAlignItems != null && Lesson.LeftAlignItems.Length > 0)
+                {
+                    if (Lesson.LeftAlignItems.Length > i && Lesson.LeftAlignItems[i])
+                    {
+                        var lp = (llTaskItemRow.LayoutParameters as LinearLayout.LayoutParams);
+                        lp.Gravity = GravityFlags.Left;
+                    }
+                }
+
+                int k = 0;
                 foreach (var item in taskItemRow)
                 {
                     // Exclude special case concepts
@@ -51,8 +64,16 @@ namespace IRMGARD
                     // Invoke callback
                     var view = CreateAndInitConceptView(item);
 
+                    // Apply two column layout rules
+                    if (Lesson.TwoColumns > 0 && k % 2 == 0)
+                    {
+                        var lp = (view.LayoutParameters as LinearLayout.LayoutParams);
+                        lp.Width = ToPx(Lesson.TwoColumns);
+                    }
+
                     // Add container to task items
                     llTaskItemRow.AddView(view);
+                    k++;
                 }
 
                 // Replace top margin of task item rows
@@ -64,6 +85,7 @@ namespace IRMGARD
                 }
 
                 llTaskItemRows.AddView(llTaskItemRowRoot);
+                i++;
             }
         }
 
@@ -79,7 +101,9 @@ namespace IRMGARD
             foreach (var item in solutionItems)
             {
                 // Init concept view
-                var view = CreateConceptView(item);
+                var conceptView = CreateConceptView(item);
+                var conceptContainer = CreateConceptContainer(conceptView);
+                conceptContainer.SetBackgroundResource(Resource.Drawable.rectangle_green);
 
                 // Play sound
                 if (item is ISound)
@@ -91,7 +115,7 @@ namespace IRMGARD
                 }
 
                 // Add view to solution items
-                llSolutionItems.AddView(view);
+                llSolutionItems.AddView(conceptContainer);
                 itemsCreated = true;
             }
 
@@ -111,6 +135,11 @@ namespace IRMGARD
 
         protected override int CountPictureItems()
         {
+            if (exercise == null || exercise.TaskItems == null)
+            {
+                return 1;
+            }
+
             int pictureItemCounter = 0;
 
             foreach (var conceptItemRow in exercise.TaskItems)

@@ -3,7 +3,7 @@ using System.Diagnostics;
 using Android.Content;
 using Android.Content.PM;
 
-using ExpansionDownloader.Service;
+using Google.Android.Vending.Expansion.Downloader;
 
 namespace IRMGARD
 {

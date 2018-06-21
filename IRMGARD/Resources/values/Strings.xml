@@ -18,7 +18,7 @@
   <string name="text_app_check_permissions">Prüfe Berechtigungen...</string>
   <string name="text_app_check_obb">Prüfe vorhandenes Lernmaterial...</string>
   <string name="text_app_download">Download des Lernmaterials...</string>
-  <string name="permission_storage_rationale">Für den Download und das Lesen der Aufgabendateien benötigt IRMGARD im folgenden Dialog Ihre Zustimmung.</string>
+  <string name="permission_storage_rationale">Für das Lesen der IRMGARD-Aufgabendateien, benötigt IRMGARD im folgenden Dialog Ihre Zustimmung.</string>
   <string name="permission_storage_rationale_continue">Weiter</string>
   <string name="permission_storage_rationale_quit">Beenden</string>
 </resources>

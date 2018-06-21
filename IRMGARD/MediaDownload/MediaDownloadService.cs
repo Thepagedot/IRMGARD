@@ -1,6 +1,5 @@
 using Android.App;
-
-using ExpansionDownloader.Service;
+using Google.Android.Vending.Expansion.Downloader;
 
 namespace IRMGARD
 {
@@ -12,7 +11,7 @@ namespace IRMGARD
         /// used by the LVL to validate responses from Market on your behalf.
         /// Note: MODIFY FOR YOUR APPLICATION!
         /// </summary>
-        protected override string PublicKey
+        public override string PublicKey
         {
             get
             {
@@ -29,12 +28,9 @@ namespace IRMGARD
         /// obfuscated preferences are different than the ones used by other
         /// applications.
         /// </summary>
-        protected override byte[] Salt
+        public override byte[] GetSalt()
         {
-            get
-            {
                 return new byte[] { 7, 23, 6, 5, 24, 9, 10, 100, 83, 24, 83, 42, 39, 23, 102, 101, 36, 5, 4, 64 };
-            }
         }
 
         /// <summary>
@@ -42,12 +38,7 @@ namespace IRMGARD
         /// because receivers must be unique across all of Android (it's a good idea
         /// to make sure that your receiver is in your unique package)
         /// </summary>
-        protected override string AlarmReceiverClassName
-        {
-            get
-            {
-                return "irmgard.MediaDownloadAlarmReceiver";
-            }
-        }
+        public override string AlarmReceiverClassName
+            => Java.Lang.Class.FromType(typeof(MediaDownloadAlarmReceiver)).CanonicalName;
     }
 }

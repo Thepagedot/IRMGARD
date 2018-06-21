@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using Android;
 using Android.App;
-using LicenseVerificationLibrary;
+using Google.Android.Vending.Licensing;
 
 // Information about this assembly is defined by the following attributes.
 // Change them to the values specific to your project.
@@ -9,9 +9,9 @@ using LicenseVerificationLibrary;
 [assembly: AssemblyTitle ("IRMGARD")]
 [assembly: AssemblyDescription ("Hilft Erwachsenen Lesen und Schreiben zu lernen")]
 [assembly: AssemblyConfiguration ("")]
-[assembly: AssemblyCompany ("Kopf, Hand und Fuss gGmbh")]
+[assembly: AssemblyCompany ("KOPF, HAND + FUSS gGmbH")]
 [assembly: AssemblyProduct ("IRMGARD-App")]
-[assembly: AssemblyCopyright ("© 2016 KOPF, HAND und FUSS")]
+[assembly: AssemblyCopyright ("© 2018 KOPF, HAND + FUSS")]
 [assembly: AssemblyTrademark ("")]
 [assembly: AssemblyCulture ("")]
 
@@ -20,7 +20,7 @@ using LicenseVerificationLibrary;
 // and "{Major}.{Minor}.{Build}.*" will update just the revision.
 
 // TODO Release: Update AssemblyVersion
-[assembly: AssemblyVersion ("1.2")]
+[assembly: AssemblyVersion ("1.3")]
 
 // The following attributes are used to specify the signing key for the assembly,
 // if desired. See the Mono documentation for more information about signing.

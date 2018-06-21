@@ -43,20 +43,29 @@ namespace IRMGARD.Models
         string SoundPath { get; set; }
     }
 
+    // An resizeable item
+    public interface IResizeable
+    {
+        int Size { get; set; }
+    }
+
     public enum LetterTag { None, Short, Long };
+    public enum TextAlignment { Center, Left, Right };
 
     // The base for all text based concepts
-    public abstract class BaseText : Concept, ISound
+    public abstract class BaseText : Concept, ISound, IResizeable
     {
         public string Text { get; set; }
         public List<LetterTag> LetterTags { get; set; }
         public string SoundPath { get; set; }
 
         // The following properies are excluded from comparison
-        public List<List<int>> Highlights { get; set; }
-        public string Color { get; set; }
         public bool ShowAsPlainText { get; set; }
+        public List<List<int>> Highlights { get; set; }
+        public TextAlignment Align { get; set; }
+        public string Color { get; set; }
         public int AddToTextSize { get; set; }
+        public int Size { get; set; }
 
         public override Concept DeepCopy()
         {
@@ -68,13 +77,15 @@ namespace IRMGARD.Models
             }
             clone.SoundPath = SoundPath != null ? String.Copy(SoundPath) : null;
 
+            clone.ShowAsPlainText = ShowAsPlainText;
             if (Highlights != null && Highlights.Count > 0)
             {
                 clone.Highlights = new List<List<int>>(Highlights);
             }
+            clone.Align = Align;
             clone.Color = Color != null ? String.Copy(Color) : null;
-            clone.ShowAsPlainText = ShowAsPlainText;
             clone.AddToTextSize = AddToTextSize;
+            clone.Size = Size;
 
             return clone;
         }
@@ -114,6 +125,31 @@ namespace IRMGARD.Models
     // A sentence item
     public class Sentence : BaseText { }
 
+    // A text input item
+    public class InputText : BaseText {
+        public int LetterCount { get; set; }
+
+        public override Concept DeepCopy()
+        {
+            InputText clone = (InputText)base.DeepCopy();
+            clone.LetterCount = LetterCount;
+
+            return clone;
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || obj as InputText == null) { return false; }
+            var other = obj as InputText;
+            return base.Equals(obj);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }        
+    }
+
     // A sound only item
     public class Speaker : Concept, ISound
     {
@@ -142,7 +178,7 @@ namespace IRMGARD.Models
     }
 
     // A picture
-    public class Picture : Concept, ISound
+    public class Picture : Concept, ISound, IResizeable
     {
         public string ImagePath { get; set; }
         public string SoundPath { get; set; }

@@ -13,12 +13,27 @@ namespace IRMGARD
 {
     public abstract class BaseConceptFragment<T> : LessonFragment<T> where T : Lesson
     {
+        public enum TextDecorationType { Foreground, Background }
+
         protected View CreateConceptView(Concept concept)
         {
             View view;
 
             var inflater = LayoutInflater.From(Activity.BaseContext);
-            if (concept is BaseText)
+            if (concept is InputText)
+            {
+                view = inflater.Inflate(Resource.Layout.InputTextConcept, null);
+                if ((concept as InputText).LetterCount > 0) {
+                    (view as EditText).SetMinEms((concept as InputText).LetterCount);
+                } else {
+                    (view as EditText).SetMinEms((concept as InputText).Text.Length - ((concept as InputText).Text.Length / 2));
+                }
+
+                if ((concept as InputText).Size > 0) {
+                    (view as EditText).SetTextSize(Android.Util.ComplexUnitType.Dip, (concept as InputText).Size);
+                }
+            }
+            else if (concept is BaseText)
             {
                 var baseText = (concept as BaseText);
                 if (baseText.LetterTags != null && baseText.LetterTags.Count > 0)
@@ -30,7 +45,9 @@ namespace IRMGARD
                     view = inflater.Inflate(Resource.Layout.BaseText, null);
                     var tvText = view.FindViewById<TextView>(Resource.Id.tvText);
                     DecorateText(tvText, baseText, new Android.Graphics.Color(
-                        ContextCompat.GetColor(Activity.BaseContext, Resource.Color.neon)));
+                        ContextCompat.GetColor(Activity.BaseContext, Resource.Color.neon)),
+                        TextDecorationType.Background);
+                    SetTextAlign(tvText, baseText);
                     SetTextColor(tvText, baseText);
                     AdjustTextSize(tvText, baseText);
                 }
@@ -45,6 +62,14 @@ namespace IRMGARD
                 if (IsTextCardCallback(concept as BaseText))
                 {
                     var cardView = (FrameLayout)inflater.Inflate(Resource.Layout.CardConcept, null);
+
+                    if (baseText.Size > 0)
+                    {
+                        cardView.LayoutParameters = new FrameLayout.LayoutParams(
+                            baseText.Size > 0 ? ToPx(baseText.Size) : ViewGroup.LayoutParams.MatchParent,
+                            baseText.Size > 0 ? ToPx(baseText.Size) : ViewGroup.LayoutParams.MatchParent);
+                    }
+
                     cardView.AddView(view);
                     view = cardView;
                 }
@@ -81,7 +106,8 @@ namespace IRMGARD
 
                 if (concept.ActivateOnSuccess || concept.ActivateOnMistake)
                 {
-                    (view as ViewGroup).GetChildAt(0).LayoutParameters = new FrameLayout.LayoutParams(ToPx(120), ToPx(120));
+                    int defaultSize = (IsSmallHeight() ? 100 : 120);
+                    (view as ViewGroup).GetChildAt(0).LayoutParameters = new FrameLayout.LayoutParams(ToPx(defaultSize), ToPx(defaultSize));
                 }
 
                 if (picture.Size > 0)
@@ -201,7 +227,7 @@ namespace IRMGARD
             return (int)(dp * Resources.DisplayMetrics.Density);
         }
 
-        void DecorateText(TextView tv, BaseText baseText, Android.Graphics.Color color)
+        protected void DecorateText(TextView tv, BaseText baseText, Android.Graphics.Color color, TextDecorationType tdType)
         {
             string text = GetTextCallback(baseText);
 
@@ -210,7 +236,15 @@ namespace IRMGARD
                 var span = new SpannableString(text);
                 foreach (var highlight in baseText.Highlights)
                 {
-                    span.SetSpan(new BackgroundColorSpan(color), highlight[0], highlight[1], SpanTypes.ExclusiveExclusive);
+                    switch (tdType)
+                    {
+                        case TextDecorationType.Foreground:
+                            span.SetSpan(new ForegroundColorSpan(color), highlight[0], highlight[1], SpanTypes.ExclusiveExclusive);
+                            break;
+                        case TextDecorationType.Background:
+                            span.SetSpan(new BackgroundColorSpan(color), highlight[0], highlight[1], SpanTypes.ExclusiveExclusive);
+                            break;
+                    }
                 }
                 tv.Append(span);
             }
@@ -243,7 +277,18 @@ namespace IRMGARD
 
             textSize = IsSmallHeight() ? textSize - 4 : textSize;
 
-            tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, (concept.AddToTextSize != 0) ? textSize + concept.AddToTextSize : textSize);
+            if (concept.AddToTextSize != 0)
+            {
+                tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, textSize + concept.AddToTextSize);
+            }
+            else if (Lesson is BaseConcept && (Lesson as BaseConcept).AddToTextSize != 0)
+            {
+                tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, textSize + (Lesson as BaseConcept).AddToTextSize);
+            }
+            else
+            {
+                tvText.SetTextSize(Android.Util.ComplexUnitType.Dip, textSize);
+            }
         }
 
         View ApplyLetterTags(LayoutInflater inflater, BaseText concept)
@@ -258,6 +303,7 @@ namespace IRMGARD
                     var view = inflater.Inflate(Resource.Layout.BaseText, null);
                     var tvText = view.FindViewById<TextView>(Resource.Id.tvText);
                     tvText.Text = char.ToString(text[i]);
+                    SetTextAlign(tvText, concept);
                     SetTextColor(tvText, concept);
                     AdjustTextSize(tvText, concept);
                     EnableIndicator(view, concept, concept.LetterTags[i]);
@@ -271,6 +317,7 @@ namespace IRMGARD
                 var view = inflater.Inflate(Resource.Layout.BaseText, null);
                 var tvText = view.FindViewById<TextView>(Resource.Id.tvText);
                 tvText.Text = text;
+                SetTextAlign(tvText, concept);
                 SetTextColor(tvText, concept);
                 AdjustTextSize(tvText, concept);
                 EnableIndicator(view, concept, concept.LetterTags.First());
@@ -280,6 +327,23 @@ namespace IRMGARD
             else
             {
                 throw new InvalidCastException("Unknown concept of type BaseText!");
+            }
+        }
+
+        void SetTextAlign(TextView tvText, BaseText concept)
+        {
+            var lp = (tvText.LayoutParameters as LinearLayout.LayoutParams);
+            switch (concept.Align)
+            {
+                case Models.TextAlignment.Center:
+                    lp.Gravity = GravityFlags.Center;
+                    break;
+                case Models.TextAlignment.Left:
+                    lp.Gravity = GravityFlags.Left;
+                    break;
+                case Models.TextAlignment.Right:
+                    lp.Gravity = GravityFlags.Right;
+                    break;
             }
         }
 

@@ -1,0 +1,2019 @@
+﻿{
+  "Id": 2,
+  "Name": "Level 2",
+  "Color": "#6b91a3",
+  "IsEnabled": true,
+  "IsCompleted": false,
+  "VideoPath": null,
+  "Modules": [
+    {
+      "Name": "1: A-Z?",
+      "Color": "#d3caaf",
+      "VideoPath": "Videos/L2/L2M1.mp4",
+      "Lessons": [
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 217,
+          "Title": "A-Z?",
+          "SoundPath": "L2/Intros/Level 2 Modul 1 Aufgabe 7.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2172,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Elefant",
+                        "SoundPath": "Objects/Elefant.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Elfe",
+                        "SoundPath": "Objects/Elfe.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Elvis",
+                        "SoundPath": "Objects/Elvis.mp3"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "2: Selbstlaute",
+      "Color": "#aec2c4",
+      "VideoPath": "Videos/L2/L2M2.mp4",
+      "Lessons": [
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 221,
+          "Title": "Selbstlaute",
+          "SoundPath": "L2/Intros/Level 2 Modul 2 Aufgabe 1.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "TopMargins": [ 4, 4, 12 ],
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2211,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Objects/Mut.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "M"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "U",
+                        "LetterTags": [ 2 ]
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "T"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Objects/Wut.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "W"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "U",
+                        "LetterTags": [ 2 ]
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "T"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Objects/Hut.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "H"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "U",
+                        "LetterTags": [ 2 ]
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "T"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 222,
+          "Title": "Selbstlaute",
+          "SoundPath": "L2/Intros/Level 2 Modul 2 Aufgabe 2.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "HighlightCorrectOptionsOnMistake": true,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2221,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "ImagePath": "Elefant.png",
+                        "SoundPath": "Objects/Elefant.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnMistake": true,
+                        "SoundPath": "L2/Solution/Vowels/Hier_haben_wir_das_lang_gesprochene_E_gesucht.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Objects/Elefant.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "E"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "L"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "E",
+                        "LetterTags": [ 2 ]
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "F"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "A"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "N"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "T"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2222,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "ImagePath": "Giraffe.png",
+                        "SoundPath": "Objects/Giraffe.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnMistake": true,
+                        "SoundPath": "L2/Solution/Vowels/Hier_haben_wir_das_lang_gesprochene_I_gesucht.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Objects/Giraffe.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "G"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "I",
+                        "LetterTags": [ 2 ]
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "R"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "A"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "F"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "F"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "E"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "OptionItems": [
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "A",
+              "LetterTags": [ 1 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "E",
+              "LetterTags": [ 1 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "I",
+              "LetterTags": [ 1 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "O",
+              "LetterTags": [ 1 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "U",
+              "LetterTags": [ 1 ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 223,
+          "Title": "Selbstlaute",
+          "SoundPath": "L2/Intros/Level 2 Modul 2 Aufgabe 3.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "HighlightCorrectOptionsOnMistake": true,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2231,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "ImagePath": "Dollar.png",
+                        "SoundPath": "Objects/Dollar.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnMistake": true,
+                        "SoundPath": "L2/Solution/Vowels/Hier_haben_wir_das_kurz_gesprochene_O_gesucht.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Objects/Dollar.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "D"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "O",
+                        "LetterTags": [ 1 ]
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "L"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "L"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "A"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "R"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2232,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "ImagePath": "Giraffe.png",
+                        "SoundPath": "Objects/Giraffe.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnMistake": true,
+                        "SoundPath": "L2/Solution/Vowels/Hier_haben_wir_das_kurz_gesprochene_A_gesucht.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Objects/Giraffe.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "G"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "I"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "R"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "A",
+                        "LetterTags": [ 1 ]
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "F"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "F"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "E"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2235,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "ImagePath": "Toilette.png",
+                        "SoundPath": "Objects/Toilette.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnMistake": true,
+                        "SoundPath": "L2/Solution/Vowels/Hier_haben_wir_das_kurz_gesprochene_E_gesucht.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Objects/Toilette.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "T"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "O"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "I"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "L"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "E",
+                        "LetterTags": [ 1 ]
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "T"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "T"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "E"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "OptionItems": [
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "A",
+              "LetterTags": [ 2 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "E",
+              "LetterTags": [ 2 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "I",
+              "LetterTags": [ 2 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "O",
+              "LetterTags": [ 2 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "U",
+              "LetterTags": [ 2 ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 224,
+          "Title": "Selbstlaute",
+          "SoundPath": "L2/Intros/Level 2 Modul 2 Aufgabe 4.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "HighlightCorrectOptionsOnMistake": true,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2241,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                        "Text": "WA",
+                        "LetterTags": [ 0, 2 ]
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": " - "
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "WALL",
+                        "LetterTags": [ 0, 1, 0, 0 ]
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": " = "
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "IsSolution": true,
+                        "SoundPath": "L2/SyllableWord/Wa_Wall.mp3"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 225,
+          "Title": "Selbstlaute",
+          "SoundPath": "L2/Intros/Level 2 Modul 2 Aufgabe 5.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "HighlightCorrectOptionsOnMistake": true,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2251,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "ImagePath": "Elefant.png",
+                        "SoundPath": "Objects/Elefant.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Objects/Elefant.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "E"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "L"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "E",
+                        "LetterTags": [ 2 ]
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "F"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "A",
+                        "LetterTags": [ 1 ]
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "N"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "T"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2252,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "ImagePath": "Giraffe.png",
+                        "SoundPath": "Objects/Giraffe.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "Objects/Giraffe.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "G"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "I",
+                        "LetterTags": [ 2 ]
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "R"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "A",
+                        "LetterTags": [ 1 ]
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "F"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "F"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "E"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "OptionItems": [
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "A",
+              "LetterTags": [ 1 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "E",
+              "LetterTags": [ 1 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "I",
+              "LetterTags": [ 1 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "O",
+              "LetterTags": [ 1 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "U",
+              "LetterTags": [ 1 ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.HearTheLetter, IRMGARD",
+          "Id": 226,
+          "Title": "Selbstlaute",
+          "SoundPath": "L2/Intros/Level 2 Modul 2 Aufgabe 6.mp3",
+          "TypeOfLevel": "HearTheLetter",
+          "SliderLabels": [
+            {
+              "$type": "IRMGARD.Models.Syllable, IRMGARD",
+              "Text": "AEIOU",
+              "ShowAsPlainText": true,
+              "LetterTags": [ 1, 1, 1, 1, 1 ]
+            },
+            {
+              "$type": "IRMGARD.Models.Syllable, IRMGARD",
+              "Text": "AEIOU",
+              "ShowAsPlainText": true,
+              "LetterTags": [ 2, 2, 2, 2, 2 ]
+            }
+          ],
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 2261,
+              "LettersToLearn": [ "A", "E", "I", "O", "U" ],
+              "LetterLocations": [
+                {
+                  "Location": 0,
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_E_in_Riegel_kurz_oder_lang_gesprochen.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_I_in_Riss_kurz_oder_lang_gesprochen.mp3"
+                },
+                {
+                  "Location": 0,
+                  "SoundPath": "L2_3/ShortLongVowels/Wird_der_Selbstlaut_O_in_Rolle_kurz_oder_lang_gesprochen.mp3"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
+          "Id": 227,
+          "Title": "Selbstlaute",
+          "SoundPath": "L2/Intros/Level 2 Modul 2 Aufgabe 7.mp3",
+          "TypeOfLevel": "ShortLongVowelFPSC",
+          "SingleChoice": true,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+              "Id": 2271,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "L1/Alphabet/A.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Affe.png",
+                        "SoundPath": "Objects/Affe.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Giraffe.png",
+                        "SoundPath": "Objects/Giraffe.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Elefant.png",
+                        "SoundPath": "Objects/Elefant.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Hand.png",
+                        "SoundPath": "Objects/Hand.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Dollar.png",
+                        "SoundPath": "Objects/Dollar.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Gans.png",
+                        "SoundPath": "Objects/Gans.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Jacke.png",
+                        "SoundPath": "Objects/Jacke.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "L1/Alphabet/A.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Ameise.png",
+                        "SoundPath": "Objects/Ameise.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Gabel.png",
+                        "SoundPath": "Objects/Gabel.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Hase.png",
+                        "SoundPath": "Objects/Hase.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Dame.png",
+                        "SoundPath": "Objects/Dame.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Jade.png",
+                        "SoundPath": "Objects/Jade.mp3"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "3: Reimen",
+      "Color": "#d8cad0",
+      "VideoPath": "Videos/L2/L2M3.mp4",
+      "Lessons": [
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 233,
+          "Title": "Reime finden",
+          "SoundPath": "L2/Intros/Level 2 Modul 3 Aufgabe 3.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2334,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "L2/RhymingWords/Super_Rolle_Wolle.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnMistake": true,
+                        "SoundPath": "L2/RhymingWords/Rolle_Wolle.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "L2/RhymingWords/Rolle_Wolle.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Color": "#B7160E",
+                        "Text": "W"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "O"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "L"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "L"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "E"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "4: Einkaufen",
+      "Color": "#c1caad",
+      "VideoPath": "Videos/L2/L2M4.mp4",
+      "Lessons": [
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 241,
+          "Title": "Im Supermarkt",
+          "SoundPath": "L2/Intros/Level 2 Modul 4 Aufgabe 1.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "TopMargins": [ 16, 4 ],
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2413,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Senf.png",
+                        "SoundPath": "Objects/Senf.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Senf"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Sahne.png",
+                        "SoundPath": "Objects/Sahne.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Sahne"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Petersilie.png",
+                        "SoundPath": "Objects/Petersilie.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Space, IRMGARD"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Petersilie"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 244,
+          "Title": "Ein oder eine?",
+          "SoundPath": "L2/Intros/Level 2 Modul 4 Aufgabe 4.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "HighlightCorrectOptionsOnMistake": true,
+          "UseOptionItemsOnly": true,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2442,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Die"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Frau"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "kauft"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "sich"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "ein"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "paar"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Bananen."
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2445,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Oma"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "kauft"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "eine"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Tube"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Zahnpasta."
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "OptionItems": [
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": "ein"
+            },
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": "eine"
+            },
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": "einen"
+            },
+            {
+              "$type": "IRMGARD.Models.Word, IRMGARD",
+              "Text": "einer"
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 245,
+          "Title": "Im Supermarkt",
+          "SoundPath": "L2/Intros/Level 2 Modul 4 Aufgabe 5.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "HighlightCorrectOptionsOnMistake": true,
+          "UseOptionItemsOnly": true,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2452,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Einzahl:"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Die Marmelade"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Mehrzahl:"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Die Marmeladen"
+                      }
+                    ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Word, IRMGARD",
+                      "Text": "Die Marmeladenen"
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Word, IRMGARD",
+                      "Text": "Der Marmelade"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 246,
+          "Title": "Im Supermarkt",
+          "SoundPath": "L2/Intros/Level 2 Modul 4 Aufgabe 6.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "HideRack": true,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2464,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "6x"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "ImagePath": "Tomate.png"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Color": "#B7160E",
+                        "AddToTextSize": -4,
+                        "Text": "T"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "O"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "M"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "A"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "T"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "E"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "N"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
+          "Id": 247,
+          "Title": "Der, die oder das?",
+          "SoundPath": "L2/Intros/Level 2 Modul 4 Aufgabe 7.mp3",
+          "TypeOfLevel": "FourPicturesSelectConcept",
+          "SingleChoice": true,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+              "Id": 2471,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "IsSolution": true,
+                        "ImagePath": "Tomate.png",
+                        "SoundPath": "Objects/Tomate.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "IsOption": true,
+                        "ImagePath": "Dose.png",
+                        "SoundPath": "Objects/Dose.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "IsOption": true,
+                        "ImagePath": "Rose.png",
+                        "SoundPath": "Objects/Rose.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "IsOption": true,
+                        "ImagePath": "Mund.png",
+                        "SoundPath": "Objects/Mund.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                        "Text": "Die Melone ist gelb."
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "5: Umlaute",
+      "Color": "#dbcf93",
+      "VideoPath": "Videos/L2/L2M5.mp4",
+      "Lessons": [
+        {
+          "$type": "IRMGARD.Models.HearMe, IRMGARD",
+          "Id": 251,
+          "Title": "ÄÖU",
+          "SoundPath": "L2/Intros/Level 2 Modul 5 Aufgabe 1.mp3",
+          "TypeOfLevel": "HearMe",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.HearMeIteration, IRMGARD",
+              "Id": 2511,
+              "LettersToLearn": [
+                "Ä"
+              ],
+              "Name": "Der Ärmel",
+              "Media": {
+                "ImagePath": "Aermel.png",
+                "SoundPath": "L2_3/ObjectsWithDefArt/Der_Aermel.mp3"
+              }
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 252,
+          "Title": "Umlaute",
+          "SoundPath": "L2/Intros/Level 2 Modul 5 Aufgabe 2.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "HighlightCorrectOptionsOnMistake": true,
+          "UseOptionItemsOnly": true,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2523,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Fluegel.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Die"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "F"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "L"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Ü"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "G"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "E"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "L"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2525,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Knoepfe.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Die"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "K"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "N"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Ö"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "P"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "F"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "E"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "OptionItems": [
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "Ä"
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "Ö"
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "Text": "Ü"
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
+          "Id": 253,
+          "Title": "A oder Ä?",
+          "SoundPath": "L2/Intros/Level 2 Modul 5 Aufgabe 3.mp3",
+          "TypeOfLevel": "FourPicturesSelectConcept",
+          "SingleChoice": true,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+              "Id": 2531,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Picture, IRMGARD",
+                        "IsSolution": true,
+                        "ImagePath": "Hut.png",
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Huete.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "Ü"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "OptionItems": [
+            {
+              "$type": "IRMGARD.Models.Picture, IRMGARD",
+              "ImagePath": "Degen.png",
+              "SoundPath": "Objects/Degen.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Picture, IRMGARD",
+              "ImagePath": "Handy.png",
+              "SoundPath": "Objects/Handy.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Picture, IRMGARD",
+              "ImagePath": "Hase.png",
+              "SoundPath": "Objects/Hase.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Picture, IRMGARD",
+              "ImagePath": "Ina.png",
+              "SoundPath": "Objects/Ina.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Picture, IRMGARD",
+              "ImagePath": "Kohle.png",
+              "SoundPath": "Objects/Kohle.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Picture, IRMGARD",
+              "ImagePath": "Regen.png",
+              "SoundPath": "Objects/Regen.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Picture, IRMGARD",
+              "ImagePath": "Vogel.png",
+              "SoundPath": "Objects/Vogel.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Picture, IRMGARD",
+              "ImagePath": "Uhren.png",
+              "SoundPath": "Objects/Uhren.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Picture, IRMGARD",
+              "ImagePath": "Weg.png",
+              "SoundPath": "Objects/Weg.mp3"
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
+          "Id": 256,
+          "Title": "A oder Ä?",
+          "SoundPath": "L2/Intros/Level 2 Modul 5 Aufgabe 6.mp3",
+          "TypeOfLevel": "SelectConcept",
+          "SingleChoice": true,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+              "Id": 2562,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "SoundPath": "L2_3/Sentences/Die_Zitronen_sind_gelb.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsOption": true,
+                        "Text": "Die"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsOption": true,
+                        "Text": "Zitronen"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "bunt"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsOption": true,
+                        "Text": "sind"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsOption": true,
+                        "Text": "gelb."
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "6: AU, ÄU oder EU",
+      "Color": "#e5c8c4",
+      "VideoPath": "Videos/L2/L2M6.mp4",
+      "Lessons": [
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 261,
+          "Title": "AU, ÄU oder EU?",
+          "SoundPath": "L2/Intros/Level 2 Modul 6 Aufgabe 1.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "HighlightCorrectOptionsOnMistake": true,
+          "UseOptionItemsOnly": true,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2613,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "ActivateOnMistake": true,
+                        "SoundPath": "L2/SingPluWithDefArt/Das_Kraut_Die_Kraeuter.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Kraeuter.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Einzahl:"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Das Kraut"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Mehrzahl:"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Die Kräuter"
+                      }
+                    ]
+                  ],
+                  "OptionItems": [
+                    {
+                      "$type": "IRMGARD.Models.Word, IRMGARD",
+                      "Text": "Die Kraut"
+                    },
+                    {
+                      "$type": "IRMGARD.Models.Word, IRMGARD",
+                      "Text": "Das Kraute"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
+          "Id": 263,
+          "Title": "AU, ÄU oder EU?",
+          "SoundPath": "L2/Intros/Level 2 Modul 6 Aufgabe 3.mp3",
+          "TypeOfLevel": "DragIntoGap",
+          "HighlightCorrectOptionsOnMistake": true,
+          "UseOptionItemsOnly": true,
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2631,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Kraeuter.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Die"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "K"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "R"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "ÄU"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "T"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "E"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "Text": "R"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.DragIntoGapIteration, IRMGARD",
+              "Id": 2632,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "L2_3/ObjectsWithDefArt/Die_Schlaeuche.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "ShowAsPlainText": true,
+                        "Text": "Die"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "AddToTextSize": -4,
+                        "Text": "S"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "AddToTextSize": -4,
+                        "Text": "C"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "AddToTextSize": -4,
+                        "Text": "H"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "AddToTextSize": -4,
+                        "Text": "L"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "IsSolution": true,
+                        "AddToTextSize": -4,
+                        "Text": "ÄU"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "AddToTextSize": -4,
+                        "Text": "C"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "AddToTextSize": -4,
+                        "Text": "H"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Letter, IRMGARD",
+                        "AddToTextSize": -4,
+                        "Text": "E"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "OptionItems": [
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "AddToTextSize": -4,
+              "Text": "ÄU"
+            },
+            {
+              "$type": "IRMGARD.Models.Letter, IRMGARD",
+              "AddToTextSize": -4,
+              "Text": "EU"
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
+          "Id": 264,
+          "Title": "AU, ÄU oder EU?",
+          "SoundPath": "L2/Intros/Level 2 Modul 6 Aufgabe 4.mp3",
+          "TypeOfLevel": "SpeakerSC",
+          "HideRack": true,
+          "TopMargins": [ -1, 5 ],
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+              "Id": 2641,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "IsSolution": true,
+                        "SoundPath": "Objects/Automat.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "IsSolution": true,
+                        "SoundPath": "Objects/Pflaume.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "IsSolution": true,
+                        "SoundPath": "Objects/Tau.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "IsSolution": true,
+                        "SoundPath": "Objects/Maus.mp3"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "IsSolution": true,
+                        "SoundPath": "Objects/Laeuse.mp3"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ],
+          "OptionItems": [
+            {
+              "$type": "IRMGARD.Models.Speaker, IRMGARD",
+              "SoundPath": "Objects/Feuer.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Speaker, IRMGARD",
+              "SoundPath": "Objects/Leute.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Speaker, IRMGARD",
+              "SoundPath": "Objects/Freude.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Speaker, IRMGARD",
+              "SoundPath": "Objects/Faesser.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Speaker, IRMGARD",
+              "SoundPath": "Objects/Welpen.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Speaker, IRMGARD",
+              "SoundPath": "Objects/Felder.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Speaker, IRMGARD",
+              "SoundPath": "Objects/Heute.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Speaker, IRMGARD",
+              "SoundPath": "Objects/Aepfel.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Speaker, IRMGARD",
+              "SoundPath": "Objects/Beute.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Speaker, IRMGARD",
+              "SoundPath": "Objects/Helden.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Speaker, IRMGARD",
+              "SoundPath": "Objects/Naehte.mp3"
+            },
+            {
+              "$type": "IRMGARD.Models.Speaker, IRMGARD",
+              "SoundPath": "Objects/Meute.mp3"
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
+          "Id": 265,
+          "Title": "AU, ÄU oder EU?",
+          "SoundPath": "L2/Intros/Level 2 Modul 6 Aufgabe 5.mp3",
+          "TypeOfLevel": "SelectConcept",
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+              "Id": 2652,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "ActivateOnMistake": true,
+                        "Text": "Die Frau isst gerne Schokolade.",
+                        "Highlights": [ [ 6, 8 ] ]
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "L2_3/Sentences/Die_Frau_isst_gerne_Schokolade.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "AU"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                        "IsOption": true,
+                        "Text": "ÄU"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                        "IsOption": true,
+                        "Text": "EU"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+              "Id": 2655,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Sentence, IRMGARD",
+                        "ActivateOnSuccess": true,
+                        "ActivateOnMistake": true,
+                        "Text": "Theo und Matthias raufen.",
+                        "Highlights": [ [ 19, 21 ] ]
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
+                        "SoundPath": "L2_3/Sentences/Theo_und_Matthias_raufen.mp3"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "AU"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                        "IsOption": true,
+                        "Text": "ÄU"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Syllable, IRMGARD",
+                        "IsOption": true,
+                        "Text": "EU"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
+          "Id": 266,
+          "Title": "Wortsalat",
+          "SoundPath": "L2/Intros/Level 2 Modul 6 Aufgabe 6.mp3",
+          "TypeOfLevel": "LetterpuzzleSC",
+          "HideRack": true,
+          "TopMargins": [ 10, 4 ],
+          "Iterations": [
+            {
+              "$type": "IRMGARD.Models.SelectConceptIteration, IRMGARD",
+              "Id": 2661,
+              "Tasks": [
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "ÄRMEL"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "MÄUSE"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "SÄUE"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "VOGEL"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "GIRAFFE"
+                      }
+                    ]
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -27,6 +27,7 @@ namespace IRMGARD.Models
     {
         public int Location { get; set; }
         public string SoundPath { get; set; }
+        public string Text { get; set; }
 
         public HearTheLetterOption () {}
 
@@ -34,6 +35,13 @@ namespace IRMGARD.Models
         {
             this.Location = location;
             this.SoundPath = soundPath;
+        }
+
+        public HearTheLetterOption(int location, string soundPath, string text)
+        {
+            this.Location = location;
+            this.SoundPath = soundPath;
+            this.Text = text;
         }
     }
 }
