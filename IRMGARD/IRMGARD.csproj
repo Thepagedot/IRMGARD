@@ -1516,6 +1516,12 @@
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\weinen.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\wickeln.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\wuerfeln.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\bettelst.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\klingle.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\rechne.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\ruderst.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\spielt.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\strickt.mp3" />
     <AndroidAsset Include="MainAssets\Videos\L4\L4M1.mp4" />
     <AndroidAsset Include="MainAssets\Videos\L4\L4M2.mp4" />
     <AndroidAsset Include="MainAssets\Videos\L4\L4M3.mp4" />
@@ -1699,6 +1705,7 @@
     <AndroidAsset Include="Assets\Images\Dutt.png" />
     <AndroidAsset Include="Assets\Images\Eber.png" />
     <AndroidAsset Include="Assets\Images\Efeu.png" />
+    <AndroidAsset Include="Assets\Images\Eis.png" />
     <AndroidAsset Include="Assets\Images\Elefant.png" />
     <AndroidAsset Include="Assets\Images\Ente.png" />
     <AndroidAsset Include="Assets\Images\Esel.png" />
