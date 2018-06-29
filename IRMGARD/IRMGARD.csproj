@@ -487,6 +487,12 @@
     <AndroidResource Include="Resources\layout\InputConcept.axml" />
     <AndroidResource Include="Resources\layout\InputTextConcept.axml" />
     <AndroidResource Include="Resources\drawable\input_dotted.xml" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_04.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_04.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_04.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_04.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_04.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_04.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
