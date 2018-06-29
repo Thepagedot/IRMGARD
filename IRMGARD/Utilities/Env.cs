@@ -11,7 +11,7 @@ namespace IRMGARD
 #else
         public const bool Debug = false;
         public const bool UseOBB = true;
-        public const bool RestrictedModuleAccess = true;    // Alpha/Beta: false, Production: true
+        public const bool RestrictedModuleAccess = true;    // TODO Release: Alpha/Beta: false, Production: true
 #endif
         public const bool Release = !Debug;
 

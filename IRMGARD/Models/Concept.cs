@@ -127,7 +127,7 @@ namespace IRMGARD.Models
 
     // A text input item
     public class InputText : BaseText {
-        public int LetterCount { get; set; }
+        public int LetterCount { get; set; }    // InputText-Box should be at minimum LetterCount letters wide.
 
         public override Concept DeepCopy()
         {

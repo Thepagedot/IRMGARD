@@ -1813,6 +1813,7 @@
     <AndroidAsset Include="Assets\Images\Siegel.png" />
     <AndroidAsset Include="Assets\Images\Sofa.png" />
     <AndroidAsset Include="Assets\Images\Sonne.png" />
+    <AndroidAsset Include="Assets\Images\Strandkorb.png" />
     <AndroidAsset Include="Assets\Images\Tasse.png" />
     <AndroidAsset Include="Assets\Images\Teller.png" />
     <AndroidAsset Include="Assets\Images\Toilette.png" />
@@ -1851,6 +1852,23 @@
     <AndroidAsset Include="Assets\Images\blau.png" />
     <AndroidAsset Include="Assets\Images\gruen.png" />
     <AndroidAsset Include="Assets\Images\weiss.png" />
+    <AndroidAsset Include="Assets\Images\Messer.png" />
+    <AndroidAsset Include="Assets\Images\scharf.png" />
+    <AndroidAsset Include="Assets\Images\hart.png" />
+    <AndroidAsset Include="Assets\Images\Stein.png" />
+    <AndroidAsset Include="Assets\Images\Gras.png" />
+    <AndroidAsset Include="Assets\Images\Himmel.png" />
+    <AndroidAsset Include="Assets\Images\Schnee.png" />
+    <AndroidAsset Include="Assets\Images\Wunder.png" />
+    <AndroidAsset Include="Assets\Images\kalt.png" />
+    <AndroidAsset Include="Assets\Images\traurig.png" />
+    <AndroidAsset Include="Assets\Images\weinend.png" />
+    <AndroidAsset Include="Assets\Images\schoen.png" />
+    <AndroidAsset Include="Assets\Images\froehlich.png" />
+    <AndroidAsset Include="Assets\Images\wuetend.png" />
+    <AndroidAsset Include="Assets\Images\angeekelt.png" />
+    <AndroidAsset Include="Assets\Images\zufrieden.png" />
+    <AndroidAsset Include="Assets\Images\lachend.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\Fonts\GlacialIndifference-Bold.otf" />
