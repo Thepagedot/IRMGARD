@@ -1,21 +1,24 @@
 # Spiel-/Komponentenbeschreibung
 
+## Aufgabenüberschrift
+
+
 ## Aufgabenbeschreibung
 
 
-## Aufteilung / Anzahl Wiederholungen
+## Anzahl Wiederholungen
 
 
-## Benötigte Texte und Medien
+## Benötigte Inhalte
 
 
-## Weiteres (z. B. Einsatz von Extratipps)
+## Weiteres
 
 
 # Aufgaben
 * [ ]  Lektionsbeschreibung erstellt
-* [ ]  Aufteilung / Anzahl Wiederholungen geklärt
-* [ ]  Benötigte Texte und Medien geklärt
+* [ ]  Anzahl Wiederholungen geklärt
+* [ ]  Benötigte Texte und Medien enthalten
 * [ ]  Weiteres geklärt
 * [ ]  Spiel-/Aufgabenaufbau/-ablauf geklärt
 * [ ]  Texte verfügbar
