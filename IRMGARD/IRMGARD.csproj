@@ -1528,6 +1528,10 @@
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\ruderst.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\spielt.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\strickt.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\segle.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\spielte.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\weintest.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\wirst_rechnen.mp3" />
     <AndroidAsset Include="MainAssets\Videos\L4\L4M1.mp4" />
     <AndroidAsset Include="MainAssets\Videos\L4\L4M2.mp4" />
     <AndroidAsset Include="MainAssets\Videos\L4\L4M3.mp4" />
@@ -1894,10 +1898,6 @@
     <AndroidAsset Include="Assets\Config\level9.json" />
     <AndroidAsset Include="Assets\Config\sandbox.json" />
     <AndroidAsset Include="Assets\Config\testlayout.json" />
-    <AndroidAsset Include="Assets\Sounds\L3_4\Verbs\segle.mp3" />
-    <AndroidAsset Include="Assets\Sounds\L3_4\Verbs\spielte.mp3" />
-    <AndroidAsset Include="Assets\Sounds\L3_4\Verbs\weintest.mp3" />
-    <AndroidAsset Include="Assets\Sounds\L3_4\Verbs\wirst_rechnen.mp3" />
   </ItemGroup>
   <!-- END of minimal required set of assets for level-specific test deployments -->
 
