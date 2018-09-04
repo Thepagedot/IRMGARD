@@ -7679,16 +7679,16 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ActivateOnMistake": true,
-                        "Text": "fummel"
+                        "Text": "fummelt"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Ich"
+                        "Text": "Es"
                       },
                       {
                         "$type": "IRMGARD.Models.InputText, IRMGARD",
                         "IsSolution": true,
-                        "Text": "fummel"
+                        "Text": "fummelt"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",

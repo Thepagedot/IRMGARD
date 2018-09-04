@@ -1484,8 +1484,6 @@
     <AndroidAsset Include="MainAssets\Sounds\L3\NounSuffix\schaft.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\NounSuffix\tum.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\NounSuffix\ung.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Intros\Level_3_Modul_2_Aufgabe_2.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Intros\Level_3_Modul_3_Aufgabe_2.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Intros\Level_3_Modul_4_Aufgabe_3.mp3" />
@@ -1579,11 +1577,6 @@
     <AndroidAsset Include="MainAssets\Sounds\L4\Exercises\4-5-5\tot.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L4\Exercises\4-5-5\traurig.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L4\Exercises\4-5-5\viereckig.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M2A1.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M2A2.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M2A3.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M2A4.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M2A5.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M3A1.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M3A2.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M3A3.mp3" />
@@ -1604,6 +1597,42 @@
     <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M6A3.mp3" />
   </ItemGroup>
   <!-- END of section to be disabled for level-specific testing -->
+  <ItemGroup>
+    <AndroidAsset Include="MainAssets\Sounds\L4_5\Intros\L4M2A1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L4_5\Intros\L4M2A2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L4_5\Intros\L4M2A3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L4_5\Intros\L4M2A4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L4_5\Intros\L4M2A5.mp3" />
+    <AndroidAsset Include="MainAssets\Videos\L5\L5M1.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L5\L5M2.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L5\L5M3.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L5\L5M4.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L5\L5M5.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L5\L5M6.mp4" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M2A1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M2A2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M2A3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M2A4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M2A5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M3A1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M3A2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M3A3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M3A4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M3A5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M3A6.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M4A1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M4A2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M4A3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M4A4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M5A1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M5A2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M5A3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M6A1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M6A2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M6A3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M6A4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M6A5.mp3" />
+  </ItemGroup>
   
   <!-- BEGIN of minimal required set of assets for level-specific test deployments -->
   <ItemGroup>
