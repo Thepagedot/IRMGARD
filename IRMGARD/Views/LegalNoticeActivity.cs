@@ -20,8 +20,8 @@ namespace IRMGARD
             //RequestedOrientation = Android.Content.PM.ScreenOrientation.Portrait;
 
             var version = PackageManager.GetPackageInfo(PackageName, 0).VersionName;
-            FindViewById<TextView>(Resource.Id.tvVersionInfo).TextFormatted = Html.FromHtml(string.Format(Resources.GetString(Resource.String.version_info), version));
-            FindViewById<TextView>(Resource.Id.tvLegalNotice).TextFormatted = Html.FromHtml(Resources.GetString(Resource.String.legalnotice_content));
+            FindViewById<TextView>(Resource.Id.tvVersionInfo).TextFormatted = FromHtml(string.Format(Resources.GetString(Resource.String.version_info), version));
+            FindViewById<TextView>(Resource.Id.tvLegalNotice).TextFormatted = FromHtml(Resources.GetString(Resource.String.legalnotice_content));
         }
 
         public override bool OnOptionsItemSelected(IMenuItem item)
@@ -34,6 +34,18 @@ namespace IRMGARD
                     return true;
             }
             return base.OnOptionsItemSelected(item);
+        }
+
+        private ISpanned FromHtml(string html)
+        {
+            if (Env.NougatSupport)
+            {
+                return Html.FromHtml(html, FromHtmlOptions.ModeLegacy);
+            }
+            else
+            {
+                return Html.FromHtml(html);
+            }
         }
     }
 }

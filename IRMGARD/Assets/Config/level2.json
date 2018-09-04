@@ -7415,7 +7415,7 @@
     },
     {
       "Name": "4: Einkaufen",
-      "Color": "#b5c8d1",
+      "Color": "#b6c8d0",
       "VideoPath": "Videos/L2/L2M4.mp4",
       "Lessons": [
         {
@@ -8314,15 +8314,30 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Der"
+                        "Text": "Ich habe"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Junge"
+                        "IsSolution": true,
+                        "Text": "eine"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "isst"
+                        "Text": "Tasse"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "im Schrank."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Wir haben"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -8331,7 +8346,59 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Kuchen."
+                        "Text": "Vogel."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Ich habe"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "eine"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Meise."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Da steht"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "ein"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Pferd"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "auf"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "dem"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Flur."
                       }
                     ]
                   ]
@@ -8347,19 +8414,30 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Die"
+                        "Text": "Er hat"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Frau"
+                        "IsSolution": true,
+                        "Text": "eine"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "kauft"
+                        "Text": "Murmel."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "An der Ampel"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "sich"
+                        "Text": "steht"
                       }
                     ],
                     [
@@ -8370,11 +8448,91 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "paar"
+                        "Text": "Mann."
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Der"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Bananen."
+                        "Text": "Mann"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "sieht"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "rot."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Da"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "beißt"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "die Maus"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "einen"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Faden"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "ab."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Sie"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "haben"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "ohne Absicht"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "eine"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Mauer"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "gebaut."
                       }
                     ]
                   ]
@@ -8390,16 +8548,43 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Der Elefant"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "ging"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "in"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "einen"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Laden."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
                         "Text": "Das"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Mädchen"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "isst"
-                      },
+                        "Text": "ist"
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
@@ -8407,7 +8592,69 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Brot."
+                        "Text": "Saftladen."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Ich"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "glaub‘"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": ","
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "ein"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Schwein"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "pfeift."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Ein"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Männlein"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "steht"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "im"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Walde."
                       }
                     ]
                   ]
@@ -8423,7 +8670,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Ina"
+                        "Text": "Sie"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -8436,11 +8683,102 @@
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Wurst."
+                        "Text": "Waffel."
                       }
                     ]
                   ]
-                }
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Familie"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Hempel"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "hat"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "ein"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Sofa."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Gitte"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "will"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "einen"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Viehhirten"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "als"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Mann."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Das"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Leben"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "ist"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "ein"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Ponyhof."
+                      }
+                    ]
+                  ]
+                },
               ]
             },
             {
@@ -8452,11 +8790,11 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Oma"
+                        "Text": "Wer"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "kauft"
+                        "Text": "anderen"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -8467,11 +8805,108 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Tube"
+                        "Text": "Grube"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Zahnpasta."
+                        "Text": "gräbt,"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "braucht"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "die Erlaubnis"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "vom Tiefbauamt."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Eine"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Seefahrt"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "ist"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "lustig."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "In"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "München"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "steht"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "ein"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Hofbräuhaus."
+                      }
+                    ]
+                  ]
+                },
+                {
+                  "TaskItems": [
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Ja,"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Rosi"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "hat"
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "ein"
+                      },
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "Text": "Telefon."
                       }
                     ]
                   ]
@@ -9660,7 +10095,7 @@
     },
     {
       "Name": "5: Umlaute",
-      "Color": "#a6bdc8",
+      "Color": "#a7bdc7",
       "VideoPath": "Videos/L2/L2M5.mp4",
       "Lessons": [
         {
@@ -11375,7 +11810,7 @@
     },
     {
       "Name": "6: AU, ÄU oder EU?",
-      "Color": "#98b2bf",
+      "Color": "#98b2be",
       "VideoPath": "Videos/L2/L2M6.mp4",
       "Lessons": [
         {

@@ -1894,6 +1894,10 @@
     <AndroidAsset Include="Assets\Config\level9.json" />
     <AndroidAsset Include="Assets\Config\sandbox.json" />
     <AndroidAsset Include="Assets\Config\testlayout.json" />
+    <AndroidAsset Include="Assets\Sounds\L3_4\Verbs\segle.mp3" />
+    <AndroidAsset Include="Assets\Sounds\L3_4\Verbs\spielte.mp3" />
+    <AndroidAsset Include="Assets\Sounds\L3_4\Verbs\weintest.mp3" />
+    <AndroidAsset Include="Assets\Sounds\L3_4\Verbs\wirst_rechnen.mp3" />
   </ItemGroup>
   <!-- END of minimal required set of assets for level-specific test deployments -->
 
