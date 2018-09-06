@@ -32,3 +32,5 @@
 * [ ]  Freigabe/Merge im Repo. erfolgt
 * [ ]  Im aktuellen APK verfügbar
 * [ ]  Akzeptanztest erfolgt
+
+/label ~Feature ~Design
