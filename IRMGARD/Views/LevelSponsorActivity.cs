@@ -65,15 +65,15 @@ namespace IRMGARD
         {
             switch (DataHolder.Current.CurrentLevel.Id)
             {
-                case 1: return Resource.Drawable.irmgard_danke_01;
-                case 2: return Resource.Drawable.irmgard_danke_02;
-                case 3: return Resource.Drawable.irmgard_danke_03;
-                case 4: return Resource.Drawable.irmgard_danke_04;
-                case 5: return Resource.Drawable.irmgard_danke_04;
-                case 6: return Resource.Drawable.irmgard_danke_04;
-                case 7: return Resource.Drawable.irmgard_danke_04;
-                case 8: return Resource.Drawable.irmgard_danke_04;
-                case 9: return Resource.Drawable.irmgard_danke_04;
+                case 1: return Resource.Drawable.irmgard_danke_level_01;
+                case 2: return Resource.Drawable.irmgard_danke_level_02;
+                case 3: return Resource.Drawable.irmgard_danke_level_03;
+                case 4: return Resource.Drawable.irmgard_danke_level_04;
+                case 5: return Resource.Drawable.irmgard_danke_level_05;
+                case 6: return Resource.Drawable.irmgard_danke_level_06;
+                case 7: return Resource.Drawable.irmgard_danke_level_07;
+                case 8: return Resource.Drawable.irmgard_danke_level_08;
+                case 9: return Resource.Drawable.irmgard_danke_level_09;
                 default: throw new ArgumentOutOfRangeException("DataHolder.Current.CurrentLevel.Id");
             }
         }
