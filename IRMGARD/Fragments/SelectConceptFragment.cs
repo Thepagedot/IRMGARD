@@ -22,6 +22,8 @@ namespace IRMGARD
                     return new DefArtFPSCFragment();
                 case LevelType.ShortLongVowelFPSC:
                     return new ShortLongVowelFPSCFragment();
+                case LevelType.FlexibleFPSC:
+                    return new FlexibleFPSCFragment();
                 case LevelType.FourPicturesSelectConcept:
                     return new FourPicturesSelectConceptFragment();
                 case LevelType.Level3WordqueueSC:

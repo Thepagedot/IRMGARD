@@ -78,6 +78,95 @@ namespace IRMGARD
         }
     }
 
+    public class FlexibleFPSCFragment : SelectConceptFragment
+    {
+        protected override void TransformTaskItems()
+        {
+            exercise = exercise.DeepCopy();
+
+            bool headerFlag = true;
+            bool fpFlag = false;
+            List<List<Concept>> headerItems = new List<List<Concept>>();
+            List<Concept> fourPictureItems = new List<Concept>();
+            List<List<Concept>> footerItems = new List<List<Concept>>();
+            foreach (var conceptGroup in exercise.TaskItems)
+            {
+                fpFlag = false;
+                foreach (var concept in conceptGroup)
+                {
+                    if (concept.Tag != null && concept.Tag.Equals("FP")) {
+                        fourPictureItems.Add(concept);
+                        headerFlag = false;
+                        fpFlag = true;
+                    }
+                }
+                if (!fpFlag) {
+                    if (headerFlag)
+                    {
+                        headerItems.Add(conceptGroup);
+                    }
+                    else
+                    {
+                        footerItems.Add(conceptGroup);
+                    }
+                }
+            }
+
+            if (exercise != null && exercise.OptionItems != null && exercise.OptionItems.Count > 0 && fourPictureItems.Count < 4)
+            {
+                fourPictureItems.AddRange(exercise.OptionItems.PickRandomItems(4 - fourPictureItems.Count).Select(item => { item.IsOption = true; return item; }));
+            }
+
+            if (Lesson.OptionItems != null && Lesson.OptionItems.Count > 0 && fourPictureItems.Count < 4)
+            {
+                fourPictureItems.AddRange(Lesson.OptionItems.PickRandomItems(4 - fourPictureItems.Count).Select(item => { item.IsOption = true; return item; }));
+            }
+
+            fourPictureItems.ForEach(c => {
+                if (c is IResizeable)
+                {
+                    // (c as IResizeable).Size = ((headerItems.Count > 2 && footerItems.Count > 0) || IsSmallHeight() ? 100 : 120);
+                    (c as IResizeable).Size = (IsSmallHeight() ? 100 : 120);
+                }
+            });
+
+            fourPictureItems.Shuffle();
+
+            if (exercise == null)
+            {
+                exercise = new SelectConceptExercise();
+            }
+            exercise.TaskItems = new List<List<Concept>>();
+
+            // Add header lines
+            foreach (var headerLine in headerItems)
+            {
+                exercise.TaskItems.Add(headerLine);
+            }
+            exercise.TaskItems.Add(new List<Concept>() { new Models.Space() });
+
+            // Add four pictures cards
+            exercise.TaskItems.Add(fourPictureItems.GetRange(0, 2));
+            exercise.TaskItems.Add(fourPictureItems.GetRange(2, 2));
+
+            // Add footer lines
+            exercise.TaskItems.Add(new List<Concept>() { new Models.Space(15, 8) });
+            foreach (var footerLine in footerItems)
+            {
+                exercise.TaskItems.Add(footerLine);
+            }
+        }
+
+        protected override void BuildTaskItems()
+        {
+            // Configurate layout for FourPictures
+            Lesson.HideRack = true;
+            Lesson.TopMargins = new int[] { 20, 8 };
+
+            base.BuildTaskItems();
+        }
+    }
+
     public class FourPicturesSelectConceptFragment : SelectConceptFragment
     {
         protected override void TransformTaskItems()
