@@ -10,6 +10,8 @@ namespace IRMGARD.Models
         // The following properies are excluded from comparison
         public bool IsSolution { get; set; }
         public bool IsOption { get; set; }
+        public string Tag { get; set; }
+        public string[] Tags { get; set; }
         public bool ActivateOnSuccess { get; set; }
         public bool ActivateOnMistake { get; set; }
 
@@ -18,6 +20,12 @@ namespace IRMGARD.Models
             Concept clone = (Concept)this.MemberwiseClone();
             clone.IsSolution = IsSolution;
             clone.IsOption = IsOption;
+            clone.Tag = Tag != null ? String.Copy(Tag) : null;
+            if (Tags != null && Tags.Any())
+            {
+                clone.Tags = new string[Tags.Length];
+                Array.Copy(Tags, clone.Tags, Tags.Length);
+            }
             clone.ActivateOnSuccess = ActivateOnSuccess;
             clone.ActivateOnMistake = ActivateOnMistake;
 
@@ -126,7 +134,8 @@ namespace IRMGARD.Models
     public class Sentence : BaseText { }
 
     // A text input item
-    public class InputText : BaseText {
+    public class InputText : BaseText
+    {
         public int LetterCount { get; set; }    // InputText-Box should be at minimum LetterCount letters wide.
 
         public override Concept DeepCopy()
@@ -147,7 +156,7 @@ namespace IRMGARD.Models
         public override int GetHashCode()
         {
             return base.GetHashCode();
-        }        
+        }
     }
 
     // A sound only item
@@ -228,6 +237,52 @@ namespace IRMGARD.Models
         }
     }
 
+    // Vertical Space (e.g. to separate task from option items)
+    public class VertSpace : Space {
+        public VertSpace() {
+            this.Height = 30;
+        }
+    }
+
+    // A simple plain text (as big as a letter)
+    public class TextLetter : Letter
+    {
+        public TextLetter()
+        {
+            this.ShowAsPlainText = true;
+        }
+    }
+
+    // A simple plain text (as big as a word)
+    public class TextWord : Word
+    {
+        public TextWord()
+        {
+            this.ShowAsPlainText = true;
+        }
+    }
+
+    // A simple plain text sentence
+    public class Text : Sentence
+    {
+        public Text()
+        {
+            this.ShowAsPlainText = true;
+        }
+    }
+
+    // A footnote item
+    public class Footnote : Sentence
+    {
+        public Footnote() {
+            this.ShowAsPlainText = true;
+            this.Align = TextAlignment.Right;
+            this.Color = "#545454";
+            this.AddToTextSize = -4;
+        }
+    }
+
+    // Java Wrapper
     public class JavaObjectWrapper<T> : Java.Lang.Object
     {
         public T Obj { get; set; }

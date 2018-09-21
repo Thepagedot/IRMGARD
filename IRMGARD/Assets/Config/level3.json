@@ -8,7 +8,7 @@
   "Modules": [
     {
       "Name": "1: Wiederholungen",
-      "Color": "#d3caaf",
+      "Color": "#e6ecde",
       "VideoPath": "Videos/L3/L3M1.mp4",
       "Lessons": [
         {
@@ -423,10 +423,6 @@
                         "SoundPath": "L2_3/ObjectsWithDefArt/Der_Buegel.mp3"
                       },
                       {
-                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "L2_3/ObjectsWithDefArt/Der_Huegel.mp3"
-                      },
-                      {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
                         "Text": "Der"
@@ -461,10 +457,6 @@
                       {
                         "$type": "IRMGARD.Models.Speaker, IRMGARD",
                         "SoundPath": "L2_3/ObjectsWithDefArt/Der_Koenig.mp3"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "L2_3/ObjectsWithDefArt/Der_Buegel.mp3"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -635,10 +627,6 @@
                         "SoundPath": "L2_3/ObjectsWithDefArt/Die_Kaelte.mp3"
                       },
                       {
-                        "$type": "IRMGARD.Models.Speaker, IRMGARD",
-                        "SoundPath": "L2_3/ObjectsWithDefArt/Der_Koenig.mp3"
-                      },
-                      {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
                         "Text": "Die"
@@ -688,7 +676,7 @@
         {
           "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
           "Id": 313,
-          "Title": "AU, ÄU oder EU?",
+          "Title": "AU ÄU EU?",
           "SoundPath": "L3/Intros/Level_3_Modul_1_Aufgabe_3.mp3",
           "Hint": "Hints/Extra_tip_wichtig_ist_dass_du_taeglich_mit_mir_lernst.mp3",
           "TypeOfLevel": "SelectConcept",
@@ -1141,7 +1129,7 @@
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 314,
-          "Title": "Der, die oder das?",
+          "Title": "Der Die Das?",
           "SoundPath": "L3/Intros/Level_3_Modul_1_Aufgabe_4.mp3",
           "Hint": "Hints/Extra_tip_wer_viel_lernt.mp3",
           "TypeOfLevel": "DragIntoGap",
@@ -1984,13 +1972,13 @@
     },
     {
       "Name": "2: Nomen",
-      "Color": "#aec2c4",
+      "Color": "#dae3cf",
       "VideoPath": "Videos/L3/L3M2.mp4",
       "Lessons": [
         {
           "$type": "IRMGARD.Models.DragIntoGap, IRMGARD",
           "Id": 321,
-          "Title": "HEIT + KEIT?",
+          "Title": "-heit / -keit?",
           "SoundPath": "L3/Intros/Level_3_Modul_2_Aufgabe_1.mp3",
           "TypeOfLevel": "DragIntoGap",
           "HighlightCorrectOptionsOnMistake": true,
@@ -2591,7 +2579,7 @@
         {
           "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
           "Id": 323,
-          "Title": "Alles Rund um Nomen?",
+          "Title": "Die Nomen",
           "SoundPath": "L3/Intros/Level_3_Modul_2_Aufgabe_3.mp3",
           "Hint": "Hints/Extra_tip_hast_du_einen_freund.mp3",
           "TypeOfLevel": "FourPicturesSelectConcept",
@@ -3533,7 +3521,7 @@
     },
     {
       "Name": "3: Verben",
-      "Color": "#d8cad0",
+      "Color": "#ced9be",
       "VideoPath": "Videos/L3/L3M3.mp4",
       "Lessons": [
         {
@@ -3554,7 +3542,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "tanz"
+                        "Text": "spinn"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3569,7 +3557,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "rud"
+                        "Text": "plapp"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3584,7 +3572,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "lach"
+                        "Text": "text"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3599,7 +3587,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "wein"
+                        "Text": "rock"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3614,7 +3602,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "arbeit"
+                        "Text": "flipp"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3635,7 +3623,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "säub"
+                        "Text": "brett"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3650,7 +3638,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "würf"
+                        "Text": "dadd"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3680,7 +3668,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "trink"
+                        "Text": "flitz"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3716,7 +3704,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "stolp"
+                        "Text": "knatt"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3731,7 +3719,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "lauf"
+                        "Text": "nerv"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3746,7 +3734,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "schreib"
+                        "Text": "klatsch"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3767,7 +3755,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "les"
+                        "Text": "paff"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3782,7 +3770,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "bett"
+                        "Text": "fied"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -3863,7 +3851,7 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "ärg"
+                        "Text": "plapp"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -4639,7 +4627,7 @@
     },
     {
       "Name": "4: Konjugieren",
-      "Color": "#c1caad",
+      "Color": "#c1d0ae",
       "VideoPath": "Videos/L3/L3M4.mp4",
       "Lessons": [
         {
@@ -4711,7 +4699,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "renne"
+                        "Text": "bretter"
                       }
                     ],
                     [
@@ -4724,7 +4712,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "rennst"
+                        "Text": "bretterst"
                       }
                     ],
                     [
@@ -4737,7 +4725,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "rennt"
+                        "Text": "brettert"
                       }
                     ]
                   ]
@@ -4754,7 +4742,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lache"
+                        "Text": "spinne"
                       }
                     ],
                     [
@@ -4767,7 +4755,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lachst"
+                        "Text": "spinnst"
                       }
                     ],
                     [
@@ -4780,50 +4768,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lacht"
-                      }
-                    ]
-                  ]
-                },
-                {
-                  "TaskItems": [
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "ShowAsPlainText": true,
-                        "Align": "Left",
-                        "Text": "ich"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "tanze"
-                      }
-                    ],
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "ShowAsPlainText": true,
-                        "Align": "Left",
-                        "Text": "du"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "tanzt"
-                      }
-                    ],
-                    [
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "ShowAsPlainText": true,
-                        "Align": "Left",
-                        "Text": "er, sie, es"
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Text": "tanzt"
+                        "Text": "spinnt"
                       }
                     ]
                   ]
@@ -4846,7 +4791,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "weine"
+                        "Text": "nerve"
                       }
                     ],
                     [
@@ -4859,7 +4804,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "weinst"
+                        "Text": "nervst"
                       }
                     ],
                     [
@@ -4872,7 +4817,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "weint"
+                        "Text": "nervt"
                       }
                     ]
                   ]
@@ -4932,7 +4877,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "schaue"
+                        "Text": "paffe"
                       }
                     ],
                     [
@@ -4945,7 +4890,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "schaust"
+                        "Text": "paffst"
                       }
                     ],
                     [
@@ -4958,7 +4903,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "schaut"
+                        "Text": "pafft"
                       }
                     ]
                   ]
@@ -5067,7 +5012,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "schreie"
+                        "Text": "klatsche"
                       }
                     ],
                     [
@@ -5080,7 +5025,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "schreist"
+                        "Text": "klatschst"
                       }
                     ],
                     [
@@ -5093,7 +5038,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "schreit"
+                        "Text": "klatscht"
                       }
                     ]
                   ]
@@ -5202,7 +5147,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "laufe"
+                        "Text": "glotze"
                       }
                     ],
                     [
@@ -5215,7 +5160,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "läufst"
+                        "Text": "glotzt"
                       }
                     ],
                     [
@@ -5228,7 +5173,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "läuft"
+                        "Text": "glotzt"
                       }
                     ]
                   ]
@@ -5288,7 +5233,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "spiele"
+                        "Text": "bretter"
                       }
                     ],
                     [
@@ -5301,7 +5246,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "spielst"
+                        "Text": "bretterst"
                       }
                     ],
                     [
@@ -5314,7 +5259,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "spielt"
+                        "Text": "brettert"
                       }
                     ]
                   ]
@@ -5423,7 +5368,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "feiere"
+                        "Text": "tröte"
                       }
                     ],
                     [
@@ -5436,7 +5381,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "feierst"
+                        "Text": "trötest"
                       }
                     ],
                     [
@@ -5449,7 +5394,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "feiert"
+                        "Text": "trötet"
                       }
                     ]
                   ]
@@ -5748,7 +5693,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lachen"
+                        "Text": "spinnen"
                       }
                     ],
                     [
@@ -5761,7 +5706,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lacht"
+                        "Text": "spinnt"
                       }
                     ],
                     [
@@ -5774,7 +5719,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lachen"
+                        "Text": "spinnen"
                       }
                     ]
                   ]
@@ -5791,7 +5736,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "weinen"
+                        "Text": "flippern"
                       }
                     ],
                     [
@@ -5804,7 +5749,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "weint"
+                        "Text": "flippert"
                       }
                     ],
                     [
@@ -5817,7 +5762,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "weinen"
+                        "Text": "flippern"
                       }
                     ]
                   ]
@@ -5840,7 +5785,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "spechen"
+                        "Text": "paffen"
                       }
                     ],
                     [
@@ -5853,7 +5798,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "sprecht"
+                        "Text": "pafft"
                       }
                     ],
                     [
@@ -5866,7 +5811,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "sprechen"
+                        "Text": "paffen"
                       }
                     ]
                   ]
@@ -5926,7 +5871,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "gehen"
+                        "Text": "brettern"
                       }
                     ],
                     [
@@ -5939,7 +5884,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "geht"
+                        "Text": "brettert"
                       }
                     ],
                     [
@@ -5952,7 +5897,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "gehen"
+                        "Text": "brettern"
                       }
                     ]
                   ]
@@ -5975,7 +5920,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "geben"
+                        "Text": "klimpern"
                       }
                     ],
                     [
@@ -5988,7 +5933,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "gebt"
+                        "Text": "klimpert"
                       }
                     ],
                     [
@@ -6001,7 +5946,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "geben"
+                        "Text": "klimpern"
                       }
                     ]
                   ]
@@ -6018,7 +5963,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "mögen"
+                        "Text": "fummeln"
                       }
                     ],
                     [
@@ -6031,7 +5976,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "mögt"
+                        "Text": "fummelt"
                       }
                     ],
                     [
@@ -6044,7 +5989,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "mögen"
+                        "Text": "fummeln"
                       }
                     ]
                   ]
@@ -6061,7 +6006,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "fahren"
+                        "Text": "kaspern"
                       }
                     ],
                     [
@@ -6074,7 +6019,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "fahrt"
+                        "Text": "kaspert"
                       }
                     ],
                     [
@@ -6087,7 +6032,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "fahren"
+                        "Text": "kaspern"
                       }
                     ]
                   ]
@@ -6110,7 +6055,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "reisen"
+                        "Text": "rocken"
                       }
                     ],
                     [
@@ -6123,7 +6068,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "reist"
+                        "Text": "rockt"
                       }
                     ],
                     [
@@ -6136,7 +6081,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "reisen"
+                        "Text": "rocken"
                       }
                     ]
                   ]
@@ -6153,7 +6098,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "kennen"
+                        "Text": "knabbern"
                       }
                     ],
                     [
@@ -6166,7 +6111,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "kennt"
+                        "Text": "knabbert"
                       }
                     ],
                     [
@@ -6179,7 +6124,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "kennen"
+                        "Text": "knabbern"
                       }
                     ]
                   ]
@@ -6196,7 +6141,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "arbeiten"
+                        "Text": "fiedeln"
                       }
                     ],
                     [
@@ -6209,7 +6154,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "arbeitet"
+                        "Text": "fiedelt"
                       }
                     ],
                     [
@@ -6222,7 +6167,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "arbeiten"
+                        "Text": "fiedeln"
                       }
                     ]
                   ]
@@ -6872,7 +6817,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lache"
+                        "Text": "popel"
                       }
                     ],
                     [
@@ -6885,7 +6830,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lachst"
+                        "Text": "popelst"
                       }
                     ],
                     [
@@ -6898,7 +6843,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lacht"
+                        "Text": "popelt"
                       }
                     ],
                     [
@@ -6911,7 +6856,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lachen"
+                        "Text": "popeln"
                       }
                     ],
                     [
@@ -6924,7 +6869,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lacht"
+                        "Text": "popelt"
                       }
                     ],
                     [
@@ -6937,7 +6882,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lachen"
+                        "Text": "popeln"
                       }
                     ]
                   ]
@@ -6954,7 +6899,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "trinke"
+                        "Text": "pinkel"
                       }
                     ],
                     [
@@ -6967,7 +6912,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "trinkst"
+                        "Text": "pinkelst"
                       }
                     ],
                     [
@@ -6980,7 +6925,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "trinkt"
+                        "Text": "pinkelt"
                       }
                     ],
                     [
@@ -6993,7 +6938,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "trinken"
+                        "Text": "pinkeln"
                       }
                     ],
                     [
@@ -7006,7 +6951,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "trinkt"
+                        "Text": "pinkelt"
                       }
                     ],
                     [
@@ -7019,7 +6964,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "trinken"
+                        "Text": "pinkeln"
                       }
                     ]
                   ]
@@ -7042,7 +6987,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "küsse"
+                        "Text": "nerve"
                       }
                     ],
                     [
@@ -7055,7 +7000,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "küsst"
+                        "Text": "nervst"
                       }
                     ],
                     [
@@ -7068,7 +7013,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "küsst"
+                        "Text": "nervt"
                       }
                     ],
                     [
@@ -7081,7 +7026,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "küssen"
+                        "Text": "nerven"
                       }
                     ],
                     [
@@ -7094,7 +7039,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "küsst"
+                        "Text": "nervt"
                       }
                     ],
                     [
@@ -7107,7 +7052,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "küssen"
+                        "Text": "nerven"
                       }
                     ]
                   ]
@@ -7124,7 +7069,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "liebe"
+                        "Text": "flippe"
                       }
                     ],
                     [
@@ -7137,7 +7082,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "liebst"
+                        "Text": "flippst"
                       }
                     ],
                     [
@@ -7150,7 +7095,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "liebt"
+                        "Text": "flippt"
                       }
                     ],
                     [
@@ -7163,7 +7108,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lieben"
+                        "Text": "flippen"
                       }
                     ],
                     [
@@ -7176,7 +7121,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "liebt"
+                        "Text": "flippt"
                       }
                     ],
                     [
@@ -7189,7 +7134,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lieben"
+                        "Text": "flippen"
                       }
                     ]
                   ]
@@ -7212,7 +7157,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "feier"
+                        "Text": "rocke"
                       }
                     ],
                     [
@@ -7225,7 +7170,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "feierst"
+                        "Text": "rockst"
                       }
                     ],
                     [
@@ -7238,7 +7183,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "feiert"
+                        "Text": "rockt"
                       }
                     ],
                     [
@@ -7251,7 +7196,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "feiern"
+                        "Text": "rocken"
                       }
                     ],
                     [
@@ -7264,7 +7209,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "feiert"
+                        "Text": "rockt"
                       }
                     ],
                     [
@@ -7277,7 +7222,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "feiern"
+                        "Text": "rocken"
                       }
                     ]
                   ]
@@ -7294,7 +7239,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "mache"
+                        "Text": "tröte"
                       }
                     ],
                     [
@@ -7307,7 +7252,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "machst"
+                        "Text": "trötest"
                       }
                     ],
                     [
@@ -7320,7 +7265,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "macht"
+                        "Text": "trötet"
                       }
                     ],
                     [
@@ -7333,7 +7278,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "machen"
+                        "Text": "tröten"
                       }
                     ],
                     [
@@ -7346,7 +7291,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "macht"
+                        "Text": "trötet"
                       }
                     ],
                     [
@@ -7359,7 +7304,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "machen"
+                        "Text": "tröten"
                       }
                     ]
                   ]
@@ -7464,7 +7409,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "kaue"
+                        "Text": "spinne"
                       }
                     ],
                     [
@@ -7477,7 +7422,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "kaust"
+                        "Text": "spinnst"
                       }
                     ],
                     [
@@ -7490,7 +7435,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "kaut"
+                        "Text": "spinnt"
                       }
                     ],
                     [
@@ -7503,7 +7448,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "kauen"
+                        "Text": "spinnen"
                       }
                     ],
                     [
@@ -7516,7 +7461,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "kaut"
+                        "Text": "spinnt"
                       }
                     ],
                     [
@@ -7529,7 +7474,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "kauen"
+                        "Text": "spinnen"
                       }
                     ]
                   ]
@@ -7634,7 +7579,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "teste"
+                        "Text": "glotze"
                       }
                     ],
                     [
@@ -7647,7 +7592,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "testest"
+                        "Text": "glotzt"
                       }
                     ],
                     [
@@ -7660,7 +7605,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "testet"
+                        "Text": "glotzt"
                       }
                     ],
                     [
@@ -7673,7 +7618,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "testen"
+                        "Text": "glotzen"
                       }
                     ],
                     [
@@ -7686,7 +7631,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "testet"
+                        "Text": "glotzt"
                       }
                     ],
                     [
@@ -7699,7 +7644,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "testen"
+                        "Text": "glotzen"
                       }
                     ]
                   ]
@@ -7712,7 +7657,7 @@
     },
     {
       "Name": "5: Zeiten",
-      "Color": "#dbcf93",
+      "Color": "#b5c69e",
       "VideoPath": "Videos/L3/L3M5.mp4",
       "Lessons": [
         {
@@ -7734,21 +7679,21 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ActivateOnMistake": true,
-                        "Text": "lese"
+                        "Text": "fummelt"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "Text": "Ich"
+                        "Text": "Es"
                       },
                       {
                         "$type": "IRMGARD.Models.InputText, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lese"
+                        "Text": "fummelt"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
-                        "Text": "(lesen)"
+                        "Text": "(fummeln)"
                       }
                     ]
                   ]
@@ -7759,7 +7704,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ActivateOnMistake": true,
-                        "Text": "spiele"
+                        "Text": "flitze"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -7768,12 +7713,12 @@
                       {
                         "$type": "IRMGARD.Models.InputText, IRMGARD",
                         "IsSolution": true,
-                        "Text": "spiele"
+                        "Text": "flitze"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
-                        "Text": "(spielen)"
+                        "Text": "(flitzen)"
                       }
                     ]
                   ]
@@ -7784,7 +7729,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ActivateOnMistake": true,
-                        "Text": "arbeiten"
+                        "Text": "kaspern"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -7793,12 +7738,12 @@
                       {
                         "$type": "IRMGARD.Models.InputText, IRMGARD",
                         "IsSolution": true,
-                        "Text": "arbeiten"
+                        "Text": "kaspern"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
-                        "Text": "(arbeiten)"
+                        "Text": "(kaspern)"
                       }
                     ]
                   ]
@@ -7815,7 +7760,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ActivateOnMistake": true,
-                        "Text": "liest"
+                        "Text": "plappert"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -7824,12 +7769,12 @@
                       {
                         "$type": "IRMGARD.Models.InputText, IRMGARD",
                         "IsSolution": true,
-                        "Text": "liest"
+                        "Text": "plappert"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
-                        "Text": "(lesen)"
+                        "Text": "(plappern)"
                       }
                     ]
                   ]
@@ -7840,7 +7785,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ActivateOnMistake": true,
-                        "Text": "arbeiten"
+                        "Text": "brettern"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -7849,12 +7794,12 @@
                       {
                         "$type": "IRMGARD.Models.InputText, IRMGARD",
                         "IsSolution": true,
-                        "Text": "arbeiten"
+                        "Text": "brettern"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
-                        "Text": "(arbeiten)"
+                        "Text": "(brettern)"
                       }
                     ]
                   ]
@@ -7896,7 +7841,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ActivateOnMistake": true,
-                        "Text": "lesen"
+                        "Text": "paffen"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -7905,12 +7850,12 @@
                       {
                         "$type": "IRMGARD.Models.InputText, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lesen"
+                        "Text": "paffen"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
-                        "Text": "(lesen)"
+                        "Text": "(paffen)"
                       }
                     ]
                   ]
@@ -7921,7 +7866,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ActivateOnMistake": true,
-                        "Text": "lachst"
+                        "Text": "spinnst"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -7930,12 +7875,12 @@
                       {
                         "$type": "IRMGARD.Models.InputText, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lachst"
+                        "Text": "spinnst"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
-                        "Text": "(lachen)"
+                        "Text": "(spinnen)"
                       }
                     ]
                   ]
@@ -7946,7 +7891,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ActivateOnMistake": true,
-                        "Text": "waschen"
+                        "Text": "fiedeln"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -7955,12 +7900,12 @@
                       {
                         "$type": "IRMGARD.Models.InputText, IRMGARD",
                         "IsSolution": true,
-                        "Text": "waschen"
+                        "Text": "fiedeln"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
-                        "Text": "(waschen)"
+                        "Text": "(fiedeln)"
                       }
                     ]
                   ]
@@ -7977,7 +7922,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ActivateOnMistake": true,
-                        "Text": "liest"
+                        "Text": "popelst"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -7986,12 +7931,12 @@
                       {
                         "$type": "IRMGARD.Models.InputText, IRMGARD",
                         "IsSolution": true,
-                        "Text": "liest"
+                        "Text": "popelst"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
-                        "Text": "(lesen)"
+                        "Text": "(popeln)"
                       }
                     ]
                   ]
@@ -8002,7 +7947,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ActivateOnMistake": true,
-                        "Text": "kaufe"
+                        "Text": "bretter"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -8011,12 +7956,12 @@
                       {
                         "$type": "IRMGARD.Models.InputText, IRMGARD",
                         "IsSolution": true,
-                        "Text": "kaufe"
+                        "Text": "bretter"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
-                        "Text": "(kaufen)"
+                        "Text": "(brettern)"
                       }
                     ]
                   ]
@@ -8058,7 +8003,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ActivateOnMistake": true,
-                        "Text": "lesen"
+                        "Text": "texten"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -8067,12 +8012,12 @@
                       {
                         "$type": "IRMGARD.Models.InputText, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lesen"
+                        "Text": "texten"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
-                        "Text": "(lesen)"
+                        "Text": "(texten)"
                       }
                     ]
                   ]
@@ -8083,7 +8028,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ActivateOnMistake": true,
-                        "Text": "arbeitet"
+                        "Text": "popelt"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -8092,12 +8037,12 @@
                       {
                         "$type": "IRMGARD.Models.InputText, IRMGARD",
                         "IsSolution": true,
-                        "Text": "arbeitet"
+                        "Text": "popelt"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
-                        "Text": "(arbeiten)"
+                        "Text": "(popeln)"
                       }
                     ]
                   ]
@@ -8108,7 +8053,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ActivateOnMistake": true,
-                        "Text": "trinkst"
+                        "Text": "plapperst"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
@@ -8117,12 +8062,12 @@
                       {
                         "$type": "IRMGARD.Models.InputText, IRMGARD",
                         "IsSolution": true,
-                        "Text": "trinkst"
+                        "Text": "plapperst"
                       },
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "ShowAsPlainText": true,
-                        "Text": "(trinken)"
+                        "Text": "(plappern)"
                       }
                     ]
                   ]
@@ -8155,14 +8100,14 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "tanzte"
+                        "Text": "flitzte"
                       }
                     ]
                   ],
                   "OptionItems": [
                     {
                       "$type": "IRMGARD.Models.Word, IRMGARD",
-                      "Text": "tanzt"
+                      "Text": "flitzt"
                     }
                   ]
                 },
@@ -8177,14 +8122,14 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "dusche"
+                        "Text": "duschte"
                       }
                     ]
                   ],
                   "OptionItems": [
                     {
                       "$type": "IRMGARD.Models.Word, IRMGARD",
-                      "Text": "duschte"
+                      "Text": "dusche"
                     }
                   ]
                 },
@@ -8199,14 +8144,14 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lerntest"
+                        "Text": "fummeltest"
                       }
                     ]
                   ],
                   "OptionItems": [
                     {
                       "$type": "IRMGARD.Models.Word, IRMGARD",
-                      "Text": "lernst"
+                      "Text": "fummelst"
                     }
                   ]
                 }
@@ -8277,14 +8222,14 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "arbeitet"
+                        "Text": "klatschtet"
                       }
                     ]
                   ],
                   "OptionItems": [
                     {
                       "$type": "IRMGARD.Models.Word, IRMGARD",
-                      "Text": "arbeitet"
+                      "Text": "klatschtete"
                     }
                   ]
                 },
@@ -8327,14 +8272,14 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "machte"
+                        "Text": "bretterte"
                       }
                     ]
                   ],
                   "OptionItems": [
                     {
                       "$type": "IRMGARD.Models.Word, IRMGARD",
-                      "Text": "mache"
+                      "Text": "brettere"
                     }
                   ]
                 },
@@ -8377,14 +8322,14 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "feierte"
+                        "Text": "flipperte"
                       }
                     ]
                   ],
                   "OptionItems": [
                     {
                       "$type": "IRMGARD.Models.Word, IRMGARD",
-                      "Text": "feiert"
+                      "Text": "flippertest"
                     }
                   ]
                 },
@@ -8399,14 +8344,14 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "riefen"
+                        "Text": "fummelten"
                       }
                     ]
                   ],
                   "OptionItems": [
                     {
                       "$type": "IRMGARD.Models.Word, IRMGARD",
-                      "Text": "rufen"
+                      "Text": "fummelteten"
                     }
                   ]
                 }
@@ -8443,7 +8388,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "lachen"
+                        "Text": "flitzen"
                       }
                     ]
                   ],
@@ -8454,7 +8399,7 @@
                     },
                     {
                       "$type": "IRMGARD.Models.Word, IRMGARD",
-                      "Text": "lachte"
+                      "Text": "flitzte"
                     }
                   ]
                 },
@@ -8474,7 +8419,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "tanzen"
+                        "Text": "fummeln"
                       }
                     ]
                   ],
@@ -8485,7 +8430,7 @@
                     },
                     {
                       "$type": "IRMGARD.Models.Word, IRMGARD",
-                      "Text": "tanze"
+                      "Text": "fummelte"
                     }
                   ]
                 },
@@ -8542,7 +8487,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "fehlen"
+                        "Text": "brettern"
                       }
                     ]
                   ],
@@ -8553,7 +8498,7 @@
                     },
                     {
                       "$type": "IRMGARD.Models.Word, IRMGARD",
-                      "Text": "fehlt"
+                      "Text": "bretterte"
                     }
                   ]
                 },
@@ -8641,7 +8586,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "kochen"
+                        "Text": "nerven"
                       }
                     ]
                   ],
@@ -8652,7 +8597,7 @@
                     },
                     {
                       "$type": "IRMGARD.Models.Word, IRMGARD",
-                      "Text": "kochte"
+                      "Text": "nervten"
                     }
                   ]
                 }
@@ -8678,7 +8623,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "arbeiten"
+                        "Text": "plappern"
                       }
                     ]
                   ],
@@ -8689,7 +8634,7 @@
                     },
                     {
                       "$type": "IRMGARD.Models.Word, IRMGARD",
-                      "Text": "arbeitet"
+                      "Text": "pappernden"
                     }
                   ]
                 },
@@ -8777,7 +8722,7 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Text": "handeln"
+                        "Text": "knattern"
                       }
                     ]
                   ],
@@ -8788,7 +8733,7 @@
                     },
                     {
                       "$type": "IRMGARD.Models.Word, IRMGARD",
-                      "Text": "handelten"
+                      "Text": "knatternst"
                     }
                   ]
                 }
@@ -8799,7 +8744,7 @@
         {
           "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
           "Id": 354,
-          "Title": "Jetzt",
+          "Title": "Gemischt",
           "SoundPath": "L3/Intros/Level_3_Modul_5_Aufgabe_4.mp3",
           "Hint": "Hints/Extra_tip_wichtig_ist_dass_du_taeglich_mit_mir_lernst.mp3",
           "TypeOfLevel": "SelectConcept",
@@ -8818,13 +8763,13 @@
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
                         "IsSolution": true,
                         "Size": 100,
-                        "Text": "Ich gehe"
+                        "Text": "Ich paffe"
                       },
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
                         "IsOption": true,
                         "Size": 100,
-                        "Text": "Sie las"
+                        "Text": "Sie lechzte"
                       }
                     ],
                     [
@@ -8832,13 +8777,13 @@
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
                         "IsSolution": true,
                         "Size": 100,
-                        "Text": "Wir singen"
+                        "Text": "Wir flippern"
                       },
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
                         "IsOption": true,
                         "Size": 100,
-                        "Text": "Ihr tanztet"
+                        "Text": "Ihr nervtet"
                       }
                     ],
                     [
@@ -8875,11 +8820,11 @@
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
                         "IsSolution": true,
                         "Size": 100,
-                        "Text": "Du kauftest"
+                        "Text": "Du fopptest"
                       },
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "IsOption": true,
+                        "IsSolution": true,
                         "Size": 100,
                         "Text": "Sie filterte"
                       }
@@ -8924,13 +8869,13 @@
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
                         "IsSolution": true,
                         "Size": 100,
-                        "Text": "Sie sagte"
+                        "Text": "Sie fiedelte"
                       },
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
                         "IsOption": true,
                         "Size": 100,
-                        "Text": "Wir werden tanzen"
+                        "Text": "Wir werden glotzen"
                       }
                     ],
                     [
@@ -8953,11 +8898,11 @@
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
                         "IsSolution": true,
                         "Size": 100,
-                        "Text": "Wir lesen"
+                        "Text": "Wir rocken"
                       },
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "IsOption": true,
+                        "IsSolution": true,
                         "Size": 100,
                         "Text": "Ihr jubelt"
                       }
@@ -9022,7 +8967,7 @@
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
                         "IsSolution": true,
                         "Size": 100,
-                        "Text": "Du wirst fordern"
+                        "Text": "Du wirst klatschen"
                       }
                     ],
                     [
@@ -9051,7 +8996,7 @@
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
                         "IsOption": true,
                         "Size": 100,
-                        "Text": "Er wird frieren"
+                        "Text": "Er wird nerven"
                       }
                     ],
                     [
@@ -9059,7 +9004,7 @@
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
                         "IsOption": true,
                         "Size": 100,
-                        "Text": "Wir werden lieben"
+                        "Text": "Wir werden plappern"
                       },
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
@@ -9143,7 +9088,7 @@
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
                         "IsOption": true,
                         "Size": 100,
-                        "Text": "Du greifst"
+                        "Text": "Du kasperst"
                       },
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
@@ -9216,7 +9161,47 @@
               "Id": 3551,
               "LetterLocations": [
                 {
+                  "Location": 0,
+                  "SoundPath": "L3_4/Verbs/spielte.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 3552,
+              "LetterLocations": [
+                {
                   "Location": 2,
+                  "SoundPath": "L3_4/Verbs/wirst_rechnen.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 3553,
+              "LetterLocations": [
+                {
+                  "Location": 1,
+                  "SoundPath": "L3_4/Verbs/klingle.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 3554,
+              "LetterLocations": [
+                {
+                  "Location": 0,
+                  "SoundPath": "L3_4/Verbs/weintest.mp3"
+                }
+              ]
+            },
+            {
+              "$type": "IRMGARD.Models.HearTheLetterIteration, IRMGARD",
+              "Id": 3555,
+              "LetterLocations": [
+                {
+                  "Location": 1,
                   "SoundPath": "L3_4/Verbs/lachen.mp3"
                 }
               ]
@@ -9230,6 +9215,7 @@
           "SoundPath": "L3_4/Intros/Level_3_Modul_5_Aufgabe_6.mp3",
           "Hint": "Hints/Extra_tip_wichtig_ist_dass_du_taeglich_mit_mir_lernst.mp3",
           "TypeOfLevel": "SelectConcept",
+          "SingleChoice": true,
           "HighlightCorrectOptionsOnMistake": true,
           "HideRack": true,
           "TopMargins": [ -1, 60 ],
@@ -9243,30 +9229,31 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Der Junge spielt mit dem Hund."
+                        "Text": "Ein Männlein stand im Walde."
+                      }
+                    ],
+                    [
+                      {
+                        "$type": "IRMGARD.Models.Word, IRMGARD",
+                        "IsSolution": true,
+                        "Text": "Vergangenheit",
+                        "AddToTextSize": -3
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
-                        "Text": "Vergangenheit",
-                        "AddToTextSize": -6
-                      },
-                      {
-                        "$type": "IRMGARD.Models.Word, IRMGARD",
-                        "IsSolution": true,
-                        "Size": 100,
                         "Text": "Gegenwart",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Zukunft",
-                        "AddToTextSize": -6
+                        "AddToTextSize": -3
                       }
                     ]
                   ]
@@ -9276,30 +9263,31 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Das Mädchen weinte gestern."
+                        "Text": "Ich hatte eine Tasse im Schrank."
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Size": 100,
                         "Text": "Vergangenheit",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Gegenwart",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Zukunft",
-                        "AddToTextSize": -6
+                        "AddToTextSize": -3
                       }
                     ]
                   ]
@@ -9309,30 +9297,31 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Sie Sonne wird scheinen."
+                        "Text": "Wir werden einen Vogel haben."
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Vergangenheit",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Gegenwart",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Size": 100,
                         "Text": "Zukunft",
-                        "AddToTextSize": -6
+                        "AddToTextSize": -3
                       }
                     ]
                   ]
@@ -9348,30 +9337,31 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Der Zahn schmerzt."
+                        "Text": "Ich hab eine Meise."
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Vergangenheit",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Size": 100,
                         "Text": "Gegenwart",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Zukunft",
-                        "AddToTextSize": -6
+                        "AddToTextSize": -3
                       }
                     ]
                   ]
@@ -9381,30 +9371,31 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Die Mannschaft wird gewinnen."
+                        "Text": "Da wird ein Pferd auf dem Flur stehen."
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Vergangenheit",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Gegenwart",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Size": 100,
                         "Text": "Zukunft",
-                        "AddToTextSize": -6
+                        "AddToTextSize": -3
                       }
                     ]
                   ]
@@ -9414,30 +9405,31 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Die Schüler werden Hausaufgaben machen."
+                        "Text": "Ein Mann wird rot sehen."
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Vergangenheit",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Gegenwart",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Size": 100,
                         "Text": "Zukunft",
-                        "AddToTextSize": -6
+                        "AddToTextSize": -3
                       }
                     ]
                   ]
@@ -9453,30 +9445,31 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Der Hahn tropft."
+                        "Text": "Der Elefant geht in einen Laden."
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Vergangenheit",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Size": 100,
                         "Text": "Gegenwart",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Zukunft",
-                        "AddToTextSize": -6
+                        "AddToTextSize": -3
                       }
                     ]
                   ]
@@ -9486,30 +9479,31 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Der Hund wird fressen."
+                        "Text": "Rio wird Ronni in die Waden beißen."
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Vergangenheit",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Gegenwart",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Size": 100,
                         "Text": "Zukunft",
-                        "AddToTextSize": -6
+                        "AddToTextSize": -3
                       }
                     ]
                   ]
@@ -9519,30 +9513,31 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Das Kind trank ein Glas Wasser."
+                        "Text": "Das war ein Saftladen."
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Size": 100,
                         "Text": "Vergangenheit",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Gegenwart",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Zukunft",
-                        "AddToTextSize": -6
+                        "AddToTextSize": -3
                       }
                     ]
                   ]
@@ -9558,30 +9553,31 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Die Melone schmeckte gut."
+                        "Text": "Die Meute war komplett aus dem Häuschen."
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Size": 100,
                         "Text": "Vergangenheit",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Gegenwart",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Zukunft",
-                        "AddToTextSize": -6
+                        "AddToTextSize": -3
                       }
                     ]
                   ]
@@ -9591,30 +9587,31 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Die Banane ist krumm."
+                        "Text": "Der Teufel trägt Prada."
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Vergangenheit",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Size": 100,
                         "Text": "Gegenwart",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Zukunft",
-                        "AddToTextSize": -6
+                        "AddToTextSize": -3
                       }
                     ]
                   ]
@@ -9631,23 +9628,24 @@
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Vergangenheit",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Gegenwart",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Size": 100,
                         "Text": "Zukunft",
-                        "AddToTextSize": -6
+                        "AddToTextSize": -3
                       }
                     ]
                   ]
@@ -9663,30 +9661,31 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Die Katze jammert."
+                        "Text": "Irren ist menschlich."
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Vergangenheit",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Size": 100,
                         "Text": "Gegenwart",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Zukunft",
-                        "AddToTextSize": -6
+                        "AddToTextSize": -3
                       }
                     ]
                   ]
@@ -9696,30 +9695,31 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Das Meer war kalt."
+                        "Text": "Gretchen lachte sich ins Fäustchen."
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Size": 100,
                         "Text": "Vergangenheit",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Gegenwart",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Zukunft",
-                        "AddToTextSize": -6
+                        "AddToTextSize": -3
                       }
                     ]
                   ]
@@ -9729,30 +9729,31 @@
                     [
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
-                        "Text": "Die Frisur war schrecklich."
+                        "Text": "Der Kommissar ging um."
                       }
                     ],
                     [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsSolution": true,
-                        "Size": 100,
                         "Text": "Vergangenheit",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Gegenwart",
-                        "AddToTextSize": -6
-                      },
+                        "AddToTextSize": -3
+                      }
+                    ],
+                    [
                       {
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
-                        "Size": 100,
                         "Text": "Zukunft",
-                        "AddToTextSize": -6
+                        "AddToTextSize": -3
                       }
                     ]
                   ]
@@ -9765,7 +9766,7 @@
     },
     {
       "Name": "6: EI",
-      "Color": "#e5c8c4",
+      "Color": "#a9bd8e",
       "VideoPath": "Videos/L3/L3M6.mp4",
       "Lessons": [
         {
@@ -10220,7 +10221,7 @@
         {
           "$type": "IRMGARD.Models.SelectConcept, IRMGARD",
           "Id": 364,
-          "Title": "Grundformen",
+          "Title": "Sätze",
           "SoundPath": "L3_4/Intros/Level_3_Modul_6_Aufgabe_4.mp3",
           "Hint": "Hints/Extra_tip_wichtig_ist_dass_du_taeglich_mit_mir_lernst.mp3",
           "TypeOfLevel": "SelectConcept",
@@ -10306,7 +10307,7 @@
                       {
                         "$type": "IRMGARD.Models.Sentence, IRMGARD",
                         "ShowAsPlainText": true,
-                        "Text": "Kunstinteressierte fehlten Werke aus der Moderne, darum schaute sie in die Ferne."
+                        "Text": "Kunstinteressierten fehlten Werke aus der Moderne, darum schaute sie in die Ferne."
                       }
                     ],
                     [
@@ -10493,7 +10494,7 @@
                         "$type": "IRMGARD.Models.Word, IRMGARD",
                         "IsOption": true,
                         "Size": 120,
-                        "Text": "Im Schwimmbad"
+                        "Text": "Im Schwimm- bad"
                       }
                     ]
                   ]

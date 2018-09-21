@@ -56,10 +56,26 @@ namespace IRMGARD
                 }
 
                 int k = 0;
+                bool isActivateOnlyRow = true;
+                bool isSpaceOnlyRow = true;
+                bool isFootnoteRow = true;
                 foreach (var item in taskItemRow)
                 {
                     // Exclude special case concepts
-                    if (item.ActivateOnSuccess || item.ActivateOnMistake) { continue; }
+                    if (item.ActivateOnSuccess || item.ActivateOnMistake) {
+                        continue;
+                    } else {
+                        isActivateOnlyRow = false;
+                    }
+
+                    // Exclude special case concepts
+                    if (!(item is IRMGARD.Models.Space)) {
+                        isSpaceOnlyRow = false;
+                    }
+
+                    if (!(item is IRMGARD.Models.Footnote)) {
+                        isFootnoteRow = false;
+                    }
 
                     // Invoke callback
                     var view = CreateAndInitConceptView(item);
@@ -79,7 +95,7 @@ namespace IRMGARD
                 // Replace top margin of task item rows
                 SetTopMargin(1, llTaskItemRow);
 
-                if (Lesson.HideRack)
+                if (Lesson.HideRack || isActivateOnlyRow || isSpaceOnlyRow || isFootnoteRow)
                 {
                     llTaskItemRowRoot.FindViewById<ImageView>(Resource.Id.ivDivider).Visibility = ViewStates.Gone;
                 }

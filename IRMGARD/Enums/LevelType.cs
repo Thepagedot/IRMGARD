@@ -20,6 +20,7 @@ namespace IRMGARD
         SpeakerSC,
         LetterpuzzleSC,
         FourPicturesSelectConcept,
+        FlexibleFPSC,
         ShortLongVowelFPSC,
         DefArtFPSC,
         InputConcept,

@@ -38,5 +38,17 @@ Global
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
 		$0.StandardHeader = $2
+		$0.TextStylePolicy = $3
+		$3.TabWidth = 2
+		$3.TabsToSpaces = True
+		$3.IndentWidth = 2
+		$3.NoTabsAfterNonTabs = True
+		$3.EolMarker = Unix
+		$3.scope = text/x-json
+		$0.JSONFormattingPolicy = $4
+		$4.AutoStructureCompletion = True
+		$4.BracePositions = SemiExpanded
+		$4.FormatOnPaste = True
+		$4.scope = text/x-json
 	EndGlobalSection
 EndGlobal

@@ -57,18 +57,21 @@ namespace IRMGARD
             // Accumulate and build option item collection
             optionItems = new List<Concept>();
 
-            // Add solution task items as options
-            if (Lesson.UseOptionItemsOnly)
-            {
-                AddSolutionConcepts(dragIntoGapExercise);
-            }
-            else
-            {
-                if (currentIteration.Tasks != null)
+            if (!Lesson.DoNotUseSolutionConceptsAsOptions) {
+                
+                // Add solution task items as options
+                if (Lesson.UseOptionItemsOnly)
                 {
-                    foreach (var task in currentIteration.Tasks)
+                    AddSolutionConcepts(dragIntoGapExercise);
+                }
+                else
+                {
+                    if (currentIteration.Tasks != null)
                     {
-                        AddSolutionConcepts(task as DragIntoGapExercise);
+                        foreach (var task in currentIteration.Tasks)
+                        {
+                            AddSolutionConcepts(task as DragIntoGapExercise);
+                        }
                     }
                 }
             }
@@ -78,7 +81,8 @@ namespace IRMGARD
             {
                 foreach (var item in dragIntoGapExercise.OptionItems)
                 {
-                    if (!optionItems.Contains(item))
+                    if (Lesson.DoNotUseSolutionConceptsAsOptions
+                        || !optionItems.Contains(item))
                     {
                         optionItems.Add(item);
                     }
@@ -88,7 +92,9 @@ namespace IRMGARD
             {
                 foreach (var item in Lesson.OptionItems)
                 {
-                    if (!optionItems.Contains(item)) {
+                    if (Lesson.DoNotUseSolutionConceptsAsOptions
+                        || !optionItems.Contains(item))
+                    {
                         optionItems.Add(item);
                     }
                 }
@@ -129,7 +135,9 @@ namespace IRMGARD
             SetTopMargin(2, flOptionItems);
 
             // Shuffle options
-            optionItems.Shuffle();
+            if (!Lesson.DoNotShuffleOptionItems) {
+                optionItems.Shuffle();
+            }
 
             // Add options to view
             flOptionItems.RemoveAllViews();
@@ -222,10 +230,7 @@ namespace IRMGARD
             {
                 foreach (var item in conceptItemRow)
                 {
-                    // Exclude special case concepts
-                    if (item.ActivateOnSuccess || item.ActivateOnMistake) { continue; }
-
-                    if (item is BaseText)
+                    if (item is BaseText && (item.IsSolution || item.IsOption))
                     {
                         blankSize += (item as BaseText).Text.Length;
                         conceptItemCounter++;

@@ -15,6 +15,11 @@ namespace IRMGARD
 #endif
         public const bool Release = !Debug;
 
+        public static bool NougatSupport
+        {
+            get { return Build.VERSION.SdkInt >= BuildVersionCodes.N; }
+        }
+
         public static bool MarshmallowSupport
         {
             get { return Build.VERSION.SdkInt >= BuildVersionCodes.M; }

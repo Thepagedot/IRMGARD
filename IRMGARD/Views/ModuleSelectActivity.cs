@@ -56,7 +56,7 @@ namespace IRMGARD
             // Check if module has been implemented
             if (!DataHolder.Current.CurrentModule.Lessons.Any())
             {
-                Toast.MakeText(this, "This module has not been implemented yet.", ToastLength.Short).Show();
+                Toast.MakeText(this, "Dieses Modul wurde noch nicht entwickelt.", ToastLength.Short).Show();
                 return;
             }
 

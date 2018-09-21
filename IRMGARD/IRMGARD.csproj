@@ -65,57 +65,6 @@
     <Reference Include="HockeySDK">
       <HintPath>..\packages\HockeySDK.Xamarin.5.1.2\lib\MonoAndroid403\HockeySDK.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.Annotations">
-      <HintPath>..\packages\Xamarin.Android.Support.Annotations.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Annotations.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Arch.Core.Common">
-      <HintPath>..\packages\Xamarin.Android.Arch.Core.Common.1.0.0\lib\MonoAndroid80\Xamarin.Android.Arch.Core.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Arch.Lifecycle.Common">
-      <HintPath>..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3\lib\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Arch.Lifecycle.Runtime">
-      <HintPath>..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3\lib\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.Compat">
-      <HintPath>..\packages\Xamarin.Android.Support.Compat.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Compat.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.Core.UI">
-      <HintPath>..\packages\Xamarin.Android.Support.Core.UI.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Core.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.Core.Utils">
-      <HintPath>..\packages\Xamarin.Android.Support.Core.Utils.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Core.Utils.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.Fragment">
-      <HintPath>..\packages\Xamarin.Android.Support.Fragment.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Fragment.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.Media.Compat">
-      <HintPath>..\packages\Xamarin.Android.Support.Media.Compat.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Media.Compat.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.Transition">
-      <HintPath>..\packages\Xamarin.Android.Support.Transition.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Transition.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v4">
-      <HintPath>..\packages\Xamarin.Android.Support.v4.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v4.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.CardView">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v7.CardView.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.Vector.Drawable">
-      <HintPath>..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
-      <HintPath>..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
-    </Reference>
-    <Reference Include="Xamarin.Android.Support.Design">
-      <HintPath>..\packages\Xamarin.Android.Support.Design.27.0.2\lib\MonoAndroid81\Xamarin.Android.Support.Design.dll</HintPath>
-    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -127,6 +76,57 @@
     </Reference>
     <Reference Include="Google.Android.Vending.Expansion.Downloader">
       <HintPath>..\packages\Xamarin.Google.Android.Vending.Expansion.Downloader.2.0.0\lib\MonoAndroid\Google.Android.Vending.Expansion.Downloader.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Annotations">
+      <HintPath>..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Core.Common">
+      <HintPath>..\packages\Xamarin.Android.Arch.Core.Common.1.0.0.1\lib\MonoAndroid80\Xamarin.Android.Arch.Core.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Lifecycle.Common">
+      <HintPath>..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3.1\lib\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Lifecycle.Runtime">
+      <HintPath>..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3.1\lib\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Compat">
+      <HintPath>..\packages\Xamarin.Android.Support.Compat.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.UI">
+      <HintPath>..\packages\Xamarin.Android.Support.Core.UI.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Core.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Core.Utils">
+      <HintPath>..\packages\Xamarin.Android.Support.Core.Utils.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Core.Utils.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Fragment">
+      <HintPath>..\packages\Xamarin.Android.Support.Fragment.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Fragment.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Media.Compat">
+      <HintPath>..\packages\Xamarin.Android.Support.Media.Compat.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Media.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Transition">
+      <HintPath>..\packages\Xamarin.Android.Support.Transition.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Transition.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v4">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.v4.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.CardView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.CardView.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.v7.CardView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Vector.Drawable">
+      <HintPath>..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Animated.Vector.Drawable">
+      <HintPath>..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.v7.AppCompat">
+      <HintPath>..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Design">
+      <HintPath>..\packages\Xamarin.Android.Support.Design.27.0.2.1\lib\MonoAndroid81\Xamarin.Android.Support.Design.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -327,12 +327,6 @@
     <AndroidResource Include="Resources\layout\AbcRankOptionItem.axml" />
     <AndroidResource Include="Resources\layout\TaskItem.axml" />
     <AndroidResource Include="Resources\layout\BuildSyllableMediaElement.axml" />
-    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_01.png" />
-    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_01.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_01.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_01.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_01.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_01.png" />
     <AndroidResource Include="Resources\anim\ShowFeedbackIcon.xml" />
     <AndroidResource Include="Resources\drawable-hdpi\irmgard_icon_spiel_supergemacht.png" />
     <AndroidResource Include="Resources\drawable-mdpi\irmgard_icon_spiel_supergemacht.png" />
@@ -452,12 +446,6 @@
     <AndroidResource Include="Resources\menu\legal_notice_menu.xml" />
     <AndroidResource Include="Resources\menu\legal_notice_contact_menu.xml" />
     <AndroidResource Include="Resources\values\ExpansionDownloader.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_02.png" />
-    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_02.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_02.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_02.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_02.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_02.png" />
     <AndroidResource Include="Resources\drawable\rectangle_gray.xml" />
     <AndroidResource Include="Resources\values\Ids.xml" />
     <AndroidResource Include="Resources\layout\DragIntoGap.axml" />
@@ -478,21 +466,63 @@
     <AndroidResource Include="Resources\drawable\selected_background.xml" />
     <AndroidResource Include="Resources\drawable\highlighted_background.xml" />
     <AndroidResource Include="Resources\drawable\letterpuzzle_marker.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_03.png" />
-    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_03.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_03.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_03.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_03.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_03.png" />
     <AndroidResource Include="Resources\layout\InputConcept.axml" />
     <AndroidResource Include="Resources\layout\InputTextConcept.axml" />
     <AndroidResource Include="Resources\drawable\input_dotted.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_04.png" />
-    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_04.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_04.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_04.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_04.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_04.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_level_01.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_level_02.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_level_03.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_level_04.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_level_05.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_level_06.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_level_07.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_level_08.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\irmgard_danke_level_09.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_level_01.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_level_02.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_level_03.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_level_04.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_level_05.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_level_06.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_level_07.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_level_08.png" />
+    <AndroidResource Include="Resources\drawable-ldpi\irmgard_danke_level_09.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_level_01.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_level_02.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_level_03.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_level_04.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_level_05.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_level_06.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_level_07.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_level_08.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\irmgard_danke_level_09.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_level_01.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_level_02.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_level_03.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_level_04.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_level_05.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_level_06.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_level_07.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_level_08.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\irmgard_danke_level_09.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_level_01.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_level_02.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_level_03.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_level_04.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_level_05.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_level_06.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_level_07.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_level_08.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\irmgard_danke_level_09.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_level_01.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_level_02.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_level_03.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_level_04.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_level_05.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_level_06.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_level_07.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_level_08.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\irmgard_danke_level_09.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\AndroidManifest.xml" />
@@ -1484,8 +1514,6 @@
     <AndroidAsset Include="MainAssets\Sounds\L3\NounSuffix\schaft.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\NounSuffix\tum.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3\NounSuffix\ung.mp3" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Intros\Level_3_Modul_2_Aufgabe_2.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Intros\Level_3_Modul_3_Aufgabe_2.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Intros\Level_3_Modul_4_Aufgabe_3.mp3" />
@@ -1528,6 +1556,10 @@
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\ruderst.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\spielt.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\strickt.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\segle.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\spielte.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\weintest.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L3_4\Verbs\wirst_rechnen.mp3" />
     <AndroidAsset Include="MainAssets\Videos\L4\L4M1.mp4" />
     <AndroidAsset Include="MainAssets\Videos\L4\L4M2.mp4" />
     <AndroidAsset Include="MainAssets\Videos\L4\L4M3.mp4" />
@@ -1575,11 +1607,6 @@
     <AndroidAsset Include="MainAssets\Sounds\L4\Exercises\4-5-5\tot.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L4\Exercises\4-5-5\traurig.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L4\Exercises\4-5-5\viereckig.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M2A1.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M2A2.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M2A3.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M2A4.mp3" />
-    <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M2A5.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M3A1.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M3A2.mp3" />
     <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M3A3.mp3" />
@@ -1600,6 +1627,43 @@
     <AndroidAsset Include="MainAssets\Sounds\L4\Intros\L4M6A3.mp3" />
   </ItemGroup>
   <!-- END of section to be disabled for level-specific testing -->
+  
+  <ItemGroup>
+    <AndroidAsset Include="MainAssets\Sounds\L4_5\Intros\L4M2A1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L4_5\Intros\L4M2A2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L4_5\Intros\L4M2A3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L4_5\Intros\L4M2A4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L4_5\Intros\L4M2A5.mp3" />
+    <AndroidAsset Include="MainAssets\Videos\L5\L5M1.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L5\L5M2.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L5\L5M3.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L5\L5M4.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L5\L5M5.mp4" />
+    <AndroidAsset Include="MainAssets\Videos\L5\L5M6.mp4" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M2A1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M2A2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M2A3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M2A4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M2A5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M3A1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M3A2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M3A3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M3A4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M3A5.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M3A6.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M4A1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M4A2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M4A3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M4A4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M5A1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M5A2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M5A3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M6A1.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M6A2.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M6A3.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M6A4.mp3" />
+    <AndroidAsset Include="MainAssets\Sounds\L5\Intros\L5M6A5.mp3" />
+  </ItemGroup>
   
   <!-- BEGIN of minimal required set of assets for level-specific test deployments -->
   <ItemGroup>
@@ -1954,21 +2018,21 @@
     <Zip Files="@(PatchAssetsFiles)" WorkingDirectory="$(ProjectDir)Assets" ZipFileName="patch.$(OBBPatchVersionCode).$(ManifestPackage).obb" ZipLevel="0" />
   </Target>
   <!-- END: Create OBBs -->
-  <Import Project="..\packages\Xamarin.Android.Support.Annotations.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Arch.Core.Common.1.0.0\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Core.Common.1.0.0\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Support.Compat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Compat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Support.Core.UI.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Core.UI.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Core.UI.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Core.UI.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Support.Core.Utils.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Core.Utils.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Core.Utils.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Core.Utils.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Support.Fragment.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Fragment.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Fragment.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Fragment.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Support.Media.Compat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Media.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Media.Compat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Media.Compat.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Support.Transition.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Transition.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Transition.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Transition.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Support.v4.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v4.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v4.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v4.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Support.v7.CardView.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.CardView.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.CardView.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.CardView.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.targets')" />
-  <Import Project="..\packages\Xamarin.Android.Support.Design.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Design.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Design.27.0.2\build\MonoAndroid81\Xamarin.Android.Support.Design.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Core.Common.1.0.0.1\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Core.Common.1.0.0.1\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Core.UI.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Core.UI.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Core.UI.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Core.UI.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Core.Utils.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Core.Utils.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Core.Utils.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Core.Utils.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Fragment.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Fragment.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Fragment.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Fragment.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Media.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Media.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Media.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Media.Compat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Transition.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Transition.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Transition.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Transition.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v4.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v4.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v4.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v4.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.CardView.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.CardView.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.CardView.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.CardView.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.RecyclerView.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.RecyclerView.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Vector.Drawable.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Animated.Vector.Drawable.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Animated.Vector.Drawable.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.v7.AppCompat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.v7.AppCompat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Design.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Design.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Design.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Design.targets')" />
 </Project>

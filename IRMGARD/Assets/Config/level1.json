@@ -673,7 +673,7 @@
     },
     {
       "Name": "2: LMNRS",
-      "Color": "#ecd4d1",
+      "Color": "#ebd4d1",
       "VideoPath": "Videos/L1/L1M2.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
@@ -2405,7 +2405,7 @@
     },
     {
       "Name": "3: FHJWZ",
-      "Color": "#e5c5c2",
+      "Color": "#e4c5c2",
         "VideoPath": "Videos/L1/L1M3.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
@@ -4213,7 +4213,7 @@
     },
     {
       "Name": "4: BPGKDT",
-      "Color": "#dfb7b3",
+      "Color": "#deb7b3",
       "VideoPath": "Videos/L1/L1M4.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
@@ -6409,7 +6409,7 @@
     },
     {
       "Name": "5: CQVXY",
-      "Color": "#d8a9a3",
+      "Color": "#d8a9a4",
       "VideoPath": "Videos/L1/L1M5.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [
@@ -6750,7 +6750,7 @@
     },
     {
       "Name": "6: ABC",
-      "Color": "#d29a94",
+      "Color": "#d19a95",
       "VideoPath": "Videos/L1/L1M6.mp4",
       "NumberOfLessonsDone": 0,
       "Lessons": [

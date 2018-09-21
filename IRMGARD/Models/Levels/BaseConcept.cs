@@ -80,6 +80,9 @@ namespace IRMGARD.Models
         // Rows of task item elements
         public List<List<Concept>> TaskItems { get; set; }
 
+        // // A footnote for source citations, etc.
+        // public string FN { get; set; }
+
         // Task specific option items
         public List<Concept> OptionItems { get; set; }
 
