@@ -268,11 +268,11 @@ namespace IRMGARD
             }
             else if (concept is Word)
             {
-                textSize = 18;
+                textSize = 22;
             }
             else if (concept is Sentence)
             {
-                textSize = 20;
+                textSize = 18;
             }
 
             textSize = IsSmallHeight() ? textSize - 4 : textSize;
