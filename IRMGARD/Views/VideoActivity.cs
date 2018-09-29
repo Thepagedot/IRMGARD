@@ -44,7 +44,23 @@ namespace IRMGARD
         protected override void OnResume()
         {
             base.OnResume();
+
             mediaPlayer = new MediaPlayer();
+            Play();
+        }
+
+        protected override void OnPause()
+        {
+            base.OnPause();
+
+            ReleasePlayer();
+        }
+
+        protected override void OnStop()
+        {
+            base.OnStop();
+
+            // ReleasePlayer(); already done in OnPause()
         }
 
         public override void OnWindowFocusChanged(bool hasFocus)
@@ -63,16 +79,27 @@ namespace IRMGARD
             }
         }
 
-        protected override void OnPause()
+        bool IsPlaying
         {
-            base.OnPause();
-            mediaPlayer.Stop();
-            mediaPlayer.Release();
+            get
+            {
+                return (mediaPlayer != null) ? mediaPlayer.IsPlaying : false;
+            }
+        }
+
+        void ReleasePlayer()
+        {
+            if (mediaPlayer != null)
+            {
+                mediaPlayer.Stop();
+                mediaPlayer.Reset();
+                mediaPlayer.Release();
+            }
         }
 
         protected void Play()
         {
-            if (!String.IsNullOrEmpty(videoPath) && !mediaPlayer.IsPlaying)
+            if (mediaPlayer != null && !String.IsNullOrEmpty(videoPath) && !mediaPlayer.IsPlaying)
             {
                 var descriptor = AssetHelper.Instance.OpenFd(videoPath);
                 mediaPlayer.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
@@ -84,6 +111,10 @@ namespace IRMGARD
 
         private void MediaPlayer_Completion(object sender, EventArgs e)
         {
+            if (mediaPlayer != null)
+            {
+                mediaPlayer.Completion -= MediaPlayer_Completion;
+            }
             NavigateNext();
         }
 
@@ -105,30 +136,13 @@ namespace IRMGARD
 
             if (intent != null)
             {
-                mediaPlayer.Stop();
                 StartActivity(intent);
             }
         }
 
         void BtnRepeat_Click (object sender, EventArgs e)
         {
-            if (Env.LollipopSupport)
-            {
-                try
-                {
-                    mediaPlayer.Stop();
-                    mediaPlayer.Prepare();
-                    mediaPlayer.Start();
-                }
-                catch (Java.Lang.IllegalStateException)
-                {
-                    RenavigateToVideoPlayer();
-                }
-            }
-            else
-            {
-                RenavigateToVideoPlayer();
-            }
+            RenavigateToVideoPlayer();
         }
 
         private void RenavigateToVideoPlayer()
@@ -147,7 +161,17 @@ namespace IRMGARD
 
         public void SurfaceCreated(ISurfaceHolder holder)
         {
-            mediaPlayer.SetDisplay(holder);
+            if (mediaPlayer != null)
+            {
+                try
+                {
+                    mediaPlayer.SetDisplay(holder);
+                }
+                catch (Java.Lang.IllegalStateException)
+                {
+                    HockeyApp.MetricsManager.TrackEvent("Error: Video Player is in an invalid state on set display.");
+                }
+            }
         }
 
         public void SurfaceDestroyed(ISurfaceHolder holder) {}
