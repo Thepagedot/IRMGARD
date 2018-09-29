@@ -315,7 +315,7 @@ namespace IRMGARD
         private LessonFragment CreateFragmentForLesson()
         {
             var lesson = DataHolder.Current.CurrentLesson;
-            if (lesson is HearMe)
+            if (lesson is HearMe)           // Used outside level1
                 return new HearMeFragment();
             if (lesson is FourPictures)
                 return new FourPicturesFragment();
@@ -329,7 +329,7 @@ namespace IRMGARD
                 return new AbcRankFragment();
             if (lesson is LetterDrop)
                 return new LetterDropFragment();
-            if (lesson is HearTheLetter)
+            if (lesson is HearTheLetter)    // Used outside level1
                 return new HearTheLetterFragment();
             if (lesson is HearMeAbc)
                 return new HearMeAbcFragment();
@@ -337,11 +337,11 @@ namespace IRMGARD
                 return new MemoryFragment();
             if (lesson is LetterWrite)
                 return new LetterWriteFragment();
-            if (lesson is DragIntoGap)
+            if (lesson is DragIntoGap)      // Used outside level1
                 return new DragIntoGapFragment();
-            if (lesson is SelectConcept)
+            if (lesson is SelectConcept)    // Used outside level1
                 return SelectConceptFragmentFactory.Get(lesson.TypeOfLevel);
-            if (lesson is InputConcept)
+            if (lesson is InputConcept)     // Used outside level1
                 return new InputConceptFragment();
 
             return null;

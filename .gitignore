@@ -225,3 +225,5 @@ UpgradeLog.*
 
 Components/*
 IRMGARD/Resources/Resource.designer.cs
+
+.idea/

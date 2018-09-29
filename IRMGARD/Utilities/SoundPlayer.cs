@@ -11,30 +11,52 @@ namespace IRMGARD
 {
 	public static class SoundPlayer
 	{
-        static readonly MediaPlayer player;
+        static MediaPlayer player;
 
         public static bool IsPlaying
         {
             get
             {
-                return player.IsPlaying;
+                try
+                {
+                    return (player != null) ? player.IsPlaying : false;
+                }
+                catch (Java.Lang.IllegalStateException)
+                {
+                    HockeyApp.MetricsManager.TrackEvent("Error: Player is in an invalid state checking playing status.");
+                    InitPlayer();
+                    return false;
+                }
             }
         }
 
         static SoundPlayer()
         {
+            InitPlayer();
+        }
+
+        static void InitPlayer()
+        {
+            if (player != null)
+            {
+                player.Release();
+            }
             player = new MediaPlayer();
             player.Completion += Player_Completion;
         }
 
-		/// <summary>
-		/// Plays a sound from an Assets sound file
-		/// </summary>
-		/// <param name="context">Context.</param>
-		/// <param name="fileName">File name.</param>
-		/// <param name = "folderName">Folder Name. Takes "Sounds" if nothing else is set</param>
-		public static void PlaySound(Context context, string fileName, string folderName = null)
+        /// <summary>
+        /// Plays a sound from an Assets sound file
+        /// </summary>
+        /// <param name="context">Context.</param>
+        /// <param name="fileName">File name.</param>
+        /// <param name = "folderName">Folder Name. Takes "Sounds" if nothing else is set</param>
+        public static void PlaySound(Context context, string fileName, string folderName = null)
 		{
+            if (player == null || String.IsNullOrEmpty(fileName)) {
+                return;
+            }
+
 			try
 			{
                 // Describe sound file from Assets properly
@@ -49,13 +71,13 @@ namespace IRMGARD
 			catch (FileNotFoundException)
 			{
 				Toast.MakeText(context, context.GetString(Resource.String.error_soundfileNotFound), ToastLength.Short);
-				System.Console.WriteLine("Error: Soundfile '" + fileName + "' could not be found.");
+                HockeyApp.MetricsManager.TrackEvent("Error: Soundfile '" + fileName + "' could not be found.");
                 player.Reset();
             }
             catch (Java.Lang.IllegalStateException)
             {
-                System.Console.WriteLine("Error: Player is in an invalid state - trying to play '" + fileName + "'");
-                Stop();
+                HockeyApp.MetricsManager.TrackEvent("Error: Player is in an invalid state - trying to play '" + fileName + "'");
+                InitPlayer();
             }
         }
 
@@ -74,14 +96,24 @@ namespace IRMGARD
 
         static void FinalizePlayback()
         {
-            // Reset player after playing a soundfile
-            if (IsPlaying)
+            if (player != null)
             {
-                player.Stop();
+                try
+                {
+                    // Reset player after playing a soundfile
+                    if (IsPlaying)
+                    {
+                        player.Stop();
+                    }
+                    player.Reset();
+                    RemoveAllEvents();
+                }
+                catch (Java.Lang.IllegalStateException)
+                {
+                    HockeyApp.MetricsManager.TrackEvent("Error: Player is in an invalid state on finalizing playback.");
+                    InitPlayer();
+                }
             }
-            player.Reset();
-
-            RemoveAllEvents();
         }
 
         #region Completion Event
@@ -105,11 +137,14 @@ namespace IRMGARD
 
         public static void RemoveAllEvents()
         {
-            foreach (EventHandler eh in delegates)
+            if (player != null)
             {
-                player.Completion -= eh;
+                foreach (EventHandler eh in delegates)
+                {
+                    player.Completion -= eh;
+                }
+                delegates.Clear();
             }
-            delegates.Clear();
         }
 
         #endregion
