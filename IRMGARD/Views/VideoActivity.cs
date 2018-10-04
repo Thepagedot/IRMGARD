@@ -79,33 +79,46 @@ namespace IRMGARD
             }
         }
 
-        bool IsPlaying
-        {
-            get
-            {
-                return (mediaPlayer != null) ? mediaPlayer.IsPlaying : false;
-            }
-        }
-
         void ReleasePlayer()
         {
-            if (mediaPlayer != null)
+            try
             {
-                mediaPlayer.Stop();
-                mediaPlayer.Reset();
-                mediaPlayer.Release();
+                if (mediaPlayer != null)
+                {
+                    mediaPlayer.Stop();
+                }
+            }
+            catch (Java.Lang.IllegalStateException)
+            {
+                // Yes - this might happen...
+            }
+            finally
+            {
+                if (mediaPlayer != null)
+                {
+                    mediaPlayer.Reset();
+                    mediaPlayer.Release();
+                    mediaPlayer = null;
+                }
             }
         }
 
         protected void Play()
         {
-            if (mediaPlayer != null && !String.IsNullOrEmpty(videoPath) && !mediaPlayer.IsPlaying)
+            try
             {
-                var descriptor = AssetHelper.Instance.OpenFd(videoPath);
-                mediaPlayer.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
-                mediaPlayer.Prepare();
-                mediaPlayer.Start();
-                mediaPlayer.Completion += MediaPlayer_Completion;
+                if (mediaPlayer != null && !String.IsNullOrEmpty(videoPath) && !mediaPlayer.IsPlaying)
+                {
+                    var descriptor = AssetHelper.Instance.OpenFd(videoPath);
+                    mediaPlayer.SetDataSource(descriptor.FileDescriptor, descriptor.StartOffset, descriptor.Length);
+                    mediaPlayer.Prepare();
+                    mediaPlayer.Start();
+                    mediaPlayer.Completion += MediaPlayer_Completion;
+                }
+            }
+            catch (Java.Lang.IllegalStateException)
+            {
+                // Yes - this might happen...
             }
         }
 
@@ -169,7 +182,9 @@ namespace IRMGARD
                 }
                 catch (Java.Lang.IllegalStateException)
                 {
-                    HockeyApp.MetricsManager.TrackEvent("Error: Video Player is in an invalid state on set display.");
+                    ReleasePlayer();
+                    mediaPlayer = new MediaPlayer();
+                    mediaPlayer.SetDisplay(holder);
                 }
             }
         }

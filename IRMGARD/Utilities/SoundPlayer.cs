@@ -23,7 +23,7 @@ namespace IRMGARD
                 }
                 catch (Java.Lang.IllegalStateException)
                 {
-                    HockeyApp.MetricsManager.TrackEvent("Error: Player is in an invalid state checking playing status.");
+                    HockeyApp.MetricsManager.TrackEvent("Error: SoundPlayer is in an invalid state checking playing status.");
                     InitPlayer();
                     return false;
                 }
@@ -76,7 +76,7 @@ namespace IRMGARD
             }
             catch (Java.Lang.IllegalStateException)
             {
-                HockeyApp.MetricsManager.TrackEvent("Error: Player is in an invalid state - trying to play '" + fileName + "'");
+                HockeyApp.MetricsManager.TrackEvent("Error: SoundPlayer is in an invalid state - trying to play '" + fileName + "'");
                 InitPlayer();
             }
         }
@@ -110,7 +110,7 @@ namespace IRMGARD
                 }
                 catch (Java.Lang.IllegalStateException)
                 {
-                    HockeyApp.MetricsManager.TrackEvent("Error: Player is in an invalid state on finalizing playback.");
+                    HockeyApp.MetricsManager.TrackEvent("Error: SoundPlayer is in an invalid state on finalizing playback.");
                     InitPlayer();
                 }
             }
